@@ -10,7 +10,7 @@ jordan.trana@archangel.agency
 
 Date: March 16, 2025
 
-$\begin{bmatrix}0&-1\\1&0\end{bmatrix}$
+$\begin{bmatrix}0&-1\\\1&0\end{bmatrix}$
 
 $$\begin{bmatrix}0&-1\\1&0\end{bmatrix}$$
 
