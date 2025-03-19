@@ -228,7 +228,7 @@ The curve, as a fundamental geometric primitive within the Universal Language (U
 | Geometric Property | Mathematical Description | Symbolic Meaning in UL |
 | ----- | ----- | ----- |
 | Non-Linear Variation | $C(t) \= (x(t), y(t))$, with $x(t)$, $y(t)$ continuous, $t \in \[a, b\]$ | *Wave*: Represents oscillation or rhythmic change. |
-| Curvature | $\kappa = \frac{|x'y'' - y'x''|}{(x'^2 + y'^2)^{3/2}}$, where $x' = \frac{dx}{dt}$, $y' = \frac{dy}{dt}$, $x'' = \frac{d^2 x}{dt^2}$, $y'' = \frac{d^2 y}{dt^2}$ | *Change*: Reflects the rate of directional shift or deviation from linearity. |
+| Curvature | $\kappa = \frac{\|x'y'' - y'x''\|}{(x'^2 + y'^2)^{3/2}}$, where $x' = \frac{dx}{dt}$, $y' = \frac{dy}{dt}$, $x'' = \frac{d^2 x}{dt^2}$, $y'' = \frac{d^2 y}{dt^2}$ | *Change*: Reflects the rate of directional shift or deviation from linearity. |
 | Flexibility | Arc length $s \= \int\_a^b \sqrt{(x'(t))^2 \+ (y'(t))^2} , dt$ | *Flow*: Suggests adaptive movement or transition. |
 | Dynamism | $\frac{d^2 C}{dt^2} \neq 0$ at most points | *Cycle*: Captures cyclic or transformative patterns. |
 
