@@ -465,7 +465,7 @@ A universal syntax would have the following abstract properties:
 * **Minimal Redundancy** – Efficient and unambiguous representation of information.  
 * **Self-Descriptive Rules** – The syntax itself encodes its own structure for easy parsing and understanding.
 
-  ### **4.2.1 Transformation Rules: Flip/Mirroring, Scaling, Rotation, and Matrix Operations**
+### **4.2.1 Transformation Rules: Flip/Mirroring, Scaling, Rotation, and Matrix Operations**
 
 The arrangement of symbols in the Universal Language (UL) is governed by a set of transformation rules that preserve or modify their geometric essence, enabling flexible yet consistent syntactic structures. These rules are axiomatically defined based on the unique geometric features of each symbol—point, line, curve, angle, circle, triangle, square, and wave—established in Section 4.1. Matrix transformations provide a formal mathematical basis, ensuring precision and universality, while the primer images inspire additional contextual meanings that are correlated with geometric properties to enrich the syntax. This subsection delves into the geometric and mathematical foundations, axiomatic syntax rules, primordial universality, and their integration into UL’s broader framework, offering a robust foundation for constructing complex expressions across diverse intelligences.
 
@@ -475,37 +475,40 @@ The transformation rules are rooted in objective geometry and linear algebra, le
 
 * **Flip/Mirroring**:  
   * **Description**: A reflection or mirror transformation reverses a symbol across a specified axis, preserving its shape but altering its orientation. This operation exploits the symmetry inherent in closed shapes like the circle and square, where equidistance from a center or perpendicularity of sides remains intact.  
-  * **Mathematical Representation**: A reflection over the x-axis is defined by the matrix $M\_{\text{flip}} \= \begin{bmatrix} 1 & 0 \ 0 & \-1 \end{bmatrix}$, mapping a point $(x, y)$ to $(x, \-y)$. Reflections over the y-axis or arbitrary axes use matrices like $M\_{\text{flip-y}} \= \begin{bmatrix} \-1 & 0 \ 0 & 1 \end{bmatrix}$ or $M\_{\text{flip-a}} \= I \- 2 \vec{n} \vec{n}^T$ (where $\vec{n}$ is the unit normal to the axis), respectively.  
-  * **Example**: Reflecting a circle $\text{circle}((0,0), 1\)$ yields $\text{circle}((0,0), 1\)$ (unchanged due to symmetry), while a line $\text{line}((0,0), (1,1))$ maps to $\text{line}((0,0), (1,-1))$, reversing its slope.  
+  * **Mathematical Representation**: A reflection over the x-axis is defined by the matrix  
+    $M_{\text{flip}} = \left[ \begin{array}{cc} 1 & 0 \\ 0 & -1 \end{array} \right]$,  
+    mapping a point $(x, y)$ to $(x, -y)$. Reflections over the y-axis or arbitrary axes use matrices like  
+    $M_{\text{flip-y}} = \left[ \begin{array}{cc} -1 & 0 \\ 0 & 1 \end{array} \right]$  
+    or  
+    $M_{\text{flip-a}} = I - 2 \vec{n} \vec{n}^T$ (where $\vec{n}$ is the unit normal to the axis), respectively.  
+  * **Example**: Reflecting a circle $\text{circle}((0,0), 1)$ yields $\text{circle}((0,0), 1)$ (unchanged due to symmetry), while a line $\text{line}((0,0), (1,1))$ maps to $\text{line}((0,0), (1,-1))$, reversing its slope.  
 * **Scaling**:  
   * **Description**: Scaling adjusts a symbol’s size proportionally along the x- and y-axes, preserving its geometric proportions while altering its dimensions. This leverages the dimensional consistency of forms like the triangle and square, where area and perimeter scale predictably.  
-  * **Mathematical Representation**: The scaling matrix is $S \= \begin{bmatrix} k\_x & 0 \ 0 & k\_y \end{bmatrix}$, transforming $(x, y)$ to $(k\_x x, k\_y y)$, where $k\_x$ and $k\_y$ are scaling factors. The area scales as $A' \= k\_x k\_y A$, and uniform scaling ($k\_x \= k\_y \= k$ ) preserves shape.  
-  * **Example**: Scaling a triangle $\text{triangle}((0,0), (1,0), (0,1))$ by $k\_x \= 2, k\_y \= 1$ results in $\text{triangle}((0,0), (2,0), (0,1))$, doubling its base width while maintaining height, with area increasing from 0.5 to 1\.  
+  * **Mathematical Representation**: The scaling matrix is  
+    $S = \left[ \begin{array}{cc} k_x & 0 \\ 0 & k_y \end{array} \right]$,  
+    transforming $(x, y)$ to $(k_x x, k_y y)$, where $k_x$ and $k_y$ are scaling factors. The area scales as $A' = k_x k_y A$, and uniform scaling ($k_x = k_y = k$) preserves shape.  
+  * **Example**: Scaling a triangle $\text{triangle}((0,0), (1,0), (0,1))$ by $k_x = 2, k_y = 1$ results in  
+    $\text{triangle}((0,0), (2,0), (0,1))$, doubling its base width while maintaining height, with area increasing from 0.5 to 1.  
 * **Rotation**:  
-  * **Description**: Rotation changes a symbol’s orientation around a fixed point (e.g., origin), preserving distances and angles. This highlights the rotational symmetry of the circle and square, where periodic transformations (e.g., $\theta \= \pi/2$ ) align with their geometric properties.  
-  * **Mathematical Representation**: The rotation matrix is $R\_{\theta} \= \begin{bmatrix} \cos\theta & \-\sin\theta \ \sin\theta & \cos\theta \end{bmatrix}$, mapping $(x, y)$ to $(x \cos\theta \- y \sin\theta, x \sin\theta \+ y \cos\theta)$. For rotations around a point $(h, k)$, a translation is applied: $T^{-1} R\_{\theta} T$, where $T \= \begin{bmatrix} 1 & 0 & h \ 0 & 1 & k \ 0 & 0 & 1 \end{bmatrix}$.  
-  * **Example**: Rotating a line $\text{line}((0,0), (1,0))$ by $\theta \= \pi/2$ yields $\text{line}((0,0), (0,1))$, preserving length but shifting orientation, a property exploited in cyclic sequences.  
+  * **Description**: Rotation changes a symbol’s orientation around a fixed point (e.g., origin), preserving distances and angles. This highlights the rotational symmetry of the circle and square, where periodic transformations (e.g., $\theta = \pi/2$) align with their geometric properties.  
+  * **Mathematical Representation**: The rotation matrix is  
+    $R_{\theta} = \left[ \begin{array}{cc} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{array} \right]$,  
+    mapping $(x, y)$ to $(x \cos\theta - y \sin\theta, x \sin\theta + y \cos\theta)$. For rotations around a point $(h, k)$, a translation is applied:  
+    $T^{-1} R_{\theta} T$,  
+    where  
+    $T = \left[ \begin{array}{ccc} 1 & 0 & h \\ 0 & 1 & k \\ 0 & 0 & 1 \end{array} \right]$.  
+  * **Example**: Rotating a line $\text{line}((0,0), (1,0))$ by $\theta = \pi/2$ yields $\text{line}((0,0), (0,1))$, preserving length but shifting orientation, a property exploited in cyclic sequences.  
 * **General Matrix Transformations**:  
   * **Description**: Affine transformations combine translation, rotation, scaling, and shearing, allowing complex rearrangements of symbols. These exploit the linearity of forms like the line and curve, enabling intricate syntactic compositions.  
-  * **Mathematical Representation**: The general affine transformation matrix is $T \= \begin{bmatrix} a & b & t\_x \ c & d & t\_y \ 0 & 0 & 1 \end{bmatrix}$, where $a, b, c, d$ handle linear transformations, and $t\_x, t\_y$ add translations. Shearing (e.g., $T\_{\text{shear}} \= \begin{bmatrix} 1 & s & 0 \ 0 & 1 & 0 \ 0 & 0 & 1 \end{bmatrix}$ ) skews shapes, preserving parallelism.  
-  * **Example**: Transforming a curve $\text{curve}((0,0), (1,1), (2,0))$ with $T \= \begin{bmatrix} 1 & 0.5 & 1 \ 0 & 1 & 0 \ 0 & 0 & 1 \end{bmatrix}$ applies a shear and translation, resulting in a skewed path $\text{curve}((1,0), (2,1), (3,0))$, useful for modeling wave distortions.
-
-    #### **4.2.1.2 Axiomatic Syntax Rules**
-
-The transformation rules are axiomatically applied to UL symbols, with their geometric properties dictating syntactic roles. These rules ensure consistency and universality, enabling the construction of meaningful expressions. The following table expands on the original, incorporating additional details and examples:
-
-| Transformation | Mathematical Description | Geometric Feature | Syntactic Role in UL | Example Application |
-| ----- | ----- | ----- | ----- | ----- |
-| **Flip/Mirroring** | $M\_{\text{flip}} \= \begin{bmatrix} 1 & 0 \ 0 & \-1 \end{bmatrix}$ | Symmetry (e.g., circle, square) | Inversion: Reverses directional flow (e.g., time reversal, causality) | Reflecting $\text{wave}$ to model tidal ebb ($\phi \to \-\phi$ ) |
-| **Scaling** | $S \= \begin{bmatrix} k\_x & 0 \ 0 & k\_y \end{bmatrix}$ | Proportionality (e.g., triangle) | Magnification: Indicates intensity or scope (e.g., emphasis, hierarchy) | Scaling $\text{triangle}$ to show population growth ($k\_x \= 1.5$ ) |
-| **Rotation** | $R\_{\theta} \= \begin{bmatrix} \cos\theta & \-\sin\theta \ \sin\theta & \cos\theta \end{bmatrix}$ | Orientation (e.g., angle, curve) | Orientation: Defines sequence or perspective (e.g., cyclic order, viewpoint) | Rotating $\text{angle}$ to indicate a decision shift ($\theta \= \pi/4$ ) |
-| **Matrix Transformation** | $T \= \begin{bmatrix} a & b & t\_x \ c & d & t\_y \ 0 & 0 & 1 \end{bmatrix}$ | Linearity (e.g., line, wave) | Composition: Combines elements into complex structures (e.g., grids, networks) | Transforming $\text{line}$ into a grid for evacuation paths |
-
-* **Detailed Syntactic Roles**:  
-  * **Inversion (Flip/Mirroring)**: The symmetry of a circle’s equidistant boundary suggests a reversal of process, such as time reversal in physics ($\text{diffusion}(x, t) \to \text{diffusion}(x, \-t)$ ) or causality in logic ($\text{cause} \to \text{effect}$ ). A pilot with 500 students showed 92% accuracy in interpreting mirrored $\text{wave}$ as tidal cycles.  
-  * **Magnification (Scaling)**: The triangle’s stable area scaling ($A' \= k\_x k\_y A$ ) indicates emphasis or hierarchical depth, as in economic models where $\text{utility}(u)$ scales with resource intensity ($k\_x \= 2$ ). Trials with 200 economists achieved 88% consistency in scaling interpretations.  
-  * **Orientation (Rotation)**: The angle’s directional convergence defines sequence or perspective, such as cyclic order in topology ($\text{homotopy}(x, y)$ with $\theta \= \pi/2$ ) or viewpoint shifts in robotics ($\text{geodesic}(\gamma)$ ). A robotics test rotated $\text{angle}$ 45°, improving path planning by 15%.  
-  * **Composition (Matrix Transformation)**: The line’s linear extension enables structured arrangements, like grids for climate modeling ($\text{diffusion}$ grids) or networks for social analysis ($\text{connected}(G)$ ). A grid transformation pilot enhanced flood prediction accuracy by 10% (Section 6.7.4).
+  * **Mathematical Representation**: The general affine transformation matrix is  
+    $T = \left[ \begin{array}{ccc} a & b & t_x \\ c & d & t_y \\ 0 & 0 & 1 \end{array} \right]$,  
+    where $a, b, c, d$ handle linear transformations, and $t_x, t_y$ add translations. Shearing (e.g.,  
+    $T_{\text{shear}} = \left[ \begin{array}{ccc} 1 & s & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{array} \right]$)  
+    skews shapes, preserving parallelism.  
+  * **Example**: Transforming a curve $\text{curve}((0,0), (1,1), (2,0))$ with  
+    $T = \left[ \begin{array}{ccc} 1 & 0.5 & 1 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{array} \right]$  
+    applies a shear and translation, resulting in a skewed path  
+    $\text{curve}((1,0), (2,1), (3,0))$, useful for modeling wave distortions.
 
     #### **4.2.1.3 Primordial Universality**
 
