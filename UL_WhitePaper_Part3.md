@@ -473,7 +473,7 @@ UL’s integration into education and public engagement, through curriculum enha
 * **Use Case: Equitable Resource Allocation**:  
   * **Problem**: 700 million people live in poverty (World Bank, 2023), with inefficient resource distribution worsening disparities.  
   * **UL Solution**: Model allocation with $\text{utility}(u, x) \land \text{budget}(B)$, where $u$ is welfare and $x$ is resource units. Optimize $\text{maximize}(u)$ subject to $\sum p\_i x\_i \leq B$, ensuring equity via $\text{invariant}(x, g)$.  
-  * **Implementation**: Use UN data on food/water needs, solving via UL’s RCF reduction for 100 regions. Pilot in Ethiopia, distributing $B \=\$10M$ across 50 districts.  
+  * **Implementation**: Use UN data on food/water needs, solving via UL’s RCF reduction for 100 regions. Pilot in Ethiopia, distributing B=$10M across 50 districts.  
   * **Evidence**: Increased welfare by 22% vs. 15% with manual methods, with $\vdash \mathrm{fair\_allocation}(x)$ verified in 98% of cases (Economic Journal, 2023).  
   * **Outcome**: Scale to 200 countries by 2030, lifting 100 million out of poverty, with UL’s decidability ensuring real-time adjustments.  
 * **Use Case: Market Stabilization in Crises**:  
