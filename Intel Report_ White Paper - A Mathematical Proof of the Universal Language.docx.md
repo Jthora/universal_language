@@ -11,6 +11,7 @@ jordan.trana@archangel.agency
 Date: March 16, 2025
 
 $$ P \in \mathbb{R}^n $$
+$P \in \mathbb{R}^n$
 
 **Abstract**
 
