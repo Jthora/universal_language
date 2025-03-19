@@ -10,6 +10,10 @@ jordan.trana@archangel.agency
 
 Date: March 16, 2025
 
+$\begin{bmatrix}0&-1\\1&0\end{bmatrix}$
+
+$$\begin{bmatrix}0&-1\\1&0\end{bmatrix}$$
+
 **Abstract**
 
 The Universal Language (UL)—defined herein as an integrated system of Universal Symbology, Universal Syntax, Universal Grammar, and a Universal Writing System—constitutes a novel framework for symbolic communication, distinct from extant paradigms in Artificial Intelligence (AI), including Artificial General Intelligence (AGI), Artificial Superintelligence (ASI), Symbolic AI, and Semiotics. This white paper advances a formal mathematical proof to establish UL’s existence as a coherent, geometrically grounded system designed to transcend cultural, linguistic, and technological boundaries, facilitating precise, interpretable communication between humans and machines across diverse domains. Through deductive reasoning, the proof demonstrates UL’s consistency, completeness, and universality, positioning it as a pioneering contribution to knowledge representation and human-AI interaction. Implications for AGI development, symbolic reasoning, and semiotic theory are delineated, with recommendations for future empirical validation.
@@ -355,7 +359,7 @@ The square, as a fundamental closed geometric shape within the Universal Languag
 | ----- | ----- | ----- |
 | Equal Sides | $\|P_1P_2\| = \|P_2P_3\| = \|P_3P_4\| = \|P_4P_1\| = s$, where $s$ is the side length | *Uniformity*: Represents consistency and equality in structure. |
 | Right Angles | $\angle P\_iP\_jP\_k \= \pi/2$, with $\vec{v\_1} \cdot \vec{v\_2} \= 0$ | *Order*: Denotes structured, rectilinear organization. |
-| Symmetry | Rotational symmetry under ```$R_{\pi/2}$ = $\begin{bmatrix}0&-1\\1&0\end{bmatrix}$``` , mapping $(x, y)$ to $(-y, x)$ | *Stability*: Reflects invariance and balanced permanence. |
+| Symmetry | Rotational symmetry under $R_{\pi/2}$ = $\begin{bmatrix}0&-1\\1&0\end{bmatrix}$ , mapping $(x, y)$ to $(-y, x)$ | *Stability*: Reflects invariance and balanced permanence. |
 | Efficient Containment | Area $A \= s^2$, perimeter $P \= 4s$, maximizing enclosed space | *Boundedness*: Reflects containment and permanence. |
 
 * In UL, the square is thus axiomatized as the symbol of *fixed* or *order*, representing stability, structure, or boundedness. The *fixed* designation reflects the square’s rigidity and uniformity, rooted in its equal sides and perpendicular angles, which ensure a stable, unchanging form. The *order* designation captures its broader significance as a symbol of structured organization, aligning with its rectilinear framework and symmetry, which suggest a universal notion of balance and permanence.
