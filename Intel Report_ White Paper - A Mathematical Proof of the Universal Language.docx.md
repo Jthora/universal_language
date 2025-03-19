@@ -418,7 +418,7 @@ The wave, as a dynamic geometric and functional entity within the Universal Lang
 | ----- | ----- | ----- |
 | General Wave | Periodic, $f(t \+ T) \= f(t)$, with amplitude $A$, frequency $f \= \frac{1}{T}$ | *Rhythm*: Represents oscillation and repetition. |
 | Sine Wave | $y \= A \sin(\omega t \+ \phi)$, smooth and continuous | *Flow/Harmony*: Denotes smooth, harmonic change. |
-| Triangle Wave | $ y(t) \= \\frac{4A}{T} \\left | t \- \\frac{T}{2} \\right |
+| Triangle Wave | $y(t) = \frac{4A}{T} \left\| t - \frac{T}{2} \right\| - A$, piecewise linear over $t \in [0, T]$ | *Change/Direction*: Embodies structured, directional transformation. |
 | Square Wave | $y(t) \= A \text{sgn}(\sin(\omega t))$, discontinuous transitions | *Order/Fixedness*: Reflects discrete, stable states. |
 
 * In UL, the wave is thus axiomatized as the symbol of *rhythm*, capturing the overarching notion of oscillation and repetition inherent in all wave forms. Specific wave types further refine this meaning: the sine wave as *flow/harmony*, the triangle wave as *change/direction*, and the square wave as *order/fixedness*. These meanings align with the wave’s mathematical essence as a dynamic, periodic entity, reflecting transformation and periodicity across its forms.
