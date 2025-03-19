@@ -312,8 +312,8 @@ The triangle, as a fundamental closed geometric shape within the Universal Langu
 | Geometric Property | Mathematical Description | Symbolic Meaning in UL |
 | ----- | ----- | ----- |
 | Vertex Convergence | Angles at vertices, $\theta\_1 \+ \theta\_2 \+ \theta\_3 \= \pi$ | *Caret*: Represents directed transformation. |
-| Stability | Triangle inequality $ | a |
-| Area Enclosure | $ A \= \\frac{1}{2} | x\_1(y\_2 \- y\_3) \+ x\_2(y\_3 \- y\_1) \+ x\_3(y\_1 \- y\_2) |
+| Stability | Triangle inequality: $\|a\| + \|b\| \geq \|c\|$, where $a = \|P_2P_3\|$, $b = \|P_1P_3\|$, $c = \|P_1P_2\|$ | *Balance*: Represents structural integrity and equilibrium. |
+| Area Enclosure | $A = \frac{1}{2} \|x_1(y_2 - y_3) + x_2(y_3 - y_1) + x_3(y_1 - y_2)\|$ | *Container*: Suggests a bounded space of interaction or transformation. |
 | Dynamic Interaction | Convergence of edges at vertices, forming angles $\theta\_i$ | *Change*: Reflects transformation through interaction. |
 
 * In UL, the triangle is thus axiomatized as the symbol of *caret* or *alpha*, echoing the angle’s directional meaning but extending it to a closed form that denotes structural change or relational balance. The *caret* designation reflects the triangle’s role in directing transformation, as its converging vertices suggest a focal point of change, similar to the angle. The *alpha* designation captures its broader significance as a symbol of stability and balance, rooted in the triangle’s geometric properties and its ability to mediate dynamic interactions within a stable framework.
