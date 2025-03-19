@@ -10,6 +10,8 @@ jordan.trana@archangel.agency
 
 Date: March 16, 2025
 
+$ P \\in \\mathbb{R}^n $
+
 **Abstract**
 
 The Universal Language (UL)—defined herein as an integrated system of Universal Symbology, Universal Syntax, Universal Grammar, and a Universal Writing System—constitutes a novel framework for symbolic communication, distinct from extant paradigms in Artificial Intelligence (AI), including Artificial General Intelligence (AGI), Artificial Superintelligence (ASI), Symbolic AI, and Semiotics. This white paper advances a formal mathematical proof to establish UL’s existence as a coherent, geometrically grounded system designed to transcend cultural, linguistic, and technological boundaries, facilitating precise, interpretable communication between humans and machines across diverse domains. Through deductive reasoning, the proof demonstrates UL’s consistency, completeness, and universality, positioning it as a pioneering contribution to knowledge representation and human-AI interaction. Implications for AGI development, symbolic reasoning, and semiotic theory are delineated, with recommendations for future empirical validation.
@@ -143,7 +145,7 @@ The point, as the simplest geometric entity within the Universal Language (UL), 
 
 | Geometric Property | Mathematical Description | Symbolic Meaning in UL |
 | ----- | ----- | ----- |
-| Zero-Dimensionality | $ P \\in \\mathbb{R}^n $, with measure $ \\mu(P) \= 0 $ | *Core*: Represents the minimal unit of existence. |
+| Zero-Dimensionality | $ P \\in \\mathbb{R}^n $ , with measure $ \\mu(P) \= 0 $ | *Core*: Represents the minimal unit of existence. |
 | Singularity | Unique position, $ \\forall Q \\subset P, Q \= P $ | *Instance*: Denotes a singular, irreducible presence. |
 | Foundational Primacy | Origin of forms, e.g., line as $ { (1-t)P\_1 \+ tP\_2 \\mid t \\in \[0,1\] } $ | *Origin*: Marks the starting point of structure. |
 | Positional Specificity | Defined by coordinates $ (x\_1, x\_2, \\ldots, x\_n) $ | *Focus*: Indicates a precise locus of attention. |
