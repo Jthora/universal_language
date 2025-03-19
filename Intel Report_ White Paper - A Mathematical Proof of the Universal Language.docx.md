@@ -19,7 +19,7 @@ $R_{\pi/2} = \begin{bmatrix} 0 & -1 \\\ 1 & 0 \end{bmatrix}$
 $$R_{\pi/2} = \begin{bmatrix} 0 & -1 \\\ 1 & 0 \end{bmatrix}$$
 
 ```math
-\begin{bmatrix} 0 & -1 \\\ 1 & 0 \end{bmatrix}
+R_{\pi/2} = \begin{bmatrix} 0 & -1 \\\ 1 & 0 \end{bmatrix}
 ``` 
 
 **Abstract**
