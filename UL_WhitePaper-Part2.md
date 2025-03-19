@@ -477,20 +477,20 @@ These categories provide a structured representation of the systems UL aims to u
 
 #### **5.5.2 Functorial Mapping**
 
-$$F: \mathcal{C}*{\text{geom}} \to \mathcal{C}*{\text{UL}}$$
+$$F: \mathcal{C}\*{\text{geom}} \to \mathcal{C}\*{\text{UL}}$$
 
-A functor $F: \mathcal{C}*{\text{geom}} \to \mathcal{C}*{\text{UL}}$ maps geometric spaces and their morphisms to UL expressions, preserving categorical structure.
+A functor $F: \mathcal{C}\*{\text{geom}} \to \mathcal{C}\*{\text{UL}}$ maps geometric spaces and their morphisms to UL expressions, preserving categorical structure.
 
 * **Definition of $F$ on Objects**:  
   * For a space $X \in \mathcal{C}\_{\text{geom}}$:  
-    * $F(\mathbb{R}^n) \= \text{space}(\mathbb{R}^n)$, an expression encoding $\mathbb{R}^n$’s metric and topology, e.g., $\forall \mathbf{p}, \mathbf{q} , (\text{distance}*n(\mathbf{p}, \mathbf{q}) \= \sqrt{\sum*{i=1}^n (p\_i \- q\_i)^2})$.  
+    * $F(\mathbb{R}^n) \= \text{space}(\mathbb{R}^n)$, an expression encoding $\mathbb{R}^n$’s metric and topology, e.g., $\forall \mathbf{p}, \mathbf{q} , (\text{distance}\*n(\mathbf{p}, \mathbf{q}) \= \sqrt{\sum\*{i=1}^n (p\_i \- q\_i)^2})$.  
     * $F(\mathbb{P}^n(\mathbb{R})) \= \text{projective}(\mathbb{P}^n)$, capturing projective coordinates, e.g., $\forall \[x\_0:\dots:x\_n\] , (\text{homogeneous}(\mathbf{x}))$.  
     * $F(\mathbb{H}^n) \= \text{hyperbolic}(\mathbb{H}^n)$, with predicates like $\text{hyperbolic\_distance}(\mathbf{p}, \mathbf{q}) \= \text{arccosh}(1 \+ 2 \frac{|\mathbf{p} \- \mathbf{q}|^2}{(1 \- |\mathbf{p}|^2)(1 \- |\mathbf{q}|^2)})$ for the Poincaré disk model.  
   * These expressions are wffs in $\mathcal{C}\_{\text{UL}}$, encoding intrinsic properties.  
 * **Definition of $F$ on Morphisms**:  
   * For a continuous map $f: X \to Y$, $F(f): F(X) \to F(Y)$ is the syntactic transformation that maps the expression for $X$ to that for $Y$ under $f$. For example, if $f: \mathbb{R}^2 \to \mathbb{R}^3$ is given by $(x, y) \mapsto (x, y, 0\)$, then $F(f)$ transforms $\text{space}(\mathbb{R}^2)$ to $\text{space}(\mathbb{R}^3)$ with the embedding constraint.  
 * **Functorial Properties**:  
-  * **Preservation of Identity**: $F(\text{id}*X) \= \text{id}*{F(X)}$, as the identity map corresponds to the identity transformation.  
+  * **Preservation of Identity**: $F(\text{id}\*X) \= \text{id}\*{F(X)}$, as the identity map corresponds to the identity transformation.  
   * **Preservation of Composition**: For $f: X \to Y$ and $g: Y \to Z$, $F(g \circ f) \= F(g) \circ F(f)$, since syntactic transformations compose sequentially.  
   * **Proof**: Let $E \= F(X)$, $E' \= F(Y)$, $E'' \= F(Z)$. If $T\_f: E \to E'$ and $T\_g: E' \to E''$ are the transformations, then $T\_g \circ T\_f$ applies $T\_f$ followed by $T\_g$, mirroring $g \circ f$’s effect.
 
@@ -505,14 +505,14 @@ UL’s universality is proven by showing that $\mathcal{C}\_{\text{UL}}$ is a te
   * **Morphisms**: Functors $H: \mathcal{L}' \to \mathcal{L}''$ that map expressions and transformations between languages.  
 * **Terminal Object Property**:  
   * A category has a terminal object $T$ if for every object $L \in \mathcal{C}\_{\text{lang}}$, there exists a unique functor $U\_L: L \to T$.  
-  * Define $T \= \mathcal{C}*{\text{UL}}$. For any $\mathcal{L}'$, construct $U*{\mathcal{L}'}: \mathcal{L}' \to \mathcal{C}\_{\text{UL}}$:  
+  * Define $T \= \mathcal{C}\*{\text{UL}}$. For any $\mathcal{L}'$, construct $U\*{\mathcal{L}'}: \mathcal{L}' \to \mathcal{C}\_{\text{UL}}$:  
     * **On Objects**: Map each expression $e \in \mathcal{L}'$ to a UL expression $F(e)$ encoding $e$’s semantic content. For example, a line equation $ax \+ by \+ c \= 0$ in $\mathcal{L}'$ maps to $\text{line}(l) \land \text{equation}(l, a, b, c)$.  
     * **On Morphisms**: Map a transformation $t: e\_1 \to e\_2$ in $\mathcal{L}'$ to a syntactic transformation $T: F(e\_1) \to F(e\_2)$ in $\mathcal{C}\_{\text{UL}}$, preserving equivalence.  
-  * **Uniqueness**: Suppose $V\_{\mathcal{L}'}: \mathcal{L}' \to \mathcal{C}*{\text{UL}}$ is another functor. Since $\mathcal{C}*{\text{UL}}$’s expressions are uniquely determined by their semantic interpretation (via $F$), $V\_{\mathcal{L}'} \= U\_{\mathcal{L}'}$ by the universal property of functors.  
+  * **Uniqueness**: Suppose $V\_{\mathcal{L}'}: \mathcal{L}' \to \mathcal{C}\*{\text{UL}}$ is another functor. Since $\mathcal{C}\*{\text{UL}}$’s expressions are uniquely determined by their semantic interpretation (via $F$), $V\_{\mathcal{L}'} \= U\_{\mathcal{L}'}$ by the universal property of functors.  
 * **Proof of Terminality**:  
   * For any $\mathcal{L}'$, $U\_{\mathcal{L}'}$ exists because $F$ provides a canonical embedding into $\mathcal{C}\_{\text{UL}}$.  
   * Uniqueness follows from the fact that $\mathcal{C}\_{\text{UL}}$’s morphisms are determined by UL’s deduction system, which is complete (per Section 5.4), ensuring a single mapping.  
-  * Hence, $\mathcal{C}*{\text{UL}}$ is terminal in $\mathcal{C}*{\text{lang}}$, proving UL’s universality.
+  * Hence, $\mathcal{C}\*{\text{UL}}$ is terminal in $\mathcal{C}\*{\text{lang}}$, proving UL’s universality.
 
   #### **5.5.4 Non-Euclidean Extensions and Robustness**
 
