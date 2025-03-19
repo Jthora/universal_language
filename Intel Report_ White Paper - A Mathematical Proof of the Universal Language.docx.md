@@ -344,7 +344,7 @@ The square, as a fundamental closed geometric shape within the Universal Languag
 
   * **Side and Angle Definition**: A square is defined by four vertices $P\_1 \= (0, 0\)$, $P\_2 \= (s, 0\)$, $P\_3 \= (s, s)$, and $P\_4 \= (0, s)$ in $\mathbb{R}^2$, where $s$ is the side length, forming edges of equal length $|P\_1P\_2| \= |P\_2P\_3| \= |P\_3P\_4| \= |P\_4P\_1| \= s$ and right angles $\angle P\_1P\_2P\_3 \= \angle P\_2P\_3P\_4 \= \angle P\_3P\_4P\_1 \= \angle P\_4P\_1P\_2 \= \pi/2$.  
   * **Area and Perimeter**: The square’s area is $A \= s^2$, and its perimeter is $P \= 4s$, reflecting its efficient enclosure of space within a rectilinear framework.  
-  * **Symmetry**: The square exhibits rotational symmetry under 90-degree rotations, forming a cyclic group of order 4, described by the rotation matrix $R\_{\pi/2} \= \begin{bmatrix} 0 & \-1 \ 1 & 0 \end{bmatrix}$, which maps $(x, y)$ to $(-y, x)$, preserving the square’s structure.  
+  * **Symmetry**: The square exhibits rotational symmetry under 90-degree rotations, forming a cyclic group of order 4, described by the rotation matrix $R\_{\pi/2} \= \begin{bmatrix} 0 & \-1 \\ 1 & 0 \end{bmatrix}$, which maps $(x, y)$ to $(-y, x)$, preserving the square’s structure.  
   * **Orthogonality**: The square’s edges are perpendicular, with adjacent edges satisfying $\vec{v\_1} \cdot \vec{v\_2} \= 0$, where $\vec{v\_1} \= (s, 0\)$ and $\vec{v\_2} \= (0, s)$, ensuring a rectilinear grid-like structure. These properties—equal sides, right angles, symmetry, and orthogonality—impart a geometric essence of order and permanence, forming the basis for the square’s symbolic meaning in UL.
 
 **Axiomatic Meaning in UL for the square**
@@ -355,7 +355,7 @@ The square, as a fundamental closed geometric shape within the Universal Languag
 | ----- | ----- | ----- |
 | Equal Sides | All sides of length $s$, $ | P\_1P\_2 |
 | Right Angles | $\angle P\_iP\_jP\_k \= \pi/2$, with $\vec{v\_1} \cdot \vec{v\_2} \= 0$ | *Order*: Denotes structured, rectilinear organization. |
-| Symmetry | Cyclic group of order 4, rotation $ R\_{\pi/2} \= \begin{bmatrix} 0 & \-1 \ 1 & 0 \end{bmatrix} $ | *Balance*: Suggests equilibrium and harmony. |
+| Symmetry | Cyclic group of order 4, rotation $R\_{\pi/2} \= \begin{bmatrix} 0 & \-1 \\ 1 & 0 \end{bmatrix}$ | *Balance*: Suggests equilibrium and harmony. |
 | Efficient Containment | Area $A \= s^2$, perimeter $P \= 4s$, maximizing enclosed space | *Boundedness*: Reflects containment and permanence. |
 
 * In UL, the square is thus axiomatized as the symbol of *fixed* or *order*, representing stability, structure, or boundedness. The *fixed* designation reflects the square’s rigidity and uniformity, rooted in its equal sides and perpendicular angles, which ensure a stable, unchanging form. The *order* designation captures its broader significance as a symbol of structured organization, aligning with its rectilinear framework and symmetry, which suggest a universal notion of balance and permanence.
@@ -713,7 +713,7 @@ The adjacency and connectivity rules are built upon precise geometric and mathem
   * **Example**: Lines $\text{line}((0,0), (1,1))$ and $\text{line}((0,1), (1,0))$ intersect at $(0.5, 0.5)$ where $\text{det} \= 0$, representing a crossroad in a relational model.  
 * **Graph Representation**:  
   * **Definition**: Connected symbols form a graph, with each symbol as a vertex and each intersection or adjacency as an edge. This is analyzable via an adjacency matrix $A\_{ij}$, where $A\_{ij} \= 1$ if symbols $i$ and $j$ are connected (via proximity or intersection), and $A\_{ij} \= 0$ otherwise. The graph’s properties (e.g., connectivity, cycles) can be computed using graph theory algorithms.  
-  * **Example**: A graph with $\text{point}(0,0)$, $\text{point}(1,0)$ (adjacent, $\epsilon \= 0.5$ ), and $\text{line}((0,0), (1,1))$ intersecting $\text{line}((1,0), (0,1))$ at $(0.5, 0.5)$ yields a matrix $A \= \begin{bmatrix} 0 & 1 & 1 \ 1 & 0 & 1 \ 1 & 1 & 0 \end{bmatrix}$, indicating a triangular network.  
+  * **Example**: A graph with $\text{point}(0,0)$, $\text{point}(1,0)$ (adjacent, $\epsilon \= 0.5$ ), and $\text{line}((0,0), (1,1))$ intersecting $\text{line}((1,0), (0,1))$ at $(0.5, 0.5)$ yields a matrix $A \= \begin{bmatrix} 0 & 1 & 1 \\ 1 & 0 & 1 \\ 1 & 1 & 0 \end{bmatrix}$, indicating a triangular network.  
 * **Higher-Dimensional Extensions**:  
   * **Definition**: In 3D, proximity uses $|P\_1 \- P\_2| \= \sqrt{(x\_2 \- x\_1)^2 \+ (y\_2 \- y\_1)^2 \+ (z\_2 \- z\_1)^2} \< \epsilon$, and intersection involves 3D line or surface equations (e.g., plane intersection via $\text{det}$ of 3D vectors).  
   * **Example**: A 3D point $\text{point}(0,0,0)$ and $\text{point}(0.1,0,0)$ are adjacent with $\epsilon \= 0.2$, while two planes intersect along a line, modeling a 3D network.
