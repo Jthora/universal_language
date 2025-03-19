@@ -373,11 +373,7 @@ The square, as a fundamental closed geometric shape within the Universal Languag
 | ----- | ----- | ----- |
 | Equal Sides | $\|P_1P_2\| = \|P_2P_3\| = \|P_3P_4\| = \|P_4P_1\| = s$, where $s$ is the side length | *Uniformity*: Represents consistency and equality in structure. |
 | Right Angles | $\angle P\_iP\_jP\_k \= \pi/2$, with $\vec{v\_1} \cdot \vec{v\_2} \= 0$ | *Order*: Denotes structured, rectilinear organization. |
-| Symmetry | Rotational symmetry under 
-```math 
-R_{\pi/2} = \begin{bmatrix} 0 & -1 \\\ 1 & 0 \end{bmatrix}
-```
-, mapping $(x, y)$ to $(-y, x)$ | *Stability*: Reflects invariance and balanced permanence. |
+| Symmetry | Rotational symmetry under $R_{\pi/2} = \left[0 \, -1 \atop 1 \, 0\right]$, mapping $(x, y)$ to $(-y, x)$ | *Stability*: Reflects invariance and balanced permanence. |
 | Efficient Containment | Area $A \= s^2$, perimeter $P \= 4s$, maximizing enclosed space | *Boundedness*: Reflects containment and permanence. |
 
 * In UL, the square is thus axiomatized as the symbol of *fixed* or *order*, representing stability, structure, or boundedness. The *fixed* designation reflects the square’s rigidity and uniformity, rooted in its equal sides and perpendicular angles, which ensure a stable, unchanging form. The *order* designation captures its broader significance as a symbol of structured organization, aligning with its rectilinear framework and symmetry, which suggest a universal notion of balance and permanence.
