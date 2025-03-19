@@ -22,6 +22,8 @@ $$R_{\pi/2} = \begin{bmatrix} 0 & -1 \\\ 1 & 0 \end{bmatrix}$$
 R_{\pi/2} = \begin{bmatrix} 0 & -1 \\\ 1 & 0 \end{bmatrix}
 ```
 
+$\left[X\atop Y\right]$
+
 $\begin{bmatrix} u\\e \end{bmatrix}  \sim 
 N (\begin{bmatrix}0\\0\end{bmatrix},
 \begin{bmatrix} G(\sigma_g) &0\\ 0 &R(\sigma_{\gamma})\end{bmatrix})$
