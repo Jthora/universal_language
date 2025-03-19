@@ -142,8 +142,8 @@ This formalization defines UL as a first-order theory with a precise signature, 
 We define a model $\mathcal{M} \= (\mathbb{R}^2, I)$ for UL, where:
 
 * **Domain**: The domain of $\mathcal{M}$ is $\mathbb{R}^2$, the set of all ordered pairs $(x, y)$ where $x, y \in \mathbb{R}$, representing points in the Euclidean plane. This domain is chosen for its familiarity and well-defined geometric properties.  
-* **Signature $S$**: UL’s signature includes constants (e.g., $O$ for the origin), unary predicates (e.g., $\text{point}$, $\text{line}$, $\text{circle}$), binary predicates (e.g., $\text{contains}$, $\text{intersects}$), and function symbols (e.g., $\text{intersection}$).  
-* **Interpretation Function $I$**: The function $I$ assigns meanings to the symbols in $S$:  
+* **Signature $S$ **: UL’s signature includes constants (e.g., $O$ for the origin), unary predicates (e.g., $\text{point}$, $\text{line}$, $\text{circle}$), binary predicates (e.g., $\text{contains}$, $\text{intersects}$), and function symbols (e.g., $\text{intersection}$).  
+* **Interpretation Function $I$ **: The function $I$ assigns meanings to the symbols in $S$:  
   * **Constants**:  
     * $I(O) \= (0, 0\)$, representing the origin.  
   * **Unary Predicates**:  
@@ -207,7 +207,7 @@ These measures guarantee that UL is paradox-free and logically sound.
 
 UL is grounded in Zermelo-Fraenkel set theory with the Axiom of Choice (ZFC):
 
-* **Construction of $\mathbb{R}^2$**:  
+* **Construction of $\mathbb{R}^2$ **:  
   * The real numbers $\mathbb{R}$ are constructed within ZFC via Dedekind cuts of rationals: a cut is a pair $(A, B)$ where $A \cup B \= \mathbb{Q}$, $A \cap B \= \emptyset$, $A$ has no greatest element, and $a \< b$ for all $a \in A$, $b \in B$. Each cut corresponds to a real number.  
   * $\mathbb{R}^2 \= \mathbb{R} \times \mathbb{R}$, the Cartesian product, is well-defined in ZFC as the set of all functions from ${0, 1}$ to $\mathbb{R}$.  
 * **ZFC Consistency**:  
@@ -255,7 +255,7 @@ This expanded section adds substantial mathematical rigor through detailed defin
 
 **Purpose**: The objective of this section is to enhance the expressive power of the Universal Language (UL) by extending its framework from basic Euclidean geometry to encompass higher-dimensional spaces, topological properties, and algebraic structures. This development transforms UL into a comprehensive language capable of describing complex mathematical and scientific concepts, making it a universal tool for interdisciplinary communication across fields such as topology, algebra, geometry, and theoretical physics.
 
-#### **5.3.1 Higher-Dimensional Extension: Generalizing to $\mathbb{R}^n$**
+#### **5.3.1 Higher-Dimensional Extension: Generalizing to $\mathbb{R}^n$ **
 
 To extend UL to $n$-dimensional Euclidean space $\mathbb{R}^n$, we generalize its signature and axioms to describe higher-dimensional geometric objects and their relationships rigorously.
 
@@ -266,7 +266,7 @@ To extend UL to $n$-dimensional Euclidean space $\mathbb{R}^n$, we generalize it
     * $\text{sphere}(x)$: True if $x$ is an $(n-1)$-sphere, i.e., $x \= { \mathbf{p} \in \mathbb{R}^n \mid |\mathbf{p} \- \mathbf{c}|\_2 \= r }$, with center $\mathbf{c} \in \mathbb{R}^n$ and radius $r \> 0$, where $|\cdot|\_2$ denotes the Euclidean norm.  
     * $\text{contains}\_n(x, y)$: True if $y$ lies within the interior of $x$ in $\mathbb{R}^n$, e.g., a point $y$ inside an $n$-ball $x \= { \mathbf{p} \in \mathbb{R}^n \mid |\mathbf{p} \- \mathbf{c}|\_2 \< r }$.  
   * **Functions**:  
-    * $\text{distance}*n(\mathbf{p}, \mathbf{q})$: Computes the Euclidean distance $\sqrt{\sum*{i=1}^n (p\_i \- q\_i)^2}$ between points $\mathbf{p}, \mathbf{q} \in \mathbb{R}^n$.  
+    * $\text{distance}\*n(\mathbf{p}, \mathbf{q})$: Computes the Euclidean distance $\sqrt{\sum\*{i=1}^n (p\_i \- q\_i)^2}$ between points $\mathbf{p}, \mathbf{q} \in \mathbb{R}^n$.  
     * $\text{transform}\_n(T, x)$: Applies an affine transformation $T: \mathbb{R}^n \to \mathbb{R}^n$, defined as $T(\mathbf{x}) \= A\mathbf{x} \+ \mathbf{b}$, where $A$ is an $n \times n$ matrix and $\mathbf{b} \in \mathbb{R}^n$, to object $x$.  
 * **Axioms for Higher Dimensions**:  
   * **Type Axioms**:  
@@ -500,7 +500,7 @@ This functor ensures that $\mathcal{C}\*{\text{UL}}$ faithfully reflects the str
 
 UL’s universality is proven by showing that $\mathcal{C}\_{\text{UL}}$ is a terminal object in a category of relevant languages.
 
-* **Category $\mathcal{C}\_{\text{lang}}$**:  
+* **Category $\mathcal{C}\_{\text{lang}}$ **:  
   * **Objects**: Formal languages $\mathcal{L}'$ capable of expressing geometric, topological, or algebraic properties, e.g., first-order languages of fields, topological spaces, or groups.  
   * **Morphisms**: Functors $H: \mathcal{L}' \to \mathcal{L}''$ that map expressions and transformations between languages.  
 * **Terminal Object Property**:  
