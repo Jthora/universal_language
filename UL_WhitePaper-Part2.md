@@ -475,7 +475,9 @@ To formalize UL’s universality, we define two key categories that encapsulate 
 
 These categories provide a structured representation of the systems UL aims to universalize.
 
-#### **5.5.2 Functorial Mapping $F: \mathcal{C}*{\text{geom}} \to \mathcal{C}*{\text{UL}}$**
+#### **5.5.2 Functorial Mapping**
+
+$$F: \mathcal{C}*{\text{geom}} \to \mathcal{C}*{\text{UL}}$$
 
 A functor $F: \mathcal{C}*{\text{geom}} \to \mathcal{C}*{\text{UL}}$ maps geometric spaces and their morphisms to UL expressions, preserving categorical structure.
 
