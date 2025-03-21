@@ -19,13 +19,7 @@ $R_{\pi/2} = \left[ 0\atop 1 \right] \left[ -1\atop 0 \right]$
 
 $R_{\pi/2} = \left[0 \, -1 \atop 1 \, 0\right]$
 
-$T_{\text{project}} = \left[ 1 \, 0 \, 0 \middle| 0 \, 1 \, 0 \middle| a \, b \, 1 \right]$
-
-$T_{\text{project}} = \left[ \stackrel{1 \, 0 \, 0}\stackrel{0 \, 1 \, 0}\stackrel{a \, b \, 1} \right]$
-
-$T_{\text{project}} = \left( 1 \, 0 \, 0 \above 1pt 0 \, 1 \, 0 \above 1pt a \, b \, 1 \right)$
-
-$T_{\text{project}} = \bordermatrix{ & & & \cr & 1 & 0 & 0 \cr & 0 & 1 & 0 \cr & a & b & 1 \cr}$
+$T_{\text{project}} = \left[ \underset{\underset{a \, b \, 1}{0 \, 1 \, 0}}{1 \, 0 \, 0} \right]$
 
 **Abstract**
 
