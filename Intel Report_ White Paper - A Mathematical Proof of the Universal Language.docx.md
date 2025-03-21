@@ -17,6 +17,8 @@ $M_{\text{flip}} = \left[ \begin{array}{cc} 1 & 0 \\ 0 & -1 \end{array} \right]$
 
 $R_{\pi/2} = \left[ 0\atop 1 \right] \left[ -1\atop 0 \right]$
 
+$R_{\pi/2} = \left[0 \, -1 \atop 1 \, 0\right]$
+
 
 **Abstract**
 
