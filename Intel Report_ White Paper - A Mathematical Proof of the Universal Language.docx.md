@@ -21,15 +21,8 @@ $R_{\pi/2} = \left[0 \, -1 \atop 1 \, 0\right]$
 
 $T_{\text{project}} = \left[ 1 \, 0 \, 0 \middle| 0 \, 1 \, 0 \middle| a \, b \, 1 \right]$
 
-$T_{\text{project}} = \left[ \stackrel{1 \, 0 \, 0}{\stackrel{0 \, 1 \, 0}{a \, b \, 1}} \right]$
+$T_{\text{project}} = \left[ \stackrel{1 \, 0 \, 0}{\stackrel{0 \, 1 \, 0}}\stackrel{a \, b \, 1} \right]$
 
-$T_{\text{project}} = \left( 1 \, 0 \, 0 \above 0 \, 1 \, 0 \above a \, b \, 1 \right)$
-
-$T_{\text{project}} = \left\{ \cases{1 \, 0 \, 0 \\ 0 \, 1 \, 0 \\ a \, b \, 1} \right.$
-
-$T_{\text{project}} = \left[ 1 \hskip 1em 0 \hskip 1em 0 \phantom{0} 0 \hskip 1em 1 \hskip 1em 0 \phantom{0} a \hskip 1em b \hskip 1em 1 \right]$
-
-$T_{\text{project}} = \bordermatrix{ & & & \cr & 1 & 0 & 0 \cr & 0 & 1 & 0 \cr & a & b & 1 \cr}$
 
 
 **Abstract**
