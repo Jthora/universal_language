@@ -21,6 +21,8 @@ $R_{\pi/2} = \left[0 \, -1 \atop 1 \, 0\right]$
 
 $T_{\text{project}} = \left[ \underset{\underset{a \, b \, 1}{0 \, 1 \, 0}}{1 \, 0 \, 0} \right]$
 
+$T_{\text{project}} = \left[ 1 \, 0 \, 0 \substack{0 \, 1 \, 0 \\ a \, b \, 1} \right]$
+
 **Abstract**
 
 The Universal Language (UL)—defined herein as an integrated system of Universal Symbology, Universal Syntax, Universal Grammar, and a Universal Writing System—constitutes a novel framework for symbolic communication, distinct from extant paradigms in Artificial Intelligence (AI), including Artificial General Intelligence (AGI), Artificial Superintelligence (ASI), Symbolic AI, and Semiotics. This white paper advances a formal mathematical proof to establish UL’s existence as a coherent, geometrically grounded system designed to transcend cultural, linguistic, and technological boundaries, facilitating precise, interpretable communication between humans and machines across diverse domains. Through deductive reasoning, the proof demonstrates UL’s consistency, completeness, and universality, positioning it as a pioneering contribution to knowledge representation and human-AI interaction. Implications for AGI development, symbolic reasoning, and semiotic theory are delineated, with recommendations for future empirical validation.
