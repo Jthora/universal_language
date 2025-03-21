@@ -25,3 +25,8 @@ The Universal Language project seeks to:
 This whitepaper serves as both a theoretical manifesto and a technical blueprint for those interested in exploring or contributing to the UL ecosystem.
 
 
+## Defensive Publication Notice
+
+This project and its associated documentation are published as a defensive publication to establish prior art. For more details, refer to the official record:
+
+[![DOI](https://zenodo.org/badge/951175055.svg)](https://doi.org/10.5281/zenodo.15050731)
