@@ -21,6 +21,8 @@ $R_{\pi/2} = \left[0 \, -1 \atop 1 \, 0\right]$
 
 $T_{\text{project}} = \left[1 \, 0 \, 0 \atop 0 \, 1 \, 0 \atop a \, b \, 1\right]$
 
+$T_{\text{project}} = \left[ 1 \, 0 \, 0 \mid 0 \, 1 \, 0 \mid a \, b \, 1 \right]$
+
 
 **Abstract**
 
