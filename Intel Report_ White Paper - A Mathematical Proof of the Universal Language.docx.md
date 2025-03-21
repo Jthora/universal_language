@@ -37,6 +37,8 @@ $T_{\text{project}} = \left( 1 \, 0 \, 0 \above 0 \, 1 \, 0 \above a \, b \, 1 \
 
 $T_{\text{project}} = \left[ 1 \hskip 1em 0 \hskip 1em 0 \vskip 1em 0 \hskip 1em 1 \hskip 1em 0 \vskip 1em a \hskip 1em b \hskip 1em 1 \right]$
 
+$T_{\text{project}} = \left[ 1_0^0 \, 0_1^0 \, a_b^1 \right]$
+
 
 **Abstract**
 
