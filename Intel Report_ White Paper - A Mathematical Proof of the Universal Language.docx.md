@@ -486,7 +486,7 @@ The transformation rules are rooted in objective geometry and linear algebra, le
   * **Example**: Reflecting a circle $\text{circle}((0,0), 1\)$ yields $\text{circle}((0,0), 1\)$ (unchanged due to symmetry), while a line $\text{line}((0,0), (1,1))$ maps to $\text{line}((0,0), (1,-1))$, reversing its slope.  
 * **Scaling**:  
   * **Description**: Scaling adjusts a symbol’s size proportionally along the x- and y-axes, preserving its geometric proportions while altering its dimensions. This leverages the dimensional consistency of forms like the triangle and square, where area and perimeter scale predictably.  
-  * **Mathematical Representation**: The scaling matrix is $S \= \left[k\_x \, 0 \atop 0 \, k\_y \right]$, transforming $(x, y)$ to $(k\_x x, k\_y y)$, where $k\_x$ and $k\_y$ are scaling factors. The area scales as $A' \= k\_x k\_y A$, and uniform scaling ($ k\_x \= k\_y \= k $) preserves shape.  
+  * **Mathematical Representation**: The scaling matrix is $S \= \left[k\_x \, 0 \atop 0 \, k\_y \right]$, transforming $(x, y)$ to $(k\_x x, k\_y y)$, where $k\_x$ and $k\_y$ are scaling factors. The area scales as $A' \= k\_x k\_y A$, and uniform scaling ( $k\_x \= k\_y \= k$ ) preserves shape.  
   * **Example**: Scaling a triangle $\text{triangle}((0,0), (1,0), (0,1))$ by $k\_x \= 2, k\_y \= 1$ results in $\text{triangle}((0,0), (2,0), (0,1))$, doubling its base width while maintaining height, with area increasing from 0.5 to 1\.  
 * **Rotation**:  
   * **Description**: Rotation changes a symbol’s orientation around a fixed point (e.g., origin), preserving distances and angles. This highlights the rotational symmetry of the circle and square, where periodic transformations (e.g., $\theta \= \pi/2$) align with their geometric properties.  
@@ -503,16 +503,16 @@ The transformation rules are axiomatically applied to UL symbols, with their geo
 
 | Transformation | Mathematical Description | Geometric Feature | Syntactic Role in UL | Example Application |
 | :---- | :---- | :---- | :---- | :---- |
-| Flip/Mirroring | $ M\_{\text{flip}} \= \left[ 1 \, 0 \atop 0 \, -1 \right]$ | Symmetry (e.g., circle, square) | Inversion: Reverses directional flow (e.g., time reversal, causality) | Reflecting $\text{wave}$ to model tidal ebb ($\phi \to \-\phi$) |
-| Scaling | $S \= \left[ k\_x \, 0 \atop 0 \, k\_y \right]$ | Proportionality (e.g., triangle) | Magnification: Indicates intensity or scope (e.g., emphasis, hierarchy) | Scaling $\text{triangle}$ to show population growth ($k\_x \= 1.5$) |
-| Rotation | $R\_{\theta} \= \left[ \cos\theta \, \-\sin\theta \atop \sin\theta \, \cos\theta \right]$ | Orientation (e.g., angle, curve) | Orientation: Defines sequence or perspective (e.g., cyclic order, viewpoint) | Rotating $\text{angle}$ to indicate a decision shift ($\theta \= \pi/4$) |
+| Flip/Mirroring | $M\_{\text{flip}} \= \left[ 1 \, 0 \atop 0 \, -1 \right]$ | Symmetry (e.g., circle, square) | Inversion: Reverses directional flow (e.g., time reversal, causality) | Reflecting $\text{wave}$ to model tidal ebb ( $\phi \to \-\phi$ ) |
+| Scaling | $S \= \left[ k\_x \, 0 \atop 0 \, k\_y \right]$ | Proportionality (e.g., triangle) | Magnification: Indicates intensity or scope (e.g., emphasis, hierarchy) | Scaling $\text{triangle}$ to show population growth ( $k\_x \= 1.5$ ) |
+| Rotation | $R\_{\theta} \= \left[ \cos\theta \, \-\sin\theta \atop \sin\theta \, \cos\theta \right]$ | Orientation (e.g., angle, curve) | Orientation: Defines sequence or perspective (e.g., cyclic order, viewpoint) | Rotating $\text{angle}$ to indicate a decision shift ( $\theta \= \pi/4$ ) |
 | Matrix Transformation | $T \= \left[a \, b \, t\_x \atop{ c \, d \, t\_y \atop 0 \, 0 \, 1} \right]$ | Linearity (e.g., line, wave) | Composition: Combines elements into complex structures (e.g., grids, networks) | Transforming $\text{line}$ into a grid for evacuation paths |
 
 * **Detailed Syntactic Roles**:  
-  * **Inversion (Flip/Mirroring)**: The symmetry of a circle’s equidistant boundary suggests a reversal of process, such as time reversal in physics ($\text{diffusion}(x, t) \to \text{diffusion}(x, \-t)$) or causality in logic ($\text{cause} \to \text{effect}$). A pilot with 500 students showed 92% accuracy in interpreting mirrored $\text{wave}$ as tidal cycles.  
-  * **Magnification (Scaling)**: The triangle’s stable area scaling ($A' \= k\_x k\_y A$) indicates emphasis or hierarchical depth, as in economic models where $ \text{utility}(u) $ scales with resource intensity ($k\_x \= 2$). Trials with 200 economists achieved 88% consistency in scaling interpretations.  
-  * **Orientation (Rotation)**: The angle’s directional convergence defines sequence or perspective, such as cyclic order in topology ($\text{homotopy}(x, y)$ with $\theta \= \pi/2$) or viewpoint shifts in robotics ($\text{geodesic}(\gamma)$). A robotics test rotated $\text{angle}$ 45°, improving path planning by 15%.  
-  * **Composition (Matrix Transformation)**: The line’s linear extension enables structured arrangements, like grids for climate modeling ($\text{diffusion}$ grids) or networks for social analysis ($\text{connected}(G)$). A grid transformation pilot enhanced flood prediction accuracy by 10% (Section 6.7.4).
+  * **Inversion (Flip/Mirroring)**: The symmetry of a circle’s equidistant boundary suggests a reversal of process, such as time reversal in physics ( $\text{diffusion}(x, t) \to \text{diffusion}(x, \-t)$ ) or causality in logic ( $\text{cause} \to \text{effect}$ ). A pilot with 500 students showed 92% accuracy in interpreting mirrored $\text{wave}$ as tidal cycles.  
+  * **Magnification (Scaling)**: The triangle’s stable area scaling ( $A' \= k\_x k\_y A$ ) indicates emphasis or hierarchical depth, as in economic models where $\text{utility}(u)$ scales with resource intensity ( $k\_x \= 2$ ). Trials with 200 economists achieved 88% consistency in scaling interpretations.  
+  * **Orientation (Rotation)**: The angle’s directional convergence defines sequence or perspective, such as cyclic order in topology ( $\text{homotopy}(x, y)$ with $\theta \= \pi/2$ ) or viewpoint shifts in robotics ( $\text{geodesic}(\gamma)$ ). A robotics test rotated $\text{angle}$ 45°, improving path planning by 15%.  
+  * **Composition (Matrix Transformation)**: The line’s linear extension enables structured arrangements, like grids for climate modeling ( $\text{diffusion}$ grids) or networks for social analysis ( $\text{connected}(G)$ ). A grid transformation pilot enhanced flood prediction accuracy by 10% (Section 6.7.4).
 
 #### **4.2.1.3 Primordial Universality**
 
@@ -546,7 +546,7 @@ These transformation rules are foundational to UL’s subsequent components, ens
 * **Empirical Validation**:  
   * A planned 2026 study will test 10,000 transformations across 20 cultures, targeting 95% consistency in $\text{flip}$ and $\text{scale}$ interpretations, enhancing UL’s universality.  
 * **Advanced Transformations**:  
-  * Future UL versions (e.g., by 2028$ may include projective transformations ($T_{\text{project}} = \left[1 \, 0 \, 0 \atop{ 0 \, 1 \, 0 \atop a \, b \, 1}\right]$ ) for 3D modeling, expanding applications in robotics and physics.  
+  * Future UL versions (e.g., by 2028$ may include projective transformations ( $T_{\text{project}} = \left[1 \, 0 \, 0 \atop{ 0 \, 1 \, 0 \atop a \, b \, 1}\right]$ ) for 3D modeling, expanding applications in robotics and physics.  
 * **Interdisciplinary Synergy**:  
   * Collaboration with computer graphics experts will refine $T$ for virtual reality, aiming for 98% rendering accuracy by 2030, integrating UL with emerging technologies.
 
