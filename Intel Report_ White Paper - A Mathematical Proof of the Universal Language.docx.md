@@ -564,16 +564,16 @@ The containment and enclosure rules are grounded in objective geometry, focusing
 
 * **Enclosure by Closed Shapes**:  
   * **Definition**: A symbol $S\_1$ is contained within a closed shape $S\_2$ (e.g., circle, triangle, square) if all its coordinates lie within $S\_2$’s boundary. For a circle defined by $(x \- h)^2 \+ (y \- k)^2 \= r^2$, a point $P \= (x\_p, y\_p)$ is inside if $(x\_p \- h)^2 \+ (y\_p \- k)^2 \< r^2$. On the boundary, $(x\_p \- h)^2 \+ (y\_p \- k)^2 \= r^2$, and outside, $(x\_p \- h)^2 \+ (y\_p \- k)^2 \> r^2$.  
-  * **Example**: A point $\text{point}(1,1)$ inside a circle $\text{circle}((0,0), 2) satisfies $(1-0)^2 \+ (1-0)^2 \= 2 \< 4$ , confirming containment. For a square $\text{square}((0,0), 2)$ , containment requires $0 \< x\_p \< 2, 0 \< y\_p \< 2$.  
+  * **Example**: A point $\text{point}(1,1)$ inside a circle $\text{circle}((0,0), 2)$ satisfies $(1-0)^2 \+ (1-0)^2 \= 2 \< 4$ , confirming containment. For a square $\text{square}((0,0), 2)$ , containment requires $0 \< x\_p \< 2, 0 \< y\_p \< 2$.  
 * **Hierarchical Nesting**:  
   * **Definition**: Multiple levels of enclosure are possible, enabling recursive nesting (e.g., a point inside a triangle inside a circle). This is defined by recursively checking containment at each level: $S\_1 \subset S\_2 \subset S\_3$ if $S\_1$ is inside $S\_2$ and $S\_2$ is inside $S\_3$.  
   * **Example**: A point $\text{point}(0.5, 0.5)$ inside a triangle $\text{triangle}((0,0), (1,0), (0,1))$, which is itself inside a circle $\text{circle}((0,0), 2)$ , represents a nested structure. Using barycentric coordinates for the triangle, $\alpha \+ \beta \+ \gamma \= 1$ with $\alpha, \beta, \gamma \> 0$ , confirms the point’s position, while the triangle’s vertices satisfy the circle’s condition.  
 * **Geometric Inclusion**:  
   * **Definition**: The capacity of a shape $S\_2$ to contain other symbols is determined by its enclosed area, reflecting its boundedness. For a circle, area is $A \= \pi r^2$; for a triangle, $A \= \frac{1}{2} |x\_1(y\_2 \- y\_3) \+ x\_2(y\_3 \- y\_1) \+ x\_3(y\_1 \- y\_2)|$; and for a square, $A \= s^2$, where $s$ is the side length.  
-  * **Example**: A circle $\text{circle}((0,0), 2) has area $4\pi \approx 12.56$, capable of enclosing multiple points or smaller shapes (e.g., $\text{triangle}((0,0), (1,0), (0,1))$ with area 0.5). A square $\text{square}((0,0), 2)$ has area 4, offering a more rigid containment space.  
+  * **Example**: A circle $\text{circle}((0,0), 2)$ has area $4\pi \approx 12.56$, capable of enclosing multiple points or smaller shapes (e.g., $\text{triangle}((0,0), (1,0), (0,1))$ with area 0.5). A square $\text{square}((0,0), 2)$ has area 4, offering a more rigid containment space.  
 * **Overlap and Boundary Interactions**:  
   * **Definition**: If two closed shapes $S\_2$ and $S\_3$ overlap, their containment regions are defined by intersection: $S\_1 \subset (S\_2 \cap S\_3)$ if $S\_1$ satisfies both shapes’ conditions. Boundary interactions (e.g., $S\_1$ on $S\_2$’s boundary) are treated as “touching” rather than strict containment, influencing syntactic interpretation.  
-  * **Example**: A point $\text{point}(2,0)$ on the boundary of $\text{circle}((0,0), 2) (since $2^2 \+ 0^2 \= 4$ ) is not strictly inside but “touches” the circle, suggesting a transitional role in UL syntax.
+  * **Example**: A point $\text{point}(2,0)$ on the boundary of $\text{circle}((0,0), 2)$ (since $2^2 \+ 0^2 \= 4$ ) is not strictly inside but “touches” the circle, suggesting a transitional role in UL syntax.
 
 #### **4.2.2.2 Axiomatic Syntax Rules**
 
