@@ -355,7 +355,7 @@ The square, as a fundamental closed geometric shape within the Universal Languag
 
   * **Side and Angle Definition**: A square is defined by four vertices $P\_1 \= (0, 0)$, $P\_2 \= (s, 0)$, $P\_3 \= (s, s)$, and $P\_4 \= (0, s)$ in $\mathbb{R}^2$, where $s$ is the side length, forming edges of equal length $|P\_1P\_2| \= |P\_2P\_3| \= |P\_3P\_4| \= |P\_4P\_1| \= s$ and right angles $\angle P\_1P\_2P\_3 \= \angle P\_2P\_3P\_4 \= \angle P\_3P\_4P\_1 \= \angle P\_4P\_1P\_2 \= \pi/2$.  
   * **Area and Perimeter**: The square’s area is $A \= s^2$, and its perimeter is $P \= 4s$, reflecting its efficient enclosure of space within a rectilinear framework.  
-  * **Symmetry**: The square exhibits rotational symmetry under 90-degree rotations, forming a cyclic group of order 4, described by the rotation matrix $R_{\pi/2} = \left[ 0 & -1 \atop 1 & 0 \right]$, which maps $(x, y)$ to $(-y, x)$, preserving the square’s structure.  
+  * **Symmetry**: The square exhibits rotational symmetry under 90-degree rotations, forming a cyclic group of order 4, described by the rotation matrix $R_{\pi/2} = \left[ 0 \, -1 \atop 1 \, 0 \right]$, which maps $(x, y)$ to $(-y, x)$, preserving the square’s structure.  
   * **Orthogonality**: The square’s edges are perpendicular, with adjacent edges satisfying $\vec{v\_1} \cdot \vec{v\_2} \= 0$, where $\vec{v\_1} \= (s, 0)$ and $\vec{v\_2} \= (0, s)$, ensuring a rectilinear grid-like structure. These properties—equal sides, right angles, symmetry, and orthogonality—impart a geometric essence of order and permanence, forming the basis for the square’s symbolic meaning in UL.
 
 **Axiomatic Meaning in UL for the square**
