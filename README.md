@@ -1,11 +1,8 @@
-# Universal Language (UL) Whitepaper
-
-![Universal Language Banner](https://via.placeholder.com/1200x400.png?text=Universal+Language+Whitepaper)  
-*Breaking barriers through a unified communication framework*
+# Universal Language (UL) Whitepaper 
 
 ## Overview
 
-The Universal Language (UL) Whitepaper is a comprehensive proposal for a standardized communication system designed to transcend linguistic, cultural, and computational boundaries. Developed by [Jthora](https://github.com/Jthora), this project aims to redefine how entities—whether human, machine, or otherwise—exchange ideas and information in a universal context.
+The Universal Language (UL) Whitepaper is a comprehensive math for a standardized communication system designed to transcend linguistic, cultural, and computational boundaries. Developed by Jordan Traña  [Jthora](https://github.com/Jthora), this project aims to redefine how entities—whether human, machine, or otherwise—exchange ideas and information in a universal context.
 
 The whitepaper is divided into three parts, each addressing a critical aspect of the UL framework:
 
@@ -27,13 +24,4 @@ The Universal Language project seeks to:
 
 This whitepaper serves as both a theoretical manifesto and a technical blueprint for those interested in exploring or contributing to the UL ecosystem.
 
-## Getting Started
 
-### Prerequisites
-- A basic understanding of constructed languages, symbolic systems, or computational linguistics may be helpful but is not required.
-- Access to a Markdown viewer or GitHub to read the whitepaper files.
-
-### Accessing the Whitepaper
-1. Clone this repository to your local machine:
-   ```bash
-   git clone https://github.com/Jthora/universal_language.git
