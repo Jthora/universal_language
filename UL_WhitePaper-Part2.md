@@ -485,7 +485,7 @@ A functor $F: \mathcal{C}\*{\text{geom}} \to \mathcal{C}\*{\text{UL}}$ maps geom
   * For a space $X \in \mathcal{C}\_{\text{geom}}$:  
     * $F(\mathbb{R}^n) \= \text{space}(\mathbb{R}^n)$, an expression encoding $\mathbb{R}^n$’s metric and topology, e.g., $\forall \mathbf{p}, \mathbf{q} , (\text{distance}\*n(\mathbf{p}, \mathbf{q}) \= \sqrt{\sum\*{i=1}^n (p\_i \- q\_i)^2})$.  
     * $F(\mathbb{P}^n(\mathbb{R})) \= \text{projective}(\mathbb{P}^n)$, capturing projective coordinates, e.g., $\forall \[x\_0:\dots:x\_n\] , (\text{homogeneous}(\mathbf{x}))$.  
-    * $F(\mathbb{H}^n) \= \text{hyperbolic}(\mathbb{H}^n)$, with predicates like $\text{hyperbolic\_distance}(\mathbf{p}, \mathbf{q}) \= \text{arccosh}(1 \+ 2 \frac{|\mathbf{p} \- \mathbf{q}|^2}{(1 \- |\mathbf{p}|^2)(1 \- |\mathbf{q}|^2)})$ for the Poincaré disk model.  
+    * $F(\mathbb{H}^n) \= \mathrm{hyperbolic}(\mathbb{H}^n)$, with predicates like $\mathrm{hyperbolic\_distance}(\mathbf{p}, \mathbf{q}) \= \text{arccosh}(1 \+ 2 \frac{|\mathbf{p} \- \mathbf{q}|^2}{(1 \- |\mathbf{p}|^2)(1 \- |\mathbf{q}|^2)})$ for the Poincaré disk model.  
   * These expressions are wffs in $\mathcal{C}\_{\text{UL}}$, encoding intrinsic properties.  
 * **Definition of $F$ on Morphisms**:  
   * For a continuous map $f: X \to Y$, $F(f): F(X) \to F(Y)$ is the syntactic transformation that maps the expression for $X$ to that for $Y$ under $f$. For example, if $f: \mathbb{R}^2 \to \mathbb{R}^3$ is given by $(x, y) \mapsto (x, y, 0\)$, then $F(f)$ transforms $\text{space}(\mathbb{R}^2)$ to $\text{space}(\mathbb{R}^3)$ with the embedding constraint.  
@@ -520,9 +520,9 @@ To ensure universality across non-Euclidean geometries:
 
 * **Hyperbolic Geometry**:  
   * Extend $F$ to $\mathbb{H}^n$ with predicates:  
-    * $\text{hyperbolic\_distance}(\mathbf{p}, \mathbf{q}) \= \text{arccosh}(1 \+ 2 \frac{|\mathbf{p} \- \mathbf{q}|^2}{(1 \- |\mathbf{p}|^2)(1 \- |\mathbf{q}|^2)})$ for $\mathbf{p}, \mathbf{q} \in \mathbb{D}^n$, the Poincaré disk.  
+    * $\mathrm{hyperbolic\_distance}(\mathbf{p}, \mathbf{q}) \= \text{arccosh}(1 \+ 2 \frac{|\mathbf{p} \- \mathbf{q}|^2}{(1 \- |\mathbf{p}|^2)(1 \- |\mathbf{q}|^2)})$ for $\mathbf{p}, \mathbf{q} \in \mathbb{D}^n$, the Poincaré disk.  
     * $\text{geodesic}(\gamma, \mathbb{H}^n)$, where $\gamma$ is a hyperbolic geodesic (e.g., a circle orthogonal to the boundary).  
-  * **Verification**: $F(\mathbb{H}^n) \= \text{hyperbolic}(\mathbb{H}^n)$ encodes these properties, and morphisms (e.g., isometries) map to transformations preserving hyperbolic distance.  
+  * **Verification**: $F(\mathbb{H}^n) \= \mathrm{hyperbolic}(\mathbb{H}^n)$ encodes these properties, and morphisms (e.g., isometries) map to transformations preserving hyperbolic distance.  
 * **Projective Geometry**:  
   * Extend $F(\mathbb{P}^n(\mathbb{R}))$ to include cross-ratio invariance: $\text{cross\_ratio}(\[p\_1:\dots:p\_n\], \[q\_1:\dots:q\_n\]) \= \frac{(p\_1 \- p\_2)/(p\_1 \- p\_3)}{(p\_2 \- p\_4)/(p\_3 \- p\_4)}$, a projective invariant.  
   * **Proof**: The functor preserves projective transformations, ensuring consistency.  
