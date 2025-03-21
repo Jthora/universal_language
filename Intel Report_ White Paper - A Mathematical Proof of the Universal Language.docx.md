@@ -263,7 +263,7 @@ The circle, as a fundamental closed geometric shape within the Universal Languag
 
 * The circle is mathematically characterized as a closed, two-dimensional shape with a continuous boundary equidistant from a central point. Its properties are articulated as follows:
 
-  * **Boundary Equation**: A circle in 2D Euclidean space with center $(h, k)$ and radius $r$ is defined by $(x \- h)^2 \+ (y \- k)^2 \= r^2$. For a circle centered at the origin $(0, 0), this simplifies to $x^2 \+ y^2 \= r^2$.  
+  * **Boundary Equation**: A circle in 2D Euclidean space with center $(h, k)$ and radius $r$ is defined by $(x \- h)^2 \+ (y \- k)^2 \= r^2$. For a circle centered at the origin $(0, 0)$, this simplifies to $x^2 \+ y^2 \= r^2$.  
   * **Closure and Equidistance**: The circle’s boundary consists of all points $(x, y)$ at a constant distance $r$ from the center, ensuring closure and symmetry. This equidistance is expressed parametrically as $x \= r \cos\theta$, $y \= r \sin\theta$, $\theta \in (0, 2\pi)$.  
   * **Symmetry**: The circle exhibits rotational symmetry about its center, invariant under any rotation $\theta$ via the transformation $x' \= x \cos\theta \- y \sin\theta$, $y' \= x \sin\theta \+ y \cos\theta$, forming a cyclic group of infinite order.  
   * **Area and Perimeter**: The circle encloses an area $A \= \pi r^2$ and has a circumference $C \= 2\pi r$, reflecting its capacity to define a bounded, harmonious space. These properties—closure, equidistance, symmetry, and boundedness—impart a geometric essence of unity and harmony, forming the basis for the circle’s symbolic meaning in UL.
@@ -347,10 +347,10 @@ The square, as a fundamental closed geometric shape within the Universal Languag
 
 * The square is mathematically characterized as a closed, two-dimensional shape with four equal sides and four right angles, with its properties articulated as follows:
 
-  * **Side and Angle Definition**: A square is defined by four vertices $P\_1 \= (0, 0), $P\_2 \= (s, 0), $P\_3 \= (s, s)$, and $P\_4 \= (0, s)$ in $\mathbb{R}^2$, where $s$ is the side length, forming edges of equal length $|P\_1P\_2| \= |P\_2P\_3| \= |P\_3P\_4| \= |P\_4P\_1| \= s$ and right angles $\angle P\_1P\_2P\_3 \= \angle P\_2P\_3P\_4 \= \angle P\_3P\_4P\_1 \= \angle P\_4P\_1P\_2 \= \pi/2$.  
+  * **Side and Angle Definition**: A square is defined by four vertices $P\_1 \= (0, 0)$, $P\_2 \= (s, 0)$, $P\_3 \= (s, s)$, and $P\_4 \= (0, s)$ in $\mathbb{R}^2$, where $s$ is the side length, forming edges of equal length $|P\_1P\_2| \= |P\_2P\_3| \= |P\_3P\_4| \= |P\_4P\_1| \= s$ and right angles $\angle P\_1P\_2P\_3 \= \angle P\_2P\_3P\_4 \= \angle P\_3P\_4P\_1 \= \angle P\_4P\_1P\_2 \= \pi/2$.  
   * **Area and Perimeter**: The square’s area is $A \= s^2$, and its perimeter is $P \= 4s$, reflecting its efficient enclosure of space within a rectilinear framework.  
-  * **Symmetry**: The square exhibits rotational symmetry under 90-degree rotations, forming a cyclic group of order 4, described by the rotation matrix $R\_{\pi/2} \= \begin{bmatrix} 0 & \-1 \\ 1 & 0 \end{bmatrix}$, which maps $(x, y)$ to $(-y, x)$, preserving the square’s structure.  
-  * **Orthogonality**: The square’s edges are perpendicular, with adjacent edges satisfying $\vec{v\_1} \cdot \vec{v\_2} \= 0$, where $\vec{v\_1} \= (s, 0) and $\vec{v\_2} \= (0, s)$, ensuring a rectilinear grid-like structure. These properties—equal sides, right angles, symmetry, and orthogonality—impart a geometric essence of order and permanence, forming the basis for the square’s symbolic meaning in UL.
+  * **Symmetry**: The square exhibits rotational symmetry under 90-degree rotations, forming a cyclic group of order 4, described by the rotation matrix $R_{\pi/2} = \left[ \begin{array}{cc} 0 & -1 \\ 1 & 0 \end{array} \right]$, which maps $(x, y)$ to $(-y, x)$, preserving the square’s structure.  
+  * **Orthogonality**: The square’s edges are perpendicular, with adjacent edges satisfying $\vec{v\_1} \cdot \vec{v\_2} \= 0$, where $\vec{v\_1} \= (s, 0)$ and $\vec{v\_2} \= (0, s)$, ensuring a rectilinear grid-like structure. These properties—equal sides, right angles, symmetry, and orthogonality—impart a geometric essence of order and permanence, forming the basis for the square’s symbolic meaning in UL.
 
 **Axiomatic Meaning in UL for the square**
 
@@ -478,21 +478,15 @@ The transformation rules are rooted in objective geometry and linear algebra, le
   * **Description**: A reflection or mirror transformation reverses a symbol across a specified axis, preserving its shape but altering its orientation. This operation exploits the symmetry inherent in closed shapes like the circle and square, where equidistance from a center or perpendicularity of sides remains intact.  
   * **Mathematical Representation**: A reflection over the x-axis is defined by the matrix
     
-    $$
-    M_{\text{flip}} = \left[ 1\atop 0 \quad 0\atop -1 \right]
-    $$
+    $M_{\text{flip}} = \left[ 1\atop 0 \quad 0\atop -1 \right]$
     
     mapping a point $(x, y)$ to $(x, -y)$. Reflections over the y-axis or arbitrary axes use matrices like
     
-    $$
-    M_{\text{flip-y}} = \left[ -1\atop 0 \quad 0\atop 1 \right]
-    $$
+    $M_{\text{flip-y}} = \left[ -1\atop 0 \quad 0\atop 1 \right]$
     
     or
     
-    $$
-    M_{\text{flip-a}} = I - 2 \vec{n} \vec{n}^T
-    $$
+    $M_{\text{flip-a}} = I - 2 \vec{n} \vec{n}^T$
     
     (where $\vec{n}$ is the unit normal to the axis), respectively.  
   * **Example**: Reflecting a circle $\text{circle}((0,0), 1)$ yields $\text{circle}((0,0), 1)$ (unchanged due to symmetry), while a line $\text{line}((0,0), (1,1))$ maps to $\text{line}((0,0), (1,-1))$, reversing its slope.  
@@ -501,9 +495,7 @@ The transformation rules are rooted in objective geometry and linear algebra, le
   * **Description**: Scaling adjusts a symbol’s size proportionally along the x- and y-axes, preserving its geometric proportions while altering its dimensions. This leverages the dimensional consistency of forms like the triangle and square, where area and perimeter scale predictably.  
   * **Mathematical Representation**: The scaling matrix is
     
-    $$
-    S = \left[ k_x\atop 0 \quad 0\atop k_y \right]
-    $$
+    $S = \left[ k_x\atop 0 \quad 0\atop k_y \right]$
     
     transforming $(x, y)$ to $(k_x x, k_y y)$, where $k_x$ and $k_y$ are scaling factors. The area scales as $A' = k_x k_y A$, and uniform scaling ($k_x = k_y = k$) preserves shape.  
   * **Example**: Scaling a triangle $\text{triangle}((0,0), (1,0), (0,1))$ by $k_x = 2, k_y = 1$ results in $\text{triangle}((0,0), (2,0), (0,1))$, doubling its base width while maintaining height, with area increasing from 0.5 to 1.  
@@ -512,15 +504,11 @@ The transformation rules are rooted in objective geometry and linear algebra, le
   * **Description**: Rotation changes a symbol’s orientation around a fixed point (e.g., origin), preserving distances and angles. This highlights the rotational symmetry of the circle and square, where periodic transformations (e.g., $\theta = \pi/2$) align with their geometric properties.  
   * **Mathematical Representation**: The rotation matrix is
     
-    $$
-    R_{\theta} = \left[ \cos\theta\atop -\sin\theta \quad \sin\theta\atop \cos\theta \right]
-    $$
+    $R_{\theta} = \left[ \cos\theta\atop -\sin\theta \quad \sin\theta\atop \cos\theta \right]$
     
     mapping $(x, y)$ to $(x \cos\theta - y \sin\theta, x \sin\theta + y \cos\theta)$. For rotations around a point $(h, k)$, a translation is applied:
      
-    $$
-    T^{-1} R_{\theta} T, \quad \text{where} \quad T = \left[ 1\atop 0\quad h\atop 0\quad 1\atop k\quad 0\atop 0\quad 1 \right]
-    $$
+    $T^{-1} R_{\theta} T, \quad \text{where} \quad T = \left[ 1\atop 0\quad h\atop 0\quad 1\atop k\quad 0\atop 0\quad 1 \right]$
     
   * **Example**: Rotating a line $\text{line}((0,0), (1,0))$ by $\theta = \pi/2$ yields $\text{line}((0,0), (0,1))$, preserving length but shifting orientation, a property exploited in cyclic sequences.  
 
@@ -528,26 +516,20 @@ The transformation rules are rooted in objective geometry and linear algebra, le
   * **Description**: Affine transformations combine translation, rotation, scaling, and shearing, allowing complex rearrangements of symbols. These exploit the linearity of forms like the line and curve, enabling intricate syntactic compositions.  
   * **Mathematical Representation**: The general affine transformation matrix is
     
-    $$
-    T = \left[ a\atop b\quad t_x\atop c\quad d\quad t_y\atop 0\quad 0\quad 1 \right]
-    $$
+    $T = \left[ a\atop b\quad t_x\atop c\quad d\quad t_y\atop 0\quad 0\quad 1 \right]$
     
     where $a, b, c, d$ handle linear transformations, and $t_x, t_y$ add translations. Shearing (e.g.,
     
-    $$
-    T_{\text{shear}} = \left[ 1\atop s\quad 0\atop 0\quad 1\quad 0\atop 0\quad 0\quad 1 \right]
-    $$
+    $T_{\text{shear}} = \left[ 1\atop s\quad 0\atop 0\quad 1\quad 0\atop 0\quad 0\quad 1 \right]$
     
     ) skews shapes, preserving parallelism.  
   * **Example**: Transforming a curve $\text{curve}((0,0), (1,1), (2,0))$ with
     
-    $$
-    T = \left[ 1\atop 0.5\quad 1\atop 0\quad 1\quad 0\atop 0\quad 0\quad 1 \right]
-    $$
+    $T = \left[ 1\atop 0.5\quad 1\atop 0\quad 1\quad 0\atop 0\quad 0\quad 1 \right]$
     
     applies a shear and translation, resulting in a skewed path $\text{curve}((1,0), (2,1), (3,0))$, useful for modeling wave distortions.  
 
-    #### **4.2.1.3 Primordial Universality**
+#### **4.2.1.3 Primordial Universality**
 
 The syntactic rules are primordial, derived from universal geometric principles rather than cultural conventions, ensuring accessibility across intelligences—human, artificial, and potentially extraterrestrial.
 
@@ -563,7 +545,7 @@ The syntactic rules are primordial, derived from universal geometric principles 
 * **Cross-Intelligence Accessibility**:  
   * The universality of these rules was tested with a simulated AI agent, achieving 93% accuracy in interpreting $\text{circle}$ transformations, suggesting potential for extraterrestrial communication if geometric principles are shared (Astrobiology Journal, 2024).
 
-    #### **4.2.1.4 Relation to UL’s Broader Framework**
+#### **4.2.1.4 Relation to UL’s Broader Framework**
 
 These transformation rules are foundational to UL’s subsequent components, ensuring a cohesive syntactic structure:
 
@@ -574,7 +556,7 @@ These transformation rules are foundational to UL’s subsequent components, ens
 * **Support for Applications**:  
   * In education (Section 6.6), scaling $\text{triangle}$ teaches proportional reasoning, while in disaster response (Section 6.7.4), $R\_{\theta}$ optimizes evacuation paths. These rules underpin UL’s 15–25% performance gains (Section 7.5.3).
 
-    #### **4.2.1.5 Additional Insights and Future Directions**
+#### **4.2.1.5 Additional Insights and Future Directions**
 
 * **Empirical Validation**:  
   * A planned 2026 study will test 10,000 transformations across 20 cultures, targeting 95% consistency in $\text{flip}$ and $\text{scale}$ interpretations, enhancing UL’s universality.  
@@ -583,7 +565,7 @@ These transformation rules are foundational to UL’s subsequent components, ens
 * **Interdisciplinary Synergy**:  
   * Collaboration with computer graphics experts will refine $T$ for virtual reality, aiming for 98% rendering accuracy by 2030, integrating UL with emerging technologies.
 
-    #### **4.2.1.6 Rationale and Conclusion**
+#### **4.2.1.6 Rationale and Conclusion**
 
 The transformation rules—flip/mirroring, scaling, rotation, and matrix operations—form a robust syntactic foundation for UL, rooted in geometric universality and enhanced by mathematical precision. Their axiomatic application to symbols like $\text{circle}$ and $\text{line}$ enables inversion, magnification, orientation, and composition, supported by natural resonance, perceptual intuition, and computational interpretability. With 90–95% accuracy in pilot studies and applications driving global impact (Sections 6.7), these rules integrate seamlessly with UL’s grammar and writing system, setting the stage for a universal communication framework that transcends cultural and intelligence boundaries.
 
