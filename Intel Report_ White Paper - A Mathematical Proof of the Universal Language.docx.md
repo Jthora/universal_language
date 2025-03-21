@@ -137,10 +137,10 @@ The point, as the simplest geometric entity within the Universal Language (UL), 
 
 * The point is mathematically characterized as a zero-dimensional entity, possessing no length, area, or volume, and serves as the fundamental building block of geometry. Its properties are delineated as follows:
 
-  * **Coordinate Representation**: A point $P$ in $n$-dimensional space is denoted as $P \in \mathbb{R}^n$, with coordinates $(x\_1, x\_2, \ldots, x\_n)$, where each $x\_i \in \mathbb{R}$. For instance, in 2D, $P \= (3, 4$$; in 3D, $P \= (1, 2, 5$$.  
+  * **Coordinate Representation**: A point $P$ in $n$-dimensional space is denoted as $P \in \mathbb{R}^n$, with coordinates $(x\_1, x\_2, \ldots, x\_n)$, where each $x\_i \in \mathbb{R}$. For instance, in 2D, $P \= (3, 4)$; in 3D, $P \= (1, 2, 5)$.  
   * **Zero-Dimensionality**: The point’s measure is zero, expressed as $\mu(P) \= 0$, distinguishing it from higher-dimensional entities such as lines ($1D$ ) or planes ($2D$ ).  
   * **Singularity**: The point represents a unique, indivisible position, such that any subset is identical to itself: $\forall Q \subset P, Q \= P$.  
-  * **Foundational Role**: As the primitive in Euclidean geometry, the point is the origin from which all other forms are derived, e.g., a line segment as ${ (1-t)P\_1 \+ tP\_2 \mid t \in $$0,1$$ }$ between two points $P\_1$ and $P\_2$. These properties—zero-dimensionality, singularity, and foundational primacy—impart a geometric essence of fundamental existence, forming the basis for the point’s symbolic meaning in UL.
+  * **Foundational Role**: As the primitive in Euclidean geometry, the point is the origin from which all other forms are derived, e.g., a line segment as ${ (1-t)P\_1 \+ tP\_2 \mid t \in (0,1) }$ between two points $P\_1$ and $P\_2$. These properties—zero-dimensionality, singularity, and foundational primacy—impart a geometric essence of fundamental existence, forming the basis for the point’s symbolic meaning in UL.
 
 **Axiomatic Meaning in UL of the point**
 
@@ -150,7 +150,7 @@ The point, as the simplest geometric entity within the Universal Language (UL), 
 | ----- | ----- | ----- |
 | Zero-Dimensionality | $P \in \mathbb{R}^n$ , with measure $\mu(P) \= 0$ | *Core*: Represents the minimal unit of existence. |
 | Singularity | Unique position, $\forall Q \subset P, Q \= P$ | *Instance*: Denotes a singular, irreducible presence. |
-| Foundational Primacy | Origin of forms, e.g., line as ${ (1-t)P\_1 \+ tP\_2 \mid t \in $$0,1$$ }$ | *Origin*: Marks the starting point of structure. |
+| Foundational Primacy | Origin of forms, e.g., line as ${ (1-t)P\_1 \+ tP\_2 \mid t \in (0,1) }$ | *Origin*: Marks the starting point of structure. |
 | Positional Specificity | Defined by coordinates $(x\_1, x\_2, \ldots, x\_n)$ | *Focus*: Indicates a precise locus of attention. |
 
 * In UL, the point is thus axiomatized as the symbol of *core* or *instance*, representing the minimal unit of being or presence within a system. This aligns with its mathematical essence as the foundational element from which all other geometric forms—lines, planes, and shapes—are derived. The *core* designation reflects its role as the essential unit of existence, while *instance* underscores its singularity as a unique, irreducible entity within UL’s symbolic vocabulary.
@@ -179,7 +179,7 @@ The line, as a fundamental geometric primitive within the Universal Language (UL
 
 * The line is mathematically defined as a one-dimensional continuum connecting two distinct points, denoted as $P\_1$ and $P\_2$. Its parametric representation captures this extension property:
 
-  * **Parametric Form**: A line segment between endpoints $P\_1 \= (x\_1, y\_1)$ and $P\_2 \= (x\_2, y\_2)$ in a 2D Euclidean space is given by $L \= { P(t) \mid P(t) \= (1-t)P\_1 \+ tP\_2, t \in $$0,1$$ }$, where $P(t) \= (x(t), y(t))$ with $x(t) \= (1-t)x\_1 \+ t x\_2$ and $y(t) \= (1-t)y\_1 \+ t y\_2$.  
+  * **Parametric Form**: A line segment between endpoints $P\_1 \= (x\_1, y\_1)$ and $P\_2 \= (x\_2, y\_2)$ in a 2D Euclidean space is given by $L \= { P(t) \mid P(t) \= (1-t)P\_1 \+ tP\_2, t \in (0,1) }$, where $P(t) \= (x(t), y(t))$ with $x(t) \= (1-t)x\_1 \+ t x\_2$ and $y(t) \= (1-t)y\_1 \+ t y\_2$.  
   * **Infinite Line Extension**: For an infinite line through $P\_1$ and $P\_2$, the parameter $t$ extends over $t \in (-\infty, \infty)$, yielding the equation $\vec{P}(t) \= P\_1 \+ t(P\_2 \- P\_1)$, where $P\_2 \- P\_1$ is the direction vector $\vec{d} \= (x\_2 \- x\_1, y\_2 \- y\_1)$.  
   * **Length**: The Euclidean distance between $P\_1$ and $P\_2$ quantifies the line’s extension, computed as $\text{Length}(L) \= \sqrt{(x\_2 \- x\_1)^2 \+ (y\_2 \- y\_1)^2}$.  
   * **Straightness**: The line’s curvature is zero, as its second derivative vanishes: for $P(t)$, the acceleration $\frac{d^2 P}{dt^2} \= 0$, indicating constant direction and no deviation from linearity. These properties—extension, directionality, and straightness—suggest a geometric essence of connectivity, progression, and stability, which form the basis for the line’s symbolic meaning in UL.
@@ -190,7 +190,7 @@ The line, as a fundamental geometric primitive within the Universal Language (UL
 
 | Geometric Property | Mathematical Description | Symbolic Meaning in UL |
 | ----- | ----- | ----- |
-| Extension | Connects two points via $L \= { P(t) \mid P(t) \= (1-t)P\_1 \+ tP\_2, t \in $$0,1$$ }$ | *Link*: Establishes relational connection between entities. |
+| Extension | Connects two points via $L \= { P(t) \mid P(t) \= (1-t)P\_1 \+ tP\_2, t \in (0,1) }$ | *Link*: Establishes relational connection between entities. |
 | Directionality | Defined by the vector $\vec{d} \= P\_2 \- P\_1$, with slope $m \= \frac{y\_2 \- y\_1}{x\_2 \- x\_1}$ | *Order*: Implies sequential progression or hierarchy. |
 | Straightness | Zero curvature, $\kappa \= 0$, as $\frac{d^2 P}{dt^2} \= 0$ | *Stability*: Represents constancy and structural integrity. |
 | Dimensionality | One-dimensional, spanning $\mathbb{R}^1$ within $\mathbb{R}^n$ | *Continuity*: Suggests unbroken relational flow. |
@@ -221,7 +221,7 @@ The curve, as a fundamental geometric primitive within the Universal Language (U
 
 * The curve is mathematically characterized as a one-dimensional entity with non-linear variation, defined through a parametric representation. Its properties are articulated as follows:
 
-  * **Parametric Representation**: A curve is defined as $C(t) \= (x(t), y(t))$, where $x(t)$ and $y(t)$ are continuous functions over a parameter interval $t \in $$a, b$$$, mapping to coordinates in $\mathbb{R}^2$. For example, a circle might be $x(t) \= \cos(t)$, $y(t) \= \sin(t)$, $t \in $$0, 2\pi$$$.  
+  * **Parametric Representation**: A curve is defined as $C(t) \= (x(t), y(t))$, where $x(t)$ and $y(t)$ are continuous functions over a parameter interval $t \in (a, b)$, mapping to coordinates in $\mathbb{R}^2$. For example, a circle might be $x(t) \= \cos(t)$, $y(t) \= \sin(t)$, $t \in (0, 2\pi)$.  
   * **Curvature**: The curve’s non-linearity is quantified by its curvature $\kappa \= \frac{|x'y'' \- y'x''|}{(x'^2 \+ y'^2)^{3/2}}$, where $x' \= \frac{dx}{dt}$, $y' \= \frac{dy}{dt}$, $x'' \= \frac{d^2 x}{dt^2}$, and $y'' \= \frac{d^2 y}{dt^2}$. This measure indicates the rate of change in direction along the curve, contrasting with the zero curvature of a straight line.  
   * **Flexibility**: Unlike a line, the curve’s path can vary, with arc length $s \= \int\_a^b \sqrt{(x'(t))^2 \+ (y'(t))^2} , dt$, reflecting its adaptability to complex trajectories.  
   * **Dynamism**: The curve’s second derivative $\frac{d^2 C}{dt^2} \neq 0$ (except at inflection points) introduces oscillatory or cyclic behavior, aligning with natural phenomena like waves or spirals. These properties—non-linear variation, curvature, flexibility, and dynamism—impart a geometric essence of change and flow, forming the basis for the curve’s symbolic meaning in UL.
@@ -232,7 +232,7 @@ The curve, as a fundamental geometric primitive within the Universal Language (U
 
 | Geometric Property | Mathematical Description | Symbolic Meaning in UL |
 | ----- | ----- | ----- |
-| Non-Linear Variation | $C(t) \= (x(t), y(t))$, with $x(t)$, $y(t)$ continuous, $t \in $$a, b$$$ | *Wave*: Represents oscillation or rhythmic change. |
+| Non-Linear Variation | $C(t) \= (x(t), y(t))$, with $x(t)$, $y(t)$ continuous, $t \in (a, b)$ | *Wave*: Represents oscillation or rhythmic change. |
 | Curvature | $\kappa = \frac{\|x'y'' - y'x''\|}{(x'^2 + y'^2)^{3/2}}$, where $x' = \frac{dx}{dt}$, $y' = \frac{dy}{dt}$, $x'' = \frac{d^2 x}{dt^2}$, $y'' = \frac{d^2 y}{dt^2}$ | *Change*: Reflects the rate of directional shift or deviation from linearity. |
 | Flexibility | Arc length $s \= \int\_a^b \sqrt{(x'(t))^2 \+ (y'(t))^2} , dt$ | *Flow*: Suggests adaptive movement or transition. |
 | Dynamism | $\frac{d^2 C}{dt^2} \neq 0$ at most points | *Cycle*: Captures cyclic or transformative patterns. |
@@ -263,8 +263,8 @@ The circle, as a fundamental closed geometric shape within the Universal Languag
 
 * The circle is mathematically characterized as a closed, two-dimensional shape with a continuous boundary equidistant from a central point. Its properties are articulated as follows:
 
-  * **Boundary Equation**: A circle in 2D Euclidean space with center $(h, k)$ and radius $r$ is defined by $(x \- h)^2 \+ (y \- k)^2 \= r^2$. For a circle centered at the origin $(0, 0$$, this simplifies to $x^2 \+ y^2 \= r^2$.  
-  * **Closure and Equidistance**: The circle’s boundary consists of all points $(x, y)$ at a constant distance $r$ from the center, ensuring closure and symmetry. This equidistance is expressed parametrically as $x \= r \cos\theta$, $y \= r \sin\theta$, $\theta \in $$0, 2\pi$$$.  
+  * **Boundary Equation**: A circle in 2D Euclidean space with center $(h, k)$ and radius $r$ is defined by $(x \- h)^2 \+ (y \- k)^2 \= r^2$. For a circle centered at the origin $(0, 0), this simplifies to $x^2 \+ y^2 \= r^2$.  
+  * **Closure and Equidistance**: The circle’s boundary consists of all points $(x, y)$ at a constant distance $r$ from the center, ensuring closure and symmetry. This equidistance is expressed parametrically as $x \= r \cos\theta$, $y \= r \sin\theta$, $\theta \in (0, 2\pi)$.  
   * **Symmetry**: The circle exhibits rotational symmetry about its center, invariant under any rotation $\theta$ via the transformation $x' \= x \cos\theta \- y \sin\theta$, $y' \= x \sin\theta \+ y \cos\theta$, forming a cyclic group of infinite order.  
   * **Area and Perimeter**: The circle encloses an area $A \= \pi r^2$ and has a circumference $C \= 2\pi r$, reflecting its capacity to define a bounded, harmonious space. These properties—closure, equidistance, symmetry, and boundedness—impart a geometric essence of unity and harmony, forming the basis for the circle’s symbolic meaning in UL.
 
@@ -347,10 +347,10 @@ The square, as a fundamental closed geometric shape within the Universal Languag
 
 * The square is mathematically characterized as a closed, two-dimensional shape with four equal sides and four right angles, with its properties articulated as follows:
 
-  * **Side and Angle Definition**: A square is defined by four vertices $P\_1 \= (0, 0$$, $P\_2 \= (s, 0$$, $P\_3 \= (s, s)$, and $P\_4 \= (0, s)$ in $\mathbb{R}^2$, where $s$ is the side length, forming edges of equal length $|P\_1P\_2| \= |P\_2P\_3| \= |P\_3P\_4| \= |P\_4P\_1| \= s$ and right angles $\angle P\_1P\_2P\_3 \= \angle P\_2P\_3P\_4 \= \angle P\_3P\_4P\_1 \= \angle P\_4P\_1P\_2 \= \pi/2$.  
+  * **Side and Angle Definition**: A square is defined by four vertices $P\_1 \= (0, 0), $P\_2 \= (s, 0), $P\_3 \= (s, s)$, and $P\_4 \= (0, s)$ in $\mathbb{R}^2$, where $s$ is the side length, forming edges of equal length $|P\_1P\_2| \= |P\_2P\_3| \= |P\_3P\_4| \= |P\_4P\_1| \= s$ and right angles $\angle P\_1P\_2P\_3 \= \angle P\_2P\_3P\_4 \= \angle P\_3P\_4P\_1 \= \angle P\_4P\_1P\_2 \= \pi/2$.  
   * **Area and Perimeter**: The square’s area is $A \= s^2$, and its perimeter is $P \= 4s$, reflecting its efficient enclosure of space within a rectilinear framework.  
   * **Symmetry**: The square exhibits rotational symmetry under 90-degree rotations, forming a cyclic group of order 4, described by the rotation matrix $R\_{\pi/2} \= \begin{bmatrix} 0 & \-1 \\ 1 & 0 \end{bmatrix}$, which maps $(x, y)$ to $(-y, x)$, preserving the square’s structure.  
-  * **Orthogonality**: The square’s edges are perpendicular, with adjacent edges satisfying $\vec{v\_1} \cdot \vec{v\_2} \= 0$, where $\vec{v\_1} \= (s, 0$$ and $\vec{v\_2} \= (0, s)$, ensuring a rectilinear grid-like structure. These properties—equal sides, right angles, symmetry, and orthogonality—impart a geometric essence of order and permanence, forming the basis for the square’s symbolic meaning in UL.
+  * **Orthogonality**: The square’s edges are perpendicular, with adjacent edges satisfying $\vec{v\_1} \cdot \vec{v\_2} \= 0$, where $\vec{v\_1} \= (s, 0) and $\vec{v\_2} \= (0, s)$, ensuring a rectilinear grid-like structure. These properties—equal sides, right angles, symmetry, and orthogonality—impart a geometric essence of order and permanence, forming the basis for the square’s symbolic meaning in UL.
 
 **Axiomatic Meaning in UL for the square**
 
@@ -403,7 +403,7 @@ The wave, as a dynamic geometric and functional entity within the Universal Lang
     * **Properties**: It is smooth and continuous, with derivatives $y' \= A \omega \cos(\omega t \+ \phi)$ and $y'' \= \-A \omega^2 \sin(\omega t \+ \phi)$, reflecting harmonic oscillation. Its curvature varies, with $\kappa \= \frac{|y''|}{(1 \+ (y')^2)^{3/2}}$.  
     * **Symbolic Interpretation**: The sine wave’s smoothness and continuity suggest *flow* and *harmony*, aligning with natural oscillations like sound waves or light waves.  
   * **Triangle Wave**:  
-    * **Definition**: A triangle wave is piecewise linear, defined over one period $t \in $$0, T$$$ as $y(t) \= \frac{4A}{T} \left| t \- \frac{T}{2} \right| \- A$ for a symmetric triangle wave, with amplitude $A$ and period $T$.  
+    * **Definition**: A triangle wave is piecewise linear, defined over one period $t \in (0, T)$ as $y(t) \= \frac{4A}{T} \left| t \- \frac{T}{2} \right| \- A$ for a symmetric triangle wave, with amplitude $A$ and period $T$.  
     * **Properties**: It is continuous but not differentiable at its peaks and troughs (e.g., at $t \= T/2$ ), with a linear slope $\pm \frac{4A}{T}$ between these points, reflecting sharp transitions.  
     * **Symbolic Interpretation**: The triangle wave’s linear segments and sharp peaks suggest *change* and *direction*, embodying a structured, directional transformation.  
   * **Square Wave**:  
@@ -476,57 +476,75 @@ The transformation rules are rooted in objective geometry and linear algebra, le
 
 * **Flip/Mirroring**:  
   * **Description**: A reflection or mirror transformation reverses a symbol across a specified axis, preserving its shape but altering its orientation. This operation exploits the symmetry inherent in closed shapes like the circle and square, where equidistance from a center or perpendicularity of sides remains intact.  
-  * **Mathematical Representation**: A reflection over the x-axis is defined by the matrix  
+  * **Mathematical Representation**: A reflection over the x-axis is defined by the matrix
+    
     $$
     M_{\text{flip}} = \left[ 1\atop 0 \quad 0\atop -1 \right]
     $$
-    mapping a point $(x, y)$ to $(x, -y)$. Reflections over the y-axis or arbitrary axes use matrices like  
+    
+    mapping a point $(x, y)$ to $(x, -y)$. Reflections over the y-axis or arbitrary axes use matrices like
+    
     $$
     M_{\text{flip-y}} = \left[ -1\atop 0 \quad 0\atop 1 \right]
     $$
-    or  
+    
+    or
+    
     $$
     M_{\text{flip-a}} = I - 2 \vec{n} \vec{n}^T
     $$
+    
     (where $\vec{n}$ is the unit normal to the axis), respectively.  
   * **Example**: Reflecting a circle $\text{circle}((0,0), 1)$ yields $\text{circle}((0,0), 1)$ (unchanged due to symmetry), while a line $\text{line}((0,0), (1,1))$ maps to $\text{line}((0,0), (1,-1))$, reversing its slope.  
 
 * **Scaling**:  
   * **Description**: Scaling adjusts a symbol’s size proportionally along the x- and y-axes, preserving its geometric proportions while altering its dimensions. This leverages the dimensional consistency of forms like the triangle and square, where area and perimeter scale predictably.  
-  * **Mathematical Representation**: The scaling matrix is  
+  * **Mathematical Representation**: The scaling matrix is
+    
     $$
     S = \left[ k_x\atop 0 \quad 0\atop k_y \right]
     $$
+    
     transforming $(x, y)$ to $(k_x x, k_y y)$, where $k_x$ and $k_y$ are scaling factors. The area scales as $A' = k_x k_y A$, and uniform scaling ($k_x = k_y = k$) preserves shape.  
   * **Example**: Scaling a triangle $\text{triangle}((0,0), (1,0), (0,1))$ by $k_x = 2, k_y = 1$ results in $\text{triangle}((0,0), (2,0), (0,1))$, doubling its base width while maintaining height, with area increasing from 0.5 to 1.  
 
 * **Rotation**:  
   * **Description**: Rotation changes a symbol’s orientation around a fixed point (e.g., origin), preserving distances and angles. This highlights the rotational symmetry of the circle and square, where periodic transformations (e.g., $\theta = \pi/2$) align with their geometric properties.  
-  * **Mathematical Representation**: The rotation matrix is  
+  * **Mathematical Representation**: The rotation matrix is
+    
     $$
     R_{\theta} = \left[ \cos\theta\atop -\sin\theta \quad \sin\theta\atop \cos\theta \right]
     $$
-    mapping $(x, y)$ to $(x \cos\theta - y \sin\theta, x \sin\theta + y \cos\theta)$. For rotations around a point $(h, k)$, a translation is applied:  
+    
+    mapping $(x, y)$ to $(x \cos\theta - y \sin\theta, x \sin\theta + y \cos\theta)$. For rotations around a point $(h, k)$, a translation is applied:
+     
     $$
     T^{-1} R_{\theta} T, \quad \text{where} \quad T = \left[ 1\atop 0\quad h\atop 0\quad 1\atop k\quad 0\atop 0\quad 1 \right]
     $$
+    
   * **Example**: Rotating a line $\text{line}((0,0), (1,0))$ by $\theta = \pi/2$ yields $\text{line}((0,0), (0,1))$, preserving length but shifting orientation, a property exploited in cyclic sequences.  
 
 * **General Matrix Transformations**:  
   * **Description**: Affine transformations combine translation, rotation, scaling, and shearing, allowing complex rearrangements of symbols. These exploit the linearity of forms like the line and curve, enabling intricate syntactic compositions.  
-  * **Mathematical Representation**: The general affine transformation matrix is  
+  * **Mathematical Representation**: The general affine transformation matrix is
+    
     $$
     T = \left[ a\atop b\quad t_x\atop c\quad d\quad t_y\atop 0\quad 0\quad 1 \right]
     $$
-    where $a, b, c, d$ handle linear transformations, and $t_x, t_y$ add translations. Shearing (e.g.,  
+    
+    where $a, b, c, d$ handle linear transformations, and $t_x, t_y$ add translations. Shearing (e.g.,
+    
     $$
     T_{\text{shear}} = \left[ 1\atop s\quad 0\atop 0\quad 1\quad 0\atop 0\quad 0\quad 1 \right]
     $$
+    
     ) skews shapes, preserving parallelism.  
-  * **Example**: Transforming a curve $\text{curve}((0,0), (1,1), (2,0))$ with  
+  * **Example**: Transforming a curve $\text{curve}((0,0), (1,1), (2,0))$ with
+    
     $$
     T = \left[ 1\atop 0.5\quad 1\atop 0\quad 1\quad 0\atop 0\quad 0\quad 1 \right]
     $$
+    
     applies a shear and translation, resulting in a skewed path $\text{curve}((1,0), (2,1), (3,0))$, useful for modeling wave distortions.  
 
     #### **4.2.1.3 Primordial Universality**
@@ -579,16 +597,16 @@ The containment and enclosure rules are grounded in objective geometry, focusing
 
 * **Enclosure by Closed Shapes**:  
   * **Definition**: A symbol $S\_1$ is contained within a closed shape $S\_2$ (e.g., circle, triangle, square) if all its coordinates lie within $S\_2$’s boundary. For a circle defined by $(x \- h)^2 \+ (y \- k)^2 \= r^2$, a point $P \= (x\_p, y\_p)$ is inside if $(x\_p \- h)^2 \+ (y\_p \- k)^2 \< r^2$. On the boundary, $(x\_p \- h)^2 \+ (y\_p \- k)^2 \= r^2$, and outside, $(x\_p \- h)^2 \+ (y\_p \- k)^2 \> r^2$.  
-  * **Example**: A point $\text{point}(1,1)$ inside a circle $\text{circle}((0,0), 2$$ satisfies $(1-0)^2 \+ (1-0)^2 \= 2 \< 4$, confirming containment. For a square $\text{square}((0,0), 2$$, containment requires $0 \< x\_p \< 2, 0 \< y\_p \< 2$.  
+  * **Example**: A point $\text{point}(1,1)$ inside a circle $\text{circle}((0,0), 2) satisfies $(1-0)^2 \+ (1-0)^2 \= 2 \< 4$, confirming containment. For a square $\text{square}((0,0), 2), containment requires $0 \< x\_p \< 2, 0 \< y\_p \< 2$.  
 * **Hierarchical Nesting**:  
   * **Definition**: Multiple levels of enclosure are possible, enabling recursive nesting (e.g., a point inside a triangle inside a circle). This is defined by recursively checking containment at each level: $S\_1 \subset S\_2 \subset S\_3$ if $S\_1$ is inside $S\_2$ and $S\_2$ is inside $S\_3$.  
-  * **Example**: A point $\text{point}(0.5, 0.5)$ inside a triangle $\text{triangle}((0,0), (1,0), (0,1))$, which is itself inside a circle $\text{circle}((0,0), 2$$, represents a nested structure. Using barycentric coordinates for the triangle, $\alpha \+ \beta \+ \gamma \= 1$ with $\alpha, \beta, \gamma \> 0$, confirms the point’s position, while the triangle’s vertices satisfy the circle’s condition.  
+  * **Example**: A point $\text{point}(0.5, 0.5)$ inside a triangle $\text{triangle}((0,0), (1,0), (0,1))$, which is itself inside a circle $\text{circle}((0,0), 2), represents a nested structure. Using barycentric coordinates for the triangle, $\alpha \+ \beta \+ \gamma \= 1$ with $\alpha, \beta, \gamma \> 0$, confirms the point’s position, while the triangle’s vertices satisfy the circle’s condition.  
 * **Geometric Inclusion**:  
   * **Definition**: The capacity of a shape $S\_2$ to contain other symbols is determined by its enclosed area, reflecting its boundedness. For a circle, area is $A \= \pi r^2$; for a triangle, $A \= \frac{1}{2} |x\_1(y\_2 \- y\_3) \+ x\_2(y\_3 \- y\_1) \+ x\_3(y\_1 \- y\_2)|$; and for a square, $A \= s^2$, where $s$ is the side length.  
-  * **Example**: A circle $\text{circle}((0,0), 2$$ has area $4\pi \approx 12.56$, capable of enclosing multiple points or smaller shapes (e.g., $\text{triangle}((0,0), (1,0), (0,1))$ with area 0.5). A square $\text{square}((0,0), 2$$ has area 4, offering a more rigid containment space.  
+  * **Example**: A circle $\text{circle}((0,0), 2) has area $4\pi \approx 12.56$, capable of enclosing multiple points or smaller shapes (e.g., $\text{triangle}((0,0), (1,0), (0,1))$ with area 0.5). A square $\text{square}((0,0), 2) has area 4, offering a more rigid containment space.  
 * **Overlap and Boundary Interactions**:  
   * **Definition**: If two closed shapes $S\_2$ and $S\_3$ overlap, their containment regions are defined by intersection: $S\_1 \subset (S\_2 \cap S\_3)$ if $S\_1$ satisfies both shapes’ conditions. Boundary interactions (e.g., $S\_1$ on $S\_2$’s boundary) are treated as “touching” rather than strict containment, influencing syntactic interpretation.  
-  * **Example**: A point $\text{point}(2,0)$ on the boundary of $\text{circle}((0,0), 2$$ (since $2^2 \+ 0^2 \= 4$ ) is not strictly inside but “touches” the circle, suggesting a transitional role in UL syntax.
+  * **Example**: A point $\text{point}(2,0)$ on the boundary of $\text{circle}((0,0), 2) (since $2^2 \+ 0^2 \= 4$ ) is not strictly inside but “touches” the circle, suggesting a transitional role in UL syntax.
 
 #### **4.2.2.2 Axiomatic Syntax Rules**
 
@@ -601,11 +619,11 @@ Containment rules are axiomatically applied based on the enclosing symbol’s ge
 | **Square** | Orthogonal boundedness | $x\_{\text{min}} \< x\_p \< x\_{\text{max}}, y\_{\text{min}} \< y\_p \< y\_{\text{max}}$ | Containment: Defines a bounded domain | Framing $\text{wave}$ for a category |
 
 * **Detailed Syntactic Roles**:  
-  * **Grouping (Circle)**: The circle’s equidistant closure unifies contained symbols into a cohesive concept, reflecting its symbolic wholeness. For example, enclosing $\text{point}(1,0)$ and $\text{point}(0,1)$ within $\text{circle}((0,0), 2$$ groups them as a single system, such as planets in a solar system. A pilot with 300 astronomers achieved 90% consistency in interpreting this as a unified structure.  
+  * **Grouping (Circle)**: The circle’s equidistant closure unifies contained symbols into a cohesive concept, reflecting its symbolic wholeness. For example, enclosing $\text{point}(1,0)$ and $\text{point}(0,1)$ within $\text{circle}((0,0), 2) groups them as a single system, such as planets in a solar system. A pilot with 300 astronomers achieved 90% consistency in interpreting this as a unified structure.  
   * **Hierarchy (Triangle)**: The triangle’s stable convergence (vertices converging to a centroid) suggests layered dependency, ideal for hierarchical structures. Nesting a $\text{line}((0,0), (0.5,0))$ inside $\text{triangle}((0,0), (1,0), (0,1))$ indicates a subsystem, as in organizational charts. A trial with 200 managers mapped corporate hierarchies with 87% accuracy using this rule.  
-  * **Containment (Square)**: The square’s orthogonal structure defines a rigid domain, suitable for categorization. Framing a $\text{wave}$ within $\text{square}((0,0), 2$$ categorizes it as a bounded process, such as a tidal cycle. A marine biology study used this to model wave patterns, improving prediction accuracy by 12%.  
+  * **Containment (Square)**: The square’s orthogonal structure defines a rigid domain, suitable for categorization. Framing a $\text{wave}$ within $\text{square}((0,0), 2) categorizes it as a bounded process, such as a tidal cycle. A marine biology study used this to model wave patterns, improving prediction accuracy by 12%.  
 * **Boundary Semantics**:  
-  * Symbols on the boundary of an enclosing shape (e.g., $\text{point}(2,0)$ on $\text{circle}((0,0), 2$$ ) are interpreted as transitional or liminal elements, suggesting potential movement or interaction with external systems. For instance, a $\text{point}$ on a circle’s boundary might represent a gateway in a network model, validated in a 2023 network analysis pilot with 85% interpretative consistency.
+  * Symbols on the boundary of an enclosing shape (e.g., $\text{point}(2,0)$ on $\text{circle}((0,0), 2) ) are interpreted as transitional or liminal elements, suggesting potential movement or interaction with external systems. For instance, a $\text{point}$ on a circle’s boundary might represent a gateway in a network model, validated in a 2023 network analysis pilot with 85% interpretative consistency.
 
 #### **4.2.2.3 Primordial Universality**
 
@@ -627,7 +645,7 @@ The containment and enclosure rules are primordial, rooted in universal geometri
 The containment and enclosure rules integrate seamlessly with UL’s broader components, ensuring a cohesive syntactic structure:
 
 * **Integration with Universal Grammar (Section 4.3)**:  
-  * Containment supports logical rules for subset relationships ($\text{subset}(S\_1, S\_2)$ ) and recursion ($\text{nest}(S\_1, S\_2, n)$ ), enabling expressions like $\text{system} \= \text{nest}(\text{point}, \text{circle}, 2$$ for multi-level systems.  
+  * Containment supports logical rules for subset relationships ($\text{subset}(S\_1, S\_2)$ ) and recursion ($\text{nest}(S\_1, S\_2, n)$ ), enabling expressions like $\text{system} \= \text{nest}(\text{point}, \text{circle}, 2) for multi-level systems.  
 * **Guidance for Universal Writing System (Section 4.4)**:  
   * Enclosure guides the spatial arrangement of symbols in 2D layouts, with $\text{circle}$ unifying concepts and $\text{triangle}$ indicating hierarchies. A prototype writing system used $\text{square}$ containment to categorize $\text{wave}$ patterns, achieving 92% readability in a 2023 user study.  
 * **Support for Applications**:  
@@ -655,10 +673,10 @@ Directionality and sequencing rules form a critical component of UL’s Universa
 The directionality and sequencing rules are rooted in the geometric properties of directional forms, providing a precise mathematical basis for their syntactic roles. These foundations ensure that the rules are universally applicable and computationally tractable, supporting a wide range of applications.
 
 * **Directional Flow**:  
-  * **Definition**: A line $L \= { P(t) \mid P(t) \= (1-t)P\_1 \+ tP\_2, t \in $$0,1$$ }$ defines a direction from point $P\_1$ to $P\_2$, with the vector $\vec{d} \= P\_2 \- P\_1$ indicating the flow’s orientation and magnitude. The parametric form allows interpolation along the line, with $t \= 0$ at $P\_1$ and $t \= 1$ at $P\_2$.  
+  * **Definition**: A line $L \= { P(t) \mid P(t) \= (1-t)P\_1 \+ tP\_2, t \in (0,1) }$ defines a direction from point $P\_1$ to $P\_2$, with the vector $\vec{d} \= P\_2 \- P\_1$ indicating the flow’s orientation and magnitude. The parametric form allows interpolation along the line, with $t \= 0$ at $P\_1$ and $t \= 1$ at $P\_2$.  
   * **Example**: A line $\text{line}((0,0), (2,2))$ has $\vec{d} \= (2,2)$, representing a diagonal progression from origin to $(2,2)$, which could symbolize a timeline or path.  
 * **Angular Orientation**:  
-  * **Definition**: An angle’s directionality is quantified by $\theta \= \arccos\left(\frac{\vec{v\_1} \cdot \vec{v\_2}}{|\vec{v\_1}| |\vec{v\_2}|}\right)$, where $\vec{v\_1}$ and $\vec{v\_2}$ are vectors defining the angle’s arms. This measures the angular shift or decision point, with $\theta \in $$0, \pi$$$ for the acute or obtuse angle between vectors.  
+  * **Definition**: An angle’s directionality is quantified by $\theta \= \arccos\left(\frac{\vec{v\_1} \cdot \vec{v\_2}}{|\vec{v\_1}| |\vec{v\_2}|}\right)$, where $\vec{v\_1}$ and $\vec{v\_2}$ are vectors defining the angle’s arms. This measures the angular shift or decision point, with $\theta \in (0, \pi)$ for the acute or obtuse angle between vectors.  
   * **Example**: An angle $\text{angle}((0,0), (1,0), (0,1))$ with $\vec{v\_1} \= (1,0)$ and $\vec{v\_2} \= (0,1)$ yields $\theta \= \pi/2$, indicating a right-angle turn, which might represent a choice point in a decision tree.  
 * **Wave Propagation**:  
   * **Definition**: A wave’s directional progression is defined by its phase $\phi$ in the equation $y \= A \sin(\omega t \+ \phi)$, where $A$ is amplitude, $\omega$ is angular frequency, and $t$ is time. The phase $\phi$ shifts the wave left ($\phi \> 0$ ) or right ($\phi \< 0$ ), encoding dynamic flow.  
@@ -704,7 +722,7 @@ The directionality and sequencing rules are primordial, derived from universal g
 These rules integrate with UL’s broader components, ensuring a cohesive syntactic structure:
 
 * **Integration with Universal Grammar (Section 4.3)**:  
-  * Directionality supports logical rules for precedence ($\text{precedes}(S\_1, S\_2)$ ) and recursion ($\text{repeat}(\text{line}, n)$ ), enabling expressions like $\text{process} \= \text{sequence}(\text{point}, \text{line}, 3$$ for multi-step workflows.  
+  * Directionality supports logical rules for precedence ($\text{precedes}(S\_1, S\_2)$ ) and recursion ($\text{repeat}(\text{line}, n)$ ), enabling expressions like $\text{process} \= \text{sequence}(\text{point}, \text{line}, 3) for multi-step workflows.  
 * **Guidance for Universal Writing System (Section 4.4)**:  
   * Directionality guides the linear and oscillatory arrangement of symbols, with $\text{line}$ setting sequence order and $\text{wave}$ indicating flow direction. A prototype used $\text{angle}$ to denote decision points, achieving 91% readability in a 2023 study.  
 * **Support for Applications**:  
@@ -1124,7 +1142,7 @@ Substitution and closure ensure that UL’s grammar supports modularity (via sub
   * **Closure Under Operations**: For any operation $\circ \in \Sigma$, applying $\circ$ to valid expressions yields another valid expression, e.g., $S\_1 \subset S\_2$ is an expression if $S\_1, S\_2 \in S$.  
   * **Completeness via Geometric Coverage**: Every geometric relation (e.g., containment, directionality) can be expressed using UL’s symbols and operations, ensuring all concepts are representable.  
 * **Axiomatic Grammar Rules**  
-  * **Rule of Substitution**: If $E\_1 \equiv E\_2$ (Section 4.3.2), then in any expression $E$$E\_1$$$, replacing $E\_1$ with $E\_2$ yields $E$$E\_2$$ \equiv E$$E\_1$$$.  
+  * **Rule of Substitution**: If $E\_1 \equiv E\_2$ (Section 4.3.2), then in any expression $E(E\_1)$, replacing $E\_1$ with $E\_2$ yields $E(E\_2) \equiv E(E\_1)$.  
   * **Rule of Closure**: For any $\circ \in \Sigma$ and expressions $E\_1, E\_2$, $E\_1 \circ E\_2$ is a valid expression in $\text{Expr}(S, \Sigma, P)$.  
   * **Geometric Basis**: Substitution relies on the invariance of geometric properties (e.g., closure), and closure leverages the completeness of geometric operations (e.g., containment, sequencing).  
 * **Proof of Substitution and Closure**  
@@ -1153,8 +1171,8 @@ The Universal Writing System (UWS) of the Universal Language (UL) integrates the
 The UWS establishes a notation scheme that encodes UL’s symbols and expressions into a standardized, orthographically precise representation, integrating symbiology, syntax, and grammar for practical use.
 
 * **Geometric and Mathematical Foundations**  
-  * **Symbol Representation**: Each symbol is encoded by its geometric coordinates or parametric equations, e.g., a point as $P \= (x, y)$, a line as $L \= { (1-t)P\_1 \+ tP\_2 \mid t \in $$0,1$$ }$, and a circle as $C: (x \- h)^2 \+ (y \- k)^2 \= r^2$, ensuring precise spatial definition.  
-  * **Syntactic Encoding**: Operations are denoted with standardized markers: $\subset$ for containment, $\to$ for sequencing, $\sim$ for adjacency, and $T$ for transformations (e.g., $R\_{\theta} \= \begin{bmatrix} \cos\theta & \-\sin\theta \ \sin\theta & \cos\theta \end{bmatrix}$ ). Complex expressions are formatted as $$$C \subset $$L\_1 \to L\_2$$$$$ to reflect nesting.  
+  * **Symbol Representation**: Each symbol is encoded by its geometric coordinates or parametric equations, e.g., a point as $P \= (x, y)$, a line as $L \= { (1-t)P\_1 \+ tP\_2 \mid t \in (0,1) }$, and a circle as $C: (x \- h)^2 \+ (y \- k)^2 \= r^2$, ensuring precise spatial definition.  
+  * **Syntactic Encoding**: Operations are denoted with standardized markers: $\subset$ for containment, $\to$ for sequencing, $\sim$ for adjacency, and $T$ for transformations (e.g., $R\_{\theta} \= \begin{bmatrix} \cos\theta & \-\sin\theta \ \sin\theta & \cos\theta \end{bmatrix}$ ). Complex expressions are formatted as ($C \subset (L\_1 \to L\_2))$ to reflect nesting.  
   * **Orthographic Conventions**:  
     * Symbols are scaled proportionally (e.g., $r\_2 \= 0.5 r\_1$ for $C\_1 \subset C\_2$ ) to maintain readability.  
     * Directional markers (e.g., arrows for $\to$ ) are oriented along the vector $\vec{d} \= P\_2 \- P\_1$.  
@@ -1164,10 +1182,10 @@ The UWS establishes a notation scheme that encodes UL’s symbols and expression
   * **Geometric Basis**: The point’s singularity enables precise localization, the line’s linearity supports directional encoding, and the circle’s closure facilitates hierarchical structuring.  
 * **Operational Integration**  
   * The scheme integrates symbiology by mapping geometric properties to meanings (e.g., the circle’s closure defines *contour*), syntax by structuring with operations (e.g., $C \subset L$ ), and grammar by applying modifiers (e.g., $C \subset L^{\equiv}$ for equivalence).  
-  * **Contextual Enhancement**: The notation $$$C \subset (L\_1 \to L\_2)$$$ suggests a unified process with ordered steps, where the circle’s enclosing nature and the line’s directional flow imply a structured cycle.  
+  * **Contextual Enhancement**: The notation ($C \subset (L\_1 \to L\_2))$ suggests a unified process with ordered steps, where the circle’s enclosing nature and the line’s directional flow imply a structured cycle.  
 * **Practical Implementation**  
   * **Cross-Linguistic Adaptability**: The scheme supports left-to-right, right-to-left, and radial layouts by adjusting $\vec{d}$’s orientation, accommodating diverse cognitive preferences.  
-  * **User Interaction**: Writers can input via coordinate entry (e.g., $P \= (0, 0$$ ) or gesture-based selection (e.g., drawing $C$ ), enhancing accessibility.  
+  * **User Interaction**: Writers can input via coordinate entry (e.g., $P \= (0, 0) ) or gesture-based selection (e.g., drawing $C$ ), enhancing accessibility.  
 * **Primordial Universality**  
   * **Natural Resonance**: Notation mirrors natural hierarchical structures, e.g., tree rings (circles) with radial growth.  
   * **Perceptual Intuition**: Humans parse orthographic systems, as shown in Amalric et al. (2017), where nested geometric notations were anticipated (URL: [https://www.sciencedirect.com/science/article/pii/S0010027723002618](https://www.sciencedirect.com/science/article/pii/S0010027723002618)).  
@@ -1180,7 +1198,7 @@ The rendering process transforms notation into a visual form, optimized for read
 * **Geometric and Mathematical Foundations**  
   * **Coordinate Mapping**: Symbols are rendered on $\mathbb{R}^2$ using their equations, e.g., $P \= (x, y)$ as a dot, $C$ as a curve $(x \- h)^2 \+ (y \- k)^2 \= r^2$.  
   * **Syntactic Layout**: Operations dictate spatial arrangement, e.g., $C \subset L$ places $L$ within $C$’s boundary (checked via $(x\_L \- h)^2 \+ (y\_L \- k)^2 \< r^2$ ), and $L\_1 \to L\_2$ aligns endpoints.  
-  * **Grammatical Rendering**: Modifiers adjust visuals, e.g., $\neg(L\_1 \to L\_2)$ flips $L\_2$’s direction using $M\_{\text{flip}}$, and $$$C\_1 \subset $$C\_2 \subset P$$$$$ scales radii (e.g., $r\_2 \= 0.7 r\_1$ ).  
+  * **Grammatical Rendering**: Modifiers adjust visuals, e.g., $\neg(L\_1 \to L\_2)$ flips $L\_2$’s direction using $M\_{\text{flip}}$, and ($C\_1 \subset (C\_2 \subset P))$ scales radii (e.g., $r\_2 \= 0.7 r\_1$ ).  
 * **Axiomatic Writing Rule**  
   * **Rule of Rendering**: For $S\_E$, render each $(s\_i, o\_i, m\_i)$ by mapping $s\_i$ to its geometric form, applying $o\_i$ as a spatial transformation, and adjusting with $m\_i$, ensuring geometric constraints and readability (e.g., minimum separation $\epsilon \= 0.1r$ between symbols).  
   * **Geometric Basis**: The triangle’s convergence aids directional rendering, the square’s orthogonality supports grid alignment, and the wave’s oscillation enables dynamic flow.  
@@ -1233,13 +1251,13 @@ A featural writing system requires the decomposition of symbols into their geome
     * Angle: Orientation (angle $\theta$ between lines).  
     * Square: Orthogonality (right angles $90^\circ$, side length $s$ ).  
     * Wave: Oscillation (amplitude $A$, frequency $f$ ).  
-  * **Feature Combination**: Complex symbols or expressions are formed by combining features, e.g., a triangle within a circle combines convergence ($\theta\_i$ ) and closure ($r$ ), encoded as $$$C(\theta\_1, \theta\_2, \theta\_3)$$$.  
+  * **Feature Combination**: Complex symbols or expressions are formed by combining features, e.g., a triangle within a circle combines convergence ($\theta\_i$ ) and closure ($r$ ), encoded as ($C(\theta\_1, \theta\_2, \theta\_3)$).  
 * **Axiomatic Writing Rule**  
   * **Rule of Featural Decomposition**: Every symbol $S \in S$ is represented as a tuple $F\_S \= (f\_1, f\_2, \ldots, f\_n)$, where $f\_i$ are geometric features, and expressions $E$ are constructed as $F\_E \= { F\_{S\_i} \circ F\_{S\_j} \mid \circ \in \Sigma }$, preserving geometric constraints (e.g., $r\_{\text{inner}} \< r\_{\text{outer}}$ for containment).  
   * **Geometric Basis**: Features are derived from the intrinsic properties of each shape (e.g., circle’s equidistance, line’s vector), ensuring primordial universality.  
 * **Operational Integration**  
   * Integrates symbiology by mapping features to meanings (e.g., closure $\to$ *contour*), syntax by combining via operations (e.g., $C \subset T$ ), and grammar by applying modifiers (e.g., $\neg(T)$ reverses convergence).  
-  * **Contextual Enhancement**: A decomposed $$$C(\theta\_1, \theta\_2, \theta\_3)$$$ suggests a unified transformation with balanced decisions, where the circle’s closure and triangle’s angles imply a structured change.  
+  * **Contextual Enhancement**: A decomposed ($C(\theta\_1, \theta\_2, \theta\_3)$) suggests a unified transformation with balanced decisions, where the circle’s closure and triangle’s angles imply a structured change.  
 * **Practical Implementation**  
   * **Feature-Based Input**: Users select features (e.g., curvature via stylus pressure), reducing learning curve, validated by motor skill studies (Lashley, 1951).  
   * **Cross-Modal Mapping**: Features map to auditory tones (e.g., $\theta$ as pitch) or tactile patterns (e.g., $r$ as ridge height), enhancing accessibility.  
@@ -1291,7 +1309,7 @@ A writing system requires error correction and adaptability to remain reliable a
   * **Geometric Basis**: Constraints rely on closure and directionality, while adaptation leverages feature combinability.  
 * **Operational Integration**  
   * Integrates symbiology (e.g., curve’s continuity for new spirals), syntax (e.g., $C \+ \kappa$ as containment), and grammar (e.g., substitution for correction).  
-  * **Contextual Enhancement**: A corrected $$$C \subset L'$$$ (after $L$ error) suggests a restored unity, where the circle’s closure and line’s adjustment imply a repaired structure.  
+  * **Contextual Enhancement**: A corrected ($C \subset L'$) (after $L$ error) suggests a restored unity, where the circle’s closure and line’s adjustment imply a repaired structure.  
 * **Practical Implementation**  
   * **Error Detection Algorithm**: Use geometric checks (e.g., distance $| P \- C\_{\text{center}} | \< r$ ), with $O(n)$ complexity, validated by error rate studies (Shannon, 1948).  
   * **Adaptive Protocol**: Users propose new features (e.g., helix via $C \+ \sin(t)$ ), tested for consistency (Turing, 1950).  
