@@ -23,6 +23,20 @@ $T_{\text{project}} = \left[1 \, 0 \, 0 \atop 0 \, 1 \, 0 \atop a \, b \, 1\righ
 
 $T_{\text{project}} = \left[ 1 \, 0 \, 0 \mid 0 \, 1 \, 0 \mid a \, b \, 1 \right]$
 
+$T_{\text{project}} = \left[ \array{ccc} 1 & 0 & 0 \\ 0 & 1 & 0 \\ a & b & 1 \end{array} \right]$
+
+$$T_{\text{project}} = \left[ \array{ccc} 1 & 0 & 0 \\ 0 & 1 & 0 \\ a & b & 1 \end{array} \right]$$
+
+$T_{\text{project}} = \left[ \left[ 1 \, 0 \, 0 \right] \atop \left[ 0 \, 1 \, 0 \right] \atop \left[ a \, b \, 1 \right] \right]$
+
+$T_{\text{project}} = \left[ 1 \; 0 \; 0 \mid 0 \; 1 \; 0 \mid a \; b \; 1 \right]$
+
+$T_{\text{project}} = \left( \begin{array}{c} 1 \, 0 \, 0 \\ 0 \, 1 \, 0 \\ a \, b \, 1 \end{array} \right)$
+
+$T_{\text{project}} = \left( 1 \, 0 \, 0 \above 0 \, 1 \, 0 \above a \, b \, 1 \right)$
+
+$T_{\text{project}} = \left[ 1 \hskip 1em 0 \hskip 1em 0 \vskip 1em 0 \hskip 1em 1 \hskip 1em 0 \vskip 1em a \hskip 1em b \hskip 1em 1 \right]$
+
 
 **Abstract**
 
