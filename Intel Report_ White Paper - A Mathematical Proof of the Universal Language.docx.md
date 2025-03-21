@@ -19,7 +19,7 @@ $R_{\pi/2} = \left[ 0\atop 1 \right] \left[ -1\atop 0 \right]$
 
 $R_{\pi/2} = \left[0 \, -1 \atop 1 \, 0\right]$
 
-$T_{\text{project}} = \left[1 \, 0 \, 0 \atop{ 0 \, 1 \, 0 \atop a \, b \, 1}\right]$
+
 
 **Abstract**
 
@@ -567,7 +567,7 @@ These transformation rules are foundational to UL’s subsequent components, ens
 * **Empirical Validation**:  
   * A planned 2026 study will test 10,000 transformations across 20 cultures, targeting 95% consistency in $\text{flip}$ and $\text{scale}$ interpretations, enhancing UL’s universality.  
 * **Advanced Transformations**:  
-  * Future UL versions (e.g., by 2028$ may include projective transformations ($T\_{\text{project}} \= \begin{bmatrix} 1 & 0 & 0 \ 0 & 1 & 0 \ a & b & 1 \end{bmatrix}$ ) for 3D modeling, expanding applications in robotics and physics.  
+  * Future UL versions (e.g., by 2028$ may include projective transformations ($T_{\text{project}} = \left[1 \, 0 \, 0 \atop{ 0 \, 1 \, 0 \atop a \, b \, 1}\right]$ ) for 3D modeling, expanding applications in robotics and physics.  
 * **Interdisciplinary Synergy**:  
   * Collaboration with computer graphics experts will refine $T$ for virtual reality, aiming for 98% rendering accuracy by 2030, integrating UL with emerging technologies.
 
@@ -745,7 +745,7 @@ The adjacency and connectivity rules are built upon precise geometric and mathem
   * **Example**: Lines $\text{line}((0,0), (1,1))$ and $\text{line}((0,1), (1,0))$ intersect at $(0.5, 0.5)$ where $\text{det} \= 0$, representing a crossroad in a relational model.  
 * **Graph Representation**:  
   * **Definition**: Connected symbols form a graph, with each symbol as a vertex and each intersection or adjacency as an edge. This is analyzable via an adjacency matrix $A\_{ij}$, where $A\_{ij} \= 1$ if symbols $i$ and $j$ are connected (via proximity or intersection), and $A\_{ij} \= 0$ otherwise. The graph’s properties (e.g., connectivity, cycles) can be computed using graph theory algorithms.  
-  * **Example**: A graph with $\text{point}(0,0)$, $\text{point}(1,0)$ (adjacent, $\epsilon \= 0.5$ ), and $\text{line}((0,0), (1,1))$ intersecting $\text{line}((1,0), (0,1))$ at $(0.5, 0.5)$ yields a matrix $A \= \begin{bmatrix} 0 & 1 & 1 \\ 1 & 0 & 1 \\ 1 & 1 & 0 \end{bmatrix}$, indicating a triangular network.  
+  * **Example**: A graph with $\text{point}(0,0)$, $\text{point}(1,0)$ (adjacent, $\epsilon \= 0.5$ ), and $\text{line}((0,0), (1,1))$ intersecting $\text{line}((1,0), (0,1))$ at $(0.5, 0.5)$ yields a matrix $A \= \left[0 \, 1 \, 1 \atop{ 1 \, 0 \, 1 \atop 1 \, 1 \, 0}\right]$, indicating a triangular network. 
 * **Higher-Dimensional Extensions**:  
   * **Definition**: In 3D, proximity uses $|P\_1 \- P\_2| \= \sqrt{(x\_2 \- x\_1)^2 \+ (y\_2 \- y\_1)^2 \+ (z\_2 \- z\_1)^2} \< \epsilon$, and intersection involves 3D line or surface equations (e.g., plane intersection via $\text{det}$ of 3D vectors).  
   * **Example**: A 3D point $\text{point}(0,0,0)$ and $\text{point}(0.1,0,0)$ are adjacent with $\epsilon \= 0.2$, while two planes intersect along a line, modeling a 3D network.
@@ -813,10 +813,10 @@ To prove that Universal Syntax can exist mathematically, we formalize it as a ge
 * **Axioms of UL Syntax**  
   * **Axiom of Symbol Placement**: Every symbol $S\_i$ (e.g., point, line, circle) has a defined position in $\mathbb{R}^2$, specified by its coordinates or parametric equations (e.g., a point $P \= (x, y)$, a circle $(x \- h)^2 \+ (y \- k)^2 \= r^2$ ).  
   * **Axiom of Geometric Interaction**: Symbols interact via geometric operations (e.g., containment, intersection, transformation), defined by their properties (e.g., a line’s direction $\vec{d} \= P\_2 \- P\_1$, a circle’s enclosure $(x\_p \- h)^2 \+ (y\_p \- k)^2 \< r^2$ ).  
-  * **Axiom of Transformation Closure**: The set of symbols is closed under transformations (e.g., rotation $R\_{\theta} \= \begin{bmatrix} \cos\theta & \-\sin\theta \ \sin\theta & \cos\theta \end{bmatrix}$ ), ensuring that applying a transformation to a symbol yields another valid symbol.  
+  * **Axiom of Transformation Closure**: The set of symbols is closed under transformations (e.g., rotation $R\_{\theta} \= \left[\cos\theta \, \-\sin\theta \atop \sin\theta \, \cos\theta\right]$ ), ensuring that applying a transformation to a symbol yields another valid symbol.  
 * **Operations and Composition**  
   * **Composition Operation**: Symbols are combined via geometric operations, such as placing a point inside a circle (containment) or connecting two lines at a vertex (intersection). Formally, for symbols $S\_1$ and $S\_2$, their composition $S\_1 \circ S\_2$ is defined by their geometric interaction (e.g., $S\_1 \subset S\_2$ for containment).  
-  * **Transformation Operation**: Each symbol can be transformed using matrices (e.g., scaling $S \= \begin{bmatrix} k\_x & 0 \ 0 & k\_y \end{bmatrix}$ ), with the operation $T(S)$ yielding a new symbol $S'$.  
+  * **Transformation Operation**: Each symbol can be transformed using matrices (e.g., scaling $S \= \left[k\_x \, 0 \atop 0 \, k\_y\right]$ ), with the operation $T(S)$ yielding a new symbol $S'$.  
   * **Closure Property**: The system is closed under composition and transformation, ensuring that $S\_1 \circ S\_2$ and $T(S)$ remain within the set of valid UL expressions.  
 * **Mathematical Properties**  
   * **Associativity**: Composition of symbols is associative, e.g., $(S\_1 \circ S\_2) \circ S\_3 \= S\_1 \circ (S\_2 \circ S\_3)$, as geometric operations like containment are independent of order.  
@@ -1013,7 +1013,7 @@ To ensure mathematical rigor, we first define UL’s grammar as a formal system,
 This subsection formalizes equivalence as a mathematical relation, provides a proof of meaning preservation, and supports claims with empirical evidence, addressing the critique’s call for rigor and specificity.
 
 * **Geometric and Mathematical Foundations**  
-  * **Transformation Invariance**: Affine transformations (e.g., rotation $R\_{\theta} \= \begin{bmatrix} \cos\theta & \-\sin\theta \ \sin\theta & \cos\theta \end{bmatrix}$ ) preserve geometric properties, as shown in Section 4.2.7.  
+  * **Transformation Invariance**: Affine transformations (e.g., rotation $R\_{\theta} \= \left[\cos\theta \, \-\sin\theta \atop \sin\theta \, \cos\theta\right]$ ) preserve geometric properties, as shown in Section 4.2.7.  
   * **Formal Equivalence Relation**: Define $E\_1 \equiv E\_2$ if there exists a transformation $T$ such that $E\_2 \= T(E\_1)$ and the symbolic meaning is preserved (e.g., a circle’s closure property).  
 * **Axiomatic Grammar Rule**  
   * **Rule of Equivalence**: For expressions $E\_1, E\_2 \in \text{Expr}(S, \Sigma, P)$, $E\_1 \equiv E\_2$ if $E\_2 \= T(E\_1)$ and $T$ preserves the geometric properties defining $E\_1$’s symbolic meaning (e.g., closure for a circle).  
@@ -1081,8 +1081,8 @@ Identity and idempotence principles ensure that UL has neutral elements and stab
 
 * **Geometric and Mathematical Foundations**  
   * **Identity Element for Containment**: The point, as the simplest symbol (Section 4.1), acts as an identity for containment. For a circle $C: (x \- h)^2 \+ (y \- k)^2 \= r^2$, containing a point $P: (x\_p, y\_p)$ (where $(x\_p \- h)^2 \+ (y\_p \- k)^2 \< r^2$ ), the circle’s boundary remains unchanged, so $C \supset P \equiv C$ in terms of enclosure.  
-  * **Identity Transformation**: The identity transformation $I \= \begin{bmatrix} 1 & 0 \ 0 & 1 \end{bmatrix}$ leaves a symbol unchanged, e.g., $I(S) \= S$ for any symbol $S$.  
-  * **Idempotence of Certain Transformations**: Some transformations are idempotent, e.g., a 180-degree rotation $R\_{\pi} \= \begin{bmatrix} \-1 & 0 \ 0 & \-1 \end{bmatrix}$ satisfies $R\_{\pi} \circ R\_{\pi} \= I$, so applying $R\_{\pi}$ twice returns the original symbol (up to equivalence).  
+  * **Identity Transformation**: The identity transformation $I \= \left[1 \, 0 \atop 0 \, 1\right]$ leaves a symbol unchanged, e.g., $I(S) \= S$ for any symbol $S$.  
+  * **Idempotence of Certain Transformations**: Some transformations are idempotent, e.g., a 180-degree rotation $R\_{\pi} \= \left[-1 \, 0 \atop 0 \, -1\right]$ satisfies $R\_{\pi} \circ R\_{\pi} \= I$, so applying $R\_{\pi}$ twice returns the original symbol (up to equivalence).   
 * **Axiomatic Grammar Rules**  
   * **Rule of Identity**: For each operation $\circ \in \Sigma$ (Section 4.3.1), there exists an identity element $e$ such that $E \circ e \equiv E$ and $e \circ E \equiv E$. For containment, $e$ is a point; for transformations, $e$ is $I$.  
   * **Rule of Idempotence**: An operation $\circ$ is idempotent if $\circ(\circ(E)) \equiv \circ(E)$. For transformations, $R\_{\pi}$ is idempotent (since $R\_{\pi}^2 \= I$ ).  
@@ -1104,14 +1104,15 @@ Inversion and negation allow UL to express reversals and opposites, ensuring log
 
 * **Geometric and Mathematical Foundations**  
   * **Inversion of Transformations**: Every transformation $T$ has an inverse $T^{-1}$, e.g., for rotation $R\_{\theta}$, the inverse is $R\_{-\theta}$, satisfying $R\_{\theta} \circ R\_{-\theta} \= I$.  
-  * **Negation via Mirroring**: Mirroring (Section 4.2.1) acts as a geometric negation, e.g., a reflection over the x-axis $M\_{\text{flip}} \= \begin{bmatrix} 1 & 0 \ 0 & \-1 \end{bmatrix}$ maps $(x, y)$ to $(x, \-y)$, reversing orientation (e.g., a line’s direction or an angle’s opening).  
+  * **Negation via Mirroring**: Mirroring (Section 4.2.1) acts as a geometric negation, e.g., a reflection over the x-axis $M\_{\text{flip}} \= \left[1 \, 0 \atop 0 \, -1\right]$ maps $(x, y)$ to $(x, \-y)$, reversing orientation (e.g., a line’s direction or an angle’s opening).  
   * **Negation of Sequencing**: For a sequence $S\_1 \to S\_2$, its negation is $S\_2 \to S\_1$, reversing the direction, e.g., for lines $L\_1 \to L\_2$, negation swaps the direction vector $\vec{d} \= P\_2 \- P\_1$ to $\-\vec{d}$.  
 * **Axiomatic Grammar Rules**  
   * **Rule of Inversion**: For each operation $\circ \in \Sigma$, there exists an inverse operation $\circ^{-1}$ such that $E \circ (E \circ^{-1}) \equiv e$, where $e$ is the identity. For transformations, $T^{-1}$ inverts $T$; for sequencing, $(S\_1 \to S\_2)^{-1} \= S\_2 \to S\_1$.  
   * **Rule of Negation**: An operation $\neg$ reverses orientation or direction, e.g., $\neg(S\_1 \to S\_2) \= S\_2 \to S\_1$, and $\neg(S) \= M\_{\text{flip}}(S)$ for mirroring.  
   * **Geometric Basis**: Relies on the symmetry of mirroring (for negation) and the invertibility of transformations (for inversion).  
 * **Proof of Inversion and Negation**  
-  * **Inversion of Rotation**: For $R\_{\theta}$, the inverse $R\_{-\theta}$ satisfies $R\_{\theta} \circ R\_{-\theta} \= \begin{bmatrix} \cos\theta & \-\sin\theta \ \sin\theta & \cos\theta \end{bmatrix} \begin{bmatrix} \cos(-\theta) & \-\sin(-\theta) \ \sin(-\theta) & \cos(-\theta) \end{bmatrix} \= \begin{bmatrix} 1 & 0 \ 0 & 1 \end{bmatrix} \= I$, so $R\_{\theta}(R\_{-\theta}(S)) \equiv S$.  
+  * **Inversion of Rotation**: For $R\_{\theta}$, the inverse $R\_{-\theta}$ satisfies $R\_{\theta} \circ R\_{-\theta} \= \left[\cos\theta \, \-\sin\theta \atop \sin\theta \, \cos\theta\right]   \left[\cos(-\theta) \, \-\sin(-\theta) \atop \sin(-\theta) \, \cos(-\theta)\right] \= \left[1 \, 0 \atop 0 \, 1\right] \= I$, so $R\_{\theta}(R\_{-\theta}(S)) \equiv S$.
+    
   * **Negation via Mirroring**: For a line $L$ from $P\_1 \= (x\_1, y\_1)$ to $P\_2 \= (x\_2, y\_2)$, apply $M\_{\text{flip}}$: $P\_1' \= (x\_1, \-y\_1)$, $P\_2' \= (x\_2, \-y\_2)$. The direction vector $\vec{d} \= (x\_2 \- x\_1, y\_2 \- y\_1)$ becomes $\vec{d}' \= (x\_2 \- x\_1, \-(y\_2 \- y\_1))$, reversing the y-component, thus negating the orientation.  
 * **Logical Role in UL**  
   * **Reversal and Opposition**: Inversion undoes operations (e.g., $R\_{-\theta}$ reverses a rotation), and negation expresses opposites (e.g., $\neg(L\_1 \to L\_2)$ reverses a process).  
@@ -1160,8 +1161,8 @@ The UWS establishes a notation scheme that encodes UL’s symbols and expression
 
 * **Geometric and Mathematical Foundations**  
   * **Symbol Representation**: Each symbol is encoded by its geometric coordinates or parametric equations, e.g., a point as $P \= (x, y)$, a line as $L \= { (1-t)P\_1 \+ tP\_2 \mid t \in (0,1) }$, and a circle as $C: (x \- h)^2 \+ (y \- k)^2 \= r^2$, ensuring precise spatial definition.  
-  * **Syntactic Encoding**: Operations are denoted with standardized markers: $\subset$ for containment, $\to$ for sequencing, $\sim$ for adjacency, and $T$ for transformations (e.g., $R\_{\theta} \= \begin{bmatrix} \cos\theta & \-\sin\theta \ \sin\theta & \cos\theta \end{bmatrix}$ ). Complex expressions are formatted as ($C \subset (L\_1 \to L\_2))$ to reflect nesting.  
-  * **Orthographic Conventions**:  
+  * **Syntactic Encoding**: Operations are denoted with standardized markers: $\subset$ for containment, $\to$ for sequencing, $\sim$ for adjacency, and $T$ for transformations (e.g., $R\_{\theta} \= \left[\cos\theta \, \-\sin\theta \atop \sin\theta \, \cos\theta\right]$ ). Complex expressions are formatted as ($C \subset (L\_1 \to L\_2))$ to reflect nesting.  
+  * **Orthographic Conventions**:   
     * Symbols are scaled proportionally (e.g., $r\_2 \= 0.5 r\_1$ for $C\_1 \subset C\_2$ ) to maintain readability.  
     * Directional markers (e.g., arrows for $\to$ ) are oriented along the vector $\vec{d} \= P\_2 \- P\_1$.  
     * Grammatical modifiers (e.g., $\neg$, $\equiv$ ) are superscripted (e.g., $L\_1 \to L\_2^{\neg}$ ) to distinguish them from syntactic operations.  
