@@ -564,13 +564,13 @@ The containment and enclosure rules are grounded in objective geometry, focusing
 
 * **Enclosure by Closed Shapes**:  
   * **Definition**: A symbol $S\_1$ is contained within a closed shape $S\_2$ (e.g., circle, triangle, square) if all its coordinates lie within $S\_2$’s boundary. For a circle defined by $(x \- h)^2 \+ (y \- k)^2 \= r^2$, a point $P \= (x\_p, y\_p)$ is inside if $(x\_p \- h)^2 \+ (y\_p \- k)^2 \< r^2$. On the boundary, $(x\_p \- h)^2 \+ (y\_p \- k)^2 \= r^2$, and outside, $(x\_p \- h)^2 \+ (y\_p \- k)^2 \> r^2$.  
-  * **Example**: A point $\text{point}(1,1)$ inside a circle $\text{circle}((0,0), 2) satisfies $(1-0)^2 \+ (1-0)^2 \= 2 \< 4$, confirming containment. For a square $\text{square}((0,0), 2), containment requires $0 \< x\_p \< 2, 0 \< y\_p \< 2$.  
+  * **Example**: A point $\text{point}(1,1)$ inside a circle $\text{circle}((0,0), 2) satisfies $(1-0)^2 \+ (1-0)^2 \= 2 \< 4$ , confirming containment. For a square $\text{square}((0,0), 2)$ , containment requires $0 \< x\_p \< 2, 0 \< y\_p \< 2$.  
 * **Hierarchical Nesting**:  
   * **Definition**: Multiple levels of enclosure are possible, enabling recursive nesting (e.g., a point inside a triangle inside a circle). This is defined by recursively checking containment at each level: $S\_1 \subset S\_2 \subset S\_3$ if $S\_1$ is inside $S\_2$ and $S\_2$ is inside $S\_3$.  
-  * **Example**: A point $\text{point}(0.5, 0.5)$ inside a triangle $\text{triangle}((0,0), (1,0), (0,1))$, which is itself inside a circle $\text{circle}((0,0), 2), represents a nested structure. Using barycentric coordinates for the triangle, $\alpha \+ \beta \+ \gamma \= 1$ with $\alpha, \beta, \gamma \> 0$, confirms the point’s position, while the triangle’s vertices satisfy the circle’s condition.  
+  * **Example**: A point $\text{point}(0.5, 0.5)$ inside a triangle $\text{triangle}((0,0), (1,0), (0,1))$, which is itself inside a circle $\text{circle}((0,0), 2)$ , represents a nested structure. Using barycentric coordinates for the triangle, $\alpha \+ \beta \+ \gamma \= 1$ with $\alpha, \beta, \gamma \> 0$ , confirms the point’s position, while the triangle’s vertices satisfy the circle’s condition.  
 * **Geometric Inclusion**:  
   * **Definition**: The capacity of a shape $S\_2$ to contain other symbols is determined by its enclosed area, reflecting its boundedness. For a circle, area is $A \= \pi r^2$; for a triangle, $A \= \frac{1}{2} |x\_1(y\_2 \- y\_3) \+ x\_2(y\_3 \- y\_1) \+ x\_3(y\_1 \- y\_2)|$; and for a square, $A \= s^2$, where $s$ is the side length.  
-  * **Example**: A circle $\text{circle}((0,0), 2) has area $4\pi \approx 12.56$, capable of enclosing multiple points or smaller shapes (e.g., $\text{triangle}((0,0), (1,0), (0,1))$ with area 0.5). A square $\text{square}((0,0), 2) has area 4, offering a more rigid containment space.  
+  * **Example**: A circle $\text{circle}((0,0), 2) has area $4\pi \approx 12.56$, capable of enclosing multiple points or smaller shapes (e.g., $\text{triangle}((0,0), (1,0), (0,1))$ with area 0.5). A square $\text{square}((0,0), 2)$ has area 4, offering a more rigid containment space.  
 * **Overlap and Boundary Interactions**:  
   * **Definition**: If two closed shapes $S\_2$ and $S\_3$ overlap, their containment regions are defined by intersection: $S\_1 \subset (S\_2 \cap S\_3)$ if $S\_1$ satisfies both shapes’ conditions. Boundary interactions (e.g., $S\_1$ on $S\_2$’s boundary) are treated as “touching” rather than strict containment, influencing syntactic interpretation.  
   * **Example**: A point $\text{point}(2,0)$ on the boundary of $\text{circle}((0,0), 2) (since $2^2 \+ 0^2 \= 4$ ) is not strictly inside but “touches” the circle, suggesting a transitional role in UL syntax.
@@ -581,16 +581,16 @@ Containment rules are axiomatically applied based on the enclosing symbol’s ge
 
 | Enclosing Symbol | Geometric Property | Mathematical Condition | Syntactic Role in UL | Example Application |
 | ----- | ----- | ----- | ----- | ----- |
-| **Circle** | Closure and equidistance | $(x\_p \- h)^2 \+ (y\_p \- k)^2 \< r^2$ | Grouping: Unifies elements into a whole | Enclosing $\text{point}$s for a system |
+| **Circle** | Closure and equidistance | $(x\_p \- h)^2 \+ (y\_p \- k)^2 \< r^2$ | Grouping: Unifies elements into a whole | Enclosing $\text{point}$ for a system |
 | **Triangle** | Stable convergence | Point-in-triangle test via barycentric coordinates | Hierarchy: Indicates structural dependency | Nesting $\text{line}$ for a subsystem |
 | **Square** | Orthogonal boundedness | $x\_{\text{min}} \< x\_p \< x\_{\text{max}}, y\_{\text{min}} \< y\_p \< y\_{\text{max}}$ | Containment: Defines a bounded domain | Framing $\text{wave}$ for a category |
 
 * **Detailed Syntactic Roles**:  
-  * **Grouping (Circle)**: The circle’s equidistant closure unifies contained symbols into a cohesive concept, reflecting its symbolic wholeness. For example, enclosing $\text{point}(1,0)$ and $\text{point}(0,1)$ within $\text{circle}((0,0), 2) groups them as a single system, such as planets in a solar system. A pilot with 300 astronomers achieved 90% consistency in interpreting this as a unified structure.  
+  * **Grouping (Circle)**: The circle’s equidistant closure unifies contained symbols into a cohesive concept, reflecting its symbolic wholeness. For example, enclosing $\text{point}(1,0)$ and $\text{point}(0,1)$ within $\text{circle}((0,0), 2)$ groups them as a single system, such as planets in a solar system. A pilot with 300 astronomers achieved 90% consistency in interpreting this as a unified structure.  
   * **Hierarchy (Triangle)**: The triangle’s stable convergence (vertices converging to a centroid) suggests layered dependency, ideal for hierarchical structures. Nesting a $\text{line}((0,0), (0.5,0))$ inside $\text{triangle}((0,0), (1,0), (0,1))$ indicates a subsystem, as in organizational charts. A trial with 200 managers mapped corporate hierarchies with 87% accuracy using this rule.  
-  * **Containment (Square)**: The square’s orthogonal structure defines a rigid domain, suitable for categorization. Framing a $\text{wave}$ within $\text{square}((0,0), 2) categorizes it as a bounded process, such as a tidal cycle. A marine biology study used this to model wave patterns, improving prediction accuracy by 12%.  
+  * **Containment (Square)**: The square’s orthogonal structure defines a rigid domain, suitable for categorization. Framing a $\text{wave}$ within $\text{square}((0,0), 2)$ categorizes it as a bounded process, such as a tidal cycle. A marine biology study used this to model wave patterns, improving prediction accuracy by 12%.  
 * **Boundary Semantics**:  
-  * Symbols on the boundary of an enclosing shape (e.g., $\text{point}(2,0)$ on $\text{circle}((0,0), 2) ) are interpreted as transitional or liminal elements, suggesting potential movement or interaction with external systems. For instance, a $\text{point}$ on a circle’s boundary might represent a gateway in a network model, validated in a 2023 network analysis pilot with 85% interpretative consistency.
+  * Symbols on the boundary of an enclosing shape (e.g., $\text{point}(2,0)$ on $\text{circle}((0,0), 2)$ ) are interpreted as transitional or liminal elements, suggesting potential movement or interaction with external systems. For instance, a $\text{point}$ on a circle’s boundary might represent a gateway in a network model, validated in a 2023 network analysis pilot with 85% interpretative consistency.
 
 #### **4.2.2.3 Primordial Universality**
 
@@ -601,7 +601,7 @@ The containment and enclosure rules are primordial, rooted in universal geometri
   * **Hierarchy**: Reflects natural hierarchies, such as ant colonies (triangle-like nesting of roles), observed in 88% of social insect studies (Entomology Review, 2024).  
   * **Containment**: Seen in geological formations, like fault blocks (square-like domains), evident in 85% of tectonic models (Geology Today, 2023).  
 * **Perceptual Intuition**:  
-  * Humans interpret enclosure as grouping, aligning with Gestalt principles where contained elements are perceived as related. A 2023 study showed 90% of participants grouped $\text{point}$s inside a $\text{circle}$ as a single unit within 150ms (Journal of Perception, 2023). AI vision systems similarly achieved 87% accuracy in recognizing nested structures (IEEE Vision, 2024).  
+  * Humans interpret enclosure as grouping, aligning with Gestalt principles where contained elements are perceived as related. A 2023 study showed 90% of participants grouped $\text{point}$ inside a $\text{circle}$ as a single unit within 150ms (Journal of Perception, 2023). AI vision systems similarly achieved 87% accuracy in recognizing nested structures (IEEE Vision, 2024).  
 * **Computational Interpretability**:  
   * Machines test containment using geometric algorithms, such as point-in-polygon tests (e.g., ray-casting for triangles, achieving 98% accuracy in 0.1ms) or bounding box checks for squares (95% efficiency, 2023). These methods enable applications like spatial databases, where UL’s containment rules improved query performance by 15% in a 2024 GIS study.  
 * **Cross-Intelligence Accessibility**:  
@@ -612,11 +612,11 @@ The containment and enclosure rules are primordial, rooted in universal geometri
 The containment and enclosure rules integrate seamlessly with UL’s broader components, ensuring a cohesive syntactic structure:
 
 * **Integration with Universal Grammar (Section 4.3)**:  
-  * Containment supports logical rules for subset relationships ($\text{subset}(S\_1, S\_2)$ ) and recursion ($\text{nest}(S\_1, S\_2, n)$ ), enabling expressions like $\text{system} \= \text{nest}(\text{point}, \text{circle}, 2) for multi-level systems.  
+  * Containment supports logical rules for subset relationships ($\text{subset}(S\_1, S\_2)$ ) and recursion ($\text{nest}(S\_1, S\_2, n)$ ), enabling expressions like $\text{system} \= \text{nest}(\text{point}, \text{circle}, 2)$ for multi-level systems.  
 * **Guidance for Universal Writing System (Section 4.4)**:  
   * Enclosure guides the spatial arrangement of symbols in 2D layouts, with $\text{circle}$ unifying concepts and $\text{triangle}$ indicating hierarchies. A prototype writing system used $\text{square}$ containment to categorize $\text{wave}$ patterns, achieving 92% readability in a 2023 user study.  
 * **Support for Applications**:  
-  * In education (Section 6.6), nesting $\text{point}$s in a $\text{triangle}$ teaches hierarchical reasoning, while in healthcare (Section 6.7.2), $\text{circle}$ grouping models disease clusters. These rules underpin UL’s 15–25% performance gains (Section 7.5.3).
+  * In education (Section 6.6), nesting $\text{point}$ in a $\text{triangle}$ teaches hierarchical reasoning, while in healthcare (Section 6.7.2), $\text{circle}$ grouping models disease clusters. These rules underpin UL’s 15–25% performance gains (Section 7.5.3).
 
 #### **4.2.2.5 Additional Insights and Future Directions**
 
@@ -658,12 +658,12 @@ Directionality and sequencing rules are axiomatically applied based on the symbo
 
 | Symbol | Geometric Property | Mathematical Condition | Syntactic Role in UL | Example Application |
 | ----- | ----- | ----- | ----- | ----- |
-| **Line** | Linear extension | $\vec{d} \= P\_2 \- P\_1$ | Sequence: Defines order or progression | Ordering $\text{point}$s in a timeline |
-| **Angle** | Directional convergence | $ \theta \= \arccos\left(\frac{\vec{v\_1} \cdot \vec{v\_2}}{ | \vec{v\_1} |  |
+| **Line** | Linear extension | $\vec{d} \= P\_2 \- P\_1$ | Sequence: Defines order or progression | Ordering $\text{point}$ in a timeline |
+| **Angle** | Directional convergence  | $\theta = \arccos\left(\frac{\vec{v_1} \cdot \vec{v_2}}{\|\vec{v_1}\| \|\vec{v_2}\|}\right)$, where $\vec{v_1}, \vec{v_2}$ are vectors | Direction: Indicates orientation or relational shift | Specifying orientation in navigation |
 | **Wave** | Oscillatory propagation | Phase $\phi$ in $y \= A \sin(\omega t \+ \phi)$ | Flow: Represents dynamic progression | Modeling signal transmission |
 
 * **Detailed Syntactic Roles**:  
-  * **Sequence (Line)**: The line’s directional extension orders symbols along a path, reflecting its symbolic link. For example, $\text{line}((0,0), (1,0), (2,0))$ with $\text{point}$s at each endpoint sequences events in a process, such as a project timeline. A 2023 pilot with 400 project managers achieved 89% accuracy in interpreting this sequence.  
+  * **Sequence (Line)**: The line’s directional extension orders symbols along a path, reflecting its symbolic link. For example, $\text{line}((0,0), (1,0), (2,0))$ with $\text{point}$ at each endpoint sequences events in a process, such as a project timeline. A 2023 pilot with 400 project managers achieved 89% accuracy in interpreting this sequence.  
   * **Decision (Angle)**: The angle’s directional convergence marks a transition or choice, ideal for decision points. An angle $\text{angle}((0,0), (1,0), (1,1))$ with $\theta \= \pi/4$ indicates a branching path, as in a decision tree for resource allocation. A trial with 300 economists mapped decisions with 86% consistency.  
   * **Flow (Wave)**: The wave’s rhythmic propagation suggests a dynamic process, suitable for continuous flows. A wave $\text{wave}(t) \= \sin(t \+ \pi/4)$ with $\phi \= \pi/4$ models signal transmission, improving communication analysis by 13% in a 2024 telecom study.  
 * **Temporal and Causal Semantics**:  
@@ -689,7 +689,7 @@ The directionality and sequencing rules are primordial, derived from universal g
 These rules integrate with UL’s broader components, ensuring a cohesive syntactic structure:
 
 * **Integration with Universal Grammar (Section 4.3)**:  
-  * Directionality supports logical rules for precedence ($\text{precedes}(S\_1, S\_2)$ ) and recursion ($\text{repeat}(\text{line}, n)$ ), enabling expressions like $\text{process} \= \text{sequence}(\text{point}, \text{line}, 3) for multi-step workflows.  
+  * Directionality supports logical rules for precedence ($\text{precedes}(S\_1, S\_2)$ ) and recursion ($\text{repeat}(\text{line}, n)$ ), enabling expressions like $\text{process} \= \text{sequence}(\text{point}, \text{line}, 3)$ for multi-step workflows.  
 * **Guidance for Universal Writing System (Section 4.4)**:  
   * Directionality guides the linear and oscillatory arrangement of symbols, with $\text{line}$ setting sequence order and $\text{wave}$ indicating flow direction. A prototype used $\text{angle}$ to denote decision points, achieving 91% readability in a 2023 study.  
 * **Support for Applications**:  
@@ -735,8 +735,8 @@ Adjacency and connectivity rules are axiomatically applied based on geometric in
 
 | Interaction | Geometric Property | Mathematical Condition | Syntactic Role in UL | Example Application |
 | ----- | ----- | ----- | ----- | ----- |
-| **Proximity** | Spatial closeness | $|P\_1 \- P\_2| \= \sqrt{(x\_2 \- x\_1)^2 \+ (y\_2 \- y\_1)^2} \< \epsilon$ | Relation: Suggests association or proximity | Linking $\text{point}$s in a cluster |
-| **Intersection** | Boundary overlap | $\text{det}(P\_1, P\_2, Q\_1, Q\_2) \= 0$ for lines | Linkage: Defines direct connection | Connecting $\text{line}$s at a junction |
+| **Proximity** | Spatial closeness | $\|P\_1 \- P\_2\| \= \sqrt{(x\_2 \- x\_1)^2 \+ (y\_2 \- y\_1)^2} \< \epsilon$ | Relation: Suggests association or proximity | Linking $\text{point}$ in a cluster |
+| **Intersection** | Boundary overlap | $\text{det}(P\_1, P\_2, Q\_1, Q\_2) \= 0$ for lines | Linkage: Defines direct connection | Connecting $\text{line}$ at a junction |
 | **Graph Structure** | Network of connections | Adjacency matrix $A\_{ij}$ | Network: Represents complex dependencies | Mapping $\text{wave}$ networks |
 
 * **Detailed Syntactic Roles**:  
@@ -755,7 +755,7 @@ The adjacency and connectivity rules are primordial, derived from universal geom
   * **Linkage**: Reflects molecular bonds (intersection-like, 89% of chemical reactions involve bond overlaps, Chemistry Today, 2024).  
   * **Network**: Seen in ecological webs (graph-like, 91% of species interactions form networks, Ecology Letters, 2023).  
 * **Perceptual Intuition**:  
-  * Humans interpret proximity as relatedness, with Gestalt principles showing 87% of participants group nearby $\text{point}$s within 180ms (Journal of Perception, 2023). AI systems achieved 89% accuracy in recognizing $\text{line}$ intersections (IEEE Vision, 2024).  
+  * Humans interpret proximity as relatedness, with Gestalt principles showing 87% of participants group nearby $\text{point}$ within 180ms (Journal of Perception, 2023). AI systems achieved 89% accuracy in recognizing $\text{line}$ intersections (IEEE Vision, 2024).  
 * **Computational Interpretability**:  
   * Machines process connectivity via graph algorithms (e.g., Dijkstra’s, 97% accuracy in 0.1ms for shortest paths, 2023$ and determinant tests (96% efficiency, 2024). These enable applications like network optimization, where UL improved traffic flow by 16% in a 2023 study.  
 * **Cross-Intelligence Accessibility**:  
@@ -1031,7 +1031,7 @@ This subsection clarifies the scope of each principle, provides formal proofs, a
 | Principle | Operation | Geometric Property | Mathematical Condition | Logical Role in UL |
 | ----- | ----- | ----- | ----- | ----- |
 | Associativity | Containment | Order-independent containment | $(S\_1 \subset S\_2) \subset S\_3 \equiv S\_1 \subset (S\_2 \subset S\_3)$ | *Composition Order*: Ensures grouping consistency. |
-| Commutativity | Adjacency | Symmetric proximity | $ | P\_1 \- P\_2 |
+| Commutativity | Adjacency | Symmetric proximity | $S_1 \sim S_2 \equiv S_2 \sim S_1$ | *Symmetric Relation*: Enables reversible adjacency. |
 | Non-Commutativity | Sequencing | Directional asymmetry | $S\_1 \to S\_2 \neq S\_2 \to S\_1$ | *Ordered Flow*: Preserves sequence direction. |
 | Distributivity | Containment over Sequencing | Independent enclosure | $C \supset (S\_1 \to S\_2) \equiv (C \supset S\_1) \to (C \supset S\_2)$ | *Structural Flexibility*: Supports hierarchical sequencing. |
 
@@ -1153,7 +1153,7 @@ The UWS establishes a notation scheme that encodes UL’s symbols and expression
   * **Contextual Enhancement**: The notation ($C \subset (L\_1 \to L\_2))$ suggests a unified process with ordered steps, where the circle’s enclosing nature and the line’s directional flow imply a structured cycle.  
 * **Practical Implementation**  
   * **Cross-Linguistic Adaptability**: The scheme supports left-to-right, right-to-left, and radial layouts by adjusting $\vec{d}$’s orientation, accommodating diverse cognitive preferences.  
-  * **User Interaction**: Writers can input via coordinate entry (e.g., $P \= (0, 0) ) or gesture-based selection (e.g., drawing $C$ ), enhancing accessibility.  
+  * **User Interaction**: Writers can input via coordinate entry (e.g., $P \= (0, 0)$ ) or gesture-based selection (e.g., drawing $C$ ), enhancing accessibility.  
 * **Primordial Universality**  
   * **Natural Resonance**: Notation mirrors natural hierarchical structures, e.g., tree rings (circles) with radial growth.  
   * **Perceptual Intuition**: Humans parse orthographic systems, as shown in Amalric et al. (2017), where nested geometric notations were anticipated (URL: [https://www.sciencedirect.com/science/article/pii/S0010027723002618](https://www.sciencedirect.com/science/article/pii/S0010027723002618)).  
@@ -1219,13 +1219,13 @@ A featural writing system requires the decomposition of symbols into their geome
     * Angle: Orientation (angle $\theta$ between lines).  
     * Square: Orthogonality (right angles $90^\circ$, side length $s$ ).  
     * Wave: Oscillation (amplitude $A$, frequency $f$ ).  
-  * **Feature Combination**: Complex symbols or expressions are formed by combining features, e.g., a triangle within a circle combines convergence ($\theta\_i$ ) and closure ($r$ ), encoded as ($C(\theta\_1, \theta\_2, \theta\_3)$).  
+  * **Feature Combination**: Complex symbols or expressions are formed by combining features, e.g., a triangle within a circle combines convergence ($\theta\_i$ ) and closure ($r$ ), encoded as ( $C(\theta\_1, \theta\_2, \theta\_3)$ ).  
 * **Axiomatic Writing Rule**  
   * **Rule of Featural Decomposition**: Every symbol $S \in S$ is represented as a tuple $F\_S \= (f\_1, f\_2, \ldots, f\_n)$, where $f\_i$ are geometric features, and expressions $E$ are constructed as $F\_E \= { F\_{S\_i} \circ F\_{S\_j} \mid \circ \in \Sigma }$, preserving geometric constraints (e.g., $r\_{\text{inner}} \< r\_{\text{outer}}$ for containment).  
   * **Geometric Basis**: Features are derived from the intrinsic properties of each shape (e.g., circle’s equidistance, line’s vector), ensuring primordial universality.  
 * **Operational Integration**  
   * Integrates symbiology by mapping features to meanings (e.g., closure $\to$ *contour*), syntax by combining via operations (e.g., $C \subset T$ ), and grammar by applying modifiers (e.g., $\neg(T)$ reverses convergence).  
-  * **Contextual Enhancement**: A decomposed ($C(\theta\_1, \theta\_2, \theta\_3)$) suggests a unified transformation with balanced decisions, where the circle’s closure and triangle’s angles imply a structured change.  
+  * **Contextual Enhancement**: A decomposed ( $C(\theta\_1, \theta\_2, \theta\_3)$ ) suggests a unified transformation with balanced decisions, where the circle’s closure and triangle’s angles imply a structured change.  
 * **Practical Implementation**  
   * **Feature-Based Input**: Users select features (e.g., curvature via stylus pressure), reducing learning curve, validated by motor skill studies (Lashley, 1951).  
   * **Cross-Modal Mapping**: Features map to auditory tones (e.g., $\theta$ as pitch) or tactile patterns (e.g., $r$ as ridge height), enhancing accessibility.  
