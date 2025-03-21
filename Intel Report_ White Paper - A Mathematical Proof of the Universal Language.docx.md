@@ -19,27 +19,17 @@ $R_{\pi/2} = \left[ 0\atop 1 \right] \left[ -1\atop 0 \right]$
 
 $R_{\pi/2} = \left[0 \, -1 \atop 1 \, 0\right]$
 
-$R_{\pi/2} = \left[0 \, -1 \atop 0 \, -1 \atop 1 \, 0\right]$
+$T_{\text{project}} = \left[ 1 \, 0 \, 0 \middle| 0 \, 1 \, 0 \middle| a \, b \, 1 \right]$
 
-$T_{\text{project}} = \left[1 \, 0 \, 0 \atop 0 \, 1 \, 0 \atop a \, b \, 1\right]$
-
-$T_{\text{project}} = \left[ 1 \, 0 \, 0 \mid 0 \, 1 \, 0 \mid a \, b \, 1 \right]$
-
-$T_{\text{project}} = \left[ \array{ccc} 1 & 0 & 0 \\ 0 & 1 & 0 \\ a & b & 1 \end{array} \right]$
-
-$$T_{\text{project}} = \left[ \array{ccc} 1 & 0 & 0 \\ 0 & 1 & 0 \\ a & b & 1 \end{array} \right]$$
-
-$T_{\text{project}} = \left[ \left[ 1 \, 0 \, 0 \right] \atop \left[ 0 \, 1 \, 0 \right] \atop \left[ a \, b \, 1 \right] \right]$
-
-$T_{\text{project}} = \left[ 1 \; 0 \; 0 \mid 0 \; 1 \; 0 \mid a \; b \; 1 \right]$
-
-$T_{\text{project}} = \left( \begin{array}{c} 1 \, 0 \, 0 \\ 0 \, 1 \, 0 \\ a \, b \, 1 \end{array} \right)$
+$T_{\text{project}} = \left[ \stackrel{1 \, 0 \, 0}{\stackrel{0 \, 1 \, 0}{a \, b \, 1}} \right]$
 
 $T_{\text{project}} = \left( 1 \, 0 \, 0 \above 0 \, 1 \, 0 \above a \, b \, 1 \right)$
 
-$T_{\text{project}} = \left[ 1 \hskip 1em 0 \hskip 1em 0 \vskip 1em 0 \hskip 1em 1 \hskip 1em 0 \vskip 1em a \hskip 1em b \hskip 1em 1 \right]$
+$T_{\text{project}} = \left\{ \cases{1 \, 0 \, 0 \\ 0 \, 1 \, 0 \\ a \, b \, 1} \right.$
 
-$T_{\text{project}} = \left[ 1_0^0 \, 0_1^0 \, a_b^1 \right]$
+$T_{\text{project}} = \left[ 1 \hskip 1em 0 \hskip 1em 0 \phantom{0} 0 \hskip 1em 1 \hskip 1em 0 \phantom{0} a \hskip 1em b \hskip 1em 1 \right]$
+
+$T_{\text{project}} = \bordermatrix{ & & & \cr & 1 & 0 & 0 \cr & 0 & 1 & 0 \cr & a & b & 1 \cr}$
 
 
 **Abstract**
