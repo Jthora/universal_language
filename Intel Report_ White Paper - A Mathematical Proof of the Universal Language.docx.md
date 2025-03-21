@@ -23,6 +23,7 @@ $T_{\text{project}} = \left[ 1 \, 0 \, 0 \middle| 0 \, 1 \, 0 \middle| a \, b \,
 
 $T_{\text{project}} = \left[ \stackrel{1 \, 0 \, 0}\stackrel{0 \, 1 \, 0}\stackrel{a \, b \, 1} \right]$
 
+$T_{\text{project}} = \left( 1 \, 0 \, 0 \above 1pt 0 \, 1 \, 0 \above 1pt a \, b \, 1 \right)$
 
 
 **Abstract**
