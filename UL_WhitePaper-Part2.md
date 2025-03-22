@@ -385,8 +385,8 @@ Semantic completeness is proven using a Henkin-style construction, which demonst
     * **Interpretation**:  
       * Constants: For each constant $c$ in $\mathcal{L}'$, $I(c) \= \[c\]\_\sim$.  
       * Functions: For an $n$-ary function $f$, $I(f)(\[t\_1\]\*\sim, \dots, \[t\_n\]\*\sim) \= \[f(t\_1, \dots, t\_n)\]\_\sim$.  
-      * Predicates: For an $n$-ary predicate $P$, $(\[t\_1\]\*\sim, \dots, \[t\_n\]\*\sim) \in I(P)$ if $\Gamma \vdash P(t\_1, \dots, t\_n) $ .  
-    * **Well-Definedness**: If $\[t\_i\]\*\sim \= \[u\_i\]\*\sim$, then $\Gamma \vdash t\_i \= u\_i$. By UL’s equality axioms (e.g., $\forall x, y , (x \= y \rightarrow f(x) \= f(y))$ and $\forall x, y , (x \= y \rightarrow (P(x) \leftrightarrow P(y)))$), it follows that $\Gamma \vdash f(t\_1, \dots, t\_n) \= f(u\_1, \dots, u\_n)$ and $\Gamma \vdash P(t\_1, \dots, t\_n) \leftrightarrow P(u\_1, \dots, u\_n)$, ensuring $I$ is consistent.  
+      * Predicates: For an $n$-ary predicate $P$, $(\[t\_1\]\*\sim, \dots, \[t\_n\]\*\sim) \in I(P)$ if $\Gamma \vdash P(t\_1, \dots, t\_n)$ .  
+    * **Well-Definedness**: If $\[t\_i\]\*\sim \= \[u\_i\]\*\sim$, then $\Gamma \vdash t\_i \= u\_i$. By UL’s equality axioms (e.g., $\forall x, y , (x \= y \rightarrow f(x) \= f(y))$ and $\forall x, y , (x \= y \rightarrow (P(x) \leftrightarrow P(y)))$ ), it follows that $\Gamma \vdash f(t\_1, \dots, t\_n) \= f(u\_1, \dots, u\_n)$ and $\Gamma \vdash P(t\_1, \dots, t\_n) \leftrightarrow P(u\_1, \dots, u\_n)$, ensuring $I$ is consistent.  
   * **Satisfaction**: Prove by induction on formula complexity that $\mathcal{M}\_\Gamma \models \psi$ if and only if $\psi \in \Gamma$:  
     * **Base Case (Atomic Formulas)**: If $\psi \= P(t\_1, \dots, t\_n)$, then $\psi \in \Gamma$ implies $\Gamma \vdash P(t\_1, \dots, t\_n)$, so $(\[t\_1\]\*\sim, \dots, \[t\_n\]\*\sim) \in I(P)$, hence $\mathcal{M}\*\Gamma \models \psi$. Conversely, if $\mathcal{M}*\Gamma \models \psi$, then $I(P)(\[t\_1\]\*\sim, \dots, \[t\_n\]\*\sim)$ holds, so $\psi \in \Gamma$ by maximality.  
     * **Connectives**: If $\psi \= \neg \theta$, then $\psi \in \Gamma$ implies $\theta \notin \Gamma$ (by consistency), so $\mathcal{M}\*\Gamma \not\models \theta$, hence $\mathcal{M}\*\Gamma \models \psi$. For $\psi \= \theta\_1 \land \theta\_2$, $\psi \in \Gamma$ implies $\theta\_1, \theta\_2 \in \Gamma$, so $\mathcal{M}\*\Gamma \models \theta\_1$ and $\mathcal{M}\*\Gamma \models \theta\_2$, hence $\mathcal{M}\_\Gamma \models \psi$.  
@@ -613,7 +613,7 @@ Computability ensures UL’s practical implementation and theoretical soundness.
     * **Proof**: Construct a Turing machine $M$ that enumerates wffs:  
       * Generate all finite strings over UL’s alphabet (symbols, connectives, quantifiers).  
       * Check syntactic correctness (e.g., matching parentheses, valid predicate arity) in linear time per string.  
-      * Accept strings forming wffs (e.g., $\text{circle}(x) \land \text{contains}(x, y)$).  
+      * Accept strings forming wffs (e.g., $\text{circle}(x) \land \text{contains}(x, y)$ ).  
       * Since the alphabet and grammar are finite, $M$ halts on valid expressions, proving enumerability.  
 * **Decidability of Decision Problems**:  
   * **Theorem**: The problem “Is $\phi$ provable in UL?” is decidable in polynomial time for geometric sentences.  
