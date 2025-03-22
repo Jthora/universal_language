@@ -188,7 +188,7 @@ The line, as a fundamental geometric primitive within the Universal Language (UL
 | Geometric Property | Mathematical Description | Symbolic Meaning in UL |
 | ----- | ----- | ----- |
 | Extension | Connects two points via $L \= { P(t) \mid P(t) \= (1-t)P\_1 \+ tP\_2, t \in (0,1) }$ | *Link*: Establishes relational connection between entities. |
-| Directionality | Defined by the vector $\vec{d} \= P\_2 \- P\_1$, with slope $m \= \frac{y\_2 \- y\_1}{x\_2 \- x\_1}$ | *Order*: Implies sequential progression or hierarchy. |
+| Directionality | Defined by the vector $\vec{d} \= P\_2\-P\_1$, with slope $m \= \frac{y\_2 \- y\_1}{x\_2 \- x\_1}$ | *Order*: Implies sequential progression or hierarchy. |
 | Straightness | Zero curvature, $\kappa \= 0$, as $\frac{d^2 P}{dt^2} \= 0$ | *Stability*: Represents constancy and structural integrity. |
 | Dimensionality | One-dimensional, spanning $\mathbb{R}^1$ within $\mathbb{R}^n$ | *Continuity*: Suggests unbroken relational flow. |
 
