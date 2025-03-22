@@ -524,7 +524,7 @@ To ensure universality across non-Euclidean geometries:
     * $\text{geodesic}(\gamma, \mathbb{H}^n)$, where $\gamma$ is a hyperbolic geodesic (e.g., a circle orthogonal to the boundary).  
   * **Verification**: $F(\mathbb{H}^n) \= \mathrm{hyperbolic}(\mathbb{H}^n)$ encodes these properties, and morphisms (e.g., isometries) map to transformations preserving hyperbolic distance.  
 * **Projective Geometry**:  
-  * Extend $F(\mathbb{P}^n(\mathbb{R}))$ to include cross-ratio invariance: $\text{cross\_ratio}(\[p\_1:\dots:p\_n\], \[q\_1:\dots:q\_n\]) \= \frac{(p\_1 \- p\_2)/(p\_1 \- p\_3)}{(p\_2 \- p\_4)/(p\_3 \- p\_4)}$, a projective invariant.  
+  * Extend $F(\mathbb{P}^n(\mathbb{R}))$ to include cross-ratio invariance: $\mathrm{cross\_ratio}(\[p\_1:\dots:p\_n\], \[q\_1:\dots:q\_n\]) \= \frac{(p\_1 \- p\_2)/(p\_1 \- p\_3)}{(p\_2 \- p\_4)/(p\_3 \- p\_4)}$, a projective invariant.  
   * **Proof**: The functor preserves projective transformations, ensuring consistency.  
 * **Edge Cases**:  
   * **Singularities**: For spaces with singularities (e.g., cone points), add predicates $\text{singular}(x)$ and adjust $F$ to handle non-smooth maps.  
@@ -551,7 +551,7 @@ Differential geometry provides tools to describe the intrinsic properties of geo
   * **Torsion**: For a space curve $\gamma(t) \= (x(t), y(t), z(t))$ in $\mathbb{R}^3$, torsion $\tau(t) \= \frac{(x' \times x'')\cdot x'''}{|\gamma' \times \gamma''|^2}$ quantifies twisting, where $\times$ denotes the cross product.  
   * **Riemannian Metric**: For a manifold $M$, introduce a metric tensor $g\_{ij}$ such that the length of a curve is $\int \sqrt{g\_{ij} \dot{\gamma}^i \dot{\gamma}^j} , dt$, enabling UL to describe curvature in higher dimensions.  
 * **Decomposition via Curvature Profiles**:  
-  * Define a predicate $\text{curvature\_profile}(x, \kappa)$, where $x$ is a curve or surface and $\kappa$ is its curvature function. For a circle $x(t) \= (r \cos t, r \sin t)$, $\kappa(t) \= 1/r$, a constant.  
+  * Define a predicate $\mathrm{curvature\_profile}(x, \kappa)$, where $x$ is a curve or surface and $\kappa$ is its curvature function. For a circle $x(t) \= (r \cos t, r \sin t)$, $\kappa(t) \= 1/r$, a constant.  
   * **Theorem**: Any smooth curve in $\mathbb{R}^2$ can be uniquely decomposed (up to rigid motion) by its curvature profile $\kappa(s)$, where $s$ is arc length.  
     * **Proof**: By the fundamental theorem of plane curves, given $\kappa(s)$ and initial conditions $\gamma(0)$, $\gamma'(0)$, solve $\gamma''(s) \= \kappa(s) \gamma'(s) \times \mathbf{n}$ (where $\mathbf{n}$ is the normal), yielding a unique curve modulo isometries.  
 * **Axioms and Predicates**:  
@@ -576,7 +576,7 @@ Group theory formalizes the symmetries and transformations of UL objects, ensuri
     * **Proof**: Let $E \= \text{circle}((h,k), r)$. Applying $g(\mathbf{x}) \= A\mathbf{x} \+ \mathbf{b}$, the transformed expression is $\text{circle}(g((h,k)), r)$, where the center shifts to $A(h,k)^T \+ \mathbf{b}$. The meaning (a set of points) remains ${ \mathbf{x} \mid |\mathbf{x} \- (A(h,k)^T \+ \mathbf{b})|\_2 \= r }$, equivalent to the original via the inverse transformation, preserving geometric properties.  
 * **Extended Groups**:  
   * Include $\text{SO}(n)$ (special orthogonal group) for rotations in $\mathbb{R}^n$, with $g \in \text{SO}(n)$ satisfying $g^T g \= I$ and $\det(g) \= 1$.  
-  * Define $\text{symmetry\_group}(x, G)$, where $G$ is the group of isometries of object $x$ (e.g., $D\_4$ for a square).  
+  * Define $\mathrm{symmetry\_group}(x, G)$, where $G$ is the group of isometries of object $x$ (e.g., $D\_4$ for a square).  
 * **Axioms**:  
   * $\forall x, g , (\text{object}(x) \land g \in G \rightarrow \text{invariant}(x, g))$: Objects are invariant under group actions.  
   * $\forall G , (\text{group}(G) \rightarrow \exists e \in G , (\forall g \in G , (g \cdot e \= e \cdot g \= g)))$: Groups have identities.  
