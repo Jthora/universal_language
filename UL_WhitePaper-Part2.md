@@ -34,7 +34,7 @@ UL is defined as a first-order language $\mathcal{L} \= \langle S, \Sigma, R, A 
 * The semantics of UL are defined via interpretations in models. A standard model is $\mathcal{M} \= (\mathbb{R}^2, I)$, where:
 
   1. *Domain*: $\mathbb{R}^2$, the Euclidean plane, representing points as ordered pairs $(x, y)$.  
-  2. *Interpretation Function $I$*:  
+  2. *Interpretation Function $I$ *:  
      * Constants: $I(O) \= (0, 0\)$.  
      * Predicates:  
        * $I(\text{point})(a)$ holds if $a \in \mathbb{R}^2$ is a single point.  
@@ -385,12 +385,12 @@ Semantic completeness is proven using a Henkin-style construction, which demonst
     * **Interpretation**:  
       * Constants: For each constant $c$ in $\mathcal{L}'$, $I(c) \= \[c\]\_\sim$.  
       * Functions: For an $n$-ary function $f$, $I(f)(\[t\_1\]\*\sim, \dots, \[t\_n\]\*\sim) \= \[f(t\_1, \dots, t\_n)\]\_\sim$.  
-      * Predicates: For an $n$-ary predicate $P$, $(\[t\_1\]\*\sim, \dots, \[t\_n\]\*\sim) \in I(P)$ if $\Gamma \vdash P(t\_1, \dots, t\_n)$.  
+      * Predicates: For an $n$-ary predicate $P$, $(\[t\_1\]\*\sim, \dots, \[t\_n\]\*\sim) \in I(P)$ if $\Gamma \vdash P(t\_1, \dots, t\_n) $ .  
     * **Well-Definedness**: If $\[t\_i\]\*\sim \= \[u\_i\]\*\sim$, then $\Gamma \vdash t\_i \= u\_i$. By UL’s equality axioms (e.g., $\forall x, y , (x \= y \rightarrow f(x) \= f(y))$ and $\forall x, y , (x \= y \rightarrow (P(x) \leftrightarrow P(y)))$), it follows that $\Gamma \vdash f(t\_1, \dots, t\_n) \= f(u\_1, \dots, u\_n)$ and $\Gamma \vdash P(t\_1, \dots, t\_n) \leftrightarrow P(u\_1, \dots, u\_n)$, ensuring $I$ is consistent.  
   * **Satisfaction**: Prove by induction on formula complexity that $\mathcal{M}\_\Gamma \models \psi$ if and only if $\psi \in \Gamma$:  
     * **Base Case (Atomic Formulas)**: If $\psi \= P(t\_1, \dots, t\_n)$, then $\psi \in \Gamma$ implies $\Gamma \vdash P(t\_1, \dots, t\_n)$, so $(\[t\_1\]\*\sim, \dots, \[t\_n\]\*\sim) \in I(P)$, hence $\mathcal{M}\*\Gamma \models \psi$. Conversely, if $\mathcal{M}*\Gamma \models \psi$, then $I(P)(\[t\_1\]\*\sim, \dots, \[t\_n\]\*\sim)$ holds, so $\psi \in \Gamma$ by maximality.  
     * **Connectives**: If $\psi \= \neg \theta$, then $\psi \in \Gamma$ implies $\theta \notin \Gamma$ (by consistency), so $\mathcal{M}\*\Gamma \not\models \theta$, hence $\mathcal{M}\*\Gamma \models \psi$. For $\psi \= \theta\_1 \land \theta\_2$, $\psi \in \Gamma$ implies $\theta\_1, \theta\_2 \in \Gamma$, so $\mathcal{M}\*\Gamma \models \theta\_1$ and $\mathcal{M}\*\Gamma \models \theta\_2$, hence $\mathcal{M}\_\Gamma \models \psi$.  
-    * **Quantifiers**: If $\psi \= \exists x , \phi(x)$ and $\psi \in \Gamma$, then $\phi(c\_\phi) \in \Gamma$ (by the Henkin axiom $\exists x , \phi(x) \rightarrow \phi(c\_\phi)$), so $\mathcal{M}\*\Gamma \models \phi(\[c\*\phi\]\*\sim)$, hence $\mathcal{M}*\Gamma \models \psi$. For $\forall x , \phi(x)$, the argument reverses using $\neg \exists x , \neg \phi(x)$.  
+    * **Quantifiers**: If $\psi \= \exists x , \phi(x)$ and $\psi \in \Gamma$, then $\phi(c\_\phi) \in \Gamma$ (by the Henkin axiom $\exists x , \phi(x) \rightarrow \phi(c\_\phi)$ ), so $\mathcal{M}\*\Gamma \models \phi(\[c\*\phi\]\*\sim)$, hence $\mathcal{M}*\Gamma \models \psi$. For $\forall x , \phi(x)$, the argument reverses using $\neg \exists x , \neg \phi(x)$.  
   * Thus, $\mathcal{M}\_\Gamma \models \Gamma$, including UL’s axioms $A$ and $T$.  
 * **Completeness Theorem**:  
   * **Statement**: If $\models \phi$ (true in all models of UL), then $\vdash \phi$ (provable in UL).  
@@ -467,7 +467,7 @@ To formalize UL’s universality, we define two key categories that encapsulate 
   * **Morphisms**: Continuous maps between spaces, preserving topological properties. For example, a map $f: \mathbb{R}^2 \to \mathbb{R}^3$ is continuous if the preimage of every open set is open.  
   * **Composition and Identities**: Composition is the standard function composition $g \circ f$, and identities are the identity maps $\text{id}\_X: X \to X$.  
 * **Category $\mathcal{C}\_{\text{UL}}$ (Category of UL Expressions)**:  
-  * **Objects**: Well-formed formulas (wffs) of UL, including expressions representing geometric objects (e.g., $\text{circle}((0,0), 1\)$ for a unit circle), topological properties (e.g., $\text{connected}(S^1)$), and algebraic structures (e.g., $\text{group}(\mathbb{Z})$).  
+  * **Objects**: Well-formed formulas (wffs) of UL, including expressions representing geometric objects (e.g., $\text{circle}((0,0), 1\)$ for a unit circle), topological properties (e.g., $\text{connected}(S^1)$ ), and algebraic structures (e.g., $\text{group}(\mathbb{Z})$ ).  
   * **Morphisms**: Syntactic transformations, defined as functions $T: E \to E'$ between expressions $E, E' \in \mathcal{C}\_{\text{UL}}$ that preserve semantic equivalence under UL’s deduction system. Examples include:  
     * Substitution: Replacing a variable with a term, e.g., $T(\text{contains}(x, y)) \= \text{contains}((0,0), y)$.  
     * Transformation Application: Mapping $\text{circle}((h,k),r)$ to $\text{circle}(\text{transform}(R\_\theta, (h,k)), r)$, where $R\_\theta$ is a rotation.  
