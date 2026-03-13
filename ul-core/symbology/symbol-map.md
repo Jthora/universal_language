@@ -245,6 +245,8 @@ These cannot be decomposed further. They are the phonemes of UL.
 
 ## V. ABSTRACT CONCEPT INVENTORY
 
+> **Note:** The constructions below are *illustrations* of how UL symbols compose into compound meanings — they demonstrate what the symbology makes possible. They are NOT canonical definitions. For structurally motivated definitions with tier justifications, see the **Lexicon** (lexicon/lexicon.md). The labels assigned here ("Truth," "Love," "Freedom," etc.) are conventional groundings, not geometric facts.
+
 ### Philosophical Concepts
 
 | Concept | Construction | Derivation |

@@ -201,6 +201,8 @@ At the topological level, processes are classified by their **fundamental group*
 
 ## VII. CROSS-CATEGORY THESAURUS
 
+> **Note:** The "Primary Construction" column provides reference anchors for the synonym relationships — it is not a source of canonical definitions. For the canonical treatment of structurally distinguished constructions (with tier justifications), see the **Lexicon** (lexicon/lexicon.md). The synonym and level-of-equivalence data in this section IS the thesaurus's unique contribution.
+
 ### Abstract Concepts (Compound Synonymy)
 
 | Concept | Primary Construction | Synonym 1 | Synonym 2 | Level |

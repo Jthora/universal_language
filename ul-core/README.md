@@ -13,8 +13,9 @@
 | 2 | Universal Syntax Dictionary | [syntax/syntax-dictionary.md](syntax/syntax-dictionary.md) | Complete |
 | 3 | Universal Grammar Book | [grammar/grammar-book.md](grammar/grammar-book.md) | Complete |
 | 4 | Universal Language Thesaurus | [thesaurus/thesaurus.md](thesaurus/thesaurus.md) | Complete |
-| 5 | Universal Writing System | [writing-system/writing-system.md](writing-system/writing-system.md) | **Rewritten v2** — bottom-up from axiom "what can be drawn, counts" |
-| 6 | UQPL Specification | [uqpl/uqpl-spec.md](uqpl/uqpl-spec.md) | Draft — known operation/sort mismatches with Σ_UL (deferred) |
+| 5 | Universal Lexicon | [lexicon/lexicon.md](lexicon/lexicon.md) | **New v1** — 40 entries, bottom-up from geometry, 3-tier justification (T1/T2/T3) |
+| 6 | Universal Writing System | [writing-system/writing-system.md](writing-system/writing-system.md) | **Rewritten v2** — bottom-up from axiom "what can be drawn, counts" |
+| 7 | UQPL Specification | [uqpl/uqpl-spec.md](uqpl/uqpl-spec.md) | Draft — known operation/sort mismatches with Σ_UL (deferred) |
 
 ---
 
@@ -41,6 +42,20 @@ Every document in this directory derives ONLY from:
 
 **"If UL is real, build the things that only work if UL is real."**
 
-These aren't academic analyses. They're engineering specifications. A symbology you can read. A syntax you can parse. A grammar you can compose with. A thesaurus you can navigate. A writing system you can write in. A programming language you can compute with.
+These aren't academic analyses. They're engineering specifications. A symbology you can read. A syntax you can parse. A grammar you can compose with. A thesaurus you can navigate. A lexicon you can look up. A writing system you can write in. A programming language you can compute with.
 
 If UL is the geometry of meaning, then this is the engineering manual for that geometry.
+
+### The Five Siblings
+
+UL has 5 geometric primitives. The core reference has 5 siblings. This is not a coincidence.
+
+| Primitive | Sibling | Concern |
+|-----------|---------|---------|
+| **Point** (0D) | Symbology | What the atomic marks ARE |
+| **Line** (1D) | Syntax | How marks CONNECT |
+| **Angle** (hybrid) | Grammar | Rules governing valid CONSTRUCTIONS |
+| **Curve** (1D in 2D) | Thesaurus | Paths between RELATED meanings |
+| **Enclosure** (2D) | Lexicon | BOUNDED canonical DEFINITIONS |
+
+Each sibling does what its primitive does: Point identifies, Line connects, Angle qualifies, Curve navigates, Enclosure bounds.

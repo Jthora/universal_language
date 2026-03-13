@@ -321,7 +321,10 @@ Step 5: Place structure inside community      ⬡{□{↔,↔,↔},{•,•,•}
 Step 6: Add EQUALITY marker (all ∠60°)        ⬡{□{↔∠60°↔∠60°↔},{•,•,•}}
 
 Result: "A community containing equally-connected agents
-within a structural system" = DEMOCRACY
+within a structural system"
+
+→ The natural-language label for this construction is a grounding
+  decision, not a geometric fact. See Lexicon §8.3.
 ```
 
 ### Worked Example: Constructing "Evolution"
@@ -334,7 +337,10 @@ Step 4: Add CHANGE (curve within structure)    ⬠{𝒮⧖◠}
 Step 5: Scale up (this is a big process)       ⬠{𝒮⧖◠}⁺
 
 Result: "A living growth-spiral with directed time
-and continuous change, at great scale" = EVOLUTION
+and continuous change, at great scale"
+
+→ The natural-language label for this construction is a grounding
+  decision, not a geometric fact. See Lexicon §8.3.
 ```
 
 ---
