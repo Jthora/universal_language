@@ -1,0 +1,155 @@
+# Trial: CT-T3
+## Condition: CT (Control — dense physics context)
+## Task: T3 — Formal Framework for Metaphor
+
+---
+
+# A Formal Framework for Metaphorical Meaning-Generation
+
+## 1. Core Observation
+
+Metaphor is not decoration. It is a **mapping between structured domains** that generates meaning irreducible to either domain alone — much as a quantum superposition encodes information absent from any single basis state.
+
+---
+
+## 2. Primitives
+
+Define a **meaning space** $\mathcal{M}$ as a structured set equipped with:
+
+- **Domains** $D_i$: coherent clusters of concepts with internal relational structure (e.g., *journey*, *war*, *liquid*, *light*)
+- **Relational signature** $\sigma(D)$: the set of structural relations holding within a domain (causality, containment, motion, hierarchy, periodicity, etc.)
+- **Salience function** $s: D \to [0,1]$: which features of a domain are foregrounded in a given context
+
+A **metaphor** $\mu$ is a triple:
+
+$$\mu = (D_S,\ D_T,\ \phi)$$
+
+where $D_S$ is the **source domain**, $D_T$ is the **target domain**, and $\phi: \sigma(D_S) \to \sigma(D_T)$ is a **partial structure-preserving map** — a homomorphism on a substructure.
+
+---
+
+## 3. The Meaning-Generation Operator
+
+Here is the central formal claim. Define the **metaphorical meaning operator** $\hat{M}$:
+
+$$\hat{M}_\phi: \mathcal{M}_T \to \mathcal{M}_T'$$
+
+This operator acts on the target domain's meaning space and **transforms it**. The output $\mathcal{M}_T'$ is a new meaning space that contains:
+
+1. **Preserved structure**: relations in $D_T$ that $\phi$ leaves invariant
+2. **Imported structure**: relations from $D_S$ projected onto $D_T$ via $\phi$
+3. **Emergent structure**: relations in $\mathcal{M}_T'$ that exist in *neither* $D_S$ nor $D_T$ alone, arising from the interaction of (1) and (2)
+
+This third component is the **irreducibly generative** aspect of metaphor. It is why metaphor creates meaning rather than merely transferring it.
+
+### Analogy to the QM formalism
+
+This parallels how a perturbation $H'$ acting on an unperturbed state $|\psi_n\rangle$ generates corrections that are not contained in either $H'$ or $|\psi_n\rangle$ alone:
+
+$$E_n^{(1)} = \langle \psi_n | H' | \psi_n \rangle$$
+
+The metaphorical meaning operator $\hat{M}_\phi$ acts analogously: the "energy correction" (new meaning) depends on the *interaction* between the operator (source structure) and the state (target domain). The meaning is in the matrix element, not in either factor.
+
+---
+
+## 4. Formal Properties
+
+### 4.1 Non-commutativity
+
+Metaphor is **non-commutative**: $\hat{M}_\phi(D_S \to D_T) \neq \hat{M}_{\phi^{-1}}(D_T \to D_S)$.
+
+"Time is money" $\neq$ "Money is time." The imported structure differs because salience functions differ. This mirrors how $\langle \psi_m | H' | \psi_n \rangle \neq \langle \psi_n | H' | \psi_m \rangle$ in general for non-Hermitian perturbations.
+
+### 4.2 Partiality of the Map
+
+$\phi$ is **partial**: not all source relations project onto the target. The unmapped residue constitutes the metaphor's **hiding** — what is actively suppressed. ("Argument is war" imports conflict, strategy, winning/losing; it hides the *cooperation* inherent in argument, the *shared ground* presupposed by disagreement.)
+
+Define the **projection kernel**:
+
+$$\ker(\phi) = \{r \in \sigma(D_S) : \phi(r) = \varnothing\}$$
+
+and the **projection image**:
+
+$$\text{im}(\phi) = \{r' \in \sigma(D_T) : \exists\, r \in \sigma(D_S),\ \phi(r) = r'\}$$
+
+A metaphor's **cognitive bias** is characterized by the pair $(\ker(\phi),\ \text{im}(\phi))$ — what it hides and what it highlights.
+
+### 4.3 Composability
+
+Metaphors compose. Given $\mu_1 = (D_A, D_B, \phi_1)$ and $\mu_2 = (D_B, D_C, \phi_2)$:
+
+$$\mu_2 \circ \mu_1 = (D_A,\ D_C,\ \phi_2 \circ \phi_1)$$
+
+This yields **metaphor chains**: *Life is a journey; a journey is a river; a river is time.* Composition can amplify emergent structure — or collapse it, when the composed map becomes too lossy.
+
+### 4.4 Resonance Condition
+
+A metaphor is **apt** (generates maximal emergent meaning) when the relational signatures of source and target are **partially but not fully isomorphic** — there must be both overlap (for the map to be intelligible) and mismatch (for new structure to emerge from the tension).
+
+Define the **resonance** of a metaphor:
+
+$$\mathcal{R}(\mu) = H(\sigma(D_S) \cap \text{dom}(\phi)) \cdot H(\sigma(D_T) \setminus \text{im}(\phi))$$
+
+where $H$ is an entropy-like measure of structural complexity. Resonance is maximized when neither term is zero — when there is both substantial structural contact *and* substantial structural remainder. A perfect isomorphism ($\mathcal{R} = 0$) is not a metaphor but a literal mapping. Zero overlap ($\mathcal{R} = 0$) is not a metaphor but nonsense.
+
+---
+
+## 5. The Emergence Theorem (Informal)
+
+**Claim**: For any metaphor $\mu = (D_S, D_T, \phi)$ with $\mathcal{R}(\mu) > 0$, the meaning space $\mathcal{M}_T'$ generated by $\hat{M}_\phi$ contains at least one relation $r^*$ such that:
+
+$$r^* \notin \sigma(D_S) \quad \text{and} \quad r^* \notin \sigma(D_T)$$
+
+*Proof sketch*: The map $\phi$ identifies certain source relations with certain target relations. This identification creates **equivalence classes** that did not exist in either domain. Any equivalence class containing elements from both domains induces a new abstract relation — the *shared pattern itself* — which, as an abstraction over both domains, belongs to neither. $\square$
+
+This is why metaphor is **generative** rather than merely **transportive**. It doesn't move meaning from $A$ to $B$. It creates meaning $C$ that requires both $A$ and $B$ but reduces to neither.
+
+---
+
+## 6. Taxonomy of Metaphorical Operations
+
+| Operation | Formal Description | Example |
+|---|---|---|
+| **Projection** | $\phi$ maps $\sigma(D_S) \to \sigma(D_T)$ | "Time flows" (motion → temporal sequence) |
+| **Tensioning** | $r_S$ and $r_T$ are structurally incompatible, forcing reinterpretation | "Darkness visible" (negation of visibility coerced into a novel perceptual mode) |
+| **Blending** | $\mathcal{M}_T'$ contains a fused relational structure from both domains | "The ship plowed the sea" (agriculture + navigation → effortful directed traversal) |
+| **Cascading** | $\mu_2 \circ \mu_1$ — composed metaphor amplifying abstraction level | "We're drowning in a sea of debt" (water → abundance → financial ruin) |
+| **Grounding** | $\phi$ maps abstract target relations onto concrete source relations | "Grasping an idea" (physical manipulation → cognition) |
+
+---
+
+## 7. Selection Rules
+
+Not all metaphors are well-formed. By analogy with quantum selection rules ($\Delta l = \pm 1$, $\Delta m = 0, \pm 1$), metaphorical mappings are constrained:
+
+1. **Image-schema compatibility**: $\phi$ must preserve at least one basic image schema (containment, path, force, balance, etc.). A metaphor that preserves no image schema is cognitively uninterpretable. This is the analog of $\Delta l = \pm 1$.
+
+2. **Invariance of ontological category**: $\phi$ must not map entities to relations or relations to properties without explicit coercion. Violations require additional cognitive work (like "forbidden transitions" requiring higher-order perturbation theory).
+
+3. **Salience alignment**: The salient features of $D_S$ under $s_S$ must map to features of $D_T$ that are at least *activatable* (latent salience > 0). Mapping to completely inert features yields dead metaphor.
+
+---
+
+## 8. Completeness Conjecture
+
+By analogy with the completeness relation $\sum_{n,l,m} |\psi_{nlm}\rangle\langle\psi_{nlm}| = \mathbf{1}$, we conjecture:
+
+$$\bigcup_{\mu \in \mathcal{F}} \hat{M}_\mu(\mathcal{M}) = \mathcal{M}^*$$
+
+where $\mathcal{F}$ is the set of all *well-formed* metaphors over $\mathcal{M}$, and $\mathcal{M}^*$ is the **full meaning space** — the closure of $\mathcal{M}$ under metaphorical operations. This says: *every reachable meaning can be reached by some sequence of metaphorical mappings from concrete experiential domains.* This is the formal content of the Lakoff-Johnson hypothesis (that abstract thought is fundamentally metaphorical) restated as a completeness theorem.
+
+---
+
+## 9. Implications
+
+- **Dead metaphors** are metaphors where $\phi$ has been absorbed into $\sigma(D_T)$ — the imported structure is no longer recognized as imported. The resonance $\mathcal{R} \to 0$ because the structural mismatch has been resolved by convention.
+
+- **Mixed metaphors** fail because the composition $\phi_2 \circ \phi_1$ produces contradictory structural constraints in $\mathcal{M}_T'$ — analogous to destructive interference.
+
+- **Poetic metaphors** maximize $\mathcal{R}$ — they find mappings with deep structural contact and large structural remainder, producing the most emergent meaning per metaphor.
+
+- **Conceptual metaphors** (Lakoff) are metaphors with near-universal $\phi$ across a linguistic community — the mapping has been socially stabilized, but the emergent structure it generated is now part of the standard meaning space.
+
+---
+
+This framework recasts metaphor as a **structure-preserving partial map between relational domains**, whose meaning-generative power arises from the interaction between what the map preserves and what it disrupts. The formalism is intentionally parallel to perturbation theory: meaning, like energy corrections, lives in the matrix elements — in the *interaction* between structure and state, not in either alone.

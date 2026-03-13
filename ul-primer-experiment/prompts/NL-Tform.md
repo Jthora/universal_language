@@ -1,0 +1,1 @@
+Describe how a new scientific concept (e.g., 'gene') goes from being a vague intuition to a precise formal object. What are the stages of this meaning-formation process, and what drives the transition between them?

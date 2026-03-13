@@ -1,0 +1,1 @@
+Restate the following at five levels of abstraction: 'A forest fire spreads because dry wood ignites when heated above its flash point, and the burning wood heats neighboring dry wood.' Preserve the core truth at every level, from physical chemistry to the most abstract principle.

@@ -1,0 +1,70 @@
+# Trial Execution Order
+# Generated: 2026-03-12T22:08:19.300629
+# Seed: 42
+# Total: 56 trials
+
+## Phase A (28 trials)
+
+  1. UL-P1-Thier.md
+  2. UL-P1-T5.md
+  3. REF-Tpat.md
+  4. UL-P2-T1.md
+  5. UL-P2-Tform.md
+  6. NL-Tform.md
+  7. NL-Tabs.md
+  8. REF-Thier.md
+  9. UL-P1-T1.md
+ 10. REF-T5.md
+ 11. UL-P2-Tpat.md
+ 12. REF-Tabs.md
+ 13. UL-P1-Tabs.md
+ 14. UL-P1-T2.md
+ 15. UL-P2-Thier.md
+ 16. NL-T2.md
+ 17. REF-Tform.md
+ 18. NL-T5.md
+ 19. UL-P1-Tpat.md
+ 20. UL-P2-Tabs.md
+ 21. NL-Thier.md
+ 22. UL-P2-T2.md
+ 23. REF-T1.md
+ 24. REF-T2.md
+ 25. UL-P2-T5.md
+ 26. NL-T1.md
+ 27. NL-Tpat.md
+ 28. UL-P1-Tform.md
+
+## Phase B (14 trials)
+
+ 29. UL-P4-T1.md
+ 30. UL-P4-T2.md
+ 31. UL-P3-Tpat.md
+ 32. UL-P4-Thier.md
+ 33. UL-P4-Tpat.md
+ 34. UL-P4-Tform.md
+ 35. UL-P3-T2.md
+ 36. UL-P4-Tabs.md
+ 37. UL-P3-Tabs.md
+ 38. UL-P3-Tform.md
+ 39. UL-P3-T5.md
+ 40. UL-P3-T1.md
+ 41. UL-P3-Thier.md
+ 42. UL-P4-T5.md
+
+## Phase C (14 trials)
+
+ 43. CT-P2-Thier.md
+ 44. NAV-P-T5.md
+ 45. CT-G-T5.md
+ 46. NAV-P-T1.md
+ 47. CT-P1-T1.md
+ 48. CT-P3-Tabs.md
+ 49. CT-P4-Tform.md
+ 50. CT-P3-T1.md
+ 51. CT-G-T1.md
+ 52. CT-P1-Tpat.md
+ 53. CT-P4-T1.md
+ 54. NAV-P-T2.md
+ 55. CT-P2-T1.md
+ 56. CT-G-T2.md
+
