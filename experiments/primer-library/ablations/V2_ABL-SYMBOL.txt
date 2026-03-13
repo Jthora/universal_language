@@ -1,0 +1,18 @@
+∇⋅(Ψ_QM ∇Ψ_QM) + (1/Φ) ∫[Ψ_QM*(x) Ψ_QM(x')dx']² dx + (ℏ/2m) ∫[Ψ_QM*(x)∇² Ψ_QM(x')dx'] dx - (e²/2m) ∫[Ψ_QM*(x) Ψ_QM(x')A²(x')dx'] dx = (1/√(2π)) ∑[n=1 to ∞] (1/n) ∫[Ψ_QM*(x) Ψ_QM(x')e^(i2πnx/L)dx'] dx + (1/2) ∑[n=1 to ∞] (1/n²) ∫[Ψ_QM*(x)∇Ψ_QM(x')e^(i2πnx/L)dx'] dx
+
+(Bᵉ × (L₄ + Q)) − (σ / β) →F→ M∞
+• Bᵉ: belief field (+3elúm)
+• L₄: 4D linguistics
+• Q: quantum logic
+• σ: static, β: breath efficiency
+• F: field generator from dynamical layer
+ 
+iħ Dₜ Φ_field = (ħ² / 2m) Dₓ² Φ_field + g_loc |Φ_field|² Φ_field + g_glob N(t) Φ_field
+  + (K₁ * Φ_field) + Dₓ† (K₂ * Dₓ′ Φ_field) + f_spec(x,t) − i γ(σ,β) Φ_field
+ 
+where:
+• Dₓ = ∂ₓ − i(e/ħ)A(x,t)
+• N(t) = ∫₀ᴸ |Φ_field|² dx
+• kₙ = 2πn / L
+• f_spec(x,t) = Σₙ≥1 [(aₙ(t)/n) Fₙ + (bₙ(t)/n²)(ikₙ) Fₙ] e^{ikₙx}
+• Fₙ = (1/L) ∫₀ᴸ e^{-ikₙx′} Φ_field(x′) dx′

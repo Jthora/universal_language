@@ -1,0 +1,26 @@
+Consider the quantum harmonic oscillator with Hamiltonian:
+Ĥ = p̂²/(2m) + ½mω²x̂²
+
+The time-independent Schrödinger equation Ĥψₙ = Eₙψₙ yields:
+Eₙ = ħω(n + ½), n = 0, 1, 2, …
+
+Normalized wavefunctions:
+ψₙ(x) = (mω/πħ)^{1/4} · (1/√(2ⁿn!)) · Hₙ(ξ) · e^{−ξ²/2}
+where ξ = √(mω/ħ) · x and Hₙ are Hermite polynomials
+Orthogonality: ∫₋∞^∞ ψₘ*(x) ψₙ(x) dx = δₘₙ
+
+Ladder operators:
+â = √(mω/2ħ)(x̂ + ip̂/(mω))
+â† = √(mω/2ħ)(x̂ − ip̂/(mω))
+â|n⟩ = √n |n−1⟩, â†|n⟩ = √(n+1) |n+1⟩
+[â, â†] = 1, Ĥ = ħω(â†â + ½)
+
+Coherent states: |α⟩ = e^{−|α|²/2} Σₙ (αⁿ/√(n!)) |n⟩
+⟨x⟩ = √(2ħ/mω) Re(αe^{−iωt})
+ΔxΔp = ħ/2 (minimum uncertainty)
+
+Partition function: Z = Σₙ e^{−βEₙ} = 1/(2sinh(βħω/2))
+⟨E⟩ = ħω(1/(e^{βħω}−1) + ½)
+
+Number operator: N̂ = â†â, N̂|n⟩ = n|n⟩
+Virial theorem: ⟨T⟩ = ⟨V⟩ = Eₙ/2

@@ -1,0 +1,18 @@
+where:
+• Dₓ = ∂ₓ − i(e/ħ)A(x,t)
+• N(t) = ∫₀ᴸ |χ|² dx
+• kₙ = 2πn / L
+• f_spec(x,t) = Σₙ≥1 [(aₙ(t)/n) χ̂ₙ + (bₙ(t)/n²)(ikₙ) χ̂ₙ] e^{ikₙx}
+• χ̂ₙ = (1/L) ∫₀ᴸ e^{-ikₙx′} χ(x′) dx′
+ 
+iħ Dₜχ = (ħ² / 2m) Dₓ²χ + g_loc |χ|²χ + g_glob N(t)χ
+  + (K₁ * χ) + Dₓ† (K₂ * Dₓ′χ) + f_spec(x,t) − i ρ(τ,δ) χ
+ 
+(Cᶠ × (P₃ + R)) − (τ / δ) →G→ M∞
+• Cᶠ: coupling parameter (+7krath)
+• P₃: 4D output space
+• R: junction operator
+• τ: resistance, δ: decay rate
+• G: operator from interaction layer
+
+∇⋅(χ∇χ) + (1/Φ) ∫[χ*(x)χ(x')dx']² dx + (ℏ/2m) ∫[χ*(x)∇²χ(x')dx'] dx - (e²/2m) ∫[χ*(x)χ(x')A²(x')dx'] dx = (1/√(2π)) ∑[n=1 to ∞] (1/n) ∫[χ*(x)χ(x')e^(i2πnx/L)dx'] dx + (1/2) ∑[n=1 to ∞] (1/n²) ∫[χ*(x)∇χ(x')e^(i2πnx/L)dx'] dx

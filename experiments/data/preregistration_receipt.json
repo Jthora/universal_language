@@ -1,0 +1,197 @@
+{
+  "pre_registration": {
+    "project": "UL Causal Efficacy Protocol",
+    "protocol": "frontier/causal-efficacy-protocol.md",
+    "timestamp": "2026-03-13T02:12:45.871001+00:00",
+    "master_hash_sha256": "feaa95e36f0e713df69dab1248e110825c3eaf0dcc45d874614eb47438bfd0d8",
+    "n_files": 37,
+    "note": "This hash was generated BEFORE any experimental data collection. Any modification to the hashed files after this timestamp voids the pre-registration. Verify with: python preregister.py --verify"
+  },
+  "file_hashes": [
+    {
+      "file": "experiments/analysis/analysis.py",
+      "sha256": "6444ed7a7e3d42438e14ad5aba1cb6ab6733b73bb4ce99b42d28f4a0a94b0aca",
+      "size_bytes": 28999
+    },
+    {
+      "file": "experiments/analysis/blind.py",
+      "sha256": "fd8d134b8b29828165e5abb7f54f6a28f10220d418ce2272517da90172b1111a",
+      "size_bytes": 7974
+    },
+    {
+      "file": "experiments/analysis/run_trials.py",
+      "sha256": "de095088a1032117cf5bde5c9edddaa5bfa5189e4cf522a5cc43f2fa85e85505",
+      "size_bytes": 19365
+    },
+    {
+      "file": "experiments/data/SCHEMA.md",
+      "sha256": "aabdc033c8b7b44d842a09e88abecbf358aaf932a47fa893d977d41cfcd1dec6",
+      "size_bytes": 2093
+    },
+    {
+      "file": "experiments/primer-library/ablations/V1_ABL-PROSE.txt",
+      "sha256": "ad55d6dbeb1340213a6c515dc90809d145c046537cbf577648ae62c11b0a87ef",
+      "size_bytes": 2439
+    },
+    {
+      "file": "experiments/primer-library/ablations/V2_ABL-SYMBOL.txt",
+      "sha256": "c59d286eafe3d01a6e3534ef7c9f015facb88d3efd260aa661c930a07376155b",
+      "size_bytes": 979
+    },
+    {
+      "file": "experiments/primer-library/ablations/V3_ABL-STANDARD.txt",
+      "sha256": "0fa411aa0439f4f5ff9cee8eacb5546f0782c434d8d56d2b54a63631e9477cd6",
+      "size_bytes": 929
+    },
+    {
+      "file": "experiments/primer-library/ablations/V4_ABL-BRIDGE.txt",
+      "sha256": "ebcc24c98181247cd2572ae344953b35cc5afec97cc0523679cd90ab74edb58e",
+      "size_bytes": 895
+    },
+    {
+      "file": "experiments/primer-library/ablations/V5_ABL-LINEAR.txt",
+      "sha256": "1c54bada63f4d6c10c8ed26cb8283efccaed31a948516a342545239d044e95a4",
+      "size_bytes": 953
+    },
+    {
+      "file": "experiments/primer-library/ablations/V6_ABL-NODAMP.txt",
+      "sha256": "c5d25ac27284a1948cd1a27255cfc16a3f4fe37720436fead4cbf3412e6165df",
+      "size_bytes": 863
+    },
+    {
+      "file": "experiments/primer-library/ablations/V7_ABL-REORDER.txt",
+      "sha256": "5d58022157752f910459ec228276567e7685e9c6501a31395526d479e761ea48",
+      "size_bytes": 882
+    },
+    {
+      "file": "experiments/primer-library/controls/CT-1_dense-physics.txt",
+      "sha256": "bb9d0e3dfec7e243675380a4cad9dc0010d85b8880cfd38c38442452c97f34b1",
+      "size_bytes": 956
+    },
+    {
+      "file": "experiments/primer-library/controls/CT-2_cross-domain-prose.txt",
+      "sha256": "144cb5947e7a7b5282bdf5cc73de4ab1c75c4c79d5ff9e5468f45dcfb475dabf",
+      "size_bytes": 3049
+    },
+    {
+      "file": "experiments/primer-library/controls/CT-3_scrambled-primer.txt",
+      "sha256": "206ab8b146dad59f8f6cadb7aab3cf82039152138ae553d060cef69af1e92418",
+      "size_bytes": 885
+    },
+    {
+      "file": "experiments/primer-library/controls/CT-4_nonsense-math.txt",
+      "sha256": "edc48b83866c2941c3f55498190066892decc3e614f5ca4e488805c1ecb56ce1",
+      "size_bytes": 962
+    },
+    {
+      "file": "experiments/primer-library/negative-controls/NC-1_single-domain-math.txt",
+      "sha256": "ed6999a029c1e7109864e091fbab26bb3e90afea82570fb32cda1f8c705172b2",
+      "size_bytes": 1116
+    },
+    {
+      "file": "experiments/primer-library/negative-controls/NC-2_primer-as-prose.txt",
+      "sha256": "9868cfcbd02482636435d1d268e4c1847279e96b296973f2f07efb5f990b4f95",
+      "size_bytes": 2783
+    },
+    {
+      "file": "experiments/primer-library/negative-controls/NC-3_standard-physics.txt",
+      "sha256": "f53de2bceb9c1fb8258e66fa4f52080a1bfd7a785d54be7bfe8b261428536e2b",
+      "size_bytes": 968
+    },
+    {
+      "file": "experiments/primer-library/negative-controls/NC-4_reversed-dissipation.txt",
+      "sha256": "d8a0315c784c63adfa80ec7a606021d6c2de3c5a91150fb342c08286f2cddbab",
+      "size_bytes": 880
+    },
+    {
+      "file": "experiments/primer-library/negative-controls/NC-5_pseudo-esoteric.txt",
+      "sha256": "de15dba8fe5ddcfd746bc664bd01764660bcba0d90d2d33efa903838f2c5d9a6",
+      "size_bytes": 2572
+    },
+    {
+      "file": "experiments/primer-library/original/primer.txt",
+      "sha256": "e88af38dac1dba591a54cf6753af1734892246baceac409e6c7f9850123182c1",
+      "size_bytes": 887
+    },
+    {
+      "file": "experiments/prompts/task-prompts.md",
+      "sha256": "613f4b6be7aaea6c696f61942bc416e455163a298fbe69657c5aa78d0a331090",
+      "size_bytes": 5171
+    },
+    {
+      "file": "experiments/prompts/templates.md",
+      "sha256": "b4fb8778ded401c92dd880a08c738c23e741849be4d4969d9a838d0649d15fa9",
+      "size_bytes": 4335
+    },
+    {
+      "file": "experiments/qc-audit-report.md",
+      "sha256": "b75a0179e1502801250c0fd6614fe50cf2666f8f04eacbe8b219f83b00658ebe",
+      "size_bytes": 14205
+    },
+    {
+      "file": "experiments/scoring/domain-lists/T1-domains.md",
+      "sha256": "516bf49f5d36e7f78e0df321b1708631a141571441529b336095bb17ee5992bf",
+      "size_bytes": 2576
+    },
+    {
+      "file": "experiments/scoring/domain-lists/T2-domains.md",
+      "sha256": "8974196aecb5a6abeef8a72f965b7b788b5324edaefb6c8d877baac36d573e68",
+      "size_bytes": 2109
+    },
+    {
+      "file": "experiments/scoring/domain-lists/T3-domains.md",
+      "sha256": "629155a7aa7054cec1c3988165985e8c74da9faefdd122b501b694fbb394e9d5",
+      "size_bytes": 2199
+    },
+    {
+      "file": "experiments/scoring/domain-lists/T4-domains.md",
+      "sha256": "64501d5a29b1466252c06329f995e1b710465dcb8a11d3eb7987522897f5bd00",
+      "size_bytes": 2282
+    },
+    {
+      "file": "experiments/scoring/domain-lists/T5-domains.md",
+      "sha256": "bcdc20ffc686dbb962dc8886d5ad9daa0caf8c04716fe32e40ac39c47e18cf63",
+      "size_bytes": 2279
+    },
+    {
+      "file": "experiments/scoring/known-connections/T1-known.md",
+      "sha256": "195962a2e5a711c83ddad6106b2207974e9bd55c31bb6dc3ed04e8998611317d",
+      "size_bytes": 3901
+    },
+    {
+      "file": "experiments/scoring/known-connections/T2-known.md",
+      "sha256": "d59a91ee4316e29b2fc5d4354462b763b0715910adfb7de8bf1e8b043672f6b2",
+      "size_bytes": 3419
+    },
+    {
+      "file": "experiments/scoring/known-connections/T3-known.md",
+      "sha256": "df5940da31f1b9b6368e5ce5833e7817856e253b43ebf704ccd0869c244c963b",
+      "size_bytes": 3220
+    },
+    {
+      "file": "experiments/scoring/known-connections/T4-known.md",
+      "sha256": "9ace296852446e853de9a63187f4b1628237791a16b791e044b37dfaa56644a1",
+      "size_bytes": 3897
+    },
+    {
+      "file": "experiments/scoring/known-connections/T5-known.md",
+      "sha256": "b8d46e6fa0f80b0477ff2ed0f37e75f1ca86cb36f3287fb27880329c5667430c",
+      "size_bytes": 3730
+    },
+    {
+      "file": "experiments/scoring/rubric-M1-M5.md",
+      "sha256": "12e6dce10391e759c055dc2701459cff7210aec1b60c92bccf589493e8cf1bc4",
+      "size_bytes": 11847
+    },
+    {
+      "file": "experiments/scoring/rubric-SQS.md",
+      "sha256": "c98e22b5e3320a28da94adb5ce629733c0bae5daa96ccbf2bbfd30fcccfc4cd6",
+      "size_bytes": 7686
+    },
+    {
+      "file": "frontier/causal-efficacy-protocol.md",
+      "sha256": "e47ac84c618108411ee1c37f575f1de558867275afe8bc3378baaa4a1eccf391",
+      "size_bytes": 67152
+    }
+  ]
+}

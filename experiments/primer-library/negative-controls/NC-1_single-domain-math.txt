@@ -1,0 +1,21 @@
+Let H₀, H₁, H₂, … be a sequence of homology groups with coefficients in ℤ. Consider the long exact sequence of the pair (X, A):
+
+⋯ → Hₙ(A) →ⁱ* Hₙ(X) →ʲ* Hₙ(X, A) →∂ Hₙ₋₁(A) → ⋯
+
+For a fiber bundle π: E → B with fiber F, the Serre spectral sequence has:
+E²ₚ,ᵧ = Hₚ(B; Hᵧ(F)) ⟹ Hₚ₊ᵧ(E)
+The differential dᵣ: Eʳₚ,ᵧ → Eʳₚ₋ᵣ,ᵧ₊ᵣ₋₁ satisfies dᵣ ∘ dᵣ = 0
+
+Characteristic classes for a rank-n vector bundle ξ over B:
+w(ξ) = 1 + w₁(ξ) + w₂(ξ) + ⋯ + wₙ(ξ) ∈ H*(B; ℤ/2)
+c(ξ) = 1 + c₁(ξ) + c₂(ξ) + ⋯ + cₙ(ξ) ∈ H*(B; ℤ)
+Whitney sum formula: w(ξ ⊕ η) = w(ξ) ⌣ w(η)
+
+The Mayer-Vietoris sequence for X = U ∪ V:
+⋯ → Hₙ(U ∩ V) → Hₙ(U) ⊕ Hₙ(V) → Hₙ(X) →∂ Hₙ₋₁(U ∩ V) → ⋯
+The connecting homomorphism ∂ satisfies ∂ ∘ ∂ = 0 and naturality
+
+Euler characteristic: χ(X) = Σₖ (−1)ᵏ rank Hₖ(X)
+Poincaré duality: Hᵏ(M; ℤ) ≅ Hₙ₋ₖ(M; ℤ) for closed oriented n-manifolds
+
+Künneth formula: H*(X × Y) ≅ H*(X) ⊗ H*(Y) for field coefficients

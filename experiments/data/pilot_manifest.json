@@ -1,0 +1,22 @@
+[
+  {
+    "trial_id": "pilot_UL_gpt-4o_t0.7_T1_r1",
+    "status": "dry_run"
+  },
+  {
+    "trial_id": "pilot_UL_gpt-4o_t0.7_T2_r1",
+    "status": "dry_run"
+  },
+  {
+    "trial_id": "pilot_UL_gpt-4o_t0.7_T3_r1",
+    "status": "dry_run"
+  },
+  {
+    "trial_id": "pilot_UL_gpt-4o_t0.7_T4_r1",
+    "status": "dry_run"
+  },
+  {
+    "trial_id": "pilot_UL_gpt-4o_t0.7_T5_r1",
+    "status": "dry_run"
+  }
+]

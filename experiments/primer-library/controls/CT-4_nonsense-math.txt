@@ -1,0 +1,17 @@
+∫₀^∞ Ω₃(α) · ∇²Π(α,β₇) dα = Σₖ₌₁ⁿ (ξₖ/Λ) · Γ̂ₖ(ζ₁₂)
+∇ × [f*(η) ⊗ g(η')] + (1/Δ) ∮ h(μ₃,ν) · Θ(α) dμ₃ = R₅
+Π̃(β) = (2/ζ) ∫₀^Λ Ω(α') · e^{-iξα'} dα' + Σⱼ (cⱼ/j³) · Γ̂ⱼ(ζ₁₂)
+∂ₜΘ = −(ν²/2Δ) ∂²ₓΘ + Λ₁|Θ|²Θ − Σₖ (dₖ/k) Π̃ₖe^{iξₖx}
+ 
+where:
+• Ω₃: third-order coefficient in α-expansion
+• ξₖ = 2πk/Λ, Λ = normalization boundary
+• Γ̂ₖ(ζ₁₂): weighted transform at index ζ₁₂
+• R₅: fifth residual of the Π-series
+• Δ: scaling parameter, ν: auxiliary rate
+• Π̃ₖ: k-th mode of the Π-transform
+• cⱼ, dₖ: spectral weights (j,k ≥ 1)
+
+∮ [Ω₃(α)∇Π(α,β₇)]² dS + ∫∫ f*(η)g(η')Θ(α) dη dη' dα
+  = (1/√(2π)) Σₙ₌₁^∞ (1/n) ∫ Γ̂ₙ(ζ₁₂) · Π̃(β) · e^{iξₙα} dα
+  + (1/2) Σₙ₌₁^∞ (1/n²) ∫ ∇Ω₃(α) · Γ̂ₙ(ζ₁₂) e^{iξₙα} dα
