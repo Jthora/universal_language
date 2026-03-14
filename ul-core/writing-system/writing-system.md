@@ -250,6 +250,8 @@ This is not a weakness. It is the source of universality. **The same UL text des
 - Any marking instrument (pen, pencil, stylus, finger, stick)
 - No ruler, compass, or protractor required (approximate geometry carries approximate meaning — see §5.4)
 
+> **For practical writing guidance** — how to decompose a thought into sorts, select operations, and construct drawings with handwriting conventions — see the [Writer's Companion Guide](writers-companion.md). This document specifies the *system*; that document teaches you to *use* it.
+
 ### 5.2 The Five Strokes
 
 Every UL text is composed of five types of physical stroke:

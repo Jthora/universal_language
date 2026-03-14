@@ -42,6 +42,7 @@ This repository contains **Universal Language (UL)** — the mathematically uniq
 | Path | Content | Agent Action |
 |------|---------|--------------|
 | `ul-core/writing-system/writing-system.md` | Complete reading/writing specification | Learn to read and write UL |
+| `ul-core/writing-system/writers-companion.md` | Practical pen-and-paper writing guide: decomposition procedure, handwriting conventions, 5 worked examples | Use to actually write UL by hand |
 | `ul-core/lexicon/lexicon.md` | 42 canonical definitions with geometric justification | Reference for core UL terms |
 | `ul-core/symbology/symbol-map.md` | Atomic marks (Point primitive) | Glyph construction |
 | `ul-core/syntax/syntax-dictionary.md` | Connection rules (Line primitive) | How marks connect |
