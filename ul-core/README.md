@@ -9,7 +9,8 @@
 | # | Deliverable | File | Status |
 |---|------------|------|--------|
 | 0 | Project Critique | [CRITIQUE.md](CRITIQUE.md) | Complete |
-| — | Navigation Guide | [NAVIGATION.md](NAVIGATION.md) | **New** — quick-start paths, sibling cross-references, two-classification-system explanation |
+| — | Navigation Guide | [NAVIGATION.md](NAVIGATION.md) | Quick-start paths, sibling cross-references, two-classification-system explanation |
+| — | Synthesis | [SYNTHESIS.md](SYNTHESIS.md) | **New** — how the 5-pipeline works, current capabilities, 10 expansion paths, strategic priorities |
 | 1 | Universal Symbology Map | [symbology/symbol-map.md](symbology/symbol-map.md) | Complete — cross-sibling refs, G≠Σ_UL note, tier labels on §V |
 | 2 | Universal Syntax Dictionary | [syntax/syntax-dictionary.md](syntax/syntax-dictionary.md) | Complete — cross-sibling refs, sort/symmetry note, G≠Σ_UL note |
 | 3 | Universal Grammar Book | [grammar/grammar-book.md](grammar/grammar-book.md) | Complete — cross-sibling refs, sort/symmetry note, 3 new worked examples (Negation, Causation, Self-Reference) |

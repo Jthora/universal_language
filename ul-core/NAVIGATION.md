@@ -17,6 +17,7 @@
 Additionally:
 - [Writing System](writing-system/writing-system.md) — The full specification (reading, writing, digital encoding)
 - [Writer's Companion](writing-system/writers-companion.md) — The **practical pen-and-paper guide** (start here if you want to write)
+- [Synthesis](SYNTHESIS.md) — How the 5-stage pipeline works, what the system can/can't do, 10 expansion paths
 
 ---
 
