@@ -26,6 +26,15 @@ This specification builds on what is **proven** and is explicit about what is **
 
 UQPL is specified here as a **language definition** — the type system, operations, and semantics. Whether these operations are sufficient for universal computation is a separate mathematical question (the Turing-completeness gap). This spec defines the language regardless.
 
+> **⚠ KNOWN ISSUE — Operation Signature Alignment (March 2026):**  
+> UQPL's 11 operations do not exactly match the 11 Σ_UL operations from `formal-foundations.md`. Specifically:
+> - UQPL uses `exist` (generator) and `relate` (constructor) which are not Σ_UL operations
+> - UQPL's `qualify` (r × r → m) has no direct Σ_UL counterpart (Σ_UL has `modify_relation : m × r → r`)
+> - UQPL's `abstract` (m → m) differs from Σ_UL's `abstract : e → m`
+> - Σ_UL's `predicate` (e × r × e → a), `modify_entity` (m × e → e), `embed` (a → e), and `invert` (r → r) are missing from UQPL's primitives (some appear as derived operations)
+>
+> **Sort names are now aligned** (Entity, Relation, Modifier, Assertion). Operation alignment is a separate research task — it requires deciding whether UQPL's operations are a valid *alternative basis* for Σ_UL or whether they should be brought into exact correspondence.
+
 ---
 
 ## 1. CORE DESIGN
@@ -68,7 +77,7 @@ TYPE HIERARCHY:
   Void                         -- The empty construction (no content)
   Entity                       -- A thing that exists (point-derived)
   Relation                     -- A directed connection between entities (line-derived)
-  Meaning                      -- A qualified or transformed structure (angle/curve-derived)
+  Modifier                      -- A qualified or transformed structure (angle/curve-derived)
   Assertion                    -- A truth-valued predication (enclosure-derived)
 ```
 
@@ -109,13 +118,13 @@ TYPING RULES:
 
   Γ ⊢ r : Relation,  Γ ⊢ r' : Relation
   ──────────────────────────────────────
-  Γ ⊢ qualify(r, r') : Meaning
+  Γ ⊢ qualify(r, r') : Modifier
 
-  Γ ⊢ m : Meaning,  Γ ⊢ p : Process<Meaning, Meaning>
+  Γ ⊢ m : Modifier,  Γ ⊢ p : Process<Modifier, Modifier>
   ─────────────────────────────────────────────────────
-  Γ ⊢ transform(m, p) : Meaning
+  Γ ⊢ transform(m, p) : Modifier
 
-  Γ ⊢ S : Set<Meaning>
+  Γ ⊢ S : Set<Modifier>
   ─────────────────────
   Γ ⊢ bound(S) : Assertion
 
@@ -136,12 +145,12 @@ Each Σ_UL operation becomes a UQPL instruction with a precise computational sem
 |---|-----------|-----------|----------------------|----------------------|
 | 1 | `exist` | `→ Entity` | Place a point | **Allocate** — create a new value |
 | 2 | `relate` | `Entity × Entity → Relation` | Draw a line between points | **Connect** — establish a relationship |
-| 3 | `qualify` | `Relation × Relation → Meaning` | Measure the angle between lines | **Compare** — produce a quality from two relations |
-| 4 | `transform` | `Meaning × Process → Meaning` | Sweep along a curve | **Apply function** — transform a meaning |
-| 5 | `bound` | `Set<Meaning> → Assertion` | Enclose in a region | **Assert** — declare a bounded claim |
+| 3 | `qualify` | `Relation × Relation → Modifier` | Measure the angle between lines | **Compare** — produce a quality from two relations |
+| 4 | `transform` | `Modifier × Process → Modifier` | Sweep along a curve | **Apply function** — transform a meaning |
+| 5 | `bound` | `Set<Modifier> → Assertion` | Enclose in a region | **Assert** — declare a bounded claim |
 | 6 | `compose` | `Relation × Relation → Relation` | Concatenate paths | **Sequence** — chain two operations |
-| 7 | `abstract` | `Meaning → Meaning` | Scale to next Erlangen level | **Generalize** — lift to higher abstraction |
-| 8 | `apply` | `Meaning × Entity → Assertion` | Predicate an entity | **Predicate** — apply a meaning to a thing |
+| 7 | `abstract` | `Modifier → Modifier` | Scale to next Erlangen level | **Generalize** — lift to higher abstraction |
+| 8 | `apply` | `Modifier × Entity → Assertion` | Predicate an entity | **Predicate** — apply a meaning to a thing |
 | 9 | `negate` | `Assertion → Assertion` | Topological complement | **NOT** — logical negation |
 | 10 | `conjoin` | `Assertion × Assertion → Assertion` | Region intersection | **AND** — logical conjunction |
 | 11 | `quantify` | `(Entity → Assertion) → Assertion` | Sweep over all points | **FORALL** — universal quantification |
@@ -215,7 +224,7 @@ def connection = relate(point_a, point_b)
 def harmony = qualify(connection_1, connection_2)  -- at 60°
 
 -- Named process
-def growth : Process<Meaning, Meaning> = 
+def growth : Process<Modifier, Modifier> = 
   λm. transform(m, spiral_outward)
 
 -- Named assertion
@@ -345,11 +354,11 @@ def self_relate<L> : Entity@L → Relation@L =
   λe. relate(e, e)
 
 -- Constrained to specific levels
-def measure_angle : Relation@Euclidean × Relation@Euclidean → Meaning@Euclidean =
+def measure_angle : Relation@Euclidean × Relation@Euclidean → Modifier@Euclidean =
   λ(r1, r2). qualify(r1, r2)
 
 -- Level-coercing: takes concrete, returns abstract
-def essence : Meaning@Euclidean → Meaning@Topological =
+def essence : Modifier@Euclidean → Modifier@Topological =
   λm. abstract(abstract(abstract(abstract(m))))
 ```
 
@@ -371,7 +380,7 @@ This is **irreversible** — you cannot recover Euclidean detail from a Topologi
 def ERROR = concretize(abstract(m))   -- REJECTED: no inverse for abstract
 
 -- Correct: provide a grounding context
-def ground(m : Meaning@Topological, context : Meaning@Euclidean) : Meaning@Euclidean =
+def ground(m : Modifier@Topological, context : Modifier@Euclidean) : Modifier@Euclidean =
   project(m, context)   -- Use context to choose a Euclidean representative
 ```
 
@@ -485,7 +494,7 @@ verify Q1 = quantify(λx. negate(apply(
 
 ## 9. MEANING COMPUTATION
 
-### 9.1 Meaning as First-Class Value
+### 9.1 Modifier as First-Class Value
 
 In UQPL, meanings are values that can be stored, passed, transformed, and compared:
 
@@ -497,13 +506,13 @@ let courage = qualify(
 )                            -- angle between them: acute (< 90°) = approach
 
 -- Pass a meaning to a function
-def amplify(m : Meaning) : Meaning =
+def amplify(m : Modifier) : Modifier =
   transform(m, scale_up(2.0))
 
 let great_courage = amplify(courage)
 
 -- Compare meanings (at Similarity level)
-def synonymous(m1 : Meaning, m2 : Meaning) : Assertion =
+def synonymous(m1 : Modifier, m2 : Modifier) : Assertion =
   bound({qualify(
     relate(m1, m1),
     relate(m2, m2)
@@ -517,10 +526,10 @@ UQPL can translate meaning between domains by operating at the appropriate Erlan
 ```
 -- Translate a concept from one domain to another
 def translate(
-  concept : Meaning@Topological,
-  source_domain : Enclosure<Meaning>,
-  target_domain : Enclosure<Meaning>
-) : Meaning@Euclidean =
+  concept : Modifier@Topological,
+  source_domain : Enclosure<Modifier>,
+  target_domain : Enclosure<Modifier>
+) : Modifier@Euclidean =
   let structure = topological_skeleton(concept)    -- Extract π₁
   let target_rep = embed(structure, target_domain)  -- Find representative
   target_rep
@@ -535,7 +544,7 @@ let economic_growth   = translate(
 -- Result: something in economics with the same topological structure as biological growth
 ```
 
-### 9.3 Meaning Composition
+### 9.3 Modifier Composition
 
 Complex meanings are built by combining simple ones:
 
@@ -578,9 +587,9 @@ def evolution =
 -- If-then-else via geometric projection
 def if_then_else(
   condition : Assertion,
-  then_branch : Meaning,
-  else_branch : Meaning
-) : Meaning =
+  then_branch : Modifier,
+  else_branch : Modifier
+) : Modifier =
   match condition {
     True  → then_branch
     False → else_branch
@@ -591,7 +600,7 @@ def if_then_else(
 
 ```
 -- Repeat a transformation n times
-def iterate(n : Entity, f : Process<Meaning, Meaning>, start : Meaning) : Meaning =
+def iterate(n : Entity, f : Process<Modifier, Modifier>, start : Modifier) : Modifier =
   match n {
     Zero    → start
     Succ(k) → f(iterate(k, f, start))
@@ -602,7 +611,7 @@ def iterate(n : Entity, f : Process<Meaning, Meaning>, start : Meaning) : Meanin
 
 ```
 -- A meaning structure that contains itself (fixed point)
-def fix(f : Process<Meaning, Meaning>) : Meaning =
+def fix(f : Process<Modifier, Modifier>) : Modifier =
   let x = f(x)   -- self-referential binding
   x
 
@@ -620,16 +629,16 @@ def factorial(n : Entity) : Entity =
 -- Process all entities satisfying a condition
 def for_each(
   condition : Entity → Assertion,
-  action : Entity → Meaning
-) : Set<Meaning> =
+  action : Entity → Modifier
+) : Set<Modifier> =
   { action(e) | e : Entity, condition(e) }
 
 -- Aggregate
 def aggregate(
-  items : Set<Meaning>,
-  combine : Meaning × Meaning → Meaning,
-  base : Meaning
-) : Meaning =
+  items : Set<Modifier>,
+  combine : Modifier × Modifier → Modifier,
+  base : Modifier
+) : Modifier =
   fold(combine, base, items)
 ```
 
@@ -675,7 +684,7 @@ Circ<T>  = Universal module    (complete interface, framework/API)
 The empty construction (Void) represents the absence of meaning — a computation that produces nothing:
 
 ```
-def divide_meaning(m : Meaning, divisor : Meaning) : Meaning =
+def divide_modifier(m : Modifier, divisor : Modifier) : Modifier =
   match divisor {
     Void → Void                   -- Division by nothing = nothing
     _    → transform(m, scale_by(inverse(magnitude(divisor))))
@@ -700,7 +709,7 @@ Some operations are known to be undecidable at the topological level:
 
 ```
 -- WARNING: This may not terminate
-def topologically_equivalent(a : Meaning@Topological, b : Meaning@Topological) : Assertion =
+def topologically_equivalent(a : Modifier@Topological, b : Modifier@Topological) : Assertion =
   -- Equivalent to the word problem for groups
   -- Undecidable in general (conjectured, see numbers-and-computability.md §6)
   ...
@@ -717,9 +726,9 @@ module Primitives = Tri {
   -- The 5 geometric primitives as values
   export point     : Entity
   export line      : Entity × Entity → Relation
-  export angle     : Relation × Relation → Meaning
-  export curve     : Meaning × Process → Meaning
-  export enclosure : Set<Meaning> → Assertion
+  export angle     : Relation × Relation → Modifier
+  export curve     : Modifier × Process → Modifier
+  export enclosure : Set<Modifier> → Assertion
 }
 ```
 
@@ -754,10 +763,10 @@ module Arith = Sq {
 }
 ```
 
-### 13.4 Meaning Module
+### 13.4 Modifier Module
 
 ```
-module Meaning = Circ {
+module Modifier = Circ {
   export create     = λ(subj, pred). apply(pred, subj)
   export combine    = λ(m1, m2). conjoin(m1, m2)
   export generalize = abstract
@@ -786,9 +795,9 @@ def hello_world : Assertion =
 ```
 -- Given two domains, find structural analogies
 def find_analogies(
-  domain_a : Enclosure<Set<Meaning>>,
-  domain_b : Enclosure<Set<Meaning>>
-) : Set<Pair<Meaning, Meaning>> =
+  domain_a : Enclosure<Set<Modifier>>,
+  domain_b : Enclosure<Set<Modifier>>
+) : Set<Pair<Modifier, Modifier>> =
   let abstractions_a = { abstract⁴(m) | m in contents(domain_a) }
   let abstractions_b = { abstract⁴(m) | m in contents(domain_b) }
   let matches = { (a_orig, b_orig) | 
@@ -805,11 +814,11 @@ let music_math_analogies = find_analogies(Music, Mathematics)
 -- Returns: (harmony, proportion), (rhythm, periodicity), (key, group), ...
 ```
 
-### 14.3 Meaning Depth Analyzer
+### 14.3 Modifier Depth Analyzer
 
 ```
 -- Measure the structural depth of a meaning
-def meaning_depth(m : Meaning) : Entity =
+def modifier_depth(m : Modifier) : Entity =
   let level_0 = m
   let level_1 = abstract(level_0)
   let level_2 = abstract(level_1)
@@ -832,9 +841,9 @@ def meaning_depth(m : Meaning) : Entity =
 ```
 -- Generate a novel meaning by geometric transformation
 def create_novel(
-  seeds : Set<Meaning>,
-  technique : Process<Meaning, Meaning>
-) : Meaning =
+  seeds : Set<Modifier>,
+  technique : Process<Modifier, Modifier>
+) : Modifier =
   let combined = aggregate(seeds, 
     λ(a, b). qualify(relate(a, b), relate(b, a)),
     exist)
@@ -952,7 +961,7 @@ pattern     ::= name
 
 pattern_list ::= pattern (',' pattern)*
 
-type        ::= 'Entity' | 'Relation' | 'Meaning' | 'Assertion' | 'Void'
+type        ::= 'Entity' | 'Relation' | 'Modifier' | 'Assertion' | 'Void'
              |  encl_type '<' type '>'
              |  'Pair' '<' type ',' type '>'
              |  'Set' '<' type '>'

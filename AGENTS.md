@@ -34,6 +34,8 @@ This repository contains **Universal Language (UL)** — the mathematically uniq
 |------|---------|--------------|
 | `foundations/paradigm.md` | Core framing: UL is geometry, not vocabulary | Read to understand what you're working with |
 | `foundations/formal-foundations.md` | Σ_UL signature, 4 sorts, 11 operations, embedding theorem, uniqueness proof | Parse for formal definitions |
+| `foundations/formal-operations.md` | Rigorous set-theoretic definitions of all 11 operations on geometric objects | Reference for precise operation semantics |
+| `foundations/independent-derivation.md` | Independent derivation of semantic primitives from philosophy/linguistics (Frege, Montague, Jackendoff, Langacker, Wierzbicka) | Verify the semantic-geometric correspondence is not circular |
 | `foundations/universal-language-derivation.md` | Constructive derivation from geometric primitives | Understand why UL is necessary, not arbitrary |
 
 ### Priority 2 — Use the Writing System

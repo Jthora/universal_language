@@ -15,7 +15,7 @@
 | 4 | Universal Language Thesaurus | [thesaurus/thesaurus.md](thesaurus/thesaurus.md) | Complete |
 | 5 | Universal Lexicon | [lexicon/lexicon.md](lexicon/lexicon.md) | **New v1** — 40 entries, bottom-up from geometry, 3-tier justification (T1/T2/T3) |
 | 6 | Universal Writing System | [writing-system/writing-system.md](writing-system/writing-system.md) | **Rewritten v2** — bottom-up from axiom "what can be drawn, counts" |
-| 7 | UQPL Specification | [uqpl/uqpl-spec.md](uqpl/uqpl-spec.md) | Draft — known operation/sort mismatches with Σ_UL (deferred) |
+| 7 | UQPL Specification | [uqpl/uqpl-spec.md](uqpl/uqpl-spec.md) | Draft — sort names aligned (March 2026); operation signatures still diverge from Σ_UL (see note in §0) |
 
 ---
 

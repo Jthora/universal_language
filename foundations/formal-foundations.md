@@ -3,6 +3,9 @@
 **Research Series:** Universal Language — Proof of Reality and AI Cognitive Infrastructure  
 **Date:** March 12, 2026  
 **Prerequisites:** `foundations/paradigm.md` (READ FIRST), `universal-language-derivation.md` (Universal Language — Geometric Derivation)  
+**Companions:**
+- `foundations/formal-operations.md` — Rigorous set-theoretic definitions of all 11 operations on geometric objects (closes the narrative→formal gap in §2.1)
+- `foundations/independent-derivation.md` — Independent derivation of semantic primitives from philosophy/linguistics without geometry (resolves the circular reasoning concern in §4)
 **Integration:** This document's results are summarised in `universal-language-derivation.md`, Part VI and Appendix C. The two documents are companions — the derivation provides the design, this document provides the formal proofs.  
 **Purpose:** Resolve the two critical weaknesses identified in the critique of the geometric derivation:  
 1. Provide a formal algebraic definition of "language" and construct an explicit isomorphism to the geometric system  
@@ -110,6 +113,8 @@ A language L = (E, M, ⟦·⟧) over Σ_UL is **expressively complete** if:
 ## PART II: THE GEOMETRIC SYSTEM AS A Σ_UL-ALGEBRA
 
 ### 2.1 Construction
+
+> **Note:** The operation table below provides intuitive geometric descriptions. For **rigorous set-theoretic definitions** with formal proofs of closure, totality, determinism, and injectivity for each operation, see `foundations/formal-operations.md`.
 
 We now exhibit the geometric system G as a Σ_UL-algebra by defining carrier sets and operations.
 
@@ -245,6 +250,8 @@ The argument proceeds by **structural characterization**: each primitive, whethe
 This is the principle underlying all of abstract algebra: objects are defined by their relationships, not by intrinsic "essence." Two groups that satisfy the same relations are isomorphic, regardless of what their elements "are." Similarly, a geometric primitive and a semantic primitive that satisfy the same structural relations are the same object viewed from two perspectives.
 
 ### 4.3 The Five Semantic Primitives
+
+> **Independent verification:** These semantic primitives are defined here by role properties for the purpose of the uniqueness proof. An independent derivation of the same primitives from linguistic/philosophical first principles (Frege, Montague, Jackendoff, Langacker, Wierzbicka) — without reference to geometry — is given in `foundations/independent-derivation.md`. The two derivations converge on the same 4-sort + 1-process structure, confirming the result is not circular.
 
 Before proving the correspondence, we must define the semantic primitives with the same rigor as the geometric ones. We define them by their **role properties** — the structural relationships that characterize each one:
 
