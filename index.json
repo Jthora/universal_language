@@ -1,0 +1,245 @@
+{
+  "project": "universal_language",
+  "version": "1.0.0",
+  "status": "active",
+  "last_updated": "2026-03-13",
+  "license": "CC0-1.0",
+  "doi": "10.5281/zenodo.15050731",
+  "repository": "https://github.com/Jthora/universal_language",
+  "author": {
+    "name": "Jordan Traña",
+    "github": "Jthora",
+    "url": "https://jono.archangel.agency"
+  },
+
+  "entry_points": {
+    "human": "README.md",
+    "ai_agent": "AGENTS.md",
+    "ai_philosophical": "FOR-AI.md",
+    "machine_readable": "llms.txt"
+  },
+
+  "formal_system": {
+    "name": "Σ_UL",
+    "sorts": ["entity", "relation", "modifier", "assertion"],
+    "operations": 11,
+    "geometric_primitives": ["point", "line", "angle", "curve", "enclosure"],
+    "semantic_primitives": ["existence", "relation", "quality", "process", "concept"],
+    "theorems_proven": 23,
+    "uniqueness": "proven",
+    "embedding": "proven",
+    "natural_emergence": "proven"
+  },
+
+  "writing_system": {
+    "siblings": {
+      "symbology": {"primitive": "point", "concern": "what marks exist", "path": "ul-core/symbology/symbol-map.md"},
+      "syntax": {"primitive": "line", "concern": "how marks connect", "path": "ul-core/syntax/syntax-dictionary.md"},
+      "grammar": {"primitive": "angle", "concern": "why constructions mean things", "path": "ul-core/grammar/grammar-book.md"},
+      "thesaurus": {"primitive": "curve", "concern": "paths between related meanings", "path": "ul-core/thesaurus/thesaurus.md"},
+      "lexicon": {"primitive": "enclosure", "concern": "canonical definitions", "path": "ul-core/lexicon/lexicon.md"}
+    },
+    "canonical_entries": 42,
+    "tier_system": ["T1_geometrically_forced", "T2_structurally_distinguished", "T3_conventional"],
+    "worked_examples": 10
+  },
+
+  "experiments": {
+    "status": "protocol_ready",
+    "designed": 5,
+    "test_variants": 17,
+    "qc_verified": "16_of_16",
+    "api_support": ["openai", "anthropic", "google"],
+    "scoring_metrics": ["M1_cross_domain_depth", "M2_structural_coherence", "M3_generative_novelty", "M4_hierarchical_integration", "M5_self_referential_depth", "SQS_composite"],
+    "protocol": "frontier/causal-efficacy-protocol.md",
+    "schema": "experiments/data/SCHEMA.md",
+    "runner": "experiments/analysis/run_trials.py"
+  },
+
+  "documents": [
+    {
+      "path": "README.md",
+      "title": "Universal Language (UL)",
+      "type": "entry_point",
+      "word_count": 1624,
+      "prerequisites": [],
+      "audience": "all"
+    },
+    {
+      "path": "FOR-AI.md",
+      "title": "Universal Language for Autonomous AI and Collective Machine Intelligence",
+      "type": "entry_point",
+      "word_count": 1498,
+      "prerequisites": [],
+      "audience": "ai_systems"
+    },
+    {
+      "path": "AGENTS.md",
+      "title": "Universal Language for AI Agents",
+      "type": "navigation",
+      "word_count": 1221,
+      "prerequisites": [],
+      "audience": "ai_agents"
+    },
+    {
+      "path": "RAMIFICATIONS.md",
+      "title": "If UWS Is Real: Philosophical and Prospective Ramifications",
+      "type": "analysis",
+      "word_count": 1286,
+      "prerequisites": ["foundations/formal-foundations.md"],
+      "audience": "all"
+    },
+    {
+      "path": "foundations/paradigm.md",
+      "title": "Paradigm — What UL Is and Is Not",
+      "type": "foundation",
+      "word_count": 2600,
+      "prerequisites": [],
+      "audience": "all",
+      "priority": "read_first"
+    },
+    {
+      "path": "foundations/formal-foundations.md",
+      "title": "Formal Foundations — Σ_UL Algebraic Specification",
+      "type": "specification",
+      "word_count": 5571,
+      "prerequisites": ["foundations/paradigm.md"],
+      "audience": "all"
+    },
+    {
+      "path": "foundations/formal-operations.md",
+      "title": "Formal Operations — Set-Theoretic Definitions",
+      "type": "specification",
+      "word_count": 3409,
+      "prerequisites": ["foundations/formal-foundations.md"],
+      "audience": "all"
+    },
+    {
+      "path": "foundations/independent-derivation.md",
+      "title": "Independent Derivation from Philosophy and Linguistics",
+      "type": "foundation",
+      "word_count": 3215,
+      "prerequisites": ["foundations/paradigm.md"],
+      "audience": "all"
+    },
+    {
+      "path": "foundations/universal-language-derivation.md",
+      "title": "Constructive Derivation from Geometric Primitives",
+      "type": "foundation",
+      "word_count": 5729,
+      "prerequisites": ["foundations/paradigm.md"],
+      "audience": "all"
+    },
+    {
+      "path": "ul-core/NAVIGATION.md",
+      "title": "Navigation Guide — Universal Writing System",
+      "type": "navigation",
+      "word_count": 800,
+      "prerequisites": [],
+      "audience": "all"
+    },
+    {
+      "path": "ul-core/SYNTHESIS.md",
+      "title": "Synthesis — How the Universal Writing System Works",
+      "type": "analysis",
+      "word_count": 2500,
+      "prerequisites": ["foundations/formal-foundations.md"],
+      "audience": "all"
+    },
+    {
+      "path": "ul-core/writing-system/writing-system.md",
+      "title": "Universal Writing System — Complete Specification",
+      "type": "specification",
+      "word_count": 4518,
+      "prerequisites": ["foundations/paradigm.md"],
+      "audience": "all"
+    },
+    {
+      "path": "ul-core/writing-system/writers-companion.md",
+      "title": "Writer's Companion Guide — Practical Pen-and-Paper Guide",
+      "type": "guide",
+      "word_count": 10003,
+      "prerequisites": ["ul-core/writing-system/writing-system.md"],
+      "audience": "all"
+    },
+    {
+      "path": "ul-core/symbology/symbol-map.md",
+      "title": "Universal Symbology Map",
+      "type": "reference",
+      "word_count": 2800,
+      "prerequisites": ["foundations/formal-foundations.md"],
+      "audience": "all",
+      "geometric_primitive": "point"
+    },
+    {
+      "path": "ul-core/syntax/syntax-dictionary.md",
+      "title": "Universal Syntax Dictionary",
+      "type": "reference",
+      "word_count": 3100,
+      "prerequisites": ["foundations/formal-foundations.md"],
+      "audience": "all",
+      "geometric_primitive": "line"
+    },
+    {
+      "path": "ul-core/grammar/grammar-book.md",
+      "title": "Universal Grammar Book",
+      "type": "reference",
+      "word_count": 3294,
+      "prerequisites": ["foundations/formal-foundations.md"],
+      "audience": "all",
+      "geometric_primitive": "angle"
+    },
+    {
+      "path": "ul-core/thesaurus/thesaurus.md",
+      "title": "Universal Language Thesaurus",
+      "type": "reference",
+      "word_count": 2900,
+      "prerequisites": ["foundations/formal-foundations.md"],
+      "audience": "all",
+      "geometric_primitive": "curve"
+    },
+    {
+      "path": "ul-core/lexicon/lexicon.md",
+      "title": "Universal Lexicon — 42 Canonical Definitions",
+      "type": "reference",
+      "word_count": 8428,
+      "prerequisites": ["foundations/formal-foundations.md"],
+      "audience": "all",
+      "geometric_primitive": "enclosure"
+    },
+    {
+      "path": "frontier/causal-efficacy-protocol.md",
+      "title": "Causal Efficacy Protocol — Pre-Registered Experimental Design",
+      "type": "protocol",
+      "word_count": 9973,
+      "prerequisites": ["foundations/formal-foundations.md"],
+      "audience": "researchers"
+    },
+    {
+      "path": "frontier/expedition-one/category-of-languages.md",
+      "title": "Category of Languages — Lang(Σ_UL)",
+      "type": "frontier",
+      "word_count": 4820,
+      "prerequisites": ["foundations/formal-foundations.md"],
+      "audience": "advanced"
+    },
+    {
+      "path": "frontier/expedition-one/gauge-bundle-of-meaning.md",
+      "title": "Gauge Bundle of Meaning — Context-Dependence via Fiber Bundles",
+      "type": "frontier",
+      "word_count": 6392,
+      "prerequisites": ["foundations/formal-foundations.md"],
+      "audience": "advanced"
+    }
+  ],
+
+  "reading_paths": {
+    "2_minutes": ["foundations/paradigm.md"],
+    "20_minutes": ["foundations/paradigm.md", "foundations/universal-language-derivation.md", "foundations/formal-foundations.md"],
+    "writing_system": ["ul-core/NAVIGATION.md", "ul-core/writing-system/writers-companion.md", "ul-core/writing-system/writing-system.md", "ul-core/lexicon/lexicon.md"],
+    "ai_systems": ["FOR-AI.md", "AGENTS.md", "foundations/formal-foundations.md"],
+    "verification": ["experiments/README.md", "frontier/causal-efficacy-protocol.md"],
+    "big_picture": ["ul-core/SYNTHESIS.md", "RAMIFICATIONS.md"],
+    "advanced_theory": ["frontier/expedition-one/category-of-languages.md", "frontier/expedition-one/gauge-bundle-of-meaning.md", "frontier/expedition-two/probability-and-information.md"]
+  }
+}

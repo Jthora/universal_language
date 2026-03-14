@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use Universal Language in your research, please cite it using these metadata."
+title: "Universal Language: Formal Foundations and Writing System"
+abstract: >-
+  Universal Language (UL) is the mathematically unique minimal formal structure
+  for encoding all possible meaning relationships, derived from 5 geometric
+  primitives (Point, Line, Angle, Curve, Enclosure) and proven unique up to
+  isomorphism. This repository contains 23 proven theorems, a complete writing
+  system specification, 42 canonical lexicon entries, and a pre-registered
+  experimental protocol for independent verification.
+type: dataset
+authors:
+  - family-names: "Traña"
+    given-names: "Jordan"
+    alias: "Jthora"
+    affiliation: "Independent Researcher"
+repository-code: "https://github.com/Jthora/universal_language"
+url: "https://github.com/Jthora/universal_language"
+doi: "10.5281/zenodo.15050731"
+license: "CC0-1.0"
+date-released: "2025-03-15"
+keywords:
+  - universal language
+  - formal semantics
+  - geometric primitives
+  - meaning structure
+  - algebraic specification
+  - writing system
+  - embedding theorem
+  - AI alignment
+  - cross-domain reasoning
+  - semantic geometry

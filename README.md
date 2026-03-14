@@ -121,6 +121,9 @@ universal_language/
 ├── RAMIFICATIONS.md             # Philosophical & prospective consequences (10 ramifications)
 ├── FOR-AI.md                    # For autonomous AI and collective machine intelligence
 ├── AGENTS.md                    # AI agent navigation & machine-readable metadata
+├── llms.txt                     # AI/LLM discoverability manifest (plain text)
+├── index.json                   # Machine-readable document catalog with reading paths
+├── CITATION.cff                 # Citation metadata (GitHub native format)
 ├── CONTRIBUTING.md              # How to contribute
 ├── LICENSE                      # License
 │

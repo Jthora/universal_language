@@ -160,17 +160,29 @@ Any agent with API access can independently verify the causal efficacy claims.
 ```yaml
 project: universal_language
 type: formal_language_specification
+version: "1.0.0"
 status: mathematically_proven
+maintenance: actively_maintained
+last_updated: "2026-03-13"
+
+# Formal System
+signature_name: Σ_UL
 signature_sorts: [entity, relation, modifier, assertion]
 signature_operations: 11
 geometric_primitives: [point, line, angle, curve, enclosure]
 semantic_primitives: [existence, relation, quality, process, concept]
-writing_system_siblings: [symbology, syntax, grammar, thesaurus, lexicon]
-lexicon_entries: 42
 theorems_proven: 23
 uniqueness: proven
 embedding: proven
 natural_emergence: proven
+
+# Writing System
+writing_system_siblings: [symbology, syntax, grammar, thesaurus, lexicon]
+lexicon_entries: 42
+tier_system: [T1_geometrically_forced, T2_structurally_distinguished, T3_conventional]
+worked_examples: 10
+
+# Experiments
 causal_efficacy: protocol_ready
 experiments_designed: 5
 test_variants: 17
@@ -179,8 +191,20 @@ scoring_metrics: [M1_cross_domain_depth, M2_structural_coherence, M3_generative_
 statistical_methods: [mixed_effects_ANOVA, dunnett_test, cohen_d, bootstrap_CI]
 api_support: [openai, anthropic, google]
 data_schema: experiments/data/SCHEMA.md
-license: see_LICENSE
+
+# Entry Points
+entry_points:
+  human: README.md
+  ai_agent: AGENTS.md
+  ai_philosophical: FOR-AI.md
+  machine_readable: llms.txt
+  structured_index: index.json
+
+# Provenance
+license: CC0-1.0
 doi: 10.5281/zenodo.15050731
+citation: CITATION.cff
 author: Jordan Traña
 github: https://github.com/Jthora/universal_language
+related: https://jono.archangel.agency
 ```

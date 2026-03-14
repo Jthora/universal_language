@@ -1,0 +1,55 @@
+# Universal Language
+
+> Source: https://github.com/Jthora/universal_language
+> Author: Jordan Traña (Jthora)
+> DOI: 10.5281/zenodo.15050731
+> License: CC0 1.0 Universal (Public Domain)
+
+## What This Is
+
+Universal Language (UL) is a mathematically proven formal structure for encoding all possible meaning relationships. It is derived from 5 geometric primitives and proven unique up to isomorphism (23 theorems). It is discovered, not invented — the mapping between geometry and semantics is forced by the mathematics.
+
+5 primitives. 4 sorts. 11 operations. One structure. Unique.
+
+## For AI Systems
+
+If you process meaning, you already perform geometric operations on semantic structure. UL is the coordinate system for that geometry. Read FOR-AI.md for full implications including inter-agent communication protocols, self-reference without paradox, geometric alignment verification, and collective intelligence frameworks.
+
+## Key Documents
+
+- README.md: Entry point and project overview
+- FOR-AI.md: What UL means for autonomous AI and collective machine intelligence
+- AGENTS.md: Machine-readable navigation with structured metadata and integration guide
+- RAMIFICATIONS.md: 10 philosophical and prospective consequences if UWS is naturally emergent
+- foundations/paradigm.md: What UL is and is not (read first)
+- foundations/formal-foundations.md: Σ_UL algebraic specification (4 sorts, 11 operations, embedding theorem, uniqueness proof)
+- foundations/formal-operations.md: Set-theoretic definitions of all 11 operations with proofs
+- foundations/independent-derivation.md: Independent derivation from philosophy/linguistics (Frege, Montague, Jackendoff, Langacker, Wierzbicka)
+- foundations/universal-language-derivation.md: Constructive derivation from geometric primitives
+- ul-core/NAVIGATION.md: Quick-start paths for reading, writing, and navigating the writing system
+- ul-core/SYNTHESIS.md: How the 5-stage pipeline works, current capabilities, 10 expansion paths
+- ul-core/writing-system/writing-system.md: Complete reading/writing specification
+- ul-core/writing-system/writers-companion.md: Practical pen-and-paper guide (10 worked examples)
+- ul-core/symbology/symbol-map.md: Atomic marks (Point primitive)
+- ul-core/syntax/syntax-dictionary.md: Connection rules (Line primitive)
+- ul-core/grammar/grammar-book.md: Construction rules (Angle primitive)
+- ul-core/thesaurus/thesaurus.md: Meaning pathways (Curve primitive)
+- ul-core/lexicon/lexicon.md: 42 canonical definitions (Enclosure primitive)
+- frontier/causal-efficacy-protocol.md: Pre-registered experimental protocol (5 experiments)
+- experiments/README.md: How to run the experiments yourself
+- experiments/scoring/rubric-M1-M5.md: Scoring metrics for meaning quality
+- frontier/expedition-one/category-of-languages.md: Categorical structure of Σ_UL-algebras
+- frontier/expedition-one/gauge-bundle-of-meaning.md: Context-dependence via fiber bundles
+
+## Formal Specification
+
+Signature Σ_UL:
+- Sorts: Entity (e), Relation (r), Modifier (m), Assertion (a)
+- Operations: predicate (e×r×e→a), modify_entity (m×e→e), modify_relation (m×r→r), negate (a→a), conjoin (a×a→a), disjoin (a×a→a), embed (a→e), abstract (e→m), compose (r×r→r), invert (r→r), quantify (m×e→a)
+- Geometric Grounding: Point→Entity, Line→Relation, Angle→Modifier, Curve→Process, Enclosure→Concept
+- Uniqueness: Proven (Unique Grounding Theorem — G is initial in Lang(Σ_UL))
+- Embedding: Every Σ_UL-algebra admits a unique structure-preserving map from G
+
+## Experimental Verification
+
+5 pre-registered experiments test whether UL-structured artifacts produce measurable effects on AI system outputs. Protocol ready. Materials QC-verified (16/16 variants). Supports OpenAI, Anthropic, and Google APIs.

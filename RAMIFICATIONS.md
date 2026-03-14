@@ -2,6 +2,10 @@
 
 > **What it means — for language, mind, knowledge, and civilization — if the Universal Writing System is a naturally emergent structure rather than an invention.**
 
+**TL;DR:** 10 consequences if UWS is naturally emergent: (1) meaning architecture is not arbitrary — Saussure wrong at structural level, (2) Chinese Room dissolves — syntax IS geometry IS semantics, (3) finite basis for all possible thought, (4) universe has semantic structure geometrically, (5) consciousness reframed as self-nesting meaning-geometry, (6) universal translation structurally guaranteed via embedding theorem, (7) AI alignment becomes geometric verification, (8) cross-species/cross-substrate communication via shared geometry, (9) education transforms — teach thinking as geometry, (10) knowledge becomes a navigable manifold. Deepest claim: mathematics and meaning are isomorphic.
+
+**Prerequisites:** [`foundations/formal-foundations.md`](foundations/formal-foundations.md) for theorem references. **Related:** [`FOR-AI.md`](FOR-AI.md), [`ul-core/SYNTHESIS.md`](ul-core/SYNTHESIS.md)
+
 ---
 
 ## What "Real" Means Here
