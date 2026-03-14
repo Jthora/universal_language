@@ -916,7 +916,323 @@ UL encodes **structure**, not **things**. A point (•) is "an existence" — no
 
 ---
 
-## 9. QUICK REFERENCE — THE WRITER'S CHECKLIST
+## 9. COMPOUND STATEMENTS — COMBINING CLAIMS
+
+Single assertions are the atoms of UL writing. This section teaches you to combine them using the four logical connectives and conditional embedding.
+
+### 9.1 The Four Geometric Connectives
+
+Every logical connective is a **spatial relationship between sentence frames**. No extra notation needed — the geometry IS the logic.
+
+| Connective | Natural language | Frame relationship | Drawing |
+|------------|-----------------|-------------------|---------|
+| **AND** (conjoin) | "A and B are both true" | Frames **overlap** (shared interior region) | Two frames with shared boundary area |
+| **OR** (disjoin) | "A or B (or both) is true" | Frames **touch** (boundaries contact, no shared interior) | Two frames side by side, edges touching |
+| **NOT** (negate) | "A is not true" | Frame content **reflected** through center | Content mirrored inside the frame |
+| **IF...THEN** (implication) | "If A then B" | A's frame **embedded inside** B's frame | Inner frame (premise) shrunk to entity, connected to conclusion |
+
+```
+AND (conjoin):              OR (disjoin):
+
+  ┌─────────┬────────┐     ┌─────────┐┌─────────┐
+  │  •──→•  │  •──→• │     │  •──→•  ││  •──→•  │
+  │    a₁   │  a₂    │     │    a₁   ││    a₂   │
+  └─────────┴────────┘     └─────────┘└─────────┘
+  (shared boundary =       (touching boundary =
+   both must be true)       either can be true)
+
+
+NOT (negate):               IF-THEN (implication):
+
+  ┌─────────────┐          ┌────────────────────────┐
+  │  •←──•      │          │  ┌──────┐              │
+  │  (reflected) │          │  │ •──→•│ ══→══ •──→• │
+  └─────────────┘          │  └──────┘  (then)      │
+  (mirror of •──→•)        └────────────────────────┘
+                           (embedded premise causes
+                            conclusion)
+```
+
+### 9.2 How Overlap and Adjacency Work
+
+**Conjunction (AND):** Two frames share part of their boundary or interior. The shared region represents what both claims hold in common. If the claims share entities, those entities sit in the overlap zone.
+
+```
+  "Fire is hot AND fire is bright"
+
+  ┌──────────────┬──────────────┐
+  │              │○{•}          │
+  │  ○{•}       │(bright)      │
+  │ (hot)  •    │              │
+  │    ↖  (fire)│  ↗           │
+  │      ╲    ╱ │              │
+  │              │              │
+  └──────────────┴──────────────┘
+
+  The entity "fire" (•) sits in the overlap zone —
+  shared between both claims.
+```
+
+**Disjunction (OR):** Two frames touch at their boundaries but don't share interior. Reading either frame independently yields a valid statement; the spatial adjacency signals "at least one of these."
+
+```
+  "The light is red OR the light is green"
+
+  ┌──────────────┐┌──────────────┐
+  │  •───→───○   ││  •───→───○   │
+  │ (light) (red)││(light)(green)│
+  └──────────────┘└──────────────┘
+
+  Frames touch but don't overlap.
+  At least one claim holds.
+```
+
+### 9.3 Negation in Practice
+
+Negation is defined as **reflection** of content through the frame's center (see `formal-operations.md` §1.4). In practice:
+
+**Method 1 — Full reflection:** Mirror the entire content of the frame. If the original has `•──→──•`, the negation has `•──←──•` (reversed direction). This is geometrically precise.
+
+**Method 2 — Negation mark (practical shorthand):** Draw a diagonal strike-through (╲) across the frame or the relation being negated. This is a conventional shorthand, not a geometric primitive — but it's unambiguous and much easier to draw.
+
+```
+  "Fire is NOT cold"
+
+  Method 1 (precise):         Method 2 (practical):
+  ┌──────────────┐            ┌──────────────┐
+  │  •←══──○     │            │  •──══→─○    │
+  │  (reflected)  │            │      ╲       │
+  └──────────────┘            │  (crossed out)│
+                              └──────────────┘
+```
+
+**Scope matters:** Negation applies to whatever frame encloses the reflected/struck content.
+- NOT(A AND B) ≠ (NOT A) AND B — the negation frame must enclose the conjunction, not just one claim.
+
+### 9.4 Conditionals and Implication
+
+"If A then B" = "NOT-A OR B" algebraically, but geometrically it's more natural as **causal embedding**:
+
+1. Write assertion A (the premise) in its own frame.
+2. `embed(A)` — shrink it to entity size.
+3. Connect the embedded premise to the conclusion with a directed relation.
+4. Frame the whole thing as a new assertion.
+
+This was demonstrated in Example 3 (§6.3, "If the temperature drops, then water freezes"). The embedded inner frame IS the "if" clause; the directed relation IS the "then."
+
+### 9.5 Compound Statement Patterns Summary
+
+| Pattern | Natural language | Operations | Frame geometry |
+|---------|-----------------|-----------|----------------|
+| Simple AND | "A and B" | `conjoin(a₁, a₂)` | Overlapping frames |
+| Simple OR | "A or B" | `disjoin(a₁, a₂)` | Adjacent frames |
+| Simple NOT | "not A" | `negate(a)` | Reflected content |
+| IF-THEN | "if A then B" | `predicate(embed(a₁), r, ...)` | Embedded premise → conclusion |
+| BUT (contrastive AND) | "A but B" | `conjoin(a₁, a₂)` with 180° between | Overlapping frames + opposing relations |
+| BECAUSE | "A because B" | `predicate(embed(a_B), r_cause, embed(a_A))` | Two embedded facts linked causally |
+| NEITHER-NOR | "neither A nor B" | `negate(disjoin(a₁, a₂))` | Negated adjacent frames |
+
+---
+
+## 10. COMPOUND WORKED EXAMPLES
+
+### 10.1 Example 7: "Love is patient AND love is strong."
+
+Two properties of the same entity — conjunction with a shared subject.
+
+**Decompose each claim separately:**
+
+Claim A: "Love is patient" → `modify_entity(m_patient, e_love)` (gentle curve inside circle — §6.6)
+
+Claim B: "Love is strong" → `modify_entity(m_strong, e_love)` — strength geometrically is emphasis/boldness. A bold point or thick boundary.
+
+**Combine:** `conjoin(a₁, a₂)` — overlapping frames, shared entity.
+
+**Draw:**
+```
+  ┌──────────────────┬──────────────────┐
+  │                  │                  │
+  │  ○{ •  ⌒⌒⌒ }   │   ○{ ●  }       │
+  │   (patience:     │    (strength:    │
+  │    gentle curve) │     bold point)  │
+  │                  │                  │
+  └──────────────────┴──────────────────┘
+```
+Two overlapping frames. The entity (love) is implicit in both — the circle enclosure ○ appears in each. Left frame: patience as gentle curve inside. Right frame: strength as bold/enlarged point (●) inside. The shared boundary asserts both are true of the same thing.
+
+**Verify:**
+- Pass 1: Two overlapping frames = conjunction. Circle enclosures inside each.
+- Pass 2: No relation between frames — each is a self-contained property claim.
+- Pass 3: No angles.
+- Pass 4: Points inside each circle — one gentle, one bold.
+- Pass 5: Left curve = sustained process. Right = no curvature.
+
+**Reading:** "A complete concept characterized by gentle process AND a complete concept characterized by emphasis." = "Something is both patient and strong." ✓
+
+---
+
+### 10.2 Example 8: "Either the answer is true OR the answer is false."
+
+Exclusive disjunction — exactly one holds.
+
+**Decompose:**
+
+Claim A: "The answer is true" → `predicate(e_answer, r_identity, e_truth)`
+- e_answer = • (an entity)
+- e_truth = ○{•} (truth — Lexicon T2: maximally symmetric enclosure of existence)
+- r_identity = 0° connection
+
+Claim B: "The answer is false" → `predicate(e_answer, r_identity, negate(e_truth))`
+- e_false = reflected ○{•} (negation of truth)
+
+**Combine:** `disjoin(a₁, a₂)` — adjacent frames.
+
+**Draw:**
+```
+  ┌──────────────────┐┌──────────────────┐
+  │                  ││                  │
+  │  •════○{•}      ││  •════○{•←}     │
+  │ (answer)(truth)  ││(answer)(false:   │
+  │                  ││ reflected truth)  │
+  └──────────────────┘└──────────────────┘
+```
+Two frames touching but not overlapping. Left: entity connected at 0° to ○{•} (truth). Right: same entity connected at 0° to reflected ○{•} (falsehood — reflected content inside the circle). Adjacent frames = at least one is true = disjunction.
+
+**Verify:**
+- Pass 1: Two adjacent frames = disjunction.
+- Pass 2: Identity connections (0°) in each frame.
+- Pass 3: 0° angles — identity.
+- Pass 4: Points and enclosures.
+- Pass 5: No curvature — static claims.
+
+**Reading:** "Either [an entity is identical to truth] OR [an entity is identical to reflected-truth]." ✓
+
+---
+
+### 10.3 Example 9: "Love is NOT indifferent."
+
+Negation of a property — negate a complete assertion.
+
+**Decompose:**
+
+Inner claim: "Love is indifferent" → What is indifference? 90° = independence/orthogonality. Indifference is the quality of being unrelated — a 90° modifier.
+
+So: `modify_entity(m_90°, e_love)` = love with orthogonal/independent quality.
+
+Negate: `negate(a_inner)` = reflect this claim.
+
+**Draw:**
+```
+  ┌───────────────────────┐
+  │                       │
+  │   ○{ •  ∟ }  ╲       │
+  │    (inner claim       │
+  │     struck through)   │
+  │                       │
+  └───────────────────────┘
+```
+A circle enclosure containing an entity modified by a visible right-angle mark (∟ = 90° = indifference). The diagonal strike-through (╲) across the frame negates the claim. Alternatively, reflect the interior content.
+
+**Verify:**
+- Pass 1: One frame containing a circle enclosure.
+- Pass 2: No connection between external entities — internal structure.
+- Pass 3: 90° angle inside the circle.
+- Pass 4: Point inside circle.
+- Pass 5: No curvature.
+
+**Reading:** "NOT [a complete concept containing an existence characterized by orthogonal/independent quality]." = "Not an indifferent thing." ✓
+
+---
+
+### 10.4 Example 10: "Peace emerges when harmony overcomes conflict."
+
+This combines process (emerges), conditional (when), and embedded assertions.
+
+**Decompose:**
+
+Inner claim A: "Harmony overcomes conflict"
+- e₁ = △{•,•,•} (harmony — equilateral triangle, Lexicon: perfect balance)
+- e₂ = •∠180°• (conflict — two entities in opposition)
+- r = directed curve (overcoming is a directed process)
+- a₁ = `predicate(e₁, r_curve, e₂)`
+
+Outer claim: "Peace emerges when [A]"
+- e_peace = ○{◠↑} (peace — a complete concept with upward-tending process, resolving into calm)
+- The "when" = embed(a₁) as a cause/condition
+- "emerges" = a process (curve) from the embedded condition to peace
+
+**Draw:**
+```
+  ┌──────────────────────────────────────────┐
+  │                                          │
+  │   ┌────────────────────┐                 │
+  │   │  △{•,•,•} ══◠══→  │                 │
+  │   │ (harmony)   •∠180°•│   ◠◠◠→  ○{◠↑} │
+  │   │          (conflict) │         (peace) │
+  │   └────────────────────┘                 │
+  │   (harmony overcomes conflict)           │
+  │                                          │
+  └──────────────────────────────────────────┘
+```
+Inner frame: harmony (equilateral triangle) connected by a directed curve to conflict (two entities at 180° opposition). This frame is embedded (shrunk to entity position). A curved path connects it to peace (circle containing an upward-tending process). Outer frame asserts the whole causal structure.
+
+**Verify:**
+- Pass 1: Outer frame, inner frame, triangle enclosure, circle enclosure.
+- Pass 2: Curved directed path in inner frame; curved path from inner frame to circle.
+- Pass 3: 180° opposition between conflict entities. 60° (equilateral) within triangle.
+- Pass 4: Three points in triangle, two in conflict, one in peace circle.
+- Pass 5: Curvature throughout — dynamic, process-rich statement.
+
+**Reading:** "An embedded claim [a balanced fundamental structure overcomes an opposed pair through a process] leads through a process to a complete concept containing upward change." = "Peace emerges from harmony overcoming conflict." ✓
+
+---
+
+## 11. THE GRAMMAR BRIDGE — FROM OPERATIONS TO PARTS OF SPEECH
+
+This table maps between the four systems you encounter when writing: your natural-language intuition, the Σ_UL operations, the Grammar Book's geometric classifications, and your pen on paper.
+
+### 11.1 Operations ↔ Grammar Roles
+
+| Σ_UL Operation | Grammar Role | Writer's Question | Natural Language Analog | Drawing Action |
+|----------------|-------------|-------------------|------------------------|----------------|
+| `predicate(e, r, e)` | Predication | "How does X relate to Y?" | Subject-verb-object: "A acts on B" | Two marks + connecting stroke + frame |
+| `modify_entity(m, e)` | Noun qualification | "What is X like?" | Adjective: "the **big** dog" | Transform the entity (scale, reshape) |
+| `modify_relation(m, r)` | Relation qualification | "In what manner?" | Adverb: "acts **strongly**" | Angle where relation meets context |
+| `negate(a)` | Logical negation | "What is NOT true?" | "does **not** act on" | Reflect frame content or strike through |
+| `conjoin(a₁, a₂)` | Conjunction | "What holds for BOTH?" | "A **and** B" | Overlapping frames |
+| `disjoin(a₁, a₂)` | Disjunction | "What holds for EITHER?" | "A **or** B" | Adjacent (touching) frames |
+| `embed(a)` | Nominalization | "What is the FACT that...?" | "**that** A happened" | Shrink frame, use as entity |
+| `abstract(e)` | Adjectivalization | "What is X-LIKE?" | "wood → **wooden**" | Use entity's shape as a transformation |
+| `compose(r₁, r₂)` | Relation chaining | "X to Y, then Y to Z?" | "**grandfather** = father's father" | Two strokes end-to-end |
+| `invert(r)` | Voice change | "Who acts on whom?" | Active → passive: "is **acted upon by**" | Reverse the arrow |
+| `quantify(m, e)` | Quantification | "How many? Which ones?" | "**all** dogs" / "**some** dogs" | Scale entity large (all) or small (some) |
+
+### 11.2 Parts of Speech ↔ Geometry
+
+The Grammar Book classifies parts of speech by **symmetry group** — higher symmetry = more abstract/general:
+
+| Part of Speech | Symmetry | Geometric Property | UL Sort | Example |
+|---------------|----------|-------------------|---------|---------|
+| **Universal noun** (abstract concept) | SO(2) — full rotational | Looks same from all angles | Entity (e) in ○ | "truth," "everything" |
+| **Common noun** (structured concept) | Dₙ — discrete rotational | Specific symmetry pattern | Entity (e) in polygon | "system," "person" |
+| **Verb** (action/process) | Low/no rotational | Has preferred direction | Relation (r) | "acts," "becomes" |
+| **Adjective/Adverb** (quality) | Bilateral — one mirror axis | One comparison dimension | Modifier (m) | "big," "gently" |
+| **Proper noun** (specific) | No symmetry | Unique, context-bound | Entity (e) as labeled • | "Mars," "Jono" |
+
+### 11.3 Relationship Classes ↔ Writer's Decisions
+
+When decomposing a thought, the type of relationship determines which geometric class you're in:
+
+| If the relationship involves... | Relationship Class | Key geometric property | Examples |
+|--------------------------------|-------------------|----------------------|----------|
+| Contact, membership, inclusion | **Incidence** (Class 1) | What touches what | "X belongs to Y," "X is a Y," "X and Y meet" |
+| Amount, degree, distance | **Metric** (Class 2) | How much, how far | "X is larger than Y," "X strongly relates to Y" |
+| Sameness, opposition, analogy | **Symmetry** (Class 3) | What is preserved under transformation | "X is like Y," "X opposes Y," "X equals Y" |
+| Essential structure, type | **Topological** (Class 4) | What survives continuous deformation | "X is essentially Y," "X is a type of Y" |
+
+---
+
+## 12. QUICK REFERENCE — THE WRITER'S CHECKLIST
 
 Before drawing, verify:
 
@@ -944,7 +1260,7 @@ After drawing, verify:
 
 ---
 
-## 10. COMMON MISTAKES AND FIXES
+## 13. COMMON MISTAKES AND FIXES
 
 | Mistake | Why it happens | Fix |
 |---------|---------------|-----|
@@ -958,7 +1274,7 @@ After drawing, verify:
 
 ---
 
-## 11. WHAT THIS GUIDE DOES NOT COVER
+## 14. WHAT THIS GUIDE DOES NOT COVER
 
 | Topic | Why not | Where to find it |
 |-------|---------|-----------------|
