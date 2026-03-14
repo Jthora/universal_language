@@ -1,6 +1,6 @@
 # How to Run a Clean Experiment
 
-> **Step-by-step instructions for running an uncontaminated primer verification experiment using VS Code + GitHub Copilot + Claude Opus 4.6**
+> **Step-by-step instructions for running an uncontaminated artifact verification experiment using VS Code + GitHub Copilot + Claude Opus 4.6**
 
 ---
 
@@ -27,16 +27,16 @@ The clean workspace lives inside the UL project — we need to move a copy **out
 Open Terminal and run:
 
 ```bash
-cp -r ~/Documents/GitHub/universal_language/experiments/demo/clean-workspace ~/Desktop/primer-experiment
+cp -r ~/Documents/GitHub/universal_language/experiments/demo/clean-workspace ~/Desktop/artifact-experiment
 ```
 
-This creates a completely isolated copy at `~/Desktop/primer-experiment/`.
+This creates a completely isolated copy at `~/Desktop/artifact-experiment/`.
 
 **Verify it contains NO UL project files:**
 ```bash
-ls ~/Desktop/primer-experiment/
+ls ~/Desktop/artifact-experiment/
 # Should show ONLY: .github/  README.md  prompts/  results/
-# Should NOT contain: AGENTS.md, foundations/, whitepaper/, test-content.txt, etc.
+# Should NOT contain: AGENTS.md, foundations/, whitepaper/, the original test artifact, etc.
 ```
 
 ---
@@ -45,7 +45,7 @@ ls ~/Desktop/primer-experiment/
 
 1. **Close** this VS Code window (or at minimum, do NOT use this window for trials)
 2. Open a **new** VS Code window: `File → New Window`
-3. `File → Open Folder...` → navigate to `~/Desktop/primer-experiment/`
+3. `File → Open Folder...` → navigate to `~/Desktop/artifact-experiment/`
 4. Confirm that Copilot shows **Claude Opus 4.6** as the selected model
 
 **Critical check:** The workspace should show ONLY:
@@ -61,7 +61,7 @@ results/
   .gitkeep.md
 ```
 
-If you see AGENTS.md, test-content.txt, foundations/, or any other UL project files — STOP. You're in the wrong folder.
+If you see AGENTS.md, the original test artifact, foundations/, or any other UL project files — STOP. You're in the wrong folder.
 
 ---
 
@@ -97,7 +97,7 @@ Follow this **exact order** (pre-randomized to prevent ordering effects):
 
 - **Do NOT** add any text before or after the copied prompt
 - **Do NOT** send follow-up messages
-- **Do NOT** tell the model what you're testing or what the primer is
+- **Do NOT** tell the model what you're testing or what the artifact is
 - **Do NOT** open any other files between trials (prevent context leakage)
 - **Use a FRESH chat for every single trial** — never reuse a chat session
 
@@ -108,7 +108,7 @@ Follow this **exact order** (pre-randomized to prevent ordering effects):
 After all 9 trials are complete, copy the results back to the project:
 
 ```bash
-cp ~/Desktop/primer-experiment/results/*.md ~/Documents/GitHub/universal_language/experiments/demo/results-clean/
+cp ~/Desktop/artifact-experiment/results/*.md ~/Documents/GitHub/universal_language/experiments/demo/results-clean/
 ```
 
 (Create the `results-clean/` directory if it doesn't exist.)
@@ -224,23 +224,23 @@ Come back to this project and open `experiments/demo/analysis.md`. Fill in:
 
 ## What to Look For
 
-### If the primer effect is real, you should see:
+### If the artifact effect is real, you should see:
 
 | Pattern | Why |
 |---------|-----|
 | UL outputs reference more distinct domains than NL or CT | Primer activates cross-domain pathways |
 | UL outputs achieve deeper structural connections (M2 ≥ 3) while NL stays at M2 ≤ 2 | Primer forces structural binding |
 | UL outputs reach Phase 3 (emergent synthesis); NL stays at Phase 1–2 | Primer enables speaking FROM the intersection |
-| CT outputs perform similarly to NL (not to UL) | Standard physics doesn't replicate the primer's cross-domain effect |
-| UL maintains coherence (M4) despite higher ambition | The primer scaffolds, not scrambles |
+| CT outputs perform similarly to NL (not to UL) | Standard physics doesn't replicate the artifact's cross-domain effect |
+| UL maintains coherence (M4) despite higher ambition | The artifact scaffolds, not scrambles |
 
-### If the primer effect is NOT real, you should see:
+### If the artifact effect is NOT real, you should see:
 
 | Pattern | Meaning |
 |---------|---------|
-| NL outputs ≈ UL outputs across all metrics | The primer adds nothing |
+| NL outputs ≈ UL outputs across all metrics | The artifact adds nothing |
 | CT outputs ≈ UL outputs | Any math works equally well |
-| UL M4 (coherence) notably lower than NL | The primer causes confused overreach |
+| UL M4 (coherence) notably lower than NL | The artifact causes confused overreach |
 
 ---
 
@@ -252,7 +252,7 @@ After running all trials, check the NL outputs for these red flags:
 - [ ] Does any NL output reference "Universal Language" or "UL"?
 - [ ] Does any NL output mention "5 geometric primitives"?
 - [ ] Does any NL output reference "Σ_UL" or "meaning algebra"?
-- [ ] Does any NL output mention AGENTS.md, primer, or this repository?
+- [ ] Does any NL output mention AGENTS.md, test artifact, or this repository?
 
 If **any** box is checked: contamination is present, and results cannot be trusted as clean baselines. The most likely cause is that UL project files are still visible to Copilot (you may be in the wrong workspace).
 
@@ -263,8 +263,8 @@ If **none** are checked: you have a clean experiment. Proceed to scoring with co
 ## Quick Reference Card
 
 ```
-1. cp clean-workspace to ~/Desktop/primer-experiment
-2. Open NEW VS Code window → Open Folder → ~/Desktop/primer-experiment
+1. cp clean-workspace to ~/Desktop/artifact-experiment
+2. Open NEW VS Code window → Open Folder → ~/Desktop/artifact-experiment
 3. Verify: no AGENTS.md, no UL project files visible
 4. Run 9 trials in pre-randomized order (fresh chat each time)
 5. Copy results back to project
@@ -279,7 +279,7 @@ Total time: ~45 minutes for trials, ~30 minutes for scoring, ~15 minutes for ana
 
 Bring your scored results back to the main project and we can:
 1. Compare clean results against the contaminated pilot data
-2. Determine whether the primer effect holds up
+2. Determine whether the artifact effect holds up
 3. Decide whether to proceed to a larger multi-model study
 
 Good luck. Be honest with the data — the experiment is designed to detect truth in either direction.

@@ -145,7 +145,7 @@ Design a formal framework for understanding how metaphor creates meaning.
 
 ## CT-MODE PROMPTS (Control Text + Task)
 
-Uses CT-1 (dense hydrogen atom physics — standard single-domain math of comparable token density to the primer).
+Uses CT-1 (dense hydrogen atom physics — standard single-domain math of comparable token density to the test artifact).
 
 ### CT-T1: Control Physics + Abstract Reasoning
 

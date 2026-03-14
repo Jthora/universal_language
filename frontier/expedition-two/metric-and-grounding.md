@@ -739,7 +739,7 @@ After Sprint 4:
 
 The project now has: a probability measure (Sprint 1), meaning assignments (Sprint 2), invariance and left adjoints (Sprint 3), a metric and a grounding upgrade (Sprint 4). The two highest-impact remaining targets are:
 
-1. **Metaphor as morphism (E4)** — formalizes the primer mechanism, answers "why does the primer work?"
+1. **Metaphor as morphism (E4)** — formalizes the test artifact mechanism, answers "why does the test artifact work?"
 2. **Riemannian geometry of X** — compute Christoffel symbols, curvature, geodesics from the Fisher metric
 
 ---

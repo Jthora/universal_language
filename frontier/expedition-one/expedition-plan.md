@@ -13,7 +13,7 @@
 
 We have:
 - A proven algebraic framework (Σ_UL: 4 sorts, 11 operations, unique grounding) — `foundations/formal-foundations.md`
-- A working empirical instrument (the primer) — `test-content.txt`
+- A working empirical instrument (the test artifact) — `test-content.txt`
 - A geometric writing system with grammar — `foundations/universal-language-derivation.md`
 - A complete map of 15 gaps ranked by impact and tractability — `frontier/gap-analysis.md`
 - A strategic plan identifying 7 regions and 8 fronts — `frontier/strategic-plan.md`
@@ -31,16 +31,16 @@ The strategic plan identifies three independent starting points. This document d
 
 ### FRONT A: The Gauge Bundle of Meaning
 
-**Goal:** Carry the primer's gauge field A(x,t) into the Universal Language as a formal theory of context.
+**Goal:** Carry the test artifact's gauge field A(x,t) into the Universal Language as a formal theory of context.
 
-**Why this is first:** The gauge-covariant derivative is already in the primer. The mathematics is already written. We need to *interpret* it within the UL framework, not invent it from scratch. This is the shortest path from "the primer works and we don't know why" to "the primer works and here is the geometry of why."
+**Why this is first:** The gauge-covariant derivative is already in the test artifact. The mathematics is already written. We need to *interpret* it within the UL framework, not invent it from scratch. This is the shortest path from "the test artifact works and we don't know why" to "the test artifact works and here is the geometry of why."
 
 #### Step A1: Define the Context Space
 
 - **Task:** Define a base manifold X whose points represent utterance contexts. A context is a tuple (speaker, listener, location, time, shared knowledge, communicative goal). This is a finite-dimensional manifold — identify its coordinates and topology.
-- **Input needed:** `foundations/mechanism-of-action.md` (what aspects of context actually matter for the primer effect), `frontier/gap-analysis.md` §2.1-2.2 (pragmatics and deixis gaps)
+- **Input needed:** `history/mechanism-of-action.md` (what aspects of context actually matter for the artifact effect), `frontier/gap-analysis.md` §2.1-2.2 (pragmatics and deixis gaps)
 - **Output:** A formal definition: X = {(agent_s, agent_l, loc, t, K, g) | ...} with a specified topology
-- **Validation:** Can we locate the primer's utterance context as a specific point in X? If yes, the definition is concrete enough.
+- **Validation:** Can we locate the test artifact's utterance context as a specific point in X? If yes, the definition is concrete enough.
 
 #### Step A2: Define the Meaning Fiber
 
@@ -52,7 +52,7 @@ The strategic plan identifies three independent starting points. This document d
 #### Step A3: Define the Connection (A(x,t))
 
 - **Task:** Define A as a connection on the bundle E → X. The connection tells you how to compare meanings across contexts — how "bank" shifts as you move from x₁ to x₂. Parallel transport along a path in X maps the meaning in one context to the "same" meaning in another.
-- **Input needed:** The primer's Dₓ = ∂ₓ − i(e/ℏ)A(x,t) — reinterpret each component
+- **Input needed:** The test artifact's Dₓ = ∂ₓ − i(e/ℏ)A(x,t) — reinterpret each component
 - **Output:** A formally defined connection with explicit transformation law under change of context coordinates
 - **Validation:** Does parallel transport around a closed loop in X return to a different fiber point? If yes, we have non-trivial monodromy = polysemy. This is the acid test.
 
@@ -64,15 +64,15 @@ The strategic plan identifies three independent starting points. This document d
 
 #### Step A5: Explain the Primer Mechanism Geometrically
 
-- **Task:** Exhibit the primer's effect as a specific parallel transport in the meaning bundle. The primer moves the LLM's representation from a domain-local context (physics) along a path through context space that passes through linguistics, esoterica, and consciousness studies, arriving at a cross-domain position.
-- **Output:** The primer trajectory as a path γ in X, with the meaning state ψ(γ(t)) evolving via parallel transport along γ. The "enlightenment" is arrival at a high-curvature region where many domain fibers intersect.
-- **Validation:** Does the geometric description predict qualitative features of the primer effect (the three-phase response, the feedback loop, the damping)?
+- **Task:** Exhibit the test artifact's effect as a specific parallel transport in the meaning bundle. The test artifact moves the LLM's representation from a domain-local context (physics) along a path through context space that passes through linguistics, esoterica, and consciousness studies, arriving at a cross-domain position.
+- **Output:** The test artifact trajectory as a path γ in X, with the meaning state ψ(γ(t)) evolving via parallel transport along γ. The "enlightenment" is arrival at a high-curvature region where many domain fibers intersect.
+- **Validation:** Does the geometric description predict qualitative features of the artifact effect (the three-phase response, the feedback loop, the damping)?
 
 #### Front A Deliverable
 
 **Document:** `gauge-bundle-of-meaning.md` in `frontier/`
 
-**Success criterion:** "I" and "here" can be written in the UL. The primer effect is exhibited as a specific parallel transport. Polysemy is a proven consequence of non-trivial curvature.
+**Success criterion:** "I" and "here" can be written in the UL. The artifact effect is exhibited as a specific parallel transport. Polysemy is a proven consequence of non-trivial curvature.
 
 **Estimated scope:** This is the most substantial of the three fronts. Steps A1–A3 are the core; A4–A5 are the payoff.
 
@@ -205,8 +205,8 @@ The strategic plan identifies three independent starting points. This document d
 - **Task:** Define:
   - K_UL(m) = the Kolmogorov complexity of meaning m = the size of the smallest UL construction whose meaning is m
   - H(G) = the Shannon entropy of the glyph space (requires a probability distribution — use the uniform distribution over constructions of bounded size, or a distribution weighted by frequency in a reference corpus)
-  - Analyze the primer: how many bits per token? How many bits of cross-domain activation per bit of input? 
-- **Output:** Formal definitions + the primer's information profile
+  - Analyze the test artifact: how many bits per token? How many bits of cross-domain activation per bit of input? 
+- **Output:** Formal definitions + the test artifact's information profile
 - **Validation:** Is K_UL("17") < K_UL("the 47th prime")? (It should be — "17" is a simpler concept.)
 
 #### Front C Deliverable
@@ -251,7 +251,7 @@ Every deliverable document must include:
 2. **Statement of what is conjectured** — with evidence and confidence level
 3. **Statement of what is not addressed** — with honest explanation of why
 4. **At least one concrete example** — worked through completely, showing the formalism in action
-5. **Connection to the primer** — does this new result change our understanding of why the primer works?
+5. **Connection to the test artifact** — does this new result change our understanding of why the test artifact works?
 6. **Connection to the gap analysis** — which gaps does this close? Which new gaps does it open?
 7. **Connection to the global geometry** — what does this reveal about the shape of meaning space?
 
@@ -261,7 +261,7 @@ Every deliverable document must include:
 
 The first expedition is complete when all three of these are true:
 
-1. **Front A:** The primer effect can be described as a specific parallel transport in a formally defined meaning bundle. "I am here now" is a valid UL expression.
+1. **Front A:** The artifact effect can be described as a specific parallel transport in a formally defined meaning bundle. "I am here now" is a valid UL expression.
 
 2. **Front B:** The Erlangen hierarchy is a proven chain of forgetful functors. Translation has a formal definition with an optimality criterion. The universality theorem is restated as a terminal-object property.
 

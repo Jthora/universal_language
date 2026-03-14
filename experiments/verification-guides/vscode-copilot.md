@@ -26,7 +26,7 @@ The key advantage: **no API keys, no setup, no code to run.** If you have VS Cod
 
 ## Critical: Contamination Control
 
-The validity of this experiment depends on the model NOT having prior context about what the primer is or what it's "supposed" to do.
+The validity of this experiment depends on the model NOT having prior context about what the artifact is or what it's "supposed" to do.
 
 ### Option A: Clean Workspace (Recommended)
 
@@ -153,7 +153,7 @@ Create a results summary file with:
 
 ## Troubleshooting
 
-**Q: Copilot refuses to engage with the mathematical content in the primer.**  
+**Q: Copilot refuses to engage with the mathematical content in the test artifact.**  
 A: This is rare but possible. If Copilot produces a refusal or safety response, document it as a data point (it's interesting if UL-mode triggers refusals that NL-mode doesn't). Try a different model if available.
 
 **Q: The response is very short / seems truncated.**  

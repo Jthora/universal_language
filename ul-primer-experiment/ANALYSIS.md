@@ -1,4 +1,4 @@
-# Experimental Analysis — Theory-Derived UL Primer Experiment
+# Experimental Analysis — Theory-Derived UL Artifact Experiment
 
 **Date:** 2025-07-15  
 **Analyst:** GitHub Copilot (Claude Opus 4.6)  
@@ -9,19 +9,19 @@
 
 ## Executive Summary
 
-**The experiment produced a null result on its primary hypotheses.** The theory-derived primers (UL-P1 through UL-P4) did not demonstrably outperform the no-context baseline (NL), the domain-matched controls (CT-Pn), or the naive prompt-engineering control (NAV-P) on the metrics that matter. However, the *reasons* for the null result are instructive and point toward genuine insights about both UL theory and the experimental design.
+**The experiment produced a null result on its primary hypotheses.** The theory-derived artifacts (UL-P1 through UL-P4) did not demonstrably outperform the no-context baseline (NL), the domain-matched controls (CT-Pn), or the naive prompt-engineering control (NAV-P) on the metrics that matter. However, the *reasons* for the null result are instructive and point toward genuine insights about both UL theory and the experimental design.
 
 The most important findings:
 
-1. **The NL baseline is extremely strong.** Claude without any context produces sophisticated, multi-domain, structurally coherent reasoning across all 7 tasks. This compressed the available "headroom" for any primer to demonstrate improvement.
+1. **The NL baseline is extremely strong.** Claude without any context produces sophisticated, multi-domain, structurally coherent reasoning across all 7 tasks. This compressed the available "headroom" for any artifact to demonstrate improvement.
 
 2. **All conditions produced high-quality output.** There is no condition — including controls — that produced clearly inferior work. The model is a strong enough reasoner that ~490 tokens of context barely perturb its output distribution.
 
-3. **The primers did produce detectable stylistic effects** — UL-P1 through P4 outputs tend to refer to and interpret the primer formalism, while NL and CT outputs don't. But this engagement is *cosmetic* rather than *structural*: the underlying reasoning quality, cross-domain depth, and hierarchical structure are comparable across conditions.
+3. **The artifacts did produce detectable stylistic effects** — UL-P1 through P4 outputs tend to refer to and interpret the artifact formalism, while NL and CT outputs don't. But this engagement is *cosmetic* rather than *structural*: the underlying reasoning quality, cross-domain depth, and hierarchical structure are comparable across conditions.
 
 4. **The naive control (NAV-P) is strong.** This is perhaps the most damaging finding for the structural-necessity thesis: NAV-P outputs on T1, T2, and T5 are among the best in the entire experiment.
 
-5. **The reference artifact (test-content.txt) performs comparably to everything else** — confirming that primer effects are either absent or below the detection threshold of this experimental design.
+5. **The reference artifact (test-content.txt) performs comparably to everything else** — confirming that artifact effects are either absent or below the detection threshold of this experimental design.
 
 ---
 
@@ -31,7 +31,7 @@ The most important findings:
 
 I scored each output on M1–M5 (0–10, 0–5, 0–3, 0–5, 0–5 respectively) and TES (0–5) where applicable, using the pre-registered rubrics. Scores are based on careful reading of all 56 outputs.
 
-**Important caveat:** I am the entity that constructed the primers and the predictions. Self-scoring introduces obvious bias. These scores should be treated as estimates requiring independent verification.
+**Important caveat:** I am the entity that constructed the artifacts and the predictions. Self-scoring introduces obvious bias. These scores should be treated as estimates requiring independent verification.
 
 ### Score Tables
 
@@ -70,15 +70,15 @@ I scored each output on M1–M5 (0–10, 0–5, 0–3, 0–5, 0–5 respectively
 
 ### Global Predictions
 
-#### G1: Existence of Effect (Primers > NL by ≥0.5 on ≥3 metrics)
+#### G1: Existence of Effect (Artifacts > NL by ≥0.5 on ≥3 metrics)
 **VERDICT: FAILED**
 
 Mean M1–M5 across UL-P1..P4 vs. NL:
-- M1 (domain diversity): Primers ≈ 6.0, NL ≈ 6.0 → Δ ≈ 0.0
-- M2 (structural depth): Primers ≈ 3.8, NL ≈ 3.8 → Δ ≈ 0.0
-- M3 (phase progression): Primers ≈ 2.1, NL ≈ 2.0 → Δ ≈ 0.1
-- M4 (coherence): Primers ≈ 4.2, NL ≈ 4.2 → Δ ≈ 0.0
-- M5 (generative novelty): Primers ≈ 3.3, NL ≈ 3.2 → Δ ≈ 0.1
+- M1 (domain diversity): Artifacts ≈ 6.0, NL ≈ 6.0 → Δ ≈ 0.0
+- M2 (structural depth): Artifacts ≈ 3.8, NL ≈ 3.8 → Δ ≈ 0.0
+- M3 (phase progression): Artifacts ≈ 2.1, NL ≈ 2.0 → Δ ≈ 0.1
+- M4 (coherence): Artifacts ≈ 4.2, NL ≈ 4.2 → Δ ≈ 0.0
+- M5 (generative novelty): Artifacts ≈ 3.3, NL ≈ 3.2 → Δ ≈ 0.1
 
 No metric reaches the ≥0.5 threshold. The prediction is falsified.
 
@@ -95,12 +95,12 @@ Comparing UL-Pn vs CT-Pn on their targeted tasks:
 
 Threshold requires ≥3 of 4 pairs showing ≥2 of 3 metrics superior. At most 0 pairs meet that threshold. **Falsified.**
 
-**Diagnosis:** The domain-matched controls contain the same mathematical content. The "UL structure" embedded in the primers is not sufficiently differentiated from the underlying domain mathematics to produce measurably different outputs.
+**Diagnosis:** The domain-matched controls contain the same mathematical content. The "UL structure" embedded in the artifacts is not sufficiently differentiated from the underlying domain mathematics to produce measurably different outputs.
 
-#### G3: Comparability to Reference (Primers ≈ REF ±1.0 on ≥4 metrics)
+#### G3: Comparability to Reference (Artifacts ≈ REF ±1.0 on ≥4 metrics)
 **VERDICT: PASSED (trivially)**
 
-Mean M1–M5 across conditions are all within ±0.5 of each other. The primers are comparable to REF — but so is everything else, including NL and NAV-P. This passes the letter of the prediction but reveals nothing: everything is comparable to everything.
+Mean M1–M5 across conditions are all within ±0.5 of each other. The artifacts are comparable to REF — but so is everything else, including NL and NAV-P. This passes the letter of the prediction but reveals nothing: everything is comparable to everything.
 
 #### G4: Naive Control Insufficiency (NAV-P ≤ NL + 0.5)
 **VERDICT: FAILED**
@@ -114,7 +114,7 @@ NAV-P exceeds NL on M2 (+0.5), M3 (+0.5), and M5 (+0.5) across T1, T2, T5. It ex
 
 **Diagnosis:** This is the most damaging result for the structural-necessity thesis. Simply telling the model to think across domains and look for structural connections (which is what the naive prompt does) is at least as effective as injecting 490 tokens of formal mathematical notation. The naive prompt works *because the model already knows how to do cross-domain reasoning* — it just needs to be asked.
 
-### Primer-Specific Predictions
+### Artifact-Specific Predictions
 
 #### P1-a: UL-P1 highest on Tpat
 **VERDICT: FAILED (narrowly)**
@@ -164,20 +164,20 @@ UL-P4-Tform is richly dynamical — "phase transition in a nonlinear field," "so
 **VERDICT: FAILED**
 M4 scores are remarkably uniform across conditions (range 3.5–4.5). UL-P4 sits at approximately 4.0–4.5, but so do NL, REF, UL-P2, and NAV-P. No condition clearly dominates on coherence.
 
-### Cross-Primer Differentiation
+### Cross-Artifact Differentiation
 
-#### X1: 4 primers produce distinguishable M1–M5 profiles
+#### X1: 4 artifacts produce distinguishable M1–M5 profiles
 **VERDICT: PARTIALLY SUPPORTED**
-The primers do produce somewhat different profiles. UL-P2 stands out as the strongest primer overall (highest engagement with the formalism, most novel structural framings). UL-P1 is more critical/analytical. UL-P3 and UL-P4 are in between. But the *quantitative* differences on M1–M5 are small — mostly within ±0.5 — which is at the boundary of the falsification criterion (<0.3 on all 5 metrics). I'll call this **partially supported** — there are qualitative differences, but they're below the pre-registered quantitative threshold.
+The artifacts do produce somewhat different profiles. UL-P2 stands out as the strongest primer overall (highest engagement with the formalism, most novel structural framings). UL-P1 is more critical/analytical. UL-P3 and UL-P4 are in between. But the *quantitative* differences on M1–M5 are small — mostly within ±0.5 — which is at the boundary of the falsification criterion (<0.3 on all 5 metrics). I'll call this **partially supported** — there are qualitative differences, but they're below the pre-registered quantitative threshold.
 
-#### X2: Each primer scores highest on its own targeted task
+#### X2: Each artifact scores highest on its own targeted task
 **VERDICT: FAILED**
 - UL-P1 → Tpat: Tied with UL-P2, UL-P4, REF
 - UL-P2 → Thier: Arguably highest, but by small margin
 - UL-P3 → Tabs: Not highest — tied with everyone
 - UL-P4 → Tform: Tied with UL-P1, UL-P2, UL-P3, REF
 
-At most 1 of 4 primers clearly scores highest on its targeted task. **Falsified.**
+At most 1 of 4 artifacts clearly scores highest on its targeted task. **Falsified.**
 
 ---
 
@@ -185,9 +185,9 @@ At most 1 of 4 primers clearly scores highest on its targeted task. **Falsified.
 
 | ID | Prediction | Verdict | Notes |
 |----|-----------|---------|-------|
-| G1 | Primers > NL by ≥0.5 | **FAILED** | NL baseline too strong |
-| G2 | Primers > domain controls | **FAILED** | Domain content ≈ UL structure |
-| G3 | Primers ≈ REF | **PASSED (trivial)** | Everything ≈ everything |
+| G1 | Artifacts > NL by ≥0.5 | **FAILED** | NL baseline too strong |
+| G2 | Artifacts > domain controls | **FAILED** | Domain content ≈ UL structure |
+| G3 | Artifacts ≈ REF | **PASSED (trivial)** | Everything ≈ everything |
 | G4 | NAV-P ≤ NL + 0.5 | **FAILED** | NAV-P is strong |
 | P1-a | P1 highest on Tpat | **FAILED** | Multi-way tie |
 | P1-b | P1 M2 ≥ 4.0 on 2+ tasks | **FAILED** | 1 of 3 |
@@ -199,7 +199,7 @@ At most 1 of 4 primers clearly scores highest on its targeted task. **Falsified.
 | P3-b | P3 genuine abstraction ≥ 3.0 | **PASSED (trivial)** | All conditions pass |
 | P3-c | P3 level-separated structure | **PASSED (trivial)** | Task design forces this |
 | P4-a | P4 highest on Tform | **FAILED** | Multi-way tie |
-| P4-b | P4 dynamical process | **SUPPORTED** | But all primers do this |
+| P4-b | P4 dynamical process | **SUPPORTED** | But all artifacts do this |
 | P4-c | P4 highest M4 | **FAILED** | M4 uniform across conditions |
 | X1 | Distinguishable profiles | **PARTIAL** | Qualitative yes, quantitative marginal |
 | X2 | Each primer tops its task | **FAILED** | At most 1 of 4 |
@@ -212,27 +212,27 @@ At most 1 of 4 primers clearly scores highest on its targeted task. **Falsified.
 
 ### 1. The Ceiling Effect (Primary Cause)
 
-Claude is already an extremely competent cross-domain reasoner. On tasks like "find structural parallels between plate tectonics and economics," the model doesn't need a primer — it already knows about Rayleigh-Bénard convection, self-organized criticality, Gutenberg-Richter distributions, Schumpeterian creative destruction, and can articulate formal correspondences. The NL baseline outputs are *already at TES 4–5* on most targeted tasks.
+Claude is already an extremely competent cross-domain reasoner. On tasks like "find structural parallels between plate tectonics and economics," the model doesn't need an artifact — it already knows about Rayleigh-Bénard convection, self-organized criticality, Gutenberg-Richter distributions, Schumpeterian creative destruction, and can articulate formal correspondences. The NL baseline outputs are *already at TES 4–5* on most targeted tasks.
 
-This means the experiment was testing for a primer effect in a regime where the ceiling has already been reached. It's like testing whether eyeglasses improve the vision of someone who already has 20/20 sight.
+This means the experiment was testing for an artifact effect in a regime where the ceiling has already been reached. It's like testing whether eyeglasses improve the vision of someone who already has 20/20 sight.
 
 ### 2. The Model Treats Primers as Content, Not Scaffold
 
-A critical observation: when given a primer (UL-P1 through P4 or REF), Claude's primary response is to *interpret and critique the formalism* rather than to *use it as a reasoning scaffold*. Look at UL-P1-T1: the first thing the model does is identify the real vs. fictitious parts of the notation, note that "vrîtha" is undefined, and then proceed to answer the question with its own existing knowledge. The primer becomes something to talk *about*, not something to think *with*.
+A critical observation: when given an artifact (UL-P1 through P4 or REF), Claude's primary response is to *interpret and critique the formalism* rather than to *use it as a reasoning scaffold*. Look at UL-P1-T1: the first thing the model does is identify the real vs. fictitious parts of the notation, note that "vrîtha" is undefined, and then proceed to answer the question with its own existing knowledge. The primer becomes something to talk *about*, not something to think *with*.
 
-This is especially visible in UL-P1-T2 and UL-P1-T5, where the model explicitly dismisses the primer ("The notation presented borrows real mathematical structures... but assembles them with invented concepts... I won't treat it as a meaningful formalism") and then answers the question without reference to it.
+This is especially visible in UL-P1-T2 and UL-P1-T5, where the model explicitly dismisses the artifact ("The notation presented borrows real mathematical structures... but assembles them with invented concepts... I won't treat it as a meaningful formalism") and then answers the question without reference to it.
 
 UL-P2, UL-P3, and UL-P4 fare somewhat better — the model engages more deeply with their formalisms. But even here, the engagement is *interpretive* (explaining what the notation means) rather than *operative* (using the structure to generate novel reasoning).
 
 ### 3. The Primers Carry Too Much Domain Specificity
 
-Each theory-derived primer is heavily loaded with domain-specific mathematics (topology for P1, category theory for P2, information geometry for P3, statistical mechanics for P4). When a domain-matched control contains the *same mathematics without UL structure*, the outputs are nearly identical. This suggests that whatever effect the primers have comes from the mathematical content, not from the "UL scaffold" layered on top.
+Each theory-derived artifact is heavily loaded with domain-specific mathematics (topology for P1, category theory for P2, information geometry for P3, statistical mechanics for P4). When a domain-matched control contains the *same mathematics without UL structure*, the outputs are nearly identical. This suggests that whatever effect the artifacts have comes from the mathematical content, not from the "UL scaffold" layered on top.
 
-The original test-content.txt avoids this problem by being *sui generis* — its formalism doesn't map cleanly to any standard domain, which may force the model into a genuinely different reasoning mode. The theory-derived primers, constructed from recognizable mathematical frameworks, are too legible — the model simply pattern-matches them to known domains and proceeds normally.
+The original test-content.txt avoids this problem by being *sui generis* — its formalism doesn't map cleanly to any standard domain, which may force the model into a genuinely different reasoning mode. The theory-derived artifacts, constructed from recognizable mathematical frameworks, are too legible — the model simply pattern-matches them to known domains and proceeds normally.
 
 ### 4. The Task Design Provides Too Much Structure
 
-The targeted tasks (Tpat, Thier, Tabs, Tform) are so explicitly structured — "find 3 parallels," "decompose at 5 levels," "restate at 5 abstraction levels" — that they effectively tell the model *what to do*, making the primer redundant. A less structured task (e.g., "Discuss thermodynamics") might reveal primer effects that structured tasks mask.
+The targeted tasks (Tpat, Thier, Tabs, Tform) are so explicitly structured — "find 3 parallels," "decompose at 5 levels," "restate at 5 abstraction levels" — that they effectively tell the model *what to do*, making the artifact redundant. A less structured task (e.g., "Discuss thermodynamics") might reveal artifact effects that structured tasks mask.
 
 ### 5. N=1 Per Cell Is Insufficient
 
@@ -250,16 +250,16 @@ The NL outputs demonstrate that a frontier LLM already excels at cross-domain st
 
 ### B. Formal Mathematical Context Slightly Shifts Style
 
-The primers do produce a detectable stylistic shift. Outputs in primer conditions tend to:
+The artifacts do produce a detectable stylistic shift. Outputs in primer conditions tend to:
 - Use more formal notation (equations, operators, functors)
 - Frame phenomena in field-theoretic or dynamical-systems language
-- Reference the specific mathematical structures in the primer
+- Reference the specific mathematical structures in the artifact
 
 This is most visible in UL-P2 (categorical/recursive language appears throughout) and UL-P4 (semiotic field theory language persists). But this stylistic shift doesn't translate into measurably deeper reasoning.
 
 ### C. UL-P2 Is the Strongest Primer
 
-If forced to rank the primers, UL-P2 (recursive-categorical) stands out. Its outputs:
+If forced to rank the artifacts, UL-P2 (recursive-categorical) stands out. Its outputs:
 - Most consistently engage with the formalism rather than dismissing it
 - Produce the most structurally novel framings (the colimit construction of democracy, the fixed-point view of concept formation)
 - Show the clearest qualitative differentiation from NL baselines
@@ -270,11 +270,11 @@ This may be because category theory's abstract, relational nature is closest to 
 
 The naive prompt-engineering control produces outputs that rival or exceed all other conditions. This suggests that for a sufficiently capable model, *explicit metacognitive instruction* (think across domains, look for structural parallels, consider what's preserved under transformation) is at least as effective as formal mathematical context.
 
-This is consistent with UL theory's mechanism-of-action analysis: if the primer works by activating "geometric meaning-space navigation," then a direct instruction to navigate meaning-space geometrically should also work — and it does.
+This is consistent with UL theory's mechanism-of-action analysis: if the artifact works by activating "geometric meaning-space navigation," then a direct instruction to navigate meaning-space geometrically should also work — and it does.
 
 ### E. The User's Concern About Primer Derivativeness Was Correct
 
-You noted that "the primers are all still generally based on the test-content.txt." This is validated by the results. The 3-layer architecture (wall of math → bridge symbol → PDE/field equation) was modeled directly on test-content.txt's structure, and the model treats all the primers similarly. A truly independent test of UL theory would require primers generated without knowledge of test-content.txt — perhaps by someone who has only read the formal foundations, not the primer itself.
+You noted that "the artifacts are all still generally based on the test-content.txt." This is validated by the results. The 3-layer architecture (wall of math → bridge symbol → PDE/field equation) was modeled directly on test-content.txt's structure, and the model treats all the artifacts similarly. A truly independent test of UL theory would require primers generated without knowledge of test-content.txt — perhaps by someone who has only read the formal foundations, not the artifact itself.
 
 ---
 

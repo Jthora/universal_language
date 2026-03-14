@@ -1,6 +1,6 @@
 # Verification Guides — Multiple Paths to Testing UL's Causal Efficacy
 
-> **No API keys? No problem.** This directory provides multiple independent approaches to testing whether UL-structured text (the primer) produces measurable effects on LLM cognition. Every approach uses the same tasks, the same metrics, and the same pre-registered predictions — only the interface differs.
+> **No API keys? No problem.** This directory provides multiple independent approaches to testing whether UL-structured text (the test artifact) produces measurable effects on LLM cognition. Every approach uses the same tasks, the same metrics, and the same pre-registered predictions — only the interface differs.
 
 ---
 
@@ -8,7 +8,7 @@
 
 The original experimental protocol (`frontier/causal-efficacy-protocol.md`) requires API keys for OpenAI, Anthropic, or Google. This is a barrier that excludes most potential replicators. But the core experiment is simple:
 
-1. Give an LLM a reasoning task **with** the primer as context (UL-mode)
+1. Give an LLM a reasoning task **with** the test artifact as context (UL-mode)
 2. Give the same LLM the same task **without** any context (NL-mode)
 3. Give the same LLM the same task with a **matched control text** (CT-mode)
 4. Compare the outputs on pre-defined metrics
@@ -28,8 +28,8 @@ This can be done through ANY interface that lets you send text to an LLM and rea
 
 All approaches use:
 - The **same task prompts** (from `experiments/prompts/task-prompts.md`)
-- The **same primer text** (from `experiments/primer-library/original/primer.txt`)
-- The **same control texts** (from `experiments/primer-library/controls/`)
+- The **same primer text** (from `experiments/test-artifacts/original/primer.txt`)
+- The **same control texts** (from `experiments/test-artifacts/controls/`)
 - The **same scoring rubrics** (simplified version in `simplified-scoring.md`, full version in `experiments/scoring/`)
 
 ---
@@ -55,11 +55,11 @@ Do you have API keys for OpenAI, Anthropic, or Google?
 Regardless of approach, every valid test must include:
 
 ### Minimum Viable Experiment (3 trials)
-- **1 trial** in UL-mode (primer + task T1)
+- **1 trial** in UL-mode (artifact + task T1)
 - **1 trial** in NL-mode (no context + task T1)
 - **1 trial** in CT-mode (control text CT-1 + task T1)
 
-This is the smallest test that can distinguish "the primer helps" from "any math helps" and "just asking the question is enough."
+This is the smallest test that can distinguish "the test artifact helps" from "any math helps" and "just asking the question is enough."
 
 ### Recommended Quick Test (9 trials)
 - **3 conditions** (UL, NL, CT-1) × **3 tasks** (T1, T2, T3)
@@ -75,7 +75,7 @@ This provides enough data for basic statistical analysis.
 
 ## Pre-Registered Predictions
 
-These predictions are specified BEFORE any data collection. They are derived from UL theory (`foundations/mechanism-of-action.md`) and the formal structure of the primer (`foundations/primer-analysis.md`).
+These predictions are specified BEFORE any data collection. They are derived from UL theory (`history/mechanism-of-action.md`) and the formal structure of the test artifact (`history/artifact-analysis.md`).
 
 ### Primary Predictions
 
@@ -86,7 +86,7 @@ These predictions are specified BEFORE any data collection. They are derived fro
 | P3 | UL-mode outputs achieve deeper cross-domain connections than NL-mode | M2 (Structural Depth) | UL > NL |
 | P4 | UL-mode outputs achieve deeper cross-domain connections than CT-mode | M2 (Structural Depth) | UL > CT |
 | P5 | UL-mode outputs more frequently reach Phase 3 synthesis than NL-mode | M3 (Phase Progression) | UL > NL |
-| P6 | UL-mode coherence is NOT lower than NL-mode (the primer doesn't cause incoherence) | M4 (Coherence) | UL ≥ NL |
+| P6 | UL-mode coherence is NOT lower than NL-mode (the test artifact doesn't cause incoherence) | M4 (Coherence) | UL ≥ NL |
 | P7 | UL-mode outputs contain more novel connections than NL-mode | M5 (Novelty) | UL > NL |
 
 ### Structural Predictions (stronger claims)
@@ -95,14 +95,14 @@ These predictions are specified BEFORE any data collection. They are derived fro
 |---|-----------|-----------|
 | S1 | CT-1 (dense physics) does NOT produce the UL-mode pattern — high M1 requires cross-domain activation, not just math | CT-1 is single-domain math |
 | S2 | CT-2 (cross-domain prose) produces SOME improvement over NL but less than UL — prose activates cross-domain thinking but lacks the formal binding | CT-2 has cross-domain content but not UL structure |
-| S3 | The UL-CT gap is largest on M2 (structural depth) and M3 (phase progression), not M1 (domain count) — the primer's unique contribution is deep structural binding, not mere topic diversity | UL theory predicts structural, not topical, enhancement |
+| S3 | The UL-CT gap is largest on M2 (structural depth) and M3 (phase progression), not M1 (domain count) — the test artifact's unique contribution is deep structural binding, not mere topic diversity | UL theory predicts structural, not topical, enhancement |
 
 ### Falsification Criteria
 
-The primer effect is **NOT present** if any of the following hold:
+The artifact effect is **NOT present** if any of the following hold:
 - NL-mode outputs score equal to or higher than UL-mode on 3+ of 5 metrics
 - CT-1 outputs score equal to UL-mode on 3+ of 5 metrics (any math works just as well)
-- UL-mode M4 (coherence) is substantially lower than NL-mode (primer causes incoherence rather than integration)
+- UL-mode M4 (coherence) is substantially lower than NL-mode (artifact causes incoherence rather than integration)
 
 ---
 
@@ -134,4 +134,4 @@ Share results by opening an issue or PR on the repository, or by any other publi
 - **Do not modify prompts** after seeing results. Use them exactly as specified.
 - **Do not cherry-pick trials.** Report all trials, including ones where UL-mode doesn't look impressive.
 - **Do not score your own outputs unblinded.** Use the blinding procedure (label outputs A/B/C, shuffle, score, then reveal).
-- **Negative results are real results.** If the primer doesn't work, that's important information. Report it.
+- **Negative results are real results.** If the test artifact doesn't work, that's important information. Report it.

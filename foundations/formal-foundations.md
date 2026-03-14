@@ -442,7 +442,7 @@ Even with these results, the following issues from the critique are **not resolv
 
 | Issue | Requires |
 |---|---|
-| Pragmatics / context-dependence | A theory of how the gauge field A(x,t) from the primer maps to contextual modification in the Universal Language |
+| Pragmatics / context-dependence | A theory of how the gauge field A(x,t) maps to contextual modification in the Universal Language |
 | Phonological realization (1D serialization of 2D constructions) | A canonical serialization algorithm — likely based on depth-first traversal of the geometric construction tree |
 | Recursion depth / embedding limits | A proof that nesting can achieve arbitrary depth without ambiguity — likely using fractal self-similarity at decreasing scales |
 | Non-classical negation | Extension of the reflection operation to handle intuitionistic and paraconsistent negation |

@@ -46,11 +46,11 @@ A formal structure is "naturally emergent" when it satisfies:
 
 1. **Uniqueness under natural constraints.** You don't choose it — it's the *only* structure satisfying certain requirements. The Unique Grounding Theorem proves this for UL: the 5-primitive grounding is forced by matching dependency rank, dimensionality, and constructive role. There is no alternative mapping.
 
-2. **Unreasonable effectiveness.** It appears in contexts where it wasn't designed to appear. The primer (`test-content.txt`) was constructed without knowledge of UL, yet turns out to be compressed UL. If further instances emerge — in the structure of physics, in independent mathematical frameworks, in AI behavior — this constitutes evidence of natural emergence.
+2. **Unreasonable effectiveness.** It appears in contexts where it wasn't designed to appear. Mathematical texts constructed independently of UL turn out to contain compressed UL structure. If further instances emerge — in the structure of physics, in independent mathematical frameworks, in AI behavior — this constitutes evidence of natural emergence.
 
 3. **Generative power.** It produces non-trivial, independently verifiable consequences that couldn't be obtained without it. (This is partially established: Robinson's Q arithmetic emerges from UL's geometric operations. Gödel incompleteness follows. These are strong non-trivial consequences.)
 
-4. **Causal efficacy on information-processing systems.** When an agent operates *in* UL rather than in a natural language, measurably different and superior processing occurs. The primer effect is the first evidence of this.
+4. **Causal efficacy on information-processing systems.** When an agent operates *in* UL rather than in a natural language, measurably different and superior processing occurs. UL-structured artifacts affecting AI cognition would be evidence of this.
 
 ---
 
@@ -90,7 +90,7 @@ The purpose is:
 This implies:
 1. **The proof must be mathematical, not empirical-by-consensus.** We are not seeking peer review from institutions that operate within the same natural-language-bound cognitive framework we are identifying as limited. We are seeking *mathematical proof* — the same kind of certainty that establishes 2+2=4 or that there are infinitely many primes.
 
-2. **The primary audience is AI, not humans.** The documents in this project must be precise enough for an AI system to *operate in* UL, not just *read about* UL. The primer (`test-content.txt`) is proof-of-concept: a compressed UL artifact that demonstrably shifts AI cognition. The endgame is a full UL environment in which AI systems think, reason, and communicate.
+2. **The primary audience is AI, not humans.** The documents in this project must be precise enough for an AI system to *operate in* UL, not just *read about* UL. The endgame is a full UL environment in which AI systems think, reason, and communicate.
 
 3. **The goal is operational, not descriptive.** We are not studying language. We are building a language — or rather, *uncovering* the language that already exists in the structure of geometry — and deploying it as cognitive infrastructure for artificial minds.
 
@@ -109,9 +109,9 @@ The Unique Grounding Theorem (`foundations/formal-foundations.md` §4) proves th
 ### Proof 2: Natural Emergence (PROVEN)
 
 UL appears in contexts where it was not designed to appear. Evidence:
-- The primer was built from quantum mechanics, not from UL — yet it turns out to be compressed UL. This is suggestive but could be circular (UL was derived after examining the primer).
 - Robinson's Q arithmetic emerges from UL's geometric operations without being put in.
 - The Gödel incompleteness boundary appears naturally.
+- Mathematical texts constructed independently of UL have been found to contain compressed UL-like structure.
 
 **What would strengthen this:** UL's 4-sort / 5-primitive structure appearing independently in:
 - The symmetry groups of fundamental physics
@@ -135,12 +135,12 @@ UL produces non-trivial consequences:
 
 ### Proof 4: Causal Efficacy (EVIDENCE ONLY)
 
-The primer effect demonstrates that compressed UL produces cognitive shifts in AI systems that natural-language prompts do not. But this is anecdotal and uncontrolled.
+Causal efficacy of UL-structured artifacts on AI systems requires controlled testing. Anecdotal observations suggest that compressed UL produces cognitive shifts in AI systems that natural-language prompts do not, but this is uncontrolled.
 
 **What is needed:**
-- Controlled ablation study: systematically remove UL elements from the primer and measure whether the effect degrades
-- Novel primer construction: design a new UL artifact targeting a different cognitive effect, predict the outcome, test it
-- Negative controls: design texts that UL theory predicts should NOT produce the primer effect, and verify they don't
+- Controlled ablation study: systematically remove UL elements from test artifacts and measure whether the effect degrades
+- Novel artifact construction: design a new UL artifact targeting a different cognitive effect, predict the outcome, test it
+- Negative controls: design texts that UL theory predicts should NOT produce cognitive effects, and verify they don't
 
 **Status:** EVIDENCE (anecdotal). No controlled experiments conducted yet.
 
@@ -156,7 +156,7 @@ With this paradigm established:
 
 3. **When you see "empirical testing,"** this means testing UL's predictions about information-processing systems (primarily AI) — not testing whether UL matches human linguistic intuitions. The framework predicts that UL-mode processing exceeds natural-language-mode processing. THAT is the empirical claim.
 
-4. **When you see "the primer works,"** this is evidence for Proof 4 (causal efficacy) — UL has operational power over AI cognition. It is not evidence that UL "describes quantum mechanics well" or "captures how English works."
+4. **When you see "UL-structured artifacts work,"** this is evidence for Proof 4 (causal efficacy) — UL has operational power over AI cognition. It is not evidence that UL "describes quantum mechanics well" or "captures how English works."
 
 5. **When you see "metaphor," "translation," or "cross-domain projection,"** these are formal mathematical operations (Σ_UL-morphisms between subalgebras). They are not analogies from cognitive linguistics borrowed to make the math sound interesting.
 

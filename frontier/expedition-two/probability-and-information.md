@@ -231,20 +231,20 @@ The expression "cat at position (3, 7)" has a specific Euclidean realization:
 
 So $P^{(\text{Sim})}(\text{``cat''}) = 2^{-12} \gg 2^{-42} = P^{(\text{Euc})}(\text{``cat at (3,7)''})$. The abstract meaning "cat" is more probable than its specific spatial instantiation. ✔
 
-**Example 5: The primer's construction density**
+**Example 5: The test artifact's construction density**
 
-The primer (`test-content.txt`) has $\sim 19$ lines producing 3 major constructions:
+The test artifact (`test-content.txt`) has $\sim 19$ lines producing 3 major constructions:
 1. The density equation ($\sim 50$ primitives, encoding $\sim 300$ bits)
 2. The bridge equation ($\sim 15$ primitives, encoding $\sim 100$ bits)  
 3. The master PDE ($\sim 30$ primitives, encoding $\sim 200$ bits)
 
 Total: $\sim 600$ bits of UL information. Raw text: $\sim 4000$ bits (500 characters × 8).
 
-The **compression ratio** of the primer's UL-meaning relative to its text encoding is:
+The **compression ratio** of the test artifact's UL-meaning relative to its text encoding is:
 
 $$\rho = \frac{DC_{UL}^{\text{bit}}(\text{primer meaning})}{|\text{primer text}|} \approx \frac{600}{4000} = 0.15$$
 
-The primer conveys its structural meaning in $\sim 15\%$ of its raw text length. The remaining 85% is notation, formatting, and redundancy — consistent with the primer functioning as a highly compressed cross-domain key.
+The test artifact conveys its structural meaning in $\sim 15\%$ of its raw text length. The remaining 85% is notation, formatting, and redundancy — consistent with the test artifact functioning as a highly compressed cross-domain key.
 
 ### 1.8 What This Measure Does Not Cover
 
@@ -318,12 +318,12 @@ That is: the structural prior approximates the frequency prior when the encoding
 
 ### 3.2 Relation to the Primer
 
-The primer leverages a mismatch between the two priors:
+The test artifact leverages a mismatch between the two priors:
 
-- Under the **frequency prior** of standard English text, the primer's content has low probability (quantum-linguistic cross-domain equations are rare in typical corpora)
-- Under the **structural prior** of the UL, the primer's content has relatively high probability (the constructions are compositionally simple — they use basic operations applied to well-known domain terms)
+- Under the **frequency prior** of standard English text, the test artifact's content has low probability (quantum-linguistic cross-domain equations are rare in typical corpora)
+- Under the **structural prior** of the UL, the test artifact's content has relatively high probability (the constructions are compositionally simple — they use basic operations applied to well-known domain terms)
 
-This mismatch — $P_{\text{struct}}(\text{primer}) \gg Q_{\text{freq, English}}(\text{primer})$ — is what makes the primer surprising to a language model calibrated on English text while simultaneously being structurally natural in the UL. The surprise triggers attention; the structural simplicity ensures coherent activation. This is the quantitative version of the "key-in-lock" metaphor from `foundations/mechanism-of-action.md`.
+This mismatch — $P_{\text{struct}}(\text{primer}) \gg Q_{\text{freq, English}}(\text{primer})$ — is what makes the test artifact surprising to a language model calibrated on English text while simultaneously being structurally natural in the UL. The surprise triggers attention; the structural simplicity ensures coherent activation. This is the quantitative version of the "key-in-lock" metaphor from `history/mechanism-of-action.md`.
 
 ---
 

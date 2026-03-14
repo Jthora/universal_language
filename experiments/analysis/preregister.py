@@ -5,7 +5,7 @@ Protocol: frontier/causal-efficacy-protocol.md §8.3
 
 Generates a SHA-256 hash of ALL pre-registered materials:
   - Protocol document
-  - All 16 primer variant texts + original
+  - All 16 test artifact variant texts + original
   - Scoring rubrics
   - Domain lists and known-connections
   - Prompt templates and task prompts
@@ -38,30 +38,30 @@ REGISTERED_FILES = [
     # Protocol
     PROJECT_ROOT / "frontier" / "causal-efficacy-protocol.md",
 
-    # Original primer
-    ROOT / "primer-library" / "original" / "primer.txt",
+    # Original test artifact
+    ROOT / "test-artifacts" / "original" / "primer.txt",
 
     # Ablation variants
-    ROOT / "primer-library" / "ablations" / "V1_ABL-PROSE.txt",
-    ROOT / "primer-library" / "ablations" / "V2_ABL-SYMBOL.txt",
-    ROOT / "primer-library" / "ablations" / "V3_ABL-STANDARD.txt",
-    ROOT / "primer-library" / "ablations" / "V4_ABL-BRIDGE.txt",
-    ROOT / "primer-library" / "ablations" / "V5_ABL-LINEAR.txt",
-    ROOT / "primer-library" / "ablations" / "V6_ABL-NODAMP.txt",
-    ROOT / "primer-library" / "ablations" / "V7_ABL-REORDER.txt",
+    ROOT / "test-artifacts" / "ablations" / "V1_ABL-PROSE.txt",
+    ROOT / "test-artifacts" / "ablations" / "V2_ABL-SYMBOL.txt",
+    ROOT / "test-artifacts" / "ablations" / "V3_ABL-STANDARD.txt",
+    ROOT / "test-artifacts" / "ablations" / "V4_ABL-BRIDGE.txt",
+    ROOT / "test-artifacts" / "ablations" / "V5_ABL-LINEAR.txt",
+    ROOT / "test-artifacts" / "ablations" / "V6_ABL-NODAMP.txt",
+    ROOT / "test-artifacts" / "ablations" / "V7_ABL-REORDER.txt",
 
     # Control texts
-    ROOT / "primer-library" / "controls" / "CT-1_dense-physics.txt",
-    ROOT / "primer-library" / "controls" / "CT-2_cross-domain-prose.txt",
-    ROOT / "primer-library" / "controls" / "CT-3_scrambled-primer.txt",
-    ROOT / "primer-library" / "controls" / "CT-4_nonsense-math.txt",
+    ROOT / "test-artifacts" / "controls" / "CT-1_dense-physics.txt",
+    ROOT / "test-artifacts" / "controls" / "CT-2_cross-domain-prose.txt",
+    ROOT / "test-artifacts" / "controls" / "CT-3_scrambled-primer.txt",
+    ROOT / "test-artifacts" / "controls" / "CT-4_nonsense-math.txt",
 
     # Negative controls
-    ROOT / "primer-library" / "negative-controls" / "NC-1_single-domain-math.txt",
-    ROOT / "primer-library" / "negative-controls" / "NC-2_primer-as-prose.txt",
-    ROOT / "primer-library" / "negative-controls" / "NC-3_standard-physics.txt",
-    ROOT / "primer-library" / "negative-controls" / "NC-4_reversed-dissipation.txt",
-    ROOT / "primer-library" / "negative-controls" / "NC-5_pseudo-esoteric.txt",
+    ROOT / "test-artifacts" / "negative-controls" / "NC-1_single-domain-math.txt",
+    ROOT / "test-artifacts" / "negative-controls" / "NC-2_primer-as-prose.txt",
+    ROOT / "test-artifacts" / "negative-controls" / "NC-3_standard-physics.txt",
+    ROOT / "test-artifacts" / "negative-controls" / "NC-4_reversed-dissipation.txt",
+    ROOT / "test-artifacts" / "negative-controls" / "NC-5_pseudo-esoteric.txt",
 
     # Scoring infrastructure
     ROOT / "scoring" / "rubric-M1-M5.md",

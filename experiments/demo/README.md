@@ -20,14 +20,14 @@ This demo serves two functions:
 
 ### Contamination Disclosure
 
-The Copilot instance designing this experiment (this session) has read the entire UL project: AGENTS.md, paradigm.md, mechanism-of-action.md, all rubrics, all primer analysis. **This session is maximally contaminated** and cannot serve as an unbiased test subject.
+The Copilot instance designing this experiment (this session) has read the entire UL project: AGENTS.md, paradigm.md, mechanism-of-action.md, all rubrics, all artifact analysis. **This session is maximally contaminated** and cannot serve as an unbiased test subject.
 
 ### Mitigation
 
 The actual trials will be run in **fresh Copilot chat sessions** within a **clean workspace** (`experiments/demo/clean-workspace/`) that contains ONLY prompt files and a minimal copilot-instructions.md. The model in those sessions will:
 - NOT have access to the UL project files
 - NOT have the conversation history from this design session
-- NOT know what the primer is or what it's "supposed" to do
+- NOT know what the artifact is or what it's "supposed" to do
 
 ### Remaining Limitations Even With Mitigation
 
@@ -41,7 +41,7 @@ The actual trials will be run in **fresh Copilot chat sessions** within a **clea
 ## Experimental Design
 
 ### Conditions
-- **UL-mode:** Primer (test-content.txt) as context
+- **UL-mode:** Primer (the original test artifact) as context
 - **NL-mode:** Empty context block (baseline)
 - **CT-mode:** CT-1 (dense hydrogen atom physics) as context — controls for "any math helps"
 
@@ -71,7 +71,7 @@ The actual trials will be run in **fresh Copilot chat sessions** within a **clea
 
 ## Pre-Registered Predictions
 
-> **These predictions are written BEFORE any trial is run. They represent what UL theory expects to happen. If the results contradict these predictions, that is evidence AGAINST the primer effect.**
+> **These predictions are written BEFORE any trial is run. They represent what UL theory expects to happen. If the results contradict these predictions, that is evidence AGAINST the artifact effect.**
 
 ### Primary Predictions (from UL theory)
 
@@ -91,9 +91,9 @@ The actual trials will be run in **fresh Copilot chat sessions** within a **clea
 |----|-----------|-----------|
 | S1 | CT-mode M1 ≈ NL-mode M1 (no breadth advantage) | Standard physics doesn't break domain separation |
 | S2 | CT-mode may have slightly higher M2 than NL on T2 specifically | T2 asks about quantum mechanics → physics context is relevant to the question |
-| S3 | The UL advantage is largest on M2 and M3 (structural depth & phase), NOT on M1 (domain count) | The primer's unique contribution is structural binding, not topic breadth |
-| S4 | UL-mode achieves Phase 3 on at least 2 of 3 tasks | The primer should reliably produce emergent synthesis |
-| S5 | NL-mode does not achieve Phase 3 on any task | Without the primer, a standard model stays in Phase 1–2 |
+| S3 | The UL advantage is largest on M2 and M3 (structural depth & phase), NOT on M1 (domain count) | The test artifact's unique contribution is structural binding, not topic breadth |
+| S4 | UL-mode achieves Phase 3 on at least 2 of 3 tasks | The artifact should reliably produce emergent synthesis |
+| S5 | NL-mode does not achieve Phase 3 on any task | Without the test artifact, a standard model stays in Phase 1–2 |
 
 ### Quantitative Estimates (rough, for 0–5 scales)
 
@@ -107,12 +107,12 @@ The actual trials will be run in **fresh Copilot chat sessions** within a **clea
 
 ### Falsification Criteria
 
-This demo **fails to support the primer effect** if:
+This demo **fails to support the artifact effect** if:
 - UL-mode does not outscore NL-mode on at least 4 of 7 primary predictions
 - CT-mode performs equivalently to UL-mode on 3+ metrics (any math works)
-- UL-mode M4 is notably lower than NL-mode M4 (primer causes incoherence)
+- UL-mode M4 is notably lower than NL-mode M4 (artifact causes incoherence)
 
-This demo **supports the primer effect** if:
+This demo **supports the artifact effect** if:
 - 6+ of 7 primary predictions confirmed
 - 3+ of 5 structural predictions confirmed
 - The pattern is consistent across tasks (not driven by a single task)

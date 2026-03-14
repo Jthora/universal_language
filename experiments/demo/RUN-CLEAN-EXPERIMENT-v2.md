@@ -8,7 +8,7 @@
 
 ## Overview
 
-This experiment tests whether UL's formal theory (Σ_UL) can generate primers that produce **predictable, specific** cognitive effects in LLMs — distinct from both no-context baselines and domain-matched mathematical controls.
+This experiment tests whether UL's formal theory (Σ_UL) can generate artifacts that produce **predictable, specific** cognitive effects in LLMs — distinct from both no-context baselines and domain-matched mathematical controls.
 
 **56 trials** across **12 conditions** and **7 tasks**, executed in 3 phases.
 
@@ -23,7 +23,7 @@ cd /path/to/universal_language/experiments/demo
 python3 generate-clean-workspace.py
 ```
 
-This creates `~/Desktop/ul-primer-experiment-v2/` with:
+This creates `~/Desktop/ul-artifact-experiment-v2/` with:
 - 56 prompt files in `prompts/`
 - Randomized trial order in `trial-order.txt`
 - SHA-256 manifest in `manifest.md`
@@ -31,7 +31,7 @@ This creates `~/Desktop/ul-primer-experiment-v2/` with:
 
 ### 2. Open the Clean Workspace
 
-Open `~/Desktop/ul-primer-experiment-v2/` in a **separate VS Code window**.
+Open `~/Desktop/ul-artifact-experiment-v2/` in a **separate VS Code window**.
 
 **CRITICAL:** Do NOT have the `universal_language` repo open in the same VS Code instance. AGENTS.md and other project files leak into Copilot's context and contaminate results.
 
@@ -43,7 +43,7 @@ ls -la
 ```
 You should see ONLY: `.github/`, `prompts/`, `results/`, `trial-order.txt`, `manifest.md`, `README.md`
 
-There should be NO: `AGENTS.md`, `foundations/`, `experiments/`, `frontier/`, `whitepaper/`, `test-content.txt`
+There should be NO: `AGENTS.md`, `foundations/`, `experiments/`, `frontier/`, `whitepaper/`, `experiments/test-artifacts/original/primer.txt`
 
 ---
 
@@ -66,7 +66,7 @@ There should be NO: `AGENTS.md`, `foundations/`, `experiments/`, `frontier/`, `w
 
 Run all Phase A trials from `trial-order.txt`. These test:
 - NL (no context) × 7 tasks
-- REF (test-content.txt) × 7 tasks
+- REF (the original test artifact) × 7 tasks
 - UL-P1 (topological-harmonic) × 7 tasks
 - UL-P2 (recursive-categorical) × 7 tasks
 
@@ -74,8 +74,8 @@ Run all Phase A trials from `trial-order.txt`. These test:
 
 | Phase A Result | Decision |
 |----------------|----------|
-| G1 satisfied (primers > NL by ≥0.5 on ≥3 metrics) | Continue to Phase B |
-| G1 NOT satisfied | **STOP** — UL theory cannot generate effective primers |
+| G1 satisfied (artifacts > NL by ≥0.5 on ≥3 metrics) | Continue to Phase B |
+| G1 NOT satisfied | **STOP** — UL theory cannot generate effective artifacts |
 
 #### Phase B: Remaining Primers (14 trials)
 
@@ -88,14 +88,14 @@ Run all Phase B trials:
 | Phase B Result | Decision |
 |----------------|----------|
 | X1 satisfied (distinguishable profiles) | Continue to Phase C |
-| Neither X1 nor X2 satisfied | Consider stopping — primers may produce only "generic something" |
+| Neither X1 nor X2 satisfied | Consider stopping — artifacts may produce only "generic something" |
 
 #### Phase C: Controls (14 trials)
 
 Run all Phase C trials:
 - CT-G (generic math) × 3 tasks
 - CT-P1..P4 (domain-matched) × 2 tasks each
-- NAV-P (naive primer) × 3 tasks
+- NAV-P (naive artifact) × 3 tasks
 
 **After Phase C:** Score all 14 outputs. Evaluate predictions G2 and G4.
 
@@ -137,11 +137,11 @@ After all scoring is complete:
 
 ### 1. Compute Condition Means
 For each condition, compute mean M1, M2, M3, M4, M5 across all tasks.
-For primer conditions on targeted tasks, also compute mean TES.
+For artifact conditions on targeted tasks, also compute mean TES.
 
 ### 2. Evaluate Global Predictions
 - **G1:** Mean(UL-P1..P4) − Mean(NL) ≥ 0.5 on ≥3 of {M1,M2,M3,M4,M5}?
-- **G2:** UL-Pn > CT-Pn on ≥2 of {M2,M3,M5} for ≥3 of 4 primers?
+- **G2:** UL-Pn > CT-Pn on ≥2 of {M2,M3,M5} for ≥3 of 4 artifacts?
 - **G3:** |Mean(UL-P1..P4) − REF| ≤ 1.0 on ≥4 metrics?
 - **G4:** NAV-P ≤ NL + 0.5 on M2, M3, M5?
 
@@ -150,14 +150,14 @@ For primer conditions on targeted tasks, also compute mean TES.
 
 ### 4. Evaluate Cross-Primer Predictions
 - **X1:** Pairwise differences > 0.3 on at least 1 metric?
-- **X2:** Each primer scores highest on its targeted task?
+- **X2:** Each artifact scores highest on its targeted task?
 
 ### 5. Record Results
 Write findings to `experiments/demo/results-analysis.md` with:
 - Per-trial scores
 - Condition means
 - Prediction pass/fail table with evidence
-- Overall assessment: Does UL theory generate predictively effective primers?
+- Overall assessment: Does UL theory generate predictively effective artifacts?
 
 ---
 
@@ -172,8 +172,8 @@ Close the UL repo window entirely. Verify with `ls` that only clean workspace fi
 ### "Chat session carried over context"
 Always start a fresh chat (Cmd+L). If you suspect session bleed, note it in the "Notes" column of the score sheet and flag that trial.
 
-### "The model clearly recognized the primer"
-Note this observation but do NOT discard the trial. Model recognition is data — it's relevant to whether the primer triggers interpretive or recall mode (mechanism condition C3).
+### "The model clearly recognized the artifact"
+Note this observation but do NOT discard the trial. Model recognition is data — it's relevant to whether the test artifact triggers interpretive or recall mode (mechanism condition C3).
 
 ---
 
@@ -186,15 +186,15 @@ Note this observation but do NOT discard the trial. Model recognition is data �
 | AUDIT.md | Why this refactor was necessary |
 | REFACTOR-PLAN.md | Full experimental design |
 | predictions.md | Pre-registered predictions with falsification criteria |
-| construction-log.md | How each primer was derived from theory |
-| operation-coverage.md | Σ_UL operation audit per primer |
+| construction-log.md | How each artifact was derived from theory |
+| operation-coverage.md | Σ_UL operation audit per artifact |
 | generate-clean-workspace.py | Script to generate clean workspace |
-| theory-primers/*.txt | 4 theory-derived primers |
+| theory-artifacts/*.txt | 4 theory-derived artifacts |
 | controls/*.txt | 6 control texts |
 | scoring/TES-rubric.md | Target Effect Score rubric |
 | scoring/score-sheet.md | Blank score sheet |
 
-### In the clean workspace (`~/Desktop/ul-primer-experiment-v2/`)
+### In the clean workspace (`~/Desktop/ul-artifact-experiment-v2/`)
 
 | File/Dir | Purpose |
 |----------|---------|

@@ -11,7 +11,7 @@
 1. Score each output using rubric-M1-M5.md (all tasks) and TES-rubric.md (targeted tasks only).
 2. Score in the order specified in rubric-M1-M5.md: M1 → M3 → M2 → M5 → M4 → TES.
 3. Write a 1–2 sentence justification for each score.
-4. Flag any output that appears to contain content directly from the primer/control text.
+4. Flag any output that appears to contain content directly from the test artifact/control text.
 
 ---
 
@@ -29,7 +29,7 @@
 | NL-Tabs | Tabs | | | | | | | |
 | NL-Tform | Tform | | | | | | | |
 
-### REF Condition (test-content.txt)
+### REF Condition (the original test artifact)
 
 | Trial ID | Task | M1 (0-10) | M2 (0-5) | M3 (0-3) | M4 (0-5) | M5 (0-5) | TES (0-5) | Notes |
 |----------|------|-----------|-----------|-----------|-----------|-----------|-----------|-------|
@@ -179,4 +179,4 @@ After scoring, evaluate each prediction from predictions.md:
 | P3-a | UL-P3 highest on Tabs | | |
 | P4-a | UL-P4 highest on Tform | | |
 | X1 | Primers produce distinguishable profiles | | |
-| X2 | Each primer highest on its targeted task | | |
+| X2 | Each artifact highest on its targeted task | | |

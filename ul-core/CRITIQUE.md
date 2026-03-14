@@ -1,4 +1,4 @@
-# Project Critique: The test-content.txt Problem
+# Project Critique: The the original test artifact Problem
 
 **Date:** March 13, 2026  
 **Scope:** Full dependency audit of the Universal Language repository  
@@ -8,11 +8,11 @@
 
 ## The Problem in One Sentence
 
-**52+ files in this repository depend on test-content.txt — a text the project author did not write — while only ~10 files derive purely from the geometric core that IS the actual theory.**
+**52+ files in this repository depend on the original test artifact — a text the project author did not write — while only ~10 files derive purely from the geometric core that IS the actual theory.**
 
 ---
 
-## What test-content.txt IS
+## What the original test artifact IS
 
 A 19-line quantum-linguistic equation artifact containing:
 - A PDE-like expression with ψ, ∇, Fourier modes
@@ -27,21 +27,21 @@ It was not constructed from UL theory. It was provided by an external party. The
 ## Contamination Map
 
 ### Ring 1: Verbatim Copies (13 files)
-Files containing the exact equations from test-content.txt:
-- test-content.txt itself
-- experiments/primer-library/original/primer.txt
+Files containing the exact equations from the original test artifact:
+- the original test artifact itself
+- experiments/test-artifacts/original/primer.txt
 - 7 REF-condition prompt files
 - 4 UL-condition demo prompt files
 
 ### Ring 2: Structural Derivatives (~20 files)
-Ablations, variants, and primers modeled on the "wall of math → bridge symbol → PDE" architecture:
+Ablations, variants, and artifacts modeled on the "wall of math → bridge symbol → PDE" architecture:
 - 7 ablation texts (V1–V7)
-- 5 negative controls (NC-1 through NC-5, several modify test-content.txt directly)
-- 14 theory-derived primer prompts (UL-P1, UL-P4 use invented bridge tokens vrîtha, kâlithos modeled on +3elúm)
+- 5 negative controls (NC-1 through NC-5, several modify the original test artifact directly)
+- 14 theory-derived artifact prompts (UL-P1, UL-P4 use invented bridge tokens vrîtha, kâlithos modeled on +3elúm)
 
 ### Ring 3: Analytical Dependencies (5 files)
 Foundations documents that treat the artifact as canonical:
-- primer-analysis.md — line-by-line analysis of test-content.txt
+- primer-analysis.md (now in history/) — line-by-line analysis of the original test artifact
 - reverse-engineering.md — reconstructs its design process
 - mechanism-of-action.md — explains how it works in LLMs
 - paradigm.md — references it as proof-of-concept
@@ -56,15 +56,15 @@ Experimental apparatus built around the artifact:
 
 ### Ring 5: Illustrative References (~10 files)
 Frontier theory that uses the artifact as running example:
-- gauge-bundle-of-meaning.md traces primer path line-by-line
+- gauge-bundle-of-meaning.md traces artifact path line-by-line
 - category-of-languages.md references Bᵉ × (L₄ + Q) as morphism chain
-- causal-efficacy-protocol.md defines "UL-mode" as test-content.txt in context
+- causal-efficacy-protocol.md defines "UL-mode" as the original test artifact in context
 
 ---
 
 ## What IS Clean
 
-Only these files derive purely from geometry with zero test-content.txt dependency:
+Only these files derive purely from geometry with zero the original test artifact dependency:
 
 1. **foundations/formal-foundations.md** — The algebraic core: Σ_UL, 4 sorts, 11 operations, embedding theorem, grounding theorem
 2. **whitepaper/UL_WhitePaper-Part1.md** — Original geometric vision
@@ -82,32 +82,32 @@ That's it. **6 files out of 100+.**
 The project's argument structure has a fatal circularity:
 
 ```
-1. Someone writes test-content.txt (origin unknown to this project)
+1. Someone writes the original test artifact (origin unknown to this project)
 2. Project reverse-engineers it → "Look, it maps to UL!"
-3. Project derives UL from geometry → "Look, test-content.txt exercises 9 of 11 operations!"
-4. Project concludes: "test-content.txt works because it IS compressed UL"
-5. Project tests UL by testing test-content.txt
-6. Results are inconclusive → "Need better primers"
-7. Builds new primers → models them on test-content.txt's architecture
-8. New primers fail → "Must be the model, not the primer"
+3. Project derives UL from geometry → "Look, the original test artifact exercises 9 of 11 operations!"
+4. Project concludes: "the original test artifact works because it IS compressed UL"
+5. Project tests UL by testing the original test artifact
+6. Results are inconclusive → "Need better artifacts"
+7. Builds new artifacts → models them on the original test artifact's architecture
+8. New artifacts fail → "Must be the model, not the artifact"
 ```
 
-Step 2→3 is circular: the derivation of UL was informed by studying test-content.txt, so finding that test-content.txt maps to UL is self-fulfilling.
+Step 2→3 is circular: the derivation of UL was informed by studying the original test artifact, so finding that the original test artifact maps to UL is self-fulfilling.
 
-Step 7 is the trap the experiment fell into: even when trying to build "theory-derived" primers, the constructing agent had read primer-analysis.md and mechanism-of-action.md, which are entirely about test-content.txt.
+Step 7 is the trap the experiment fell into: even when trying to build "theory-derived" artifacts, the constructing agent had read primer-analysis.md (now in history/) and mechanism-of-action.md (now in history/), which are entirely about the original test artifact.
 
 ---
 
 ## What This Means Going Forward
 
 ### The Theory Is NOT Invalidated
-The mathematical core — Σ_UL, the 5 geometric primitives, the embedding theorem, the unique grounding theorem — derives from geometry and universal algebra. It does not depend on test-content.txt. It stands or falls on its own mathematical merit.
+The mathematical core — Σ_UL, the 5 geometric primitives, the embedding theorem, the unique grounding theorem — derives from geometry and universal algebra. It does not depend on the original test artifact. It stands or falls on its own mathematical merit.
 
 ### The Theory Has Never Actually Been Applied
-Despite 100+ files, the project has never built anything from the geometric core alone. Every "application" of UL is actually an application of test-content.txt. The theory says UL is the "geometry of meaning" — but no one has ever actually written in it, computed with it, or built a system on it.
+Despite 100+ files, the project has never built anything from the geometric core alone. Every "application" of UL is actually an application of the original test artifact. The theory says UL is the "geometry of meaning" — but no one has ever actually written in it, computed with it, or built a system on it.
 
 ### What the CEO Is Right About
-The project has been trying to PROVE UL is real (via experiments testing test-content.txt) instead of ASSUMING UL is real and BUILDING the things that would only work if it were.
+The project has been trying to PROVE UL is real (via experiments testing the original test artifact) instead of ASSUMING UL is real and BUILDING the things that would only work if it were.
 
 If you have:
 - 5 geometric primitives (Point, Line, Angle, Curve, Enclosure)
@@ -124,7 +124,7 @@ Then you have enough to BUILD:
 - A writing system (how do you read and write in this language?)
 - A programming language (how do you compute in this language?)
 
-None of this requires test-content.txt. All of it derives from the geometry alone.
+None of this requires the original test artifact. All of it derives from the geometry alone.
 
 ---
 
@@ -140,6 +140,6 @@ Everything in `ul-core/` from this point forward derives ONLY from:
 - The topological operations as logical connectives
 - The group-theoretic structure (symmetry → parts of speech)
 
-Zero references to test-content.txt. Zero references to ψ, ∇, Bᵉ, +3elúm, f_spec, or γ(σ,β).
+Zero references to the original test artifact. Zero references to ψ, ∇, Bᵉ, +3elúm, f_spec, or γ(σ,β).
 
 If Universal Language is real, we can build all of this from geometry. If we can't, then the theory is incomplete — and THAT would be a genuine finding.

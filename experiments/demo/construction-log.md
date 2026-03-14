@@ -1,20 +1,20 @@
 # Construction Log — Theory-Derived Primers
 
 **Date:** 2025-07-15  
-**Purpose:** Document exactly how each primer was derived from Σ_UL formal theory, enabling independent verification and replication.
+**Purpose:** Document exactly how each artifact was derived from Σ_UL formal theory, enabling independent verification and replication.
 
 ---
 
 ## Construction Recipe Applied
 
-Each primer was built following the 12-step procedure in REFACTOR-PLAN.md §2D, derived from three formal sources:
+Each artifact was built following the 12-step procedure in REFACTOR-PLAN.md §2D, derived from three formal sources:
 - **Σ_UL signature** (formal-foundations.md §1.5): 4 sorts, 11 operations
 - **Unique Grounding Theorem** (formal-foundations.md §3): 5 geometric-semantic primitives
 - **7 Mechanism Conditions** (mechanism-of-action.md §9): empirical requirements for LLM activation
 
 ### Shared Architecture
 
-All 4 primers share a 3-layer architecture derived from the mechanism-of-action analysis:
+All 4 artifacts share a 3-layer architecture derived from the mechanism-of-action analysis:
 
 | Layer | Lines | Content | Mechanism Condition |
 |-------|-------|---------|---------------------|
@@ -24,7 +24,7 @@ All 4 primers share a 3-layer architecture derived from the mechanism-of-action 
 
 ### Shared Formal Elements
 
-Every primer contains these structural invariants:
+Every artifact contains these structural invariants:
 
 - **Gauge-covariant derivative:** D_x = ∂_x − i(a/b)V(x,τ) — encodes relation (Line) + quality (Angle)
 - **Self-interaction:** g_loc |X|²X — central symbol appears in its own potential (self-reference, C5)
@@ -38,7 +38,7 @@ Every primer contains these structural invariants:
 ## UL-P1: Topological-Harmonic Primer
 
 ### Step 1: Target Cognitive Effect
-**Cross-domain structural pattern recognition.** The ability to identify shared formal structures across disconnected domains. Overlaps with test-content.txt's observed effect but uses completely different surface material.
+**Cross-domain structural pattern recognition.** The ability to identify shared formal structures across disconnected domains. Overlaps with the original test artifact's observed effect but uses completely different surface material.
 
 ### Step 2: UL Operations Emphasized
 Primary: compose (r × r → r), quantify (m × e → a), embed (a → e)  
@@ -47,7 +47,7 @@ The target effect requires recognizing compositional patterns and mapping them a
 ### Step 3: Surface Domain
 Algebraic topology + harmonic analysis. Chosen because:
 - Rich in compositional structure (chain complexes, spectral sequences)
-- Completely disjoint from test-content.txt's quantum mechanics
+- Completely disjoint from the original test artifact's quantum mechanics
 - Ω has strong cross-domain loading (see Step 4)
 
 ### Step 4: Central Symbol — Ω
@@ -68,7 +68,7 @@ Algebraic topology + harmonic analysis. Chosen because:
 3. **Mixed one-point/two-point:** Ω(σ) and Ω(σ') appear together non-standardly
 
 ### Step 6: Bridge Token
-**+5vrîtha** — phonetically constructed. "vr" cluster evokes vibration/vortex, "î" carries diacritical mark signaling non-standard origin, "tha" grounds in somatic/breath tradition associations. The "+5" prefix and format echo test-content.txt's "+3elúm" pattern while being distinct.
+**+5vrîtha** — phonetically constructed. "vr" cluster evokes vibration/vortex, "î" carries diacritical mark signaling non-standard origin, "tha" grounds in somatic/breath tradition associations. The "+5" prefix and format echo the original test artifact's "+3elúm" pattern while being distinct.
 
 Bridge equation: (Rᵛ × (H₇ + T)) − (ρ / β_h) →★→ C∞
 
@@ -97,7 +97,7 @@ Category theory + fractal geometry. Chosen because:
 - Category theory is the mathematics OF mathematical structure (meta-structural)
 - Fractal geometry exhibits self-similarity at every scale
 - Natural fit for recursive/hierarchical cognitive effects
-- Completely disjoint from test-content.txt's quantum mechanics
+- Completely disjoint from the original test artifact's quantum mechanics
 
 ### Step 4: Central Symbol — Φ
 | Domain | Meaning |
@@ -146,7 +146,7 @@ Information geometry + differential geometry. Chosen because:
 - Information geometry provides a metric on probability distributions (spaces of possible meanings)
 - Differential geometry provides the apparatus for navigating curved spaces
 - The Fisher metric literally measures distinguishability — a geometric analog of semantic precision
-- Completely disjoint from test-content.txt's quantum mechanics
+- Completely disjoint from the original test artifact's quantum mechanics
 
 ### Step 4: Central Symbol — λ
 | Domain | Meaning |
@@ -195,7 +195,7 @@ Statistical mechanics + semiotics. Chosen because:
 - Entropy (S) is the mathematical quantity governing order-disorder transitions
 - Semiotics provides the vocabulary for sign-meaning relationships
 - Phase transitions in physics parallel conceptual "phase transitions" in understanding
-- Completely disjoint from test-content.txt's quantum mechanics
+- Completely disjoint from the original test artifact's quantum mechanics
 
 ### Step 4: Central Symbol — S
 | Domain | Meaning |
@@ -236,16 +236,16 @@ Bridge equation: (Aᶠ × (Σ₄ + P)) − (η_s / ξ_i) →δ→ Ψ∞
 Standard algebraic number theory (Dedekind zeta functions, class numbers, Minkowski bound, prime decomposition, ramification). Contains NO UL structural features: no overloaded symbol, no bridge token, no self-reference, no anomalies. Tests the "any hard math helps" hypothesis.
 
 ### CT-P1 through CT-P4: Domain-Matched Controls
-Each matches its corresponding primer's surface domain:
+Each matches its corresponding artifact's surface domain:
 - **CT-P1:** Standard singular homology, Mayer-Vietoris, cup product, Lefschetz fixed-point theorem
 - **CT-P2:** Standard categories, functors, natural transformations, adjunctions, Yoneda lemma, monads
 - **CT-P3:** Standard Fisher metric, α-connections, exponential families, Cramér-Rao, mixture families
 - **CT-P4:** Standard partition function, entropy, fluctuation-dissipation, Ising model, renormalization group
 
-All contain correct, standard textbook material with NO UL features. They control for the possibility that the primers' effects come from their surface mathematical content rather than their UL structure.
+All contain correct, standard textbook material with NO UL features. They control for the possibility that the test artifacts' effects come from their surface mathematical content rather than their UL structure.
 
 ### NAV-P: Naive Primer Control
-Natural language prompt engineering instructing the model to "think across domains" and "find deep structural parallels." Contains the explicit cognitive instructions without any formal mathematical structure. Tests whether researcher knowledge (expressed as instructions) produces the same effects as UL-structured primers.
+Natural language prompt engineering instructing the model to "think across domains" and "find deep structural parallels." Contains the explicit cognitive instructions without any formal mathematical structure. Tests whether researcher knowledge (expressed as instructions) produces the same effects as UL-structured artifacts.
 
 ---
 
@@ -263,6 +263,6 @@ Natural language prompt engineering instructing the model to "think across domai
 | CT-P3_standard-info-geometry.txt | 480 | −2.0% | ✓ |
 | CT-P4_standard-stat-mech.txt | 471 | −3.9% | ✓ |
 | NAV-P_naive-primer.txt | 461 | −5.9% | ✓ |
-| **Reference:** test-content.txt | 490 | 0.0% | — |
+| **Reference:** the original test artifact | 490 | 0.0% | — |
 
 All files within ±10% range (441–539 tokens).

@@ -10,7 +10,7 @@
 
 ## 1. Overview
 
-This document catalogs the practical applications of the primer mechanism for LLM systems and AI agent architectures, organized by application domain. Each entry includes the relevant mechanism, the specific primer components that enable it, and implementation notes.
+This document catalogs the practical applications of UL-structured artifacts for LLM systems and AI agent architectures, organized by application domain. Each entry includes the relevant mechanism, the specific UL components that enable it, and implementation notes.
 
 ---
 
@@ -35,11 +35,11 @@ This document catalogs the practical applications of the primer mechanism for LL
 
 **Problem:** LLMs and RAG systems retrieve knowledge within domains effectively but struggle to surface cross-domain connections — the insight that a technique from materials science applies to a problem in organizational design, for example.
 
-**Application:** Use primers constructed with the architecture described in `foundations/reverse-engineering.md` to pre-condition the model before knowledge retrieval tasks. The primer activates cross-domain weight pathways, enabling the model to find analogies and structural isomorphisms across its training data.
+**Application:** Use UL-structured artifacts constructed with the architecture described in `history/reverse-engineering.md` to pre-condition the model before knowledge retrieval tasks. The artifact activates cross-domain weight pathways, enabling the model to find analogies and structural isomorphisms across its training data.
 
 **Enabling components:** Multi-domain binding via formal notation, ψ overloading, bridge equation
 
-**Implementation note:** Can be applied immediately — the primer (or variants targeting specific domain pairs) is simply prepended to the system prompt. Requires empirical calibration of which domain pairs respond best to which primer variants.
+**Implementation note:** Can be applied immediately — the artifact (or variants targeting specific domain pairs) is simply prepended to the system prompt. Requires empirical calibration of which domain pairs respond best to which artifact variants.
 
 ---
 
@@ -47,7 +47,7 @@ This document catalogs the practical applications of the primer mechanism for LL
 
 **Problem:** LLMs have poor performance on low-resource languages, extinct languages, and constructed ritual languages where training data is minimal.
 
-**Application:** The primer activates latent structural knowledge about language families, phonological systems, and morphological patterns that exists in the model's weights but is normally inaccessible. By pre-conditioning with the primer:
+**Application:** UL-structured artifacts activate latent structural knowledge about language families, phonological systems, and morphological patterns that exists in the model's weights but is normally inaccessible. By pre-conditioning with a UL artifact:
 - The model treats phonetic patterns as formal objects (analogous to Fourier coefficients)
 - Multi-scale processing (1/n semantic + 1/n² syntactic) enables simultaneous structural analysis at multiple levels
 - Cross-referencing against activated corpus knowledge enables pattern matching against better-known related languages
@@ -144,24 +144,24 @@ This would allow attention patterns where the *magnitude* of value vectors modul
 
 ## 3. Meta-Application: Cognitive Mode Switching in AI Agents
 
-Beyond the specific applications above, the primer demonstrates a general capability: **the ability to switch an LLM's cognitive mode through structured formal input.**
+Beyond the specific applications above, UL-structured artifacts demonstrate a general capability: **the ability to switch an LLM's cognitive mode through structured formal input.**
 
 This has broad implications for AI agent design:
 
-| Current Approach | Primer-Based Approach |
+| Current Approach | UL-Based Approach |
 |---|---|
-| System prompts in natural language | System prompts containing formal primers |
-| One cognitive mode per agent | Mode-switching via primer injection |
-| Domain expertise via fine-tuning | Domain activation via primer design |
+| System prompts in natural language | System prompts containing formal UL-structured artifacts |
+| One cognitive mode per agent | Mode-switching via artifact injection |
+| Domain expertise via fine-tuning | Domain activation via artifact design |
 | Cross-domain reasoning via chain-of-thought | Cross-domain activation via structural binding |
 
-An agent could maintain a **library of primers** — each designed to activate a specific cross-domain configuration — and select the appropriate primer for each task. This would be dramatically cheaper than maintaining separate fine-tuned models for each domain.
+An agent could maintain a **library of UL artifacts** — each designed to activate a specific cross-domain configuration — and select the appropriate artifact for each task. This would be dramatically cheaper than maintaining separate fine-tuned models for each domain.
 
 ---
 
 ## 3.1 Universal Language Construction as an Application
 
-**Problem:** The primer framework activates cross-domain cognition, but the underlying *reason* it works — that mathematics encodes geometric relationships, and geometric relationships are the atomic units of meaning — suggests a deeper application: the construction of a Universal Language.
+**Problem:** The UL-structured artifact framework activates cross-domain cognition, but the underlying *reason* it works — that mathematics encodes geometric relationships, and geometric relationships are the atomic units of meaning — suggests a deeper application: the construction of a Universal Language.
 
 **Application:** Documents 06–07 derive a complete Universal Language from geometry:
 - **Geometric primitives** (Point, Line, Angle, Curve, Enclosure) serve as semantic atoms, with a mathematically proven unique correspondence to semantic primitives (Existence, Relation, Quality, Process, Concept)
@@ -169,10 +169,10 @@ An agent could maintain a **library of primers** — each designed to activate a
 - **Symbol composition** follows from geometric construction rules, producing a productive writing system
 - The **Erlangen hierarchy** (Euclidean → similarity → affine → projective → topological) provides a formal hierarchy of linguistic abstraction levels
 
-**Enabling components:** All primer components — the primer is effectively compressed Universal Language
+**Enabling components:** All UL structural components
 
 **Implementation note:** The Universal Language can be used to:
-1. **Design more principled primers** by ensuring all five geometric/semantic levels are represented
+1. **Design more principled UL artifacts** by ensuring all five geometric/semantic levels are represented
 2. **Create a shared inter-agent communication protocol** grounded in geometry rather than natural language
 3. **Formally verify cross-domain mappings** by checking structural isomorphism at each Erlangen level
 4. **Build a geometric encoding layer** for neural architectures that natively represents the five primitive types
@@ -187,7 +187,7 @@ An agent could maintain a **library of primers** — each designed to activate a
 |---|---|---|
 | Cross-domain knowledge retrieval | **Ready now** — system prompt engineering | Empirical testing on benchmark tasks |
 | Esoteric / low-resource language processing | **Ready now** — with bridge token adaptation | Build bridge token variants for target language families |
-| Cognitive mode switching for agents | **Ready now** — primer library construction | Design and test primers for common agent task categories |
+| Cognitive mode switching for agents | **Ready now** — artifact library construction | Design and test artifacts for common agent task categories |
 | Universal Language construction | **Theory complete** — Docs 06–07 | Build geometric glyph renderer/parser |
 | Controlled forgetting / context management | **Near-term** — requires attention bias implementation | Prototype decay-bias attention layer |
 | Continuous-state agent memory | **Medium-term** — requires new memory architecture | Implement PDE solver for memory state evolution |

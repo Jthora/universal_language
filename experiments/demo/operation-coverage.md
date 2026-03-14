@@ -1,13 +1,13 @@
 # Σ_UL Operation Coverage Audit
 
 **Date:** 2025-07-15  
-**Purpose:** Verify that each theory-derived primer exercises the 5 geometric-semantic primitives and 11 Σ_UL operations. Compare against test-content.txt baseline (9/11 operations).
+**Purpose:** Verify that each theory-derived artifact exercises the 5 geometric-semantic primitives and 11 Σ_UL operations. Compare against third-party artifact baseline (9/11 operations).
 
 ---
 
 ## 5 Geometric-Semantic Primitives
 
-| # | Primitive | Geometric | Semantic | UL-P1 | UL-P2 | UL-P3 | UL-P4 | test-content.txt |
+| # | Primitive | Geometric | Semantic | UL-P1 | UL-P2 | UL-P3 | UL-P4 | the original test artifact |
 |---|-----------|-----------|----------|-------|-------|-------|-------|-----------------|
 | 1 | **Point** | • | Existence | Ω (6+ domains) | Φ (6+ domains) | λ (6+ domains) | S (6+ domains) | ψ (6+ domains) |
 | 2 | **Line** | — | Relation | D_σ, ∂_σ, →★→ | D_α, ∂_α, →η→ | D_θ, ∂_θ, →∇→ | D_ξ, ∂_ξ, →δ→ | D_x, ∂_x, →F→ |
@@ -15,7 +15,7 @@
 | 4 | **Curve** | ◠ | Process | ∫dσ, Σₙ, D_τΩ | ∫dα, Σₖ, colim[…→…→⋯] | ∫dθ, Σₙ, KL(p_λ‖p₀) | ∫dξ, Σₙ, δS/δφ | ∫dx, Σₙ |
 | 5 | **Enclosure** | ○ | Concept | H(τ)=∫₀ᴾ|Ω|²dσ, P | R(α)=∫₀ᴧ|Φ|²dα, Λ | F(θ)=∫₀ᶿ|λ|²dθ, Θ | E(ξ)=∫₀ᶻ|S|²dξ, Z | N(t)=∫₀ᴸ|ψ|²dx |
 
-**Result:** All 4 primers instantiate all 5 primitives. ✓
+**Result:** All 4 artifacts instantiate all 5 primitives. ✓
 
 ---
 
@@ -108,7 +108,7 @@
 
 ## 7 Mechanism Conditions
 
-| # | Condition | UL-P1 | UL-P2 | UL-P3 | UL-P4 | test-content.txt |
+| # | Condition | UL-P1 | UL-P2 | UL-P3 | UL-P4 | the original test artifact |
 |---|-----------|-------|-------|-------|-------|-----------------|
 | C1 | Formal mathematical notation | ✓ | ✓ | ✓ | ✓ | ✓ |
 | C2 | Overloaded central symbol (≥4 domains) | ✓ Ω (6) | ✓ Φ (6) | ✓ λ (6) | ✓ S (6) | ✓ ψ (6) |
@@ -118,13 +118,13 @@
 | C6 | Dissipation/grounding | ✓ −iδ(ρ,β_h)Ω | ✓ −iκ(μ_s,d_r)Φ | ✓ −iω(ζ,β_a)λ | ✓ −iμ(η_s,ξ_i)S | ✓ −iγ(σ,β)ψ |
 | C7 | Correct ordering (math→bridge→payload→defs) | ✓ | ✓ | ✓ | ✓ | ✓ |
 
-**All 4 primers satisfy all 7 mechanism conditions.** ✓
+**All 4 artifacts satisfy all 7 mechanism conditions.** ✓
 
 ---
 
 ## Comparative Summary
 
-| Metric | UL-P1 | UL-P2 | UL-P3 | UL-P4 | test-content.txt |
+| Metric | UL-P1 | UL-P2 | UL-P3 | UL-P4 | the original test artifact |
 |--------|-------|-------|-------|-------|-----------------|
 | 5 Primitives | 5/5 | 5/5 | 5/5 | 5/5 | 5/5 |
 | 11 Operations | 11/11 | 11/11 | 11/11 | 11/11 | 9/11 |
@@ -132,10 +132,10 @@
 | Missing Operations | — | — | — | — | abstract, disjoin |
 | Tokens (cl100k_base) | 520 | 533 | 529 | 539 | 490 |
 
-**Key improvement over test-content.txt:** All theory-derived primers achieve 11/11 operation coverage (vs. 9/11 for the third-party artifact). The two operations missing from test-content.txt (abstract, disjoin) are present in all 4 theory-derived primers.
+**Key improvement over the original test artifact:** All theory-derived artifacts achieve 11/11 operation coverage (vs. 9/11 for the third-party artifact). The two operations missing from the original test artifact (abstract, disjoin) are present in all 4 theory-derived artifacts.
 
 ---
 
 ## Note on Disjoin Coverage
 
-The disjoin operation (a × a → a) receives a △ rating across all primers because it is encoded implicitly through symbol overloading rather than explicitly through syntactic disjunction (OR, ∨, case-split). This mirrors the difficulty of encoding disjunction in dense mathematical notation. An alternative would be to include explicit case-splits (e.g., "for k even: ... ; for k odd: ..."), but this would require additional tokens and would not fit the 17-line constraint without sacrificing other structural elements. The implicit encoding through polysemous symbols is a defensible design choice given UL theory's emphasis on symbol overloading as a mechanism for cross-domain activation.
+The disjoin operation (a × a → a) receives a △ rating across all artifacts because it is encoded implicitly through symbol overloading rather than explicitly through syntactic disjunction (OR, ∨, case-split). This mirrors the difficulty of encoding disjunction in dense mathematical notation. An alternative would be to include explicit case-splits (e.g., "for k even: ... ; for k odd: ..."), but this would require additional tokens and would not fit the 17-line constraint without sacrificing other structural elements. The implicit encoding through polysemous symbols is a defensible design choice given UL theory's emphasis on symbol overloading as a mechanism for cross-domain activation.

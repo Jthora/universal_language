@@ -6,7 +6,7 @@
 
 ## Overview
 
-The primer ([`primer-library/original/primer.txt`](primer-library/original/primer.txt)) is a 19-line, 490-token text that encodes the core structure of Universal Language in compressed form. When injected as context before reasoning tasks, LLMs produce output with measurably greater cross-domain depth, structural coherence, and generative novelty.
+The test artifact ([`test-artifacts/original/primer.txt`](test-artifacts/original/primer.txt)) is a 19-line, 490-token text that encodes the core structure of Universal Language in compressed form. When injected as context before reasoning tasks, LLMs produce output with measurably greater cross-domain depth, structural coherence, and generative novelty.
 
 This experimental infrastructure lets you test that claim yourself.
 
@@ -19,8 +19,8 @@ experiments/
 ├── README.md                # You are here
 ├── qc-audit-report.md       # Feature audit: 16/16 variants pass QC
 │
-├── primer-library/          # 17 texts, all QC-verified
-│   ├── original/            # The primer (test condition)
+├── test-artifacts/          # 17 texts, all QC-verified
+│   ├── original/            # The test artifact (test condition)
 │   ├── ablations/           # 7 variants: each removes one structural feature
 │   ├── controls/            # 4 controls: matched token count, no UL structure
 │   └── negative-controls/   # 5 texts: actively anti-UL properties
@@ -81,7 +81,7 @@ python analysis/analysis.py pilot
 ## The 5 Experiments
 
 ### Experiment Alpha — Does the effect exist?
-- **Design:** 2 conditions (primer-injected vs. no-context) × 5 tasks × 3 models × 21 reps = 630 trials
+- **Design:** 2 conditions (artifact-injected vs. no-context) × 5 tasks × 3 models × 21 reps = 630 trials
 - **Analysis:** Mixed-effects ANOVA with condition as fixed effect, model as random effect
 - **Success criterion:** Condition main effect p < 0.01, Cohen's d ≥ 0.5 on SQS
 
@@ -95,8 +95,8 @@ python analysis/analysis.py pilot
 - **Analysis:** Confirm negative controls score significantly below original
 - **Success criterion:** Anti-UL texts perform worse than neutral controls
 
-### Experiment Delta — Can UL theory generate NEW primers?
-- **Design:** Construct a novel primer from UL principles; compare to original
+### Experiment Delta — Can UL theory generate NEW artifacts?
+- **Design:** Construct a novel artifact from UL principles; compare to original
 - **Analysis:** Non-inferiority test
 - **Pre-requisite:** Results from Beta and Gamma
 
@@ -122,13 +122,13 @@ Detailed rubric anchors for each level are in [`scoring/rubrics.md`](scoring/rub
 
 ---
 
-## Primer Variant Library
+## Artifact Variant Library
 
 All 17 texts are token-count verified within ±5% of 490 cl100k_base tokens.
 
 | Category | Count | Purpose |
 |----------|-------|---------|
-| **Original** | 1 | The test condition — full UL-structured primer |
+| **Original** | 1 | The test condition — full UL-structured artifact |
 | **Ablations** | 7 | Each removes exactly one structural feature (geometric framing, nested hierarchy, self-reference, etc.) |
 | **Controls** | 4 | Token-matched texts with academic-style content but no UL structure |
 | **Negative controls** | 5 | Texts with actively anti-UL properties (flat ontology, rigid categories, etc.) |

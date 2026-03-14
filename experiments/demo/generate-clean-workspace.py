@@ -34,17 +34,17 @@ TASKS = {
 
 # Context files (relative to REPO = experiments/demo/)
 CONTEXT_FILES = {
-    "UL-P1": "theory-primers/UL-P1_topological-harmonic.txt",
-    "UL-P2": "theory-primers/UL-P2_recursive-categorical.txt",
-    "UL-P3": "theory-primers/UL-P3_information-geometric.txt",
-    "UL-P4": "theory-primers/UL-P4_thermodynamic-semiotic.txt",
+    "UL-P1": "theory-artifacts/UL-P1_topological-harmonic.txt",
+    "UL-P2": "theory-artifacts/UL-P2_recursive-categorical.txt",
+    "UL-P3": "theory-artifacts/UL-P3_information-geometric.txt",
+    "UL-P4": "theory-artifacts/UL-P4_thermodynamic-semiotic.txt",
     "REF": os.path.join(REPO_ROOT, "test-content.txt"),  # absolute
     "CT-G": "controls/CT-G_algebraic-number-theory.txt",
     "CT-P1": "controls/CT-P1_standard-topology.txt",
     "CT-P2": "controls/CT-P2_standard-category.txt",
     "CT-P3": "controls/CT-P3_standard-info-geometry.txt",
     "CT-P4": "controls/CT-P4_standard-stat-mech.txt",
-    "NAV-P": "controls/NAV-P_naive-primer.txt",
+    "NAV-P": "controls/NAV-P_naive-artifact.txt",
 }
 
 # Trial matrix: condition → list of tasks

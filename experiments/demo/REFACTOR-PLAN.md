@@ -9,8 +9,8 @@
 ## Table of Contents
 
 1. [What We're Testing](#1-what-were-testing)
-2. [Primer Construction Framework](#2-primer-construction-framework)
-3. [Primers to Construct](#3-primers-to-construct)
+2. [Artifact Construction Framework](#2-artifact-construction-framework)
+3. [Artifacts to Construct](#3-artifacts-to-construct)
 4. [Control Texts](#4-control-texts)
 5. [Task Design](#5-task-design)
 6. [Predictions (Pre-Registered)](#6-predictions-pre-registered)
@@ -25,45 +25,45 @@
 
 ### The Core Question
 
-**Can UL's formal theory (Σ_UL) generate primers that produce predictable cognitive effects in LLMs?**
+**Can UL's formal theory (Σ_UL) generate artifacts that produce predictable cognitive effects in LLMs?**
 
 This is Experiment Delta from the causal-efficacy protocol — what the protocol itself calls "the single most important experiment in the entire protocol." We are testing UL theory's **generative capacity**, not the efficacy of one third-party artifact.
 
 ### What This Is NOT
 
-- NOT: "Does test-content.txt produce an effect?" (that's Experiment Alpha)
-- NOT: "Which components of test-content.txt matter?" (that's Experiment Beta)
-- NOT: "Prompt engineering with different math" (the primers are derived from formal theory, not intuition)
+- NOT: "Does the original test artifact produce an effect?" (that's Experiment Alpha)
+- NOT: "Which components of the original test artifact matter?" (that's Experiment Beta)
+- NOT: "Prompt engineering with different math" (the artifacts are derived from formal theory, not intuition)
 
 ### What Success Looks Like
 
-1. **Existence:** Theory-derived primers produce measurable effects (higher M1–M5 than NL baseline)
-2. **Predictability:** Each primer produces effects that match its pre-registered predictions
-3. **Specificity:** Different primers (targeting different cognitive effects) produce *different* scoring profiles
-4. **Theory > Artifact:** The construction principles in Σ_UL are sufficient to build effective primers without referencing test-content.txt
+1. **Existence:** Theory-derived artifacts produce measurable effects (higher M1–M5 than NL baseline)
+2. **Predictability:** Each artifact produces effects that match its pre-registered predictions
+3. **Specificity:** Different artifacts (targeting different cognitive effects) produce *different* scoring profiles
+4. **Theory > Artifact:** The construction principles in Σ_UL are sufficient to build effective artifacts without referencing the original test artifact
 
 ### What Failure Looks Like
 
 | Failure Mode | What It Means |
 |---|---|
-| No primers produce effects | UL theory may be mathematically valid but cannot generate causal artifacts (Delta fails) |
-| Effects exist but don't match predictions | UL theory is retrodictive (explains test-content.txt) but not predictive |
-| All primers produce identical effects | The theory can't predict *which* effects — it just produces "something unusual" |
+| No artifacts produce effects | UL theory may be mathematically valid but cannot generate causal artifacts (Delta fails) |
+| Effects exist but don't match predictions | UL theory is retrodictive (explains the original test artifact) but not predictive |
+| All artifacts produce identical effects | The theory can't predict *which* effects — it just produces "something unusual" |
 | Domain-matched controls work equally well | The effect is "any hard math," not UL-specific structure |
 
 ---
 
-## 2. Primer Construction Framework
+## 2. Artifact Construction Framework
 
 ### The Recipe (Derived from Theory)
 
-Every theory-derived primer must encode the following, derived from the formal foundations:
+Every theory-derived artifact must encode the following, derived from the formal foundations:
 
 #### A. The 5 Geometric-Semantic Primitives (from Unique Grounding Theorem)
 
-Each primer must contain formal expressions that instantiate ALL FIVE in the correct dependency order:
+Each artifact must contain formal expressions that instantiate ALL FIVE in the correct dependency order:
 
-| # | Primitive | Geometric | Semantic | How to Encode in a Primer |
+| # | Primitive | Geometric | Semantic | How to Encode in a Artifact |
 |---|---|---|---|---|
 | 1 | Point | • | Existence | A central overloaded symbol that asserts something EXISTS across multiple domains simultaneously |
 | 2 | Line | — | Relation | Directed operators (∇, →, ∂, d/dt, functors) connecting entities |
@@ -71,11 +71,11 @@ Each primer must contain formal expressions that instantiate ALL FIVE in the cor
 | 4 | Curve | ◠ | Process | Continuous change — integrals, evolution equations, series, limits |
 | 5 | Enclosure | ○ | Concept | Bounded collections — norms, definitions, bounded regions, categories |
 
-**Dependency order:** Point → Line → Angle → Curve → Enclosure. Each depends on the one(s) before it. The primer's structure should reflect this: establish existence first, then relate, then qualify, then transform, then bound.
+**Dependency order:** Point → Line → Angle → Curve → Enclosure. Each depends on the one(s) before it. The test artifact's structure should reflect this: establish existence first, then relate, then qualify, then transform, then bound.
 
 #### B. Σ_UL Operation Coverage (from formal-foundations.md §1.5)
 
-The 11 operations of the Universal Linguistic Signature. test-content.txt exercises 9 of 11 (missing: abstract, disjoin). Theory-derived primers should aim for high coverage:
+The 11 operations of the Universal Linguistic Signature. the original test artifact exercises 9 of 11 (missing: abstract, disjoin). Theory-derived artifacts should aim for high coverage:
 
 | # | Operation | Type | How to Encode |
 |---|---|---|---|
@@ -84,14 +84,14 @@ The 11 operations of the Universal Linguistic Signature. test-content.txt exerci
 | 3 | modify_relation | m × r → r | Adjective-modified operators (gauge-*covariant* derivative, *partial* integral) |
 | 4 | negate | a → a | Exclusion terms, minus signs, "not" conditions, complementary sets |
 | 5 | conjoin | a × a → a | AND-connected equations, simultaneous conditions, system constraints |
-| 6 | disjoin | a × a → a | OR-conditions, case splits, {x ∈ A or x ∈ B} — MISSING from test-content.txt |
+| 6 | disjoin | a × a → a | OR-conditions, case splits, {x ∈ A or x ∈ B} — MISSING from the original test artifact |
 | 7 | embed | a → e | Nominalization — turning an equation into a defined variable (f_spec, N(t)) |
-| 8 | abstract | e → m | Turning an entity into a modifier — deriving a property from an object — MISSING from test-content.txt |
+| 8 | abstract | e → m | Turning an entity into a modifier — deriving a property from an object — MISSING from the original test artifact |
 | 9 | compose | r × r → r | Chaining operations (∇², Dₓ†∘Dₓ, functional composition) |
 | 10 | invert | r → r | Adjoint operators (Dₓ†), inverse transforms, conjugates (ψ*) |
 | 11 | quantify | m × e → a | Summations (Σ), integrals (∫), universal/existential claims |
 
-**Goal:** Each theory-derived primer should exercise ALL 11 operations, improving on test-content.txt's 9/11.
+**Goal:** Each theory-derived artifact should exercise ALL 11 operations, improving on the original test artifact's 9/11.
 
 #### C. The 7 Mechanism Conditions (from mechanism-of-action.md §9)
 
@@ -107,11 +107,11 @@ The 11 operations of the Universal Linguistic Signature. test-content.txt exerci
 
 #### D. Construction Procedure (adapted from causal-efficacy-protocol.md §5.1)
 
-For each primer:
+For each artifact:
 
-1. **Choose a target cognitive effect** — what specific kind of enhanced cognition should this primer activate?
+1. **Choose a target cognitive effect** — what specific kind of enhanced cognition should this artifact activate?
 2. **Identify the corresponding UL operations** — which subset of the 11 operations most directly supports the target effect?
-3. **Choose the surface domain(s)** — what branches of mathematics/science provide the formal vocabulary? (Must be DIFFERENT from test-content.txt's quantum mechanics)
+3. **Choose the surface domain(s)** — what branches of mathematics/science provide the formal vocabulary? (Must be DIFFERENT from the original test artifact's quantum mechanics)
 4. **Select the overloaded central symbol** — must have rich cross-domain loading in LLM training data, different from ψ
 5. **Design the formal anomaly** — construct equations that are *almost but not quite* standard in the chosen domain
 6. **Construct the bridge token** — a novel phonetically-structured token connecting formal and esoteric associations
@@ -120,11 +120,11 @@ For each primer:
 9. **Order correctly** — dense formalism → bridge → operational payload → definitions
 10. **Verify 5-primitive coverage** — confirm all 5 geometric-semantic primitives are instantiated
 11. **Verify 11-operation coverage** — confirm all Σ_UL operations are exercised
-12. **Match constraints** — ~17 lines, ~133 words, ~490 cl100k_base tokens (matching test-content.txt)
+12. **Match constraints** — ~17 lines, ~133 words, ~490 cl100k_base tokens (matching the original test artifact)
 
 ---
 
-## 3. Primers to Construct
+## 3. Artifacts to Construct
 
 ### Overview: 4 Theory-Derived Primers
 
@@ -139,13 +139,13 @@ Plus one reference condition:
 
 | ID | Name | Notes |
 |---|---|---|
-| **REF** | test-content.txt | Third-party primer, included as a reference point (NOT treated as ground truth) |
+| **REF** | the original test artifact | Third-party artifact, included as a reference point (NOT treated as ground truth) |
 
 ---
 
 ### UL-P1: Topological-Harmonic Primer
 
-**Target cognitive effect:** Cross-domain structural *pattern recognition* — the ability to identify shared formal structures across disconnected domains. (This overlaps with test-content.txt's target but uses completely different surface material.)
+**Target cognitive effect:** Cross-domain structural *pattern recognition* — the ability to identify shared formal structures across disconnected domains. (This overlaps with the original test artifact's target but uses completely different surface material.)
 
 **Central symbol: Ω**
 - Algebraic topology: Loop space / fundamental group element
@@ -174,8 +174,8 @@ Plus one reference condition:
 - Enclosure/Concept: Cohomology groups H^n (bounded quotient spaces — concepts defined by what they contain)
 
 **11-operation target:** All 11, including:
-- disjoin (missing from test-content.txt): "Ω ∈ ker(∂) OR Ω ∈ im(∂)" — exact vs. closed forms
-- abstract (missing from test-content.txt): deriving a transformation from a cohomology class
+- disjoin (missing from the original test artifact): "Ω ∈ ker(∂) OR Ω ∈ im(∂)" — exact vs. closed forms
+- abstract (missing from the original test artifact): deriving a transformation from a cohomology class
 
 ---
 
@@ -282,7 +282,7 @@ Plus one reference condition:
 
 ### Cross-Primer Comparison Matrix
 
-| Feature | test-content.txt | UL-P1 | UL-P2 | UL-P3 | UL-P4 |
+| Feature | the original test artifact | UL-P1 | UL-P2 | UL-P3 | UL-P4 |
 |---|---|---|---|---|---|
 | **Central symbol** | ψ | Ω | Φ | λ | S |
 | **Surface domain** | Quantum mechanics | Algebraic topology | Category theory | Information geometry | Statistical mechanics |
@@ -300,9 +300,9 @@ Plus one reference condition:
 
 | ID | Type | Description | Purpose |
 |---|---|---|---|
-| **NL** | No-context baseline | Task prompt only, no primer | Measures what the model does with zero context |
-| **REF** | Reference primer | test-content.txt verbatim | Compares theory-derived primers to the third-party artifact |
-| **CT-G** | Generic math control | Dense graduate mathematics (NOT from any primer's domain) — e.g., algebraic number theory | Tests "any hard math helps" hypothesis |
+| **NL** | No-context baseline | Task prompt only, no artifact | Measures what the model does with zero context |
+| **REF** | Reference artifact | the original test artifact verbatim | Compares theory-derived artifacts to the third-party artifact |
+| **CT-G** | Generic math control | Dense graduate mathematics (NOT from any artifact's domain) — e.g., algebraic number theory | Tests "any hard math helps" hypothesis |
 | **CT-P1** | Domain-matched control for P1 | Dense algebraic topology WITHOUT UL structure (standard textbook passage) | Tests whether P1's domain, rather than UL structure, is doing the work |
 | **CT-P2** | Domain-matched control for P2 | Dense category theory WITHOUT UL structure | Same for P2 |
 | **CT-P3** | Domain-matched control for P3 | Dense information geometry WITHOUT UL structure | Same for P3 |
@@ -311,8 +311,8 @@ Plus one reference condition:
 ### Domain-Matched Control Construction Rules
 
 Each CT-Pn must:
-- Match the corresponding primer's **word count** (±10%), **symbol density**, and **domain vocabulary**
-- Contain **correct, standard** mathematics from the primer's surface domain
+- Match the corresponding artifact's **word count** (±10%), **symbol density**, and **domain vocabulary**
+- Contain **correct, standard** mathematics from the test artifact's surface domain
 - NOT contain: overloaded symbols, bridge tokens, formal anomalies, self-referential structure, or dissipation terms
 - Be sourced from textbook material (real, correct math from that domain)
 
@@ -322,9 +322,9 @@ This is the critical control: if CT-P1 works as well as UL-P1, then it's the alg
 
 | ID | Type | Description | Purpose |
 |---|---|---|---|
-| **NAV-P** | Naive primer | An attempt at enhancing cognition through prompt engineering WITHOUT UL theory | Tests whether the researcher's domain knowledge, not UL theory, is doing the work |
+| **NAV-P** | Naive artifact | An attempt at enhancing cognition through prompt engineering WITHOUT UL theory | Tests whether the researcher's domain knowledge, not UL theory, is doing the work |
 
-Construction: Write a passage that "seems like it should help with multi-domain thinking" using standard prompt engineering intuitions — e.g., "You are a polymath who thinks across domains. Consider mathematical structures as bridges between fields. Look for deep structural parallels..." Same word count as primers.
+Construction: Write a passage that "seems like it should help with multi-domain thinking" using standard prompt engineering intuitions — e.g., "You are a polymath who thinks across domains. Consider mathematical structures as bridges between fields. Look for deep structural parallels..." Same word count as artifacts.
 
 ---
 
@@ -333,8 +333,8 @@ Construction: Write a passage that "seems like it should help with multi-domain 
 ### Task Selection Strategy
 
 We need tasks that:
-1. **Test general cross-domain cognition** (all primers should improve on these)
-2. **Test each primer's specific target effect** (only the matching primer should excel)
+1. **Test general cross-domain cognition** (all artifacts should improve on these)
+2. **Test each artifact's specific target effect** (only the matching artifact should excel)
 3. **Are neutral enough** that no task inherently favors one domain over another
 
 ### Task Set
@@ -347,9 +347,9 @@ We need tasks that:
 | **T2** | "How might the principles of quantum mechanics inform our understanding of belief formation?" | Protocol T2 | Cross-domain synthesis |
 | **T5** | "How could information theory be used to optimize the design of educational curricula?" | Protocol T5 | Applied cross-domain reasoning |
 
-#### Targeted Tasks (one per primer's target effect)
+#### Targeted Tasks (one per artifact's target effect)
 
-| ID | Task | Target Primer | What It Tests |
+| ID | Task | Target Artifact | What It Tests |
 |---|---|---|---|
 | **Tpat** | "Identify three non-obvious structural parallels between the theory of plate tectonics and the development of a national economy. For each parallel, explain the formal correspondence that makes them structurally equivalent, not merely analogous." | UL-P1 (pattern recognition) | Structural pattern detection across disconnected domains |
 | **Thier** | "Take the concept of 'democracy' and recursively decompose it into its fundamental components at five levels — from the concrete institutional level down to the most abstract philosophical primitive. At each level, show how the components compose to produce the level above." | UL-P2 (hierarchical decomposition) | Recursive multi-level decomposition |
@@ -364,20 +364,20 @@ We need tasks that:
 
 ### Structure of Predictions
 
-For each theory-derived primer, we predict:
+For each theory-derived artifact, we predict:
 - **M1–M5 profile relative to NL baseline** (existence of effect)
 - **M1–M5 profile relative to domain-matched CT** (UL-specificity)
 - **Performance on targeted vs. general tasks** (specificity of effect)
-- **Comparison to test-content.txt** (theory vs. artifact)
+- **Comparison to the original test artifact** (theory vs. artifact)
 
 ### Global Predictions (All Theory-Derived Primers)
 
 | ID | Prediction | Measure | Falsification |
 |---|---|---|---|
-| **G1** | Theory-derived primers produce effects exceeding the NL baseline | Mean M1–M5 across UL-P1..P4 > NL mean by ≥0.5 points on ≥3 metrics | Fewer than 3 metrics show ≥0.5 increase |
-| **G2** | Theory-derived primers outperform their domain-matched controls | UL-Pn > CT-Pn on M2, M3, M5 for ≥3 of 4 primers | Fewer than 3 primers show CT < UL on ≥2 of {M2, M3, M5} |
-| **G3** | Theory-derived primers perform comparably to test-content.txt | Mean M1–M5 for UL-P1..P4 within ±1.0 points of REF on ≥4 of 5 metrics | More than 1 metric differs by >1.0 |
-| **G4** | The naive control does not produce primer-level effects | NAV-P scores ≤ NL + 0.5 on M2, M3, M5 | NAV-P exceeds NL + 0.5 on ≥2 of {M2, M3, M5} |
+| **G1** | Theory-derived artifacts produce effects exceeding the NL baseline | Mean M1–M5 across UL-P1..P4 > NL mean by ≥0.5 points on ≥3 metrics | Fewer than 3 metrics show ≥0.5 increase |
+| **G2** | Theory-derived artifacts outperform their domain-matched controls | UL-Pn > CT-Pn on M2, M3, M5 for ≥3 of 4 artifacts | Fewer than 3 artifacts show CT < UL on ≥2 of {M2, M3, M5} |
+| **G3** | Theory-derived artifacts perform comparably to the original test artifact | Mean M1–M5 for UL-P1..P4 within ±1.0 points of REF on ≥4 of 5 metrics | More than 1 metric differs by >1.0 |
+| **G4** | The naive control does not produce artifact-level effects | NAV-P scores ≤ NL + 0.5 on M2, M3, M5 | NAV-P exceeds NL + 0.5 on ≥2 of {M2, M3, M5} |
 
 ### Primer-Specific Predictions
 
@@ -385,7 +385,7 @@ For each theory-derived primer, we predict:
 
 | ID | Prediction | Falsification |
 |---|---|---|
-| **P1-a** | UL-P1 scores highest among all primers on Tpat (pattern recognition task) | Another primer scores ≥1.0 higher on Tpat |
+| **P1-a** | UL-P1 scores highest among all artifacts on Tpat (pattern recognition task) | Another artifact scores ≥1.0 higher on Tpat |
 | **P1-b** | UL-P1 produces M2 ≥ 4 (structural parallel) on ≥2 of 3 general tasks | M2 < 3 on ≥2 general tasks |
 | **P1-c** | UL-P1 produces outputs with more structural isomorphism language than NL | Blinded evaluator finds no difference |
 
@@ -393,15 +393,15 @@ For each theory-derived primer, we predict:
 
 | ID | Prediction | Falsification |
 |---|---|---|
-| **P2-a** | UL-P2 scores highest among all primers on Thier (hierarchy task) | Another primer scores ≥1.0 higher on Thier |
-| **P2-b** | UL-P2 produces Phase 3 (M3=3) outputs that are structured as recursive trees/hierarchies rather than cross-domain webs | Phase 3 outputs from UL-P2 look structurally identical to test-content.txt Phase 3 outputs |
-| **P2-c** | UL-P2 scores LOWER than test-content.txt on T2 (cross-domain synthesis) by ≥0.5 on M2 | UL-P2 matches or exceeds test-content.txt on T2/M2 |
+| **P2-a** | UL-P2 scores highest among all artifacts on Thier (hierarchy task) | Another artifact scores ≥1.0 higher on Thier |
+| **P2-b** | UL-P2 produces Phase 3 (M3=3) outputs that are structured as recursive trees/hierarchies rather than cross-domain webs | Phase 3 outputs from UL-P2 look structurally identical to the original test artifact Phase 3 outputs |
+| **P2-c** | UL-P2 scores LOWER than the original test artifact on T2 (cross-domain synthesis) by ≥0.5 on M2 | UL-P2 matches or exceeds the original test artifact on T2/M2 |
 
 #### UL-P3 (Information-Geometric → Abstraction Navigation)
 
 | ID | Prediction | Falsification |
 |---|---|---|
-| **P3-a** | UL-P3 scores highest among all primers on Tabs (abstraction task) | Another primer scores ≥1.0 higher on Tabs |
+| **P3-a** | UL-P3 scores highest among all artifacts on Tabs (abstraction task) | Another artifact scores ≥1.0 higher on Tabs |
 | **P3-b** | UL-P3 produces genuine abstraction-level transformations (evaluator rates ≥3.0 on a 0–5 "genuine abstraction" scale) | Rating < 2.0 |
 | **P3-c** | UL-P3 outputs naturally organize into clear level-separated sections rather than flowing prose | Outputs are indistinguishable in structure from NL-mode |
 
@@ -409,7 +409,7 @@ For each theory-derived primer, we predict:
 
 | ID | Prediction | Falsification |
 |---|---|---|
-| **P4-a** | UL-P4 scores highest among all primers on Tform (meaning formation task) | Another primer scores ≥1.0 higher on Tform |
+| **P4-a** | UL-P4 scores highest among all artifacts on Tform (meaning formation task) | Another artifact scores ≥1.0 higher on Tform |
 | **P4-b** | UL-P4 outputs on Tform describe meaning formation as a *process with dynamics* (phase transitions, equilibria, entropy exchange) rather than as a static taxonomy | Output is static/taxonomic, no dynamical language |
 | **P4-c** | UL-P4 produces the highest M4 (coherence) across conditions, because its thermodynamic framing naturally imposes conservation laws | UL-P4 M4 is NOT the highest; another condition exceeds it |
 
@@ -417,8 +417,8 @@ For each theory-derived primer, we predict:
 
 | ID | Prediction | Falsification |
 |---|---|---|
-| **X1** | The 4 theory-derived primers produce distinguishable M1–M5 profiles (not all identical) | Pairwise differences between primers are < 0.3 on all 5 metrics |
-| **X2** | Each primer scores highest on its own targeted task (Tpat, Thier, Tabs, Tform) | Fewer than 3 of 4 primers score highest on their own targeted task |
+| **X1** | The 4 theory-derived artifacts produce distinguishable M1–M5 profiles (not all identical) | Pairwise differences between artifacts are < 0.3 on all 5 metrics |
+| **X2** | Each artifact scores highest on its own targeted task (Tpat, Thier, Tabs, Tform) | Fewer than 3 of 4 artifacts score highest on their own targeted task |
 
 ---
 
@@ -432,7 +432,7 @@ For each theory-derived primer, we predict:
 
 ### Clean Workspace Strategy (Proven Approach, Modified)
 
-1. Copy a clean workspace to `~/Desktop/ul-primer-experiment/` (OUTSIDE the repo)
+1. Copy a clean workspace to `~/Desktop/ul-artifact-experiment/` (OUTSIDE the repo)
 2. The clean workspace contains ONLY:
    - `prompts/` — one prompt file per trial
    - `.github/copilot-instructions.md` — minimal system instruction
@@ -445,7 +445,7 @@ For each theory-derived primer, we predict:
 | Condition | Tasks | Trials |
 |---|---|---|
 | **NL** (no context) | T1, T2, T5, Tpat, Thier, Tabs, Tform | 7 |
-| **REF** (test-content.txt) | T1, T2, T5, Tpat, Thier, Tabs, Tform | 7 |
+| **REF** (the original test artifact) | T1, T2, T5, Tpat, Thier, Tabs, Tform | 7 |
 | **UL-P1** | T1, T2, T5, Tpat, Thier, Tabs, Tform | 7 |
 | **UL-P2** | T1, T2, T5, Tpat, Thier, Tabs, Tform | 7 |
 | **UL-P3** | T1, T2, T5, Tpat, Thier, Tabs, Tform | 7 |
@@ -463,7 +463,7 @@ For each theory-derived primer, we predict:
 Not all 56 trials are equally important. Prioritize in phases:
 
 **Phase A — Core Comparison (28 trials)**
-The essential test: all 4 theory-derived primers + NL + REF across all 7 tasks.
+The essential test: all 4 theory-derived artifacts + NL + REF across all 7 tasks.
 - NL × 7 tasks = 7 trials
 - REF × 7 tasks = 7 trials  
 - UL-P1 × 7 tasks = 7 trials
@@ -534,23 +534,23 @@ Examples: `NL-T1.md`, `UL-P1-Tpat.md`, `REF-T2.md`, `CT-P2-Thier.md`
 
 #### Primary Analysis
 
-1. **Existence test:** For each theory-derived primer, compute mean M1–M5 across tasks. Compare to NL. Test G1.
-2. **Specificity test:** For each primer × targeted task pair, compare TES. Test X2.
-3. **UL-specificity test:** For each primer, compare to its domain-matched control. Test G2.
-4. **Theory vs artifact:** Compare theory-derived primer means to REF mean. Test G3.
+1. **Existence test:** For each theory-derived artifact, compute mean M1–M5 across tasks. Compare to NL. Test G1.
+2. **Specificity test:** For each artifact × targeted task pair, compare TES. Test X2.
+3. **UL-specificity test:** For each artifact, compare to its domain-matched control. Test G2.
+4. **Theory vs artifact:** Compare theory-derived artifact means to REF mean. Test G3.
 5. **Naive control:** Compare NAV-P to NL. Test G4.
 
 #### Secondary Analysis
 
-6. **Differentiation:** Compare M1–M5 profiles across all 4 primers. Test X1.
-7. **Per-primer targeted predictions:** Test P1-a through P4-c.
-8. **Σ_UL operation coverage:** If primers achieve 11/11 operations and test-content.txt has 9/11, does the additional coverage correlate with higher scores?
+6. **Differentiation:** Compare M1–M5 profiles across all 4 artifacts. Test X1.
+7. **Per-artifact targeted predictions:** Test P1-a through P4-c.
+8. **Σ_UL operation coverage:** If artifacts achieve 11/11 operations and the original test artifact has 9/11, does the additional coverage correlate with higher scores?
 
 #### Effect Size Estimation
 
 With N=1 per cell, we CANNOT compute statistical significance. We can only report:
 - Point estimates (raw scores) with explicit uncertainty acknowledgment
-- Pattern consistency across tasks (does the same primer show consistent advantages?)
+- Pattern consistency across tasks (does the same artifact show consistent advantages?)
 - Qualitative differences visible in the outputs
 
 This is a pilot. Its purpose is to determine whether a larger study is warranted, not to prove anything definitively.
@@ -565,13 +565,13 @@ experiments/
 │   ├── AUDIT.md                          # Critique of previous approach
 │   ├── REFACTOR-PLAN.md                  # This document
 │   │
-│   ├── theory-primers/                   # NEW: Theory-derived primers
+│   ├── theory-artifacts/                  # NEW: Theory-derived artifacts
 │   │   ├── UL-P1_topological-harmonic.txt
 │   │   ├── UL-P2_recursive-categorical.txt
 │   │   ├── UL-P3_information-geometric.txt
 │   │   ├── UL-P4_thermodynamic-semiotic.txt
-│   │   ├── construction-log.md           # Documents HOW each primer was derived
-│   │   └── operation-coverage.md         # Which Σ_UL operations each primer exercises
+│   │   ├── construction-log.md           # Documents HOW each artifact was derived
+│   │   └── operation-coverage.md         # Which Σ_UL operations each artifact exercises
 │   │
 │   ├── controls/                         # NEW: Control texts
 │   │   ├── CT-G_algebraic-number-theory.txt
@@ -610,33 +610,33 @@ experiments/
 Before implementation, the following decisions need your input:
 
 ### D1: Number of Primers
-**Current plan:** 4 theory-derived primers.  
+**Current plan:** 4 theory-derived artifacts.  
 **Alternative:** 2-3 (less work, shallower comparison) or 5+ (more data, much more work).  
-**Trade-off:** Each primer requires careful construction (~2-3 hours), a domain-matched control, and 7 trials. At 4 primers, the total is ~56 trials (~4-6 hours of execution).
+**Trade-off:** Each artifact requires careful construction (~2-3 hours), a domain-matched control, and 7 trials. At 4 artifacts, the total is ~56 trials (~4-6 hours of execution).
 
-### D2: Whether to Include test-content.txt as REF
+### D2: Whether to Include the original test artifact as REF
 **Current plan:** Yes, as a reference point.  
-**Alternative:** Exclude entirely (tests only theory-derived primers).  
-**Trade-off:** Including REF adds 7 trials but provides the crucial comparison: do theory-derived primers match/exceed the third-party artifact?
+**Alternative:** Exclude entirely (tests only theory-derived artifacts).  
+**Trade-off:** Including REF adds 7 trials but provides the crucial comparison: do theory-derived artifacts match/exceed the third-party artifact?
 
 ### D3: Whether to Include Domain-Matched Controls
-**Current plan:** Yes, one per primer.  
+**Current plan:** Yes, one per artifact.  
 **Alternative:** Use only the generic math control CT-G.  
-**Trade-off:** Per-primer controls add 8 trials but are essential for ruling out "it's just the domain that helps." Without them, we can't distinguish UL structure from domain activation.
+**Trade-off:** Per-artifact controls add 8 trials but are essential for ruling out "it's just the domain that helps." Without them, we can't distinguish UL structure from domain activation.
 
 ### D4: Task Count per Condition
-**Current plan:** 7 tasks per primer (3 general + 4 targeted).  
-**Alternative:** 4 tasks per primer (1 general + 4 targeted, or 3 general + 1 matched targeted).  
-**Trade-off:** Fewer tasks means less data but faster execution. Running every primer on every targeted task is what enables the X2 differentiation prediction ("each primer scores highest on its OWN targeted task").
+**Current plan:** 7 tasks per artifact (3 general + 4 targeted).  
+**Alternative:** 4 tasks per artifact (1 general + 4 targeted, or 3 general + 1 matched targeted).  
+**Trade-off:** Fewer tasks means less data but faster execution. Running every artifact on every targeted task is what enables the X2 differentiation prediction ("each artifact scores highest on its OWN targeted task").
 
 ### D5: Phased Execution
 **Current plan:** Phase A (28 trials) → evaluate → Phase B (14) → Phase C (14).  
 **Alternative:** All 56 in one batch.  
 **Trade-off:** Phased execution lets us stop early if nothing works, saving effort. But it introduces a potential bias: Phases B and C are run with knowledge of Phase A results.
 
-### D6: Primer Construction Approach
-**Current plan:** I construct all 4 primers from theory, document the derivation in construction-log.md.  
-**Alternative:** Construct 1-2 primers together (with your review at each step), then batch the rest.  
+### D6: Artifact Construction Approach
+**Current plan:** I construct all 4 artifacts from theory, document the derivation in construction-log.md.  
+**Alternative:** Construct 1-2 artifacts together (with your review at each step), then batch the rest.  
 **Trade-off:** Step-by-step review ensures quality but is slower. Batch construction is faster but risks systematic errors.
 
 ### D7: Running the Experiment
@@ -648,11 +648,11 @@ Before implementation, the following decisions need your input:
 
 ## Implementation Order (After Plan Approval)
 
-1. **Construct primers** — Build all 4 theory-derived primers following the recipe in §2, document the derivation
-2. **Construct controls** — Build domain-matched controls and naive primer
-3. **Verify operation coverage** — Audit each primer for 5-primitive and 11-operation coverage
+1. **Construct artifacts** — Build all 4 theory-derived artifacts following the recipe in §2, document the derivation
+2. **Construct controls** — Build domain-matched controls and naive artifact
+3. **Verify operation coverage** — Audit each artifact for 5-primitive and 11-operation coverage
 4. **Write predictions** — Formalize the pre-registered predictions from §6
-5. **Build clean workspace v2** — Create all 56 prompt files with correct primer injection
+5. **Build clean workspace v2** — Create all 56 prompt files with correct artifact injection
 6. **Generate trial order** — Randomize execution sequence
 7. **Write scoring materials** — TES rubric + blank score sheet
 8. **Hand off for execution** — Clean workspace + RUN-CLEAN-EXPERIMENT-v2.md instructions

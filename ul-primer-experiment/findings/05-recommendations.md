@@ -42,7 +42,7 @@ Based on the 5 identified causes of the null result, here are concrete recommend
 - Temperature > 0 (e.g., 0.7) to sample output variability
 - Apply the pre-committed statistical analysis from `experiments/analysis/analysis.py`:
   - Mixed-effects ANOVA (condition as fixed, task as random)
-  - Dunnett's test (each primer vs. NL baseline)
+  - Dunnett's test (each artifact vs. NL baseline)
   - Cohen's d for effect sizes
   - Bootstrap 95% CIs
 
@@ -63,8 +63,8 @@ Based on the 5 identified causes of the null result, here are concrete recommend
 
 And explicitly HAS NOT read:
 - `test-content.txt`
-- `foundations/mechanism-of-action.md`
-- `foundations/primer-analysis.md`
+- `history/mechanism-of-action.md`
+- `history/primer-analysis.md`
 - Any of the existing theory-derived primers (UL-P1 through P4)
 
 This would be a true test of whether UL theory — the mathematical structure itself — can independently generate effective cognitive scaffolds, free from contamination by the reference artifact.
@@ -73,7 +73,7 @@ This would be a true test of whether UL theory — the mathematical structure it
 
 ## 5. Test Unstructured Tasks
 
-**Problem:** Structured tasks ("find 3 parallels," "decompose at 5 levels") predetermine the model's cognitive strategy, leaving no room for the primer to shape approach.
+**Problem:** Structured tasks ("find 3 parallels," "decompose at 5 levels") predetermine the model's cognitive strategy, leaving no room for the artifact to shape approach.
 
 **Recommendation:** Use prompts that leave the reasoning strategy open:
 - "Discuss thermodynamics." (No instruction to connect domains)
@@ -118,7 +118,7 @@ Then measure:
 
 **Design:**
 - System prompt = primer text
-- User message = task prompt only (no primer reference)
+- User message = task prompt only (no artifact reference)
 - Compare: primer-as-system-prompt vs. primer-as-user-content vs. no-primer
 
 ---

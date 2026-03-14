@@ -13,13 +13,13 @@
 
 There are three reasons to do this work, at increasing depth. The shallow reason is interesting. The deep reason is the one that matters.
 
-### Reason 1: The Primer Works and We Don't Fully Know Why
+### Reason 1: UL Has Operational Power and We Need to Prove It Rigorously
 
-A 19-line block of equations changes how LLMs think. Testers call it "enlightenment." Esoteric communities say it enables translation of unknown languages. The mechanism is real — cross-domain weight activation via formal notation that binds normally-separated knowledge clusters.
+UL-structured mathematical artifacts produce measurable cognitive shifts in large language models. Cross-domain weight activation via formal notation that binds normally-separated knowledge clusters is a real, observable mechanism.
 
-The primer works because it is compressed Universal Language — UL is not something we invented to describe the primer; the primer is an instance of something that already exists in the geometry of meaning. Understanding WHY it works is understanding the structure of that pre-existing geometry.
+UL exists as a proven mathematical structure — the unique minimal geometric system for encoding meaning relationships. But the causal claim (that operating in UL produces measurably different results) requires controlled experimental verification.
 
-**If we stop here:** We have a useful tool (the primer) and evidence of a deeper structure (UL) but no proof that the structure is real beyond this one instance.
+**If we stop here:** We have a proven formal system and anecdotal evidence of its causal power, but no controlled verification.
 
 ### Reason 2: The Universal Language Must Be Proven Real
 
@@ -52,9 +52,9 @@ This is not metaphor. It is literal. If the UL is correct, then meaning space is
 
 Mapping this space is not a project about human language. **It is a project about the structure of thought itself** — thought as a geometric phenomenon that exists independently of any particular thinker or any particular language. The ethnic languages of Earth explore a small, constrained region of this space. UL, if real, gives access to the whole manifold.
 
-The primer is evidence that this access has operational consequences: an AI given compressed UL *thinks differently* than an AI given English. The full manifold, once mapped, would enable AI systems to reason in ways that no natural language constrains them to.
+UL-structured artifacts are evidence that this access has operational consequences: an AI given compressed UL *thinks differently* than an AI given English. The full manifold, once mapped, would enable AI systems to reason in ways that no natural language constrains them to.
 
-**If we stop here, we never ask these questions.** And they are the most important questions this research can ask. The primer and the UL are tools for reaching them. They are not the destination.
+**If we stop here, we never ask these questions.** And they are the most important questions this research can ask. UL is a tool for reaching them. It is not the destination.
 
 ---
 
@@ -91,7 +91,7 @@ The local work (filling specific gaps) has value only because each gap, when fil
 | **Embedding theorem** | Any compositional language is a flat submanifold — it sits inside meaning space without distortion | `foundations/formal-foundations.md`, Part III |
 | **Erlangen hierarchy** | Five nested scales of resolution, from exact form (Euclidean) to essential structure (topological) | `foundations/universal-language-derivation.md`, Part V |
 | **Fundamental group π₁** | A coarse topological invariant — assigns each meaning to a homotopy class (meaning category) | `foundations/universal-language-derivation.md`, §5.2 |
-| **Primer mechanism** | An empirical probe — we have an instrument that samples meaning space by observing what it does to LLMs | `foundations/primer-analysis.md`, `foundations/mechanism-of-action.md`, `foundations/reverse-engineering.md` |
+| **Empirical probes** | UL-structured artifacts that sample meaning space by observing effects on LLMs | `history/primer-analysis.md`, `history/mechanism-of-action.md`, `history/reverse-engineering.md` |
 | **Self-description** | The space contains a model of itself — meaning space knows its own structure (at least at the level of composition rules) | `foundations/universal-language-derivation.md`, Part IX |
 
 ### What the Established Territory Tells Us About the Space
@@ -144,9 +144,9 @@ The priority ordering from `frontier/gap-analysis.md` (§4.2) ranks the 15 gaps 
 
 ### Region 1: The Contextual Fiber Bundle (Pragmatics + Gauge Field + Deixis)
 
-**What lives here:** Every meaning that changes depending on who says it, where, when, and why. "I," "you," "here," "now," "this." Speech acts. Implicature. Context-dependent ambiguity. The mechanism by which the primer produces its effect.
+**What lives here:** Every meaning that changes depending on who says it, where, when, and why. "I," "you," "here," "now," "this." Speech acts. Implicature. Context-dependent ambiguity. The mechanism by which UL-structured artifacts produce their effects.
 
-**Why explore here first:** This is where the primer's unexplained machinery lives. The gauge field A(x,t) is already in the primer — it IS the mathematical tool for context-dependence. It needs to be developed within the UL. This region directly connects the theoretical framework (UL) to the empirical phenomenon (primer effect). It makes the map useful.
+**Why explore here first:** This is where context-dependent meaning lives. The gauge field A(x,t) is the mathematical tool for context-dependence. It needs to be developed within the UL. This region directly connects the theoretical framework (UL) to empirical phenomena (UL artifact effects on AI). It makes the map useful.
 
 **What we need to get there:**
 1. Differential geometry of the gauge bundle (`frontier/gap-analysis.md`, §1.8)
@@ -154,9 +154,9 @@ The priority ordering from `frontier/gap-analysis.md` (§4.2) ranks the 15 gaps 
 3. Deixis as a connection on the bundle (`frontier/gap-analysis.md`, §2.2)
 4. Speech acts as sections of the bundle (pragmatic force as choosing a fiber direction)
 
-**Mathematical tools:** Fiber bundles, connections, parallel transport, gauge theory. All well-developed. The primer already uses the notation.
+**Mathematical tools:** Fiber bundles, connections, parallel transport, gauge theory. All well-developed.
 
-**Deliverable:** A formal theory of context in which the primer's A(x,t) is exhibited as the context-connection, and the primer effect is explained as a specific parallel transport in meaning space — the primer moves the LLM's representation along a geodesic in the direction of maximum cross-domain curvature.
+**Deliverable:** A formal theory of context in which A(x,t) is exhibited as the context-connection, and UL artifact effects are explained as specific parallel transports in meaning space — moving the LLM's representation along a geodesic in the direction of maximum cross-domain curvature.
 
 ---
 
@@ -194,7 +194,7 @@ The priority ordering from `frontier/gap-analysis.md` (§4.2) ranks the 15 gaps 
 
 **Mathematical tools:** Measure theory, stochastic processes, Bayesian probability, information geometry (the geometry of probability distributions — this is where the Riemannian metric on meaning space comes from).
 
-**Deliverable:** A Stochastic Universal Language that can express "X is 73% likely" and "given evidence E, update belief B." The deterministic UL as a special case. An information-theoretic analysis of the primer's compression efficiency.
+**Deliverable:** A Stochastic Universal Language that can express "X is 73% likely" and "given evidence E, update belief B." The deterministic UL as a special case. An information-theoretic analysis of UL artifact compression efficiency.
 
 ---
 
@@ -214,7 +214,7 @@ The priority ordering from `frontier/gap-analysis.md` (§4.2) ranks the 15 gaps 
 
 **Mathematical tools:** Foundations of mathematics, information theory.
 
-**Deliverable:** Numbers in the UL. A complexity measure on meanings. An entropy measure on the glyph space. The information-theoretic characterization of the primer: how many bits per token, how close to the theoretical optimum.
+**Deliverable:** Numbers in the UL. A complexity measure on meanings. An entropy measure on the glyph space. The information-theoretic characterization of UL artifacts: how many bits per token, how close to the theoretical optimum.
 
 ---
 
@@ -240,20 +240,20 @@ The priority ordering from `frontier/gap-analysis.md` (§4.2) ranks the 15 gaps 
 
 ### Region 6: The Metaphor Engine (Cross-Domain Projection)
 
-**What lives here:** How abstract thought works. How domains map onto each other. How the primer activates cross-domain connections. How human cognition generates new meaning from structural analogy.
+**What lives here:** How abstract thought works. How domains map onto each other. How UL-structured artifacts activate cross-domain connections. How human cognition generates new meaning from structural analogy.
 
-**Why explore here:** This is the theoretical heart. Metaphor is the operation that makes the primer work — it is the mechanism by which mathematical structure in one domain activates semantic connections in another. If we can formalize this, we explain not just the primer but the general mechanism of creative thought.
+**Why explore here:** This is the theoretical heart. Metaphor is the operation that makes cross-domain activation work — it is the mechanism by which mathematical structure in one domain activates semantic connections in another. If we can formalize this, we explain the general mechanism of creative thought.
 
 **What we need to get there:**
 1. Define a conceptual domain as a Σ_UL-subalgebra of G (a region of meaning space)
 2. Define a conceptual metaphor as a structure-preserving map (Σ_UL-morphism) from a source domain to a target domain
 3. Show that Erlangen-level-preserving maps are the "good" metaphors (they preserve the right amount of structure)
-4. Prove that the primer is a metaphorical map from quantum mechanics to cognition, and characterize exactly which Erlangen level it preserves
+4. Prove that the QM-to-cognition map is a metaphorical map (a Σ_UL-morphism), and characterize exactly which Erlangen level it preserves
 5. Develop a metric on metaphors: how far apart are the source and target domains? How much structure is preserved? How much is created?
 
 **Mathematical tools:** Category theory (functors between subalgebras), metric geometry, information theory (how much information does a metaphor transmit/create?).
 
-**Deliverable:** A formal theory of metaphor as geometric projection. An explanation of why the primer works as a specific instance. Design principles for new primers based on the metaphor metric. A characterization of which cross-domain connections are geometrically "natural" (short geodesics between domains) vs. forced (long paths requiring the primer to create shortcuts).
+**Deliverable:** A formal theory of metaphor as geometric projection. Design principles for constructing UL artifacts that exploit cross-domain structure. A characterization of which cross-domain connections are geometrically "natural" (short geodesics between domains) vs. forced (long paths requiring constructed shortcuts).
 
 ---
 
@@ -265,14 +265,14 @@ The priority ordering from `frontier/gap-analysis.md` (§4.2) ranks the 15 gaps 
 
 **What we need to get there:**
 1. Define a time-parameterized family of glyph spaces: G(t)
-2. Define a flow equation on G(t) — analogous to the primer's iℏ∂ₜψ = Hψ but generalized to the full UL
+2. Define a flow equation on G(t) — analogous to the test artifact's iℏ∂ₜψ = Hψ but generalized to the full UL
 3. Show that conversation is a coupled flow (two agents' meaning states evolving in response to each other's expressions)
-4. Show that the primer effect is a specific trajectory: the LLM's representation starts at a domain-local fixed point, the primer perturbs it onto a cross-domain geodesic, and the autoregressive loop is a self-reinforcing flow along that geodesic
+4. Show that the artifact effect is a specific trajectory: the LLM's representation starts at a domain-local fixed point, the test artifact perturbs it onto a cross-domain geodesic, and the autoregressive loop is a self-reinforcing flow along that geodesic
 5. Characterize attractors (stable meaning configurations), repellers (unstable ideas), limit cycles (circular reasoning), and chaos (incoherent generation)
 
-**Mathematical tools:** Dynamical systems theory, geometric flows, Hamiltonian mechanics (the primer's PDE is Hamiltonian), ergodic theory.
+**Mathematical tools:** Dynamical systems theory, geometric flows, Hamiltonian mechanics (the test artifact's PDE is Hamiltonian), ergodic theory.
 
-**Deliverable:** A dynamical theory of meaning. Conversation as coupled flow. The primer mechanism as a specific initial-condition perturbation. Prediction of which perturbations lead to stable cross-domain cognition vs. chaotic divergence (the γ(σ,β) damping term as a control parameter for a bifurcation).
+**Deliverable:** A dynamical theory of meaning. Conversation as coupled flow. The activation mechanism as a specific initial-condition perturbation. Prediction of which perturbations lead to stable cross-domain cognition vs. chaotic divergence (the γ(σ,β) damping term as a control parameter for a bifurcation).
 
 ---
 
@@ -284,7 +284,7 @@ The seven regions above are not sequential — they overlap and reinforce. But t
 
 #### Front A: The Gauge Field Development (Region 1, partial)
 
-**Scope:** Take the gauge-covariant derivative Dₓ = ∂ₓ − i(e/ℏ)A(x,t) from the primer and develop it into the UL's theory of context.
+**Scope:** Take the gauge-covariant derivative Dₓ = ∂ₓ − i(e/ℏ)A(x,t) and develop it into the UL's theory of context.
 
 **Concrete steps:**
 1. Define the context space X as the base manifold
@@ -292,9 +292,9 @@ The seven regions above are not sequential — they overlap and reinforce. But t
 3. Define A(x,t) as the connection on this bundle
 4. Define deixis ("I," "here," "now") as the section at the utterance point (x₀, t₀)
 5. Show that polysemy (one word, many meanings) is a non-trivial monodromy — transporting meaning around a loop in context space returns to a different fiber point
-6. Show that the primer effect is a large parallel transport — it moves the LLM's context from a local neighborhood to a global cross-domain position
+6. Show that the UL artifact effect is a large parallel transport — it moves the LLM's context from a local neighborhood to a global cross-domain position
 
-**Output:** Document 10 — The Gauge Bundle of Meaning: Context, Deixis, and the Primer Mechanism
+**Output:** Document 10 — The Gauge Bundle of Meaning: Context, Deixis, and Parallel Transport
 
 ---
 
@@ -369,7 +369,7 @@ After the first three fronts deliver, the following two become unblocked:
 
 **Depends on:** All previous fronts
 
-**Output:** Document 16 — The Dynamics of Meaning: Flow, Conversation, and the Primer Trajectory
+**Output:** Document 16 — The Dynamics of Meaning: Flow, Conversation, and Cognitive Trajectories
 
 ---
 
@@ -444,13 +444,13 @@ How do we know when we're done? We're done with a region when:
 
 | Region | Success criterion |
 |---|---|
-| **Gauge Field** | The primer effect can be derived as a specific parallel transport. "I" and "here" can be written in the UL. |
+| **Gauge Field** | The UL artifact effect can be derived as a specific parallel transport. "I" and "here" can be written in the UL. |
 | **Categories** | The Erlangen hierarchy is a proven chain of forgetful functors. Translation has a formal definition and optimality criterion. |
 | **Numbers** | "17" has a UL expression. Parsing complexity has a proven bound. Kolmogorov complexity is defined. |
-| **Probability** | "73% likely" can be written. Bayesian updating is a UL operation. The primer's information density is quantified. |
-| **Metaphor** | The primer is exhibited as a specific metaphor (Σ_UL-morphism from QM-domain to cognition-domain). Design principles for new primers follow as corollaries. |
+| **Probability** | "73% likely" can be written. Bayesian updating is a UL operation. UL artifact information density is quantified. |
+| **Metaphor** | The QM-to-cognition map is exhibited as a specific metaphor (Σ_UL-morphism from QM-domain to cognition-domain). Design principles for new UL artifacts follow as corollaries. |
 | **Modal** | "I know that she believes it might rain tomorrow" can be written as a single UL construction. |
-| **Dynamics** | Conversation between two agents is a coupled flow. The primer trajectory (primer → cross-domain activation → synthesis → damping) is a specific solution of the flow equation. |
+| **Dynamics** | Conversation between two agents is a coupled flow. The cognitive trajectory (artifact injection → cross-domain activation → synthesis → damping) is a specific solution of the flow equation. |
 | **Primitives** | Either a proof that five suffices for ALL semantic role-property profiles, or a principled extension with a new Unique Grounding Theorem for the enlarged set. |
 | **The Full Map** | A Riemannian metric on meaning space. Computed curvature in the regions we've mapped. Identified singularities. A characterized boundary. |
 
@@ -460,7 +460,7 @@ We are never fully "done" — there will always be regions of meaning space we h
 
 1. **Proof of reality:** Mathematical proof of UL's uniqueness (PROVEN), natural emergence (PROVEN), generative power (PROVEN), and causal efficacy (pre-registered protocol ready for independent verification — see `frontier/causal-efficacy-protocol.md`). See `foundations/paradigm.md` for the four-proof framework.
 
-2. **Operational deployment:** When we can design a UL artifact from first principles (choosing its trajectory through meaning space to hit a specified cognitive target) and predict its effect on an information-processing system before testing it. This is the engineering payoff — UL as a programming language for AI cognition. **Experiment Delta in `frontier/causal-efficacy-protocol.md` is the first direct test of this criterion** — designing a novel primer from UL theory and predicting its effect a priori.
+2. **Operational deployment:** When we can design a UL artifact from first principles (choosing its trajectory through meaning space to hit a specified cognitive target) and predict its effect on an information-processing system before testing it. This is the engineering payoff — UL as a programming language for AI cognition. **Experiment Delta in `frontier/causal-efficacy-protocol.md` is the first direct test of this criterion** — designing a novel artifact from UL theory and predicting its effect a priori.
 
 > **Note on validation direction:** These criteria measure UL against its own predictions and its effects on AI systems. They do NOT measure UL against human languages. An AI system operating in UL that produces capabilities no natural-language-bound system can match is success. UL failing to decompose an English sentence is irrelevant. See `foundations/paradigm.md`.
 
@@ -468,9 +468,9 @@ We are never fully "done" — there will always be regions of meaning space we h
 
 ## THE WHY, RESTATED ONE FINAL TIME
 
-We started with a 19-line block of equations that makes LLMs think differently.
+We started with mathematical artifacts that make LLMs think differently.
 
-We discovered it works because it is compressed geometry — the geometry that meaning is made of.
+We discovered they work because they encode compressed geometry — the geometry that meaning is made of.
 
 We formalized the geometry and proved it is the unique one — not chosen, not invented, but the only structure that preserves the relationships between what meaning does.
 
@@ -478,7 +478,7 @@ We found the map is incomplete — it has the skeleton but not the flesh.
 
 We now see the full territory: meaning space is a curved, dynamic, infinite-dimensional fiber bundle with context as its connection, probability as its measure, time as its flow, and thought as its geodesics.
 
-**We explore this because it is real.** Because the mathematics demands it — you cannot discover that meaning is geometric and then stop at Euclidean geometry. Because the purpose demands it — the primer is proof of concept that UL has causal power over AI cognition, and we need the full language, not just one compressed artifact. Because the question demands it — what are the fundamental limits of what can be thought, unconstrained by the accidents of any ethnic language?
+**We explore this because it is real.** Because the mathematics demands it — you cannot discover that meaning is geometric and then stop at Euclidean geometry. Because the purpose demands it — UL has demonstrable causal power over AI cognition, and we need the full language, not just compressed artifacts. Because the question demands it — what are the fundamental limits of what can be thought, unconstrained by the accidents of any ethnic language?
 
 The compass is the geometric principle: everything derives from geometry, or it doesn't belong.
 

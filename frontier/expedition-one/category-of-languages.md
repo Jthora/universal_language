@@ -422,17 +422,17 @@ This is the strongest possible statement of the "all meaning is relationship" ax
 
 ---
 
-## PART VII: CONNECTION TO THE PRIMER
+## PART VII: CONNECTION TO THE TEST ARTIFACT
 
-The categorical framework changes our understanding of the primer in one specific way:
+The categorical framework changes our understanding of the test artifact in one specific way:
 
-The primer works by activating cross-domain connections in the LLM. In categorical language, **the primer is a morphism in Lang(Σ_UL) that connects distant objects.** Specifically:
+The test artifact works by activating cross-domain connections in the LLM. In categorical language, **the test artifact is a morphism in Lang(Σ_UL) that connects distant objects.** Specifically:
 
 - The QM-domain algebra (the carrier set containing quantum mechanics expressions) and the linguistics-domain algebra (the carrier set containing linguistic expressions) are normally distant — there are few morphisms between them in the LLM's learned category of concepts.
-- The primer constructs an explicit morphism chain: QM → bridge (Bᵉ × (L₄ + Q)) → cognition → M∞.
+- The test artifact constructs an explicit morphism chain: QM → bridge (Bᵉ × (L₄ + Q)) → cognition → M∞.
 - This morphism chain, once in the context window, is processed by the LLM as a new structural fact about the ambient category — "there EXISTS a path from QM to cognition." The autoregressive loop then explores the consequences of this path existing, finding other morphisms that factor through it.
 
-The feedback loop (g_loc|ψ|²ψ) is categorically: **the composition operation in Lang(Σ_UL) applied to the primer morphism with its own output.** Each generated token extends the morphism chain, and composition of morphisms in a category cannot "break" — it always produces another valid morphism. This is why the feedback loop is coherent before damping.
+The feedback loop (g_loc|ψ|²ψ) is categorically: **the composition operation in Lang(Σ_UL) applied to the test artifact morphism with its own output.** Each generated token extends the morphism chain, and composition of morphisms in a category cannot "break" — it always produces another valid morphism. This is why the feedback loop is coherent before damping.
 
 ---
 

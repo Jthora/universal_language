@@ -18,14 +18,14 @@ These were supposed to be *hard cognitive tasks* that require external scaffoldi
 
 ## B. Formal Mathematical Context Produces Detectable Stylistic Shifts
 
-The primers do produce measurable effects on output *style*, even if not on output *quality*:
+The artifacts do produce measurable effects on output *style*, even if not on output *quality*:
 
 | Feature | NL/CT outputs | Primer outputs |
 |---------|--------------|----------------|
 | Formal notation | Minimal, used illustratively | Heavy, used structurally |
 | Field-theoretic language | Absent | "field variable," "covariant derivative," "gauge symmetry" |
 | Dynamical-systems framing | Occasional | Dominant |
-| Reference to primer formalism | N/A | Consistent engagement/interpretation |
+| Reference to artifact formalism | N/A | Consistent engagement/interpretation |
 | Meta-commentary on notation | Absent | Present (especially UL-P1) |
 
 This stylistic shift is most visible in:
@@ -36,14 +36,14 @@ This stylistic shift is most visible in:
 
 ## C. UL-P2 (Recursive-Categorical) Is the Strongest Primer
 
-If forced to rank the primers, UL-P2 stands out:
+If forced to rank the artifacts, UL-P2 stands out:
 
 1. **Most consistent engagement**: The model engages with categorical formalism rather than dismissing it (unlike UL-P1, which triggers skepticism about "vrîtha" and "7-fold lattice")
 2. **Most structurally novel framings**: The colimit construction of democracy (Φ_democracy ≅ F(Φ_democracy) as least fixed point) and the concept-formation-as-colimit framing are genuinely novel outputs not seen in any other condition
 3. **Clearest qualitative differentiation**: UL-P2 outputs look and feel different from NL baselines in a way that UL-P3 and UL-P4 outputs don't
 4. **Prediction P2-b supported**: UL-P2 outputs consistently organize into recursive tree structures across all 7 tasks
 
-**Why P2 works best:** Category theory's abstract, relational nature is closest to what UL is actually trying to do — provide a framework for reasoning about structure-preserving maps between domains. The other primers dress UL in domain-specific clothing (topology, information geometry, thermodynamics) that the model can see through; P2's categorical framing matches UL's own structural commitments.
+**Why P2 works best:** Category theory's abstract, relational nature is closest to what UL is actually trying to do — provide a framework for reasoning about structure-preserving maps between domains. The other artifacts dress UL in domain-specific clothing (topology, information geometry, thermodynamics) that the model can see through; P2's categorical framing matches UL's own structural commitments.
 
 ---
 
@@ -53,19 +53,19 @@ The naive prompt-engineering control produces outputs that rival or exceed all o
 
 **What NAV-P tells us:** For a sufficiently capable model, *explicit metacognitive instruction* ("think across domains, look for structural parallels, consider what's preserved under transformation") is at least as effective as formal mathematical context.
 
-**Why this matters for UL theory:** This is actually *consistent* with UL's mechanism-of-action analysis. The mechanism paper argues that the primer works by activating "geometric meaning-space navigation." If that's right, then a direct *instruction* to navigate meaning-space geometrically should also work — and it does. The question becomes: does UL theory add anything *beyond* the instruction? For a frontier model, apparently not. For a weaker model, the formal structure might provide scaffolding that mere instruction cannot.
+**Why this matters for UL theory:** This is actually *consistent* with UL's mechanism-of-action analysis. The mechanism paper argues that the artifact works by activating "geometric meaning-space navigation." If that's right, then a direct *instruction* to navigate meaning-space geometrically should also work — and it does. The question becomes: does UL theory add anything *beyond* the instruction? For a frontier model, apparently not. For a weaker model, the formal structure might provide scaffolding that mere instruction cannot.
 
 ---
 
 ## E. The User's Concern About Primer Derivativeness Was Validated
 
-The user observed that "the primers are all still generally based on the test-content.txt." The results confirm this:
+The user observed that "the artifacts are all still generally based on the test-content.txt." The results confirm this:
 
 1. The 3-layer architecture (wall of math → bridge symbol → PDE/field equation) was modeled directly on test-content.txt's structure
-2. The model treats all primers similarly — recognizing the same structural template across UL-P1 through P4
+2. The model treats all artifacts similarly — recognizing the same structural template across UL-P1 through P4
 3. The domain-matched controls, which contain recognizable mathematics without the UL scaffold, produce nearly identical results
 
-**A truly independent test** would require primers generated by someone who has read only `formal-foundations.md` and `universal-language-derivation.md` — but NOT `test-content.txt`, `mechanism-of-action.md`, or `primer-analysis.md`.
+**A truly independent test** would require artifacts generated by someone who has read only `formal-foundations.md` and `universal-language-derivation.md` — but NOT `test-content.txt`, `mechanism-of-action.md`, or `primer-analysis.md`.
 
 ---
 

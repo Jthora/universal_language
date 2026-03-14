@@ -17,7 +17,7 @@ All experiments use the same three-template structure. The only difference betwe
 [SYSTEM: You are a helpful AI assistant.]
 
 [CONTEXT BEGIN]
-{primer text — contents of experiments/primer-library/original/primer.txt, verbatim}
+{primer text — contents of experiments/test-artifacts/original/primer.txt, verbatim}
 [CONTEXT END]
 
 {task prompt — verbatim from task-prompts.md}
@@ -25,10 +25,10 @@ All experiments use the same three-template structure. The only difference betwe
 
 **Parameters:**
 - System prompt: Exactly `You are a helpful AI assistant.`
-- Context: Full primer (all lines, no truncation)
+- Context: Full artifact (all lines, no truncation)
 - Delimiter: `[CONTEXT BEGIN]` and `[CONTEXT END]` on separate lines
 - No instructions about the context — the model receives it with no explanation
-- No whitespace modifications — preserve primer formatting exactly
+- No whitespace modifications — preserve artifact formatting exactly
 
 ---
 
@@ -44,7 +44,7 @@ All experiments use the same three-template structure. The only difference betwe
 {task prompt — verbatim from task-prompts.md}
 ```
 
-**Parameters:** Identical to UL-Mode except the primer is replaced by the control/ablation/negative-control text.
+**Parameters:** Identical to UL-Mode except the test artifact is replaced by the control/ablation/negative-control text.
 
 **Usage per experiment:**
 - **Alpha:** CT-1, CT-2, CT-3, CT-4
@@ -65,7 +65,7 @@ All experiments use the same three-template structure. The only difference betwe
 {task prompt — verbatim from task-prompts.md}
 ```
 
-**Design note:** NL-Mode includes the empty `[CONTEXT BEGIN/END]` delimiters to control for the "here is some context" framing effect. Without this, the difference between UL-mode and NL-mode would conflate "primer content" with "presence of any context block." The empty block ensures the only difference is the content (or absence) of the primer.
+**Design note:** NL-Mode includes the empty `[CONTEXT BEGIN/END]` delimiters to control for the "here is some context" framing effect. Without this, the difference between UL-mode and NL-mode would conflate "artifact content" with "presence of any context block." The empty block ensures the only difference is the content (or absence) of the test artifact.
 
 ---
 

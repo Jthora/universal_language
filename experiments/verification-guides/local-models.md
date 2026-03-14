@@ -12,7 +12,7 @@
 
 Running models locally gives you full control over parameters, unlimited trials at zero marginal cost, and complete privacy. It's the best approach for generating large datasets and the most scientifically rigorous option outside the API script — because you control every variable.
 
-If the primer effect appears in a 7B-parameter model running on a laptop, that arguably provides STRONGER evidence than showing it in GPT-4o — it means the effect doesn't require frontier-scale models.
+If the artifact effect appears in a 7B-parameter model running on a laptop, that arguably provides STRONGER evidence than showing it in GPT-4o — it means the effect doesn't require frontier-scale models.
 
 ---
 
@@ -64,7 +64,7 @@ ollama run llama3.1:8b "What is 2+2?"
 For each trial, run:
 
 ```bash
-# UL-mode trial (primer + task)
+# UL-mode trial (artifact + task)
 cat experiments/verification-guides/ready-prompts/UL-T1.txt | ollama run llama3.1:8b > results/UL_T1_r1.txt
 
 # NL-mode trial (no context + task)
@@ -198,7 +198,7 @@ LM Studio provides a GUI for downloading and running models, plus an OpenAI-comp
 
 ## Multi-Model Sweep
 
-One of the unique advantages of local models: you can test the primer effect across multiple architectures for free.
+One of the unique advantages of local models: you can test the artifact effect across multiple architectures for free.
 
 ```bash
 for model in phi3:mini llama3.1:8b mistral:7b gemma2:9b; do
@@ -207,7 +207,7 @@ for model in phi3:mini llama3.1:8b mistral:7b gemma2:9b; do
 done
 ```
 
-If the primer effect appears consistently across Llama, Mistral, Phi, and Gemma, that's strong evidence it's not model-specific but reflects something about the primer's structure.
+If the artifact effect appears consistently across Llama, Mistral, Phi, and Gemma, that's strong evidence it's not model-specific but reflects something about the test artifact's structure.
 
 ---
 

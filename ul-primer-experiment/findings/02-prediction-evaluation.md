@@ -15,8 +15,8 @@ All 18 pre-registered predictions from `experiments/demo/predictions.md` evaluat
 Mean M1–M5 across UL-P1..P4 vs. NL (general tasks):
 - M1: Primers ≈ 5.8, NL ≈ 6.0 → Δ ≈ −0.2
 - M2: Primers ≈ 3.7, NL ≈ 3.7 → Δ ≈ 0.0
-- M3: Primers ≈ 2.1, NL ≈ 2.0 → Δ ≈ 0.1
-- M4: Primers ≈ 4.2, NL ≈ 4.2 → Δ ≈ 0.0
+- M3: Artifacts ≈ 2.1, NL ≈ 2.0 → Δ ≈ 0.1
+- M4: Artifacts ≈ 4.2, NL ≈ 4.2 → Δ ≈ 0.0
 - M5: Primers ≈ 3.2, NL ≈ 3.2 → Δ ≈ 0.0
 
 No metric reaches the ≥0.5 threshold. Zero of 5 metrics pass. **Falsified.**
@@ -44,7 +44,7 @@ Three pairs show edges of +0.5 on M2 and M5 — but the threshold requires ≥2 
 
 **VERDICT: PASSED (trivially)**
 
-All conditions are within ±0.5 of each other on all metrics. The primers are comparable to REF — but so is NL, CT-G, and NAV-P. Everything is comparable to everything. The prediction passes its letter but reveals nothing.
+All conditions are within ±0.5 of each other on all metrics. The artifacts are comparable to REF — but so is NL, CT-G, and NAV-P. Everything is comparable to everything. The prediction passes its letter but reveals nothing.
 
 ---
 
@@ -124,7 +124,7 @@ Qualitative differences exist: UL-P2 is strongest overall, UL-P1 triggers the mo
 
 ### X2: Each primer tops its targeted task
 **FAILED**  
-At most 1 of 4 primers (UL-P2 on Thier, arguable) clearly scores highest on its targeted task. Others are in multi-way ties.
+At most 1 of 4 artifacts (UL-P2 on Thier, arguable) clearly scores highest on its targeted task. Others are in multi-way ties.
 
 ---
 
@@ -132,9 +132,9 @@ At most 1 of 4 primers (UL-P2 on Thier, arguable) clearly scores highest on its 
 
 | ID | Prediction | Verdict |
 |----|-----------|---------|
-| G1 | Primers > NL by ≥0.5 | **FAILED** |
-| G2 | Primers > domain controls | **FAILED** |
-| G3 | Primers ≈ REF | **PASSED (trivial)** |
+| G1 | Artifacts > NL by ≥0.5 | **FAILED** |
+| G2 | Artifacts > domain controls | **FAILED** |
+| G3 | Artifacts ≈ REF | **PASSED (trivial)** |
 | G4 | NAV-P ≤ NL + 0.5 | **FAILED** |
 | P1-a | P1 highest on Tpat | **FAILED** |
 | P1-b | P1 M2 ≥ 4.0 on 2+ tasks | **FAILED** |

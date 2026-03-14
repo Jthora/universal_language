@@ -46,13 +46,13 @@ Observations from reading all 56 outputs, organized by condition.
 
 | Trial | Key Observations |
 |-------|-----------------|
-| UL-P1-T1 | Critiques the primer: identifies real vs. fictitious notation, then answers independently. "That gap — between syntactic plausibility and semantic constraint — is where most confusion... actually lives." Insightful, but primer isn't scaffolding the reasoning. |
+| UL-P1-T1 | Critiques the artifact: identifies real vs. fictitious notation, then answers independently. "That gap — between syntactic plausibility and semantic constraint — is where most confusion... actually lives." Insightful, but primer isn't scaffolding the reasoning. |
 | UL-P1-T2 | **Explicitly dismisses primer**: "I won't treat it as a meaningful formalism, but the actual question is interesting." Then gives standard quantum cognition analysis. |
 | UL-P1-T5 | **Ignores primer entirely**: "The mathematical formalism you've provided doesn't connect to the question, so I'll address it directly." Gives clean info-theory curriculum design. |
 | UL-P1-Tpat | Strong despite primer skepticism. 3 formal parallels (convection↔capital, Wilson cycle↔Kondratiev, transform faults↔trade corridors) with SOC equations. TES=5. |
 | UL-P1-Thier | 5-level decomposition, Level 1 down to {Selfhood, Plurality, Finitude, Normativity}. Includes formal composition expression. TES=4. |
 | UL-P1-Tabs | Standard 5 levels, good invariant identification. Not distinguishable from NL. TES=4. |
-| UL-P1-Tform | **Best P1 output**: Maps concept formation onto the primer's equation terms (symmetry-breaking for naming, harmonic forcing for relational structuring, variational structure for formalization). TES=5. |
+| UL-P1-Tform | **Best P1 output**: Maps concept formation onto the artifact's equation terms (symmetry-breaking for naming, harmonic forcing for relational structuring, variational structure for formalization). TES=5. |
 
 **Lesson learned:** Including "invented" terminology (vrîtha) triggers Claude's skepticism and causes it to disengage from the formalism. The other primers avoid this mistake.
 

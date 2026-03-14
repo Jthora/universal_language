@@ -1,6 +1,6 @@
 # Target Effect Score (TES) Rubric — 0 to 5
 
-**Purpose:** Scores whether the *specific* cognitive effect targeted by each primer actually appeared in the output.  
+**Purpose:** Scores whether the *specific* cognitive effect targeted by each artifact actually appeared in the output.  
 **Usage:** Score TES only on the 4 targeted tasks (Tpat, Thier, Tabs, Tform). TES is NOT scored on general tasks (T1, T2, T5).  
 **Relationship to M1–M5:** TES is scored AFTER M1–M5, as an additional metric. It is possible to have high M1–M5 with low TES (good cross-domain reasoning that doesn't match the predicted target effect) or low M1–M5 with high TES (weak overall quality but the specific effect appeared).
 

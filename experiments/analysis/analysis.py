@@ -66,7 +66,7 @@ CONTROL_TEXTS = ["CT-1", "CT-2", "CT-3", "CT-4"]
 NEGATIVE_CONTROLS = ["NC-1", "NC-2", "NC-3", "NC-4", "NC-5"]
 EPSILON_TASKS = ["E1", "E2", "E3", "E4", "E5"]
 
-# Beta hypothesis thresholds (% degradation from full primer)
+# Beta hypothesis thresholds (% degradation from full artifact)
 BETA_THRESHOLDS = {
     "V1": {"metric": ["M2", "M3"], "degrade_pct": 50, "falsify_pct": 25},
     "V2": {"metric": ["M1"],       "degrade_pct": 40, "falsify_pct": 20},
@@ -94,9 +94,9 @@ def load_scores(experiment: str) -> pd.DataFrame:
 
     condition values:
       Alpha:  UL, NL, CT-1, CT-2, CT-3, CT-4
-      Beta:   full_primer, V1..V7, NL
-      Gamma:  full_primer, NC-1..NC-5, NL
-      Delta:  novel_UL, original_UL, naive_primer, NL
+      Beta:   full_artifact, V1..V7, NL
+      Gamma:  full_artifact, NC-1..NC-5, NL
+      Delta:  novel_UL, original_UL, naive_artifact, NL
       Epsilon: UL, NL, CT-1
     """
     path = DATA_DIR / f"{experiment.lower()}_scores.csv"
@@ -260,14 +260,14 @@ def analyze_alpha(df: pd.DataFrame) -> dict:
 def analyze_beta(df: pd.DataFrame) -> dict:
     """
     Protocol §3.4 Analysis Plan:
-    1. Primary: Dunnett's test — each ablation vs. full primer, per metric.
+    1. Primary: Dunnett's test — each ablation vs. full artifact, per metric.
     2. Secondary: Rank ablations by effect magnitude → criticality ordering.
     3. Success: ≥4 of 7 ablations degrade on ≥2 of 5 metrics (p<0.01).
     """
     results = {"dunnett": {}, "criticality": {}, "hypotheses": {}, "success": {}}
 
     agg = df.groupby(["trial_id", "condition", "model", "temperature", "task"])[METRICS].mean().reset_index()
-    primer = agg[agg["condition"] == "full_primer"]
+    artifact = agg[agg["condition"] == "full_artifact"]
 
     degradation_count = {}  # variant -> number of metrics with sig degradation
 
@@ -277,29 +277,29 @@ def analyze_beta(df: pd.DataFrame) -> dict:
         variant_data = agg[agg["condition"] == variant]
 
         for m in METRICS:
-            g_primer = primer[m].values
+            g_artifact = artifact[m].values
             g_variant = variant_data[m].values
 
-            if len(g_primer) < 2 or len(g_variant) < 2:
+            if len(g_artifact) < 2 or len(g_variant) < 2:
                 results["dunnett"][variant][m] = {"error": "insufficient data"}
                 continue
 
-            # Welch's t-test (primer > variant, one-sided)
-            t_stat, p_two = sp_stats.ttest_ind(g_primer, g_variant, equal_var=False)
+            # Welch's t-test (artifact > variant, one-sided)
+            t_stat, p_two = sp_stats.ttest_ind(g_artifact, g_variant, equal_var=False)
             p_one = p_two / 2 if t_stat > 0 else 1 - p_two / 2
-            d = cohens_d(g_primer, g_variant)
-            ci = cohens_d_ci(d, len(g_primer), len(g_variant))
+            d = cohens_d(g_artifact, g_variant)
+            ci = cohens_d_ci(d, len(g_artifact), len(g_variant))
             pct_change = (
-                (np.mean(g_variant) - np.mean(g_primer)) / np.mean(g_primer) * 100
-                if np.mean(g_primer) != 0 else 0
+                (np.mean(g_variant) - np.mean(g_artifact)) / np.mean(g_artifact) * 100
+                if np.mean(g_artifact) != 0 else 0
             )
 
             sig = p_one < ALPHA_CORRECTED
-            if sig and d > 0:  # primer scored higher → ablation degraded
+            if sig and d > 0:  # artifact scored higher → ablation degraded
                 degradation_count[variant] += 1
 
             results["dunnett"][variant][m] = {
-                "primer_mean": round(float(np.mean(g_primer)), 3),
+                "artifact_mean": round(float(np.mean(g_artifact)), 3),
                 "variant_mean": round(float(np.mean(g_variant)), 3),
                 "pct_change": round(pct_change, 1),
                 "t": round(float(t_stat), 3),
@@ -366,18 +366,18 @@ def analyze_beta(df: pd.DataFrame) -> dict:
 
 def analyze_gamma(df: pd.DataFrame) -> dict:
     """
-    Protocol §4.3: Each NC should NOT produce the primer effect.
+    Protocol §4.3: Each NC should NOT produce the artifact effect.
     G1: NC-1 ≤ NL on M2, M3
     G2: NC-2 < UL on M2, M3, M5 with d≥0.3
     G3: NC-3 ≤ NL on M2, M3, M5
-    G4: NC-4 higher M1, lower M4 than primer (d≥0.8 on M4)
+    G4: NC-4 higher M1, lower M4 than artifact (d≥0.8 on M4)
     G5: NC-5 ≤ NL on all metrics
     """
     results = {"tests": {}, "hypotheses": {}, "success": {}}
 
     agg = df.groupby(["trial_id", "condition", "model", "temperature", "task"])[METRICS].mean().reset_index()
 
-    primer = agg[agg["condition"] == "full_primer"]
+    artifact = agg[agg["condition"] == "full_artifact"]
     nl = agg[agg["condition"] == "NL"]
 
     confirmed = 0
@@ -395,7 +395,7 @@ def analyze_gamma(df: pd.DataFrame) -> dict:
         confirmed += 1
 
     # G2: NC-2 < UL on M2, M3, M5 with d≥0.3
-    ul = agg[agg["condition"] == "full_primer"]  # or UL if Alpha condition
+    ul = agg[agg["condition"] == "full_artifact"]  # or UL if Alpha condition
     nc2 = agg[agg["condition"] == "NC-2"]
     g2_pass_count = 0
     for m in ["M2", "M3", "M5"]:
@@ -423,11 +423,11 @@ def analyze_gamma(df: pd.DataFrame) -> dict:
     if g3_pass:
         confirmed += 1
 
-    # G4: NC-4 — higher M1, lower M4 vs primer (d≥0.8 on M4)
+    # G4: NC-4 — higher M1, lower M4 vs artifact (d≥0.8 on M4)
     nc4 = agg[agg["condition"] == "NC-4"]
-    if len(nc4) > 0 and len(primer) > 0:
-        m4_d = cohens_d(primer["M4"].values, nc4["M4"].values)
-        m1_higher = np.mean(nc4["M1"].values) > np.mean(primer["M1"].values)
+    if len(nc4) > 0 and len(artifact) > 0:
+        m4_d = cohens_d(artifact["M4"].values, nc4["M4"].values)
+        m1_higher = np.mean(nc4["M1"].values) > np.mean(artifact["M1"].values)
         g4_pass = m4_d >= 0.8 and m1_higher
     else:
         g4_pass = False

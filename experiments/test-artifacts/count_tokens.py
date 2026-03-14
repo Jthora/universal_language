@@ -24,5 +24,5 @@ for f in files:
     flag = ' *** FIX' if abs(pct) > 5 else ' OK'
     print(f'{f:55s} tokens:{tokens:5d}  ({pct:+6.1f}%){flag}')
 
-print(f'\nPrimer token count: {primer_tokens}')
+print(f'\nReference artifact token count: {primer_tokens}')
 print(f'Allowed range (±5%): {int(primer_tokens*0.95)} - {int(primer_tokens*1.05)}')

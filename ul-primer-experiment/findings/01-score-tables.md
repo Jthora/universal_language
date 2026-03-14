@@ -2,7 +2,7 @@
 
 **Scoring methodology:** Each output scored on M1–M5 using pre-registered rubrics. TES (0–5) scored on targeted tasks only using task-specific anchor tables.
 
-**Important caveat:** The scorer (GitHub Copilot) is the same entity that constructed the primers and predictions. Self-scoring introduces obvious bias. These scores should be treated as estimates requiring independent verification.
+**Important caveat:** The scorer (GitHub Copilot) is the same entity that constructed the artifacts and predictions. Self-scoring introduces obvious bias. These scores should be treated as estimates requiring independent verification.
 
 ---
 

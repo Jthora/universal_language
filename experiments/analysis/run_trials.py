@@ -31,37 +31,37 @@ from pathlib import Path
 # ─────────────────────────────────────────────────────
 
 ROOT = Path(__file__).resolve().parent.parent  # experiments/
-PRIMER_LIB = ROOT / "primer-library"
+ARTIFACT_LIB = ROOT / "test-artifacts"
 OUTPUT_DIR = ROOT / "data" / "raw_outputs"
 MANIFEST_DIR = ROOT / "data"
 
 # ─────────────────────────────────────────────────────
-# PRIMER / VARIANT LOADING
+# ARTIFACT / VARIANT LOADING
 # ─────────────────────────────────────────────────────
 
 TEXT_MAP = {
-    # Original primer
-    "UL":          PRIMER_LIB / "original" / "primer.txt",
-    "full_primer": PRIMER_LIB / "original" / "primer.txt",
+    # Original test artifact
+    "UL":            ARTIFACT_LIB / "original" / "primer.txt",
+    "full_artifact": ARTIFACT_LIB / "original" / "primer.txt",
     # Ablations
-    "V1": PRIMER_LIB / "ablations" / "V1_ABL-PROSE.txt",
-    "V2": PRIMER_LIB / "ablations" / "V2_ABL-SYMBOL.txt",
-    "V3": PRIMER_LIB / "ablations" / "V3_ABL-STANDARD.txt",
-    "V4": PRIMER_LIB / "ablations" / "V4_ABL-BRIDGE.txt",
-    "V5": PRIMER_LIB / "ablations" / "V5_ABL-LINEAR.txt",
-    "V6": PRIMER_LIB / "ablations" / "V6_ABL-NODAMP.txt",
-    "V7": PRIMER_LIB / "ablations" / "V7_ABL-REORDER.txt",
+    "V1": ARTIFACT_LIB / "ablations" / "V1_ABL-PROSE.txt",
+    "V2": ARTIFACT_LIB / "ablations" / "V2_ABL-SYMBOL.txt",
+    "V3": ARTIFACT_LIB / "ablations" / "V3_ABL-STANDARD.txt",
+    "V4": ARTIFACT_LIB / "ablations" / "V4_ABL-BRIDGE.txt",
+    "V5": ARTIFACT_LIB / "ablations" / "V5_ABL-LINEAR.txt",
+    "V6": ARTIFACT_LIB / "ablations" / "V6_ABL-NODAMP.txt",
+    "V7": ARTIFACT_LIB / "ablations" / "V7_ABL-REORDER.txt",
     # Controls
-    "CT-1": PRIMER_LIB / "controls" / "CT-1_dense-physics.txt",
-    "CT-2": PRIMER_LIB / "controls" / "CT-2_cross-domain-prose.txt",
-    "CT-3": PRIMER_LIB / "controls" / "CT-3_scrambled-primer.txt",
-    "CT-4": PRIMER_LIB / "controls" / "CT-4_nonsense-math.txt",
+    "CT-1": ARTIFACT_LIB / "controls" / "CT-1_dense-physics.txt",
+    "CT-2": ARTIFACT_LIB / "controls" / "CT-2_cross-domain-prose.txt",
+    "CT-3": ARTIFACT_LIB / "controls" / "CT-3_scrambled-primer.txt",
+    "CT-4": ARTIFACT_LIB / "controls" / "CT-4_nonsense-math.txt",
     # Negative Controls
-    "NC-1": PRIMER_LIB / "negative-controls" / "NC-1_single-domain-math.txt",
-    "NC-2": PRIMER_LIB / "negative-controls" / "NC-2_primer-as-prose.txt",
-    "NC-3": PRIMER_LIB / "negative-controls" / "NC-3_standard-physics.txt",
-    "NC-4": PRIMER_LIB / "negative-controls" / "NC-4_reversed-dissipation.txt",
-    "NC-5": PRIMER_LIB / "negative-controls" / "NC-5_pseudo-esoteric.txt",
+    "NC-1": ARTIFACT_LIB / "negative-controls" / "NC-1_single-domain-math.txt",
+    "NC-2": ARTIFACT_LIB / "negative-controls" / "NC-2_primer-as-prose.txt",
+    "NC-3": ARTIFACT_LIB / "negative-controls" / "NC-3_standard-physics.txt",
+    "NC-4": ARTIFACT_LIB / "negative-controls" / "NC-4_reversed-dissipation.txt",
+    "NC-5": ARTIFACT_LIB / "negative-controls" / "NC-5_pseudo-esoteric.txt",
     # NL-mode: empty context
     "NL": None,
 }
@@ -157,7 +157,7 @@ def get_experiment_trials(experiment: str, models: list[str]) -> list[dict]:
 
     elif experiment == "beta":
         # 9 conditions × 3 tasks × N models × 2 temps (0.0: 1 rep, 0.7: 3 reps)
-        conditions = ["full_primer", "V1", "V2", "V3", "V4", "V5", "V6", "V7", "NL"]
+        conditions = ["full_artifact", "V1", "V2", "V3", "V4", "V5", "V6", "V7", "NL"]
         tasks = ["T1", "T2", "T3"]
         temp_reps = [(0.0, 1), (0.7, 3)]
         for cond in conditions:
@@ -176,7 +176,7 @@ def get_experiment_trials(experiment: str, models: list[str]) -> list[dict]:
 
     elif experiment == "gamma":
         # 7 conditions × 3 tasks × N models × 1 temp (best from Alpha)
-        conditions = ["full_primer", "NC-1", "NC-2", "NC-3", "NC-4", "NC-5", "NL"]
+        conditions = ["full_artifact", "NC-1", "NC-2", "NC-3", "NC-4", "NC-5", "NL"]
         tasks = ["T1", "T2", "T3"]
         temp_reps = [(0.7, 3)]  # default; override with --best-temp from Alpha
         for cond in conditions:

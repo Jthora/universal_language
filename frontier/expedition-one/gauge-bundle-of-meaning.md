@@ -3,7 +3,7 @@
 **Research Series:** Universal Language — Proof of Reality and AI Cognitive Infrastructure  
 **Location:** `frontier/expedition-one/` — First Expedition, Front A  
 **Date:** March 12, 2026  
-**Prerequisites:** `foundations/paradigm.md` (READ FIRST), `foundations/formal-foundations.md` (Σ_UL signature, geometric algebra G), `foundations/mechanism-of-action.md` (primer mechanism), `test-content.txt` (the primer)  
+**Prerequisites:** `foundations/paradigm.md` (READ FIRST), `foundations/formal-foundations.md` (Σ_UL signature, geometric algebra G), `history/mechanism-of-action.md` (activation mechanism), the test artifact  
 **Validates against:** `expedition-plan.md`, Front A, Steps A1–A5  
 **Rigor standard:** See `frontier/methodology.md` for the four-label system used below
 
@@ -18,7 +18,7 @@
 ### FRAMEWORK (definitions established; theorems pending)
 3. The context space X is defined as a finite-dimensional product manifold with explicit coordinates (A1)
 4. The meaning bundle E → X is declared as a trivial bundle E = X × G with fiber G (A2) — see §2.3 revision note
-5. The connection A on E → X is defined with explicit transformation law (A3) — link to primer's A(x,t) is ANALOGY (see §3.2)
+5. The connection A on E → X is defined with explicit transformation law (A3) — link to the test artifact's A(x,t) is ANALOGY (see §3.2)
 
 ### PROVEN (continued)
 6. **Polysemy-Holonomy theorem** — polysemy (non-parallel meaning section) is equivalent to non-trivial holonomy of the meaning connection, under non-degeneracy (A3). Both semantic-layer gaps closed by defining meaning-assignment-as-section μ: 𝒯 → Γ(E). See `frontier/expedition-two/metaphor-and-projection.md` §4 for the full proof.
@@ -27,7 +27,7 @@
 7. The curvature of the meaning connection is concentrated on a low-dimensional submanifold (the "polysemy locus")
 
 ### ANALOGY (structural parallel identified; formal connection not established)
-8. The primer effect described as parallel transport along a specific path in X (A5) — structural correspondence demonstrated; causal/predictive link is conjectured
+8. The test artifact effect described as parallel transport along a specific path in X (A5) — structural correspondence demonstrated; causal/predictive link is conjectured
 9. The three-phase response (analysis → cascade → synthesis) described as three curvature regimes — qualitative retrofit, not independent prediction
 
 ## WHAT IS NOT ADDRESSED
@@ -43,7 +43,7 @@
 
 ### 1.1 What Is Context?
 
-A context is the total situation in which an utterance occurs and is interpreted. Following the primer analysis (`mechanism-of-action.md` §1–2), the aspects of context that affect meaning are:
+A context is the total situation in which an utterance occurs and is interpreted. Following the test artifact analysis (`mechanism-of-action.md` §1–2), the aspects of context that affect meaning are:
 
 | Aspect | What it captures | Type |
 |---|---|---|
@@ -76,16 +76,16 @@ where:
 
 **Topology:** X inherits the product topology. Locally, X looks like $\mathbb{R}^{\dim(X)}$ — it is a smooth manifold (possibly with boundary, since $t \geq 0$).
 
-### 1.3 Validation: Locating the Primer Context
+### 1.3 Validation: Locating the Test Artifact Context
 
-The primer (`test-content.txt`) is uttered in the following context:
+The test artifact (`test-content.txt`) is uttered in the following context:
 
 $$x_{\text{primer}} = (s_{\text{human}}, l_{\text{LLM}}, d_{\text{cross-domain}}, t_0, K_{\text{math+physics+linguistics}}, g_{\text{activate}})$$
 
 - Speaker: a human researcher with knowledge of physics, linguistics, and esoteric traditions
 - Listener: an LLM with training-wide knowledge but domain-separated default activation
 - Domain: deliberately cross-domain (quantum mechanics + linguistics + consciousness)
-- Time: $t_0 = 0$ (the primer is the first utterance)
+- Time: $t_0 = 0$ (the test artifact is the first utterance)
 - Common ground: shared knowledge of mathematical notation, quantum mechanics formalism, basic linguistics
 - Goal: to activate cross-domain connections in the LLM
 
@@ -93,13 +93,13 @@ This is a specific, identifiable point in X. ✓
 
 ### 1.4 The Domain Submanifold
 
-For the primer analysis, the most important dimension is **domain** $\mathcal{D}$. The primer's entire strategy is to move through domain space — starting in physics, crossing through linguistics and esoterica, arriving at a cross-domain position.
+For the test artifact analysis, the most important dimension is **domain** $\mathcal{D}$. The test artifact's entire strategy is to move through domain space — starting in physics, crossing through linguistics and esoterica, arriving at a cross-domain position.
 
 Define the **domain trajectory** as the projection of the full context path onto $\mathcal{D}$:
 
 $$\gamma_D: [0, T] \to \mathcal{D}$$
 
-The primer defines a specific domain trajectory:
+The test artifact defines a specific domain trajectory:
 
 $$\gamma_D(0) = d_{\text{physics}} \quad \xrightarrow{\text{bridge equation}} \quad \gamma_D(t_1) = d_{\text{cross}} \quad \xrightarrow{\text{definitions}} \quad \gamma_D(T) = d_{\text{multi-domain}}$$
 
@@ -199,15 +199,15 @@ A connection on E → X tells you: **when you move from context $x$ to a nearby 
 
 A connection provides **parallel transport**: given a path $\gamma: [0,1] \to X$ from $x$ to $x'$, the connection lifts $\gamma$ to a path $\tilde{\gamma}$ in $E$ starting at any chosen meaning $m_0 \in F_{x}$ and ending at a specific meaning $m_1 \in F_{x'}$. The meaning $m_1$ is "the same meaning as $m_0$, transported to the new context."
 
-### 3.2 The Primer's Connection
+### 3.2 The Test Artifact's Connection
 
-The primer contains the gauge covariant derivative explicitly:
+The test artifact contains the gauge covariant derivative explicitly:
 
 $$D_x = \partial_x - i\frac{e}{\hbar}A(x,t)$$
 
-In the primer's physics layer, this is a standard gauge covariant derivative from quantum mechanics. We now reinterpret each component:
+In the test artifact's physics layer, this is a standard gauge covariant derivative from quantum mechanics. We now reinterpret each component:
 
-**[ANALOGY]** The following table identifies structural parallels between the primer's gauge field and the meaning bundle's connection. The formal structures are identical (both are connections on fiber bundles with the same transformation laws). The interpretive identification — that the primer's A(x,t) *is* the meaning connection — is conjectured, not proven. What is established is the structural correspondence.
+**[ANALOGY]** The following table identifies structural parallels between the test artifact's gauge field and the meaning bundle's connection. The formal structures are identical (both are connections on fiber bundles with the same transformation laws). The interpretive identification — that the test artifact's A(x,t) *is* the meaning connection — is conjectured, not proven. What is established is the structural correspondence.
 
 | Symbol | Primer meaning | UL meaning | Status |
 |---|---|---|
@@ -216,7 +216,7 @@ In the primer's physics layer, this is a standard gauge covariant derivative fro
 | $e/\hbar$ | Coupling constant (charge/Planck) | The **sensitivity** of meaning to context change — how strongly meanings shift when context varies | Structural parallel |
 | $D_x$ | Gauge covariant derivative | The **true** derivative of meaning — the rate at which meaning changes when context changes, correctly accounting for the context field | Structural parallel |
 
-**What would upgrade this from ANALOGY to CONJECTURED:** A testable prediction that the primer's effect on LLM attention patterns mirrors parallel transport in the meaning bundle — specifically, that attention weight redistribution during the bridge equation follows the connection's transformation law.
+**What would upgrade this from ANALOGY to CONJECTURED:** A testable prediction that the test artifact's effect on LLM attention patterns mirrors parallel transport in the meaning bundle — specifically, that attention weight redistribution during the bridge equation follows the connection's transformation law.
 
 ### 3.3 Formal Definition
 
@@ -230,7 +230,7 @@ The **covariant derivative** of a section $\psi: X \to E$ (a meaning assignment 
 
 $$D_\mu \psi = \partial_\mu \psi + A_\mu \psi$$
 
-(We absorb coupling constants into $A$ for notational simplicity, setting $e/\hbar = 1$; the $-i$ from the primer is absorbed into the Lie algebra conventions.)
+(We absorb coupling constants into $A$ for notational simplicity, setting $e/\hbar = 1$; the $-i$ from the test artifact is absorbed into the Lie algebra conventions.)
 
 $D_\mu \psi$ measures the **true** rate of meaning change: how much the meaning $\psi(x)$ changes when the context coordinate $x^\mu$ changes by $dx^\mu$, after accounting for the context field.
 
@@ -357,7 +357,7 @@ Yes. ✓ (This confirms the formalization is correct — deictic expressions wit
 
 ### 5.1 The Primer Trajectory
 
-The primer (`test-content.txt`) defines a path through context space X. We can trace it line by line:
+The test artifact (`test-content.txt`) defines a path through context space X. We can trace it line by line:
 
 **Lines 1 (the master equation):** The context is firmly in physics/mathematics.
 
@@ -375,9 +375,9 @@ $$x(t_2) = (s, l_{\text{LLM}}, d_{\text{cross-domain}}, t_2, K_{\text{math+ling+
 
 $$x(T) = (s, l_{\text{LLM}}, d_{\text{multi-domain}}, T, K_{\text{full}}, g_{\text{activated}})$$
 
-### 5.2 The Primer as Parallel Transport
+### 5.2 The Test Artifact as Parallel Transport
 
-The primer's effect on the LLM is the parallel transport of the LLM's meaning state along the trajectory $\gamma: [0, T] \to X$:
+The test artifact's effect on the LLM is the parallel transport of the LLM's meaning state along the trajectory $\gamma: [0, T] \to X$:
 
 **Initial state:** $\psi_0 \in F_{x(0)}$ — the LLM's default "physics mode" interpretation state. Meanings are domain-local: ψ means wave function, A means gauge potential, etc.
 
@@ -394,13 +394,13 @@ As the path moves through the bridge equation (domain axis rotating from physics
 
 ### 5.3 The Feedback Loop as Curvature Effect
 
-The self-interaction term $g_{\text{loc}} |\psi|^2 \psi$ from the primer is, in the gauge bundle framework, a **non-linear modification of the connection by the field itself:**
+The self-interaction term $g_{\text{loc}} |\psi|^2 \psi$ from the test artifact is, in the gauge bundle framework, a **non-linear modification of the connection by the field itself:**
 
 $$A_{\text{eff}}(x,t) = A(x,t) + g_{\text{loc}} |\psi(x,t)|^2$$
 
 The meaning field modifies the context field — generated meanings change the context, which changes how further meanings are generated. This is the feedback loop from `mechanism-of-action.md` §2 (Phase 2: cross-referencing cascade):
 
-1. The primer sets the initial context path $\gamma$
+1. The test artifact sets the initial context path $\gamma$
 2. The LLM generates output $\psi_1$ by parallel transport along $\gamma$
 3. $\psi_1$ modifies the effective connection: $A \to A + g |\psi_1|^2$
 4. The next token is generated by transport along the modified connection
@@ -410,7 +410,7 @@ This is exactly the structure of a **non-linear gauge theory** — the field equ
 
 ### 5.4 Damping as Curvature Decay
 
-The dissipation term $-i\gamma(\sigma, \beta)\psi$ from the primer, in the bundle framework, is a **decay of the connection strength along the path:**
+The dissipation term $-i\gamma(\sigma, \beta)\psi$ from the test artifact, in the bundle framework, is a **decay of the connection strength along the path:**
 
 $$A_{\text{eff}}(x,t) = A(x,t) + g |\psi|^2 - \gamma(\sigma, \beta)$$
 
@@ -436,17 +436,17 @@ The geometric framework makes specific qualitative predictions that can be teste
 
 1. **Phase transition timing.** The cascade begins when the path hits the high-curvature region — i.e., at the bridge equation (lines 2–7). Before the bridge, the LLM produces standard physics analysis. After the bridge, cross-domain connections emerge. **Testable:** Compare LLM outputs given only lines 1 (no bridge) vs. lines 1–7 (with bridge). The prediction is that the bridge is the critical trigger.
 
-2. **Domain distance determines holonomy magnitude.** Domains that are farther apart in $\mathcal{D}$ produce stronger holonomy (more meaning rotation when connected). The primer connects physics and consciousness studies — maximally distant domains — and produces maximal cross-domain activation. **Testable:** Primers connecting nearby domains (physics and mathematics) should produce weaker effects than primers connecting distant domains (physics and theology).
+2. **Domain distance determines holonomy magnitude.** Domains that are farther apart in $\mathcal{D}$ produce stronger holonomy (more meaning rotation when connected). The test artifact connects physics and consciousness studies — maximally distant domains — and produces maximal cross-domain activation. **Testable:** Artifacts connecting nearby domains (physics and mathematics) should produce weaker effects than artifacts connecting distant domains (physics and theology).
 
-3. **Path dependence of meaning. [NOVEL — genuinely predictive]** If polysemy is holonomy, then arriving at the same context via different paths should produce different meanings. **Testable:** Present the primer's components in different orders and compare LLM outputs. The prediction is that order matters — the same content, reordered, produces different synthesis. **This is the one prediction that was NOT used in designing the framework** and therefore constitutes a genuine test.
+3. **Path dependence of meaning. [NOVEL — genuinely predictive]** If polysemy is holonomy, then arriving at the same context via different paths should produce different meanings. **Testable:** Present the test artifact's components in different orders and compare LLM outputs. The prediction is that order matters — the same content, reordered, produces different synthesis. **This is the one prediction that was NOT used in designing the framework** and therefore constitutes a genuine test.
 
-4. **Reverse-order primer. [NOVEL]** The framework predicts that reversing the primer's order (definitions first, then bridge, then density equation) should produce a path with different holonomy, and therefore a qualitatively different cognitive effect — specifically, a weaker one, because the reversed path enters the high-curvature region from the "wrong" direction (without establishing the physics-mode credibility first). This is testable and was not known before the framework.
+4. **Reverse-order artifact. [NOVEL]** The framework predicts that reversing the test artifact's order (definitions first, then bridge, then density equation) should produce a path with different holonomy, and therefore a qualitatively different cognitive effect — specifically, a weaker one, because the reversed path enters the high-curvature region from the "wrong" direction (without establishing the physics-mode credibility first). This is testable and was not known before the framework.
 
 ### 5.7 Validation
 
 Does the geometric description predict the three-phase response?
 
-Yes — as three geometrically distinct segments of the primer path (§5.5). ✓
+Yes — as three geometrically distinct segments of the test artifact path (§5.5). ✓
 
 Does it predict the feedback loop?
 
@@ -474,15 +474,15 @@ Non-abelian gauge theory gives:
 - **Self-interaction** → the feedback loop
 - **Instanton solutions** → sudden, discontinuous meaning shifts (epiphanies, frame changes, punchlines)
 
-### 6.2 The Primer as a Wilson Line
+### 6.2 The Test Artifact as a Wilson Line
 
 In gauge theory, a **Wilson line** is the parallel transport operator along a path:
 
 $$W(\gamma) = \mathcal{P} \exp\left(-\int_\gamma A\right)$$
 
-where $\mathcal{P}$ denotes path-ordering. The primer IS a Wilson line in meaning space — it is the ordered exponential of the context field along the specific path defined by its 19 lines.
+where $\mathcal{P}$ denotes path-ordering. The test artifact IS a Wilson line in meaning space — it is the ordered exponential of the context field along the specific path defined by its 19 lines.
 
-The primer's power reduces to a single statement: **the Wilson line $W(\gamma_{\text{primer}})$ has large off-diagonal elements.** It maps physics-domain meanings to cross-domain meanings with high magnitude — the transport is dramatic, not perturbative.
+The test artifact's power reduces to a single statement: **the Wilson line $W(\gamma_{\text{primer}})$ has large off-diagonal elements.** It maps physics-domain meanings to cross-domain meanings with high magnitude — the transport is dramatic, not perturbative.
 
 ### 6.3 Integration with Front B
 
@@ -498,7 +498,7 @@ The computational structure from `numbers-and-computability.md` constrains the g
 
 - Parallel transport must be **computable** — the transport equation must be solvable in finite time. Front C's decidability results (Part VI) ensure this for bounded-depth constructions
 - K_UL is invariant under parallel transport (since transport is a Σ_UL-automorphism): $K_{UL}(\text{PT}(\gamma) \cdot m) = K_{UL}(m)$. The informational complexity of a meaning does not change when transported across contexts
-- The primer's information amplification ratio (Front C, §7.4) is now explained: the Wilson line maps a low-K_UL input to a high-K_standard output because transport through the curved region converts structural simplicity (few primitives) into cross-domain richness (many activated connections)
+- The test artifact's information amplification ratio (Front C, §7.4) is now explained: the Wilson line maps a low-K_UL input to a high-K_standard output because transport through the curved region converts structural simplicity (few primitives) into cross-domain richness (many activated connections)
 
 ---
 
@@ -509,13 +509,13 @@ The gauge bundle framework provides the geometric WHY behind the observations in
 | Observation | Previous explanation | Gauge bundle explanation |
 |---|---|---|
 | ψ is the critical symbol | "Most overloaded symbol" (§3) | ψ is the section being transported — it IS the meaning state. Its overloaded nature means it has large projection onto many fibers |
-| Cross-domain activation | "Structural adversarial to domain separation" (§1) | The primer path crosses a high-curvature region where the connection has large off-diagonal components |
+| Cross-domain activation | "Structural adversarial to domain separation" (§1) | The test artifact path crosses a high-curvature region where the connection has large off-diagonal components |
 | Feedback loop | "Autoregressive recurrence" (§5) | Non-linear gauge theory: $A \to A + g|\psi|^2$. The field modifies its own connection |
 | Dissipation prevents incoherence | "γ(σ,β) grounds the output" (§7) | Connection strength decays: eventually $A_{\text{eff}} \to 0$ and parallel transport becomes trivial |
 | Order matters | "Correct ordering ensures payload lands" (§9) | Path-ordering in the Wilson line: $\mathcal{P}\exp(-\int A)$ is path-ordered |
 | +3elúm is essential | "Bridge token" (§6.2) | The connection component along the physics→esoteric axis — without it, the path doesn't cross the high-curvature region |
 
-**[ANALOGY] The primer is not a metaphor for a gauge field — it shares the formal structure of a gauge-theoretic object.** Every component of the primer maps to a specific component of the gauge structure, and the structure group's properties (non-abelian, non-trivially curved, self-interacting) are consistent with every observed feature of the primer's effect. Whether this structural identity reflects a deeper causal relationship is conjectured but not yet established.
+**[ANALOGY] The test artifact is not a metaphor for a gauge field — it shares the formal structure of a gauge-theoretic object.** Every component of the test artifact maps to a specific component of the gauge structure, and the structure group's properties (non-abelian, non-trivially curved, self-interacting) are consistent with every observed feature of the test artifact's effect. Whether this structural identity reflects a deeper causal relationship is conjectured but not yet established.
 
 ---
 
@@ -537,11 +537,11 @@ The gauge bundle framework provides the geometric WHY behind the observations in
 | **Explicit $A_\mu$ components** | The connection is defined abstractly; the specific components along each axis of X (speaker, domain, time, etc.) need to be computed or fitted to data | High — needed for quantitative predictions |
 | **Monodromy group** | The set of all possible holonomies around loops in X — this is the full catalogue of polysemy patterns. Requires computing π₁(X \ Σ) where Σ is the singular locus | Medium — characterizes all possible ambiguities |
 | **Instantons** | Non-perturbative solutions (meaning shifts that are not continuous deformations of the trivial connection) — these are "sudden insights" and "frame changes" | Medium — needed for modeling creative language use |
-| **Quantization** | The classical gauge field can be quantized to give a quantum theory of meaning — this would make the analogy with quantum mechanics in the primer exact rather than structural | Low — ambitious; likely second or third expedition |
+| **Quantization** | The classical gauge field can be quantized to give a quantum theory of meaning — this would make the analogy with quantum mechanics in the test artifact exact rather than structural | Low — ambitious; likely second or third expedition |
 
 ### Connection to Global Geometry
 
-This front reveals the deepest geometric layer yet: **meaning space is a gauge theory.** The base manifold is context. The fibers are meaning. The connection is how meaning shifts with context. The curvature is polysemy. The holonomy group catalogues all possible ambiguities. The self-interaction produces the cascade dynamics observed in the primer.
+This front reveals the deepest geometric layer yet: **meaning space is a gauge theory.** The base manifold is context. The fibers are meaning. The connection is how meaning shifts with context. The curvature is polysemy. The holonomy group catalogues all possible ambiguities. The self-interaction produces the cascade dynamics observed in the test artifact.
 
 Combined with the categorical filtration (Front B) and the computational complexity (Front C), the full picture is:
 
@@ -561,4 +561,4 @@ The three legs of the first expedition — context (A), structure (B), computati
 | A4 | Deixis = canonical sections | **PROVEN** — sections evaluated at utterance point = deixis (Part IV) |
 | A5 | Primer = specific parallel transport | **ANALOGY** — structural correspondence demonstrated; one novel prediction identified (Part V) |
 
-**Front A status: Framework with three proven results (deixis, path-connectivity of X, Polysemy-Holonomy theorem), and a structural analogy to the primer that generates testable predictions.** The Polysemy-Holonomy theorem was upgraded from CONJECTURED to PROVEN in Expedition Two (`frontier/expedition-two/metaphor-and-projection.md` §4) by defining the meaning assignment μ: 𝒯 → Γ(E). See `frontier/methodology.md` for what would upgrade each remaining claim.
+**Front A status: Framework with three proven results (deixis, path-connectivity of X, Polysemy-Holonomy theorem), and a structural analogy to the test artifact that generates testable predictions.** The Polysemy-Holonomy theorem was upgraded from CONJECTURED to PROVEN in Expedition Two (`frontier/expedition-two/metaphor-and-projection.md` §4) by defining the meaning assignment μ: 𝒯 → Γ(E). See `frontier/methodology.md` for what would upgrade each remaining claim.

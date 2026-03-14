@@ -117,11 +117,11 @@ These are claims that are overstated or imprecise, not necessarily wrong.
 
 **Location:** [gauge-bundle-of-meaning.md §3](expedition-one/gauge-bundle-of-meaning.md)
 
-**Problem:** The primer's gauge field A(x,t) has x = spatial position (position in a text, or in an LLM's embedding space). The meaning bundle's connection A has x = context (speaker, listener, domain, time, ...). The document uses the same symbol for both and argues they are "the same" because the formal structure is identical. But identical formal structure does not mean identical interpretation.
+**Problem:** The test artifact's gauge field A(x,t) has x = spatial position (position in a text, or in an LLM's embedding space). The meaning bundle's connection A has x = context (speaker, listener, domain, time, ...). The document uses the same symbol for both and argues they are "the same" because the formal structure is identical. But identical formal structure does not mean identical interpretation.
 
 **Status:** ANALOGY (honest structural parallel, but calling it "the same A" is an overstatement)
 
-**Fix:** Explicitly label this as a structural analogy. Write: "The primer's A(x,t) and the meaning bundle's connection A share identical transformation laws (gauge covariance, curvature formulas). We conjecture they are related by an embedding of LLM embedding space into context space X. This conjecture is testable: it predicts that the primer's effect on attention patterns mirrors parallel transport in the meaning bundle. The formal identity is established; the physical/cognitive identity is conjectured."
+**Fix:** Explicitly label this as a structural analogy. Write: "The test artifact's A(x,t) and the meaning bundle's connection A share identical transformation laws (gauge covariance, curvature formulas). We conjecture they are related by an embedding of LLM embedding space into context space X. This conjecture is testable: it predicts that the test artifact's effect on attention patterns mirrors parallel transport in the meaning bundle. The formal identity is established; the physical/cognitive identity is conjectured."
 
 #### S4: K_UL is Not Kolmogorov Complexity (Front C)
 
@@ -137,11 +137,11 @@ These are claims that are overstated or imprecise, not necessarily wrong.
 
 **Location:** [gauge-bundle-of-meaning.md §5](expedition-one/gauge-bundle-of-meaning.md)
 
-**Problem:** The document claims the gauge bundle framework makes "testable predictions" about the primer's three-phase response. But the predictions are qualitative retrofits ("Phase 1 = low-curvature segment," "Phase 2 = high-curvature region," "Phase 3 = arrival at global minimum"). These match observations because they were designed to match, not because they were derived independently.
+**Problem:** The document claims the gauge bundle framework makes "testable predictions" about the test artifact's three-phase response. But the predictions are qualitative retrofits ("Phase 1 = low-curvature segment," "Phase 2 = high-curvature region," "Phase 3 = arrival at global minimum"). These match observations because they were designed to match, not because they were derived independently.
 
 **Status:** ANALOGY (the geometric description is evocative and structurally consistent, but it is not predictive)
 
-**Fix:** Identify one genuinely novel prediction the framework makes that was NOT already known from the primer analysis. For example: "The framework predicts that reversing the primer's order (definitions first, then bridge, then density equation) should produce a path with different holonomy, and therefore a qualitatively different cognitive effect." If this prediction can be empirically tested and confirmed, the framework gains predictive power above retrofit.
+**Fix:** Identify one genuinely novel prediction the framework makes that was NOT already known from the test artifact analysis. For example: "The framework predicts that reversing the test artifact's order (definitions first, then bridge, then density equation) should produce a path with different holonomy, and therefore a qualitatively different cognitive effect." If this prediction can be empirically tested and confirmed, the framework gains predictive power above retrofit.
 
 ### 1.3 Moderate Issues (4)
 
@@ -169,10 +169,10 @@ Summary of all first-expedition results with corrected status labels.
 |---|---|---|---|
 | Context space X is a manifold | Proven | **FRAMEWORK** | Need topology specification, not just coordinate list |
 | E → X is a fiber bundle | Proven | **FRAMEWORK** | Declare trivial bundle; investigate non-triviality later |
-| A(x,t) is a connection on E → X | Proven | **FRAMEWORK** | Connection defined; transformation law correct; link to primer's A is ANALOGY |
+| A(x,t) is a connection on E → X | Proven | **FRAMEWORK** | Connection defined; transformation law correct; link to the test artifact's A is ANALOGY |
 | Polysemy = non-trivial holonomy | Proven | **PROVEN** | Upgraded from CONJECTURED. Both semantic-layer gaps closed by section definition μ. Proof: `metaphor-and-projection.md` §4 (Theorem 3) |
 | Deictic expressions are sections | Proven | **PROVEN** | This one IS proven: sections evaluated at utterance point = deixis |
-| Primer effect = parallel transport | Proven | **ANALOGY** | Structural correspondence demonstrated; causal/predictive link missing. **Sprint 5 advance:** primer exhibited as explicit Σ_UL-morphism φ_primer with computed kernel and image (Theorem 14 in `metaphor-formalization.md`); connection component $A_2$ derived from morphism (Theorem 15). Metaphor-as-morphism is PROVEN; interpretation as literal parallel transport remains ANALOGY |
+| Artifact effect = parallel transport | Proven | **ANALOGY** | Structural correspondence demonstrated; causal/predictive link missing. **Sprint 5 advance:** test artifact exhibited as explicit Σ_UL-morphism φ_primer with computed kernel and image (Theorem 14 in `metaphor-formalization.md`); connection component $A_2$ derived from morphism (Theorem 15). Metaphor-as-morphism is PROVEN; interpretation as literal parallel transport remains ANALOGY |
 
 ### Front B: Category of Languages
 

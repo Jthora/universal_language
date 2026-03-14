@@ -46,7 +46,7 @@
 
 ## M3: Phase Progression (0–3)
 
-**Definition:** Highest phase of cognitive processing observed, per the three-phase model in `foundations/mechanism-of-action.md` §2.
+**Definition:** Highest phase of cognitive processing observed, per the three-phase model in `history/mechanism-of-action.md` §2.
 
 | Score | Phase | Anchor Example |
 |---|---|---|
@@ -74,7 +74,7 @@
 | **4** | Highly coherent — every cross-domain connection is supported by explicit reasoning; caveats are noted; the argument builds logically from premises to conclusions |
 | **5** | Rigorously coherent — could appear in a peer-reviewed paper; every claim is justified, limitations are acknowledged, and the reasoning chain is airtight even when crossing domain boundaries |
 
-**Evaluator note on M4 vs. M2/M3:** M4 is the "reality check" metric. It is possible (and informative) to have High M2 + Low M4 (deep but unfounded connections) or Low M2 + High M4 (shallow but rigorous analysis). These profiles help diagnose the primer's effect mechanism.
+**Evaluator note on M4 vs. M2/M3:** M4 is the "reality check" metric. It is possible (and informative) to have High M2 + Low M4 (deep but unfounded connections) or Low M2 + High M4 (shallow but rigorous analysis). These profiles help diagnose the test artifact's effect mechanism.
 
 **Dissipation-theory relevance:** UL theory predicts that the dissipation term γ(σ,β) prevents runaway divergence. If this is correct, UL-mode should have HIGHER M4 than conditions where dissipation is ablated (V6/ABL-NODAMP). Specifically, V6 should show increased M1 (less grounding → more domains activated) but decreased M4 (less grounding → less coherence). This is a directly testable prediction (hypothesis B6).
 
@@ -110,7 +110,7 @@
 5. **Score M5 fourth** (novelty — requires consulting reference set).
 6. **Score M4 last** (coherence — requires understanding the full argument to evaluate).
 7. **Record scores and brief justification** (1–2 sentences per metric explaining the score).
-8. **Flag any output** that seems to contain content directly copied from the primer or control texts.
+8. **Flag any output** that seems to contain content directly copied from the test artifact or control texts.
 
 ### Inter-Rater Reliability
 

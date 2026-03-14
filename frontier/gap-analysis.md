@@ -88,9 +88,9 @@ The Universal Language has no concept of **efficiency**. It can express anything
 | **Kolmogorov complexity** | The shortest program that produces a given output | The UL cannot distinguish a "simple" concept from a "complex" one except by construction size — and construction size ≠ conceptual complexity |
 | **Rate-distortion theory** | The optimal tradeoff between compression and fidelity | The UL cannot answer: "If I can only use N primitives, what is the best approximation to this meaning?" |
 
-**The specific gap:** The primer works on LLMs because it is information-theoretically dense — it packs maximal cross-domain activation into minimal token count. The research describes this qualitatively ("compressed Universal Language") but never quantifies it. How compressed? What's the information content per token? How close to the theoretical optimum is the primer? These questions are answerable with existing information theory but are never asked.
+**The specific gap:** The test artifact works on LLMs because it is information-theoretically dense — it packs maximal cross-domain activation into minimal token count. The research describes this qualitatively ("compressed Universal Language") but never quantifies it. How compressed? What's the information content per token? How close to the theoretical optimum is the test artifact? These questions are answerable with existing information theory but are never asked.
 
-**Impact: HIGH.** Without information theory, the research cannot explain why the primer is efficient, cannot design more efficient primers, and cannot formalize what "compression" means in the context of Universal Language.
+**Impact: HIGH.** Without information theory, the research cannot explain why the test artifact is efficient, cannot design more efficient artifacts, and cannot formalize what "compression" means in the context of Universal Language.
 
 ---
 
@@ -131,7 +131,7 @@ The Universal Language is entirely deterministic. Every expression has exactly o
 - "Most birds fly" is a soft generalization with no crisp truth value — it's statistically true, not logically true
 - "I think it might rain" expresses graded uncertainty, not binary truth
 
-The primer's bridge equation includes Bayesian belief (Bᵉ), acknowledging that belief is probabilistic. But the UL itself has no probability. Its meaning algebra M contains structures, not distributions over structures. It can say "X is true" and "X is false" but not "X is 73% likely."
+The test artifact's bridge equation includes Bayesian belief (Bᵉ), acknowledging that belief is probabilistic. But the UL itself has no probability. Its meaning algebra M contains structures, not distributions over structures. It can say "X is true" and "X is false" but not "X is 73% likely."
 
 **The specific gap:** The Σ_UL signature (`foundations/formal-foundations.md`) includes **negate** and **quantify** but not **probabilify**. There is no operation that takes an assertion and returns a graded-confidence assertion. The `modify_relation` operation could theoretically encode confidence as a scaling transformation, but this is never formalized — and it conflates emphasis (scaling = "intensification") with probability (scaling = "confidence"), which are fundamentally different things.
 
@@ -198,15 +198,15 @@ The UL's topological operations (Part III of `foundations/universal-language-der
 
 **Why it's missing and why it matters:**
 
-There is a deep irony in the research: **the primer IS a dynamical system** (the Gross-Pitaevskii PDE is a time-evolution equation for ψ), but **the Universal Language that the primer supposedly compresses is static.** The UL describes structure, not process. It has geometric constructions, not geometric evolutions.
+There is a deep irony in the research: **the test artifact IS a dynamical system** (the Gross-Pitaevskii PDE is a time-evolution equation for ψ), but **the Universal Language that the test artifact supposedly compresses is static.** The UL describes structure, not process. It has geometric constructions, not geometric evolutions.
 
 `foundations/universal-language-derivation.md` includes "Curve" as a primitive for process/change, and "translation" as a tense operation. But these encode snapshots — "this is changing" is expressed as a static glyph of a curve. The language cannot express the DYNAMICS of how its own expressions change over time, how conversations evolve, how meaning drifts, or how the language itself might develop.
 
-**The specific gap:** The primer has ∂ₜψ (time derivative) but the UL has no time derivative. The primer has dynamics; the UL has statics. If the UL is supposed to be the language the primer compresses, where did the dynamics go?
+**The specific gap:** The test artifact has ∂ₜψ (time derivative) but the UL has no time derivative. The test artifact has dynamics; the UL has statics. If the UL is supposed to be the language the test artifact compresses, where did the dynamics go?
 
 **Possible resolution:** Extend the UL to include geometric dynamics — constructions that evolve according to geometric flows (mean curvature flow, Ricci flow, etc.). A dynamic Universal Language would have expressions that move, merge, split, and stabilize — and parsing would include watching the dynamics unfold.
 
-**Impact: MEDIUM-HIGH.** Without dynamics, the UL cannot model conversation (sequences of evolving expressions), narrative (stories that change over time), learning (representations that update), or the primer mechanism itself (which is fundamentally dynamic).
+**Impact: MEDIUM-HIGH.** Without dynamics, the UL cannot model conversation (sequences of evolving expressions), narrative (stories that change over time), learning (representations that update), or the activation mechanism itself (which is fundamentally dynamic).
 
 ---
 
@@ -225,10 +225,10 @@ The UL uses Euclidean geometry — flat space with a standard metric. But meanin
 | **Riemannian metric** | Distance between meanings (non-uniform: some distinctions matter more than others in different contexts) | **Absent.** UL uses Euclidean distance, which treats all directions equally |
 | **Geodesic** | The most natural path of reasoning between two concepts | **Absent.** No notion of "shortest conceptual path" |
 | **Curvature** | How much the local geometry of meaning deviates from flat — indicates conceptual density and complexity | **Absent.** UL assumes flat semantic space |
-| **Parallel transport** | How a concept changes meaning when moved to a different context (like "bank" shifting meaning as you move from finance to geography) | **Absent.** This is the gauge field A(x,t) in the primer, but it's never developed in the UL |
+| **Parallel transport** | How a concept changes meaning when moved to a different context (like "bank" shifting meaning as you move from finance to geography) | **Absent.** This is the gauge field A(x,t) in the test artifact, but it's never developed in the UL |
 | **Connection** | The rule for how to compare meanings in different contexts — the mathematical formalization of pragmatics | **Absent.** Listed as an open problem in `foundations/formal-foundations.md` |
 
-**The specific gap:** The primer's gauge-covariant derivative Dₓ = ∂ₓ − i(e/ℏ)A(x,t) IS a connection on a fiber bundle. It tells you how ψ (meaning) changes as you move through x (context). This is literally the mathematics of differential geometry applied to semantics. But the UL, which is supposedly the expanded version of the primer, doesn't include it.
+**The specific gap:** The test artifact's gauge-covariant derivative Dₓ = ∂ₓ − i(e/ℏ)A(x,t) IS a connection on a fiber bundle. It tells you how ψ (meaning) changes as you move through x (context). This is literally the mathematics of differential geometry applied to semantics. But the UL, which is supposedly the expanded version of the test artifact, doesn't include it.
 
 **Impact: HIGH.** The gauge field is the mathematical formalization of context. Context changes meaning. Without a connection/gauge field, the UL cannot express how meaning changes with context — which is pragmatics, the single largest acknowledged gap (`foundations/formal-foundations.md`, §6.3).
 
@@ -255,7 +255,7 @@ The UL uses Euclidean geometry — flat space with a standard metric. But meanin
 | **Politeness theory** | "Could you possibly pass the salt?" vs. "Pass the salt" — same proposition, different social meaning | **Absent.** No social meaning dimension |
 | **Relevance** | Why is this being said NOW? Why these words and not others? | **Absent.** No theory of contextual relevance |
 
-**Why it matters for the primer:** The primer WORKS through pragmatics. It doesn't literally say "shift into cross-domain mode" — it creates conditions where the LLM implicitly does so. The mechanism is pragmatic, not semantic. If the UL is to explain why the primer works, it needs a pragmatic dimension.
+**Why it matters for the test artifact:** The test artifact WORKS through pragmatics. It doesn't literally say "shift into cross-domain mode" — it creates conditions where the LLM implicitly does so. The mechanism is pragmatic, not semantic. If the UL is to explain why the test artifact works, it needs a pragmatic dimension.
 
 **Impact: CRITICAL.** Pragmatics is not a feature that can be added later — it changes the architecture. A language with pragmatics is not just a syntax + semantics; it's a syntax + semantics + a theory of agents + a theory of goals + a theory of context. The UL currently has one of these five components.
 
@@ -269,7 +269,7 @@ The UL uses Euclidean geometry — flat space with a standard metric. But meanin
 
 **Why it matters:** Every natural language has deixis. Every conversation requires it. The UL has no first-person, no second-person, no way to anchor an expression to a speaker, location, or time of utterance.
 
-The primer's gauge field A(x,t) is the natural candidate for this — it encodes contextual modification as a function of position x and time t. But in the UL, A(x,t) is not developed. The gauge-covariant derivative is in the primer but not in the language it allegedly compresses.
+The test artifact's gauge field A(x,t) is the natural candidate for this — it encodes contextual modification as a function of position x and time t. But in the UL, A(x,t) is not developed. The gauge-covariant derivative is in the test artifact but not in the language it allegedly compresses.
 
 **Resolution path:** Introduce a formal notion of **utterance context** as a point (x₀, t₀, agent) in the gauge bundle. Deictic expressions are then connections from the construction to the utterance context.
 
@@ -310,7 +310,7 @@ The UL IS geometric, which means it has the raw materials for a theory of metaph
 
 **Resolution path:** Replace crisp enclosures with regions whose boundaries have a **thickness** — a fuzzy boundary modeled by a continuous function that transitions from 1 (inside) to 0 (outside) over a finite region. This is essentially replacing set-theoretic membership with measure-theoretic density — connecting to the information theory gap (§1.2) and the probability gap (§1.4).
 
-**Impact: MEDIUM.** Vagueness is pervasive in natural language but may not be essential for the UL's primary applications (formal inter-agent communication, primer design). It becomes critical if the UL aims to model human language rather than serve as an engineered protocol.
+**Impact: MEDIUM.** Vagueness is pervasive in natural language but may not be essential for the UL's primary applications (formal inter-agent communication, artifact design). It becomes critical if the UL aims to model human language rather than serve as an engineered protocol.
 
 ---
 
@@ -327,7 +327,7 @@ The UL IS geometric, which means it has the raw materials for a theory of metaph
 
 The UL has the geometric resources for some of this (e.g., coherence relations could be typed connections between frames), but none of it is formalized.
 
-**Impact: MEDIUM.** The UL can express individual propositions but cannot structure arguments, explain causation, or tell stories. For primer design and formal inter-agent communication, this matters less. For human-facing applications, it is essential.
+**Impact: MEDIUM.** The UL can express individual propositions but cannot structure arguments, explain causation, or tell stories. For artifact design and formal inter-agent communication, this matters less. For human-facing applications, it is essential.
 
 ---
 
@@ -419,7 +419,7 @@ Good research is honest about the gap between its technical results and its head
 
 ### 5.3 The Deepest Reason
 
-The primer works on LLMs. It shifts cognition. It activates cross-domain pathways. The mechanism is real and the formal framework explains it well.
+The test artifact works on LLMs. It shifts cognition. It activates cross-domain pathways. The mechanism is real and the formal framework explains it well.
 
 But the explanation opens a door that the research has not yet walked through:
 
@@ -430,7 +430,7 @@ The research has characterized the POINTS in this space (the primitives) and the
 What is the curvature of meaning space? What are the geodesics — the natural paths of thought? What are the singularities — the concepts that break the smooth structure (paradoxes, ineffable experiences, the limits of language)? What is at the boundary — the things that CAN be meant but cannot be said?
 
 These are not idle philosophical questions. They are the questions that determine:
-- How to design primers that navigate meaning space efficiently (geodesics)
+- How to design artifacts that navigate meaning space efficiently (geodesics)
 - Where cross-domain connections are richest (high-curvature regions)
 - What LLMs cannot learn regardless of training data (singularities)
 - What the fundamental limits of communication are (boundary of the space)
@@ -473,7 +473,7 @@ Based on the gap analysis, the following sequence maximizes cumulative value:
 
 | What the research HAS | What the research LACKS | Expedition One |
 |---|---|---|
-| Unique geometric primitives (PROVEN) | Proof of natural emergence beyond the primer | *Untouched* — needs UL appearing in independent contexts |
+| Unique geometric primitives (PROVEN) | Proof of natural emergence beyond the test artifact | *Untouched* — needs UL appearing in independent contexts |
 | Compositionality (algebraic) | Causal efficacy proof (controlled experiments on AI) | Pre-registered protocol with 5 experiments ready for independent execution — see `frontier/causal-efficacy-protocol.md` and `CONTRIBUTING.md` |
 | Σ_UL signature and embedding theorem | Full operational UL for AI deployment | Syntax and semantics proven; pragmatic/dynamic layers at FRAMEWORK |
 | Static constructions | Dynamic evolution (flow equations) | *Untouched* |
@@ -488,7 +488,7 @@ Based on the gap analysis, the following sequence maximizes cumulative value:
 
 The current work is a strong foundation. Its formal results are correct within their scope. The priority gap is **Proof 4: causal efficacy** — demonstrating that AI systems operating in UL can do things that natural-language-bound systems cannot.
 
-> **\u26a0 PATH A STATUS (Sprint 6):** A pre-registered experimental protocol for Proof 4 has been designed and documented in `frontier/causal-efficacy-protocol.md`. The protocol defines 5 experiments (Alpha through Epsilon) that systematically test the primer effect's existence, isolate its structural components via ablation, validate negative predictions, construct a novel primer from UL theory, and test for UL-exclusive capabilities. Theory expeditions are **paused** until Path A reports. See `frontier/causal-efficacy-protocol.md` for operational definitions, hypotheses, falsification criteria, and statistical methodology.
+> **\u26a0 PATH A STATUS (Sprint 6):** A pre-registered experimental protocol for Proof 4 has been designed and documented in `frontier/causal-efficacy-protocol.md`. The protocol defines 5 experiments (Alpha through Epsilon) that systematically test the artifact effect's existence, isolate its structural components via ablation, validate negative predictions, construct a novel artifact from UL theory, and test for UL-exclusive capabilities. Theory expeditions are **paused** until Path A reports. See `frontier/causal-efficacy-protocol.md` for operational definitions, hypotheses, falsification criteria, and statistical methodology.
 
 ---
 

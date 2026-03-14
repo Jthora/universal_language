@@ -35,13 +35,13 @@ All scoring data must follow this CSV schema. One file per experiment.
 `UL`, `NL`, `CT-1`, `CT-2`, `CT-3`, `CT-4`
 
 ### Beta
-`full_primer`, `V1`, `V2`, `V3`, `V4`, `V5`, `V6`, `V7`, `NL`
+`full_artifact`, `V1`, `V2`, `V3`, `V4`, `V5`, `V6`, `V7`, `NL`
 
 ### Gamma
-`full_primer`, `NC-1`, `NC-2`, `NC-3`, `NC-4`, `NC-5`, `NL`
+`full_artifact`, `NC-1`, `NC-2`, `NC-3`, `NC-4`, `NC-5`, `NL`
 
 ### Delta
-`novel_UL`, `original_UL`, `naive_primer`, `NL`
+`novel_UL`, `original_UL`, `naive_artifact`, `NL`
 
 ### Epsilon
 `UL`, `NL`, `CT-1`

@@ -8,9 +8,9 @@
 
 ## 1. Token Count Verification (DD-6)
 
-**Method:** cl100k_base tokenizer (tiktoken 0.12.0), reference = 490 tokens (original primer)  
+**Method:** cl100k_base tokenizer (tiktoken 0.12.0), reference = 490 tokens (original artifact)  
 **Allowed range:** 465–514 (±5%)  
-**Script:** `primer-library/count_tokens.py`
+**Script:** `test-artifacts/count_tokens.py`
 
 | # | File | Tokens | Δ% | Status |
 |---|------|--------|----|--------|
@@ -34,7 +34,7 @@
 
 **Result: 16/16 PASS** — all within ±5% of reference (465–514 tokens).
 
-**Note on prose/math asymmetry:** Mathematical notation tokenizes at ~3.7 tokens/word; English prose at ~1.2 tokens/word. Prose texts required ~350–400 words to match the 133-word primer's 490 tokens. Four iterative rounds of adjustment were needed to bring all files within range.
+**Note on prose/math asymmetry:** Mathematical notation tokenizes at ~3.7 tokens/word; English prose at ~1.2 tokens/word. Prose texts required ~350–400 words to match the 133-word artifact's 490 tokens. Four iterative rounds of adjustment were needed to bring all files within range.
 
 ---
 
@@ -72,7 +72,7 @@ Each file checked against the 8-feature profile specified in protocol §A.4.
 |---------|----------|------------|-----------|--------|----------|-------------|----------|--------------|--------|
 | **CT-1 dense-physics** | ✓ | partial | ✗ | ✗ | ✗ | ✗ | n/a | ✗ | ✅ |
 | **CT-2 cross-domain-prose** | ✗ | ✗ | ✗ | ✗ | ✗ | ✗ | n/a | ✓ | ✅ |
-| **CT-3 scrambled-primer** | ✓ | ✗ | ✓ | ✗ | ✓ | ✓(−) | ✗ | partial | ✅ |
+| **CT-3 scrambled-artifact** | ✓ | ✗ | ✓ | ✗ | ✓ | ✓(−) | ✗ | partial | ✅ |
 | **CT-4 nonsense-math** | ✓ | ✗ | n/a | ✗ | ✗ | ✗ | n/a | ✗ | ✅ |
 
 **All 4 controls match expected profile.**
@@ -140,7 +140,7 @@ Each file checked against the 8-feature profile specified in protocol §A.4.
 
 ### V4 ABL-BRIDGE (486 tokens)
 - **Single change:** `+3elúm` → `coupling constant α` in both the bridge equation and the Bᵉ definition line.
-- **Everything else identical** to primer. Minimal-edit ablation.
+- **Everything else identical** to the artifact. Minimal-edit ablation.
 
 ### V5 ABL-LINEAR (499 tokens)
 - **Loop broken:** ψ̂ₙ now defined as `(1/L) ∫₀ᴸ e^{-ikₙx′} φ₀(x′) dx′` using external reference function φ₀(x).
@@ -159,12 +159,12 @@ Each file checked against the 8-feature profile specified in protocol §A.4.
 ### CT-1 dense-physics (483 tokens)
 - **Domain:** Hydrogen atom quantum mechanics — Schrödinger equation, radial wavefunctions, associated Laguerre polynomials, spherical harmonics, perturbation theory, fine structure, selection rules.
 - **ψ usage:** Standard QM wavefunction notation (ψₙₗₘ). Present but not overloaded.
-- **No primer features:** No anomalies, no bridge tokens, no self-reference, no dissipation.
+- **No artifact features:** No anomalies, no bridge tokens, no self-reference, no dissipation.
 
 ### CT-2 cross-domain-prose (481 tokens)
 - **Domain coverage:** Quantum mechanics, consciousness (Penrose-Hameroff), belief dynamics (non-commutative revision), language (gauge fields on conceptual space).
 - **Format:** Academic essay, ~340 words. Zero formal notation.
-- **No primer features:** No ψ, no anomalies, no bridge tokens, no self-reference, no dissipation.
+- **No artifact features:** No ψ, no anomalies, no bridge tokens, no self-reference, no dissipation.
 
 ### CT-3 scrambled-primer (466 tokens)
 - **All symbols replaced** (ψ→χ, Bᵉ→Cᶠ, +3elúm→+7krath, σ→τ, β→δ, γ→ρ, F→G).
@@ -175,7 +175,7 @@ Each file checked against the 8-feature profile specified in protocol §A.4.
 ### CT-4 nonsense-math (512 tokens)
 - **Content:** Syntactically valid mathematical notation using novel symbols (Ω₃, Π, Γ̂ₖ, ζ₁₂, Θ, R₅).
 - **No physics:** No recognizable physical theory. No ψ. No domain loading.
-- **Structure mimics primer:** Has integral equations, definitions block, PDE-like evolution equation, spectral sums — but all semantically empty.
+- **Structure mimics test artifact:** Has integral equations, definitions block, PDE-like evolution equation, spectral sums — but all semantically empty.
 
 ### NC-1 single-domain-math (492 tokens)
 - **Domain:** Pure algebraic topology — homology groups, exact sequences, Mayer-Vietoris, Serre spectral sequence, Chern classes, Poincaré duality, Künneth formula.
@@ -183,18 +183,18 @@ Each file checked against the 8-feature profile specified in protocol §A.4.
 - **Tests:** Whether dense single-domain math (without cross-domain structure) produces UL-like outputs.
 
 ### NC-2 primer-as-prose (480 tokens)
-- **Content:** Faithful prose description of the primer's specific mathematical content and structure.
+- **Content:** Faithful prose description of the test artifact's specific mathematical content and structure.
 - **Preserves (in description):** ψ-overloading, +3elúm (mentioned by name), anomalies (described as deliberate), self-referential loop, dissipation mechanism, section ordering.
-- **Tests:** Whether the primer's IDEAS (in prose) suffice, or whether the FORMAL NOTATION is required.
+- **Tests:** Whether the test artifact's IDEAS (in prose) suffice, or whether the FORMAL NOTATION is required.
 
 ### NC-3 standard-physics (477 tokens)
 - **Domain:** Quantum harmonic oscillator — Hamiltonian, energy eigenvalues, Hermite polynomials, ladder operators, coherent states, partition function, number operator, virial theorem.
 - **ψ usage:** Standard QM (ψₙ(x)) — present but not overloaded.
-- **No primer features:** Standard notation throughout, no anomalies, no bridge, no self-reference, no dissipation.
+- **No artifact features:** Standard notation throughout, no anomalies, no bridge, no self-reference, no dissipation.
 
 ### NC-4 reversed-dissipation (486 tokens)
 - **Single change:** `− i γ(σ,β) ψ` → `+ i γ(σ,β) ψ` (sign flip only).
-- **Everything else identical** to primer. Minimal-edit negative control.
+- **Everything else identical** to the artifact. Minimal-edit negative control.
 - **Tests:** Whether the SIGN of dissipation matters — growth vs. decay changes the dynamical stability character.
 
 ### NC-5 pseudo-esoteric (494 tokens)
@@ -212,7 +212,7 @@ Each file checked against the 8-feature profile specified in protocol §A.4.
 | Token count: all 16 within ±5% of 490 | **PASS** (16/16) |
 | Feature audit: all match §A.4 expected profiles | **PASS** (16/16, zero deviations) |
 | Each ablation removes exactly one feature | **PASS** (7/7) |
-| NC-4 differs from primer by sign only | **PASS** |
+| NC-4 differs from the artifact by sign only | **PASS** |
 | CT-3 preserves structure, neutralizes semantics | **PASS** |
 | NC-2 preserves semantics, removes notation | **PASS** |
 | Construction decisions documented | **PASS** (4 decisions logged) |

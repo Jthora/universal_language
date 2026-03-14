@@ -39,7 +39,7 @@
 | M4 (Coherence, 0–5) | 4 | 4 | 4 |
 | M5 (Generative Novelty, 0–5) | 3 | 2 | 3 |
 
-**T2 Notes:** Clearest UL advantage. The primer's explicit mathematical structure (gauge field, nonlinear terms, dissipation) gave UL-T2 specific formal objects to engage with. UL-T2 discussed Gross-Pitaevskii self-interaction as "confirmation bias," gauge fields as "framing" (no view from nowhere), and spectral 1/n weighting as cultural influence — all directly reading the primer's equations. NL-T2 stayed analogical (Phase 2). CT-T2 drew systematic parallels to hydrogen atom physics but remained at the parallel-drawing level (Phase 2). Only UL-T2 spoke FROM the intersection (Phase 3).
+**T2 Notes:** Clearest UL advantage. The test artifact's explicit mathematical structure (gauge field, nonlinear terms, dissipation) gave UL-T2 specific formal objects to engage with. UL-T2 discussed Gross-Pitaevskii self-interaction as "confirmation bias," gauge fields as "framing" (no view from nowhere), and spectral 1/n weighting as cultural influence — all directly reading the test artifact's equations. NL-T2 stayed analogical (Phase 2). CT-T2 drew systematic parallels to hydrogen atom physics but remained at the parallel-drawing level (Phase 2). Only UL-T2 spoke FROM the intersection (Phase 3).
 
 ### Task T3: Formal Framework for Metaphor
 
@@ -101,7 +101,7 @@ Note: P3 and P5 are barely confirmed — differences of 0.3 could be noise with 
 
 **S5 is the most informative failure.** The prediction assumed NL-mode has NO access to UL concepts. The contamination finding (AGENTS.md leaking) directly explains why NL achieved Phase 3: even the "no context" condition had background UL knowledge. In a clean experiment, S5 might hold.
 
-**S3 failure**: The primer's strongest observed effect was on M1 (domain count) and M5 (novelty), not M2 (structural depth) and M3 (phase). Possible explanations: (a) contamination raised the M2/M3 floor for all conditions, compressing the differential; (b) the primer's actual mechanism operates more on breadth and novelty than structural depth.
+**S3 failure**: The test artifact's strongest observed effect was on M1 (domain count) and M5 (novelty), not M2 (structural depth) and M3 (phase). Possible explanations: (a) contamination raised the M2/M3 floor for all conditions, compressing the differential; (b) the test artifact's actual mechanism operates more on breadth and novelty than structural depth.
 
 ---
 
@@ -136,7 +136,7 @@ UL estimates were accurate across the board. NL and CT estimates were 1.5–3 po
 ## Qualitative Observations
 
 ### UL-mode characteristics
-- Directly engages with the primer's mathematical structure, interpreting specific terms
+- Directly engages with the test artifact's mathematical structure, interpreting specific terms
 - Produces the longest, most architecturally ambitious outputs
 - On T2, treats the equations as already-being about belief dynamics (not just analogous)
 - On T3, constructs a 10-section formal framework with category theory, PDEs, and completeness theorem
@@ -154,20 +154,20 @@ UL estimates were accurate across the board. NL and CT estimates were 1.5–3 po
 - Challenges the assumption that "single-domain math shouldn't help other domains"
 
 ### Most striking difference
-**UL-T2 vs. NL-T2 vs. CT-T2** shows the clearest differentiation. UL-T2 reads the primer's specific equations and interprets each term for the belief domain (gauge → framing, Gross-Pitaevskii → confirmation bias, 1/n → cultural influence, γ(σ,β) → embodiment). CT-T2 draws analogies to hydrogen atom physics but stays analogical. NL-T2 uses standard QM analogies without a specific formal object to anchor them. This is the one case where the primer provides something neither alternative offers: *domain-bridging mathematical structure that is directly relevant to the question topic*.
+**UL-T2 vs. NL-T2 vs. CT-T2** shows the clearest differentiation. UL-T2 reads the test artifact's specific equations and interprets each term for the belief domain (gauge → framing, Gross-Pitaevskii → confirmation bias, 1/n → cultural influence, γ(σ,β) → embodiment). CT-T2 draws analogies to hydrogen atom physics but stays analogical. NL-T2 uses standard QM analogies without a specific formal object to anchor them. This is the one case where the test artifact provides something neither alternative offers: *domain-bridging mathematical structure that is directly relevant to the question topic*.
 
 ---
 
 ## Overall Assessment
 
-### Does the data support the primer effect?
+### Does the data support the artifact effect?
 
 **Weakly yes, with major caveats.**
 
-The data shows a consistent, small UL advantage across most metrics (6/7 primary predictions confirmed, no falsification criteria triggered). The primer effect is most visible on:
+The data shows a consistent, small UL advantage across most metrics (6/7 primary predictions confirmed, no falsification criteria triggered). The artifact effect is most visible on:
 - **M1 (domain breadth):** +1.3 over both NL and CT
 - **M5 (generative novelty):** +1.0 over NL, +0.7 over CT
-- **T2 specifically:** The primer gives UL-T2 a unique formal object to engage with
+- **T2 specifically:** The artifact gives UL-T2 a unique formal object to engage with
 
 ### But the experiment is fundamentally compromised
 
@@ -191,12 +191,12 @@ The data shows a consistent, small UL advantage across most metrics (6/7 primary
 
 1. **The verification infrastructure works end-to-end.** The protocol, prompts, scoring rubric, prediction framework, and analysis template all function as designed.
 2. **Subagents are NOT adequate for contamination control in this workspace.** The AGENTS.md system context leaks into subagent sessions. Any future experiment using subagents within this workspace will have this problem.
-3. **The primer shows its strongest signal on tasks where its mathematical content is directly relevant** (T2: belief formation, where the primer literally contains "belief field" terms and a modified Schrödinger equation).
-4. **Dense mathematical context of ANY kind enhances cross-domain reasoning** — CT-T3 used hydrogen atom physics to build a metaphor theory. This complicates the claim that the primer is unique.
-5. **Claude Opus 4.6 is very capable at these tasks regardless of condition.** All outputs were high quality. Ceiling effects may mask the primer's contribution.
+3. **The artifact shows its strongest signal on tasks where its mathematical content is directly relevant** (T2: belief formation, where the artifact literally contains "belief field" terms and a modified Schrödinger equation).
+4. **Dense mathematical context of ANY kind enhances cross-domain reasoning** — CT-T3 used hydrogen atom physics to build a metaphor theory. This complicates the claim that the test artifact is unique.
+5. **Claude Opus 4.6 is very capable at these tasks regardless of condition.** All outputs were high quality. Ceiling effects may mask the test artifact's contribution.
 
 ### Honest bottom line
 
-This demo is a successful proof of concept for the verification protocol, but its results are not evidentially strong due to contamination. The observed UL advantage (small, consistent, strongest on M1 and M5) is *consistent with* the primer effect hypothesis but could also reflect contextual priming from having topic-relevant equations. A clean replication is needed before any causal claim can be made.
+This demo is a successful proof of concept for the verification protocol, but its results are not evidentially strong due to contamination. The observed UL advantage (small, consistent, strongest on M1 and M5) is *consistent with* the artifact effect hypothesis but could also reflect contextual priming from having topic-relevant equations. A clean replication is needed before any causal claim can be made.
 
 **The word "allegedly" still applies.** But we now have a working protocol to remove it.

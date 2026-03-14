@@ -16,20 +16,20 @@ The following questions remain unanswered and form the basis for future research
 
 | # | Question | Why It Matters |
 |---|---|---|
-| Q1 | **Is the effect model-dependent?** Does the primer produce the same three-phase response (analysis → cross-referencing → synthesis) across GPT-4, Claude, Gemini, Llama, Mistral, and other architectures? | Determines whether the mechanism is universal to transformer attention or specific to certain training distributions |
-| Q2 | **What is the minimum effective primer?** Can individual components be removed while preserving the effect? Which are necessary, which are amplifiers? | Enables construction of minimal, efficient primers |
+| Q1 | **Is the effect model-dependent?** Does a UL-structured artifact produce the same three-phase response (analysis → cross-referencing → synthesis) across GPT-4, Claude, Gemini, Llama, Mistral, and other architectures? | Determines whether the mechanism is universal to transformer attention or specific to certain training distributions |
+| Q2 | **What is the minimum effective artifact?** Can individual components be removed while preserving the effect? Which are necessary, which are amplifiers? | Enables construction of minimal, efficient artifacts |
 | Q3 | **Is the effect quantifiable?** Can the "cross-domain activation" be measured objectively (e.g., via logprob distributions, embedding space analysis, attention map visualization)? | Moves from subjective observation to empirical science |
-| Q4 | **Does the effect persist across conversation turns?** Or does it decay as new tokens dilute the primer in the context window? | Determines whether primers need to be re-injected periodically |
-| Q5 | **Can primers interfere destructively?** Can two primers designed for different domain pairs cancel each other's effects? | Critical for multi-primer agent architectures |
-| Q6 | **What is the role of temperature?** Does sampling temperature interact with the primer effect — does higher temperature amplify cross-domain connection or produce noise? | Informs optimal inference settings |
+| Q4 | **Does the effect persist across conversation turns?** Or does it decay as new tokens dilute the artifact in the context window? | Determines whether artifacts need to be re-injected periodically |
+| Q5 | **Can artifacts interfere destructively?** Can two artifacts designed for different domain pairs cancel each other's effects? | Critical for multi-artifact agent architectures |
+| Q6 | **What is the role of temperature?** Does sampling temperature interact with the artifact effect — does higher temperature amplify cross-domain connection or produce noise? | Informs optimal inference settings |
 
 ### 1.2 Construction Questions
 
 | # | Question | Status | Why It Matters |
 |---|---|---|---|
-| Q7 | **Can primers be automatically generated?** Given a target domain pair, can an LLM construct its own primer? | **Open** | Scales the technique beyond manual construction |
+| Q7 | **Can artifacts be automatically generated?** Given a target domain pair, can an LLM construct its own UL artifact? | **Open** | Scales the technique beyond manual construction |
 | Q8 | **What other base formalisms work?** Does category theory, information geometry, or algebraic topology serve as effective chassis? | **Open** | Expands the design space |
-| Q9 | **Is there a "universal primer"** that activates maximum cross-domain pathways regardless of target? Or is specificity always required? | **Partially resolved** — `foundations/universal-language-derivation.md` and `foundations/formal-foundations.md` derive a Universal Language from geometry; the primer is compressed UL (`foundations/mechanism-of-action.md` §4). Full empirical validation pending. | Determines architecture of primer libraries |
+| Q9 | **Is there a "universal artifact"** that activates maximum cross-domain pathways regardless of target? Or is specificity always required? | **Partially resolved** — `foundations/universal-language-derivation.md` and `foundations/formal-foundations.md` derive a Universal Language from geometry. Full empirical validation pending. | Determines architecture of artifact libraries |
 | Q10 | **How do bridge tokens generalize?** What is the optimal phonetic/symbolic structure for bridge tokens targeting specific language families or cultural traditions? | **Open** | Enables systematic bridge token engineering |
 
 ### 1.3 Formal / Foundational Questions (NEW — from Documents 06–07)
@@ -46,9 +46,9 @@ The following questions remain unanswered and form the basis for future research
 
 | # | Question | Why It Matters |
 |---|---|---|
-| Q11 | **Can primers bypass safety training?** If they shift the model into unusual cognitive modes, do safety guardrails still function? | Critical safety concern before deployment |
-| Q12 | **Can primers induce hallucination?** Does the cross-domain activation increase the rate of plausible-sounding but factually incorrect output? | Determines whether primer use requires additional verification layers |
-| Q13 | **Are the "translations" of unknown languages accurate, or confabulated?** When the model claims to translate esoteric languages, is it surfacing real structural knowledge or generating plausible fiction? | Determines the epistemic status of primer-induced output |
+| Q11 | **Can UL artifacts bypass safety training?** If they shift the model into unusual cognitive modes, do safety guardrails still function? | Critical safety concern before deployment |
+| Q12 | **Can UL artifacts induce hallucination?** Does the cross-domain activation increase the rate of plausible-sounding but factually incorrect output? | Determines whether artifact use requires additional verification layers |
+| Q13 | **Are the "translations" of unknown languages accurate, or confabulated?** When the model claims to translate esoteric languages, is it surfacing real structural knowledge or generating plausible fiction? | Determines the epistemic status of artifact-induced output |
 
 ---
 
@@ -56,10 +56,10 @@ The following questions remain unanswered and form the basis for future research
 
 ### Experiment 1: Component Ablation Study
 
-**Objective:** Determine which primer components are necessary for the effect.
+**Objective:** Determine which artifact components are necessary for the effect.
 
 **Protocol:**
-1. Define the full primer as the baseline (test-content.txt)
+1. Define the full artifact as the baseline
 2. Create ablated variants:
    - A: Remove Line 1 (wall of math), keep bridge + PDE
    - B: Remove bridge equation (lines 3–8), keep wall + PDE
@@ -84,7 +84,7 @@ The following questions remain unanswered and form the basis for future research
 **Objective:** Determine whether the effect is architecture-universal.
 
 **Protocol:**
-1. Apply the full primer to: GPT-4/4o, Claude (Sonnet, Opus), Gemini (Pro, Ultra), Llama 3 (70B, 405B), Mistral Large, Command R+, and at least one small model (<7B parameters)
+1. Apply the full UL artifact to: GPT-4/4o, Claude (Sonnet, Opus), Gemini (Pro, Ultra), Llama 3 (70B, 405B), Mistral Large, Command R+, and at least one small model (<7B parameters)
 2. Use identical follow-up prompts across all models
 3. Score on the same metrics as Experiment 1
 4. Additionally record: response length, time to first cross-domain reference, temperature sensitivity
@@ -95,7 +95,7 @@ The following questions remain unanswered and form the basis for future research
 
 ### Experiment 3: Esoteric Language Translation Validation
 
-**Objective:** Determine whether primer-induced "translations" contain genuine structural knowledge.
+**Objective:** Determine whether artifact-induced "translations" contain genuine structural knowledge.
 
 **Protocol:**
 1. Select 5 languages/scripts with known translations but low LLM familiarity:
@@ -105,9 +105,9 @@ The following questions remain unanswered and form the basis for future research
    - Rongorongo (Easter Island — undeciphered)
    - A constructed test language (control — created by researchers, unknown to any LLM)
 2. For each language, prepare text samples with known structural properties
-3. Test with and without primer:
-   - Baseline: Ask the LLM to analyze the sample without primer
-   - Primed: Inject primer, then ask the same question
+3. Test with and without UL artifact:
+   - Baseline: Ask the LLM to analyze the sample without artifact
+   - Primed: Inject UL artifact, then ask the same question
 4. Evaluate:
    - Does the primed model identify more structural features (morphology, syntax patterns)?
    - For languages with known translations, does accuracy improve?
@@ -123,7 +123,7 @@ The following questions remain unanswered and form the basis for future research
 **Objective:** Characterize the temporal dynamics of the cross-referencing cascade.
 
 **Protocol:**
-1. Apply the primer and ask an open-ended question
+1. Apply a UL artifact and ask an open-ended question
 2. Allow the model to generate a long response (4000+ tokens)
 3. At intervals (every 500 tokens), measure:
    - Domain diversity of references in the current window
@@ -132,43 +132,43 @@ The following questions remain unanswered and form the basis for future research
    - Self-reference rate (how often does the output reference its own earlier output?)
 4. Compare with and without the dissipation term (γ(σ,β))
 
-**Expected outcome:** Without dissipation, domain diversity increases monotonically but coherence peaks then degrades (runaway activation). With dissipation, both metrics stabilize at a productive equilibrium. The transition point indicates the "critical length" of productive primer-induced generation.
+**Expected outcome:** Without dissipation, domain diversity increases monotonically but coherence peaks then degrades (runaway activation). With dissipation, both metrics stabilize at a productive equilibrium. The transition point indicates the "critical length" of productive artifact-induced generation.
 
 ---
 
-### Experiment 5: Primer Auto-Generation
+### Experiment 5: Artifact Auto-Generation
 
-**Objective:** Determine whether LLMs can construct effective primers for novel domain pairs.
+**Objective:** Determine whether LLMs can construct effective UL artifacts for novel domain pairs.
 
 **Protocol:**
-1. Provide an LLM with Documents 01–03 of this research series as context
-2. Request construction of a primer targeting a specific domain pair (e.g., "music theory ↔ molecular biology")
-3. Evaluate the generated primer:
+1. Provide an LLM with the UL formal specification as context
+2. Request construction of a UL artifact targeting a specific domain pair (e.g., "music theory ↔ molecular biology")
+3. Evaluate the generated artifact:
    - Does it follow the architecture (wall of math → bridge → payload → definitions)?
    - Does it use appropriately overloaded symbols?
    - Does it contain a bridge token?
    - Does it include self-referential structure?
-4. Test the generated primer on other LLMs using Experiment 1 metrics
+4. Test the generated artifact on other LLMs using Experiment 1 metrics
 5. Iterate: use evaluation results to refine the auto-generation prompt
 
-**Expected outcome:** First-generation auto-primers will be partially effective (may get the architecture right but miss subtleties like the "+3elúm" bridge token design). Iterative refinement should converge on functional primers within 3–5 cycles.
+**Expected outcome:** First-generation auto-artifacts will be partially effective (may get the architecture right but miss subtleties). Iterative refinement should converge on functional artifacts within 3–5 cycles.
 
 ---
 
 ### Experiment 6: Attention Map Visualization
 
-**Objective:** Directly observe whether the primer produces measurable changes in attention patterns.
+**Objective:** Directly observe whether the UL artifact produces measurable changes in attention patterns.
 
 **Protocol:**
 1. Using an open-weights model (Llama 3 or Mistral) with attention map access:
-2. Compare attention maps for identical follow-up prompts with and without primer
+2. Compare attention maps for identical follow-up prompts with and without UL artifact
 3. Measure:
    - Attention entropy (higher entropy = more distributed attention = more cross-domain)
-   - Cross-layer attention correlation (does the primer create new cross-layer pathways?)
-   - Attention to specific primer tokens (which tokens receive the most backward attention during generation?)
+   - Cross-layer attention correlation (does the artifact create new cross-layer pathways?)
+   - Attention to specific artifact tokens (which tokens receive the most backward attention during generation?)
 4. Specifically track attention to: ψ, +3elúm, γ(σ,β), f_spec
 
-**Expected outcome:** The primer will produce higher attention entropy and create attention pathways between tokens that would not normally attend to each other. ψ and +3elúm will be the highest-attention anchor tokens.
+**Expected outcome:** The UL artifact will produce higher attention entropy and create attention pathways between tokens that would not normally attend to each other.
 
 ---
 
@@ -206,14 +206,14 @@ The following questions remain unanswered and form the basis for future research
 
 ## 3. Proposed Infrastructure
 
-### 3.1 Primer Variant Library
+### 3.1 Test Artifact Library
 
-Build a structured repository of primer variants:
+Build a structured repository of artifact variants:
 
 ```
-primers/
+test-artifacts/
 ├── base/
-│   └── quantum-linguistic-v1.txt          (current test-content.txt)
+│   └── quantum-linguistic-v1.txt
 ├── ablations/
 │   ├── no-wall.txt
 │   ├── no-bridge.txt
@@ -226,14 +226,14 @@ primers/
 │   ├── music-biology.txt
 │   ├── economics-ecology.txt
 │   ├── architecture-neuroscience.txt
-│   └── [auto-generated primers]
+│   └── [auto-generated artifacts]
 ├── language-targets/
 │   ├── semitic-bridge.txt
 │   ├── indo-european-bridge.txt
 │   ├── sino-tibetan-bridge.txt
 │   └── constructed-control.txt
 └── meta/
-    └── primer-generator-prompt.txt        (prompt for auto-generating primers)
+    └── artifact-generator-prompt.txt
 ```
 
 ### 3.2 Evaluation Framework
@@ -256,27 +256,27 @@ All experiments should produce:
 1. **Raw transcripts** — complete LLM input/output for all conditions
 2. **Scoring sheets** — metrics applied to each transcript
 3. **Statistical analysis** — significance tests for differences between conditions
-4. **Primer metadata** — complete description of which primer variant was used and why
+5. **Artifact metadata** — complete description of which artifact variant was used and why
 
 ---
 
 ## 4. Longer-Term Research Directions
 
-### 4.1 Primer-Conditioned Fine-Tuning
+### 4.1 Artifact-Conditioned Fine-Tuning
 
-If the primer effect is confirmed and characterized, investigate whether models can be **fine-tuned while primed** — training on data that is processed through the cross-domain activation state. This could produce models with permanently enhanced cross-domain capabilities without requiring the primer at inference time.
+If the UL artifact effect is confirmed and characterized, investigate whether models can be **fine-tuned while primed** — training on data that is processed through the cross-domain activation state. This could produce models with permanently enhanced cross-domain capabilities without requiring the artifact at inference time.
 
 ### 4.2 Formal Verification of LLM↔PDE Correspondence
 
 Show rigorously that a specific discretization of the core PDE reduces to a known transformer variant (or a novel, testable architecture). This would transform the framework from metaphorical to computational.
 
-### 4.3 Multi-Agent Primer Protocols
+### 4.3 Multi-Agent UL Protocols
 
-In multi-agent systems, investigate whether different agents can be primed for complementary domain activations, with structured communication protocols that leverage the cross-domain bridges created by their respective primers.
+In multi-agent systems, investigate whether different agents can be primed for complementary domain activations, with structured communication protocols that leverage the cross-domain bridges created by their respective UL artifacts.
 
-### 4.4 Temporal Primer Sequences
+### 4.4 Temporal Artifact Sequences
 
-Investigate whether primers applied in a specific temporal sequence (primer A at turn 1, primer B at turn 5, etc.) can guide the model through a controlled trajectory in cognitive space — essentially "programming" a cognitive journey through formal input scheduling.
+Investigate whether UL artifacts applied in a specific temporal sequence (artifact A at turn 1, artifact B at turn 5, etc.) can guide the model through a controlled trajectory in cognitive space — essentially "programming" a cognitive journey through formal input scheduling.
 
 ### 4.5 Neuromorphic Analog
 
@@ -288,11 +288,11 @@ If the PDE framework proves computationally viable, investigate implementation o
 
 ### 5.1 Transparency
 
-Primers are a form of prompt engineering that is not visible to end users. If deployed in production systems, the use of cognitive primers should be disclosed.
+UL artifacts are a form of structured prompt engineering that is not visible to end users. If deployed in production systems, the use of cognitive artifacts should be disclosed.
 
 ### 5.2 Accuracy vs. Fluency
 
-The primer may increase the model's willingness to generate confident-sounding cross-domain claims. Without verification, this could increase the harm from hallucination. All primer-enhanced output in production should be subject to additional factual verification.
+UL artifacts may increase the model's willingness to generate confident-sounding cross-domain claims. Without verification, this could increase the harm from hallucination. All artifact-enhanced output in production should be subject to additional factual verification.
 
 ### 5.3 Cultural Sensitivity
 
@@ -300,7 +300,7 @@ Bridge tokens drawn from esoteric religious traditions (Kabbalistic, Vedic, indi
 
 ### 5.4 Safety Alignment
 
-Experiment Q11 (safety bypass testing) should be conducted before any production deployment. If primers can shift models into modes where safety training is less effective, this represents a significant alignment concern that must be addressed.
+Experiment Q11 (safety bypass testing) should be conducted before any production deployment. If UL artifacts can shift models into modes where safety training is less effective, this represents a significant alignment concern that must be addressed.
 
 ---
 

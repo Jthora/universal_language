@@ -198,7 +198,7 @@ This would be true if DC_UL were Kolmogorov complexity — because a universal m
 
 **Correction:** The $n^*(m)$-dependent bound of Theorem 5 is the correct statement. The bound is *per atom*, not *per meaning*.
 
-**Why multiplicative invariance suffices:** All the downstream results that depend on P(m) — simplicity bias, Erlangen monotonicity, sub-additivity, the coding theorem connection, and the primer compression analysis — survive under multiplicative invariance:
+**Why multiplicative invariance suffices:** All the downstream results that depend on P(m) — simplicity bias, Erlangen monotonicity, sub-additivity, the coding theorem connection, and the test artifact compression analysis — survive under multiplicative invariance:
 
 | Result | Under additive invariance | Under multiplicative invariance | Status |
 |---|---|---|---|

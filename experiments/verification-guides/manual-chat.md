@@ -38,7 +38,7 @@ Pick ONE service. Use the SAME model for all trials. Document which service and 
 Use the pre-assembled prompts from `experiments/verification-guides/ready-prompts.md`. Each prompt contains the complete text to paste — context block + task.
 
 For a quick test, you need 9 prompts:
-- UL-T1, UL-T2, UL-T3 (primer + task)
+- UL-T1, UL-T2, UL-T3 (artifact + task)
 - NL-T1, NL-T2, NL-T3 (empty context + task)
 - CT-T1, CT-T2, CT-T3 (control text + task)
 
@@ -87,7 +87,7 @@ Follow the scoring process in `simplified-scoring.md`:
 
 ### HuggingChat
 - Select a specific model (e.g., Llama-3.1-70B) and use the same one throughout.
-- Open-source models may be useful for comparison — if the primer effect appears across architectures (Llama, Mistral, etc.), that's stronger evidence.
+- Open-source models may be useful for comparison — if the artifact effect appears across architectures (Llama, Mistral, etc.), that's stronger evidence.
 
 ---
 
@@ -102,6 +102,6 @@ Follow the scoring process in `simplified-scoring.md`:
 
 ## Multi-Model Comparison (Bonus)
 
-If you have access to multiple services, running the same 9-trial quick test on each gives you cross-model data. This is extremely valuable — it tests whether the primer effect is model-specific or general.
+If you have access to multiple services, running the same 9-trial quick test on each gives you cross-model data. This is extremely valuable — it tests whether the artifact effect is model-specific or general.
 
 Example: Run the quick test on ChatGPT, Claude.ai, AND Gemini. That's 27 trials and provides a strong initial dataset.

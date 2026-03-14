@@ -35,7 +35,7 @@ export OPENAI_API_KEY="sk-..."
 python analysis/run_trials.py pilot --model gpt-4o
 ```
 
-This generates 5 LLM responses to reasoning tasks with the primer injected as context. Output goes to `data/raw_outputs/pilot/`.
+This generates 5 LLM responses to reasoning tasks with a UL-structured artifact injected as context. Output goes to `data/raw_outputs/pilot/`.
 
 ### Step 2: Score the Outputs
 
@@ -85,8 +85,8 @@ Then score, blind, reveal, and analyze as above.
 - **Replication data** — Run Alpha on any supported model and share raw outputs + scores
 - **New model results** — Run on models not in the original protocol (Llama, Mistral, Gemini 2, etc.)
 - **Inter-rater reliability** — Score the same outputs independently and compare
-- **Cross-linguistic replication** — Translate the primer and test in non-English contexts
-- **New task designs** — Design reasoning tasks that probe different aspects of the primer effect
+- **Cross-linguistic replication** — Translate the UL artifact and test in non-English contexts
+- **New task designs** — Design reasoning tasks that probe different aspects of UL artifact effects
 
 ### Medium Value
 - **Bug reports** on the analysis scripts or scoring infrastructure
@@ -106,10 +106,10 @@ Then score, blind, reveal, and analyze as above.
 
 ## Contribution Guidelines
 
-- **Do not modify the primer texts** — the 17 variants are QC-verified and token-matched within ±5% of 490 tokens
+- **Do not modify the test artifact texts** — the 17 variants are QC-verified and token-matched within ±5% of 490 tokens
 - **Do not modify the analysis scripts** unless fixing a bug — the statistical plan is pre-committed
 - **Use the blinding tool** — unblinded scoring is not valid for the protocol
-- **Report negative results** — if the primer has no effect in your setup, that is valuable data
+- **Report negative results** — if the artifact has no effect in your setup, that is valuable data
 - **Include your model version** — API model versions change; record the exact model string used
 
 ---

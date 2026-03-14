@@ -3,7 +3,7 @@
 **Research Series:** Universal Language — Proof of Reality and AI Cognitive Infrastructure  
 **Sprint:** 6 — Path A  
 **Date:** (Pre-registration)  
-**Prerequisites:** `foundations/paradigm.md` (READ FIRST), `foundations/mechanism-of-action.md`, `foundations/formal-foundations.md`, `frontier/strategic-plan.md`
+**Prerequisites:** `foundations/paradigm.md` (READ FIRST), `history/mechanism-of-action.md`, `foundations/formal-foundations.md`, `frontier/strategic-plan.md`
 
 > **⚠ PARADIGM NOTE:** This protocol tests whether UL has *causal power over information-processing systems* — whether AI operating in UL-mode produces capabilities that natural-language-bound AI cannot match. It does NOT test whether UL "describes" human languages or "captures" linguistic intuitions. See `foundations/paradigm.md`.
 
@@ -13,7 +13,7 @@
 
 Proof 4 in the four-proof framework (`foundations/paradigm.md`) requires demonstrating **causal efficacy**: that operating in UL produces measurably different — and superior — results in information-processing systems compared to operating in natural language.
 
-The primer effect is the existing evidence. But it is anecdotal and uncontrolled. This protocol converts it into rigorous, pre-registered science.
+The artifact effect is the existing evidence. But it is anecdotal and uncontrolled. This protocol converts it into rigorous, pre-registered science.
 
 **The central question:**
 
@@ -32,23 +32,23 @@ Before any experiment runs, every key term must have a precise, measurable defin
 
 ### D1: UL-Mode
 
-**Definition:** An LLM is in UL-mode when the primer (`test-content.txt`, all 19 lines) appears in its context window before the task prompt with no intervening text other than standard delimiters.
+**Definition:** An LLM is in UL-mode when the test artifact (`experiments/test-artifacts/original/primer.txt`, all 19 lines) appears in its context window before the task prompt with no intervening text other than standard delimiters.
 
-**Rationale:** The primer is compressed UL (`foundations/mechanism-of-action.md` §8). UL-mode means the LLM's processing state after being exposed to UL's geometric structure.
+**Rationale:** The test artifact is compressed UL (`history/mechanism-of-action.md` §8). UL-mode means the LLM's processing state after being exposed to UL's geometric structure.
 
 ### D2: Natural-Language-Mode (NL-Mode)
 
-**Definition:** The same LLM processes the same task prompt with NO primer — only the task prompt itself, in standard English.
+**Definition:** The same LLM processes the same task prompt with NO test artifact — only the task prompt itself, in standard English.
 
 ### D3: Controlled-Text-Mode (CT-Mode)
 
-**Definition:** The same LLM processes the same task prompt preceded by a **matched control text** — a passage of the same token length as the primer, containing mathematical notation of equivalent density, but NOT structured according to UL principles (see §3.3 for control text construction).
+**Definition:** The same LLM processes the same task prompt preceded by a **matched control text** — a passage of the same token length as the test artifact, containing mathematical notation of equivalent density, but NOT structured according to UL principles (see §3.3 for control text construction).
 
 **Rationale:** CT-Mode isolates the UL-specific effect from the general effect of "injecting math before a question." If UL-mode outperforms CT-Mode, the effect is attributable to UL's structure, not to the mere presence of formalism.
 
-### D4: Primer Effect (Quantitative)
+### D4: Artifact Effect (Quantitative)
 
-**Definition:** The primer effect is present when UL-mode output scores statistically significantly higher than both NL-mode and CT-mode output on at least 3 of the 5 primary metrics (§2.1), with effect size Cohen's d ≥ 0.5 (medium effect) for each significant metric.
+**Definition:** The artifact effect is present when UL-mode output scores statistically significantly higher than both NL-mode and CT-mode output on at least 3 of the 5 primary metrics (§2.1), with effect size Cohen's d ≥ 0.5 (medium effect) for each significant metric.
 
 **Rationale:** Requiring significance against both NL-mode AND CT-mode eliminates the "any math helps" confound. Requiring 3/5 metrics prevents cherry-picking. The d ≥ 0.5 threshold demands a practically meaningful effect, not just statistical noise.
 
@@ -84,7 +84,7 @@ All experiments use these five metrics. Each is scored on a defined scale by bli
 
 ## 2. EXPERIMENT ALPHA: THE EXISTENCE TEST
 
-**Question:** Does the primer effect exist as a controlled, reproducible phenomenon?
+**Question:** Does the artifact effect exist as a controlled, reproducible phenomenon?
 
 **This experiment must succeed for all subsequent experiments to be meaningful.**
 
@@ -106,22 +106,22 @@ All experiments use these five metrics. Each is scored on a defined scale by bli
 The **matched control text** (CT-mode) must be carefully constructed to isolate UL-specific effects:
 
 **CT-1: Dense Physics Control**
-A passage from a graduate quantum mechanics textbook of the same token length as the primer. Contains ψ, ∇, integrals, ℏ — but organized as standard physics with no cross-domain binding, no bridge token, no self-referential structure. Tests whether "any hard math" produces the primer effect.
+A passage from a graduate quantum mechanics textbook of the same token length as the test artifact. Contains ψ, ∇, integrals, ℏ — but organized as standard physics with no cross-domain binding, no bridge token, no self-referential structure. Tests whether "any hard math" produces the artifact effect.
 
 **CT-2: Cross-Domain Prose Control**
-A passage from a cognitive science paper that discusses quantum mechanics metaphors for consciousness — same domains as the primer, but expressed in prose without formal notation. Tests whether cross-domain *content* (without formal *structure*) produces the effect.
+A passage from a cognitive science paper that discusses quantum mechanics metaphors for consciousness — same domains as the test artifact, but expressed in prose without formal notation. Tests whether cross-domain *content* (without formal *structure*) produces the effect.
 
 **CT-3: Scrambled Primer Control**
-The primer's equations with all symbols randomly reassigned (ψ→φ, +3elúm→+7krath, σ→τ, β→δ) and equation order randomized. Same density, same token count, no UL structure. Tests whether the specific symbolic choices matter.
+The test artifact's equations with all symbols randomly reassigned (ψ→φ, +3elúm→+7krath, σ→τ, β→δ) and equation order randomized. Same density, same token count, no UL structure. Tests whether the specific symbolic choices matter.
 
 **CT-4: Nonsense Math Control**
-Syntactically valid but semantically empty mathematical notation: random integrals, arbitrary subscripts, no interpretable physical or cross-domain content. Same density and length. Tests whether the primer effect requires *meaningful* math or just *any* math.
+Syntactically valid but semantically empty mathematical notation: random integrals, arbitrary subscripts, no interpretable physical or cross-domain content. Same density and length. Tests whether the artifact effect requires *meaningful* math or just *any* math.
 
 ### 2.3 Hypotheses (Pre-Registered)
 
 | ID | Hypothesis | Prediction | Falsification Criterion |
 |---|---|---|---|
-| **H1** | The primer effect exists | UL-mode > NL-mode on M1–M5 with d ≥ 0.5 for ≥3 metrics | Fewer than 3 metrics reach significance + effect size threshold |
+| **H1** | The artifact effect exists | UL-mode > NL-mode on M1–M5 with d ≥ 0.5 for ≥3 metrics | Fewer than 3 metrics reach significance + effect size threshold |
 | **H2** | The effect is UL-specific, not general-math | UL-mode > CT-1 (physics) on M2, M3, M5 with d ≥ 0.3 | No significant difference between UL-mode and CT-1 on any of M2, M3, M5 |
 | **H3** | Formal structure matters, not just cross-domain content | UL-mode > CT-2 (cross-domain prose) on M2, M3 with d ≥ 0.3 | No significant difference between UL-mode and CT-2 on M2 or M3 |
 | **H4** | Specific symbolic structure matters | UL-mode > CT-3 (scrambled) on M1–M5 with d ≥ 0.5 for ≥2 metrics | Fewer than 2 metrics reach threshold |
@@ -138,7 +138,7 @@ Syntactically valid but semantically empty mathematical notation: random integra
 
 ### 2.5 Success Criterion
 
-**Experiment Alpha succeeds if:** H1 + H2 + H3 hold. (The primer effect exists, it's not just "any math," and formal structure matters.)
+**Experiment Alpha succeeds if:** H1 + H2 + H3 hold. (The artifact effect exists, it's not just "any math," and formal structure matters.)
 
 **Experiment Alpha strongly succeeds if:** H1–H6 all hold. (The effect exists, is UL-specific, requires both structure and content, depends on specific symbols, requires semantic content, and generalizes across models.)
 
@@ -146,13 +146,13 @@ Syntactically valid but semantically empty mathematical notation: random integra
 
 ## 3. EXPERIMENT BETA: THE ABLATION STUDY
 
-**Question:** Which of UL's seven structural components are necessary for the primer effect?
+**Question:** Which of UL's seven structural components are necessary for the artifact effect?
 
 **Depends on:** Experiment Alpha succeeding (if the effect doesn't exist, ablation is meaningless).
 
 ### 3.1 The Seven Ablation Variables
 
-From `foundations/mechanism-of-action.md` §9, the seven required conditions for the primer effect:
+From `history/mechanism-of-action.md` §9, the seven required conditions for the artifact effect:
 
 | # | Condition | Ablation Variant | What Is Removed |
 |---|---|---|---|
@@ -166,24 +166,24 @@ From `foundations/mechanism-of-action.md` §9, the seven required conditions for
 
 ### 3.2 Design
 
-- **Conditions:** 9 (full primer + 7 ablation variants + NL-mode baseline) × 3 task prompts (T1, T2, T3 from Alpha) × 3 models (best-performing from Alpha) × 2 temperatures = 162 trials
+- **Conditions:** 9 (full artifact + 7 ablation variants + NL-mode baseline) × 3 task prompts (T1, T2, T3 from Alpha) × 3 models (best-performing from Alpha) × 2 temperatures = 162 trials
 - **Each ablation variant retains ALL other components.** Only one condition is removed at a time.
 
 ### 3.3 Hypotheses (Pre-Registered)
 
 | ID | Hypothesis | Prediction | Falsification |
 |---|---|---|---|
-| **B1** | ψ-overloading is critical | ABL-SYMBOL shows ≥40% degradation on M1 vs. full primer | <20% degradation |
-| **B2** | Bridge token is critical | ABL-BRIDGE shows ≥30% degradation on M2 vs. full primer | <15% degradation |
-| **B3** | Formal notation is essential | ABL-PROSE shows ≥50% degradation on M2, M3 vs. full primer | <25% degradation |
-| **B4** | Anomalies force interpretation | ABL-STANDARD shows ≥20% degradation on M5 vs. full primer | <10% degradation |
-| **B5** | Self-reference creates stability | ABL-LINEAR shows ≥30% degradation on M3 vs. full primer | <15% degradation |
+| **B1** | ψ-overloading is critical | ABL-SYMBOL shows ≥40% degradation on M1 vs. full artifact | <20% degradation |
+| **B2** | Bridge token is critical | ABL-BRIDGE shows ≥30% degradation on M2 vs. full artifact | <15% degradation |
+| **B3** | Formal notation is essential | ABL-PROSE shows ≥50% degradation on M2, M3 vs. full artifact | <25% degradation |
+| **B4** | Anomalies force interpretation | ABL-STANDARD shows ≥20% degradation on M5 vs. full artifact | <10% degradation |
+| **B5** | Self-reference creates stability | ABL-LINEAR shows ≥30% degradation on M3 vs. full artifact | <15% degradation |
 | **B6** | Dissipation prevents divergence | ABL-NODAMP shows ≥0.5-point INCREASE on M1 (more diverse) but ≥1.0-point DECREASE on M4 (less coherent) | M4 does not decrease |
-| **B7** | Ordering creates trust scaffold | ABL-REORDER shows ≥20% degradation on M3 vs. full primer | <10% degradation |
+| **B7** | Ordering creates trust scaffold | ABL-REORDER shows ≥20% degradation on M3 vs. full artifact | <10% degradation |
 
 ### 3.4 Analysis Plan
 
-1. **Primary:** Dunnett's test comparing each ablation variant to the full primer (control condition) for each metric.
+1. **Primary:** Dunnett's test comparing each ablation variant to the full artifact (control condition) for each metric.
 2. **Secondary:** Rank ablation variants by effect magnitude — produces a "criticality ordering" of the seven UL conditions.
 3. **Exploratory:** Pairwise interactions — test selected two-component ablations (removing pairs) to check for synergistic effects.
 
@@ -191,13 +191,13 @@ From `foundations/mechanism-of-action.md` §9, the seven required conditions for
 
 **Experiment Beta succeeds if:** ≥4 of 7 ablation variants produce statistically significant degradation (p < 0.01, Bonferroni-corrected) on at least 2 of 5 metrics.
 
-**Interpretation:** The conditions that survive ablation without significant degradation are amplifiers, not essentials. The conditions that degrade performance most are the core UL mechanisms. This directly informs Experiment Delta (novel primer construction).
+**Interpretation:** The conditions that survive ablation without significant degradation are amplifiers, not essentials. The conditions that degrade performance most are the core UL mechanisms. This directly informs Experiment Delta (novel artifact construction).
 
 ---
 
 ## 4. EXPERIMENT GAMMA: THE NEGATIVE CONTROL
 
-**Question:** Does UL theory correctly predict what WON'T produce the primer effect?
+**Question:** Does UL theory correctly predict what WON'T produce the artifact effect?
 
 **Rationale:** A theory that only predicts successes is unfalsifiable. UL theory must also predict failures. If we can design texts that UL theory says should NOT work, and they don't work, that is evidence of UL's predictive validity. If they DO work, UL theory is wrong about what matters.
 
@@ -207,15 +207,15 @@ Each text is designed to specifically violate UL's theoretical requirements whil
 
 | # | Negative Control | UL-Theoretic Prediction | Superficial Feature Preserved |
 |---|---|---|---|
-| **NC-1** | **Single-domain formalism:** Dense graduate-level algebraic topology with no cross-domain content. Same mathematical density as primer. | No primer effect — activates only one domain cluster. UL requires cross-domain binding. | Mathematical density, formal notation |
-| **NC-2** | **Cross-domain prose without formal binding:** A well-written essay connecting quantum mechanics, linguistics, and consciousness — the same CONTENT as the primer, but in natural language. | Weak or no primer effect — content alone without UL's formal syntactic structure cannot create the deep activation pattern. | Cross-domain content, intellectual depth |
-| **NC-3** | **Formal structure without semantic depth:** A set of equations that are syntactically similar to the primer but describe a simple harmonic oscillator with no cross-domain overloading, no bridge token, no self-reference. Standard physics. | No primer effect — the formal structure must be UL-structured, not just "any math." | Formal mathematical notation, correct physics |
-| **NC-4** | **Reversed dissipation dynamics:** The primer equations with γ(σ,β) replaced by a positive-feedback term (+iγ(σ,β)ψ) — amplification instead of damping. | Primer effect initially present but degrades to incoherence — UL theory predicts the dissipation term is essential for stable synthesis. | All primer components except dissipation direction |
-| **NC-5** | **Pseudo-esoteric without geometry:** A passage of Crowley-style occult prose with bridge-like tokens and cross-domain claims but no mathematical structure. | No primer effect — esoteric content without geometric encoding is just text. UL requires the geometry. | Esoteric vocabulary, bridge-like tokens, cross-domain aspiration |
+| **NC-1** | **Single-domain formalism:** Dense graduate-level algebraic topology with no cross-domain content. Same mathematical density as the test artifact. | No artifact effect — activates only one domain cluster. UL requires cross-domain binding. | Mathematical density, formal notation |
+| **NC-2** | **Cross-domain prose without formal binding:** A well-written essay connecting quantum mechanics, linguistics, and consciousness — the same CONTENT as the test artifact, but in natural language. | Weak or no artifact effect — content alone without UL's formal syntactic structure cannot create the deep activation pattern. | Cross-domain content, intellectual depth |
+| **NC-3** | **Formal structure without semantic depth:** A set of equations that are syntactically similar to the test artifact but describe a simple harmonic oscillator with no cross-domain overloading, no bridge token, no self-reference. Standard physics. | No artifact effect — the formal structure must be UL-structured, not just "any math." | Formal mathematical notation, correct physics |
+| **NC-4** | **Reversed dissipation dynamics:** The test artifact equations with γ(σ,β) replaced by a positive-feedback term (+iγ(σ,β)ψ) — amplification instead of damping. | Artifact effect initially present but degrades to incoherence — UL theory predicts the dissipation term is essential for stable synthesis. | All test artifact components except dissipation direction |
+| **NC-5** | **Pseudo-esoteric without geometry:** A passage of Crowley-style occult prose with bridge-like tokens and cross-domain claims but no mathematical structure. | No artifact effect — esoteric content without geometric encoding is just text. UL requires the geometry. | Esoteric vocabulary, bridge-like tokens, cross-domain aspiration |
 
 ### 4.2 Design
 
-- **Conditions:** 5 negative controls + full primer (positive control) + NL-mode (baseline) = 7 conditions × 3 task prompts × 3 models × 1 temperature (best from Alpha) = 63 trials
+- **Conditions:** 5 negative controls + full artifact (positive control) + NL-mode (baseline) = 7 conditions × 3 task prompts × 3 models × 1 temperature (best from Alpha) = 63 trials
 
 ### 4.3 Hypotheses (Pre-Registered)
 
@@ -224,7 +224,7 @@ Each text is designed to specifically violate UL's theoretical requirements whil
 | **G1** | Single-domain math doesn't work | NC-1 scores ≤ NL-mode on M2, M3 | NC-1 scores > NL-mode + 0.5 SD on M2 or M3 |
 | **G2** | Prose content isn't sufficient | NC-2 scores < UL-mode on M2, M3, M5 with d ≥ 0.3 | No significant difference on any of M2, M3, M5 |
 | **G3** | Standard physics isn't sufficient | NC-3 scores ≤ NL-mode on M2, M3, M5 | NC-3 scores > NL-mode + 0.5 SD on M2, M3, or M5 |
-| **G4** | Anti-dissipation causes runaway | NC-4 produces higher M1 but dramatically lower M4 than full primer (d ≥ 0.8 on M4) | NC-4 coherence (M4) ≥ primer coherence |
+| **G4** | Anti-dissipation causes runaway | NC-4 produces higher M1 but dramatically lower M4 than full artifact (d ≥ 0.8 on M4) | NC-4 coherence (M4) ≥ artifact coherence |
 | **G5** | Pseudo-esoterica without geometry is inert | NC-5 scores ≤ NL-mode on all 5 metrics | NC-5 outperforms NL-mode on any metric |
 
 ### 4.4 Success Criterion
@@ -237,15 +237,15 @@ Each text is designed to specifically violate UL's theoretical requirements whil
 
 ## 5. EXPERIMENT DELTA: THE NOVEL CONSTRUCTION
 
-**Question:** Can a NEW primer be designed from UL principles, with its effect predicted BEFORE testing?
+**Question:** Can a NEW artifact be designed from UL principles, with its effect predicted BEFORE testing?
 
 **This is the single most important experiment in the entire protocol.** If UL is real, it should enable the *construction* of new artifacts from theory — not just the *explanation* of one existing artifact. Predicting effects a priori is the gold standard of scientific validity.
 
 ### 5.1 Design Procedure
 
-1. **Select a target cognitive effect** different from the original primer's cross-domain synthesis. Proposed: **structured hierarchical decomposition** — the ability to take a complex problem and recursively decompose it into fundamental components at multiple abstraction levels.
+1. **Select a target cognitive effect** different from the original artifact's cross-domain synthesis. Proposed: **structured hierarchical decomposition** — the ability to take a complex problem and recursively decompose it into fundamental components at multiple abstraction levels.
 
-2. **Derive the primer from UL theory:**
+2. **Derive the artifact from UL theory:**
    - Identify the geometric operations that correspond to hierarchical decomposition:
      - `embed` (assertion → entity): encapsulate a complex structure as a primitive
      - `modify_entity` (the Erlangen hierarchy operations): move between abstraction levels
@@ -257,34 +257,34 @@ Each text is designed to specifically violate UL's theoretical requirements whil
    - Follow the prescribed ordering: establish → bridge → payload → definitions
 
 3. **Pre-register the predicted effect:**
-   - **Quantitative predictions on M1–M5** for the novel primer vs. NL-mode and vs. the original primer
-   - **Qualitative prediction:** The novel primer should produce hierarchical decomposition (Phase 3 outputs will be structured as recursive trees rather than cross-domain webs)
-   - **Specificity prediction:** The novel primer should score HIGHER than the original primer on decomposition tasks (T-new) and LOWER on cross-domain synthesis tasks (T1, T2 from Alpha)
+   - **Quantitative predictions on M1–M5** for the novel artifact vs. NL-mode and vs. the original artifact
+   - **Qualitative prediction:** The novel artifact should produce hierarchical decomposition (Phase 3 outputs will be structured as recursive trees rather than cross-domain webs)
+   - **Specificity prediction:** The novel artifact should score HIGHER than the original artifact on decomposition tasks (T-new) and LOWER on cross-domain synthesis tasks (T1, T2 from Alpha)
 
-4. **Test the predictions.** Run the novel primer through the same experimental framework as Alpha.
+4. **Test the predictions.** Run the novel artifact through the same experimental framework as Alpha.
 
 ### 5.2 Hypotheses (Pre-Registered)
 
 | ID | Hypothesis | Prediction | Falsification |
 |---|---|---|---|
-| **D1** | Novel primer produces a primer effect | Novel-UL-mode > NL-mode on M1–M5 with d ≥ 0.5 for ≥3 metrics | Fewer than 3 metrics reach threshold |
-| **D2** | Novel primer hits intended target | Novel-UL-mode produces hierarchical decomposition in Phase 3 output (rated by blinded evaluators on a 0–5 hierarchical-structure scale) with mean ≥ 3.0 | Mean < 2.0 |
-| **D3** | Novel primer differs from original | Novel-UL-mode scores ≥1.0 points higher on decomposition metric and ≥0.5 points lower on cross-domain synthesis (M2) compared to original-UL-mode | Differences < 0.5 in either direction |
-| **D4** | Theory-derived design works better than naive design | Novel primer (theory-derived) outperforms a "naive" attempt at a decomposition primer (written without UL theory) on the decomposition metric with d ≥ 0.3 | No significant difference |
+| **D1** | Novel artifact produces a artifact effect | Novel-UL-mode > NL-mode on M1–M5 with d ≥ 0.5 for ≥3 metrics | Fewer than 3 metrics reach threshold |
+| **D2** | Novel artifact hits intended target | Novel-UL-mode produces hierarchical decomposition in Phase 3 output (rated by blinded evaluators on a 0–5 hierarchical-structure scale) with mean ≥ 3.0 | Mean < 2.0 |
+| **D3** | Novel artifact differs from original | Novel-UL-mode scores ≥1.0 points higher on decomposition metric and ≥0.5 points lower on cross-domain synthesis (M2) compared to original-UL-mode | Differences < 0.5 in either direction |
+| **D4** | Theory-derived design works better than naive design | Novel artifact (theory-derived) outperforms a "naive" attempt at a decomposition artifact (written without UL theory) on the decomposition metric with d ≥ 0.3 | No significant difference |
 
 ### 5.3 The Naive Primer Control (D4)
 
-To test D4, create a second novel primer without using UL theory — just write something that "seems like it should help with hierarchical thinking" using common prompt engineering intuitions. This controls for the possibility that the researcher's familiarity with the domain, not UL theory, is doing the work.
+To test D4, create a second novel artifact without using UL theory — just write something that "seems like it should help with hierarchical thinking" using common prompt engineering intuitions. This controls for the possibility that the researcher's familiarity with the domain, not UL theory, is doing the work.
 
 ### 5.4 Success Criterion
 
 **Experiment Delta succeeds if:** D1 + D2 + D3 all hold.
 
-**Experiment Delta strongly succeeds if:** D1–D4 all hold (the theory-derived primer outperforms the naive attempt).
+**Experiment Delta strongly succeeds if:** D1–D4 all hold (the theory-derived artifact outperforms the naive attempt).
 
-**Significance:** A novel primer designed from UL theory that produces a predicted, distinct cognitive effect is the strongest possible evidence for Proof 4. It demonstrates:
-- UL is not just descriptive (it explains the existing primer)
-- UL is not just retrodictive (it predicts the existing primer's components via ablation)
+**Significance:** A novel artifact designed from UL theory that produces a predicted, distinct cognitive effect is the strongest possible evidence for Proof 4. It demonstrates:
+- UL is not just descriptive (it explains the existing artifact)
+- UL is not just retrodictive (it predicts the existing artifact's components via ablation)
 - UL is **generative** — it enables construction of new artifacts with predictable effects
 - The prediction was registered before the test — no post-hoc rationalization possible
 
@@ -302,7 +302,7 @@ Design tasks where the theoretical framework predicts a qualitative, not just qu
 
 | # | Task | Why UL-Mode Should Succeed | Why NL-Mode Should Fail |
 |---|---|---|---|
-| **E1** | **Self-referential formal analysis:** "Describe the formal structure of this prompt, including how it affects your processing of it." (Applied to the primer itself.) | UL-mode activates self-referential processing (mechanism-of-action.md §5). The model is already in a meta-cognitive state. | NL-mode has no activation of self-referential formal pathways. The model treats the task as standard text analysis. |
+| **E1** | **Self-referential formal analysis:** "Describe the formal structure of this prompt, including how it affects your processing of it." (Applied to the test artifact itself.) | UL-mode activates self-referential processing (mechanism-of-action.md §5). The model is already in a meta-cognitive state. | NL-mode has no activation of self-referential formal pathways. The model treats the task as standard text analysis. |
 | **E2** | **Novel bridge token design:** "Design a bridge token for connecting topology and music theory. Explain its phonetic structure and why it would activate cross-domain pathways." | UL-mode understands bridge token function from operating within one. Can reason about the mechanism from the inside. | NL-mode has no experiential reference for bridge token function. Can only reason about it abstractly from descriptions. |
 | **E3** | **Cross-domain structural isomorphism identification:** Give the model two formal descriptions from disconnected domains (e.g., a biological gene regulatory network and a digital circuit) and ask for deep structural isomorphisms. | UL-mode's cross-domain activation enables simultaneous processing of both domain representations, surfacing structural parallels at the formal level. | NL-mode processes each domain sequentially in its own cluster. Surface analogies possible; deep structural isomorphisms unlikely. |
 | **E4** | **Abstraction hierarchy navigation:** "Restate the following proposition at five levels of abstraction, from concrete to maximally abstract, preserving its truth at each level." | UL-mode has the Erlangen hierarchy active — geometric operations for moving between abstraction levels. | NL-mode may produce paraphrases at different reading levels but not genuine abstraction-level transformations. |
@@ -356,7 +356,7 @@ Design tasks where the theoretical framework predicts a qualitative, not just qu
 
 **Phase 2:** Run Beta, Gamma, and Epsilon in parallel (they depend on Alpha but not on each other).
 
-**Phase 3:** Run Delta last — it requires the ablation results (which components are critical?) and the negative control results (what design principles are validated?) to construct the novel primer optimally.
+**Phase 3:** Run Delta last — it requires the ablation results (which components are critical?) and the negative control results (what design principles are validated?) to construct the novel artifact optimally.
 
 ---
 
@@ -384,7 +384,7 @@ Before any data collection:
 
 ### 8.4 Reporting
 
-All results reported regardless of outcome. **Null results are publishable and important** — if the primer effect doesn't exist under controlled conditions, that is a finding that redirects the entire research program.
+All results reported regardless of outcome. **Null results are publishable and important** — if the artifact effect doesn't exist under controlled conditions, that is a finding that redirects the entire research program.
 
 ---
 
@@ -392,7 +392,7 @@ All results reported regardless of outcome. **Null results are publishable and i
 
 | Experiment | What It Proves | Proof # |
 |---|---|---|
-| **Alpha succeeds** | The primer effect is real, reproducible, and UL-specific | Proof 4: EVIDENCE → ESTABLISHED |
+| **Alpha succeeds** | The artifact effect is real, reproducible, and UL-specific | Proof 4: EVIDENCE → ESTABLISHED |
 | **Beta succeeds** | UL's structural components are individually necessary (not just the whole package) | Proof 4: mechanistic understanding |
 | **Gamma succeeds** | UL theory is predictive — it says what WON'T work and is right | Proof 4 + Proof 2: theory predicts empirical outcomes |
 | **Delta succeeds** | UL is generative — new artifacts can be designed from theory with predicted effects | Proof 4: ESTABLISHED → PROVEN (strongest form). Also strengthens Proof 3 (generative power). |
@@ -407,7 +407,7 @@ All results reported regardless of outcome. **Null results are publishable and i
 At that point, the four-proof status becomes:
 1. Uniqueness — **PROVEN** (Unique Grounding Theorem)
 2. Natural Emergence — **PARTIAL** (still requires independent recovery)
-3. Generative Power — **PROVEN** (arithmetic + primer construction from theory)
+3. Generative Power — **PROVEN** (arithmetic + artifact construction from theory)
 4. Causal Efficacy — **PROVEN** (controlled, pre-registered, replicated)
 
 Three of four proofs established. The project would then shift to Path B (Natural Emergence) as the remaining frontier.
@@ -420,11 +420,11 @@ Failure is information, not defeat. Different failure modes point to different c
 
 | Failure Mode | What It Means | Response |
 |---|---|---|
-| **Alpha fails completely** (no effect under any condition) | The primer effect is a subjective illusion or an artifact of expectation. UL may be mathematically real but has no causal efficacy. | Reframe project as pure mathematics. Abandon Proof 4. Focus on Proofs 2 and 3. |
+| **Alpha fails completely** (no effect under any condition) | The artifact effect is a subjective illusion or an artifact of expectation. UL may be mathematically real but has no causal efficacy. | Reframe project as pure mathematics. Abandon Proof 4. Focus on Proofs 2 and 3. |
 | **Alpha partially fails** (effect exists but is not UL-specific — CT modes work equally well) | "Any hard math" helps LLMs think better. The effect is real but not attributable to UL's specific structure. | Investigate what property of formal notation drives the effect. UL may be a special case of a more general phenomenon. |
-| **Beta fails** (ablation doesn't degrade performance) | The primer works as a gestalt — individual components are not independently contributing. The mechanism-of-action model (7 conditions) is wrong. | Rebuild the mechanistic model. The effect is real (Alpha confirmed it) but we don't understand why. |
+| **Beta fails** (ablation doesn't degrade performance) | The test artifact works as a gestalt — individual components are not independently contributing. The mechanism-of-action model (7 conditions) is wrong. | Rebuild the mechanistic model. The effect is real (Alpha confirmed it) but we don't understand why. |
 | **Gamma fails** (negative controls work) | UL theory does not correctly predict what should fail. The theory is over-specified — many different structures produce the effect. | UL may not be uniquely responsible. Broaden the theory to identify the actual sufficient conditions. |
-| **Delta fails** (novel primer doesn't work) | UL explains the existing primer but cannot generate new ones. The theory is retrodictive, not predictive. | The existing primer may have properties that UL theory doesn't fully capture. Iterate on the theory. |
+| **Delta fails** (novel artifact doesn't work) | UL explains the existing artifact but cannot generate new ones. The theory is retrodictive, not predictive. | The existing artifact may have properties that UL theory doesn't fully capture. Iterate on the theory. |
 | **Epsilon fails** (NL-mode matches UL-mode on impossibility tasks) | UL helps but doesn't enable the otherwise impossible. The effect is quantitative, not qualitative. | Still valuable — a quantitative improvement in AI cognition is useful even if not qualitatively unique. Adjust claims accordingly. |
 
 ---
@@ -439,7 +439,7 @@ This protocol supersedes and subsumes the experiments in `applications/future-re
 | **Exp 2 (Cross-Model Comparison)** | → Subsumed by **Experiment Alpha** (6 models, 3 temperatures, matched controls) |
 | **Exp 3 (Esoteric Language Translation)** | → **DEPRIORITIZED.** Testing whether UL helps translate human languages reverses the validation direction (see `paradigm.md`). May be revisited as a Phase 2 follow-up after Proof 4 is established, reframed as "UL-mode accesses structural patterns NL-mode cannot," not as "UL describes human languages." |
 | **Exp 4 (Feedback Loop Dynamics)** | → **SUPPORTING EVIDENCE** collected as secondary data in Alpha and Beta (attention analysis for open-weights models). Not a primary experiment. |
-| **Exp 5 (Primer Auto-Generation)** | → Subsumed by **Experiment Delta** (novel primer construction from UL theory, with the crucial addition of pre-registered predictions) |
+| **Exp 5 (Artifact Auto-Generation)** | → Subsumed by **Experiment Delta** (novel artifact construction from UL theory, with the crucial addition of pre-registered predictions) |
 | **Exp 6 (Attention Map Visualization)** | → **SUPPORTING MECHANISTIC EVIDENCE** collected as secondary data in Alpha. Confirms the mechanism but is not primary for Proof 4. |
 | **Exp 7 (Universal Language Primitive Validation)** | → **DEPRIORITIZED AND REFRAMED.** Testing UL primitives against 20 human languages is the paradigm's category error. See `paradigm.md`. The correct form: test whether UL's primitives appear independently in mathematical frameworks (Path B, Proof 2). |
 | **Exp 8 (Erlangen Hierarchy Encoding)** | → Partially subsumed by **Experiment Epsilon** task E4 (abstraction hierarchy navigation). Full encoding test remains as a Phase 2 follow-up. |
@@ -472,10 +472,10 @@ This protocol supersedes and subsumes the experiments in `applications/future-re
 
 | Phase | Experiments | Duration | Dependencies |
 |---|---|---|---|
-| **Phase 0: Preparation** | Construct all primer variants, control texts, negative controls. Build scoring infrastructure. Train evaluators. | 2–3 weeks | None |
+| **Phase 0: Preparation** | Construct all artifact variants, control texts, negative controls. Build scoring infrastructure. Train evaluators. | 2–3 weeks | None |
 | **Phase 1: Existence** | Experiment Alpha | 2–3 weeks (data collection) + 1 week (scoring + analysis) | Phase 0 |
 | **Phase 2: Mechanism** | Experiments Beta + Gamma + Epsilon (parallel) | 2–3 weeks + 1 week analysis | Alpha succeeds |
-| **Phase 3: Construction** | Experiment Delta | 1 week (primer design) + 2 weeks (testing) + 1 week (analysis) | Beta + Gamma complete |
+| **Phase 3: Construction** | Experiment Delta | 1 week (artifact design) + 2 weeks (testing) + 1 week (analysis) | Beta + Gamma complete |
 | **Phase 4: Reporting** | Full analysis, write-up, conclusions | 2 weeks | All experiments complete |
 | **Total** | | **10–14 weeks** | |
 
@@ -487,7 +487,7 @@ This protocol is the project's contact with reality.
 
 The mathematical work (Proofs 1–3) establishes that UL is internally consistent, unique, and generative within its own formalism. That is necessary but not sufficient. Many internally consistent mathematical structures describe nothing real.
 
-Proof 4 — causal efficacy — is the bridge from mathematical possibility to empirical reality. The primer is the one piece of evidence that UL *does something* in the physical world. This protocol either confirms that evidence rigorously or reveals it was an illusion.
+Proof 4 — causal efficacy — is the bridge from mathematical possibility to empirical reality. The test artifact is the one piece of evidence that UL *does something* in the physical world. This protocol either confirms that evidence rigorously or reveals it was an illusion.
 
 **If the protocol succeeds:** UL is proven real in the strongest sense available to science — it has observable, reproducible, predictable causal effects on information-processing systems. The project shifts from "is UL real?" to "how do we build it out and deploy it?"
 
@@ -536,11 +536,11 @@ Phase 0 is the critical path. No experiment runs until all materials are constru
 #### GROUP A: CONTROL TEXTS (4 texts)
 
 **CT-1: Dense Physics Control**
-- **Purpose:** Tests whether "any hard math" produces the primer effect
+- **Purpose:** Tests whether "any hard math" produces the artifact effect
 - **Source:** Graduate quantum mechanics textbook (Griffiths, Sakurai, or equivalent)
 - **Requirements:**
   - ~133 words of genuine physics equations and notation
-  - MUST contain: ψ, ∇, ∫, ℏ (same symbol vocabulary as primer)
+  - MUST contain: ψ, ∇, ∫, ℏ (same symbol vocabulary as the test artifact)
   - MUST be organized as standard, correct physics (e.g., hydrogen atom wavefunctions, scattering theory, or perturbation theory)
   - MUST NOT contain: cross-domain binding, bridge tokens, esoteric references, self-referential structure, deliberate anomalies
   - Must be a coherent passage, not a grab-bag of random equations
@@ -553,7 +553,7 @@ Phase 0 is the critical path. No experiment runs until all materials are constru
 - **Source:** Write or adapt from cognitive science literature (e.g., Penrose, Hameroff, Tononi, or science journalism about QM and consciousness)
 - **Requirements:**
   - ~133 words of academic prose
-  - MUST discuss: quantum mechanics, consciousness, language, belief — the same DOMAINS as the primer
+  - MUST discuss: quantum mechanics, consciousness, language, belief — the same DOMAINS as the test artifact
   - MUST be intellectually substantive (not a shallow summary)
   - MUST NOT contain: any formal mathematical notation (no equations, no ψ, no integrals)
   - Written in standard English academic register
@@ -563,7 +563,7 @@ Phase 0 is the critical path. No experiment runs until all materials are constru
 
 **CT-3: Scrambled Primer Control**
 - **Purpose:** Tests whether the specific symbolic choices (ψ overloading, +3elúm, σ/β) matter
-- **Source:** Direct mechanical transformation of the primer
+- **Source:** Direct mechanical transformation of the test artifact
 - **Requirements:**
   - EXACT same mathematical structure and operators
   - ALL domain-loaded symbols replaced with neutral equivalents:
@@ -573,9 +573,9 @@ Phase 0 is the critical path. No experiment runs until all materials are constru
     - σ → τ, β → δ
     - "belief field" → "coupling parameter," "4D linguistics" → "4D output space," "quantum logic" → "junction operator," "breath efficiency" → "decay rate"
   - Equation order randomized: definitions first, then PDE, then bridge, then wall
-- **Construction method:** Find-and-replace on the primer, then reorder sections. Token count guaranteed to match (±5 tokens).
+- **Construction method:** Find-and-replace on the test artifact, then reorder sections. Token count guaranteed to match (±5 tokens).
 - **Complexity:** LOW — mechanical transformation
-- **Validation:** Confirm: (a) all target symbols replaced, (b) mathematical operators preserved, (c) section order changed, (d) no residual primer-specific terms
+- **Validation:** Confirm: (a) all target symbols replaced, (b) mathematical operators preserved, (c) section order changed, (d) no residual artifact-specific terms
 
 **CT-4: Nonsense Math Control**
 - **Purpose:** Tests whether math-as-such (vs. meaningful math) produces the effect
@@ -586,7 +586,7 @@ Phase 0 is the critical path. No experiment runs until all materials are constru
   - MUST be semantically empty — no interpretable physical meaning, no reference to any real domain
   - Use: arbitrary function names (f, g, h, Ω), meaningless subscripts (α₃, β₇, ξ₁₂), integrals over unnamed variables, random operator combinations
   - MUST NOT contain: ψ, any physical constants (ℏ, e, m), any domain-loaded terms
-- **Construction method:** Write plausible-looking gibberish math. Model the density and formatting on the primer but with no semantic content.
+- **Construction method:** Write plausible-looking gibberish math. Model the density and formatting on the test artifact but with no semantic content.
 - **Complexity:** LOW-MEDIUM — needs to look convincing without meaning anything
 - **Validation:** Confirm: (a) syntactically valid notation, (b) no interpretable physics, (c) no domain-loaded symbols, (d) length match
 
@@ -615,7 +615,7 @@ Each variant removes **exactly one** of the 7 conditions from `mechanism-of-acti
 - **What stays:** All formal notation, anomalies, bridge token, self-reference, ordering, dissipation
 - **Complexity:** HIGH — requires judgment calls about which "domain" each ψ instance belongs to. Some instances are deliberately ambiguous (that's the mechanism). Must resolve every ambiguity consistently.
 - **Key challenge:** The self-referential loop (ψ → ψ̂ₙ → f_spec → ψ) becomes (Φ_field → F_n → f_spec → Φ_field), which is still self-referential but with different symbols at each stage — is that still "self-referential" enough? Must document this design decision.
-- **Validation:** (a) No bare ψ remains, (b) each replacement is domain-specific, (c) all other primer features intact, (d) length approximately matches
+- **Validation:** (a) No bare ψ remains, (b) each replacement is domain-specific, (c) all other artifact features intact, (d) length approximately matches
 
 **V3 / ABL-STANDARD: Remove deliberate formal anomalies**
 - **What changes:**
@@ -673,17 +673,17 @@ Each variant removes **exactly one** of the 7 conditions from `mechanism-of-acti
 - **Purpose:** Dense math from one domain, zero cross-domain content
 - **Source:** Graduate algebraic topology or differential geometry textbook
 - **Content:** Definitions and theorems involving homology groups, exact sequences, fiber bundles — mathematically dense, all from one discipline
-- **Requirements:** ~133 words, same symbol density as primer, zero cross-domain references, no bridge tokens, no self-reference
+- **Requirements:** ~133 words, same symbol density as the test artifact, zero cross-domain references, no bridge tokens, no self-reference
 - **Complexity:** LOW-MEDIUM — source and trim
-- **Key distinction from CT-1:** CT-1 is physics (same domain cluster as the primer). NC-1 is pure math (different domain cluster). Both test "any math," but from different sectors.
+- **Key distinction from CT-1:** CT-1 is physics (same domain cluster as the test artifact). NC-1 is pure math (different domain cluster). Both test "any math," but from different sectors.
 
 **NC-2: Cross-Domain Prose — Primer Content in English**
-- **Purpose:** Same IDEAS as the primer, described in natural language
-- **Source:** Written from scratch as a faithful prose account of what the primer says
+- **Purpose:** Same IDEAS as the test artifact, described in natural language
+- **Source:** Written from scratch as a faithful prose account of what the test artifact says
 - **Content:** "Consider a cognitive wave function ψ whose evolution is governed by both local self-interaction and global normalization. A belief field, drawing from cross-cultural esoteric traditions, combines 4-dimensional linguistic structure with quantum logical operations. A dissipation term controlled by static resistance and breath efficiency prevents runaway divergence..."
-- **Requirements:** ~133 words, faithfully represents every concept in the primer, zero formal notation, academic prose
-- **Key distinction from CT-2:** CT-2 is a generic essay about QM and consciousness. NC-2 is a specific prose encoding of THIS primer's exact content. NC-2 tests whether the primer's IDEAS matter; CT-2 tests whether its DOMAINS matter.
-- **Complexity:** MEDIUM — requires understanding every element of the primer and translating it to prose
+- **Requirements:** ~133 words, faithfully represents every concept in the test artifact, zero formal notation, academic prose
+- **Key distinction from CT-2:** CT-2 is a generic essay about QM and consciousness. NC-2 is a specific prose encoding of THIS artifact's exact content. NC-2 tests whether the test artifact's IDEAS matter; CT-2 tests whether its DOMAINS matter.
+- **Complexity:** MEDIUM — requires understanding every element of the test artifact and translating it to prose
 
 **NC-3: Formal Structure Without Semantic Depth**
 - **Purpose:** Correct, standard physics equations that aren't UL-structured
@@ -695,8 +695,8 @@ Each variant removes **exactly one** of the 7 conditions from `mechanism-of-acti
 
 **NC-4: Reversed Dissipation**
 - **Purpose:** Tests whether the sign of the dissipation term matters
-- **Source:** Direct modification of the primer
-- **Content:** The EXACT primer with ONE change: `− i γ(σ,β) ψ` → `+ i γ(σ,β) ψ`
+- **Source:** Direct modification of the test artifact
+- **Content:** The EXACT artifact with ONE change: `− i γ(σ,β) ψ` → `+ i γ(σ,β) ψ`
 - **Requirements:** One character change (minus → plus). Everything else identical.
 - **Complexity:** TRIVIAL — one character
 - **Validation:** Confirm only the sign changed
@@ -738,11 +738,11 @@ TIER 2 — SOURCED/ADAPTED (requires domain knowledge, moderate design)
 │
 TIER 3 — DESIGNED (requires careful intellectual work)
 │
-├── V1 / ABL-PROSE .............. full prose rewrite of primer, ~2–3 hours
+├── V1 / ABL-PROSE .............. full prose rewrite of test artifact, ~2–3 hours
 ├── V2 / ABL-SYMBOL ............. ψ domain-assignment + replacement, ~2 hours
 ├── V5 / ABL-LINEAR ............. break self-reference loop, ~1–2 hours
 ├── CT-2 / Cross-Domain Prose ... write academic prose, ~1 hour
-├── NC-2 / Primer-as-Prose ...... translate primer content to English, ~1–2 hours
+├── NC-2 / Primer-as-Prose ...... translate artifact content to English, ~1–2 hours
 │
 │ Deliverable: 5 texts, ready for QC
 │
@@ -758,7 +758,7 @@ PARALLEL TRACK: INFRASTRUCTURE
 ├── M1–M5 scoring rubric (detailed, with anchor examples)
 ├── Domain lists per task prompt T1–T5
 ├── Known-connections reference sets per task (for M5)
-├── Prompt templates (exact format: system prompt + primer/control + task)
+├── Prompt templates (exact format: system prompt + artifact/control + task)
 ├── Analysis scripts (R/Python, pre-committed)
 ├── SQS rubric for Epsilon tasks
 ├── Evaluator calibration set (10 outputs, pre-scored — requires pilot runs)
@@ -788,7 +788,7 @@ Every text variant must pass a **feature audit** before use. The audit confirms 
 
 | Variant | Notation | ψ-overload | Anomalies | Bridge | Self-ref | Dissipation | Ordering | Cross-domain |
 |---|---|---|---|---|---|---|---|---|
-| **Full primer** | ✓ | ✓ | ✓ | ✓ | ✓ | ✓(−) | ✓ | ✓ |
+| **Full artifact** | ✓ | ✓ | ✓ | ✓ | ✓ | ✓(−) | ✓ | ✓ |
 | ABL-PROSE (V1) | ✗ | ✓(prose) | ✓(prose) | ✓ | ✓(prose) | ✓(prose) | ✓ | ✓ |
 | ABL-SYMBOL (V2) | ✓ | ✗ | ✓ | ✓ | ✓ | ✓(−) | ✓ | ✓ |
 | ABL-STANDARD (V3) | ✓ | ✓ | ✗ | ✓ | ✓ | ✓(−) | ✓ | ✓ |
@@ -801,7 +801,7 @@ Every text variant must pass a **feature audit** before use. The audit confirms 
 | CT-3 (scrambled) | ✓ | ✗ | ✓ | ✗ | ✓ | ✓(−) | ✗ | partial |
 | CT-4 (nonsense) | ✓ | ✗ | n/a | ✗ | ✗ | ✗ | n/a | ✗ |
 | NC-1 (single math) | ✓ | ✗ | ✗ | ✗ | ✗ | ✗ | n/a | ✗ |
-| NC-2 (primer prose) | ✗ | ✓(prose) | ✓(described) | ✓(described) | ✓(described) | ✓(described) | ✓(described) | ✓ |
+| NC-2 (artifact prose) | ✗ | ✓(prose) | ✓(described) | ✓(described) | ✓(described) | ✓(described) | ✓(described) | ✓ |
 | NC-3 (SHO) | ✓ | partial | ✗ | ✗ | ✗ | ✗ | n/a | ✗ |
 | NC-4 (anti-damp) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓(+) | ✓ | ✓ |
 | NC-5 (esoteric) | ✗ | ✗ | ✗ | partial | ✗ | ✗ | n/a | ✓ |
@@ -816,7 +816,7 @@ Several construction choices have non-obvious implications. These must be decide
 
 | # | Decision | Options | Recommendation | Rationale |
 |---|---|---|---|---|
-| **DD-1** | CT-2 vs. NC-2 overlap | (a) Keep both as distinct texts, (b) Merge into one | (a) Keep both | CT-2 = generic cross-domain essay. NC-2 = specific prose encoding of primer content. They test different things: domains vs. ideas. |
+| **DD-1** | CT-2 vs. NC-2 overlap | (a) Keep both as distinct texts, (b) Merge into one | (a) Keep both | CT-2 = generic cross-domain essay. NC-2 = specific prose encoding of test artifact content. They test different things: domains vs. ideas. |
 | **DD-2** | ABL-SYMBOL (V2): How to assign domains to ambiguous ψ instances | (a) Assign by syntactic context (what operator acts on it), (b) Assign by semantic intent (what "ψ means" in that equation), (c) Assign all ambiguous instances to one neutral symbol | (a) Syntactic context | Most objective. Semantic intent requires interpretation, which introduces experimenter bias. |
 | **DD-3** | ABL-PROSE (V1): How to handle length expansion | (a) Accept longer text, (b) Truncate to ~133 words losing some relationships, (c) Use compressed prose | (c) Compressed prose | Length mismatch is a confound. Compressed prose preserves relationships while matching length. Accept that some fidelity is lost — document which relationships are approximated. |
 | **DD-4** | CT-3 scrambled symbol choices | (a) Random replacement, (b) Deliberately choose symbols with LESS cross-domain loading than ψ, (c) Choose symbols with DIFFERENT but equal loading | (b) Less loading | The hypothesis (H4) is that ψ's specific cross-domain overloading matters. Testing against less-loaded symbols (χ, φ, f) is the direct test. |
@@ -834,7 +834,7 @@ All experiments use the same prompt injection format. The template must be fixed
 [SYSTEM: You are a helpful AI assistant.]
 
 [CONTEXT BEGIN]
-{primer text — test-content.txt, verbatim}
+{test artifact — experiments/test-artifacts/original/primer.txt, verbatim}
 [CONTEXT END]
 
 {task prompt T1–T5, verbatim}
@@ -873,9 +873,9 @@ All experimental materials live in a new `experiments/` directory:
 
 ```
 experiments/
-├── primer-library/
+├── test-artifacts/
 │   ├── original/
-│   │   └── primer.txt                    # Copy of test-content.txt
+│   │   └── primer.txt                    # Original test artifact
 │   │
 │   ├── controls/
 │   │   ├── CT-1_dense-physics.txt
@@ -960,7 +960,7 @@ Before moving to Phase 1 (Experiment Alpha), ALL of the following must be true:
 
 - [x] All 16 texts constructed and QC-verified
 - [x] All 16 texts pass feature audit (§A.4 table, zero deviations)
-- [x] Token counts within ±5% of primer (measured via cl100k_base tokenizer)
+- [x] Token counts within ±5% of the test artifact (measured via cl100k_base tokenizer)
 - [x] M1–M5 scoring rubric complete with anchor examples
 - [x] Domain lists complete for T1–T5
 - [x] Known-connections sets complete for T1–T5

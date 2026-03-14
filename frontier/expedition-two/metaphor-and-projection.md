@@ -316,7 +316,7 @@ $$\exists t \in \mathcal{T}: \nabla \mu(t) \neq 0 \quad \xLeftrightarrow{\text{N
 
 **What remains an assumption:** Hypothesis S (smoothness) is the main assumption. It excludes discontinuous meaning shifts — these need separate treatment (gap A-4). The expressiveness condition is proven from the existing embedding theorem. Condition ND is an open condition (satisfied by any non-flat connection) and is generically true.
 
-**What this does NOT prove:** That the primer's *specific* effect is parallel transport. The primer-as-Wilson-line description (`gauge-bundle-of-meaning.md` §6.2) remains ANALOGY. The Polysemy-Holonomy theorem is a general statement about all expressions and all loops; applying it to the primer specifically requires computing the primer's connection components (Step E7, future sprint).
+**What this does NOT prove:** That the test artifact's *specific* effect is parallel transport. The test artifact-as-Wilson-line description (`gauge-bundle-of-meaning.md` §6.2) remains ANALOGY. The Polysemy-Holonomy theorem is a general statement about all expressions and all loops; applying it to the test artifact specifically requires computing the test artifact's connection components (Step E7, future sprint).
 
 ---
 
@@ -380,15 +380,15 @@ This means: within a domain, you can form predicates, modify entities, negate, c
 
 The intersection $G_S \cap G_T$ of two domain subalgebras is itself a Σ_UL-subalgebra (intersection of subalgebras is a subalgebra). This intersection contains the **shared structure** — meanings that belong to both domains.
 
-For the primer's domains:
+For the test artifact's domains:
 
 $$G_{\text{QM}} \cap G_{\text{cog}} \ni \{\text{superposition-as-pattern}, \text{measurement-as-selection}, \text{entanglement-as-correlation}\}$$
 
-These are geometric constructions that have valid interpretations in both quantum mechanics and cognition. They are the bridge entities — precisely the constructions that the primer's cross-domain notation activates.
+These are geometric constructions that have valid interpretations in both quantum mechanics and cognition. They are the bridge entities — precisely the constructions that the test artifact's cross-domain notation activates.
 
-The non-emptiness of $G_{\text{QM}} \cap G_{\text{cog}}$ is what makes the primer possible. If the domains had no shared structure, no morphism between them could preserve operations, and the cross-domain activation would be noise rather than signal.
+The non-emptiness of $G_{\text{QM}} \cap G_{\text{cog}}$ is what makes the test artifact possible. If the domains had no shared structure, no morphism between them could preserve operations, and the cross-domain activation would be noise rather than signal.
 
-**[FRAMEWORK]** The explicit enumeration of domain generators and the proof that specific intersections are non-trivial require detailed analysis of the primer's constructions — this is the content of Steps E4–E6.
+**[FRAMEWORK]** The explicit enumeration of domain generators and the proof that specific intersections are non-trivial require detailed analysis of the test artifact's constructions — this is the content of Steps E4–E6.
 
 **Post-Sprint-5 upgrade note.** Steps E3, E4, and E7 are now **PROVEN** in `frontier/expedition-two/metaphor-formalization.md`:
 - E3: Three domains ($G_{\text{QM}}, G_{\text{ling}}, G_{\text{cog}}$) formally enumerated with generator sets; subalgebra closure PROVEN (Theorem 12); $G_{\text{QM}} \cap G_{\text{cog}}$ non-emptiness PROVEN with 3 independent elements (Theorem 13)
@@ -413,7 +413,7 @@ The section definition $\mu$ connects the two expedition fronts:
 
 - **From Sprint 1 (Front D):** The structural prior $P(m) = 2^{-DC_{UL}^{\text{bit}}(m)}/Z$ weights meanings in a single fiber. With $\mu$, we can define the **context-conditioned distribution**: $P(m | x) = P(\{t : \llbracket t \rrbracket_x = m\})$ — the probability of meaning $m$ given context $x$. This is the input to the Fisher information metric (Step D5).
 
-- **For future sprints (E3–E7):** Metaphor is now definable as a Σ_UL-homomorphism between domain subalgebras that maps one section to another. The primer's morphism $\phi_{\text{primer}}: G_{\text{QM}} \to G_{\text{cog}}$ sends sections to sections — the connected meaning-field, not just isolated meanings.
+- **For future sprints (E3–E7):** Metaphor is now definable as a Σ_UL-homomorphism between domain subalgebras that maps one section to another. The test artifact's morphism $\phi_{\text{primer}}: G_{\text{QM}} \to G_{\text{cog}}$ sends sections to sections — the connected meaning-field, not just isolated meanings.
 
 ---
 
@@ -429,4 +429,4 @@ The section definition $\mu$ connects the two expedition fronts:
 
 **Sprint 2 status: The meaning assignment is defined, smoothness is established, and the Polysemy-Holonomy theorem is upgraded from CONJECTURED to PROVEN.** The two semantic-layer gaps identified in `gauge-bundle-of-meaning.md` §3.6 are closed. The expressiveness condition needed for (⇐) follows from the embedding theorem — it is not an additional assumption. Condition ND for (⇒) excludes only the physically degenerate flat-simply-connected case.
 
-Front E has its foundation. The remaining steps (E4–E7: metaphor, internal Hom, primer projection, connection components) build on the section definition established here.
+Front E has its foundation. The remaining steps (E4–E7: metaphor, internal Hom, artifact projection, connection components) build on the section definition established here.

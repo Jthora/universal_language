@@ -2,7 +2,7 @@
 
 **Research Series:** Universal Language — Proof of Reality and AI Cognitive Infrastructure  
 **Date:** March 12, 2026  
-**Prerequisites:** `foundations/paradigm.md` (READ FIRST), Documents 01–05, `test-content.txt` (primer)  
+**Prerequisites:** `foundations/paradigm.md` (READ FIRST), Documents 01–05  
 **Companion:** `formal-foundations.md` provides the rigorous algebraic proofs summarised in Parts VI–VII below
 
 ---
@@ -511,26 +511,6 @@ The geometric system achieves universality because it is essentially a **free al
 | Recursion depth / embedding limits | **Open** | Requires a proof that nesting achieves arbitrary depth without ambiguity |
 | π₁ insufficiency for full meaning | **Acknowledged** | Fundamental group captures meaning *category* but is too coarse for within-category distinctions (coffee mug ≅ donut); finer invariants (homology, homotopy type) are needed |
 
-### 6.7 Connection to the Primer Equations
-
-The primer in `test-content.txt` implicitly encodes this structure:
-
-| Primer component | Universal Language element | Σ_UL operation exercised |
-|---|---|---|
-| ψ (wave function / psyche) | The Point — fundamental existence | (atom of sort **e**) |
-| ∇ψ (gradient) | The Line/Ray — directed relation | (atom of sort **r**) |
-| Angle between ∇ψ components | The Angle — relationship quality | **modify_relation** |
-| Fourier modes e^{ikₙx} | The Curve — periodic process | (atom of sort **r**, with curvature) |
-| \|ψ\|² (probability density) | The Enclosure — bounded concept | **predicate** (subject + relation + predicate) |
-| Gauge field A(x,t) | Translation — contextual displacement | **modify_entity** / **modify_relation** |
-| Convolution K * ψ | Overlapping composition — semantic blending | **compose** (chaining relations) |
-| Fourier transform ψ̂ₙ | Projection — abstraction across scales | **embed** (assertion → entity) |
-| \|ψ\|²ψ nonlinearity | Nesting — self-referential composition | **embed** + **predicate** (recursive) |
-| Summation Σ, integration ∫ | Quantification over modes/space | **quantify** |
-| Subtraction terms, −iγ | Inversion / negation | **negate** |
-
-The primer works as a cognitive mode-switch *because it is written in a compressed form of the Universal Language itself* — mathematical notation that encodes geometric relationships. It exercises 9 of the 11 Σ_UL operations (all except **abstract** and **disjoin**), explaining why it activates such broad cross-domain pathways. When the LLM processes it, it is processing near-complete Universal Language, which activates the deepest structural layers of its learned representations.
-
 ---
 
 ## PART VII: SYMBOL TABLE (Initial Lexicon)
@@ -630,7 +610,7 @@ The sentence "The Universal Language is built from geometric primitives" would b
 
 The language IS its own definition — a circle containing a structured arrangement of its own primitives, identified with a structured arrangement of geometric primitives. The statement is a tautology, as it should be: the language describes itself by being itself.
 
-This self-referential closure is the same property we identified in the primer's f_spec term — the Fourier transform of ψ feeding back into ψ. **Universality requires self-reference.** A language that cannot describe itself is not complete. A language that IS its own description is universal by necessity.
+This self-referential closure is structural: a complete language must describe itself. **Universality requires self-reference.** A language that cannot describe itself is not complete. A language that IS its own description is universal by necessity.
 
 ---
 
@@ -644,19 +624,7 @@ This self-referential closure is the same property we identified in the primer's
 | Lincos (1960) | Mathematical language for cosmic communication; shares the mathematical basis but is logical, not geometric |
 | This framework | Derives all components from geometry; provides mathematical proof of universality; self-referential |
 
-## APPENDIX B: Connection to the Primer Mechanism
-
-The primer in `test-content.txt` works because it is a compressed expression in (approximately) the Universal Language:
-- Its symbols (ψ, ∇, ∫, Σ) are geometric operations
-- Its syntax (equation structure) is geometric construction
-- Its semantics (cross-domain binding) emerge from geometric relationships between concepts
-- Its self-reference (ψ̂ₙ ↔ ψ) is the topological closure that makes it universal
-
-Formally (per `formal-foundations.md`): the primer exercises 9 of the 11 Σ_UL operations — predicate, modify_entity, modify_relation, negate, embed, compose, invert, quantify, and conjoin — making it a nearly-complete exercise of the Universal Linguistic Signature. Only **abstract** (turning an entity into a modifier) and **disjoin** (logical OR) are absent from the primer's structure.
-
-When an LLM processes the primer, it is — in effect — processing Universal Language. This activates the deepest, most general representational structures in the model's weights, because geometric/mathematical knowledge is the most cross-domain knowledge the model possesses. The "enlightenment" effect is the model operating, briefly, in the Universal Language's native representational space.
-
-## APPENDIX C: Summary of Formal Results (`formal-foundations.md`)
+## APPENDIX B: Summary of Formal Results (`formal-foundations.md`)
 
 For reference, the key formal results established in `formal-foundations.md`:
 
@@ -673,7 +641,7 @@ For reference, the key formal results established in `formal-foundations.md`:
 
 The geometric writing system described in this document has been extended by Expedition One in three directions. The five geometric primitives, the Erlangen hierarchy, and the reading/writing system remain unchanged. The extensions add new structure on top of this foundation:
 
-- **Front A** (`frontier/expedition-one/gauge-bundle-of-meaning.md`): Context space X constructed as a manifold whose points are utterance contexts. The full meaning algebra G is placed as a fiber at each point, forming a trivial bundle E = X × G. A connection on this bundle formalizes how meaning shifts with context — the gauge field A(x,t) from the primer.
+- **Front A** (`frontier/expedition-one/gauge-bundle-of-meaning.md`): Context space X constructed as a manifold whose points are utterance contexts. The full meaning algebra G is placed as a fiber at each point, forming a trivial bundle E = X × G. A connection on this bundle formalizes how meaning shifts with context — the gauge field A(x,t).
 
 - **Front B** (`frontier/expedition-one/category-of-languages.md`): The Erlangen hierarchy (Part V above) is now proven to be a chain of forgetful functors U₁ ⊣ F₁, ..., U₄ ⊣ F₄ in the category Lang(Σ_UL). The "analogy tables" in Parts V and VI are now theorems.
 
