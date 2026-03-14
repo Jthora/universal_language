@@ -17,6 +17,7 @@
 Additionally:
 - [Writing System](writing-system/writing-system.md) — The full specification (reading, writing, digital encoding)
 - [Writer's Companion](writing-system/writers-companion.md) — The **practical pen-and-paper guide** (start here if you want to write)
+- [Glyph Composition](composition/glyph-composition.md) — The **visual composition algebra** (how symbols combine to create complex glyphs, layers, rendering)
 - [Synthesis](SYNTHESIS.md) — How the 5-stage pipeline works, what the system can/can't do, 10 expansion paths
 
 ---
@@ -74,6 +75,25 @@ Additionally:
 2. Syntax §IV — Is it an atomic, compound, or recursive sentence?
 3. Writer's Companion §7 — Diagnostic table for common problems
 4. Writer's Companion §10 — Common mistakes and fixes
+```
+
+### "I want to COMPOSE complex multi-level glyphs"
+
+```
+1. Glyph Composition §I — The 5 spatial relationships (containment, intersection, adjacency, separation, connection)
+2. Glyph Composition §II — Composition depth layers (how deep can you go?)
+3. Glyph Composition §III — Composition parameters (scale, orientation, z-order, alignment)
+4. Glyph Composition §VI — Three methods: deepening, broadening, blending
+5. Glyph Composition §IX — Multi-glyph patterns (ternary, radial, fractal, tabular)
+```
+
+### "I want to build a RENDERER or NL→UWS TRANSLATOR"
+
+```
+1. Glyph Composition §X — Rendering system architecture (3 components)
+2. Glyph Composition §XI — NL→UWS translation pipeline (7 steps)
+3. writing-system.md §8 — JSON structural encoding and CSF serialization
+4. Glyph Composition §V — The formal composition algebra (GCA)
 ```
 
 ---
@@ -146,14 +166,17 @@ For the full explanation, see Lexicon §0.8.
    │exist     │ │combine   │ │mean      │ │relate    │ │entries   │
    └────┬─────┘ └────┬─────┘ └────┬─────┘ └────┬─────┘ └────┬─────┘
         │             │           │             │            │
-        └─────────────┴─────┬─────┴─────────────┴────────────┘
-                            ▼
-                   ┌─────────────────┐
-                   │ WRITING SYSTEM  │
-                   │ + WRITER'S      │
-                   │   COMPANION     │
-                   │ (practical use) │
-                   └─────────────────┘
+        └──────┬──────┴─────┬─────┴──────┬──────┴────────────┘
+               │            │            │
+               ▼            ▼            ▼
+   ┌──────────────────┐ ┌──────────────────┐
+   │  GLYPH           │ │ WRITING SYSTEM   │
+   │  COMPOSITION     │ │ + WRITER'S       │
+   │  (visual algebra,│ │   COMPANION      │
+   │   layers,        │ │ (practical use)  │
+   │   rendering)     │ └──────────────────┘
+   └──────────────────┘
+
 ```
 
-All 5 siblings derive from `formal-foundations.md` and are peers — none depends on another. The Writing System and Writer's Companion synthesize all 5 into practical procedures.
+All 5 siblings derive from `formal-foundations.md` and are peers — none depends on another. Glyph Composition extends the system with the visual composition algebra and rendering pipeline. The Writing System and Writer's Companion synthesize all into practical procedures.

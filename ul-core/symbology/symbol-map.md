@@ -12,6 +12,7 @@
 | Whether a construction is canonical | **Lexicon** (lexicon/lexicon.md) | Lexicon assigns tiers (T1/T2/T3) to compound constructions |
 | Synonyms and related meanings | **Thesaurus** (thesaurus/thesaurus.md) | Thesaurus maps equivalence classes under transformation |
 | How to actually write and read | **Writer's Companion** (writing-system/writers-companion.md) | Step-by-step pen-and-paper procedures |
+| How symbols compose into complex glyphs | **Glyph Composition** (composition/glyph-composition.md) | Formal composition algebra, layers, rendering pipeline |
 
 > **Geometric vs. Algebraic Representation:** The 5 geometric primitives are both geometric objects (in the geometric algebra G) and algebraic sorts in Σ_UL. However, certain geometric properties — like the specific *shape* of an enclosure boundary (triangle vs. hexagon) — are geometric-only features that enter Σ_UL indirectly through the modifier sort (via `abstract(e) → m`). See Lexicon §0.8 for details.
 

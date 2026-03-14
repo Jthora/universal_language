@@ -13,6 +13,7 @@
 | Why transformations preserve meaning | **Grammar** (grammar-book.md §IV) | Grammar defines the Erlangen hierarchy that organizes this thesaurus |
 | Whether a construction is canonical | **Lexicon** (lexicon/lexicon.md) | Lexicon is normative; Thesaurus is navigational |
 | Practical writing procedures | **Writer's Companion** (writing-system/writers-companion.md) | How to draw what the thesaurus helps you find |
+| Compositional equivalence space | **Glyph Composition** (composition/glyph-composition.md) | Defines when two different compositions yield equivalent meaning |
 
 ---
 

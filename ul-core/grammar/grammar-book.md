@@ -13,6 +13,7 @@
 | Whether a construction is canonical | **Lexicon** (lexicon/lexicon.md) | Lexicon assigns tiers (T1/T2/T3) — see §8.3 for what's canonical vs. conventional |
 | Related meanings and synonyms | **Thesaurus** (thesaurus/thesaurus.md) | Thesaurus navigates the Erlangen hierarchy for synonym-finding |
 | Practical writing and reading | **Writer's Companion** (writing-system/writers-companion.md) | Step-by-step pen-and-paper guide |
+| How composition affects symmetry | **Glyph Composition** (composition/glyph-composition.md) | Symmetry-preserving, -increasing, and -breaking composition theory |
 
 > **Note on two classification systems:** This document classifies symbols linguistically by **symmetry group** (determining parts of speech via the Erlangen Program). Syntax classifies expressions algebraically by **sort** (Entity, Relation, Modifier, Assertion). These are complementary: a symbol like → has low rotational symmetry (Grammar → Verb) AND belongs to the Relation sort (Syntax → algebraic role in `predicate(e, r, e)`). Symmetry determines linguistic behavior; sort determines algebraic capability.
 

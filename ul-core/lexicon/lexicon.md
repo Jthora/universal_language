@@ -11,6 +11,7 @@
 | Why meanings emerge from geometry | **Grammar** (grammar-book.md) | Grammar provides the semantic theory; Lexicon records the results |
 | Synonyms and related meanings | **Thesaurus** (thesaurus/thesaurus.md) | Thesaurus maps relationships between the entries defined here |
 | Practical writing and reading | **Writer's Companion** (writing-system/writers-companion.md) | How to draw and parse Lexicon entries on paper |
+| Stability criteria for compounds | **Glyph Composition** (composition/glyph-composition.md) | When compound constructions earn canonical status |
 
 > **This document is normative.** Where Symbology, Grammar, or Thesaurus provide constructions with natural-language labels (e.g., "Truth = ○{•}"), those are illustrative. Only entries in this Lexicon with tier justifications (T1/T2/T3) are canonical. See §8.3 for what is excluded and why.
 

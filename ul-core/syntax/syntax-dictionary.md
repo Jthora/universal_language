@@ -13,6 +13,7 @@
 | Whether a construction is canonical | **Lexicon** (lexicon/lexicon.md) | Lexicon catalogs distinguished results of applying these rules |
 | Synonyms under transformation | **Thesaurus** (thesaurus/thesaurus.md) | Thesaurus maps equivalence classes between valid constructions |
 | Practical writing and reading procedures | **Writer's Companion** (writing-system/writers-companion.md) | Step-by-step pen-and-paper guidance |
+| Full visual composition algebra | **Glyph Composition** (composition/glyph-composition.md) | Extends binary operations to ternary, radial, fractal; formalizes 5 spatial relationships |
 
 > **Note on two classification systems:** This document classifies expressions algebraically by **sort** (Entity, Relation, Modifier, Assertion) from Σ_UL. Grammar classifies symbols linguistically by **symmetry group** (determining parts of speech). These are complementary: the same symbol (e.g., →) is both a Relation (sort, algebraic role) and a Verb (part of speech, linguistic role due to low rotational symmetry). Sort determines what algebraic operations apply; symmetry determines how the symbol behaves linguistically.
 
