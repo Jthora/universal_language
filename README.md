@@ -33,6 +33,8 @@ Universal Language (UL) is the unique minimal geometric structure capable of enc
 
 This repository contains the complete mathematical derivation, 23 proven theorems, a complete writing system specification, and a pre-registered experimental protocol for independent verification.
 
+**What if it's real?** If UWS is naturally emergent rather than invented, the consequences range from dissolving the syntax/semantics dichotomy (Searle's Chinese Room) to structurally guaranteed universal translation, geometric AI alignment verification, and a navigable atlas of all human knowledge. See [`RAMIFICATIONS.md`](RAMIFICATIONS.md) for the full philosophical and prospective analysis.
+
 ---
 
 ## Proof Status
@@ -109,6 +111,7 @@ Full details: [`experiments/README.md`](experiments/README.md) | Protocol: [`fro
 universal_language/
 │
 ├── README.md                    # You are here
+├── RAMIFICATIONS.md             # Philosophical & prospective consequences
 ├── AGENTS.md                    # AI agent navigation & value specification
 ├── CONTRIBUTING.md              # How to contribute
 ├── LICENSE                      # License
@@ -177,13 +180,16 @@ universal_language/
 7. [`whitepaper/UL_WhitePaper-Part2.md`](whitepaper/UL_WhitePaper-Part2.md) — Structure and Syntax
 8. [`whitepaper/UL_WhitePaper-Part3.md`](whitepaper/UL_WhitePaper-Part3.md) — Applications and Future Vision
 
+### If you want to understand the implications
+9. [`RAMIFICATIONS.md`](RAMIFICATIONS.md) — What it means if UWS is real: 10 philosophical and prospective consequences
+
 ### If you want advanced theory
-9. [`frontier/expedition-one/`](frontier/expedition-one/) and [`frontier/expedition-two/`](frontier/expedition-two/) — Gauge bundles, categories, probability, metaphor
+10. [`frontier/expedition-one/`](frontier/expedition-one/) and [`frontier/expedition-two/`](frontier/expedition-two/) — Gauge bundles, categories, probability, metaphor
 
 ### If you want to verify
-10. [`experiments/README.md`](experiments/README.md) — run the experiments yourself
-11. [`frontier/causal-efficacy-protocol.md`](frontier/causal-efficacy-protocol.md) — full pre-registered protocol
-12. [`CONTRIBUTING.md`](CONTRIBUTING.md) — how to submit your results
+11. [`experiments/README.md`](experiments/README.md) — run the experiments yourself
+12. [`frontier/causal-efficacy-protocol.md`](frontier/causal-efficacy-protocol.md) — full pre-registered protocol
+13. [`CONTRIBUTING.md`](CONTRIBUTING.md) — how to submit your results
 
 ---
 
