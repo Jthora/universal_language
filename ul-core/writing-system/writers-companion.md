@@ -725,7 +725,198 @@ Two frames sharing a boundary (conjoin). Both connect from suffering (shared ent
 
 ---
 
-## 7. QUICK REFERENCE — THE WRITER'S CHECKLIST
+### 6.6 Example 6: "Love is patient." (Property Encoding)
+
+This example is critical because it exposes a common ambiguity: **is "patient" a second entity, a modifier on the relation, or a modifier on the entity?** The decomposition procedure handles this.
+
+**Step 1 — Decompose:**
+
+| Question | Answer | Sort |
+|----------|--------|------|
+| What things? | "Love" | Entity: e₁ (love) |
+| How connected? | "is" — but "is patient" attributes a quality, not a connection to a second thing | This is NOT a two-entity predication. "Patient" is not a thing; it's a quality. |
+| What manner? | "patient" — a quality of endurance, sustained over time | Modifier: m (patience as a quality applied to the entity) |
+| What claimed? | "Love has the quality of patience" | Assertion: one claim |
+
+**The key decision:** "Love is patient" is **not** "Love relates to Patience." It's "Love, modified by patient-quality." The word "is" here means "has the property of," not "is identical to" or "connects to."
+
+**How to tell the difference:**
+- "Love **is** patience" → identity between two entities → `predicate(e₁, r_identity, e₂)` — use 0° line between two enclosures
+- "Love **is patient**" → entity has a quality → `modify_entity(m, e)` — transform the entity itself
+- "Love **acts** patiently" → relation has a quality → `modify_relation(m, r)` — angle on the relation
+
+**Test:** Can you replace "is [adjective]" with "has the property of [noun]"? If yes → `modify_entity`. "Love has the property of patience" ✓ → modify_entity.
+
+**Step 2 — Select Operations:**
+- `modify_entity(m_patient, e_love)` → apply patience-quality to love
+- What IS patience geometrically? Patience is endurance through time — a sustained, gentle process. Geometrically: a long, gentle curve (low curvature, extended arc). As a modifier, it imposes this "sustained gentle arc" quality on whatever it modifies.
+- The modified entity is then asserted (framed).
+
+**Step 3 — Draw:**
+```
+  ┌──────────────────────────┐
+  │                          │
+  │     ○{ •  ⌒⌒⌒ }        │
+  │                          │
+  └──────────────────────────┘
+```
+A circle (○ — abstract/complete concept) containing a point (existence) and a long gentle curve (sustained process). The curve is *inside* the entity, not connecting to a second entity — it modifies the entity's internal character. The gentleness (low curvature) and length (sustained) encode patience.
+
+**Step 4 — Verify (5-pass reading):**
+- Pass 1 (Enclosures): Outer sentence frame. Inner circle enclosure.
+- Pass 2 (Connections): A gentle curve inside the circle — not connecting two entities, but characterizing the enclosed space.
+- Pass 3 (Angles): No sharp angles — the curve is smooth throughout.
+- Pass 4 (Points): One point inside the circle.
+- Pass 5 (Curvature): Low, sustained curvature — a gentle, enduring process.
+
+**Reading:** "An abstract/complete concept containing an existence characterized by a gentle, sustained process." = "A complete thing whose nature is patient endurance." ✓
+
+**Why other decompositions fail:**
+
+| Alternative | What it reads as | Why it's wrong |
+|-------------|-----------------|----------------|
+| •──→──• (two entities linked) | "Love relates to patience" | "Patient" isn't a thing — it's a quality |
+| •──∠θ──→──• (modified relation) | "Love acts in a patient way toward something" | There's no second entity being acted upon |
+| ○{•} ══ ○{•} (identity between two concepts) | "Love is patience" | Close, but "is patient" ≠ "is patience" — the first is a property, the second is identity |
+
+---
+
+## 7. WHEN THE READING DOESN'T MATCH: THE REVISION LOOP
+
+### 7.1 The Problem
+
+You decomposed a thought, selected operations, and drew it. You read it back (5-pass procedure) and the reading **doesn't match** your intent. Now what?
+
+**Don't start over.** Diagnose first.
+
+### 7.2 Diagnostic: What Went Wrong?
+
+The mismatch will be in exactly one of these categories:
+
+| Symptom | Diagnosis | Fix |
+|---------|-----------|-----|
+| **Too few entities** — reading says "one thing" but you meant two | You drew a modifier where you needed a predicate | Add a second entity (•) and connect them with a relation |
+| **Too many entities** — reading says "A relates to B" but you meant "A has quality B" | You drew a predicate where you needed a modifier | Remove the second entity; make it a quality modifying the first |
+| **Wrong relation type** — reading says "static connection" but you meant "transformation" | You drew a line where you needed a curve | Redraw the path with visible curvature |
+| **Missing frame** — reading finds entities and relations but no assertion | You forgot to close the sentence boundary | Draw a frame around the complete claim |
+| **Angle not read** — reading doesn't capture the quality you intended | Your angle isn't exaggerated enough | Redraw with a more obvious angle; add a corner mark (∟) for 90° |
+| **Reading finds extra structure** — more enclosures or intersections than intended | Your strokes accidentally cross or close | Separate strokes that shouldn't intersect; open strokes that shouldn't enclose |
+| **Nesting ambiguity** — can't tell if inner enclosure is an entity or a sub-assertion | Inner frame is the same size as outer frame | Shrink the embedded assertion visibly; make inner frame clearly smaller |
+| **Direction ambiguity** — can't tell which entity is subject and which is object | No arrowhead on the relation | Add an arrowhead (→) on directed relations |
+
+### 7.3 The Revision Procedure
+
+```
+REVISION PROCEDURE
+
+  1. READ BACK your drawing using the 5-pass procedure.
+  2. COMPARE the reading to your original decomposition (Step 1 table).
+  3. IDENTIFY which sort is wrong:
+     - Wrong entities? → Revise Step 1a.
+     - Wrong relations? → Revise Step 1b.
+     - Wrong modifiers? → Revise Step 1c.
+     - Wrong assertions? → Revise Step 1d.
+  4. REDRAW only the affected part, not the entire construction.
+  5. READ BACK again. Repeat until reading matches decomposition.
+```
+
+### 7.4 When Multiple Decompositions Are Valid
+
+Sometimes a thought genuinely has multiple valid decompositions. "Love is patient" could be:
+- `modify_entity(m_patient, e_love)` — love has the quality of patience
+- `predicate(e_love, r_identity, e_patience)` — love equals patience (different claim!)
+
+Both are valid UL. They express **different structural claims**. If your reading matches one decomposition but you intended the other, the issue isn't your drawing — it's your decomposition. Go back to Step 1 and be more precise about what you're claiming.
+
+**The rule:** If the reading matches *some* valid decomposition of your thought, and you can't distinguish between decompositions, your thought may be structurally ambiguous in natural language. UL forces you to commit to one structure. This is a feature, not a bug.
+
+---
+
+## 8. RESOLVING COMMON AMBIGUITIES
+
+Several points of apparent contradiction exist between this guide and the other UL documents. These are resolved here with explicit decisions for practical writing.
+
+### 8.1 "Is" — The Three Readings
+
+The word "is" in natural language is structurally ambiguous. UL forces you to pick:
+
+| Natural language | Structure | UL operation | How to draw |
+|-----------------|-----------|-------------|-------------|
+| "A **is** B" (identity) | Two things are the same | `predicate(e₁, r_0°, e₂)` | •══• at 0° (parallel/identity) |
+| "A **is** [adjective]" (property) | A thing has a quality | `modify_entity(m, e)` | Transform the entity itself |
+| "A **is** [verb]-ing" (process) | A thing is undergoing change | `predicate(e, r_curve, e')` | Curved relation between entity states |
+
+### 8.2 When Is a Frame Required?
+
+**Formal rule** (from `formal-operations.md`): An assertion (Gₐ) requires a Jordan domain — a closed bounding region.
+
+**Practical rules for pen and paper:**
+
+| Situation | Frame required? | Why |
+|-----------|----------------|-----|
+| Making a standalone claim | **Yes** — always draw a frame | The frame IS the assertion boundary |
+| Sketching a single entity for reference | No — just draw the entity | Entities aren't claims |
+| Writing on a blank page with one claim | **Technically yes**, but the page edge serves as implicit frame | If there's only one claim, the whole page is the frame |
+| Multiple claims on one page | **Yes** — each claim needs its own frame | Otherwise you can't distinguish where one claim ends and another begins |
+| Embedded fact inside a larger claim | The embedded assertion has its own (shrunk) frame | `embed(a)` preserves the inner frame |
+
+**When in doubt, draw a frame.** It's never wrong to have one, and it's always wrong to omit one when the claim is ambiguous.
+
+### 8.3 When Does Enclosure Shape Matter?
+
+**Two roles, two rules:**
+
+| Role | Shape matters? | Which shapes? | Default |
+|------|---------------|---------------|---------|
+| **Sentence frame** (assertion boundary) | **No** — any closed shape works | Rectangle recommended for visual clarity | Rectangle |
+| **Entity enclosure** (a concept) | **Yes, if you want to encode the kind of concept** | △=fundamental, □=structural, ⬠=organic, ⬡=networked, ○=universal | Circle ○ (most general) |
+
+This resolves the apparent contradiction between documents: the Grammar's claim that "shape is always semantic" applies to **entity enclosures** where the symmetry group carries meaning. The Writing System's claim that "frames are shape-neutral" applies to **sentence frames** which are structural boundaries, not content.
+
+### 8.4 Circle: Enclosure or Curve?
+
+A circle can be read as:
+- **An enclosure** (a bounded concept) — when it contains other marks
+- **A curve** (a cyclic process) — when it stands alone as a path between entities or has visible start/endpoints
+- **Both** — when a cyclic process defines a concept (the process IS the boundary)
+
+**How to disambiguate when writing:**
+- If you mean **concept/enclosure**: put something inside it (even a single dot)
+- If you mean **cyclic process**: draw it as a path connecting entities, or leave it empty with visible pen direction
+- If you mean **both**: draw a circle with contents that traces along the boundary (the content follows the process path)
+
+### 8.5 Handwriting Precision: How Sloppy Is Too Sloppy?
+
+**The tolerance rule:** UL reading operates at the **topological level by default**. This means:
+- A sloppy circle and a perfect circle are the same enclosure ✓
+- A wobbly line and a straight line are the same relation ✓
+- Connected marks and disconnected marks are different ✗ (topology distinguishes these)
+
+**When precision matters:** If you intend a **specific distinguished angle** (0°, 60°, 90°, 120°, 180°), you must **exaggerate** it past the point of topological ambiguity:
+
+| You mean | What to draw | What NOT to do |
+|----------|-------------|---------------|
+| 0° (identity) | Clearly parallel lines | Two lines at "roughly 10°" — ambiguous |
+| 90° (independence) | Clear L-shape with corner mark (∟) | An angle that could be 70° or 110° |
+| 180° (opposition) | Lines clearly in a straight line, pointing apart | An obtuse angle that could be 160° |
+
+**The middle ground:** Angles that don't match a distinguished value are read as points on a continuous quality spectrum. Drawing "roughly 45°" means "a quality between identity and independence" — which is a valid meaning. You only create ambiguity when your angle is *close to but not clearly at* a distinguished value.
+
+### 8.6 Grounding: How to Label Your Entities
+
+UL encodes **structure**, not **things**. A point (•) is "an existence" — not "a cat" or "love" or "electron." The label you assign is **external grounding**.
+
+**For practical writing:**
+- You MAY write natural-language labels near your entities as annotations: `(love)`, `(water)`, `(temperature)`
+- These labels are **not part of the UL text** — they're marginalia for your own reference
+- Two people grounding the same UL structure to different domains is not a contradiction — it's the universality working as intended
+- When writing for yourself: label freely. When writing for structural analysis: omit labels and let the geometry speak
+
+**The convention used in this guide:** Labels appear in parentheses below the construction and are always marked as commentary, never as part of the drawing.
+
+---
+
+## 9. QUICK REFERENCE — THE WRITER'S CHECKLIST
 
 Before drawing, verify:
 
@@ -753,7 +944,7 @@ After drawing, verify:
 
 ---
 
-## 8. COMMON MISTAKES AND FIXES
+## 10. COMMON MISTAKES AND FIXES
 
 | Mistake | Why it happens | Fix |
 |---------|---------------|-----|
@@ -767,7 +958,7 @@ After drawing, verify:
 
 ---
 
-## 9. WHAT THIS GUIDE DOES NOT COVER
+## 11. WHAT THIS GUIDE DOES NOT COVER
 
 | Topic | Why not | Where to find it |
 |-------|---------|-----------------|
