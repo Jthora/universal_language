@@ -4,6 +4,18 @@
 > Grammar is not a set of arbitrary rules — it is the catalogue of possible geometric relationships between objects.  
 > Parts of speech are symmetry classifications. Sentence structure is figure composition.
 
+### How This Document Relates to Its Siblings
+
+| If you need... | Consult | Why |
+|----------------|---------|-----|
+| What the atomic symbols look like | **Symbology** (symbology/symbol-map.md) | Symbology defines the marks; Grammar explains why they mean what they mean |
+| Mechanical rules for valid combinations | **Syntax** (syntax-dictionary.md) | Syntax provides the construction rules; Grammar provides the semantic theory |
+| Whether a construction is canonical | **Lexicon** (lexicon/lexicon.md) | Lexicon assigns tiers (T1/T2/T3) — see §8.3 for what's canonical vs. conventional |
+| Related meanings and synonyms | **Thesaurus** (thesaurus/thesaurus.md) | Thesaurus navigates the Erlangen hierarchy for synonym-finding |
+| Practical writing and reading | **Writer's Companion** (writing-system/writers-companion.md) | Step-by-step pen-and-paper guide |
+
+> **Note on two classification systems:** This document classifies symbols linguistically by **symmetry group** (determining parts of speech via the Erlangen Program). Syntax classifies expressions algebraically by **sort** (Entity, Relation, Modifier, Assertion). These are complementary: a symbol like → has low rotational symmetry (Grammar → Verb) AND belongs to the Relation sort (Syntax → algebraic role in `predicate(e, r, e)`). Symmetry determines linguistic behavior; sort determines algebraic capability.
+
 ---
 
 ## I. THE GRAMMATICAL PRINCIPLE
@@ -342,6 +354,57 @@ and continuous change, at great scale"
 → The natural-language label for this construction is a grounding
   decision, not a geometric fact. See Lexicon §8.3.
 ```
+
+### Worked Example: Constructing "Negation"
+
+```
+Step 1: Start with any ASSERTION              [•──→──•]
+Step 2: REFLECT through center of frame        [•──←──•] (directions reversed)
+
+Result: The content is mirrored — every directed relation reverses.
+
+→ This is negate(a) → a from Σ_UL.
+  Reflection is an involution: negate(negate(a)) = a.
+  The frame stays; the content flips.
+  This is T1 (Geometrically Forced): reflection IS the unique
+  content-reversing, frame-preserving, involutory transformation.
+```
+
+### Worked Example: Constructing "Causation"
+
+```
+Step 1: Write CAUSE assertion                  [•──→──•]  (A relates to B)
+Step 2: Write EFFECT assertion                 [•──→──•]  (C relates to D)
+Step 3: EMBED cause as entity                  embed([A→B]) = ê₁
+Step 4: EMBED effect as entity                 embed([C→D]) = ê₂
+Step 5: CONNECT with directed relation         ê₁ ══→══ ê₂
+Step 6: FRAME the whole thing                  [ ê₁ ══→══ ê₂ ]
+
+Result: "The fact that [A→B] leads to the fact that [C→D]"
+
+→ Causation is embed + predicate + embed: turning two assertions
+  into entities, then relating them. The directed relation between
+  embedded facts IS the "because" / "therefore" / "causes."
+  See Writer's Companion §9.5 (BECAUSE pattern).
+```
+
+### Worked Example: Constructing "Self-Reference"
+
+```
+Step 1: Start with CONCEPT enclosure           ○
+Step 2: The concept CONTAINS itself             ○{○{○{...}}}
+Step 3: This infinite nesting is a FIXED POINT  ○∞
+
+Result: A concept whose content IS itself — self-reference.
+
+→ Topologically, this is a space with fundamental group π₁ = ℤ
+  (one loop — the concept refers back to itself once).
+  Grammar §IX.1 discusses recursive embedding in discourse.
+  The Lexicon lists this as Entry 5.5 (Self-Referencing Concept,
+  T2 — Structurally Distinguished by the fixed-point property).
+```
+
+> **Note on Constructive Level:** Democracy and Evolution are at Constructive Level 4+ (see Lexicon §0.7) and represent *one possible* construction for each concept — multiple valid constructions may express similar meanings. The label (natural-language word) is a grounding decision, not a geometric fact. Negation, Causation, and Self-reference are at Level 2–4 and are structurally motivated (T1 or T2). For tier classifications, see Lexicon §8.
 
 ---
 

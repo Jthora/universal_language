@@ -3,6 +3,18 @@
 > The complete catalogue of symbols derivable from the 5 geometric primitives.  
 > Every symbol is a geometric construction. Reading is parsing. Writing is constructing.
 
+### How This Document Relates to Its Siblings
+
+| If you need... | Consult | Why |
+|----------------|---------|-----|
+| How to combine these symbols validly | **Syntax** (syntax-dictionary.md) | Syntax defines the rules; Symbology defines the pieces |
+| Why these shapes carry their meanings | **Grammar** (grammar-book.md §II) | Grammar derives parts of speech from symmetry groups |
+| Whether a construction is canonical | **Lexicon** (lexicon/lexicon.md) | Lexicon assigns tiers (T1/T2/T3) to compound constructions |
+| Synonyms and related meanings | **Thesaurus** (thesaurus/thesaurus.md) | Thesaurus maps equivalence classes under transformation |
+| How to actually write and read | **Writer's Companion** (writing-system/writers-companion.md) | Step-by-step pen-and-paper procedures |
+
+> **Geometric vs. Algebraic Representation:** The 5 geometric primitives are both geometric objects (in the geometric algebra G) and algebraic sorts in Σ_UL. However, certain geometric properties — like the specific *shape* of an enclosure boundary (triangle vs. hexagon) — are geometric-only features that enter Σ_UL indirectly through the modifier sort (via `abstract(e) → m`). See Lexicon §0.8 for details.
+
 ---
 
 ## I. THE GLYPH SPACE
@@ -245,7 +257,7 @@ These cannot be decomposed further. They are the phonemes of UL.
 
 ## V. ABSTRACT CONCEPT INVENTORY
 
-> **Note:** The constructions below are *illustrations* of how UL symbols compose into compound meanings — they demonstrate what the symbology makes possible. They are NOT canonical definitions. For structurally motivated definitions with tier justifications, see the **Lexicon** (lexicon/lexicon.md). The labels assigned here ("Truth," "Love," "Freedom," etc.) are conventional groundings, not geometric facts.
+> **Note:** The constructions below are *illustrations* of how UL symbols compose into compound meanings — they demonstrate what the symbology makes possible. They are **NOT canonical definitions** and would be classified as **T3 (Conventional)** under the Lexicon's tier system — meaning their geometric construction is valid but the natural-language label is a grounding *decision*, not a geometric *fact*. For structurally motivated definitions with tier justifications, see the **Lexicon** (lexicon/lexicon.md §8.3). Multiple valid constructions can express similar meanings; see the **Thesaurus** for alternatives.
 
 ### Philosophical Concepts
 
@@ -297,7 +309,7 @@ These cannot be decomposed further. They are the phonemes of UL.
 
 ## VI. QUANTIFIER SYMBOLS
 
-Derived from geometric scaling operations within the Glyph Space:
+Derived from geometric scaling operations within the Glyph Space. These are the geometric realization of the `quantify: m × e → a` operation from Σ_UL — the modifier (scaling factor) transforms the entity (point) into a quantified assertion:
 
 | Quantifier | Construction | Derivation |
 |-----------|-------------|------------|

@@ -9,13 +9,14 @@
 | # | Deliverable | File | Status |
 |---|------------|------|--------|
 | 0 | Project Critique | [CRITIQUE.md](CRITIQUE.md) | Complete |
-| 1 | Universal Symbology Map | [symbology/symbol-map.md](symbology/symbol-map.md) | Complete |
-| 2 | Universal Syntax Dictionary | [syntax/syntax-dictionary.md](syntax/syntax-dictionary.md) | Complete |
-| 3 | Universal Grammar Book | [grammar/grammar-book.md](grammar/grammar-book.md) | Complete |
-| 4 | Universal Language Thesaurus | [thesaurus/thesaurus.md](thesaurus/thesaurus.md) | Complete |
-| 5 | Universal Lexicon | [lexicon/lexicon.md](lexicon/lexicon.md) | **New v1** — 40 entries, bottom-up from geometry, 3-tier justification (T1/T2/T3) |
+| — | Navigation Guide | [NAVIGATION.md](NAVIGATION.md) | **New** — quick-start paths, sibling cross-references, two-classification-system explanation |
+| 1 | Universal Symbology Map | [symbology/symbol-map.md](symbology/symbol-map.md) | Complete — cross-sibling refs, G≠Σ_UL note, tier labels on §V |
+| 2 | Universal Syntax Dictionary | [syntax/syntax-dictionary.md](syntax/syntax-dictionary.md) | Complete — cross-sibling refs, sort/symmetry note, G≠Σ_UL note |
+| 3 | Universal Grammar Book | [grammar/grammar-book.md](grammar/grammar-book.md) | Complete — cross-sibling refs, sort/symmetry note, 3 new worked examples (Negation, Causation, Self-Reference) |
+| 4 | Universal Language Thesaurus | [thesaurus/thesaurus.md](thesaurus/thesaurus.md) | Complete — cross-sibling refs, tier labels on §VII |
+| 5 | Universal Lexicon | [lexicon/lexicon.md](lexicon/lexicon.md) | v2 — 42 entries, 3-tier justification, cross-sibling refs, normative-status note, semantic index (§10.5) |
 | 6 | Universal Writing System | [writing-system/writing-system.md](writing-system/writing-system.md) | **Rewritten v2** — bottom-up from axiom "what can be drawn, counts" |
-| 6b | Writer's Companion Guide | [writing-system/writers-companion.md](writing-system/writers-companion.md) | **New** — practical pen-and-paper guide: meaning decomposition, handwriting conventions, 5 worked examples |
+| 6b | Writer's Companion Guide | [writing-system/writers-companion.md](writing-system/writers-companion.md) | **New** — practical pen-and-paper guide: meaning decomposition, handwriting conventions, 10 worked examples, compound statements, grammar bridge |
 | 7 | UQPL Specification | [uqpl/uqpl-spec.md](uqpl/uqpl-spec.md) | Draft — sort names aligned (March 2026); operation signatures still diverge from Σ_UL (see note in §0) |
 
 ---

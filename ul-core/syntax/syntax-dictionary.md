@@ -4,6 +4,20 @@
 > Syntax IS geometric construction. Grammar rules ARE axioms.  
 > Every valid sentence is a valid geometric figure. Every invalid sentence is a geometric impossibility.
 
+### How This Document Relates to Its Siblings
+
+| If you need... | Consult | Why |
+|----------------|---------|-----|
+| What the atomic symbols look like | **Symbology** (symbology/symbol-map.md) | Symbology defines the pieces; Syntax defines how they combine |
+| Why meanings emerge from combinations | **Grammar** (grammar-book.md) | Grammar explains the semantic theory; Syntax provides the mechanical rules |
+| Whether a construction is canonical | **Lexicon** (lexicon/lexicon.md) | Lexicon catalogs distinguished results of applying these rules |
+| Synonyms under transformation | **Thesaurus** (thesaurus/thesaurus.md) | Thesaurus maps equivalence classes between valid constructions |
+| Practical writing and reading procedures | **Writer's Companion** (writing-system/writers-companion.md) | Step-by-step pen-and-paper guidance |
+
+> **Note on two classification systems:** This document classifies expressions algebraically by **sort** (Entity, Relation, Modifier, Assertion) from Σ_UL. Grammar classifies symbols linguistically by **symmetry group** (determining parts of speech). These are complementary: the same symbol (e.g., →) is both a Relation (sort, algebraic role) and a Verb (part of speech, linguistic role due to low rotational symmetry). Sort determines what algebraic operations apply; symmetry determines how the symbol behaves linguistically.
+
+> **Geometric vs. Algebraic Representation:** Some geometric features (like enclosure boundary shapes: triangle vs. hexagon) are geometric-only properties that enter Σ_UL indirectly through the modifier sort (via `abstract(e) → m`). See Lexicon §0.8 for the full G ≠ Σ_UL distinction.
+
 ---
 
 ## I. FIRST PRINCIPLES

@@ -2,6 +2,18 @@
 
 > **The Enclosure sibling.** This document contains the bounded definitions of Universal Language — constructions whose meanings are determined (to varying degrees) by geometry itself. Every entry is a geometric construction first, a natural-language label second.
 
+### How This Document Relates to Its Siblings
+
+| If you need... | Consult | Why |
+|----------------|---------|-----|
+| What the atomic symbols look like | **Symbology** (symbology/symbol-map.md) | Symbology defines the drawing primitives that Lexicon entries compose |
+| Rules for valid combinations | **Syntax** (syntax-dictionary.md) | Syntax defines which compositions are well-formed |
+| Why meanings emerge from geometry | **Grammar** (grammar-book.md) | Grammar provides the semantic theory; Lexicon records the results |
+| Synonyms and related meanings | **Thesaurus** (thesaurus/thesaurus.md) | Thesaurus maps relationships between the entries defined here |
+| Practical writing and reading | **Writer's Companion** (writing-system/writers-companion.md) | How to draw and parse Lexicon entries on paper |
+
+> **This document is normative.** Where Symbology, Grammar, or Thesaurus provide constructions with natural-language labels (e.g., "Truth = ○{•}"), those are illustrative. Only entries in this Lexicon with tier justifications (T1/T2/T3) are canonical. See §8.3 for what is excluded and why.
+
 ---
 
 ## 0. WHAT THIS DOCUMENT IS AND IS NOT
@@ -655,6 +667,8 @@ This principle is the filter. It is why most of what was bleeding across the sib
 
 ## 9. RELATIONSHIP TO SIBLINGS
 
+> **Navigation tip:** Each sibling now includes a cross-reference table at the top of the document. If you arrived here from another sibling, you can use the table below to understand how these documents relate, or return to any sibling via its cross-reference block.
+
 | Sibling | Primitive | Concern | Lexicon's Relation |
 |---------|-----------|---------|-------------------|
 | **Symbology** (symbol-map.md) | Point | What the atomic marks ARE | Symbology defines the drawing primitives. Lexicon says what their combinations structurally mean. |
@@ -677,6 +691,60 @@ The Lexicon is the Enclosure sibling: it draws a boundary around each constructi
 | **3D and higher-dimensional constructions** | Not addressed. This lexicon is planar (2D). | UL's axiomatics work on any 2D surface. Extension to 3D introduces new primitives (volume, curvature of surfaces) — a genuine open problem. |
 | **Interaction with gauge connection** | The gauge bundle (frontier/expedition-one) adds context-dependence. Whether context shifts Tier assignments is open. | A T2 construction might become T1 or T3 in specific gauge contexts. |
 | **G ≠ Σ_UL boundary** | Several entries have Σ_UL: — because their geometric properties don't map to single algebraic terms (§0.8). Enriching Σ_UL with shape/curvature sorts could close this gap. | This is a foundational question: should Σ_UL be extended, or is the geometric-only characterization correct? |
+
+---
+
+## 10.5 SEMANTIC INDEX — FIND YOUR CONCEPT
+
+If you're looking for a specific meaning, use this index to jump to the right entry. Concepts are grouped by semantic category, not constructive level.
+
+**Existence & Non-Existence:**
+- Existence → §2, Entry 2.1 (Point) | Something exists → §4, Entry 4.1 (•-in-○)
+- Non-existence / Nothing → §1, Entry 1.0 (Void) | Emptiness → §3, Entry 3.2.5 (○{Ø})
+- Negated existence → §5, Entry 5.6 (Negation)
+
+**Relationships & Connections:**
+- Connection between things → §2, Entry 2.2 (Line)
+- Directed relationship → §2, Entry 2.2.1 (Ray)
+- Identity / sameness → §3, Entry 3.1.1 (0° Angle)
+- Opposition / conflict → §3, Entry 3.1.3 (180° Angle)
+- Independence / orthogonality → §3, Entry 3.1.2 (90° Angle)
+- Harmony / cooperation → §3, Entry 3.1.5 (60° Angle)
+- Complementarity → §3, Entry 3.1.6 (120° Angle)
+- Transitivity / chains → §6, Entry 6.5 (Composition)
+- Reversal / passivity → §6, Entry 6.6 (Reversal)
+
+**Qualities & Modifications:**
+- Quality in general → §2, Entry 2.3 (Angle, generic)
+- Entity transformation → §2, Entry 2.6 (modify_entity)
+- Relation qualification → §2, Entry 2.7 (modify_relation)
+- Abstraction (entity → quality) → §6, Entry 6.4 (abstract)
+
+**Processes & Change:**
+- Process / change → §2, Entry 2.4 (Curve, generic)
+- Cyclical process → §3, Entry 3.3.1 (Closed curve)
+- Expanding growth → §3, Entry 3.3.2 (Spiral)
+- Completeness → §3, Entry 3.1.4 (360° / full rotation)
+
+**Concepts & Categories:**
+- Concept / bounded idea → §2, Entry 2.5 (Enclosure, generic)
+- Fundamental thing → §3, Entry 3.2.1 (△, Triangle)
+- Structural system → §3, Entry 3.2.2 (□, Square)
+- Living / organic → §3, Entry 3.2.3 (⬠, Pentagon)
+- Community / network → §3, Entry 3.2.4 (⬡, Hexagon)
+- Universal / complete → §3, Entry 3.2.5 (○, Circle)
+- Thing-in-concept → §4, Entries 4.1–4.5
+
+**Logical & Compositional:**
+- Claiming something is true → §5, Entry 5.1 (Predication / Assertion frame)
+- "A AND B" → §6, Entry 6.1 (Conjunction)
+- "A OR B" → §6, Entry 6.2 (Disjunction)
+- "The fact that A" → §6, Entry 6.3 (Embedding)
+- "NOT A" → §5, Entry 5.6 (Negation)
+- "How many?" → §6, Entry 6.7 (Quantification)
+
+**Not in this Lexicon:**
+- Love, Fear, Joy, Democracy, Evolution, Knowledge → See Lexicon §8.3 (excluded as T3/conventional); see Thesaurus §VII for synonym navigation; see Symbology §V for illustrative constructions.
 
 ---
 

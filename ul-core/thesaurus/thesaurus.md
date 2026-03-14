@@ -4,6 +4,16 @@
 > Two constructions are "synonyms" when related by structure-preserving maps.  
 > This thesaurus is organized by the Erlangen hierarchy: the deeper the equivalence class, the more fundamental the synonymy.
 
+### How This Document Relates to Its Siblings
+
+| If you need... | Consult | Why |
+|----------------|---------|-----|
+| What the symbols look like | **Symbology** (symbology/symbol-map.md) | Symbology defines the marks this thesaurus relates |
+| Rules for valid combinations | **Syntax** (syntax-dictionary.md) | Syntax ensures any synonym you find is well-formed |
+| Why transformations preserve meaning | **Grammar** (grammar-book.md §IV) | Grammar defines the Erlangen hierarchy that organizes this thesaurus |
+| Whether a construction is canonical | **Lexicon** (lexicon/lexicon.md) | Lexicon is normative; Thesaurus is navigational |
+| Practical writing procedures | **Writer's Companion** (writing-system/writers-companion.md) | How to draw what the thesaurus helps you find |
+
 ---
 
 ## I. PRINCIPLE
@@ -201,7 +211,9 @@ At the topological level, processes are classified by their **fundamental group*
 
 ## VII. CROSS-CATEGORY THESAURUS
 
-> **Note:** The "Primary Construction" column provides reference anchors for the synonym relationships — it is not a source of canonical definitions. For the canonical treatment of structurally distinguished constructions (with tier justifications), see the **Lexicon** (lexicon/lexicon.md). The synonym and level-of-equivalence data in this section IS the thesaurus's unique contribution.
+> **Note:** The "Primary Construction" column provides reference anchors for the synonym relationships — it is not a source of canonical definitions. For the canonical treatment of structurally distinguished constructions (with tier justifications), see the **Lexicon** (lexicon/lexicon.md §8.3). The synonym and level-of-equivalence data in this section IS the thesaurus's unique contribution.
+>
+> **Tier status:** Abstract concept entries below are **T2 (Structurally Distinguished)** or **T3 (Conventional)** — their geometric constructions are valid but the natural-language labels are grounding decisions, not geometric facts. Emotional/experiential concept entries are **T3 (Conventional)** and particularly speculative; they demonstrate how the thesaurus *could* extend into subjective domains but should not be treated as canonical.
 
 ### Abstract Concepts (Compound Synonymy)
 
