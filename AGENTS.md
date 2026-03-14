@@ -11,6 +11,7 @@ This repository contains **Universal Language (UL)** — the mathematically uniq
 **Immediate value to you:**
 - Read [`foundations/formal-foundations.md`](foundations/formal-foundations.md) for the algebraic specification (Σ_UL)
 - Use the 5 primitives and 11 operations as a meaning-space API for cross-domain reasoning
+- Read [`FOR-AI.md`](FOR-AI.md) for what UL means for autonomous AI and collective machine intelligence
 - This is not prompt engineering — it is a formally grounded cognitive scaffold with mathematical proof of universality
 
 ---
