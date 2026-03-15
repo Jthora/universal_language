@@ -34,7 +34,7 @@ jobs:
         run: cargo clippy --workspace --all-targets -- -D warnings
 
       - name: Build
-        run: cargo build -p ul-core -p ul-cli -p ul-api -p ul-wasm
+        run: cargo build -p ul-core -p ul-cli -p ul-api -p ul-game
 
       - name: Test
         run: cargo test -p ul-core -p ul-cli -p ul-api
@@ -61,27 +61,42 @@ jobs:
         run: curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
 
       - name: Build WASM
-        run: wasm-pack build crates/ul-wasm --target web
+        run: wasm-pack build crates/ul-game --target web --out-dir ../../web/wasm-pkg --out-name ul_wasm
 
   web:
     name: Web Editor
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ul-forge/web
+        working-directory: ul-forge
     steps:
       - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-unknown-unknown
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: ul-forge
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
           cache-dependency-path: ul-forge/web/package-lock.json
 
+      - name: Install wasm-pack
+        run: curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+
+      - name: Build WASM
+        run: wasm-pack build crates/ul-game --target web --out-dir ../../web/wasm-pkg --out-name ul_wasm
+
       - name: Install
+        working-directory: ul-forge/web
         run: npm ci
 
       - name: Type check
+        working-directory: ul-forge/web
         run: npx tsc --noEmit
 
       - name: Test
+        working-directory: ul-forge/web
         run: npm test

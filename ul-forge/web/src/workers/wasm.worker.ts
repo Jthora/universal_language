@@ -6,9 +6,17 @@
  *   ← { type: "ready" }
  *   → { type: "pipeline", id, source } — run full pipeline
  *   ← { type: "result", id, gir, validation, svg, error }
+ *   → { type: "deparse", id, gir }   — deparse GIR → text
+ *   ← { type: "deparse-result", id, text, error }
  */
 
-import init, { parse, validate, render, deparse } from "ul-wasm";
+import wasmInit, {
+  init as wasmModuleInit,
+  parseUlScript,
+  validateGir,
+  renderSvg,
+  deparseGir,
+} from "ul-wasm";
 
 let initialized = false;
 
@@ -17,7 +25,8 @@ self.onmessage = async (e: MessageEvent) => {
 
   if (msg.type === "init") {
     if (!initialized) {
-      await init();
+      await wasmInit();
+      wasmModuleInit();
       initialized = true;
     }
     self.postMessage({ type: "ready" });
@@ -27,10 +36,10 @@ self.onmessage = async (e: MessageEvent) => {
   if (msg.type === "pipeline") {
     const { id, source } = msg;
     try {
-      const gir = parse(source);
-      const girJson = JSON.stringify(gir);
-      const validation = validate(girJson);
-      const svg = render(girJson);
+      const girJson = parseUlScript(source) as string;
+      const gir = JSON.parse(girJson);
+      const validation = validateGir(girJson, false);
+      const svg = renderSvg(girJson, 256, 256) as string;
       self.postMessage({ type: "result", id, gir, validation, svg, error: null });
     } catch (err: unknown) {
       const error = err instanceof Error ? err.message : String(err);
@@ -42,7 +51,7 @@ self.onmessage = async (e: MessageEvent) => {
     const { id, gir } = msg;
     try {
       const girJson = JSON.stringify(gir);
-      const text = deparse(girJson);
+      const text = deparseGir(girJson) as string;
       self.postMessage({ type: "deparse-result", id, text, error: null });
     } catch (err: unknown) {
       const error = err instanceof Error ? err.message : String(err);

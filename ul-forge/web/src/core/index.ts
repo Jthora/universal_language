@@ -2,6 +2,7 @@
  * @ul-forge/core — TypeScript wrapper for UL Forge WASM module.
  *
  * Provides typed interfaces over the raw wasm-bindgen bindings.
+ * Wraps all 23 WASM entry points from ul-game with typed signatures.
  */
 
 // ── GIR types (mirror Rust types) ──
@@ -71,16 +72,159 @@ export interface RenderOptions {
   embedGir?: boolean;
 }
 
+// ── Game types (mirror Rust ul-game types) ──
+
+export type OperationName =
+  | "predicate"
+  | "modify_entity"
+  | "modify_relation"
+  | "negate"
+  | "conjoin"
+  | "disjoin"
+  | "embed"
+  | "abstract"
+  | "compose"
+  | "invert"
+  | "quantify";
+
+export type Grade = "exact" | "close" | "partial" | "unrelated";
+
+export type Tier = "forced" | "distinguished" | "conventional";
+
+export type Easing = "linear" | "ease_in" | "ease_out" | "ease_in_out";
+
+export interface PartialCredit {
+  structural_match: number;
+  sort_correctness: number;
+  operation_correctness: number;
+  sequence_order: number;
+}
+
+export interface EvaluationResult {
+  score: number;
+  grade: Grade;
+  matched_rules: string[];
+  violated_rules: string[];
+  feedback: string[];
+}
+
+export interface ScoreResult {
+  score: number;
+  grade: Grade;
+  partial_credit: PartialCredit;
+  feedback: string[];
+}
+
+export interface JaneResult {
+  score: number;
+  grade: Grade;
+  improvements: string[];
+  proficiency_delta: Record<string, number>;
+}
+
+export interface SequenceResult {
+  valid: boolean;
+  errors: string[];
+  pair_scores: number[];
+}
+
+export interface AnimationKeyframe {
+  node_id: string;
+  timestamp_ms: number;
+  x: number;
+  y: number;
+  scale: number;
+  rotation: number;
+  opacity: number;
+  easing: Easing;
+}
+
+export interface AnimationSequence {
+  keyframes: AnimationKeyframe[];
+  total_duration_ms: number;
+}
+
+export interface LoadResult {
+  loaded: number;
+  errors: string[];
+}
+
+export interface StructureReport {
+  node_count: number;
+  edge_count: number;
+  primitive_counts: Record<string, number>;
+  sort_distribution: Record<string, number>;
+  detected_operations: string[];
+  depth: number;
+  breadth: number;
+  complexity_score: number;
+}
+
+export interface Hint {
+  severity: string;
+  category: string;
+  message: string;
+}
+
+export interface Puzzle {
+  id: string;
+  difficulty: number;
+  level: number;
+  required_operations: string[];
+  description: string;
+  target_gir_json: string;
+}
+
+export interface LexiconEntry {
+  id: number;
+  level: number;
+  name: string;
+  tier: string;
+  symbol: string;
+  sigma_ul: string;
+  labels: string[];
+}
+
+export interface GameConfig {
+  rules_json?: string;
+  session_id?: string;
+}
+
 // ── Core API ──
 
-import init, {
-  parse as wasmParse,
-  validate as wasmValidate,
-  render as wasmRender,
-  deparse as wasmDeparse,
+import wasmInit, {
+  init as wasmModuleInit,
+  parseUlScript as wasmParseUlScript,
+  deparseGir as wasmDeparseGir,
+  validateGir as wasmValidateGir,
+  renderSvg as wasmRenderSvg,
+  renderGlyphPreview as wasmRenderGlyphPreview,
+  createContext as wasmCreateContext,
+  evaluate as wasmEvaluate,
+  scoreComposition as wasmScoreComposition,
+  evaluateJaneAttempt as wasmEvaluateJaneAttempt,
+  validateSequence as wasmValidateSequence,
+  getAnimationSequence as wasmGetAnimationSequence,
+  layout as wasmLayout,
+  loadCustomDefinitions as wasmLoadCustomDefinitions,
+  applyOperation as wasmApplyOperation,
+  composeGir as wasmComposeGir,
+  detectOperations as wasmDetectOperations,
+  analyzeStructure as wasmAnalyzeStructure,
+  getHints as wasmGetHints,
+  analyzeHints as wasmAnalyzeHints,
+  getNextPuzzle as wasmGetNextPuzzle,
+  queryLexicon as wasmQueryLexicon,
+  lookupLexiconEntry as wasmLookupLexiconEntry,
 } from "ul-wasm";
 
 let initialized = false;
+
+function ensureInit(): void {
+  if (!initialized) {
+    throw new Error("WASM not initialized. Call initialize() first.");
+  }
+}
 
 /**
  * Initialize the WASM module. Must be called before any other function.
@@ -88,54 +232,62 @@ let initialized = false;
  */
 export async function initialize(): Promise<void> {
   if (!initialized) {
-    await init();
+    await wasmInit();
+    wasmModuleInit();
     initialized = true;
   }
 }
 
+/** For testing: reset the initialized flag. */
+export function _resetForTesting(): void {
+  initialized = false;
+}
+
+// ── UL-Core pass-throughs ──
+
 /**
  * Parse UL-Script text into a GIR document.
- * @throws Error if the input has syntax errors.
  */
 export function parse(input: string): Gir {
-  if (!initialized) {
-    throw new Error("WASM not initialized. Call initialize() first.");
-  }
-  return wasmParse(input) as Gir;
+  ensureInit();
+  const json = wasmParseUlScript(input) as string;
+  return JSON.parse(json) as Gir;
 }
 
 /**
  * Validate a GIR document against Σ_UL constraints.
  */
-export function validate(gir: Gir): ValidationResult {
-  if (!initialized) {
-    throw new Error("WASM not initialized. Call initialize() first.");
-  }
+export function validate(gir: Gir, checkGeometry = false): ValidationResult {
+  ensureInit();
   const json = JSON.stringify(gir);
-  return wasmValidate(json) as ValidationResult;
+  return wasmValidateGir(json, checkGeometry) as ValidationResult;
 }
 
 /**
  * Render a GIR document to SVG string.
- * @throws Error if the GIR is invalid for rendering.
  */
-export function render(gir: Gir): string {
-  if (!initialized) {
-    throw new Error("WASM not initialized. Call initialize() first.");
-  }
+export function render(gir: Gir, width = 256, height = 256): string {
+  ensureInit();
   const json = JSON.stringify(gir);
-  return wasmRender(json);
+  return wasmRenderSvg(json, width, height) as string;
+}
+
+/**
+ * Render a GIR to a compact 64×64 SVG preview.
+ */
+export function renderPreview(gir: Gir): string {
+  ensureInit();
+  const json = JSON.stringify(gir);
+  return wasmRenderGlyphPreview(json) as string;
 }
 
 /**
  * Convert a GIR document back to canonical UL-Script text.
  */
 export function deparse(gir: Gir): string {
-  if (!initialized) {
-    throw new Error("WASM not initialized. Call initialize() first.");
-  }
+  ensureInit();
   const json = JSON.stringify(gir);
-  return wasmDeparse(json);
+  return wasmDeparseGir(json) as string;
 }
 
 /**
@@ -148,7 +300,6 @@ export function parseAndRender(input: string): string {
 
 /**
  * Convenience: parse, validate, and render in one call.
- * Returns validation result alongside the SVG (or null if invalid).
  */
 export function parseValidateRender(input: string): {
   gir: Gir;
@@ -159,4 +310,172 @@ export function parseValidateRender(input: string): {
   const validation = validate(gir);
   const svg = validation.valid ? render(gir) : null;
   return { gir, validation, svg };
+}
+
+// ── Game context ──
+
+/**
+ * Create a new game context. Returns a context ID.
+ */
+export function createContext(config: GameConfig = {}): number {
+  ensureInit();
+  return wasmCreateContext(JSON.stringify(config));
+}
+
+/**
+ * Evaluate a GIR against all active composition rules in a context.
+ */
+export function evaluate(ctxId: number, gir: Gir): EvaluationResult {
+  ensureInit();
+  return wasmEvaluate(ctxId, JSON.stringify(gir)) as EvaluationResult;
+}
+
+/**
+ * Score a composition against a specific puzzle target.
+ */
+export function scoreComposition(
+  ctxId: number,
+  gir: Gir,
+  targetJson: string,
+): ScoreResult {
+  ensureInit();
+  return wasmScoreComposition(ctxId, JSON.stringify(gir), targetJson) as ScoreResult;
+}
+
+/**
+ * Evaluate a learning attempt with proficiency tracking.
+ */
+export function evaluateJaneAttempt(
+  ctxId: number,
+  attempt: Gir,
+  expected: Gir,
+): JaneResult {
+  ensureInit();
+  return wasmEvaluateJaneAttempt(
+    ctxId,
+    JSON.stringify(attempt),
+    JSON.stringify(expected),
+  ) as JaneResult;
+}
+
+/**
+ * Validate ordering constraints across a sequence of GIRs.
+ */
+export function validateSequence(ctxId: number, glyphs: Gir[]): SequenceResult {
+  ensureInit();
+  const jsons = glyphs.map((g) => JSON.stringify(g));
+  return wasmValidateSequence(ctxId, JSON.stringify(jsons)) as SequenceResult;
+}
+
+/**
+ * Generate construction-order animation keyframes for a GIR.
+ */
+export function getAnimationSequence(
+  gir: Gir,
+  width: number,
+  height: number,
+): AnimationSequence {
+  ensureInit();
+  return wasmGetAnimationSequence(JSON.stringify(gir), width, height) as AnimationSequence;
+}
+
+/**
+ * Compute positioned geometry for rendering a GIR.
+ */
+export function layout(gir: Gir, width: number, height: number): unknown {
+  ensureInit();
+  return wasmLayout(JSON.stringify(gir), width, height);
+}
+
+/**
+ * Load custom composition rules into an existing context.
+ */
+export function loadCustomDefinitions(ctxId: number, rulesJson: string): LoadResult {
+  ensureInit();
+  return wasmLoadCustomDefinitions(ctxId, rulesJson) as LoadResult;
+}
+
+// ── Algebraic composer ──
+
+/**
+ * Apply a Σ_UL operation to GIR operands.
+ */
+export function applyOperation(operation: OperationName, operands: Gir[]): Gir {
+  ensureInit();
+  const jsons = operands.map((g) => JSON.stringify(g));
+  const result = wasmApplyOperation(operation, JSON.stringify(jsons)) as string;
+  return JSON.parse(result) as Gir;
+}
+
+/**
+ * Combine two GIRs with a named binary operation.
+ */
+export function composeGir(a: Gir, b: Gir, operation: OperationName): Gir {
+  ensureInit();
+  const result = wasmComposeGir(
+    JSON.stringify(a),
+    JSON.stringify(b),
+    operation,
+  ) as string;
+  return JSON.parse(result) as Gir;
+}
+
+/**
+ * Detect which Σ_UL operations are expressed in a GIR.
+ */
+export function detectOperations(gir: Gir): string[] {
+  ensureInit();
+  return wasmDetectOperations(JSON.stringify(gir)) as string[];
+}
+
+/**
+ * Compute a comprehensive structural analysis report for a GIR.
+ */
+export function analyzeStructure(gir: Gir): StructureReport {
+  ensureInit();
+  return wasmAnalyzeStructure(JSON.stringify(gir)) as StructureReport;
+}
+
+// ── Teaching system ──
+
+/**
+ * Generate contextual hints by comparing an attempt GIR to a target.
+ */
+export function getHints(attempt: Gir, target: Gir): Hint[] {
+  ensureInit();
+  return wasmGetHints(JSON.stringify(attempt), JSON.stringify(target)) as Hint[];
+}
+
+/**
+ * Generate self-standing analysis hints for a GIR.
+ */
+export function analyzeHints(gir: Gir): Hint[] {
+  ensureInit();
+  return wasmAnalyzeHints(JSON.stringify(gir)) as Hint[];
+}
+
+/**
+ * Get the next appropriate puzzle given student proficiency.
+ */
+export function getNextPuzzle(proficiency: Record<string, number>): Puzzle {
+  ensureInit();
+  return wasmGetNextPuzzle(JSON.stringify(proficiency)) as Puzzle;
+}
+
+// ── Lexicon ──
+
+/**
+ * Search the 42-entry UL lexicon by query string.
+ */
+export function queryLexicon(query: string): LexiconEntry[] {
+  ensureInit();
+  return wasmQueryLexicon(query) as LexiconEntry[];
+}
+
+/**
+ * Look up a lexicon entry by exact name (case-insensitive).
+ */
+export function lookupLexiconEntry(name: string): LexiconEntry | null {
+  ensureInit();
+  return wasmLookupLexiconEntry(name) as LexiconEntry | null;
 }
