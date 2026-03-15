@@ -1,0 +1,28 @@
+---
+source: crates/ul-core/tests/snapshot_tests.rs
+expression: gir
+---
+{
+  "ul_gir": "0.1.0",
+  "root": "n1",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "enclosure",
+      "sort": "entity",
+      "shape": "circle"
+    },
+    {
+      "id": "n2",
+      "type": "point",
+      "sort": "entity"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n2",
+      "type": "contains"
+    }
+  ]
+}

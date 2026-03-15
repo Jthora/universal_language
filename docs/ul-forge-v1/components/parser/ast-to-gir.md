@@ -67,13 +67,18 @@ An angle node is created and attached to the connection's line node via `modifie
 
 ```
 Input:  ● →@60 ●
-Nodes:  n1 (point), n2 (line, direction=[0.866, 0.5]), n3 (angle, measure=60), n4 (point)
+Nodes:  n1 (point), n2 (line, direction=[0.5, 0.866]), n3 (angle, measure=60), n4 (point)
 Edges:  n2 →modified_by→ n3
         n1 →connects→ n2
         n2 →connects→ n4
 ```
 
 The line's direction vector is computed from the angle: `[cos(60°), sin(60°)] = [0.5, 0.866]`.
+
+> **Pipeline note (v1.1):** At parse time, `@N` is a syntactic property of the
+> Connection operator (see `ul-script-spec.md`). During AST→GIR, the angle
+> becomes a separate Angle node attached to the Line via `modified_by`. Both
+> documents describe different stages of the same pipeline.
 
 ### Rule 4: Operators → cross-edges
 
@@ -97,14 +102,19 @@ Edges:  n1 →contains→ n2
 
 The GIR root is determined by:
 1. If the glyph has a single top-level mark → that mark is root
-2. If the glyph has multiple top-level terms connected by operators → create an implicit root enclosure containing all terms
-3. If the implicit root is not needed (single enclosure at top level) → use that enclosure
+2. If the glyph has multiple top-level terms connected by operators → create an implicit root enclosure (`EnclosureShape::Circle`, label `_implicit_root`) containing all terms via `contains` edges
 
 ```
 Input:  ○{●}           → root = n1 (the circle)
 Input:  ○{●} | △{●}    → root = implicit enclosure containing both
 Input:  ● → ●          → root = implicit enclosure containing the full composition
+Input:  ● → ● → ●      → root = implicit enclosure containing all three terms + connections
+Input:  ○{● → ●}       → root = n1 (the circle); inner ● → ● gets its own implicit sub-root
 ```
+
+> **Note (v1.1):** The implementation *always* creates an implicit root for
+> multi-term compositions. There is no optimization to skip it when the top
+> level is already a single enclosure.
 
 ---
 

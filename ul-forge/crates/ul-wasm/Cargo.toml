@@ -1,0 +1,19 @@
+[package]
+name = "ul-wasm"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "WebAssembly bindings for Universal Language core"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+ul-core = { path = "../ul-core" }
+wasm-bindgen = "=0.2.99"
+serde = { workspace = true }
+serde_json = { workspace = true }
+serde-wasm-bindgen = "0.6"
+
+[dev-dependencies]
+wasm-bindgen-test = "=0.3.49"

@@ -60,6 +60,10 @@ UL-Script is a text format that encodes the geometric structure of UL glyphs. It
 
 ## Grammar (PEG)
 
+> **Abridged grammar** for quick reference. The canonical annotated grammar is in
+> [components/parser/grammar.md](../components/parser/grammar.md). The Pest
+> implementation is in `crates/ul-core/src/parser/ul_script.pest`.
+
 ```peg
 # Top-level
 Document    ← Glyph (Newline+ Glyph)* EOF
@@ -152,6 +156,11 @@ Specifies the angle (in degrees) of a connection or modifier.
 ∠60             # Freestanding angle modifier (60°)
 △{●} →@90 □{●} # Right-angle connection between enclosures
 ```
+
+> **Pipeline note (v1.1):** At parse time, `@N` is a syntactic property of the
+> Connection operator. During AST-to-GIR transformation, the angle becomes a
+> separate Angle node attached to the Line node via a `modified_by` edge. See
+> [ast-to-gir.md](../components/parser/ast-to-gir.md) Rule 3 for details.
 
 ### Comments
 

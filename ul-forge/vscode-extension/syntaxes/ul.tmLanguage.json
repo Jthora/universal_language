@@ -1,0 +1,75 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "UL-Script",
+  "scopeName": "source.ul",
+  "patterns": [
+    { "include": "#comment" },
+    { "include": "#angle" },
+    { "include": "#primitive" },
+    { "include": "#operator" },
+    { "include": "#number" },
+    { "include": "#brackets" }
+  ],
+  "repository": {
+    "comment": {
+      "name": "comment.line.number-sign.ul",
+      "match": "#.*$"
+    },
+    "primitive": {
+      "patterns": [
+        {
+          "name": "constant.character.primitive.point.ul",
+          "match": "[●*]"
+        },
+        {
+          "name": "constant.character.primitive.circle.ul",
+          "match": "○|/0"
+        },
+        {
+          "name": "constant.character.primitive.triangle.ul",
+          "match": "△|/3"
+        },
+        {
+          "name": "constant.character.primitive.square.ul",
+          "match": "□|/4"
+        }
+      ]
+    },
+    "operator": {
+      "patterns": [
+        {
+          "name": "keyword.operator.connection.ul",
+          "match": "→|←|↔|->|<->|<-"
+        },
+        {
+          "name": "keyword.operator.spatial.ul",
+          "match": "[|&]"
+        },
+        {
+          "name": "keyword.operator.curve.ul",
+          "match": "~"
+        }
+      ]
+    },
+    "angle": {
+      "name": "constant.numeric.angle.ul",
+      "match": "[∠@]\\d+(\\.\\d+)?"
+    },
+    "number": {
+      "name": "constant.numeric.ul",
+      "match": "\\b\\d+(\\.\\d+)?\\b"
+    },
+    "brackets": {
+      "patterns": [
+        {
+          "name": "punctuation.section.group.begin.ul",
+          "match": "[({]"
+        },
+        {
+          "name": "punctuation.section.group.end.ul",
+          "match": "[)}]"
+        }
+      ]
+    }
+  }
+}

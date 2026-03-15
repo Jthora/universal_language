@@ -1,0 +1,14 @@
+[build-system]
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "ul-forge"
+version = "0.1.0"
+description = "Universal Language parser, validator, and renderer"
+readme = "README.md"
+license = { text = "CC0-1.0" }
+requires-python = ">=3.10"
+
+[tool.maturin]
+features = ["pyo3/extension-module"]

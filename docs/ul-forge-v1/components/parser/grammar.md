@@ -1,6 +1,11 @@
 # PEG Grammar: UL-Script
 
 > The formal Parsing Expression Grammar for UL-Script, annotated with AST node types.
+>
+> **This is the canonical grammar reference.** The abridged version in
+> [ul-script-spec.md](../../specifications/ul-script-spec.md) is a summary for
+> quick reference. If they diverge, this file takes precedence. The actual Pest
+> implementation is in `crates/ul-core/src/parser/ul_script.pest`.
 
 ---
 

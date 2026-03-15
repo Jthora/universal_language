@@ -1,0 +1,11 @@
+[package]
+name = "ul-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Command-line tools for Universal Language"
+
+[dependencies]
+ul-core = { path = "../ul-core" }
+clap = { version = "4", features = ["derive"] }
+serde_json = { workspace = true }

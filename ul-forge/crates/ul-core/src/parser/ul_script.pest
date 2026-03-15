@@ -1,0 +1,78 @@
+// UL-Script PEG Grammar
+// See: docs/ul-forge-v1/components/parser/grammar.md
+
+// ═══════════════════════════════════════════════════
+// TOP LEVEL
+// ═══════════════════════════════════════════════════
+
+Document = { SOI ~ NEWLINE* ~ (Glyph ~ (NEWLINE+ ~ Glyph)*)? ~ NEWLINE* ~ EOI }
+
+Glyph = { Comment | Composition }
+
+Comment = { "#" ~ (!NEWLINE ~ ANY)* }
+
+// ═══════════════════════════════════════════════════
+// COMPOSITION
+// ═══════════════════════════════════════════════════
+
+Composition = { Term ~ (Operator ~ Term)* }
+
+Term = { Group | Mark }
+
+Group = { "(" ~ Composition ~ ")" }
+
+// ═══════════════════════════════════════════════════
+// OPERATORS (non-containment spatial relationships)
+// ═══════════════════════════════════════════════════
+
+Operator = { Connection | Adjacency | Intersection }
+
+Connection = { Arrow ~ AngleMod? }
+
+Adjacency = { "|" }
+
+Intersection = { "&" }
+
+// ═══════════════════════════════════════════════════
+// MARKS (geometric primitives with optional content)
+// ═══════════════════════════════════════════════════
+
+Mark = { Primitive ~ Content? }
+
+Content = { "{" ~ Composition ~ "}" }
+
+// ═══════════════════════════════════════════════════
+// PRIMITIVES
+// ═══════════════════════════════════════════════════
+
+Primitive = { Point | Enclosure | Curve | Arrow | AngleMod }
+
+// Points
+Point = { FilledPoint }
+FilledPoint = { "\u{25CF}" | "*" }
+
+// Enclosures
+Enclosure = { Circle | Triangle | Square }
+Circle    = { "\u{25CB}" | "/0" }
+Triangle  = { "\u{25B3}" | "/3" }
+Square    = { "\u{25A1}" | "/4" }
+
+// Arrows (lines)
+Arrow     = { BiArrow | RightArrow | LeftArrow }
+BiArrow   = { "\u{2194}" | "<->" }
+RightArrow = { "\u{2192}" | "->" }
+LeftArrow  = { "\u{2190}" | "<-" }
+
+// Curves
+Curve = { "~" }
+
+// Angle modifier
+AngleMod = { ("\u{2220}" | "@") ~ Number }
+
+// ═══════════════════════════════════════════════════
+// TERMINALS
+// ═══════════════════════════════════════════════════
+
+Number = @{ ASCII_DIGIT+ ~ ("." ~ ASCII_DIGIT+)? }
+
+WHITESPACE = _{ " " | "\t" }

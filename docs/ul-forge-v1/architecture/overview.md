@@ -98,7 +98,7 @@ These properties hold across all components:
 
 4. **Components are independently usable.** `ul-parse` works without `ul-render`. `ul-validate` works on hand-written JSON-GIR. The API wraps tools but doesn't replace them.
 
-5. **WASM compilation is a first-class target.** The Rust core compiles to WASM so the same parser/renderer runs in the browser without reimplementation in TypeScript.
+5. **WASM compilation is a first-class target.** The Rust core compiles to WASM so the same parser/renderer runs in the browser without reimplementation in TypeScript. The WASM crate (`ul-wasm`) is established in Phase 0 (Foundation) alongside the native binary. The TypeScript bridge and npm packaging (`@ul-forge/core`) are Phase 2 (Web Editor).
 
 ---
 

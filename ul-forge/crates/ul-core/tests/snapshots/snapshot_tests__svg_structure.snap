@@ -1,0 +1,22 @@
+---
+source: crates/ul-core/tests/snapshot_tests.rs
+expression: svg
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <style>
+      .ul-mark { stroke: black; stroke-width: 2; fill: none; }
+      .ul-point { fill: black; stroke: none; }
+      .ul-edge { stroke: black; stroke-width: 1.5; fill: none; }
+      .ul-edge-dashed { stroke: black; stroke-width: 1.5; fill: none; stroke-dasharray: 5,3; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="black" />
+    </marker>
+  </defs>
+  <g class="ul-glyph" role="img" aria-label="UL glyph" data-ul-root="n1">
+    <title>UL glyph</title>
+    <polygon points="200.0,107.6 120.0,246.2 280.0,246.2" class="ul-mark" data-ul-node="n1" />
+  </g>
+</svg>

@@ -1,0 +1,64 @@
+---
+source: crates/ul-core/tests/snapshot_tests.rs
+expression: gir
+---
+{
+  "ul_gir": "0.1.0",
+  "root": "n4",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "point",
+      "sort": "entity"
+    },
+    {
+      "id": "n2",
+      "type": "point",
+      "sort": "entity"
+    },
+    {
+      "id": "n3",
+      "type": "line",
+      "sort": "relation",
+      "direction": [
+        1.0,
+        0.0
+      ],
+      "directed": true
+    },
+    {
+      "id": "n4",
+      "type": "enclosure",
+      "sort": "entity",
+      "label": "_implicit_root",
+      "shape": "circle"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n3",
+      "type": "connects"
+    },
+    {
+      "source": "n3",
+      "target": "n2",
+      "type": "connects"
+    },
+    {
+      "source": "n4",
+      "target": "n1",
+      "type": "contains"
+    },
+    {
+      "source": "n4",
+      "target": "n2",
+      "type": "contains"
+    },
+    {
+      "source": "n4",
+      "target": "n3",
+      "type": "contains"
+    }
+  ]
+}

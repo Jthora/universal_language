@@ -1,0 +1,118 @@
+{
+  "name": "ul-forge",
+  "displayName": "UL Forge",
+  "description": "Universal Language glyph editing: syntax highlighting, live preview, validation, and export.",
+  "version": "0.1.0",
+  "publisher": "ulforge",
+  "license": "CC0-1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jthora/universal_language"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Visualization"
+  ],
+  "activationEvents": [
+    "onLanguage:ul"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "ul",
+        "aliases": ["UL-Script", "UL"],
+        "extensions": [".ul"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "ul",
+        "scopeName": "source.ul",
+        "path": "./syntaxes/ul.tmLanguage.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "ul-forge.openPreview",
+        "title": "UL Forge: Open Preview",
+        "icon": "$(preview)"
+      },
+      {
+        "command": "ul-forge.exportSvg",
+        "title": "UL Forge: Export SVG"
+      },
+      {
+        "command": "ul-forge.exportTikz",
+        "title": "UL Forge: Export TikZ"
+      },
+      {
+        "command": "ul-forge.showGir",
+        "title": "UL Forge: Show GIR"
+      },
+      {
+        "command": "ul-forge.validate",
+        "title": "UL Forge: Validate"
+      },
+      {
+        "command": "ul-forge.insertGlyph",
+        "title": "UL Forge: Insert Glyph"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "ul-forge.openPreview",
+          "when": "editorLangId == ul",
+          "group": "navigation"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "UL Forge",
+      "properties": {
+        "ul-forge.preview.autoRefresh": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically refresh preview on edit."
+        },
+        "ul-forge.preview.debounceMs": {
+          "type": "number",
+          "default": 200,
+          "description": "Debounce delay for preview refresh (ms)."
+        },
+        "ul-forge.render.width": {
+          "type": "number",
+          "default": 400,
+          "description": "SVG canvas width."
+        },
+        "ul-forge.render.height": {
+          "type": "number",
+          "default": 400,
+          "description": "SVG canvas height."
+        },
+        "ul-forge.validation.checkGeometry": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable geometric satisfiability checks."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "npx @vscode/vsce package --no-dependencies --out ul-forge.vsix"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0",
+    "@vscode/vsce": "^3.0.0"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "nodes": [
+    {"id": "n1", "node_type": "Point", "sort": "Entity", "label": null},
+    {"id": "n1", "node_type": "Circle", "sort": "Entity", "label": null}
+  ],
+  "edges": []
+}

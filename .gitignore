@@ -13,6 +13,10 @@ build/
 venv/
 ENV/
 
+# Rust
+target/
+Cargo.lock
+
 # OS files
 .DS_Store
 .DS_Store?

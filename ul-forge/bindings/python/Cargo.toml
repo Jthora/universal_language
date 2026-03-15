@@ -1,0 +1,15 @@
+[package]
+name = "ul-forge-python"
+version = "0.1.0"
+edition = "2021"
+description = "Python bindings for UL Forge — Universal Language parser, validator, and renderer"
+license = "CC0-1.0"
+
+[lib]
+name = "ul_forge"
+crate-type = ["cdylib"]
+
+[dependencies]
+ul-core = { path = "../../crates/ul-core" }
+pyo3 = { version = "0.24", features = ["extension-module"] }
+serde_json = "1"

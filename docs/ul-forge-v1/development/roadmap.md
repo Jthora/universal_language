@@ -4,6 +4,12 @@
 
 ---
 
+## v1.1 Hardening Release
+
+> **Detailed plan:** [v1.1-plan.md](v1.1-plan.md) — 8 sprints covering panic safety, security, documentation fixes, test infrastructure, CI/CD, template completion, frontend hardening, and spec alignment. Must be completed before Phase 4 begins.
+
+---
+
 ## Vision
 
 UL Forge v1 is the minimum viable toolchain for composing, validating, and rendering Universal Language glyphs. By the end of v1, a user can:
@@ -38,7 +44,7 @@ UL Forge v1 is the minimum viable toolchain for composing, validating, and rende
 - [ ] GIR serialization: `serde` JSON round-trip for all core types
 - [ ] Test harness: `cargo test` runs, property tests with `proptest`
 - [ ] CI pipeline: GitHub Actions — build, test, clippy, format check
-- [ ] WASM build: `wasm-pack build` produces working npm package
+- [ ] WASM build: `wasm-pack build` produces working `.wasm` binary (TypeScript wrapper deferred to Phase 2 M2.1)
 - [ ] Documentation: `CONTRIBUTING.md`, `README.md` for developers
 
 ### Exit Criteria
@@ -184,37 +190,90 @@ UL Forge v1 is the minimum viable toolchain for composing, validating, and rende
 
 **Goal:** AI assistance, real-time collaboration, and the complete template library.
 
+> **Detailed plan:** [phase-4-plan.md](phase-4-plan.md) — full task breakdown, dependency graph, file deliverables, and exit criteria.
+
 ### Milestone 4.1: Complete Template Library
 
-- [ ] Implement all 42 canonical lexicon templates (Tiers 1-3)
-- [ ] Template composition: combine templates at anchor points
-- [ ] Template search: find templates by geometric pattern or semantic label
+- [ ] Implement all 42 canonical lexicon templates (Tiers 1-3) in `templates.rs`
+- [ ] Add anchor points to Template struct for composition attachment
+- [ ] Template composition engine: combine templates at named anchor points
+- [ ] Template search: find templates by label, pattern, or sort signature
+- [ ] Snapshot tests for all 42 templates
+- [ ] Update VS Code insert-glyph to full 42 templates
 
 ### Milestone 4.2: AI Integration
 
-- [ ] LLM interface: natural language ↔ UL-Script translation
-- [ ] Prompt engineering for UL-Script generation
-- [ ] GIR validation loop: LLM generates → validator checks → feedback → retry
-- [ ] AI assistant panel in web editor
+**M4.2a — LLM Interface (Core):**
+- [ ] New `crates/ul-ai/` crate: provider-agnostic LLM client
+- [ ] Provider implementations: OpenAI, Anthropic, Ollama
+- [ ] System prompt builder (<2000 tokens): Σ_UL spec + 42 templates + sort rules
+- [ ] `compose()`: natural language → UL-Script with validation-in-the-loop (max 3 retries)
+- [ ] `explain()`: UL-Script → natural language description
+- [ ] `suggest()`: partial UL-Script → 3 validated completions
+- [ ] CLI commands: `ul ai compose`, `ul ai explain`, `ul ai suggest`
+- [ ] API endpoints: `POST /ai/compose`, `/ai/explain`, `/ai/suggest`
+- [ ] Integration tests with mock HTTP provider
+
+**M4.2b — AI Panel (Web Editor):**
+- [ ] TypeScript AI client mirroring Rust crate (compose, explain, suggest)
+- [ ] `AiPanel.tsx`: collapsible side panel with compose input, explain display, suggest ghost text
+- [ ] API key management in localStorage (never sent to UL Forge servers)
+- [ ] Provider/model selector dropdown
+- [ ] Keyboard shortcut: `Ctrl+Shift+A` toggles panel
+
+**M4.2c — GNN Interface (Stretch):**
+- [ ] PyTorch Geometric glyph encoder (GIN, 9→64→32)
+- [ ] Training on 42 canonical glyphs + augmented compositions
+- [ ] `ul_forge.similar()` and `ul_forge.analogy()` Python functions
+
+**M4.2d — Vision Interface (Stretch):**
+- [ ] Image → vision LLM → UL-Script pipeline
+- [ ] Web editor "Upload glyph" button
+
+**M4.2e — Theorem Prover (Stretch):**
+- [ ] Z3/SMT encoding of sort constraints
+- [ ] `ul prove <file.ul>` CLI command
 
 ### Milestone 4.3: Collaboration
 
-- [ ] Structural diff algorithm for GIR documents
-- [ ] Three-way merge for GIR (base, ours, theirs)
-- [ ] CRDT model for real-time collaborative editing (Yjs integration)
-- [ ] Collaboration server with room management
+**M4.3a — Structural Diff & Merge:**
+- [ ] `diff.rs` module in ul-core: graph-aware diff (add/remove/modify operations)
+- [ ] `merge.rs` module: three-way merge with conflict detection
+- [ ] CLI commands: `ul diff`, `ul merge`
+- [ ] Git merge driver: `*.ul.json merge=ul-forge`
+
+**M4.3b — CRDT Real-Time Collaboration:**
+- [ ] Yjs integration in web editor: Y.Map (nodes) + Y.Array (edges)
+- [ ] GIR ↔ Yjs bidirectional sync
+- [ ] Awareness protocol (collaborator cursors + names)
+- [ ] Collaboration server (Node.js y-websocket relay)
+- [ ] Room management, offline support (IndexedDB), auto-reconnect
+- [ ] Collaboration UI: share button, cursor rendering, connection status
 
 ### Milestone 4.4: Advanced Features
 
-- [ ] TikZ output polishing for publication quality
-- [ ] Batch rendering for multiple glyphs
-- [ ] GIR query language (find subgraphs matching a pattern)
-- [ ] Performance optimization: incremental parsing, cached rendering
+- [ ] TikZ output: complete SVG→TikZ mapping, LaTeX preamble, compile tests
+- [ ] Batch rendering: `ul render --batch`, parallel with rayon, atlas output
+- [ ] GIR query language: Cypher-inspired pattern matching on GIR subgraphs
+- [ ] Performance: incremental parsing, render caching, WASM size optimization
+- [ ] Benchmark suite: target <50ms for 50-node GIR in browser
+
+### Internal Dependencies
+
+```
+M4.1 Templates ──→ M4.2a LLM (needs templates in prompt)
+                 ──→ M4.3a Diff (needs templates for composition tests)
+M4.2a LLM ──→ M4.2b AI Panel
+M4.3a Diff ──→ M4.3b CRDT
+M4.4a-d are independent (parallelizable)
+```
 
 ### Exit Criteria
-- All 42 canonical glyphs have validated templates
+- All 42 canonical glyphs have validated templates (snapshot tests)
 - AI can translate simple natural language prompts to valid UL-Script
 - Two users can edit the same glyph simultaneously in the web editor
+- TikZ output compiles for all 42 templates
+- 126+ existing tests still pass (no regressions)
 
 ---
 

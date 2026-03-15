@@ -132,3 +132,35 @@
 **Decision:** Parser converts UL-Script → GIR with basic structural correctness. Validator is a separate tool that checks graph invariants, sort constraints, and geometry satisfiability on any GIR, regardless of origin.
 
 **Consequences:** `ul-validate` works on hand-written JSON-GIR. AI agents can generate GIR and validate it without going through UL-Script. The parser is simpler because it doesn't carry all validation logic.
+
+---
+
+## ADR-009: Two-Stage WASM Strategy
+
+**Status:** Accepted  
+**Date:** 2026-03-14  
+**Clarified:** v1.1
+
+**Context:** The WASM crate (`ul-wasm`) produces a raw `.wasm` binary via `wasm-pack build`. The Web Editor needs a TypeScript-friendly API around this binary. These are different deliverables with different dependencies.
+
+**Decision:** Phase 0 establishes the WASM crate — `wasm-pack build` compiles `ul-core` to WebAssembly. Phase 2 (M2.1) wraps the WASM module in TypeScript bindings (`@ul-forge/core` npm package) with `parse()`, `render()`, `validate()` entry points.
+
+**Alternatives:**
+- **Ship TypeScript wrapper in Phase 0:** Would add Node.js/npm tooling as a Phase 0 dependency. Premature — the API surface isn't stable yet.
+- **Skip WASM in Phase 0:** Would delay browser validation until Phase 2. The CI pipeline can't test WASM compilation regressions during Phases 0–1.
+
+**Consequences:** Phase 0 CI validates WASM compilation without needing npm. Phase 2 builds the user-facing bridge once the core API is stable. The overview.md reflects this split.
+
+---
+
+## ADR-010: Angle Attachment Pipeline
+
+**Status:** Accepted  
+**Date:** 2026-03-14  
+**Clarified:** v1.1
+
+**Context:** The UL-Script spec says `@N` modifies the Connection operator (syntactic level). The AST-to-GIR transform creates a separate Angle node attached to the Line node via `modified_by` (semantic level). This appeared contradictory.
+
+**Decision:** Both descriptions are correct at different pipeline stages. At parse time, angle is a property of the `Connection` AST variant. During AST→GIR transform, the angle becomes an independent node with a `modified_by` edge to the line. This two-stage representation is intentional.
+
+**Consequences:** Both documents now reference each other with "Pipeline note (v1.1)" annotations. The validator permits 0–2 `modified_by` sources per angle node (0 for standalone `∠N`, 1 for connection-attached `→@N`).
