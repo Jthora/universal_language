@@ -1,0 +1,32 @@
+{
+  "name": "@ul-forge/sdk",
+  "version": "0.1.0",
+  "description": "Universal Language SDK — typed TypeScript API over UL Forge WASM module",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./types": "./src/types.ts",
+    "./cache": "./src/cache.ts"
+  },
+  "files": [
+    "src/"
+  ],
+  "license": "CC0-1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jthora/universal_language",
+    "directory": "ul-forge/packages/sdk"
+  },
+  "keywords": [
+    "universal-language",
+    "ul-forge",
+    "wasm",
+    "formal-language",
+    "game-engine"
+  ],
+  "peerDependencies": {
+    "ul-wasm": "*"
+  }
+}

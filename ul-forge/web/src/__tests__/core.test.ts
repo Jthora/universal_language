@@ -44,6 +44,7 @@ import {
   getNextPuzzle,
   queryLexicon,
   lookupLexiconEntry,
+  clearCaches,
 } from "../core";
 
 import { wasmMock, resetWasmMock } from "./helpers/wasm-mock";
@@ -51,6 +52,7 @@ import { SINGLE_POINT, PREDICATE_GIR, ENCLOSURE_GIR } from "./helpers/gir-fixtur
 
 beforeEach(async () => {
   resetWasmMock();
+  clearCaches();
   _resetForTesting();
   await initialize();
 });

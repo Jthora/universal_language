@@ -190,6 +190,41 @@ export interface GameConfig {
   session_id?: string;
 }
 
+// ── Layout geometry types (mirror Rust ul-core::renderer::layout) ──
+
+export type ShapeType =
+  | { Point: { radius: number } }
+  | { Circle: { radius: number } }
+  | { Triangle: { size: number } }
+  | { Square: { size: number } }
+  | { Line: { x1: number; y1: number; x2: number; y2: number; directed: boolean } }
+  | { Angle: { radius: number; degrees: number } }
+  | { Curve: { x1: number; y1: number; x2: number; y2: number; curvature: number } };
+
+export interface PositionedElement {
+  node_id: string;
+  x: number;
+  y: number;
+  shape: ShapeType;
+}
+
+export interface LayoutConnection {
+  edge_id: string;
+  x1: number;
+  y1: number;
+  x2: number;
+  y2: number;
+  directed: boolean;
+  dashed: boolean;
+}
+
+export interface PositionedGlyph {
+  elements: PositionedElement[];
+  connections: LayoutConnection[];
+  width: number;
+  height: number;
+}
+
 // ── Core API ──
 
 import wasmInit, {
@@ -224,6 +259,49 @@ function ensureInit(): void {
   if (!initialized) {
     throw new Error("WASM not initialized. Call initialize() first.");
   }
+}
+
+// ── Result cache for game-loop performance ──
+
+/** Deterministic hash of a GIR for cache keys. */
+function girHash(gir: Gir): string {
+  return JSON.stringify({ r: gir.root, n: gir.nodes.length, e: gir.edges.length });
+}
+
+const MAX_CACHE_ENTRIES = 256;
+
+class ResultCache<T> {
+  private cache = new Map<string, T>();
+
+  get(key: string): T | undefined {
+    return this.cache.get(key);
+  }
+
+  set(key: string, value: T): void {
+    if (this.cache.size >= MAX_CACHE_ENTRIES) {
+      // Evict oldest entry (first inserted)
+      const first = this.cache.keys().next().value;
+      if (first !== undefined) this.cache.delete(first);
+    }
+    this.cache.set(key, value);
+  }
+
+  clear(): void {
+    this.cache.clear();
+  }
+}
+
+const layoutCache = new ResultCache<PositionedGlyph>();
+const evaluationCache = new ResultCache<EvaluationResult>();
+const renderCache = new ResultCache<string>();
+const structureCache = new ResultCache<StructureReport>();
+
+/** Clear all result caches (call when GIR changes). */
+export function clearCaches(): void {
+  layoutCache.clear();
+  evaluationCache.clear();
+  renderCache.clear();
+  structureCache.clear();
 }
 
 /**
@@ -264,12 +342,17 @@ export function validate(gir: Gir, checkGeometry = false): ValidationResult {
 }
 
 /**
- * Render a GIR document to SVG string.
+ * Render a GIR document to SVG string. Results are cached by GIR hash + dimensions.
  */
 export function render(gir: Gir, width = 256, height = 256): string {
   ensureInit();
+  const key = `${girHash(gir)}:${width}x${height}`;
+  const cached = renderCache.get(key);
+  if (cached) return cached;
   const json = JSON.stringify(gir);
-  return wasmRenderSvg(json, width, height) as string;
+  const svg = wasmRenderSvg(json, width, height) as string;
+  renderCache.set(key, svg);
+  return svg;
 }
 
 /**
@@ -324,10 +407,16 @@ export function createContext(config: GameConfig = {}): number {
 
 /**
  * Evaluate a GIR against all active composition rules in a context.
+ * Results are cached by context + GIR hash.
  */
 export function evaluate(ctxId: number, gir: Gir): EvaluationResult {
   ensureInit();
-  return wasmEvaluate(ctxId, JSON.stringify(gir)) as EvaluationResult;
+  const key = `${ctxId}:${girHash(gir)}`;
+  const cached = evaluationCache.get(key);
+  if (cached) return cached;
+  const result = wasmEvaluate(ctxId, JSON.stringify(gir)) as EvaluationResult;
+  evaluationCache.set(key, result);
+  return result;
 }
 
 /**
@@ -381,10 +470,18 @@ export function getAnimationSequence(
 
 /**
  * Compute positioned geometry for rendering a GIR.
+ * Returns raw element positions and shapes — ideal for game engine integration
+ * (Phaser, PixiJS, etc.) where you need coordinates, not SVG strings.
+ * Results are cached by GIR hash + dimensions.
  */
-export function layout(gir: Gir, width: number, height: number): unknown {
+export function layout(gir: Gir, width: number, height: number): PositionedGlyph {
   ensureInit();
-  return wasmLayout(JSON.stringify(gir), width, height);
+  const key = `${girHash(gir)}:${width}x${height}`;
+  const cached = layoutCache.get(key);
+  if (cached) return cached;
+  const result = wasmLayout(JSON.stringify(gir), width, height) as PositionedGlyph;
+  layoutCache.set(key, result);
+  return result;
 }
 
 /**
@@ -430,10 +527,16 @@ export function detectOperations(gir: Gir): string[] {
 
 /**
  * Compute a comprehensive structural analysis report for a GIR.
+ * Results are cached by GIR hash.
  */
 export function analyzeStructure(gir: Gir): StructureReport {
   ensureInit();
-  return wasmAnalyzeStructure(JSON.stringify(gir)) as StructureReport;
+  const key = girHash(gir);
+  const cached = structureCache.get(key);
+  if (cached) return cached;
+  const result = wasmAnalyzeStructure(JSON.stringify(gir)) as StructureReport;
+  structureCache.set(key, result);
+  return result;
 }
 
 // ── Teaching system ──

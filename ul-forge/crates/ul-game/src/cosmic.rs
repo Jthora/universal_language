@@ -101,8 +101,13 @@ pub fn pattern_matches(pattern: &GirPattern, gir: &Gir) -> bool {
 
     // Try to find an assignment: pattern node id → gir node id
     let mut assignment: HashMap<String, String> = HashMap::new();
-    backtrack(pattern, gir, &gir_node_ids, 0, &mut assignment)
+    let mut steps = 0usize;
+    backtrack(pattern, gir, &gir_node_ids, 0, &mut assignment, &mut steps)
 }
+
+/// Maximum backtracking steps before giving up (prevents exponential blowup
+/// in game-loop hot paths). Tuned for ~5ms budget on typical hardware.
+const MAX_BACKTRACK_STEPS: usize = 10_000;
 
 fn backtrack(
     pattern: &GirPattern,
@@ -110,7 +115,13 @@ fn backtrack(
     gir_node_ids: &[&str],
     depth: usize,
     assignment: &mut HashMap<String, String>,
+    steps: &mut usize,
 ) -> bool {
+    *steps += 1;
+    if *steps > MAX_BACKTRACK_STEPS {
+        return false; // budget exceeded — treat as no-match
+    }
+
     if depth == pattern.nodes.len() {
         // All pattern nodes assigned — check edge constraints
         return edges_match(&pattern.edges, gir, assignment);
@@ -130,7 +141,7 @@ fn backtrack(
         }
 
         assignment.insert(pnode.id.clone(), gir_id.to_string());
-        if backtrack(pattern, gir, gir_node_ids, depth + 1, assignment) {
+        if backtrack(pattern, gir, gir_node_ids, depth + 1, assignment, steps) {
             return true;
         }
         assignment.remove(&pnode.id);

@@ -19,3 +19,11 @@ repository = "https://github.com/Jthora/universal_language"
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
 thiserror = "2"
+
+# ── WASM / game release optimizations ──
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+strip = true
+# Note: panic = "unwind" required because ul-game uses catch_unwind for safety
