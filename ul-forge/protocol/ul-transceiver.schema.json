@@ -1,0 +1,156 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ulforge.dev/schemas/ul-transceiver/v1.json",
+  "title": "UL Transceiver Protocol Message",
+  "description": "Wire format for AI-to-AI communication using Universal Language meaning structures. Transport-agnostic: works over HTTP, WebSocket, stdio, or any byte stream.",
+  "type": "object",
+  "required": ["version", "message"],
+  "properties": {
+    "version": {
+      "type": "string",
+      "const": "1.0",
+      "description": "Protocol version"
+    },
+    "message": {
+      "$ref": "#/$defs/Message"
+    }
+  },
+  "$defs": {
+    "Message": {
+      "type": "object",
+      "required": ["id", "timestamp", "sender", "intent", "payload"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid",
+          "description": "Unique message identifier"
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO 8601 timestamp"
+        },
+        "sender": {
+          "$ref": "#/$defs/AgentIdentity"
+        },
+        "intent": {
+          "$ref": "#/$defs/Intent"
+        },
+        "payload": {
+          "$ref": "#/$defs/Payload"
+        },
+        "context": {
+          "$ref": "#/$defs/MessageContext"
+        }
+      }
+    },
+    "AgentIdentity": {
+      "type": "object",
+      "required": ["id"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Agent identifier"
+        },
+        "capabilities": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["parse", "validate", "render", "evaluate", "compose", "deparse", "analyze"]
+          },
+          "description": "UL operations this agent can perform"
+        }
+      }
+    },
+    "Intent": {
+      "type": "string",
+      "enum": [
+        "assert",
+        "query",
+        "propose",
+        "refine",
+        "validate_request",
+        "validate_response",
+        "capability_advertisement",
+        "ack"
+      ],
+      "description": "Message intent type"
+    },
+    "Payload": {
+      "type": "object",
+      "required": ["format"],
+      "properties": {
+        "format": {
+          "type": "string",
+          "enum": ["gir", "ul-script", "validation-result", "capability-list", "reference"],
+          "description": "Payload format discriminator"
+        },
+        "content": {
+          "description": "Payload content — type depends on format field"
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Confidence score for 'propose' intent"
+        }
+      }
+    },
+    "MessageContext": {
+      "type": "object",
+      "properties": {
+        "conversation_id": {
+          "type": "string",
+          "format": "uuid",
+          "description": "Groups related messages"
+        },
+        "in_reply_to": {
+          "type": "string",
+          "format": "uuid",
+          "description": "ID of the message being replied to"
+        },
+        "domain": {
+          "type": "string",
+          "description": "Knowledge domain (e.g., 'physics.thermodynamics')"
+        },
+        "sequence_number": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Message ordering within a conversation"
+        }
+      }
+    },
+    "CapabilityAdvertisement": {
+      "type": "object",
+      "required": ["operations", "protocol_version"],
+      "properties": {
+        "operations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "input", "output"],
+            "properties": {
+              "name": { "type": "string" },
+              "input": { "type": "string" },
+              "output": { "type": "string" }
+            }
+          }
+        },
+        "supported_sorts": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["entity", "relation", "modifier", "assertion"]
+          }
+        },
+        "max_gir_nodes": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "protocol_version": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

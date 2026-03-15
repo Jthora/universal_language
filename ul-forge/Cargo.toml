@@ -5,6 +5,8 @@ members = [
     "crates/ul-wasm",
     "crates/ul-api",
     "crates/ul-game",
+    "crates/ul-mcp",
+    "crates/ul-transceiver",
     "bindings/python",
 ]
 resolver = "2"

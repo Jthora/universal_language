@@ -1,0 +1,57 @@
+{
+  "name": "@ul-forge/core",
+  "version": "0.1.0",
+  "description": "Universal Language (UL) — parse, validate, render, and compose geometric meaning structures. WASM-powered, zero native dependencies.",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./types": {
+      "import": "./dist/types.js",
+      "types": "./dist/types.d.ts"
+    },
+    "./schemas/gir": "./schemas/gir.schema.json",
+    "./wasm": "./wasm/ul_wasm.js"
+  },
+  "files": [
+    "dist/",
+    "wasm/",
+    "schemas/",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "npm run copy-assets && npx tsc -p tsconfig.json",
+    "copy-assets": "mkdir -p wasm schemas && cp ../../web/wasm-pkg/ul_wasm_bg.wasm wasm/ && cp ../../web/wasm-pkg/ul_wasm.js wasm/ && cp ../../web/wasm-pkg/ul_wasm.d.ts wasm/ && cp ../../schemas/gir.schema.json schemas/",
+    "sync-types": "cp ../sdk/src/types.ts src/types.ts && cp ../sdk/src/cache.ts src/cache.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "universal-language",
+    "ul",
+    "formal-semantics",
+    "geometric-meaning",
+    "wasm",
+    "gir",
+    "sigma-ul",
+    "ai-agent",
+    "mcp"
+  ],
+  "license": "CC0-1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jthora/universal_language",
+    "directory": "ul-forge/packages/core"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "typescript": "~5.7.2",
+    "vitest": "^4.1.0"
+  }
+}

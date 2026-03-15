@@ -1,0 +1,44 @@
+{
+  "name": "@ul-forge/transceiver",
+  "version": "0.1.0",
+  "description": "UL Transceiver Protocol — TypeScript encode/decode library for AI-to-AI communication using Universal Language meaning structures",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./message": {
+      "import": "./dist/message.js",
+      "types": "./dist/message.d.ts"
+    },
+    "./codec": {
+      "import": "./dist/codec.js",
+      "types": "./dist/codec.d.ts"
+    }
+  },
+  "files": [
+    "dist/",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "npx tsc -p tsconfig.json",
+    "prepublishOnly": "npm run build"
+  },
+  "license": "CC0-1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jthora/universal_language",
+    "directory": "ul-forge/packages/transceiver"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "typescript": "~5.7.2",
+    "vitest": "^4.1.0"
+  }
+}

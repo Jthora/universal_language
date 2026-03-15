@@ -1,0 +1,54 @@
+{
+  "name": "@ul-forge/components",
+  "version": "0.1.0",
+  "description": "Universal Language web components — <ul-symbol>, <ul-composer>, <ul-dictionary> custom elements. Zero build system required.",
+  "type": "module",
+  "main": "dist/ul-components.esm.js",
+  "module": "dist/ul-components.esm.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/ul-components.esm.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./iife": "./dist/ul-components.iife.js"
+  },
+  "files": [
+    "dist/",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "universal-language",
+    "web-component",
+    "custom-element",
+    "ul-symbol",
+    "education",
+    "glyph"
+  ],
+  "license": "CC0-1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jthora/universal_language",
+    "directory": "ul-forge/packages/web-components"
+  },
+  "devDependencies": {
+    "jsdom": "^28.1.0",
+    "typescript": "~5.7.2",
+    "vite": "^6.3.5",
+    "vite-plugin-wasm": "^3.4.1",
+    "vitest": "^4.1.0"
+  },
+  "peerDependencies": {
+    "@ul-forge/core": ">=0.1.0"
+  },
+  "peerDependenciesMeta": {
+    "@ul-forge/core": {
+      "optional": true
+    }
+  }
+}

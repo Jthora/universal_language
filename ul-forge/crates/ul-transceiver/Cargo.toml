@@ -1,0 +1,14 @@
+[package]
+name = "ul-transceiver"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "UL Transceiver Protocol — encode/decode library for AI-to-AI communication using Universal Language meaning structures"
+
+[dependencies]
+ul-core = { path = "../ul-core" }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+uuid = { version = "1", features = ["v4", "serde"] }
+chrono = { version = "0.4", features = ["serde"] }
