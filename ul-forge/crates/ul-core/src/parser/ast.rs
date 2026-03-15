@@ -42,6 +42,8 @@ pub enum AstPrimitive {
     Circle,
     Triangle,
     Square,
+    Pentagon,
+    Hexagon,
     RightArrow,
     LeftArrow,
     BiArrow,

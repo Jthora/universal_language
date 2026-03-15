@@ -52,10 +52,12 @@ Point = { FilledPoint }
 FilledPoint = { "\u{25CF}" | "*" }
 
 // Enclosures
-Enclosure = { Circle | Triangle | Square }
+Enclosure = { Circle | Triangle | Square | Pentagon | Hexagon }
 Circle    = { "\u{25CB}" | "/0" }
 Triangle  = { "\u{25B3}" | "/3" }
 Square    = { "\u{25A1}" | "/4" }
+Pentagon  = { "\u{2B20}" | "/5" }
+Hexagon   = { "\u{2B21}" | "/6" }
 
 // Arrows (lines)
 Arrow     = { BiArrow | RightArrow | LeftArrow }

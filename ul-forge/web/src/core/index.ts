@@ -11,7 +11,7 @@ export type Sort = "entity" | "relation" | "modifier" | "assertion";
 
 export type NodeType = "point" | "line" | "angle" | "curve" | "enclosure";
 
-export type EnclosureShape = "circle" | "triangle" | "square";
+export type EnclosureShape = "circle" | "triangle" | "square" | "ellipse" | "polygon" | "freeform";
 
 export type EdgeType =
   | "contains"
@@ -30,6 +30,7 @@ export interface Node {
   directed?: boolean;
   measure?: number;
   curvature?: number;
+  curvature_profile?: number[];
   vertices?: number;
 }
 
@@ -55,10 +56,19 @@ export interface Gir {
 
 // ── Validation types ──
 
+/** Per-layer error classification for the 4-layer validation pipeline. */
+export interface ValidationLayers {
+  schema: string[];
+  sort: string[];
+  invariant: string[];
+  geometry: string[];
+}
+
 export interface ValidationResult {
   valid: boolean;
   errors: string[];
   warnings: string[];
+  layers: ValidationLayers;
 }
 
 // ── Render options ──
@@ -149,6 +159,12 @@ export interface LoadResult {
   errors: string[];
 }
 
+/** Symmetry group classification (Erlangen Program). */
+export type SymmetryGroup = "so2" | "d3" | "d4" | "d5" | "d6" | "bilateral" | "none";
+
+/** Part of speech derived from symmetry group. */
+export type PartOfSpeech = "determiner" | "noun" | "verb" | "adjective" | "proper_noun";
+
 export interface StructureReport {
   node_count: number;
   edge_count: number;
@@ -158,6 +174,29 @@ export interface StructureReport {
   depth: number;
   breadth: number;
   complexity_score: number;
+  symmetry_group: SymmetryGroup;
+  part_of_speech: PartOfSpeech;
+  node_symmetries: Record<string, SymmetryGroup>;
+}
+
+/** Erlangen hierarchy level for equivalence testing. */
+export type ErlangenLevel = "euclidean" | "similarity" | "affine" | "projective" | "topological";
+
+/** Sub-dimension scores for Erlangen equivalence. */
+export interface EquivalenceDimensions {
+  topology: number;
+  types: number;
+  sorts: number;
+  shapes: number;
+  metrics: number;
+}
+
+/** Result of comparing two GIRs at a given Erlangen level. */
+export interface EquivalenceResult {
+  level: ErlangenLevel;
+  score: number;
+  equivalent: boolean;
+  dimensions: EquivalenceDimensions;
 }
 
 export interface Hint {
@@ -197,6 +236,8 @@ export type ShapeType =
   | { Circle: { radius: number } }
   | { Triangle: { size: number } }
   | { Square: { size: number } }
+  | { Pentagon: { size: number } }
+  | { Hexagon: { size: number } }
   | { Line: { x1: number; y1: number; x2: number; y2: number; directed: boolean } }
   | { Angle: { radius: number; degrees: number } }
   | { Curve: { x1: number; y1: number; x2: number; y2: number; curvature: number } };
@@ -246,6 +287,7 @@ import wasmInit, {
   composeGir as wasmComposeGir,
   detectOperations as wasmDetectOperations,
   analyzeStructure as wasmAnalyzeStructure,
+  compareGir as wasmCompareGir,
   getHints as wasmGetHints,
   analyzeHints as wasmAnalyzeHints,
   getNextPuzzle as wasmGetNextPuzzle,
@@ -537,6 +579,21 @@ export function analyzeStructure(gir: Gir): StructureReport {
   const result = wasmAnalyzeStructure(JSON.stringify(gir)) as StructureReport;
   structureCache.set(key, result);
   return result;
+}
+
+/**
+ * Compare two GIR structures at a given Erlangen equivalence level.
+ *
+ * Levels (strictest → loosest):
+ * - "euclidean": identical types, shapes, angles, sizes
+ * - "similarity": ignore absolute scale
+ * - "affine": ignore proportions, keep containment structure
+ * - "projective": same incidence structure
+ * - "topological": graph isomorphism of types only
+ */
+export function compareGir(a: Gir, b: Gir, level: ErlangenLevel): EquivalenceResult {
+  ensureInit();
+  return wasmCompareGir(JSON.stringify(a), JSON.stringify(b), level) as EquivalenceResult;
 }
 
 // ── Teaching system ──

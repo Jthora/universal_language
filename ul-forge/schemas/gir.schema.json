@@ -1,0 +1,122 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Jthora/universal_language/schemas/gir.schema.json",
+  "title": "GIR (Geometric Intermediate Representation)",
+  "description": "JSON schema for the Universal Language Geometric Intermediate Representation. GIR encodes meaning structures using 5 geometric primitives (Point, Line, Angle, Curve, Enclosure) mapped to 4 algebraic sorts (Entity, Relation, Modifier, Assertion).",
+  "type": "object",
+  "required": ["root", "nodes", "edges"],
+  "properties": {
+    "root": {
+      "type": "string",
+      "description": "ID of the root node in the containment hierarchy."
+    },
+    "nodes": {
+      "type": "array",
+      "description": "All geometric nodes in the structure.",
+      "items": { "$ref": "#/$defs/Node" }
+    },
+    "edges": {
+      "type": "array",
+      "description": "All edges (relationships) between nodes.",
+      "items": { "$ref": "#/$defs/Edge" }
+    }
+  },
+  "$defs": {
+    "Node": {
+      "type": "object",
+      "required": ["id", "type", "sort"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier within the document."
+        },
+        "type": {
+          "$ref": "#/$defs/NodeType",
+          "description": "Geometric primitive type."
+        },
+        "sort": {
+          "$ref": "#/$defs/Sort",
+          "description": "Σ_UL algebraic sort."
+        },
+        "label": {
+          "type": "string",
+          "description": "Human-readable label (e.g. 'concept', 'existence')."
+        },
+        "shape": {
+          "$ref": "#/$defs/EnclosureShape",
+          "description": "Enclosure shape — only meaningful for enclosure nodes."
+        },
+        "directed": {
+          "type": "boolean",
+          "description": "Whether the line is directed (arrow) — only meaningful for line nodes."
+        },
+        "direction": {
+          "type": "array",
+          "items": { "type": "number" },
+          "minItems": 2,
+          "maxItems": 2,
+          "description": "Direction vector [dx, dy] — only meaningful for line nodes."
+        },
+        "measure": {
+          "type": "number",
+          "minimum": 0,
+          "exclusiveMaximum": 360,
+          "description": "Angle measure in degrees [0, 360) — only meaningful for angle nodes."
+        },
+        "curvature": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Constant curvature κ — only meaningful for curve nodes. When curvature_profile is present, this is the mean curvature."
+        },
+        "curvature_profile": {
+          "type": "array",
+          "items": { "type": "number" },
+          "description": "Piecewise curvature profile κ(s) sampled at uniform arc-length intervals. Overrides scalar curvature for variable-curvature curves."
+        },
+        "vertices": {
+          "type": "integer",
+          "minimum": 3,
+          "description": "Number of vertices — only meaningful for polygon enclosures."
+        }
+      }
+    },
+    "Edge": {
+      "type": "object",
+      "required": ["source", "target", "type"],
+      "properties": {
+        "source": {
+          "type": "string",
+          "description": "ID of the source node."
+        },
+        "target": {
+          "type": "string",
+          "description": "ID of the target node."
+        },
+        "type": {
+          "$ref": "#/$defs/EdgeType",
+          "description": "Relationship type."
+        }
+      }
+    },
+    "NodeType": {
+      "type": "string",
+      "enum": ["point", "line", "angle", "curve", "enclosure"],
+      "description": "The 5 geometric primitives of Universal Language."
+    },
+    "Sort": {
+      "type": "string",
+      "enum": ["entity", "relation", "modifier", "assertion"],
+      "description": "The 4 algebraic sorts of Σ_UL."
+    },
+    "EnclosureShape": {
+      "type": "string",
+      "enum": ["circle", "triangle", "square", "ellipse", "polygon", "freeform"],
+      "description": "Shape of an enclosure node. Circle=SO(2), Triangle=D₃, Square=D₄, Polygon=D_n (see vertices), Ellipse=bilateral, Freeform=no symmetry."
+    },
+    "EdgeType": {
+      "type": "string",
+      "enum": ["contains", "modified_by", "connects", "adjacent", "intersects"],
+      "description": "Geometric relationship between two nodes."
+    }
+  }
+}

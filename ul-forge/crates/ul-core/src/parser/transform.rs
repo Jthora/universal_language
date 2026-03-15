@@ -215,6 +215,16 @@ fn transform_mark(
         AstPrimitive::Circle => Node::enclosure(&id, EnclosureShape::Circle),
         AstPrimitive::Triangle => Node::enclosure(&id, EnclosureShape::Triangle),
         AstPrimitive::Square => Node::enclosure(&id, EnclosureShape::Square),
+        AstPrimitive::Pentagon => {
+            let mut n = Node::enclosure(&id, EnclosureShape::Polygon);
+            n.vertices = Some(5);
+            n
+        }
+        AstPrimitive::Hexagon => {
+            let mut n = Node::enclosure(&id, EnclosureShape::Polygon);
+            n.vertices = Some(6);
+            n
+        }
         AstPrimitive::RightArrow => {
             let mut n = Node::line(&id, true);
             n.direction = Some([1.0, 0.0]);

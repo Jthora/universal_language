@@ -152,6 +152,8 @@ fn parse_primitive(pair: pest::iterators::Pair<Rule>) -> Result<AstPrimitive, Ul
                 Rule::Circle => Ok(AstPrimitive::Circle),
                 Rule::Triangle => Ok(AstPrimitive::Triangle),
                 Rule::Square => Ok(AstPrimitive::Square),
+                Rule::Pentagon => Ok(AstPrimitive::Pentagon),
+                Rule::Hexagon => Ok(AstPrimitive::Hexagon),
                 rule => Err(UlError::Parse {
                     line: 0,
                     column: 0,

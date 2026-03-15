@@ -297,11 +297,39 @@ pub fn validate_gir(gir_json: &str, check_geometry: bool) -> Result<JsValue, JsE
         let gir =
             ul_core::Gir::from_json(&gir_json).map_err(|e| JsError::new(&e.to_string()))?;
         let result = ul_core::validator::validate(&gir, check_geometry);
-        // Convert to a serializable DTO (ValidationResult doesn't impl Serialize)
+        // Classify errors by validation layer
+        let mut layers = types::ValidationLayers::default();
+        for err in &result.errors {
+            let msg = err.to_string();
+            match err {
+                ul_core::error::UlError::MissingField { .. }
+                | ul_core::error::UlError::DuplicateNodeId { .. }
+                | ul_core::error::UlError::DanglingEdgeRef { .. } => {
+                    layers.schema.push(msg);
+                }
+                ul_core::error::UlError::SortViolation { .. }
+                | ul_core::error::UlError::DanglingModifier { .. } => {
+                    layers.sort.push(msg);
+                }
+                ul_core::error::UlError::ContainmentCycle { .. }
+                | ul_core::error::UlError::NoRoot
+                | ul_core::error::UlError::MultipleRoots { .. }
+                | ul_core::error::UlError::InvalidAngleArity { .. } => {
+                    layers.invariant.push(msg);
+                }
+                ul_core::error::UlError::Render { .. } => {
+                    layers.geometry.push(msg);
+                }
+                _ => {
+                    layers.schema.push(msg);
+                }
+            }
+        }
         let dto = types::ValidationDto {
             valid: result.valid,
             errors: result.errors.iter().map(|e| e.to_string()).collect(),
             warnings: result.warnings,
+            layers,
         };
         Ok(serde_wasm_bindgen::to_value(&dto)?)
     }))
@@ -467,6 +495,29 @@ pub fn analyze_structure(gir_json: &str) -> Result<JsValue, JsError> {
         Ok(serde_wasm_bindgen::to_value(&report)?)
     }))
     .unwrap_or_else(|_| Err(JsError::new("internal panic in analyzeStructure")))
+}
+
+/// Compare two GIR structures at a given Erlangen equivalence level.
+///
+/// `level` must be one of: "euclidean", "similarity", "affine", "projective", "topological".
+/// Returns a JSON-serialized `EquivalenceResult` with score, equivalence flag, and sub-dimensions.
+#[wasm_bindgen(js_name = "compareGir")]
+pub fn compare_gir(gir_a_json: &str, gir_b_json: &str, level: &str) -> Result<JsValue, JsError> {
+    let gir_a_json = gir_a_json.to_owned();
+    let gir_b_json = gir_b_json.to_owned();
+    let level = level.to_owned();
+    catch_unwind(AssertUnwindSafe(move || {
+        let gir_a =
+            ul_core::Gir::from_json(&gir_a_json).map_err(|e| JsError::new(&e.to_string()))?;
+        let gir_b =
+            ul_core::Gir::from_json(&gir_b_json).map_err(|e| JsError::new(&e.to_string()))?;
+        let erlangen_level: crate::types::ErlangenLevel =
+            serde_json::from_value(serde_json::Value::String(level))
+                .map_err(|e| JsError::new(&format!("invalid level: {e}")))?;
+        let result = analysis::compare_gir(&gir_a, &gir_b, erlangen_level);
+        Ok(serde_wasm_bindgen::to_value(&result)?)
+    }))
+    .unwrap_or_else(|_| Err(JsError::new("internal panic in compareGir")))
 }
 
 // ── SVG rendering pass-throughs ────────────────────────────────

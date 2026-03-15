@@ -64,7 +64,14 @@ fn deparse_node(gir: &Gir, node_id: &str, out: &mut String) {
                 Some(EnclosureShape::Circle) => out.push('○'),
                 Some(EnclosureShape::Triangle) => out.push('△'),
                 Some(EnclosureShape::Square) => out.push('□'),
-                _ => out.push('○'), // default to circle
+                Some(EnclosureShape::Polygon) => match node.vertices {
+                    Some(5) => out.push('⬠'),
+                    Some(6) => out.push('⬡'),
+                    _ => out.push('○'), // fallback for other polygons
+                },
+                Some(EnclosureShape::Ellipse) => out.push('○'), // render as circle in text
+                Some(EnclosureShape::Freeform) => out.push('○'),
+                None => out.push('○'), // default to circle
             }
         }
     }

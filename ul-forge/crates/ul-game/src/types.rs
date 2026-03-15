@@ -322,6 +322,101 @@ pub struct StructureReport {
     pub breadth: u32,
     /// Composite complexity score (0.0–1.0).
     pub complexity_score: f64,
+    /// Symmetry group of the root node (Erlangen classification).
+    pub symmetry_group: SymmetryGroup,
+    /// Part of speech derived from the root node's symmetry.
+    pub part_of_speech: PartOfSpeech,
+    /// Per-node symmetry breakdown: node_id → symmetry group.
+    pub node_symmetries: HashMap<String, SymmetryGroup>,
+}
+
+// ── Symmetry classification ─────────────────────────────────────
+
+/// Symmetry group of a geometric object (Erlangen Program).
+///
+/// Determines the grammatical role of a symbol in Universal Language.
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, Deserialize)]
+#[serde(rename_all = "snake_case")]
+pub enum SymmetryGroup {
+    /// SO(2): full continuous rotational symmetry (circle).
+    So2,
+    /// D₃: 3-fold dihedral symmetry (triangle).
+    D3,
+    /// D₄: 4-fold dihedral symmetry (square).
+    D4,
+    /// D₅: 5-fold dihedral symmetry (pentagon).
+    D5,
+    /// D₆: 6-fold dihedral symmetry (hexagon).
+    D6,
+    /// Bilateral: single mirror axis only (angle, undirected line, ellipse).
+    Bilateral,
+    /// None: no symmetry (directed line, point, freeform, curve).
+    None,
+}
+
+/// Part of speech derived from symmetry group classification.
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, Deserialize)]
+#[serde(rename_all = "snake_case")]
+pub enum PartOfSpeech {
+    /// Full SO(2) symmetry → applies universally.
+    Determiner,
+    /// High rotational symmetry (D₃–D₆) → context-independent concept.
+    Noun,
+    /// Low/no rotational symmetry, directional → action/process.
+    Verb,
+    /// Bilateral symmetry only → one dimension of comparison.
+    Adjective,
+    /// No symmetry, unique → refers to exactly one thing.
+    ProperNoun,
+}
+
+// ── Erlangen equivalence ────────────────────────────────────────
+
+/// Erlangen hierarchy level for comparing GIR structures.
+///
+/// From strictest to loosest invariant preservation:
+/// Euclidean ⊂ Similarity ⊂ Affine ⊂ Projective ⊂ Topological.
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, Deserialize)]
+#[serde(rename_all = "snake_case")]
+pub enum ErlangenLevel {
+    /// E(n): identical — same types, shapes, angles, sizes, labels.
+    Euclidean,
+    /// Sim(n): synonym — same structure, ignore scale differences.
+    Similarity,
+    /// Aff(n): paraphrase — same containment/parallel structure, ignore proportions.
+    Affine,
+    /// PGL(n): structural analog — same incidence structure, ignore which is parallel.
+    Projective,
+    /// Homeo: translation — same connectivity (graph isomorphism of types).
+    Topological,
+}
+
+/// Result of comparing two GIRs at a given Erlangen level.
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct EquivalenceResult {
+    /// The Erlangen level tested.
+    pub level: ErlangenLevel,
+    /// Overall equivalence score (0.0–1.0).
+    pub score: f64,
+    /// Whether the structures are equivalent at this level (score ≥ 0.95).
+    pub equivalent: bool,
+    /// Scores for each sub-dimension checked.
+    pub dimensions: EquivalenceDimensions,
+}
+
+/// Sub-dimension scores for Erlangen equivalence.
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct EquivalenceDimensions {
+    /// Topology: same node count, edge count, containment graph shape.
+    pub topology: f64,
+    /// Type match: same node types (point, line, angle, curve, enclosure).
+    pub types: f64,
+    /// Sort match: same sort assignments.
+    pub sorts: f64,
+    /// Shape match: same enclosure shapes (circle, triangle, etc.).
+    pub shapes: f64,
+    /// Metric match: same angles, curvatures, sizes.
+    pub metrics: f64,
 }
 
 // ── Validation DTO ─────────────────────────────────────────────
@@ -332,4 +427,19 @@ pub struct ValidationDto {
     pub valid: bool,
     pub errors: Vec<String>,
     pub warnings: Vec<String>,
+    /// Errors classified by validation layer.
+    pub layers: ValidationLayers,
+}
+
+/// Per-layer error classification for the 4-layer validation pipeline.
+#[derive(Debug, Clone, Default, Serialize, Deserialize)]
+pub struct ValidationLayers {
+    /// L1 Schema: duplicate IDs, dangling refs, missing fields.
+    pub schema: Vec<String>,
+    /// L2 Sort: sort constraint violations.
+    pub sort: Vec<String>,
+    /// L3 Invariant: containment cycles, root violations, arity checks.
+    pub invariant: Vec<String>,
+    /// L4 Geometry: geometric satisfiability errors.
+    pub geometry: Vec<String>,
 }

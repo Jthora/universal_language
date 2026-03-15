@@ -107,8 +107,14 @@ pub struct Node {
     pub measure: Option<f64>,
 
     /// Curvature (non-negative) — only meaningful for curve nodes.
+    /// When `curvature_profile` is absent, this is the constant curvature κ.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub curvature: Option<f64>,
+
+    /// Piecewise curvature profile κ(s) — sampled at uniform arc-length intervals.
+    /// When present, overrides the scalar `curvature` field for variable-curvature curves.
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub curvature_profile: Option<Vec<f64>>,
 
     /// Number of vertices — only meaningful for polygon enclosures.
     #[serde(skip_serializing_if = "Option::is_none")]
@@ -138,6 +144,7 @@ impl Node {
             directed: None,
             measure: None,
             curvature: None,
+            curvature_profile: None,
             vertices: None,
         }
     }

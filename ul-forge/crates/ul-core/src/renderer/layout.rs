@@ -37,6 +37,12 @@ pub enum Shape {
     Square {
         size: f64,
     },
+    Pentagon {
+        size: f64,
+    },
+    Hexagon {
+        size: f64,
+    },
     Line {
         x1: f64,
         y1: f64,
@@ -293,7 +299,14 @@ fn node_to_shape(node: &crate::types::node::Node, bbox: &BBox) -> Shape {
             Some(EnclosureShape::Circle) => Shape::Circle { radius: size * 0.4 },
             Some(EnclosureShape::Triangle) => Shape::Triangle { size: size * 0.7 },
             Some(EnclosureShape::Square) => Shape::Square { size: size * 0.7 },
-            _ => Shape::Circle { radius: size * 0.4 },
+            Some(EnclosureShape::Polygon) => match node.vertices {
+                Some(5) => Shape::Pentagon { size: size * 0.7 },
+                Some(6) => Shape::Hexagon { size: size * 0.7 },
+                _ => Shape::Circle { radius: size * 0.4 },
+            },
+            Some(EnclosureShape::Ellipse) => Shape::Circle { radius: size * 0.4 },
+            Some(EnclosureShape::Freeform) => Shape::Circle { radius: size * 0.4 },
+            None => Shape::Circle { radius: size * 0.4 },
         },
         NodeType::Line => {
             let half = size * 0.35;

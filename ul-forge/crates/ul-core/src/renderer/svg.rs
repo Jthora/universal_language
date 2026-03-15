@@ -7,6 +7,22 @@ use crate::types::gir::Gir;
 use super::layout::{Connection, PositionedElement, PositionedGlyph, Shape};
 use super::RenderOptions;
 
+/// Generate SVG polygon points string for a regular n-gon centered at (cx, cy) with given size.
+fn regular_polygon_points(cx: f64, cy: f64, size: f64, n: usize) -> String {
+    let r = size / 2.0;
+    let mut points = String::new();
+    for i in 0..n {
+        if i > 0 {
+            points.push(' ');
+        }
+        // Start from top (−π/2) and go clockwise
+        let angle = -std::f64::consts::FRAC_PI_2 + 2.0 * std::f64::consts::PI * (i as f64) / (n as f64);
+        write!(points, "{:.1},{:.1}", cx + r * angle.cos(), cy + r * angle.sin())
+            .expect("String write is infallible");
+    }
+    points
+}
+
 /// Escape a string for safe embedding in SVG/XML attributes and text content.
 fn escape_svg(s: &str) -> String {
     s.replace('&', "&amp;")
@@ -115,7 +131,11 @@ pub fn generate_svg(
 
 fn z_order(shape: &Shape) -> u8 {
     match shape {
-        Shape::Circle { .. } | Shape::Triangle { .. } | Shape::Square { .. } => 1,
+        Shape::Circle { .. }
+        | Shape::Triangle { .. }
+        | Shape::Square { .. }
+        | Shape::Pentagon { .. }
+        | Shape::Hexagon { .. } => 1,
         Shape::Line { .. } | Shape::Curve { .. } => 2,
         Shape::Angle { .. } => 3,
         Shape::Point { .. } => 4,
@@ -167,6 +187,22 @@ fn render_element(svg: &mut String, elem: &PositionedElement) {
                 elem.y - half,
                 size,
                 size
+            )
+            .expect("String write is infallible");
+        }
+        Shape::Pentagon { size } => {
+            let points = regular_polygon_points(elem.x, elem.y, *size, 5);
+            writeln!(
+                svg,
+                r#"    <polygon points="{points}" class="ul-mark" data-ul-node="{id}" />"#,
+            )
+            .expect("String write is infallible");
+        }
+        Shape::Hexagon { size } => {
+            let points = regular_polygon_points(elem.x, elem.y, *size, 6);
+            writeln!(
+                svg,
+                r#"    <polygon points="{points}" class="ul-mark" data-ul-node="{id}" />"#,
             )
             .expect("String write is infallible");
         }
@@ -314,6 +350,12 @@ pub fn generate_tikz(glyph: &PositionedGlyph, _gir: &Gir) -> String {
                 )
                 .expect("String write is infallible");
             }
+            Shape::Pentagon { size } => {
+                render_tikz_polygon(&mut out, x, y, *size * scale, 5);
+            }
+            Shape::Hexagon { size } => {
+                render_tikz_polygon(&mut out, x, y, *size * scale, 6);
+            }
             Shape::Line {
                 x1,
                 y1,
@@ -374,4 +416,20 @@ pub fn generate_tikz(glyph: &PositionedGlyph, _gir: &Gir) -> String {
 
     writeln!(out, "\\end{{tikzpicture}}").expect("String write is infallible");
     out
+}
+
+/// Render a regular n-gon in TikZ at (cx, cy) with the given radius.
+fn render_tikz_polygon(out: &mut String, cx: f64, cy: f64, r: f64, n: usize) {
+    write!(out, "  \\draw ").expect("String write is infallible");
+    for i in 0..n {
+        let angle = -std::f64::consts::FRAC_PI_2
+            + 2.0 * std::f64::consts::PI * (i as f64) / (n as f64);
+        let px = cx + r * angle.cos();
+        let py = cy + r * angle.sin();
+        if i > 0 {
+            write!(out, " -- ").expect("String write is infallible");
+        }
+        write!(out, "({:.2},{:.2})", px, py).expect("String write is infallible");
+    }
+    writeln!(out, " -- cycle;").expect("String write is infallible");
 }
