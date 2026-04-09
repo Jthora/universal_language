@@ -11,7 +11,7 @@
 
 export type Sort = "entity" | "relation" | "modifier" | "assertion";
 
-export type NodeType = "point" | "line" | "angle" | "curve" | "enclosure";
+export type NodeType = "point" | "line" | "angle" | "curve" | "enclosure" | "variable_slot";
 
 export type EnclosureShape = "circle" | "triangle" | "square" | "ellipse" | "polygon" | "freeform";
 
@@ -21,7 +21,8 @@ export type EdgeType =
   | "adjacent"
   | "intersects"
   | "connects"
-  | "references";
+  | "references"
+  | "binds";
 
 export interface Node {
   id: string;
@@ -34,6 +35,8 @@ export interface Node {
   curvature?: number;
   curvature_profile?: number[];
   vertices?: number;
+  variable_id?: string;
+  assertion_modifier?: "evidential" | "emphatic" | "hedged";
 }
 
 export interface Edge {
@@ -54,6 +57,7 @@ export interface Gir {
   nodes: Node[];
   edges: Edge[];
   metadata?: GirMetadata;
+  binding_scope?: string[];
 }
 
 // ── Validation ──
@@ -97,7 +101,9 @@ export type OperationName =
   | "abstract"
   | "compose"
   | "invert"
-  | "quantify";
+  | "quantify"
+  | "bind"
+  | "modify_assertion";
 
 export type Grade = "exact" | "close" | "partial" | "unrelated";
 

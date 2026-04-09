@@ -21,11 +21,31 @@ pub struct AstComposition {
     pub tail: Vec<(AstOperator, AstTerm)>,
 }
 
-/// A single term: either a mark or a parenthesized group.
+/// A single term: either a mark, an assertion modifier, or a parenthesized group.
 #[derive(Debug, Clone, PartialEq)]
 pub enum AstTerm {
     Mark(AstMark),
     Group(AstComposition),
+    /// `?{...}` evidential, `!{...}` emphatic, `~?{...}` hedged
+    AssertionModifier {
+        kind: AstAssertionModifierKind,
+        content: AstComposition,
+    },
+    /// `[]{...}` necessity, `<>{...}` possibility
+    ModalUnary {
+        kind: AstModalKind,
+        content: AstComposition,
+    },
+    /// `[]->{antecedent}{consequent}` counterfactual
+    ModalCounterfactual {
+        antecedent: AstComposition,
+        consequent: AstComposition,
+    },
+    /// `assert{...}`, `query{...}`, etc. — force annotation
+    ForceAnnotation {
+        force: AstForceKind,
+        content: AstComposition,
+    },
 }
 
 /// A geometric primitive mark with optional nested content.
@@ -36,7 +56,7 @@ pub struct AstMark {
 }
 
 /// A geometric primitive.
-#[derive(Debug, Clone, Copy, PartialEq)]
+#[derive(Debug, Clone, PartialEq)]
 pub enum AstPrimitive {
     Point,
     Circle,
@@ -49,6 +69,10 @@ pub enum AstPrimitive {
     BiArrow,
     Curve,
     Angle(f64),
+    /// `○_x` — variable slot for binding
+    VariableSlot(String),
+    /// `●_x` — bound reference to a variable
+    BoundRef(String),
 }
 
 /// An operator connecting two terms.
@@ -71,4 +95,30 @@ pub enum AstDirection {
     Right,
     Left,
     Both,
+}
+
+/// Kind of assertion-level modification.
+#[derive(Debug, Clone, Copy, PartialEq)]
+pub enum AstAssertionModifierKind {
+    Evidential,
+    Emphatic,
+    Hedged,
+}
+
+/// Kind of modal operator.
+#[derive(Debug, Clone, Copy, PartialEq)]
+pub enum AstModalKind {
+    Necessity,
+    Possibility,
+}
+
+/// Kind of performative force.
+#[derive(Debug, Clone, Copy, PartialEq)]
+pub enum AstForceKind {
+    Assert,
+    Query,
+    Direct,
+    Commit,
+    Express,
+    Declare,
 }

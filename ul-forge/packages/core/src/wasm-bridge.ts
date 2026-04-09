@@ -70,7 +70,8 @@ function ensureInit(): void {
 // ── Result caches ──
 
 function girHash(gir: Gir): string {
-  return JSON.stringify({ r: gir.root, n: gir.nodes.length, e: gir.edges.length });
+  // Full content hash — nodes/edges/root determine identity, not just counts
+  return JSON.stringify({ r: gir.root, n: gir.nodes, e: gir.edges });
 }
 
 const layoutCache = new ResultCache<PositionedGlyph>();

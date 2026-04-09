@@ -10,7 +10,7 @@
 use crate::error::UlResult;
 use crate::types::edge::{Edge, EdgeType};
 use crate::types::gir::Gir;
-use crate::types::node::{EnclosureShape, Node, NodeType};
+use crate::types::node::{AssertionModifierKind, EnclosureShape, Node, NodeType, PerformativeForce};
 use crate::types::sort::Sort;
 
 use super::ast::*;
@@ -60,6 +60,8 @@ pub fn ast_to_gir(doc: &AstDocument) -> UlResult<Gir> {
         nodes,
         edges,
         metadata: None,
+        binding_scope: None,
+        modal_context: None,
     })
 }
 
@@ -197,6 +199,19 @@ fn transform_term(
     match term {
         AstTerm::Mark(mark) => transform_mark(mark, nodes, edges, id_gen),
         AstTerm::Group(comp) => transform_composition(comp, nodes, edges, id_gen),
+        AstTerm::AssertionModifier { kind, content } => {
+            transform_assertion_modifier(kind, content, nodes, edges, id_gen)
+        }
+        AstTerm::ModalUnary { kind, content } => {
+            transform_modal_unary(kind, content, nodes, edges, id_gen)
+        }
+        AstTerm::ModalCounterfactual {
+            antecedent,
+            consequent,
+        } => transform_modal_counterfactual(antecedent, consequent, nodes, edges, id_gen),
+        AstTerm::ForceAnnotation { force, content } => {
+            transform_force_annotation(force, content, nodes, edges, id_gen)
+        }
     }
 }
 
@@ -210,7 +225,7 @@ fn transform_mark(
     let id = id_gen.next();
 
     // Rule 1: Primitive → Node
-    let node = match mark.primitive {
+    let node = match &mark.primitive {
         AstPrimitive::Point => Node::point(&id),
         AstPrimitive::Circle => Node::enclosure(&id, EnclosureShape::Circle),
         AstPrimitive::Triangle => Node::enclosure(&id, EnclosureShape::Triangle),
@@ -237,7 +252,13 @@ fn transform_mark(
         }
         AstPrimitive::BiArrow => Node::line(&id, false),
         AstPrimitive::Curve => Node::curve(&id, 0.5),
-        AstPrimitive::Angle(deg) => Node::angle(&id, deg),
+        AstPrimitive::Angle(deg) => Node::angle(&id, *deg),
+        AstPrimitive::VariableSlot(var_id) => Node::variable_slot(&id, var_id),
+        AstPrimitive::BoundRef(var_id) => {
+            let mut n = Node::point(&id);
+            n.variable_id = Some(var_id.clone());
+            n
+        }
     };
 
     nodes.push(node);
@@ -317,4 +338,176 @@ fn transform_content_children(
     }
 
     Ok(child_ids)
+}
+
+/// Transform an assertion modifier (?{...}, !{...}, ~?{...}) into a GIR enclosure
+/// with the `assertion_modifier` field set.
+fn transform_assertion_modifier(
+    kind: &AstAssertionModifierKind,
+    content: &AstComposition,
+    nodes: &mut Vec<Node>,
+    edges: &mut Vec<Edge>,
+    id_gen: &mut IdGen,
+) -> UlResult<String> {
+    let id = id_gen.next();
+
+    let mod_kind = match kind {
+        AstAssertionModifierKind::Evidential => AssertionModifierKind::Evidential,
+        AstAssertionModifierKind::Emphatic => AssertionModifierKind::Emphatic,
+        AstAssertionModifierKind::Hedged => AssertionModifierKind::Hedged,
+    };
+
+    // Create an enclosure node with assertion_modifier set
+    // Sort stays Entity (structural enclosure) — assertion_modifier marks semantic role
+    let mut node = Node::enclosure(&id, EnclosureShape::Square);
+    node.assertion_modifier = Some(mod_kind);
+    nodes.push(node);
+
+    // Transform content as children
+    let child_ids = transform_content_children(content, nodes, edges, id_gen)?;
+    for child_id in child_ids {
+        edges.push(Edge::contains(&id, &child_id));
+    }
+
+    Ok(id)
+}
+
+/// Transform a unary modal operator ([]{...} or <>{...}) into a GIR pattern.
+/// Creates an enclosure labeled □ or ◇ containing world entities + inner content.
+fn transform_modal_unary(
+    kind: &AstModalKind,
+    content: &AstComposition,
+    nodes: &mut Vec<Node>,
+    edges: &mut Vec<Edge>,
+    id_gen: &mut IdGen,
+) -> UlResult<String> {
+    let root_id = id_gen.next();
+    let label = match kind {
+        AstModalKind::Necessity => "□",
+        AstModalKind::Possibility => "◇",
+    };
+
+    let root = Node::enclosure(&root_id, EnclosureShape::Square)
+        .with_sort(Sort::Entity)
+        .with_label(label);
+    nodes.push(root);
+
+    // Create world entities
+    let w_current_id = id_gen.next();
+    let w_prime_id = id_gen.next();
+    nodes.push(
+        Node::point(&w_current_id)
+            .with_label("w_current")
+            .with_sort(Sort::Entity),
+    );
+    nodes.push(
+        Node::point(&w_prime_id)
+            .with_label("w′")
+            .with_sort(Sort::Entity),
+    );
+
+    edges.push(Edge::contains(&root_id, &w_current_id));
+    edges.push(Edge::contains(&root_id, &w_prime_id));
+
+    // Accessibility edge
+    edges.push(Edge::accessible_from(&w_current_id, &w_prime_id));
+
+    // Transform inner content
+    let child_ids = transform_content_children(content, nodes, edges, id_gen)?;
+    for child_id in &child_ids {
+        edges.push(Edge::contains(&root_id, child_id));
+    }
+
+    // Satisfy edge from w_prime to inner content root
+    if let Some(first_child) = child_ids.first() {
+        edges.push(Edge::connects(&w_prime_id, first_child));
+    }
+
+    Ok(root_id)
+}
+
+/// Transform a counterfactual operator ([]->{ante}{cons}) into a GIR pattern.
+fn transform_modal_counterfactual(
+    antecedent: &AstComposition,
+    consequent: &AstComposition,
+    nodes: &mut Vec<Node>,
+    edges: &mut Vec<Edge>,
+    id_gen: &mut IdGen,
+) -> UlResult<String> {
+    let root_id = id_gen.next();
+    let root = Node::enclosure(&root_id, EnclosureShape::Square)
+        .with_sort(Sort::Entity)
+        .with_label("□→");
+    nodes.push(root);
+
+    let w_current_id = id_gen.next();
+    let w_closest_id = id_gen.next();
+    nodes.push(
+        Node::point(&w_current_id)
+            .with_label("w_current")
+            .with_sort(Sort::Entity),
+    );
+    nodes.push(
+        Node::point(&w_closest_id)
+            .with_label("w_closest")
+            .with_sort(Sort::Entity),
+    );
+
+    edges.push(Edge::contains(&root_id, &w_current_id));
+    edges.push(Edge::contains(&root_id, &w_closest_id));
+
+    // Closeness edge
+    edges.push(Edge::accessible_from(&w_current_id, &w_closest_id));
+
+    // Transform antecedent
+    let ante_ids = transform_content_children(antecedent, nodes, edges, id_gen)?;
+    for aid in &ante_ids {
+        edges.push(Edge::contains(&root_id, aid));
+    }
+    if let Some(first_ante) = ante_ids.first() {
+        edges.push(Edge::connects(&w_closest_id, first_ante));
+    }
+
+    // Transform consequent
+    let cons_ids = transform_content_children(consequent, nodes, edges, id_gen)?;
+    for cid in &cons_ids {
+        edges.push(Edge::contains(&root_id, cid));
+    }
+    if let Some(first_cons) = cons_ids.first() {
+        edges.push(Edge::connects(&w_closest_id, first_cons));
+    }
+
+    Ok(root_id)
+}
+
+/// Transform a force annotation: `query{...}`, `direct{...}`, etc.
+/// Creates an assertion-sort enclosure with the `force` field set.
+fn transform_force_annotation(
+    force: &AstForceKind,
+    content: &AstComposition,
+    nodes: &mut Vec<Node>,
+    edges: &mut Vec<Edge>,
+    id_gen: &mut IdGen,
+) -> UlResult<String> {
+    let root_id = id_gen.next();
+    let perf_force = match force {
+        AstForceKind::Assert => PerformativeForce::Assert,
+        AstForceKind::Query => PerformativeForce::Query,
+        AstForceKind::Direct => PerformativeForce::Direct,
+        AstForceKind::Commit => PerformativeForce::Commit,
+        AstForceKind::Express => PerformativeForce::Express,
+        AstForceKind::Declare => PerformativeForce::Declare,
+    };
+
+    let root = Node::enclosure(&root_id, EnclosureShape::Circle)
+        .with_force(perf_force);
+    nodes.push(root);
+
+    // Transform content as children
+    let child_ids = transform_content_children(content, nodes, edges, id_gen)?;
+    for cid in &child_ids {
+        edges.push(Edge::contains(&root_id, cid));
+    }
+
+    Ok(root_id)
 }

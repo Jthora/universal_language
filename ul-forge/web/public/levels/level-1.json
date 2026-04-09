@@ -1,0 +1,25 @@
+{
+  "level": 1,
+  "title": "First Glyphs",
+  "description": "Create basic entities and relations",
+  "exercises": [
+    {
+      "prompt": "Create a point entity labeled \"star\"",
+      "hint": "Use the ● symbol with a label",
+      "expectedOps": [],
+      "sampleAnswer": "● \"star\""
+    },
+    {
+      "prompt": "Create a predication: \"star shines\"",
+      "hint": "Connect two entities with a relation inside an enclosure",
+      "expectedOps": ["predicate"],
+      "sampleAnswer": "○{ ● \"star\" → ● \"shines\" }"
+    },
+    {
+      "prompt": "Create a modified entity: \"bright star\"",
+      "hint": "Apply an angle (modifier) to a point (entity)",
+      "expectedOps": ["modify_entity"],
+      "sampleAnswer": "∠ \"bright\" ● \"star\""
+    }
+  ]
+}

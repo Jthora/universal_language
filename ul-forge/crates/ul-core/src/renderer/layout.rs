@@ -3,7 +3,7 @@
 //! Three-level approach:
 //! 1. Template lookup for known canonical glyphs
 //! 2. Hierarchical constraint layout for novel compositions
-//! 3. (Future) Aesthetic refinement
+//! 3. Adjacency/intersection-aware positioning
 
 use crate::types::edge::EdgeType;
 use crate::types::gir::Gir;
@@ -20,6 +20,9 @@ pub struct PositionedElement {
     pub x: f64,
     pub y: f64,
     pub shape: Shape,
+    /// Optional CSS class override for assertion modifier styling.
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub css_class: Option<String>,
 }
 
 /// Visual shape for a positioned element.
@@ -60,6 +63,12 @@ pub enum Shape {
         x2: f64,
         y2: f64,
         curvature: f64,
+        /// Piecewise curvature profile — if present, renders as multi-segment path.
+        curvature_profile: Option<Vec<f64>>,
+    },
+    /// Variable binding slot — dashed circle with optional label.
+    VariableSlot {
+        radius: f64,
     },
 }
 
@@ -116,24 +125,43 @@ fn hierarchical_layout(gir: &Gir, width: f64, height: f64) -> PositionedGlyph {
     };
     allocate_tree(gir, &gir.root, &bbox, &mut elements, &mut positions);
 
-    // Phase B: Route cross-edges (connects, references)
+    // Phase B: Route cross-edges (connects, adjacency, intersection, references, binds)
     for edge in &gir.edges {
         match edge.edge_type {
             EdgeType::Connects => {
-                if let (Some(&(x1, y1)), Some(&(x2, y2))) =
-                    (positions.get(&edge.source), positions.get(&edge.target))
+                // For connect edges: check if source is a line node connecting two endpoints
+                let source_node = gir.node(&edge.source);
+                let target_pos = positions.get(&edge.target);
+                let source_pos = positions.get(&edge.source);
+
+                if let (Some(s_node), Some(&(x1, y1)), Some(&(x2, y2))) =
+                    (source_node, source_pos, target_pos)
                 {
-                    let line_node = gir.node(&edge.source);
-                    let directed = line_node.and_then(|n| n.directed).unwrap_or(true);
-                    connections.push(Connection {
-                        edge_id: format!("{}-{}", edge.source, edge.target),
-                        x1,
-                        y1,
-                        x2,
-                        y2,
-                        directed,
-                        dashed: false,
-                    });
+                    if s_node.node_type == NodeType::Line {
+                        // Line node connecting to an endpoint — draw as arrow
+                        let directed = s_node.directed.unwrap_or(true);
+                        // Use direction vector from the line node for the connection angle
+                        connections.push(Connection {
+                            edge_id: format!("{}-{}", edge.source, edge.target),
+                            x1,
+                            y1,
+                            x2,
+                            y2,
+                            directed,
+                            dashed: false,
+                        });
+                    } else {
+                        // Non-line source connecting to target
+                        connections.push(Connection {
+                            edge_id: format!("{}-{}", edge.source, edge.target),
+                            x1,
+                            y1,
+                            x2,
+                            y2,
+                            directed: true,
+                            dashed: false,
+                        });
+                    }
                 }
             }
             EdgeType::References => {
@@ -147,6 +175,21 @@ fn hierarchical_layout(gir: &Gir, width: f64, height: f64) -> PositionedGlyph {
                         x2,
                         y2,
                         directed: false,
+                        dashed: true,
+                    });
+                }
+            }
+            EdgeType::Binds => {
+                if let (Some(&(x1, y1)), Some(&(x2, y2))) =
+                    (positions.get(&edge.source), positions.get(&edge.target))
+                {
+                    connections.push(Connection {
+                        edge_id: format!("bind-{}-{}", edge.source, edge.target),
+                        x1,
+                        y1,
+                        x2,
+                        y2,
+                        directed: true,
                         dashed: true,
                     });
                 }
@@ -201,11 +244,19 @@ fn allocate_tree(
 
     if !is_implicit {
         let shape = node_to_shape(node, bbox);
+        let css_class = node.assertion_modifier.as_ref().map(|m| {
+            match m {
+                crate::types::node::AssertionModifierKind::Evidential => "ul-evidential".to_string(),
+                crate::types::node::AssertionModifierKind::Emphatic => "ul-emphatic".to_string(),
+                crate::types::node::AssertionModifierKind::Hedged => "ul-hedged".to_string(),
+            }
+        });
         elements.push(PositionedElement {
             node_id: node_id.to_string(),
             x: cx,
             y: cy,
             shape,
+            css_class,
         });
     }
 
@@ -221,7 +272,7 @@ fn allocate_tree(
         .copied()
         .collect();
 
-    // Also collect line/angle children for separate positioning
+    // Collect line and angle children for connection/modifier positioning
     let line_children: Vec<&str> = children
         .iter()
         .filter(|cid| gir.node(cid).is_some_and(|n| n.node_type == NodeType::Line))
@@ -251,41 +302,157 @@ fn allocate_tree(
         if n == 1 {
             // Single child centered
             allocate_tree(gir, spatial_children[0], &inner, elements, positions);
-        } else {
-            // Horizontal strip layout
-            let child_w = inner.w / n as f64;
-            for (i, child_id) in spatial_children.iter().enumerate() {
-                let child_bbox = BBox {
-                    x: inner.x + i as f64 * child_w,
+        } else if n == 2 {
+            // Check if there's an intersection or adjacency edge between them
+            let has_intersection = gir.edges.iter().any(|e| {
+                e.edge_type == EdgeType::Intersects
+                    && ((e.source == spatial_children[0] && e.target == spatial_children[1])
+                        || (e.source == spatial_children[1] && e.target == spatial_children[0]))
+            });
+            let has_adjacency = gir.edges.iter().any(|e| {
+                e.edge_type == EdgeType::Adjacent
+                    && ((e.source == spatial_children[0] && e.target == spatial_children[1])
+                        || (e.source == spatial_children[1] && e.target == spatial_children[0]))
+            });
+
+            if has_intersection {
+                // Overlap: place side by side with significant overlap
+                let child_w = inner.w * 0.6;
+                let left = BBox {
+                    x: inner.x,
                     y: inner.y,
                     w: child_w,
                     h: inner.h,
+                };
+                let right = BBox {
+                    x: inner.x + inner.w - child_w,
+                    y: inner.y,
+                    w: child_w,
+                    h: inner.h,
+                };
+                allocate_tree(gir, spatial_children[0], &left, elements, positions);
+                allocate_tree(gir, spatial_children[1], &right, elements, positions);
+            } else if has_adjacency {
+                // Adjacent: place side by side touching
+                let gap = inner.w * 0.02;
+                let child_w = (inner.w - gap) / 2.0;
+                let left = BBox {
+                    x: inner.x,
+                    y: inner.y,
+                    w: child_w,
+                    h: inner.h,
+                };
+                let right = BBox {
+                    x: inner.x + child_w + gap,
+                    y: inner.y,
+                    w: child_w,
+                    h: inner.h,
+                };
+                allocate_tree(gir, spatial_children[0], &left, elements, positions);
+                allocate_tree(gir, spatial_children[1], &right, elements, positions);
+            } else {
+                // Default: horizontal split with spacing
+                let child_w = inner.w / 2.0;
+                for (i, child_id) in spatial_children.iter().enumerate() {
+                    let child_bbox = BBox {
+                        x: inner.x + i as f64 * child_w,
+                        y: inner.y,
+                        w: child_w,
+                        h: inner.h,
+                    };
+                    allocate_tree(gir, child_id, &child_bbox, elements, positions);
+                }
+            }
+        } else if n <= 6 {
+            // 3-6 children: radial layout around center
+            let r = inner.w.min(inner.h) * 0.35;
+            let child_size = inner.w.min(inner.h) / (n as f64).sqrt();
+            for (i, child_id) in spatial_children.iter().enumerate() {
+                let angle = -std::f64::consts::FRAC_PI_2
+                    + 2.0 * std::f64::consts::PI * (i as f64) / (n as f64);
+                let child_cx = inner.cx() + r * angle.cos();
+                let child_cy = inner.cy() + r * angle.sin();
+                let child_bbox = BBox {
+                    x: child_cx - child_size / 2.0,
+                    y: child_cy - child_size / 2.0,
+                    w: child_size,
+                    h: child_size,
+                };
+                allocate_tree(gir, child_id, &child_bbox, elements, positions);
+            }
+        } else {
+            // 7+ children: grid layout
+            let cols = ((n as f64).sqrt().ceil()) as usize;
+            let rows = (n + cols - 1) / cols;
+            let cell_w = inner.w / cols as f64;
+            let cell_h = inner.h / rows as f64;
+            for (i, child_id) in spatial_children.iter().enumerate() {
+                let col = i % cols;
+                let row = i / cols;
+                let child_bbox = BBox {
+                    x: inner.x + col as f64 * cell_w,
+                    y: inner.y + row as f64 * cell_h,
+                    w: cell_w,
+                    h: cell_h,
                 };
                 allocate_tree(gir, child_id, &child_bbox, elements, positions);
             }
         }
     }
 
-    // Position line children near parent center
+    // Position line children at midpoint between their connection endpoints
     for line_id in line_children {
-        let pos = (cx, cy);
-        positions.insert(line_id.to_string(), pos);
+        // Find the two nodes this line connects to
+        let connected: Vec<&str> = gir
+            .edges
+            .iter()
+            .filter(|e| {
+                e.edge_type == EdgeType::Connects
+                    && (e.source == line_id || e.target == line_id)
+            })
+            .map(|e| {
+                if e.source == line_id {
+                    e.target.as_str()
+                } else {
+                    e.source.as_str()
+                }
+            })
+            .collect();
+
+        let (lx, ly) = if connected.len() >= 2 {
+            // Place at midpoint of the two connected endpoints
+            let p1 = positions.get(connected[0]).copied().unwrap_or((cx, cy));
+            let p2 = positions.get(connected[1]).copied().unwrap_or((cx, cy));
+            ((p1.0 + p2.0) / 2.0, (p1.1 + p2.1) / 2.0)
+        } else {
+            (cx, cy)
+        };
+        positions.insert(line_id.to_string(), (lx, ly));
         // Lines are drawn as connections, not shapes — skip element creation
     }
 
-    // Position angle children near parent center
+    // Position angle children near their modified line or at parent center
     for angle_id in angle_children {
-        let pos = (cx, cy);
-        positions.insert(angle_id.to_string(), pos);
+        // Find if this angle modifies a line (via modified_by edge)
+        let mod_target = gir.edges.iter().find(|e| {
+            e.edge_type == EdgeType::ModifiedBy && e.target == angle_id
+        });
+        let (ax, ay) = if let Some(me) = mod_target {
+            positions.get(&me.source).copied().unwrap_or((cx, cy))
+        } else {
+            (cx, cy)
+        };
+        positions.insert(angle_id.to_string(), (ax, ay));
         if let Some(n) = gir.node(angle_id) {
             elements.push(PositionedElement {
                 node_id: angle_id.to_string(),
-                x: cx,
-                y: cy,
+                x: ax,
+                y: ay,
                 shape: Shape::Angle {
                     radius: bbox.w.min(bbox.h) * 0.15,
                     degrees: n.measure.unwrap_or(60.0),
                 },
+                css_class: None,
             });
         }
     }
@@ -312,11 +479,23 @@ fn node_to_shape(node: &crate::types::node::Node, bbox: &BBox) -> Shape {
             let half = size * 0.35;
             let cx = bbox.cx();
             let cy = bbox.cy();
+            // Use direction vector if present, otherwise default to horizontal
+            let (dx, dy) = node
+                .direction
+                .map(|d| {
+                    let len = (d[0] * d[0] + d[1] * d[1]).sqrt();
+                    if len > 0.0 {
+                        (d[0] / len, d[1] / len)
+                    } else {
+                        (1.0, 0.0)
+                    }
+                })
+                .unwrap_or((1.0, 0.0));
             Shape::Line {
-                x1: cx - half,
-                y1: cy,
-                x2: cx + half,
-                y2: cy,
+                x1: cx - half * dx,
+                y1: cy - half * dy,
+                x2: cx + half * dx,
+                y2: cy + half * dy,
                 directed: node.directed.unwrap_or(true),
             }
         }
@@ -334,7 +513,12 @@ fn node_to_shape(node: &crate::types::node::Node, bbox: &BBox) -> Shape {
                 x2: cx + half,
                 y2: cy,
                 curvature: node.curvature.unwrap_or(0.5),
+                curvature_profile: node.curvature_profile.clone(),
             }
+        }
+        NodeType::VariableSlot => {
+            // Variable slot renders as a dashed circle (visually distinct from filled Point)
+            Shape::VariableSlot { radius: size * 0.08 }
         }
     }
 }

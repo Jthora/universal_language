@@ -243,6 +243,75 @@ At the topological level, processes are classified by their **fundamental group*
 
 ---
 
+## VII-B. ASSERTION-LEVEL SEMANTIC PATHWAYS
+
+### Epistemic Stance (modify_assertion Modifier Families)
+
+The `modify_assertion` operation decorates the assertion frame boundary. Different boundary styles encode different epistemic stances — the speaker's relationship to the truth of the assertion.
+
+| Modifier | Frame Style | Synonymous Expressions | Antonymous Stance |
+|----------|------------|----------------------|-------------------|
+| **Evidential** | Dotted (···) | "apparently," "reportedly," "I hear that," "it seems" | Emphatic (direct witness) |
+| **Emphatic** | Double (═══) | "definitely," "certainly," "I know that," "undeniably" | Hedged (uncertain) |
+| **Hedged** | Wavy (~~~) | "maybe," "sort of," "arguably," "to some extent" | Emphatic (certain) |
+
+**Epistemic gradient:** Emphatic → Default → Hedged → Evidential
+```
+═══ ──────── ─── ────────── ~~~ ────────── ···
+certain     plain          tentative      reported
+(direct)    (unmarked)     (uncertain)    (indirect)
+```
+
+### Variable Binding Semantic Pathways
+
+The `bind` operation (○_x → ●_x) establishes co-reference — all instances of the same variable refer to the same entity. Related semantic concepts:
+
+| Concept | UL Construction | Synonymous Expressions |
+|---------|----------------|----------------------|
+| **Co-reference** | bind(x, a) with multiple ●_x | "the same x," "that x again," "it" (pronoun) |
+| **Universal scope** | bind(x, quantify(m_∀, e_x)) | "for all x," "every x," "each x" |
+| **Existential scope** | bind(x, quantify(m_∃, e_x)) | "there exists an x," "some x," "a certain x" |
+| **Nested scope** | outer-bind(x, inner-bind(y, ...)) | "for every x, there is some y such that..." |
+
+### Graduated Quantification Spectrum
+
+The graduated `quantify` operation (p ∈ [0,1]) encodes quantificational force as a continuous spectrum:
+
+| Fill Proportion (p) | Quantifier | Synonymous Expressions |
+|---------------------|-----------|----------------------|
+| **p = 1.0** | Universal (∀) | "all," "every," "each," "the totality of" |
+| **p ≈ 0.8** | Most | "most," "the majority of," "almost all" |
+| **p ≈ 0.5** | About half | "about half," "roughly equal parts" |
+| **p ≈ 0.3** | Some/few | "some," "a few," "several" |
+| **p → 0⁺** | Existential (∃) | "at least one," "some," "there exists" |
+| **p = 0** | None (¬∃) | "no," "none," "not any" |
+
+### Modal Semantic Pathways
+
+The defined modal operators (`formal-foundations.md` §7.4–7.6) create pathways between actual assertions and their modal counterparts. Modality = quantification over possible worlds via accessibility relations.
+
+| Concept | UL Construction | Synonymous Expressions |
+|---------|----------------|----------------------|
+| **Necessity** (alethic) | necessary(r_alethic, a) | "must be," "necessarily," "cannot be otherwise," "it is certain that" |
+| **Possibility** (alethic) | possible(r_alethic, a) | "might be," "possibly," "could be," "it is conceivable that" |
+| **Knowledge** | necessary(r_K_α, a) | "α knows that," "it is known that," "α is certain that" |
+| **Belief** | possible(r_K_α, a) | "α believes that," "for all α knows," "α considers it possible" |
+| **Obligation** | necessary(r_O, a) | "must," "should," "ought to," "is required to," "it is obligatory that" |
+| **Permission** | possible(r_O, a) | "may," "is allowed to," "is permitted to," "it is acceptable that" |
+| **Ability** | possible(r_ability_α, a) | "can," "is able to," "has the capacity to," "could" |
+| **Counterfactual** | counterfactual(a, b) | "if it were that a, then b," "had a, then b," "would have been" |
+
+#### Modal Negation Spectrum
+
+| Expression | Formal | Synonyms |
+|-----------|--------|----------|
+| **Impossible** | negate(possible(r, a)) = necessary(r, negate(a)) | "cannot," "impossible," "ruled out" |
+| **Not necessary** | negate(necessary(r, a)) = possible(r, negate(a)) | "needn't," "not required," "optional" |
+| **Forbidden** | necessary(r_O, negate(a)) | "must not," "forbidden," "prohibited" |
+| **Contingent** | possible(r, a) ∧ possible(r, negate(a)) | "contingent," "may or may not," "undetermined" |
+
+---
+
 ## VIII. TRANSFORMATION THESAURUS
 
 How to navigate between related meanings by applying geometric transformations:
@@ -263,10 +332,57 @@ How to navigate between related meanings by applying geometric transformations:
 | **X at a lower level** | Section (intersect plane) | "animals" → "dogs" → "this dog" |
 | **X as a question** | Rotate 180° | "It rains" → "Does it rain?" |
 | **Many X** | Translation copies | dog → dogs |
-| **Hypothetical X** | Dashed lines | "is" → "might be" |
-| **Necessary X** | Bold lines | "is" → "must be" |
+| **Hypothetical X** | Dashed lines / possible(r, X) | "is" → "might be" |
+| **Necessary X** | Bold lines / necessary(r, X) | "is" → "must be" |
+| **If X were true, Y** | counterfactual(X, Y) | "if X, then Y would be" |
+| **X is known** | necessary(r_K_α, X) | "X" → "α knows that X" |
+| **X is obligatory** | necessary(r_O, X) | "X" → "X must be done" |
 | **X done to another** | compose with predicate | "run" → "make run" |
 | **Reversed X** | invert(X) | "A teaches B" → "B learns from A" |
+| **Apparently X** | modify_assertion(m_evidential, X) | "it rains" → "apparently it rains" |
+| **Certainly X** | modify_assertion(m_emphatic, X) | "it rains" → "it definitely rains" |
+| **Maybe X** | modify_assertion(m_hedged, X) | "it rains" → "it might rain" |
+| **For all, X** | bind(x, quantify(m_∀, e_x, ...)) | "dogs bark" → "every dog barks" |
+| **X as a question** | Set φ = query | "it rains" → "does it rain?" |
+| **X as a command** | Set φ = direct | "close the door" → "Close the door!" |
+| **X as a promise** | Set φ = commit | "I return" → "I promise to return" |
+| **X as an expression** | Set φ = express | "I am sorry" → "I apologize" |
+| **X as a declaration** | Set φ = declare | "you are married" → "I pronounce you married" |
+
+#### Illocutionary Force Spectrum
+
+| Expression | Force (φ) | Synonyms / paraphrases |
+|-----------|-----------|----------------------|
+| **Assertion** | assert (default) | "state," "claim," "report," "describe," "affirm" |
+| **Question** | query | "ask," "inquire," "wonder," "interrogate" |
+| **Command** | direct | "order," "request," "demand," "instruct," "tell to" |
+| **Promise** | commit | "vow," "pledge," "swear," "guarantee," "commit to" |
+| **Expression** | express | "apologize," "thank," "congratulate," "lament," "bewail" |
+| **Declaration** | declare | "pronounce," "decree," "declare," "name," "christen," "rule" |
+
+#### Force Negation vs. Content Negation
+
+| Expression | Formal | Meaning |
+|-----------|--------|---------|
+| **Content negation** | negate(a[φ]) = a'[φ] | "I promise NOT to return" (still a promise) |
+| **Force retraction** | modify_assertion(m_retracted, a[φ]) | "I take back my promise" (no longer a promise) |
+
+#### Pragmatic Inference Pathways
+
+Conventional inference patterns connecting surface meaning to intended meaning:
+
+| Surface form | Surface force | → Intended force | Pattern |
+|-------------|--------------|-----------------|---------|
+| "Can you X?" | query (ability) | direct (request) | CI-1: φ_query(◇_ability(a)) ⟹ φ_direct(a) |
+| "Would you like X?" | query (desire) | commit (offer) | CI-2: φ_query(desire(a)) ⟹ φ_commit(a) |
+| "Is anyone X?" | query (existence) | direct (request) | CI-3: rhetorical query ⟹ directive |
+
+**Scalar implicature pathways** (weaker term implies negation of stronger):
+- "some" → "not all" (SI-1: quantifier scale)
+- "A or B" → "not (A and B)" (SI-2: disjunction exclusivity)
+- "possible" → "not necessary" (SI-3: modal scale)
+
+**Scope boundary (⚠️):** Sarcasm and irony have representable structure (epistemic state ≠ asserted content) but detection requires non-compositional reasoning. See `formal-foundations.md` §9.5–9.6.
 
 ---
 

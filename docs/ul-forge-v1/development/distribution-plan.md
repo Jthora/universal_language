@@ -17,6 +17,13 @@ The ul-core Rust library contains the complete UL pipeline (parse â†’ validate â
 
 All 4 depend on `ul-core` but add distinct binding layers. No changes to ul-core's existing API are required for Types 1, 3, or 4. Type 2 requires exposing layout geometry (currently internal).
 
+> **Implementation Reference:** The WASM module underpinning all 4 distribution targets
+> is documented in [wasm/README.md](../wasm/README.md) (architecture and build),
+> [wasm/typescript-api-reference.md](../wasm/typescript-api-reference.md) (TypeScript API),
+> [wasm/integration-patterns.md](../wasm/integration-patterns.md) (integration recipes for
+> all 4 targets), and [wasm/known-issues.md](../wasm/known-issues.md) (edge cases and
+> serialization gotchas to be aware of during distribution packaging).
+
 ---
 
 ## Shared Infrastructure Changes

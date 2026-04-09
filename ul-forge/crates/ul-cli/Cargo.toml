@@ -7,5 +7,6 @@ description = "Command-line tools for Universal Language"
 
 [dependencies]
 ul-core = { path = "../ul-core" }
+ul-game = { path = "../ul-game" }
 clap = { version = "4", features = ["derive"] }
 serde_json = { workspace = true }

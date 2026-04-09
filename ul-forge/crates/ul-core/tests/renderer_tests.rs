@@ -23,6 +23,7 @@ fn minimal_gir(nodes: Vec<Node>, edges: Vec<Edge>) -> Gir {
         nodes,
         edges,
         metadata: None,
+        binding_scope: None, modal_context: None,
     }
 }
 
@@ -131,6 +132,7 @@ fn render_connection_template() {
             Edge::connects("l1", "p2"),
         ],
         metadata: None,
+        binding_scope: None, modal_context: None,
     };
     let svg = render(&gir, &opts()).unwrap();
     // Should have two points
@@ -316,6 +318,7 @@ fn render_with_cross_edges() {
             Edge::references("p2", "p3"),
         ],
         metadata: None,
+        binding_scope: None, modal_context: None,
     };
     let svg = render(&gir, &opts()).unwrap();
     // Should have connection lines

@@ -8,7 +8,7 @@
 
 | # | Deliverable | File | Status |
 |---|------------|------|--------|
-| 0 | Project Critique | [CRITIQUE.md](CRITIQUE.md) | Complete |
+| 0 | Project Critique | [CRITIQUE.md](CRITIQUE.md) | Complete — known errors, gaps, open questions, resolution log |
 | — | Navigation Guide | [NAVIGATION.md](NAVIGATION.md) | Quick-start paths, sibling cross-references, two-classification-system explanation |
 | — | Synthesis | [SYNTHESIS.md](SYNTHESIS.md) | **New** — how the 5-pipeline works, current capabilities, 10 expansion paths, strategic priorities |
 | 1 | Universal Symbology Map | [symbology/symbol-map.md](symbology/symbol-map.md) | Complete — cross-sibling refs, G≠Σ_UL note, tier labels on §V |
@@ -18,7 +18,7 @@
 | 5 | Universal Lexicon | [lexicon/lexicon.md](lexicon/lexicon.md) | v2 — 42 entries, 3-tier justification, cross-sibling refs, normative-status note, semantic index (§10.5) |
 | 6 | Universal Writing System | [writing-system/writing-system.md](writing-system/writing-system.md) | **Rewritten v2** — bottom-up from axiom "what can be drawn, counts" |
 | 6b | Writer's Companion Guide | [writing-system/writers-companion.md](writing-system/writers-companion.md) | **New** — practical pen-and-paper guide: meaning decomposition, handwriting conventions, 10 worked examples, compound statements, grammar bridge |
-| 7 | UQPL Specification | [uqpl/uqpl-spec.md](uqpl/uqpl-spec.md) | Draft — sort names aligned (March 2026); operation signatures still diverge from Σ_UL (see note in §0) |
+| 7 | UQPL Specification | [uqpl/uqpl-spec.md](uqpl/uqpl-spec.md) | Draft — programming language inspired by UL, not a strict Σ_UL-algebra (3/14 ops match exactly). Sort names aligned; relationship characterized in [uqpl/D3-ul-uqpl-analysis.md](uqpl/D3-ul-uqpl-analysis.md) |
 
 ---
 
@@ -31,7 +31,7 @@ Every document in this directory derives ONLY from:
 | 5 Geometric Primitives | Point, Line, Angle, Curve, Enclosure |
 | 5 Semantic Primitives | Existence, Relation, Quality, Process, Concept |
 | Unique Grounding Theorem | Point↔Existence, Line↔Relation, Angle↔Quality, Curve↔Process, Enclosure↔Concept |
-| Σ_UL Signature | 4 sorts (Entity, Relation, Modifier, Assertion), 11 operations |
+| Σ_UL⁺ Signature | 4 sorts (Entity, Relation, Modifier, Assertion), 13 operations |
 | Euclidean Postulates | 5 axioms → 5 grammatical rules |
 | Erlangen Program | Symmetry hierarchy → abstraction levels |
 | Jordan Curve Theorem | Closed curves partition space → categorization |
@@ -43,11 +43,13 @@ Every document in this directory derives ONLY from:
 
 ## Design Philosophy
 
-**"If UL is real, build the things that only work if UL is real."**
+**"If UL is real, build the things that are predicted by UL theory and test whether they work as predicted."**
+
+A successful prediction under controlled conditions would support UL; a failed prediction would tell us UL's scope is narrower than claimed.
 
 These aren't academic analyses. They're engineering specifications. A symbology you can read. A syntax you can parse. A grammar you can compose with. A thesaurus you can navigate. A lexicon you can look up. A writing system you can write in. A programming language you can compute with.
 
-If UL is the geometry of meaning, then this is the engineering manual for that geometry.
+If UL is the minimal algebraic skeleton that all compositional meaning systems share, then this is the engineering manual for that skeleton.
 
 ### The Five Siblings
 

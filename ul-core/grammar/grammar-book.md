@@ -215,20 +215,39 @@ This corresponds to the `predicate` operation: predicate(e₁, r, e₂) → a.
 
 ### Extending Sentences
 
-Every sentence can be extended via the 11 operations:
+Every sentence can be extended via the 13 operations:
 
 | Extension | Operation | Example |
 |-----------|-----------|---------|
 | Add a modifier | modify_entity(m, e) | "the BIG dog" (scale up subject) |
 | Qualify a relation | modify_relation(m, r) | "acts STRONGLY on" (scale up relation) |
-| Negate | negate(a) | "does NOT act on" (reflect entire frame) |
+| Negate | negate(a) | "does NOT act on" (flip frame boundary: solid → dashed) |
 | Conjoin | conjoin(a₁, a₂) | "A AND B" (overlap frames) |
 | Disjoin | disjoin(a₁, a₂) | "A OR B" (adjoin frames) |
 | Nominalize | embed(a) | "the fact that A" (shrink-and-enclose) |
 | Adjectivalize | abstract(e) | "X-like" (extract quality from entity) |
 | Chain | compose(r₁, r₂) | "grandfather" = father∘father |
 | Reverse | invert(r) | "is acted upon by" (reverse arrow) |
-| Quantify | quantify(m, e) | "ALL X" (scale to fill) / "SOME X" (scale down) |
+| Quantify | quantify(m, e) | "ALL X" (scale to fill) / "MOST X" (partial fill) / "SOME X" (scale down) |
+| Bind variable | bind(e_x, a) | "FOR ALL x, ..." (hollow ○_x → filled ●_x, establishing co-reference) |
+| Modify assertion | modify_assertion(m, a) | "APPARENTLY p" (decorate frame boundary: dotted/double/wavy) |
+
+### Variable Binding and Scope
+
+The `bind` operation (C12) introduces **variable binding** — the ability to refer to the same entity across multiple positions in an assertion. Slot entities (○_x, hollow marks) are placed in entity positions; binding fills them (○_x → ●_x), establishing that all occurrences refer to the same thing.
+
+**Scope ordering** is determined by nesting depth: the outermost frame's variable has the widest scope. This makes scope unambiguous in UL, unlike natural language where "Every student read some book" is ambiguous between ∀ > ∃ and ∃ > ∀.
+
+### Assertion-Level Modification
+
+The `modify_assertion` operation (C13) applies an epistemic modifier to an entire assertion by decorating its frame boundary:
+- **Dotted boundary** → evidential ("apparently," "reportedly") 
+- **Double boundary** → emphatic ("definitely," "certainly")
+- **Wavy boundary** → hedged ("maybe," "sort of")
+
+This is **orthogonal to negation**: negation flips the truth status (σ), while assertion modification changes the epistemic stance (∂F). Both can co-occur.
+
+See `formal-grammar.md` C12 and C13 for formal definitions.
 
 ### Composition is Associative
 
@@ -288,6 +307,155 @@ NOT (complement):            IF...THEN (containment):
   └───────────┘              └───────────┘
   (outside of A is NOT A)    (A inside B = A implies B)
 ```
+
+### VI-B. Modal Grammar
+
+> **Reference:** Formal definitions in `formal-foundations.md` §7.1–7.9. This section describes the grammatical conventions for reading and writing modal constructions.
+
+Modal logic extends the logical grammar above with **world-enclosures** and **accessibility relations**. The key insight: modality is quantification over possible worlds, and UL already has the operations for quantification.
+
+#### World-Enclosures
+
+Possible worlds are drawn as **double-border enclosures** (⊞) to distinguish them from concept-enclosures (single-border □):
+
+```
+CONCEPT enclosure (single border):    WORLD enclosure (double border):
+  ┌───────────┐                         ╔═══════════╗
+  │  content  │                         ║  content  ║
+  └───────────┘                         ╚═══════════╝
+```
+
+The **actual world** ($w_{\text{current}}$) is marked with a filled corner or bold double border:
+
+```
+ACTUAL WORLD:                        OTHER WORLD:
+  ╔═══════════╗                       ╔═══════════╗
+  ║▪ content  ║                       ║  content  ║
+  ╚═══════════╝                       ╚═══════════╝
+```
+
+#### Accessibility Relations
+
+Connections between world-enclosures represent accessibility:
+
+```
+  ╔══════╗  ──r_alethic──▶  ╔══════╗     (alethic: "it could be that...")
+  ║  w₁  ║                  ║  w₂  ║
+  ╚══════╝                  ╚══════╝
+
+  ╔══════╗  ──r_K_α──▶     ╔══════╗     (epistemic: "agent α knows...")
+  ║  w₁  ║                  ║  w₂  ║
+  ╚══════╝                  ╚══════╝
+
+  ╔══════╗  ──r_O──▶        ╔══════╗     (deontic: "it ought to be...")
+  ║  w₁  ║                  ║  w₂  ║
+  ╚══════╝                  ╚══════╝
+```
+
+#### Necessity and Possibility as Border Styles
+
+Building on the existing bold/dashed convention (§3.4 of the Writer's Companion):
+
+| Modal type | Border style | Reading |
+|------------|-------------|---------|
+| **Necessity** ($\square$) | Bold/thick border (━━━) | "In ALL accessible worlds…" |
+| **Possibility** ($\lozenge$) | Dashed border (╌╌╌) | "In SOME accessible world…" |
+| **Counterfactual** ($\square\!\!\to$) | Dashed-dot border (╌·╌) | "In the CLOSEST world where…" |
+
+```
+NECESSITY ("must be"):             POSSIBILITY ("might be"):
+  ┏━━━━━━━━━━━┓                     ┌╌╌╌╌╌╌╌╌╌╌╌┐
+  ┃  •₁ → •₂  ┃                     ╎  •₁ → •₂  ╎
+  ┗━━━━━━━━━━━┛                     └╌╌╌╌╌╌╌╌╌╌╌┘
+  (holds in ALL worlds)             (holds in SOME world)
+```
+
+#### Stacked Modals
+
+When multiple modal layers are needed, they nest:
+
+```
+"She should have been able to finish earlier" (4.5):
+
+  ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━┓     ← deontic necessity (r_O)
+  ┃  ┌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┐  ┃     ← ability possibility (r_ability)
+  ┃  ╎  ╌·╌·╌·╌·╌·╌·╌·╌╌  ╎  ┃     ← counterfactual (r_closest)
+  ┃  ╎  ╎ •_she →finish    ╎  ╎  ┃
+  ┃  ╎  ╌·╌·╌·╌·╌·╌·╌·╌╌  ╎  ┃
+  ┃  └╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┘  ┃
+  ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+```
+
+Each nesting level adds one modal operator. Border style identifies the modal type. Sort flow: assertion → assertion at each level.
+
+---
+
+### VI-C. Performative Grammar (Illocutionary Force)
+
+Assertions carry not only content and sign (σ ∈ {⊕, ⊖}) but also **illocutionary force** — what speech act the assertion performs. Force is a frame-boundary decoration, orthogonal to both content and epistemic modification.
+
+**Force parameter φ ∈ {assert, query, direct, commit, express, declare}:**
+
+| Force | Border style | Example |
+|-------|-------------|---------|
+| Assertive (default) | Solid `┌──┐` | "It is raining" |
+| Interrogative | Gapped `┌──` (open side) | "Is it raining?" |
+| Directive | Arrow-out `┌──→` | "Close the door" |
+| Commissive | Arrow-in `←──┐` | "I promise to return" |
+| Expressive | Wavy `┌~~┐` | "I apologize for the delay" |
+| Declarative | Bold double `╔══╗` | "I pronounce you married" |
+
+**Frame-boundary ASCII conventions:**
+
+```
+ASSERTIVE (default):        INTERROGATIVE:
+┌──────────────┐            ┌──────────────
+│  content     │            │  content
+└──────────────┘            └──────────────
+
+DIRECTIVE:                  COMMISSIVE:
+┌──────────────→            ←──────────────┐
+│  content                     content     │
+└──────────────→            ←──────────────┘
+
+EXPRESSIVE:                 DECLARATIVE:
+┌~~~~~~~~~~~~~~┐            ╔══════════════╗
+│  content     │            ║  content     ║
+└~~~~~~~~~~~~~~┘            ╚══════════════╝
+```
+
+**Sort flow:** The force parameter decorates the assertion frame. It does not change the sort of the assertion — `(F, C, σ, φ)` is still sort `a`.
+
+**Composition with epistemic modification:** Force and epistemic markers are orthogonal decorations:
+- Dotted + gapped = evidential query: "Is it apparently raining?"
+- Bold double + dashed = declarative possibility: "I hereby declare this might be true"
+
+**Composition with modals:** Modal operators (§VI-B) are force-transparent — they operate on content, not force. A modal nested inside a performative frame preserves the outer force.
+
+**See:** `formal-foundations.md` §8.1–8.7 for the formal specification, including FC1–FC4 composition rules.
+
+### VI-D. Pragmatic Inference Notation
+
+Some expressions have a **conventional inference** from surface meaning to intended meaning. These are notated with a double-arrow (⟹) between two frames:
+
+```
+"Can you pass the salt?" — surface to intended:
+
+┌──────────────────────        ⟹      ┌──────────────────────→
+│ ◇_ability(pass salt)                 │  pass salt
+└──────────────────────                └──────────────────────→
+  φ = query (gapped)                     φ = direct (arrow-out)
+```
+
+**Three inference types are recognized:**
+
+| Type | Notation | Example |
+|------|---------|---------|
+| **Scalar implicature** (SI) | weaker ⟹ ¬stronger | "some" ⟹ "not all" |
+| **Conventional inference** (CI) | surface ⟹ intended | ability-query ⟹ directive |
+| **Disambiguation boundary** | all readings decomposable, context selects | sarcasm (sincere vs. ironic reading), scope ambiguity |
+
+The disambiguation boundary indicates that the compositional structure of all candidate readings IS expressible in UL. Selecting the intended reading from context is a parsing problem outside the algebra — structurally identical to scope ambiguity (Category 3, D2 ✅). See `formal-foundations.md` §9.5.
 
 ---
 
@@ -359,16 +527,17 @@ and continuous change, at great scale"
 ### Worked Example: Constructing "Negation"
 
 ```
-Step 1: Start with any ASSERTION              [•──→──•]
-Step 2: REFLECT through center of frame        [•──←──•] (directions reversed)
+Step 1: Start with any ASSERTION              [•──→──•] (solid frame)
+Step 2: FLIP frame boundary to dashed          [•──→──•] (dashed frame)
 
-Result: The content is mirrored — every directed relation reverses.
+Result: The content is identical — only the frame style changes.
+        Solid frame = asserted. Dashed frame = denied.
 
 → This is negate(a) → a from Σ_UL.
-  Reflection is an involution: negate(negate(a)) = a.
-  The frame stays; the content flips.
-  This is T1 (Geometrically Forced): reflection IS the unique
-  content-reversing, frame-preserving, involutory transformation.
+  Boundary inversion is an involution: negate(negate(a)) = a.
+  The content stays; the assertional sign flips.
+  conjoin(a, negate(a)) = ⊥ (contradiction).
+  disjoin(a, negate(a)) = ⊤ (tautology, in classical logic).
 ```
 
 ### Worked Example: Constructing "Causation"

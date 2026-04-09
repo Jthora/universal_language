@@ -1,7 +1,7 @@
 use serde::{Deserialize, Serialize};
 
 use super::edge::Edge;
-use super::node::{Node, NodeId};
+use super::node::{Node, NodeId, NodeType};
 
 /// Top-level GIR document — the canonical representation of a UL glyph.
 ///
@@ -26,6 +26,23 @@ pub struct Gir {
     /// Optional metadata.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub metadata: Option<GirMetadata>,
+
+    /// Variable IDs currently in binding scope.
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub binding_scope: Option<Vec<String>>,
+
+    /// Modal context — which nodes are world entities and which edges are accessibility relations.
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub modal_context: Option<ModalContext>,
+}
+
+/// Modal context tracking world nodes and accessibility edges.
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+pub struct ModalContext {
+    /// Node IDs that represent possible worlds.
+    pub world_nodes: Vec<NodeId>,
+    /// Indices into the `edges` array that are accessibility relations.
+    pub accessibility_edges: Vec<usize>,
 }
 
 /// Optional metadata attached to a GIR document.
@@ -53,6 +70,8 @@ impl Gir {
             nodes,
             edges,
             metadata: None,
+            binding_scope: None,
+            modal_context: None,
         }
     }
 
@@ -60,6 +79,26 @@ impl Gir {
     pub fn with_metadata(mut self, metadata: GirMetadata) -> Self {
         self.metadata = Some(metadata);
         self
+    }
+
+    /// Set binding scope on this GIR document.
+    pub fn with_binding_scope(mut self, scope: Vec<String>) -> Self {
+        self.binding_scope = Some(scope);
+        self
+    }
+
+    /// Set modal context on this GIR document.
+    pub fn with_modal_context(mut self, ctx: ModalContext) -> Self {
+        self.modal_context = Some(ctx);
+        self
+    }
+
+    /// Get all nodes that are variable slots (have `variable_id` set).
+    pub fn bound_variables(&self) -> Vec<&Node> {
+        self.nodes
+            .iter()
+            .filter(|n| n.variable_id.is_some() && n.node_type == NodeType::VariableSlot)
+            .collect()
     }
 
     /// Look up a node by ID.

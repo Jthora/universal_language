@@ -172,6 +172,20 @@ const CANONICAL_GLYPHS = [
   { label: "○{~} Cycle", script: "○{~}" },
   { label: "△{● | ● | ●} Trinity", script: "△{● | ● | ●}" },
   { label: "○{○{○}} Self-Nesting", script: "○{○{○}}" },
+  // Modal operators
+  { label: "□ Necessity []{…}", script: "[]{○{● → ●}}" },
+  { label: "◇ Possibility <>{…}", script: "<>{○{● → ●}}" },
+  { label: "□→ Counterfactual []->{…}{…}", script: "[]->{○{● → ●}}{○{● → ●}}" },
+  // Performative forces
+  { label: "? Query force", script: "query{○{● → ●}}" },
+  { label: "! Direct force", script: "direct{○{● → ●}}" },
+  { label: "⊢ Commit force", script: "commit{○{● → ●}}" },
+  { label: "♡ Express force", script: "express{○{● → ●}}" },
+  { label: "⊨ Declare force", script: "declare{○{● → ●}}" },
+  // Assertion modifications
+  { label: "?{…} Evidential", script: "?{○{● → ●}}" },
+  { label: "!{…} Emphatic", script: "!{○{● → ●}}" },
+  { label: "~?{…} Hedged", script: "~?{○{● → ●}}" },
 ];
 
 // ── Extension Activation ──

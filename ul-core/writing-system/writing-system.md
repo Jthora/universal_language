@@ -35,7 +35,7 @@ If any drawing is valid, why isn't reading hopeless? Because of a mathematical f
 
 > **Decomposition Theorem (informal):** Every mark on a 2D surface is composed of instances of exactly 5 geometric primitives: points, lines, angles, curves, and enclosures.
 
-This isn't a claim about UL — it's a theorem about plane geometry. Any subset of ℝ² can be analyzed into:
+This isn't a claim about UL — it's a theorem about plane geometry (see `formal-foundations.md` §1 for formal treatment; the proof relies on standard results from differential topology applied to ℝ²). Any subset of ℝ² can be analyzed into:
 - **Points** — where marks begin, end, intersect, or exist in isolation (0D features)
 - **Lines** — straight connections between points (1D features, zero curvature)
 - **Angles** — where two lines or curves meet at a vertex (relationship between 1D features)
@@ -225,7 +225,7 @@ When reading a UL text, interpretation happens at three levels:
   - Each nested assertion → an `embed(a)` → entity operation
   - Each line connecting entities → a Relation (r)
   - Each angle between relations → a `modify_relation(m, r)` operation
-  - And so on for all 11 operations
+  - And so on for all 13 operations
 - This is also objective given the structural decomposition. Two readers applying Σ_UL will produce the same formal expression.
 
 **Level 3: Contextual (What the expression REFERS TO in a domain)**
@@ -421,11 +421,11 @@ PAGE
     └── Frame 1 contains Frame 3 → embed(S3) inside S1
 ```
 
-### 7.2 Mapping to Σ_UL Operations
+### 7.2 Mapping to Σ_UL⁺ Operations
 
-The reading procedure extracts geometric structure. To get a formal UL expression, map that structure to the 11 Σ_UL operations:
+The reading procedure extracts geometric structure. To get a formal UL expression, map that structure to the 13 Σ_UL⁺ operations:
 
-| You observe in the drawing... | Σ_UL operation | Formal expression |
+| You observe in the drawing... | Σ_UL⁺ operation | Formal expression |
 |------|----------------|-------------------|
 | Entity + relation + entity inside a frame | `predicate` | predicate(e₁, r, e₂) → a |
 | A transformation applied to an entity (scaled, rotated, etc.) | `modify_entity` | modify_entity(m, e) → e' |
@@ -438,8 +438,10 @@ The reading procedure extracts geometric structure. To get a formal UL expressio
 | Two relations end-to-end (endpoint of r₁ = startpoint of r₂) | `compose` | compose(r₁, r₂) → r |
 | A directed relation with its arrow reversed | `invert` | invert(r) → r' |
 | A quantifier-modification on an entity producing a statement | `quantify` | quantify(m, e) → a |
+| Hollow marks (○_x) replaced by filled marks (●_x) within a frame | `bind` | bind(e_x, a) → a |
+| Frame boundary styled (dotted, double, wavy) without content change | `modify_assertion` | modify_assertion(m, a) → a |
 
-**This mapping is exhaustive.** If the drawing contains geometric features not captured by these 11 operations, those features are either (a) reducible to combinations of these operations, or (b) evidence that UL's operation set is incomplete — which would be a genuine finding.
+**This mapping is exhaustive.** If the drawing contains geometric features not captured by these 13 operations, those features are either (a) reducible to combinations of these operations, or (b) evidence that UL's operation set is incomplete — which would be a genuine finding.
 
 ### 7.3 Ambiguity and Resolution
 

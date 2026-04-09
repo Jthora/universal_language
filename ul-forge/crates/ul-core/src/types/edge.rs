@@ -3,7 +3,7 @@ use std::fmt;
 
 use super::node::NodeId;
 
-/// The 6 edge types representing spatial and semantic relationships between nodes.
+/// The 8 edge types representing spatial and semantic relationships between nodes.
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, Deserialize)]
 #[serde(rename_all = "snake_case")]
 pub enum EdgeType {
@@ -19,6 +19,10 @@ pub enum EdgeType {
     Connects,
     /// Semantic cross-reference (may be non-spatial).
     References,
+    /// Variable binding — links a slot entity to its co-referent(s).
+    Binds,
+    /// Modal accessibility — links world entities via an accessibility relation.
+    AccessibleFrom,
 }
 
 impl EdgeType {
@@ -42,6 +46,8 @@ impl fmt::Display for EdgeType {
             EdgeType::Intersects => write!(f, "intersects"),
             EdgeType::Connects => write!(f, "connects"),
             EdgeType::References => write!(f, "references"),
+            EdgeType::Binds => write!(f, "binds"),
+            EdgeType::AccessibleFrom => write!(f, "accessible_from"),
         }
     }
 }
@@ -98,5 +104,15 @@ impl Edge {
     /// Create a reference edge.
     pub fn references(source: impl Into<String>, target: impl Into<String>) -> Self {
         Self::new(source, target, EdgeType::References)
+    }
+
+    /// Create a binding edge (variable slot binds to co-referent).
+    pub fn binds(source: impl Into<String>, target: impl Into<String>) -> Self {
+        Self::new(source, target, EdgeType::Binds)
+    }
+
+    /// Create a modal accessibility edge between world entities.
+    pub fn accessible_from(source: impl Into<String>, target: impl Into<String>) -> Self {
+        Self::new(source, target, EdgeType::AccessibleFrom)
     }
 }

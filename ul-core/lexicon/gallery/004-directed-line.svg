@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <rect width="200" height="200" fill="var(--gallery-bg, #1e1e1e)" rx="8"/>
+  <line x1="60" y1="100" x2="140" y2="100" stroke="var(--gallery-accent, #569cd6)" stroke-width="2" marker-end="url(#arrow)"/>
+    <defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="var(--gallery-accent, #569cd6)"/></marker></defs>
+  <text x="100" y="185" text-anchor="middle" fill="var(--gallery-fg, #d4d4d4)" font-family="monospace" font-size="9" opacity="0.7">Single Directed Line (Ray)</text>
+</svg>

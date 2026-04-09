@@ -8,8 +8,8 @@
 
 | Term | Definition |
 |------|-----------|
-| **Universal Language (UL)** | The mathematically unique minimal formal structure for encoding all possible meaning relationships, derived from 5 geometric primitives |
-| **Σ_UL** | The algebraic signature of UL: 4 sorts, 11 operations, proven unique up to isomorphism |
+| **Universal Language (UL)** | The minimal algebraic skeleton that all compositional meaning systems share, derived from 5 geometric primitives and unique up to isomorphism |
+| **Σ_UL⁺** | The algebraic signature of UL: 4 sorts, 13 operations, unique up to isomorphism (conditional on role-property definitions) |
 | **Glyph** | A visual composition of geometric primitives that encodes a meaning in UL |
 | **Mark** | A single geometric primitive instance within a glyph (a point, a line, an enclosure, etc.) |
 

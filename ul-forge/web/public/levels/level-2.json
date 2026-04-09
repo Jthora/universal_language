@@ -1,0 +1,25 @@
+{
+  "level": 2,
+  "title": "Modifiers and Negation",
+  "description": "Use modifiers, inversion, and negation",
+  "exercises": [
+    {
+      "prompt": "Encode: \"The fast river flows\"",
+      "hint": "modify_entity + predicate",
+      "expectedOps": ["modify_entity", "predicate"],
+      "sampleAnswer": "○{ ∠ \"fast\" ● \"river\" → ● \"flows\" }"
+    },
+    {
+      "prompt": "Negate: \"It is NOT raining\"",
+      "hint": "Wrap a predication in negation",
+      "expectedOps": ["negate", "predicate"],
+      "sampleAnswer": "¬○{ ● \"it\" → ● \"raining\" }"
+    },
+    {
+      "prompt": "Invert: given \"X kicked Y\", write \"Y was-kicked-by X\"",
+      "hint": "Use the ← (invert) operator on the relation",
+      "expectedOps": ["invert"],
+      "sampleAnswer": "○{ ● \"Y\" ← \"kicked\" ● \"X\" }"
+    }
+  ]
+}

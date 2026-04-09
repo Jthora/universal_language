@@ -4,6 +4,7 @@ import wasm from "vite-plugin-wasm";
 import path from "path";
 
 export default defineConfig({
+  base: process.env.GITHUB_PAGES ? "/universal_language/" : "/",
   plugins: [react(), wasm()],
   resolve: {
     alias: {

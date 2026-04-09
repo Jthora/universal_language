@@ -9,7 +9,9 @@
 
 ## FOUNDATIONAL AXIOM
 
-**A Universal Language exists that is mathematically intrinsic to the structure of the universe and can be derived entirely from geometry. It requires no empirical validation against human languages because it is proven mathematically — its validity follows from the same necessity as geometric truth itself.**
+**A Universal Language exists that is mathematically intrinsic to the structure of the universe and can be derived entirely from geometry. It requires no empirical validation against human languages because — conditional on the relational postulate (that all meaning is relationship) and the geometric setting (Euclidean plane) — its validity is proven mathematically. Its internal consistency and uniqueness follow from these axioms with the same deductive necessity as geometric truth itself.**
+
+> **⚠ HONEST STATUS:** The relational postulate ("all meaning is relationship") is a well-supported foundational assumption, not a theorem. It is supported by 150 years of convergent evidence from formal semantics (Frege, Montague, Jackendoff, Langacker, Wierzbicka — see `independent-derivation.md`) but cannot be formally proven because it bridges a formal concept (Σ_UL structure) to an informal concept (meaning). The Euclidean geometric setting is a simplification; most core theorems are geometry-independent. See `docs/planning/audits/improvements/pass1-1/tier-a-foundational/tier-a-working-analysis.md` for the full analysis.
 
 > **⚠ CRITICAL FRAMING:** UL is not a model of human language, and human languages are not its validation target. UL is a naturally emergent formal structure — like the natural numbers or the symmetry groups of physics. The ethnic/natural languages of Earth (English, Latin, Japanese, Hebrew, Sumerian, etc.) are at best *lossy, constrained projections* of UL. You cannot validate a more fundamental system by testing it against a less fundamental one. See `foundations/paradigm.md` for the full paradigm statement.
 
@@ -242,7 +244,9 @@ Geometric transformations are the grammatical operations. They modify symbols wi
 |---|---|---|---|
 | **Translation** | Move without rotation | Temporal/spatial displacement | Change tense: "is" → "was" → "will be" |
 | **Rotation** | Turn about a point | Perspective shift | Change voice: active → passive → reflexive |
-| **Reflection** | Mirror across a line | Inversion / negation | Negate: "is" → "is not" |
+| **Reflection** | Mirror across a line | Converse (role swap) | Swap: "A acts on B" → "B is acted upon by A" |
+
+> **Note (April 2026):** Reflection implements *converse* (subject-object swap, same truth value), not *negation* (truth-value flip). Negation is realized by boundary inversion: flipping the assertion frame's boundary from solid (asserted) to dashed (denied). See `formal-operations.md` §1.4.
 
 #### Similarity Transformations (Meaning-Scaling)
 
@@ -453,13 +457,13 @@ A **language** is defined as a triple L = (E, M, ⟦·⟧) where:
 
 over the **universal linguistic signature** Σ_UL with:
 - **4 sorts:** entity (e), relation (r), modifier (m), assertion (a)
-- **11 operations:** predicate, modify_entity, modify_relation, negate, conjoin, disjoin, embed, abstract, compose, invert, quantify
+- **13 operations:** predicate, modify_entity, modify_relation, negate, conjoin, disjoin, embed, abstract, compose, invert, quantify, bind, modify_assertion
 
 The homomorphism condition enforces **compositionality**: combining expressions then interpreting = interpreting then combining. This signature is shown to be minimal — removing any sort or operation makes the system unable to express some class of finite relationships (proof: `formal-foundations.md` §1.5).
 
 ### 6.2 The Unique Grounding Theorem (`formal-foundations.md`, Part IV)
 
-The assignment of geometric primitives to semantic primitives is **proven unique** by structural characterisation. Each geometric and semantic primitive is defined by its **role properties** — dependency rank, dimensionality, number of required sub-components, symmetry, and constructive role — and the mapping between them is the only bijection that preserves all of these.
+The assignment of geometric primitives to semantic primitives is **proven unique conditional on the role-property definitions** (§4.1–4.4 of `formal-foundations.md`). Each geometric and semantic primitive is characterized by its **role properties** — dependency rank, dimensionality, number of required sub-components, symmetry, and constructive role — and the mapping between them is the only bijection that preserves all of these properties. The proof is valid given the definitions; whether the definitions themselves are uniquely natural or contain design choices remains an open question (see `docs/planning/audits/improvements/pass1/`).
 
 The proof proceeds by exhaustive elimination:
 
@@ -551,7 +555,7 @@ The geometric system achieves universality because it is essentially a **free al
 
 | Marker | Symbol | Derivation |
 |---|---|---|
-| Negation | Mirror-image (reflected glyph) | Reflection = inversion |
+| Negation | Dashed frame boundary | Boundary inversion = denied assertion (solid = asserted, dashed = denied) |
 | Past tense | Glyph shifted left | Translation leftward = prior position |
 | Future tense | Glyph shifted right | Translation rightward = subsequent position |
 | Question | Glyph rotated 180° | Full rotation reversal = uncertainty / inversion of assertion |

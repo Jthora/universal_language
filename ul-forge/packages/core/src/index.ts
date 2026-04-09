@@ -2,7 +2,7 @@
  * @ul-forge/core — Universal Language for AI Agents
  *
  * Parse, validate, render, and compose geometric meaning structures.
- * 5 primitives, 4 sorts, 11 operations — proven unique and universal.
+ * 5 primitives, 4 sorts, 13 operations — unique up to isomorphism.
  *
  * @example
  * ```typescript

@@ -8,7 +8,7 @@
 
 The validator checks structural and sort constraints. But some properties of UL glyphs require **formal reasoning**:
 
-1. **Is this glyph a valid instance of a Σ_UL operation?** — Verify that a glyph's structure matches one of the 11 operation signatures
+1. **Is this glyph a valid instance of a Σ_UL operation?** — Verify that a glyph's structure matches one of the 13 operation signatures
 2. **Are two glyphs semantically equivalent?** — Prove that two different GIR representations encode the same meaning
 3. **Does this composition preserve sort correctness?** — When combining glyphs, prove the result satisfies all sort constraints
 4. **Is this template exhaustive?** — Prove that the template library covers all possible Tier-1 glyphs
@@ -71,7 +71,7 @@ Encode GIR constraints as SMT-LIB formulas and solve with Z3.
 
 ### 1. Operation Signature Verification
 
-Given a GIR subgraph, prove it matches one of the 11 Σ_UL operation signatures.
+Given a GIR subgraph, prove it matches one of the 13 Σ_UL operation signatures.
 
 ```
 Input: GIR subgraph

@@ -9,8 +9,8 @@ Zero build system. No React. No npm required. Just a `<script>` tag.
 ```html
 <script src="https://cdn.jsdelivr.net/npm/@ul-forge/components/dist/ul-components.iife.js"></script>
 
-<!-- Static glyph -->
-<ul-symbol script="point(existence)" width="200" height="200"></ul-symbol>
+<!-- Static glyph: ● = point (entity), → = directed relation -->
+<ul-symbol script="● → ●" width="200" height="200"></ul-symbol>
 
 <!-- Interactive editor -->
 <ul-composer width="400" height="300"></ul-composer>
@@ -18,6 +18,18 @@ Zero build system. No React. No npm required. Just a `<script>` tag.
 <!-- Searchable lexicon -->
 <ul-dictionary columns="3"></ul-dictionary>
 ```
+
+### UL-Script Syntax
+
+UL-Script uses geometric symbols, not function names:
+
+| Symbol | ASCII | Meaning |
+|--------|-------|---------|
+| `●` | `*` | Point (entity) |
+| `→` | `->` | Directed relation |
+| `∠60` | `@60` | Angle modifier |
+| `~` | `~` | Curve (process) |
+| `□` | `/4` | Square enclosure |
 
 ## Components
 

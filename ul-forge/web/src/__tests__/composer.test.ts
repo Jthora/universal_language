@@ -1,7 +1,7 @@
 /**
  * Tier 3: Algebraic composer integration tests.
  *
- * Validates all 11 Σ_UL operations via the WASM binary:
+ * Validates all 13 Σ_UL operations via the WASM binary:
  *   predicate, modify_entity, modify_relation, negate, conjoin, disjoin,
  *   embed, abstract, compose, invert, quantify
  *

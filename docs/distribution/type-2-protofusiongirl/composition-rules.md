@@ -1,6 +1,6 @@
 # Type 2 — Composition Rule Engine
 
-> Pattern matching against the Σ_UL formal system — 5 primitives, 4 sorts, 11 operations.
+> Pattern matching against the Σ_UL⁺ formal system — 5 primitives, 4 sorts, 13 operations.
 
 ---
 
@@ -10,7 +10,7 @@ The composition rule engine evaluates player-composed GIR structures against rul
 
 - **5 geometric primitives:** Point, Line, Angle, Curve, Enclosure
 - **4 sorts:** Entity, Relation, Modifier, Assertion
-- **11 Σ_UL operations:** predicate, modify_entity, modify_relation, negate, conjoin, disjoin, embed, abstract, compose, invert, quantify
+- **13 Σ_UL operations:** predicate, modify_entity, modify_relation, negate, conjoin, disjoin, embed, abstract, compose, invert, quantify, bind, modify_assertion
 - **3 lexicon tiers:** T1 (geometrically forced), T2 (structurally distinguished), T3 (conventional)
 
 Each composition rule binds a structural pattern (required + optional forbidden subgraph) to a weight and difficulty level. The rule engine matches player GIR against all active rules using backtracking search, producing a weighted correctness score.
@@ -20,7 +20,7 @@ Each composition rule binds a structural pattern (required + optional forbidden 
 ## Types
 
 ```rust
-/// The 11 operations of the Σ_UL algebraic signature.
+/// The 13 operations of the Σ_UL⁺ algebraic signature.
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, Deserialize)]
 #[serde(rename_all = "snake_case")]
 pub enum Operation {

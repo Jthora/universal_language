@@ -17,6 +17,11 @@ UL Forge provides four AI integration surfaces, each addressing a different moda
 
 All AI interfaces consume and produce GIR — UL Forge's canonical data format. The AI never operates on raw SVG or pixel data; it works on the structured graph representation.
 
+> **Agent WASM Integration:** For using the WASM module directly in AI agent toolchains
+> (MCP servers, OpenAI function calling, UL Transceiver protocol), see
+> [wasm/integration-patterns.md](../wasm/integration-patterns.md) §6. For the complete
+> TypeScript API available to agents, see [wasm/typescript-api-reference.md](../wasm/typescript-api-reference.md).
+
 ---
 
 ## Design Principles

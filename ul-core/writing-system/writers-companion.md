@@ -25,7 +25,7 @@ WRITING PROCEDURE
            WHAT KIND of connection? (modifiers)
            What is being CLAIMED? (assertions)
 
-  STEP 2 — SELECT OPERATIONS: Identify which of the 11 Σ_UL operations
+  STEP 2 — SELECT OPERATIONS: Identify which of the 13 Σ_UL⁺ operations
            combine your sorts into the intended structure.
 
   STEP 3 — DRAW: Realize each operation as geometry on paper.
@@ -401,7 +401,7 @@ Q3: Are you applying a quality/transformation to a relation?
 
 Q4: Are you denying a claim?
     YES → negate(a) → a
-    Draw: Reflect the content inside the frame (mirror it).
+    Draw: Flip the frame boundary (solid → dashed = denied).
 
 Q5: Are you combining two claims that are BOTH true?
     YES → conjoin(a₁, a₂) → a
@@ -427,10 +427,24 @@ Q10: Are you reversing a relation's direction?
      YES → invert(r) → r
      Draw: Reverse the arrow.
 
-Q11: Are you saying "all X" or "some X"?
+Q11: Are you saying "all X", "most X", or "some X"?
      YES → quantify(m, e) → a
-     Draw: Scale the entity large (fills frame = all) or small
-           (localized in frame = some).
+     Draw: Scale the entity to fill a PROPORTION of the frame:
+           p=1 fills entire frame (all), p≈0.7 fills most (most),
+           p→0⁺ point-like (some).
+
+Q12: Do multiple positions in the claim refer to the SAME entity?
+     YES → bind(e_x, a) → a
+     Draw: Place hollow marks (○_x) at each position. Binding fills
+           them (●_x), showing all refer to the same entity.
+           Scope = nesting depth (outer frame = wider scope).
+
+Q13: Are you marking your CERTAINTY, EVIDENCE, or STANCE toward the claim?
+     YES → modify_assertion(m, a) → a
+     Draw: Change the frame boundary style:
+           dotted (···) = evidential ("apparently")
+           double (═══) = emphatic ("definitely")
+           wavy (~~~) = hedged ("maybe")
 ```
 
 ### 5.2 Common Patterns
@@ -474,8 +488,10 @@ Drawing:    [  [•──→──•]  ══→══  •  ]
 **Pattern: Negation** — "A does NOT relate to B"
 ```
 Operations: negate(predicate(e₁, r, e₂))
-Drawing:    [  •──→──•  ] but content reflected/mirrored
-            (reflection = negation)
+Drawing:    ┌╌╌╌╌╌╌╌╌╌╌╌╌╌┐
+            ╎  •──→──•    ╎  (dashed frame = denied)
+            └╌╌╌╌╌╌╌╌╌╌╌╌╌┘
+            (boundary inversion = negation)
 ```
 
 **Pattern: Quantified Claim** — "ALL things relate to B"
@@ -590,7 +606,7 @@ This is a conditional — "if A then B." In logic: implies(A, B) = disjoin(negat
 | How connected? | "freezes" — transformation process | Relation: r₂ (curve, directed →) |
 
 **Combination:** implies(A, B) = disjoin(negate(A), B)
-- negate(A) → reflected content in A's frame
+- negate(A) → flip frame boundary of A (solid → dashed)
 - disjoin(negate(A), B) → adjacent frames
 
 But this algebraic decomposition is clunky for practical writing. A more natural geometric approach:
@@ -928,7 +944,7 @@ Every logical connective is a **spatial relationship between sentence frames**. 
 |------------|-----------------|-------------------|---------|
 | **AND** (conjoin) | "A and B are both true" | Frames **overlap** (shared interior region) | Two frames with shared boundary area |
 | **OR** (disjoin) | "A or B (or both) is true" | Frames **touch** (boundaries contact, no shared interior) | Two frames side by side, edges touching |
-| **NOT** (negate) | "A is not true" | Frame content **reflected** through center | Content mirrored inside the frame |
+| **NOT** (negate) | "A is not true" | Frame boundary **flipped** (solid → dashed) | Dashed frame boundary = denied |
 | **IF...THEN** (implication) | "If A then B" | A's frame **embedded inside** B's frame | Inner frame (premise) shrunk to entity, connected to conclusion |
 
 ```
@@ -989,24 +1005,24 @@ NOT (negate):               IF-THEN (implication):
 
 ### 9.3 Negation in Practice
 
-Negation is defined as **reflection** of content through the frame's center (see `formal-operations.md` §1.4). In practice:
+Negation is defined as **boundary inversion** — flipping the assertional sign σ ∈ {⊕, ⊖} (see `formal-operations.md` §1.4). In practice:
 
-**Method 1 — Full reflection:** Mirror the entire content of the frame. If the original has `•──→──•`, the negation has `•──←──•` (reversed direction). This is geometrically precise.
+**Method 1 — Boundary flip (formal):** Change the frame boundary from solid (asserted, σ = ⊕) to dashed (denied, σ = ⊖). The content inside the frame is unchanged — only the assertion's sign is flipped.
 
 **Method 2 — Negation mark (practical shorthand):** Draw a diagonal strike-through (╲) across the frame or the relation being negated. This is a conventional shorthand, not a geometric primitive — but it's unambiguous and much easier to draw.
 
 ```
   "Fire is NOT cold"
 
-  Method 1 (precise):         Method 2 (practical):
-  ┌──────────────┐            ┌──────────────┐
-  │  •←══──○     │            │  •──══→─○    │
-  │  (reflected)  │            │      ╲       │
-  └──────────────┘            │  (crossed out)│
+  Method 1 (formal):          Method 2 (practical):
+  ┌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┐            ┌──────────────┐
+  ╎  •──══→─○     ╎            │  •──══→─○    │
+  ╎  (dashed=denied)╎           │      ╲       │
+  └╌╌╌╌╌╌╌╌╌╌╌╌╌╌┘            │  (crossed out)│
                               └──────────────┘
 ```
 
-**Scope matters:** Negation applies to whatever frame encloses the reflected/struck content.
+**Scope matters:** Negation applies to whatever frame encloses the denied content (dashed boundary).
 - NOT(A AND B) ≠ (NOT A) AND B — the negation frame must enclose the conjunction, not just one claim.
 
 ### 9.4 Conditionals and Implication
@@ -1026,7 +1042,7 @@ This was demonstrated in Example 3 (§6.3, "If the temperature drops, then water
 |---------|-----------------|-----------|----------------|
 | Simple AND | "A and B" | `conjoin(a₁, a₂)` | Overlapping frames |
 | Simple OR | "A or B" | `disjoin(a₁, a₂)` | Adjacent frames |
-| Simple NOT | "not A" | `negate(a)` | Reflected content |
+| Simple NOT | "not A" | `negate(a)` | Dashed frame boundary |
 | IF-THEN | "if A then B" | `predicate(embed(a₁), r, ...)` | Embedded premise → conclusion |
 | BUT (contrastive AND) | "A but B" | `conjoin(a₁, a₂)` with 180° between | Overlapping frames + opposing relations |
 | BECAUSE | "A because B" | `predicate(embed(a_B), r_cause, embed(a_A))` | Two embedded facts linked causally |
@@ -1091,12 +1107,12 @@ Claim B: "The answer is false" → `predicate(e_answer, r_identity, negate(e_tru
 ```
   ┌──────────────────┐┌──────────────────┐
   │                  ││                  │
-  │  •════○{•}      ││  •════○{•←}     │
+  │  •════○{•}      ││  •════○{•}      │
   │ (answer)(truth)  ││(answer)(false:   │
-  │                  ││ reflected truth)  │
-  └──────────────────┘└──────────────────┘
+  │                  ││ dashed enclosure) │
+  └──────────────────┘└╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┘
 ```
-Two frames touching but not overlapping. Left: entity connected at 0° to ○{•} (truth). Right: same entity connected at 0° to reflected ○{•} (falsehood — reflected content inside the circle). Adjacent frames = at least one is true = disjunction.
+Two frames touching but not overlapping. Left: entity connected at 0° to ○{•} (truth). Right: same entity connected at 0° to ○{•} with dashed boundary (falsehood — denied enclosure). Adjacent frames = at least one is true = disjunction.
 
 **Verify:**
 - Pass 1: Two adjacent frames = disjunction.
@@ -1131,7 +1147,7 @@ Negate: `negate(a_inner)` = reflect this claim.
   │                       │
   └───────────────────────┘
 ```
-A circle enclosure containing an entity modified by a visible right-angle mark (∟ = 90° = indifference). The diagonal strike-through (╲) across the frame negates the claim. Alternatively, reflect the interior content.
+A circle enclosure containing an entity modified by a visible right-angle mark (∟ = 90° = indifference). The diagonal strike-through (╲) across the frame negates the claim. Alternatively, use a dashed frame boundary to denote denial.
 
 **Verify:**
 - Pass 1: One frame containing a circle enclosure.
@@ -1185,6 +1201,473 @@ Inner frame: harmony (equilateral triangle) connected by a directed curve to con
 
 **Reading:** "An embedded claim [a balanced fundamental structure overcomes an opposed pair through a process] leads through a process to a complete concept containing upward change." = "Peace emerges from harmony overcoming conflict." ✓
 
+### 10.5 Example 11: "Every student read some book" (Variable Binding + Quantification)
+
+**Decompose:**
+
+| Question | Answer | Sort |
+|----------|--------|------|
+| Who reads? | student (x) — bound variable | Entity (e) |
+| What is read? | book (y) — bound variable | Entity (e) |
+| What is the relation? | read | Relation (r) |
+| How many students? | every (∀, p=1) | Modifier (m) |
+| How many books? | some (∃, p→0⁺) | Modifier (m) |
+
+**Select Operations:**
+- `predicate(e_x, r_read, e_y) → a₁` — core claim
+- `quantify(m_∃, e_y) → a_inner` — existential quantification on book
+- `quantify(m_∀, e_x) → a_outer` — universal quantification on student
+- `bind(e_x, ...)` and `bind(e_y, ...)` — co-reference for variables
+
+**Formal decomposition (∀ > ∃ reading):**
+```
+bind(x, quantify(m_∀, x,
+  bind(y, quantify(m_∃, y,
+    predicate(●_x, r_read, ●_y)))))
+```
+
+**Draw:**
+```
+  ┌─────────────────────────────────────┐  bind(x), ∀x — OUTER scope
+  │  ●_x fills frame (∀)               │
+  │  ┌───────────────────────────┐      │
+  │  │  ●_y small (∃)            │      │  bind(y), ∃y — inner scope
+  │  │  ●_x ───read──→ ●_y      │      │
+  │  └───────────────────────────┘      │
+  └─────────────────────────────────────┘
+```
+
+**Verify:**
+- Pass 1: Outer frame (solid, ⊕), inner frame (solid, ⊕)
+- Pass 2: Two filled marks (●_x, ●_y) — bound variables. ●_x fills outer frame → ∀x. ●_y small in inner frame → ∃y.
+- Pass 3: Directed relation "read" from ●_x to ●_y.
+- Pass 4: Labels x and y match across occurrences — co-reference confirmed.
+- Pass 5: Nesting depth: x outer (wider scope), y inner (narrower scope).
+
+**Reading:** "For every student x, there exists some book y such that x read y." ✓
+
+**Teaching point:** Scope = nesting depth. The ∀ > ∃ reading is unambiguous in the visual diagram — no scope ambiguity.
+
+### 10.6 Example 12: "Apparently she didn't leave" (Assertion Modification + Negation)
+
+**Decompose:**
+
+| Question | Answer | Sort |
+|----------|--------|------|
+| Who? | she | Entity (e) |
+| What happened? | leave | Relation (r) |
+| Is it affirmed or denied? | denied (σ = ⊖) | Negation |
+| What is the speaker's stance? | evidential ("apparently") | Modifier (m) |
+
+**Select Operations:**
+- `predicate(e_she, r_leave, e_place) → a₁` — core claim "she left"
+- `negate(a₁) → a₂` — denial: "she didn't leave"
+- `modify_assertion(m_evidential, a₂) → a₃` — evidential frame: "apparently she didn't leave"
+
+**Formal decomposition:**
+```
+modify_assertion(m_evidential, negate(predicate(e_she, r_leave, e_place)))
+```
+
+**Draw:**
+```
+  ┌···················┐    Dotted boundary = evidential (m_evidential)
+  ╎  ┌╌╌╌╌╌╌╌╌╌╌╌╌┐  ╎    Dashed interior = negated (σ = ⊖)
+  ╎  ╎ • ──leave→ • ╎  ╎    Content unchanged
+  ╎  └╌╌╌╌╌╌╌╌╌╌╌╌┘  ╎
+  └···················┘
+
+  Or compacted (single frame combining both):
+  ┌╌·╌·╌·╌·╌·╌·╌·╌·┐    Dashed (denied) + dotted (evidential)
+  ╎  • ──leave──→ •  ╎
+  └╌·╌·╌·╌·╌·╌·╌·╌·┘
+```
+
+**Verify:**
+- Pass 1: Frame with dotted boundary (evidential), dashed interior (negated).
+- Pass 2: Two marks (she, place) connected by "leave" relation.
+- Pass 3: No angle modifications.
+- Pass 4: Boundary decoration: dotted → modify_assertion(m_evidential). Dashed → negate.
+- Pass 5: Read inside-out: predicate → negate → modify_assertion.
+
+**Reading:** "Evidentially: it is denied that she left." = "Apparently she didn't leave." ✓
+
+**Teaching point:** Negation (σ) and assertion modification (∂F) are orthogonal. Dashed = truth status flipped. Dotted = epistemic stance. Both can co-occur.
+
+### 10.7 Example 13: "Most birds can fly" (Graduated Quantification)
+
+**Decompose:**
+
+| Question | Answer | Sort |
+|----------|--------|------|
+| What? | birds | Entity (e) |
+| What can they do? | fly | Relation (r) |
+| How many? | most (p ≈ 0.7) | Modifier (m) |
+
+**Select Operations:**
+- `predicate(e_birds, r_fly, e_air) → a₁` — "birds fly"
+- `quantify(m_most, e_birds) → a` — "most birds" (p ≈ 0.7)
+
+**Formal decomposition:**
+```
+quantify(m_{p≈0.7}, predicate(e_birds, r_fly, e_air))
+```
+
+**Draw:**
+```
+  ┌────────────────────────────┐
+  │                            │
+  │  ████████████              │   ● fills ~70% of frame = "most"
+  │  █ birds ███ ──fly──→ •   │
+  │  ████████████   (air)      │
+  │                            │
+  └────────────────────────────┘
+
+  Compare with:
+  ALL (p=1):    ████████████████████  (fills entire frame)
+  MOST (p≈0.7): ████████████          (fills ~70%)
+  SOME (p→0⁺):        •              (point-like)
+```
+
+**Verify:**
+- Pass 1: Frame (solid, ⊕).
+- Pass 2: Entity "birds" fills approximately 70% of frame → quantify with p ≈ 0.7.
+- Pass 3: Directed relation "fly" from birds to air.
+- Pass 4: Frame-fill proportion directly encodes quantificational force.
+- Pass 5: No assertion modification or negation.
+
+**Reading:** "Most birds fly (through the air)." ✓
+
+**Teaching point:** The visual fill proportion IS the quantificational force. You can literally see the difference between "all," "most," and "some."
+
+### 10.8 Example 14: "She might be sleeping" (Epistemic Possibility)
+
+**Decompose:**
+
+| Question | Answer | Sort |
+|----------|--------|------|
+| Who? | she | Entity (e) |
+| Doing what? | sleeping | Relation (r) |
+| What kind of claim? | might — epistemic possibility | Modal operator (defined) |
+
+**Select Operations:**
+- `predicate(e_she, r_sleeping, e_implicit) → a₁` — "she sleeps"
+- `possible(r_K, a₁)` — "it is possible (given what is known) that she sleeps"
+
+**Expand to primitives:**
+```
+possible(r_K, a₁) = negate(necessary(r_K, negate(a₁)))
+  = negate(bind(w, quantify(m_∀, w, disjoin(negate(predicate(w_current, r_K, w)), predicate(w, r_satisfies, embed(negate(a₁)))))))
+```
+
+**Draw:**
+```
+  ┌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┐
+  ╎                                ╎    ← dashed border = possibility (◇)
+  ╎   •_she ──sleeping──→ •       ╎    ← core predication inside
+  ╎                                ╎
+  └╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┘
+         label: r_K (epistemic)
+```
+
+**Verify:**
+- Pass 1: Frame is dashed (◇ = possibility).
+- Pass 2: Entity "she" with relation "sleeping."
+- Pass 3: Label "r_K" indicates epistemic modal flavor.
+- Pass 4: Reading: "In some world compatible with what is known, she is sleeping."
+
+**Teaching point:** Dashed border = possibility. The reader sees the broken continuity and reads "this holds in SOME accessible world, not necessarily the actual one."
+
+### 10.9 Example 15: "It is necessarily true that 2+2=4" (Alethic Necessity)
+
+**Decompose:**
+
+| Question | Answer | Sort |
+|----------|--------|------|
+| What equals what? | 2+2 equals 4 | Entities + Relation |
+| What kind of claim? | necessarily true — alethic necessity | Modal operator (defined) |
+
+**Select Operations:**
+- `predicate(e_sum_2_2, r_equals, e_4) → a₁` — "2+2 = 4"
+- `necessary(r_alethic, a₁)` — "necessarily, 2+2 = 4"
+
+**Draw:**
+```
+  ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+  ┃                                 ┃    ← bold border = necessity (□)
+  ┃   •_{2+2} ──equals──→ •_4      ┃    ← core predication inside
+  ┃                                 ┃
+  ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+         label: r_alethic (S5)
+```
+
+**Verify:**
+- Pass 1: Frame is bold (□ = necessity).
+- Pass 2: Predication: 2+2 relates-by-equality to 4.
+- Pass 3: Label "r_alethic" with S5 frame = all worlds mutually accessible.
+- Pass 4: Reading: "In ALL possible worlds, 2+2 = 4."
+
+**Teaching point:** Bold border = necessity. The thick, unbroken line says "this holds everywhere, without exception." The S5 frame means every world can access every other — there's no escape from mathematical truth.
+
+### 10.10 Example 16: "He could have won if he had tried" (Counterfactual)
+
+**Decompose:**
+
+| Question | Answer | Sort |
+|----------|--------|------|
+| Who? | he | Entity (e) |
+| What is claimed? | won | Relation (r) |
+| Under what condition? | if he had tried (counterfactual antecedent) | Another predication |
+| What kind of claim? | counterfactual — "in the closest worlds where he tried..." | Modal operator (defined) |
+
+**Select Operations:**
+- `predicate(e_he, r_tried, e_implicit) → a_antecedent` — "he tries"
+- `predicate(e_he, r_won, e_implicit) → a_consequent` — "he wins"
+- `counterfactual(a_antecedent, a_consequent)` — "if he had tried, he would have won"
+
+**Expand:**
+```
+counterfactual(a_ant, a_con) = necessary(r_closest(a_ant), a_con)
+  where r_closest(a_ant) = modify_relation(abstract(embed(a_ant)), r_closeness)
+```
+
+**Draw:**
+```
+  ╌·╌·╌·╌·╌·╌·╌·╌·╌·╌·╌·╌·╌·╌·╌·╌·╌
+  ╎                                    ╎   ← dashed-dot border = counterfactual (□→)
+  ╎  IF:  •_he ──tried──→ •           ╎   ← antecedent (condition)
+  ╎  ─────────────────────             ╎
+  ╎  THEN: •_he ──won──→ •            ╎   ← consequent (result)
+  ╎                                    ╎
+  ╌·╌·╌·╌·╌·╌·╌·╌·╌·╌·╌·╌·╌·╌·╌·╌·╌
+         label: r_closeness (Lewis similarity)
+```
+
+**Verify:**
+- Pass 1: Frame is dashed-dot (□→ = counterfactual).
+- Pass 2: Two predications — antecedent and consequent.
+- Pass 3: Label "r_closeness" indicates Lewis similarity ordering.
+- Pass 4: Reading: "In the closest worlds where he tried, he won."
+
+**Teaching point:** The dashed-dot border means "this isn't about the actual world — it's about the nearest worlds where the antecedent holds." The antecedent didn't actually happen (he didn't try), but the claim is about what WOULD have happened.
+
+### 10.11 Example 17: "I promise to return" (Commissive Performative)
+
+**Decompose:** Subject (speaker), relation (return), force (commissive — the utterance creates an obligation).
+
+**Select operations:**
+1. `predicate(e_speaker, r_return, e_destination)` — core content
+2. Force parameter: φ = commit
+
+**Expand:**
+```
+predicate(e_speaker, r_return, e_destination)[σ=⊕, φ=commit]
+```
+
+**Draw:**
+```
+←────────────────────┐
+   •_I ──return──→ •  │
+←────────────────────┘
+    φ = commit (arrow-in border)
+```
+
+**Verify:**
+- Pass 1: Frame has arrow-in borders (←) = commissive force.
+- Pass 2: Content is a standard predication: speaker returns to destination.
+- Pass 3: Without φ=commit, this would be indistinguishable from "I will return" (mere assertion).
+- Pass 4: Reading: "I undertake to return" — the utterance creates the obligation.
+
+**Teaching point:** The arrow-in border (←) means the force is directed inward — the speaker binds THEMSELVES. Compare with directives (→), where force is directed outward at the hearer.
+
+### 10.12 Example 18: "I pronounce you married" (Declarative Performative)
+
+**Decompose:** Subject (speaker/authority), relation (pronounce), embedded content (you are married), force (declarative — utterance changes reality).
+
+**Select operations:**
+1. `embed(predicate(e_you, r_married, e_you))` — embedded content
+2. `predicate(e_speaker, r_pronounce, ...)` — pronouncement act
+3. Force parameter: φ = declare
+
+**Expand:**
+```
+predicate(e_speaker, r_pronounce, embed(predicate(e_you, r_married, e_you)))[σ=⊕, φ=declare]
+```
+
+**Draw:**
+```
+╔═══════════════════════════════════════╗
+║  •_speaker ──pronounce──→ ┌───────┐  ║
+║                           │•_you  │  ║
+║                           │married│  ║
+║                           └───────┘  ║
+╚═══════════════════════════════════════╝
+    φ = declare (bold double border)
+```
+
+**Verify:**
+- Pass 1: Frame has bold double border (╔══╗) = declarative force.
+- Pass 2: Content nests: outer predication wraps embedded predication.
+- Pass 3: The bold double border signals that this utterance CREATES the married state — it doesn't merely describe it.
+- Pass 4: Reading: "By uttering this, the speaker makes it the case that you are married."
+
+**Teaching point:** Declarative force is the strongest — the utterance itself changes reality. The bold double border (same as world-enclosure) reflects this: the speech act creates a new state of affairs, like defining a new world.
+
+### 10.13 Example 19: "Can you pass the salt?" (Indirect Speech Act — CI-1)
+
+**Decompose:** Surface form is a query about ability. Intended meaning is a polite directive. This is the canonical case of conventional inference pattern CI-1.
+
+**Select operations (surface):**
+1. `predicate(e_hearer, r_pass, e_salt)` — content: hearer passes salt
+2. `◇_ability(...)` — modal: ability of hearer
+3. Force parameter: φ = query
+
+**Surface form:**
+```
+possible(r_ability, predicate(e_hearer, r_pass, e_salt))[σ=⊕, φ=query]
+```
+
+**Expand to primitives (for reference):**
+```
+negate(necessary(r_ability, negate(predicate(e_hearer, r_pass, e_salt))))[σ=⊕, φ=query]
+```
+
+**Draw surface:**
+```
+┌ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┐
+  ◇_ability                     
+│   •_hearer ──pass──→ •_salt │
+└ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┘?
+    φ = query (gapped border)
+```
+
+**Conventional inference (CI-1):**
+```
+φ_query(◇_ability(a))  ⟹  φ_direct(a)
+```
+
+**Draw intended meaning:**
+```
+┌──────────────────────────────→
+│  •_hearer ──pass──→ •_salt
+└──────────────────────────────→
+    φ = direct (arrow-out border)
+```
+
+**Verify:**
+- Pass 1: Surface has gapped border (query) + diamond (ability modal). Intended has arrow-out border (directive).
+- Pass 2: Content is identical in both frames — only force differs.
+- Pass 3: The ⟹ arrow between frames marks a conventional inference, not a logical entailment.
+- Pass 4: Reading: Surface "Are you able to pass the salt?" conventionally infers directive "Pass the salt."
+
+**Teaching point:** CI-1 is the most common indirect speech act in human language. The ⟹ notation distinguishes conventional inference (culturally stable, compositionally predictable) from truly non-compositional phenomena like sarcasm (⚠️ scope boundary). See `formal-foundations.md` §9.4.
+
+### 10.14 Example 20: "The ball was kicked by the child" (Explicit Invert — Passive Voice)
+
+**Decompose:** subject="child" (entity), action="kicked" (relation), object="ball" (entity). The passive voice reverses the relation direction.
+
+**Select operations:**
+1. `predicate(child, kick, ball)` — active form
+2. `invert(kick)` — reverse the relation for passive voice
+3. `predicate(ball, invert(kick), child)` — passive form
+
+**Active form (for comparison):**
+```
+predicate(e_child, r_kick, e_ball)[σ=⊕]
+```
+
+**Passive form:**
+```
+predicate(e_ball, invert(r_kick), e_child)[σ=⊕]
+```
+
+**Draw active:**
+```
+┌─────────────────────────────┐
+│  •_child ──kick──→ •_ball   │
+└─────────────────────────────┘
+```
+
+**Draw passive (inverted):**
+```
+┌─────────────────────────────┐
+│  •_ball ←──kick── •_child   │
+└─────────────────────────────┘
+```
+
+**Verify:**
+- Pass 1: Single frame (one assertion). Arrow direction REVERSED from active to passive.
+- Pass 2: Same entities, same relation — only direction changes. This is exactly what `invert` does.
+- Pass 3: No modifiers, no negation. Clean inversion.
+- Pass 4: Reading: "The ball was kicked (invert of kicks) by the child."
+
+**Teaching point:** `invert(r)` is the only operation that changes the *direction* of a relation without changing its content. This is how UL captures active/passive voice transformation as a single algebraic operation. The drawing makes it visible: the same stroke, reversed.
+
+### 10.15 Example 21: "Grandfather is father's father" (Relation Composition)
+
+**Decompose:** "grandfather" is the composition of the "father-of" relation with itself. This is the canonical case for `compose(r₁, r₂)`.
+
+**Select operations:**
+1. `r_father` — the "father-of" relation
+2. `compose(r_father, r_father)` — chaining: X's father's father = X's grandfather
+
+**Expression:**
+```
+compose(r_father, r_father) = r_grandfather
+```
+
+**Draw the chain:**
+```
+•_A ──father──→ •_B ──father──→ •_C
+```
+
+**Draw the composed result:**
+```
+•_A ──grandfather──→ •_C
+```
+
+**Verify:**
+- Pass 1: Two chained arrows collapse into one. The intermediate entity (B) is internal to the composition.
+- Pass 2: `compose` requires both operands to be Relation-sort. ✓
+- Pass 3: The output is a new Relation-sort — it can itself be composed further (great-grandfather = compose(grandfather, father)).
+- Pass 4: Reading: "grandfather = father composed with father."
+
+**Teaching point:** `compose(r₁, r₂)` is transitive chaining. Any kinship term, organizational hierarchy, or multi-step process can be decomposed into compositions of simpler relations. The drawing shows this visually: two strokes meeting end-to-end collapse into a single stroke.
+
+### 10.16 Example 22: "Wood becomes wooden" (Abstraction)
+
+**Decompose:** "wooden" is the adjectival form of "wood." The entity "wood" is transformed into a modifier "wood-like" via the `abstract` operation.
+
+**Select operations:**
+1. `e_wood` — entity: the material wood
+2. `abstract(e_wood)` — turn entity into modifier: "wood-ish" / "wooden"
+3. `modify_entity(abstract(e_wood), e_table)` — "wooden table"
+
+**Expression:**
+```
+modify_entity(abstract(e_wood), e_table)
+```
+
+**Draw:**
+```
+       •_wood → ∠_wooden
+            ↓
+•_table ──modified──→ •_wooden_table
+```
+
+Step by step:
+1. Draw `•_wood` (entity dot)
+2. Apply `abstract`: the dot's *shape* becomes a modifier — draw as an angle ∠ derived from the dot
+3. The modifier ∠_wooden attaches to `•_table` → producing a modified entity `•_wooden_table`
+
+**Verify:**
+- Pass 1: `abstract` changes sort from Entity → Modifier. ✓
+- Pass 2: The modifier is then applied via `modify_entity`. ✓
+- Pass 3: Round-trip: could we recover "wood" from "wooden"? Yes — `abstract` turns e→m, the conceptual inverse would turn m→e (but UL has no formal "de-abstract" — this is one-directional).
+- Pass 4: Reading: "wooden table = table modified by (wood made abstract)."
+
+**Teaching point:** `abstract(e)` captures how language derives adjectives from nouns: wood→wooden, gold→golden, child→childish. The geometry: an entity's *shape* becomes a *transformation*. You take the properties of a thing and use them to reshape other things.
+
 ---
 
 ## 11. THE GRAMMAR BRIDGE — FROM OPERATIONS TO PARTS OF SPEECH
@@ -1198,7 +1681,7 @@ This table maps between the four systems you encounter when writing: your natura
 | `predicate(e, r, e)` | Predication | "How does X relate to Y?" | Subject-verb-object: "A acts on B" | Two marks + connecting stroke + frame |
 | `modify_entity(m, e)` | Noun qualification | "What is X like?" | Adjective: "the **big** dog" | Transform the entity (scale, reshape) |
 | `modify_relation(m, r)` | Relation qualification | "In what manner?" | Adverb: "acts **strongly**" | Angle where relation meets context |
-| `negate(a)` | Logical negation | "What is NOT true?" | "does **not** act on" | Reflect frame content or strike through |
+| `negate(a)` | Logical negation | "What is NOT true?" | "does **not** act on" | Flip frame: solid → dashed |
 | `conjoin(a₁, a₂)` | Conjunction | "What holds for BOTH?" | "A **and** B" | Overlapping frames |
 | `disjoin(a₁, a₂)` | Disjunction | "What holds for EITHER?" | "A **or** B" | Adjacent (touching) frames |
 | `embed(a)` | Nominalization | "What is the FACT that...?" | "**that** A happened" | Shrink frame, use as entity |
@@ -1296,18 +1779,22 @@ After drawing, verify:
 | **Modifier (m)** | ∠θ | A quality/transformation | The angle between two strokes | ∠0° ∠60° ∠90° ∠180° |
 | **Assertion (a)** | [ ... ] | A complete claim | A closed frame around entities + relations | [•──→──•] |
 
-## APPENDIX B: THE 11 OPERATIONS AT A GLANCE
+## APPENDIX B: THE 13 OPERATIONS AT A GLANCE
 
 | Operation | Signature | Plain English | How to draw it |
 |-----------|-----------|---------------|----------------|
 | `predicate` | e × r × e → a | "A relates to B" | Two marks connected by a stroke, inside a frame |
 | `modify_entity` | m × e → e | "A transformed" | Scale, rotate, or reshape an entity |
 | `modify_relation` | m × r → r | "Relates *in this way*" | The angle at which a relation meets context |
-| `negate` | a → a | "NOT this claim" | Reflect the content of a frame |
+| `negate` | a → a | "NOT this claim" | Flip frame boundary: solid → dashed |
 | `conjoin` | a × a → a | "A AND B" | Two frames overlapping |
 | `disjoin` | a × a → a | "A OR B" | Two frames touching |
 | `embed` | a → e | "The fact that A" | Shrink a frame, use it as an entity |
 | `abstract` | e → m | "A-shaped" / "A-like" | Use entity's shape as a transformation |
 | `compose` | r × r → r | "then" (chain) | Two strokes meeting end to end |
 | `invert` | r → r | "is done by" (reverse) | Reverse the arrow |
-| `quantify` | m × e → a | "ALL A" or "SOME A" | Entity scaled large (all) or small (some) in frame |
+| `quantify` | m × e → a | "ALL/MOST/SOME A" | Entity fills frame proportion: p=1 all, p≈0.7 most, p→0⁺ some |
+| `bind` | e × a → a | "the same x" / "for all x" | Hollow marks (○_x) → filled marks (●_x) for co-reference |
+| `modify_assertion` | m × a → a | "apparently" / "definitely" | Frame decoration: dotted=evidential, double=emphatic, wavy=hedged |
+
+Note: `conjoin` is derivable from `{negate, disjoin}` via De Morgan's law. The other 12 are independent.

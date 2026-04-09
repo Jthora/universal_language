@@ -6,7 +6,7 @@
 **Methodology:** See `frontier/methodology.md` for rigor standards (four-label system)  
 **Purpose:** Identify what is missing from the current research in terms of breadth, range, and reach — and determine why those gaps matter.
 
-> **⚠ PARADIGM NOTE:** Gaps in this document are measured against UL's own mathematical completeness and its operational deployment target (AI cognitive infrastructure). They are NOT measured against "how well UL explains English" or any other natural language. See `foundations/paradigm.md` for why testing UL against human languages is a category error.
+> **⚠ PARADIGM NOTE:** Gaps in this document are measured against UL's own mathematical completeness and its operational deployment target (AI cognitive infrastructure). Divergence from natural-language data is ambiguous evidence: it may reflect UL incompleteness or natural-language idiosyncrasy. Cross-linguistic patterns that resist UL decomposition are taken seriously as potential evidence of gaps. See `foundations/paradigm.md` for the full methodological framework.
 
 > **Post–Expedition One Update.** This document was originally written before Expedition One.
 > Sections below now carry **[STATUS]** annotations reflecting work done in:
@@ -16,6 +16,16 @@
 >
 > New gaps opened by Expedition One are collected in **Part VII** at the end.
 
+> **Post–Pass 1 Update (April 2026).** The foundation audit and algebraic extension (Pass 1.1–1.4) closed several previously open gaps:
+> - **Variable binding** — CLOSED. `bind : e × a → a` added as 12th operation. Co-reference and scope established via hollow/filled marks with frame-nesting for scope ordering.
+> - **Graduated quantification** — CLOSED. `quantify` extended from binary (∀/∃) to continuous p ∈ [0,1] frame-fill proportion. "Most," "few," "about half" now expressible.
+> - **Assertion-level modification** — CLOSED. `modify_assertion : m × a → a` added as 13th operation. Evidentiality, emphasis, hedging encoded via frame-boundary decoration.
+> - **Montague relationship** — PROVEN. Extensional Montague Grammar (M_ext) is a Σ_UL-algebra: homomorphism h : M_ext → Σ_UL preserving all PTQ operations. UL strictly subsumes M_ext (has geometric surplus). See `foundations/montague-homomorphism.md`.
+> - **Independence count** — RESOLVED. 12 independent + 1 derived (conjoin). Full proofs in `P1-operation-independence.md`.
+> - **Operation count** — Final: 13 operations (4 sorts). All writing system docs synchronized.
+>
+> Remaining open gaps: ~~modality~~, ~~performatives/illocutionary force~~, ~~pragmatic inference (partial)~~, intensional semantics (possible worlds). **Modality resolved (Pass 2 Phase 1)** — 0 new primitives, 3 defined operators, 7 distinguished elements. **Performatives resolved (Pass 2 Phase 2)** — 0 new operations, 1 force parameter φ ∈ {assert, query, direct, commit, express, declare}, 2 distinguished elements. **Pragmatic interface specified (Pass 2 Phase 3)** — 6 inference rules (SI-1–SI-3, CI-1–CI-3), all Category 6 cases resolved: 6.4 via CI-1, 6.1/6.2 via Gricean reflexive intention (nested epistemic modals). D2: 50/50 ✅ (100%).
+
 ---
 
 ## THE CENTRAL PROBLEM
@@ -24,9 +34,9 @@ The research makes a sweeping claim: **a Universal Language exists, derived from
 
 The formal work (`foundations/formal-foundations.md`) proves this claim for a specific, rigorous definition of "language": a Σ-homomorphism between a syntactic algebra and a semantic algebra over the universal linguistic signature Σ_UL. Within that definition, the proof is valid.
 
-But proving the algebra exists is not the same as proving UL is *real* — real in the way the natural numbers are real, real in the way the symmetry groups of physics are real. The four-proof framework (`foundations/paradigm.md`) requires: uniqueness (PROVEN), natural emergence (PROVEN), generative power (PROVEN), and causal efficacy on information-processing systems (pre-registered protocol ready for independent verification).
+But proving the algebra exists is not the same as proving UL is *real* — real in the way the natural numbers are real, real in the way the symmetry groups of physics are real. The four-proof framework (`foundations/paradigm.md`) requires: uniqueness (PROVEN conditional on role-property definitions), natural emergence (CONJECTURED with partial evidence), generative power (PARTIALLY PROVEN), and causal efficacy on information-processing systems (pre-registered protocol ready for independent verification).
 
-The gaps below are not about what UL fails to capture about *human language* — human languages are derived, limited systems and are not the benchmark (see `foundations/paradigm.md`). The gaps are about what UL's mathematical structure still lacks to be a complete, deployable cognitive infrastructure for AI:
+The gaps below are about what UL's mathematical structure still lacks to be a complete, deployable cognitive infrastructure for AI:
 
 - How context modifies meaning (gauge field / connection theory)
 - How uncertainty is represented (probability / information theory)
@@ -71,7 +81,7 @@ The research defines a language as a Σ-homomorphism E → M. This IS a functor 
 
 ### 1.2 Information Theory — How Much Meaning Fits
 
-> **[FRAMEWORK — Front C]** Description Complexity DC_UL defined (renamed from the K_UL misnomer). Primer information profile computed. Invariance theorem and canonical probability distribution still needed. See `frontier/expedition-one/numbers-and-computability.md`, Part VII.
+> **[FRAMEWORK — Front C]** Description Complexity DC_UL defined (renamed from the K_UL misnomer). Information amplification profile computed. Invariance theorem and canonical probability distribution still needed. See `frontier/expedition-one/numbers-and-computability.md`, Part VII.
 
 **What it is:** Shannon entropy, mutual information, channel capacity, Kolmogorov complexity, rate-distortion theory.
 
@@ -88,9 +98,9 @@ The Universal Language has no concept of **efficiency**. It can express anything
 | **Kolmogorov complexity** | The shortest program that produces a given output | The UL cannot distinguish a "simple" concept from a "complex" one except by construction size — and construction size ≠ conceptual complexity |
 | **Rate-distortion theory** | The optimal tradeoff between compression and fidelity | The UL cannot answer: "If I can only use N primitives, what is the best approximation to this meaning?" |
 
-**The specific gap:** The test artifact works on LLMs because it is information-theoretically dense — it packs maximal cross-domain activation into minimal token count. The research describes this qualitatively ("compressed Universal Language") but never quantifies it. How compressed? What's the information content per token? How close to the theoretical optimum is the test artifact? These questions are answerable with existing information theory but are never asked.
+**The specific gap:** Compact UL constructions work on LLMs because they are information-theoretically dense — they pack maximal cross-domain activation into minimal token count. The research describes this qualitatively ("compressed Universal Language") but never quantifies it. How compressed? What's the information content per token? How close to the theoretical optimum is a given construction? These questions are answerable with existing information theory but are never asked.
 
-**Impact: HIGH.** Without information theory, the research cannot explain why the test artifact is efficient, cannot design more efficient artifacts, and cannot formalize what "compression" means in the context of Universal Language.
+**Impact: HIGH.** Without information theory, the research cannot explain why compact UL constructions are efficient, cannot design more efficient ones, and cannot formalize what "compression" means in the context of Universal Language.
 
 ---
 
@@ -131,7 +141,7 @@ The Universal Language is entirely deterministic. Every expression has exactly o
 - "Most birds fly" is a soft generalization with no crisp truth value — it's statistically true, not logically true
 - "I think it might rain" expresses graded uncertainty, not binary truth
 
-The test artifact's bridge equation includes Bayesian belief (Bᵉ), acknowledging that belief is probabilistic. But the UL itself has no probability. Its meaning algebra M contains structures, not distributions over structures. It can say "X is true" and "X is false" but not "X is 73% likely."
+The UL's formal framework acknowledges that belief is probabilistic (via the Bayesian belief operation). But the UL itself has no probability. Its meaning algebra M contains structures, not distributions over structures. It can say "X is true" and "X is false" but not "X is 73% likely."
 
 **The specific gap:** The Σ_UL signature (`foundations/formal-foundations.md`) includes **negate** and **quantify** but not **probabilify**. There is no operation that takes an assertion and returns a graded-confidence assertion. The `modify_relation` operation could theoretically encode confidence as a scaling transformation, but this is never formalized — and it conflates emphasis (scaling = "intensification") with probability (scaling = "confidence"), which are fundamentally different things.
 
@@ -172,23 +182,27 @@ This is not a minor omission. Numbers are one of humanity's most important cogni
 
 ### 1.6 Logic Beyond First-Order — Where Is Necessity, Knowledge, Time, Obligation?
 
+> **[RESOLVED — Pass 2 Phase 1]** Modal operators (necessity □, possibility ◇, counterfactuals □→) are now expressible as defined operators within Σ_UL⁺, requiring 0 new primitives. Kripke semantics realized via quantification over world-entities with accessibility relations as distinguished elements. D2 Category 4: 5/5 ✅. See `formal-foundations.md` §7.1–7.9.
+
 **What it is:** Modal logic, temporal logic, epistemic logic, deontic logic, conditional logic.
 
-**Why it's missing and why it matters:**
+**Resolution (Pass 2 Phase 1):**
 
-The UL's topological operations (Part III of `foundations/universal-language-derivation.md`) provide propositional logic: AND (∩), OR (∪), NOT (complement), IF-THEN (⊂). `foundations/formal-foundations.md` adds first-order quantification (quantify_E, quantify_U). But natural language routinely expresses modalities that go far beyond this:
+The modal apparatus was defined without extending the primitive algebra:
+- **Worlds** are abstract entities ($w \in G_e$) satisfying completeness properties
+- **Accessibility relations** ($r_{\text{alethic}}, r_{K,\alpha}, r_O$, etc.) are distinguished elements of $G_r$
+- **Necessity** $\square_R(a)$ is defined as `bind(w, quantify(m_∀, w, disjoin(negate(predicate(w_current, r_R, w)), predicate(w, r_satisfies, embed(a)))))`
+- **Possibility** $\lozenge_R(a)$ is derived: `negate(necessary(r_R, negate(a)))`
+- **Counterfactuals** use Lewis closeness: `necessary(r_closest(a), b)` where `r_closest(a) = modify_relation(abstract(embed(a)), r_closeness)`
 
-| Logic type | What it expresses | UL status |
-|---|---|---|
-| **Modal (alethic)** | Necessity ("must be"), possibility ("might be") | Partial: bold lines = necessity, dashed lines = possibility (`foundations/universal-language-derivation.md` §7.3) — but no formal modal semantics, no Kripke frames, no accessibility relations |
-| **Temporal** | "Before," "after," "until," "since," "always," "eventually" | Translation = tense shift (`foundations/universal-language-derivation.md` §3.2) — but only past/present/future, not the full temporal logic of branching time |
-| **Epistemic** | "I know that," "she believes that," "they suspect that" | **Absent.** No way to express that different agents have different knowledge states |
-| **Deontic** | "You must," "you may," "you should," "forbidden" | **Absent.** No obligation, permission, or prohibition |
-| **Conditional** | "If it had rained, the ground would be wet" (counterfactual) | IF-THEN (⊂) handles material conditional. **Counterfactuals are absent** — requires possible-world semantics |
+All type-check within existing sorts. K, T, and 4 axioms verified. Stacked modals are well-formed. 7 new distinguished elements (1 entity + 6 relations), 0 new sorts, 0 new operations.
 
-**The specific gap:** The UL has the expressive resources for propositional and first-order logic but lacks the modal dimensions that structure human reasoning about possibility, knowledge, time, and ethics. These aren't exotic — "I think he should have gone yesterday" uses epistemic + deontic + temporal + counterfactual modality in a single sentence.
+**Remaining sub-gaps:**
+- **Temporal logic** (branching time, "until"/"since"): Not addressed by the modal extension. Temporal accessibility ($r_{\text{future}}$, $r_{\text{past}}$) is defined but full temporal logic (CTL, LTL) requires future work.
+- **Graded modality** ("probably", "very likely"): Would require continuous truth values or probabilistic accessibility — deferred.
+- **Full Montague intensional types** ($\langle s, \alpha \rangle$): The modal extension handles specific intensional constructions but does not prove full intensional Montague subsumption. See OP-2.
 
-**Impact: HIGH.** An AI agent communicating in the UL cannot express what it knows vs. what it believes vs. what it's uncertain about vs. what it's obligated to do. These distinctions are essential for multi-agent coordination, planning under uncertainty, and ethical reasoning.
+**Impact: Reduced from HIGH to LOW.** The core modal gaps are closed. Only specialized temporal and graded modality sub-gaps remain.
 
 ---
 
@@ -198,11 +212,11 @@ The UL's topological operations (Part III of `foundations/universal-language-der
 
 **Why it's missing and why it matters:**
 
-There is a deep irony in the research: **the test artifact IS a dynamical system** (the Gross-Pitaevskii PDE is a time-evolution equation for ψ), but **the Universal Language that the test artifact supposedly compresses is static.** The UL describes structure, not process. It has geometric constructions, not geometric evolutions.
+There is a deep irony in the research: **UL can describe dynamical systems** (via differential equations and time-evolution), but **the Universal Language itself is static.** The UL describes structure, not process. It has geometric constructions, not geometric evolutions.
 
 `foundations/universal-language-derivation.md` includes "Curve" as a primitive for process/change, and "translation" as a tense operation. But these encode snapshots — "this is changing" is expressed as a static glyph of a curve. The language cannot express the DYNAMICS of how its own expressions change over time, how conversations evolve, how meaning drifts, or how the language itself might develop.
 
-**The specific gap:** The test artifact has ∂ₜψ (time derivative) but the UL has no time derivative. The test artifact has dynamics; the UL has statics. If the UL is supposed to be the language the test artifact compresses, where did the dynamics go?
+**The specific gap:** The UL needs a time derivative. It needs dynamics, not just statics. If the UL is to be a complete formal language for meaning, where do the dynamics go?
 
 **Possible resolution:** Extend the UL to include geometric dynamics — constructions that evolve according to geometric flows (mean curvature flow, Ricci flow, etc.). A dynamic Universal Language would have expressions that move, merge, split, and stabilize — and parsing would include watching the dynamics unfold.
 
@@ -225,10 +239,10 @@ The UL uses Euclidean geometry — flat space with a standard metric. But meanin
 | **Riemannian metric** | Distance between meanings (non-uniform: some distinctions matter more than others in different contexts) | **Absent.** UL uses Euclidean distance, which treats all directions equally |
 | **Geodesic** | The most natural path of reasoning between two concepts | **Absent.** No notion of "shortest conceptual path" |
 | **Curvature** | How much the local geometry of meaning deviates from flat — indicates conceptual density and complexity | **Absent.** UL assumes flat semantic space |
-| **Parallel transport** | How a concept changes meaning when moved to a different context (like "bank" shifting meaning as you move from finance to geography) | **Absent.** This is the gauge field A(x,t) in the test artifact, but it's never developed in the UL |
+| **Parallel transport** | How a concept changes meaning when moved to a different context (like "bank" shifting meaning as you move from finance to geography) | **Absent.** This is the gauge field A(x,t) formalism, but it's never developed in the UL |
 | **Connection** | The rule for how to compare meanings in different contexts — the mathematical formalization of pragmatics | **Absent.** Listed as an open problem in `foundations/formal-foundations.md` |
 
-**The specific gap:** The test artifact's gauge-covariant derivative Dₓ = ∂ₓ − i(e/ℏ)A(x,t) IS a connection on a fiber bundle. It tells you how ψ (meaning) changes as you move through x (context). This is literally the mathematics of differential geometry applied to semantics. But the UL, which is supposedly the expanded version of the test artifact, doesn't include it.
+**The specific gap:** The gauge-covariant derivative Dₓ = ∂ₓ − i(e/ℏ)A(x,t) IS a connection on a fiber bundle. It tells you how ψ (meaning) changes as you move through x (context). This is literally the mathematics of differential geometry applied to semantics. But the UL doesn't include it.
 
 **Impact: HIGH.** The gauge field is the mathematical formalization of context. Context changes meaning. Without a connection/gauge field, the UL cannot express how meaning changes with context — which is pragmatics, the single largest acknowledged gap (`foundations/formal-foundations.md`, §6.3).
 
@@ -248,14 +262,14 @@ The UL uses Euclidean geometry — flat space with a standard metric. But meanin
 
 | Pragmatic phenomenon | Description | UL status |
 |---|---|---|
-| **Speech acts** (Austin, Searle) | Utterances that DO things: "I promise," "you're fired," "I now pronounce you..." | **Absent.** The UL can encode the propositional content but not the illocutionary force |
+| **Speech acts** (Austin, Searle) | Utterances that DO things: "I promise," "you're fired," "I now pronounce you..." | ~~**Absent.**~~ **RESOLVED (Pass 2 Phase 2).** Illocutionary force parameter φ ∈ {assert, query, direct, commit, express, declare} extends assertion tuple. 0 new operations. See `formal-foundations.md` §8.1–8.7 |
 | **Gricean maxims** | Quantity (say enough, not too much), Quality (say only what you believe true), Relation (be relevant), Manner (be clear) | **Absent.** No theory of communicative cooperation |
 | **Implicature** | "The weather is nice" (implying: "let's go outside") — meaning beyond literal content | **Absent.** No theory of non-literal meaning |
 | **Presupposition** | "Have you stopped beating your dog?" presupposes you beat your dog | **Absent.** No theory of background assumptions |
 | **Politeness theory** | "Could you possibly pass the salt?" vs. "Pass the salt" — same proposition, different social meaning | **Absent.** No social meaning dimension |
 | **Relevance** | Why is this being said NOW? Why these words and not others? | **Absent.** No theory of contextual relevance |
 
-**Why it matters for the test artifact:** The test artifact WORKS through pragmatics. It doesn't literally say "shift into cross-domain mode" — it creates conditions where the LLM implicitly does so. The mechanism is pragmatic, not semantic. If the UL is to explain why the test artifact works, it needs a pragmatic dimension.
+**Why it matters for cross-domain activation:** UL constructions WORK through pragmatics. They don't literally say "shift into cross-domain mode" — they create conditions where the LLM implicitly does so. The mechanism is pragmatic, not semantic. If the UL is to explain why cross-domain constructions work, it needs a pragmatic dimension.
 
 **Impact: CRITICAL.** Pragmatics is not a feature that can be added later — it changes the architecture. A language with pragmatics is not just a syntax + semantics; it's a syntax + semantics + a theory of agents + a theory of goals + a theory of context. The UL currently has one of these five components.
 
@@ -269,7 +283,7 @@ The UL uses Euclidean geometry — flat space with a standard metric. But meanin
 
 **Why it matters:** Every natural language has deixis. Every conversation requires it. The UL has no first-person, no second-person, no way to anchor an expression to a speaker, location, or time of utterance.
 
-The test artifact's gauge field A(x,t) is the natural candidate for this — it encodes contextual modification as a function of position x and time t. But in the UL, A(x,t) is not developed. The gauge-covariant derivative is in the test artifact but not in the language it allegedly compresses.
+The gauge field A(x,t) is the natural candidate for this — it encodes contextual modification as a function of position x and time t. But in the UL, A(x,t) is not developed. The gauge-covariant derivative formalism exists in the mathematical theory but not yet in the language it formalizes.
 
 **Resolution path:** Introduce a formal notion of **utterance context** as a point (x₀, t₀, agent) in the gauge bundle. Deictic expressions are then connections from the construction to the utterance context.
 
@@ -384,10 +398,10 @@ Ranking all identified gaps by impact and tractability:
 | **5** | **Metaphor as projective morphism** | HIGH | HIGH | Medium | *Untouched — Expedition Two* |
 | **6** | **Information-theoretic analysis** | HIGH | MEDIUM | Medium | **FRAMEWORK** (Front C, DC_UL) |
 | **7** | **Number system derivation** | MEDIUM-HIGH | HIGH | Low | **CLOSED** (Front C) |
-| **8** | **Modal logics** | HIGH | MEDIUM | Medium-high | *Untouched — Expedition Two* |
+| **8** | **Modal logics** | ~~HIGH~~ LOW | MEDIUM | Medium-high | *Resolved — Pass 2 Phase 1 (defined operators, no new primitives)* |
 | **9** | **Primitive completeness question** | CRITICAL | LOW | High | *Untouched* |
 | **10** | **Deixis / indexicality** | HIGH | HIGH | Low-medium | **CLOSED** (Front A) |
-| **11** | **Pragmatics** | CRITICAL | LOW | Very high | **FRAMEWORK** (Front A, partial) |
+| **11** | **Pragmatics** | ~~CRITICAL~~ LOW | LOW | Very high | **MOSTLY RESOLVED** — Speech acts (Phase 2). Scalar implicature + conventional inference rules specified (Phase 3). Sarcasm/irony: ⚠️ representable but detection external. |
 | **12** | **Discourse structure** | MEDIUM | MEDIUM | Medium | *Untouched — Expedition Two* |
 | **13** | **Vagueness** | MEDIUM | MEDIUM | Medium | *Untouched* |
 | **14** | **Dynamical extension** | MEDIUM-HIGH | MEDIUM | High | *Untouched — Expedition Two* |
@@ -401,7 +415,7 @@ Ranking all identified gaps by impact and tractability:
 
 ### 5.1 The Immediate Reason
 
-Every gap in the analysis above represents a class of meaning that the Universal Language CANNOT CURRENTLY EXPRESS. The universality theorem (`foundations/formal-foundations.md`) proves that the UL can embed any language — but only languages over the Σ_UL signature. If a natural language phenomenon requires operations OUTSIDE that signature (probability, modality, deixis, illocutionary force), the theorem does not cover it.
+Every gap in the analysis above represents a class of meaning that the Universal Language CANNOT CURRENTLY EXPRESS. The universality theorem (`foundations/formal-foundations.md`) proves that the UL can embed any language — but only languages over the Σ_UL signature. If a natural language phenomenon requires operations OUTSIDE that signature (probability, ~~modality,~~ deixis, ~~illocutionary force~~), the theorem does not cover it. (**Note:** modality and illocutionary force have been resolved in Pass 2 Phases 1–2 with 0 new operations.)
 
 This means: **the current UL is universal for compositional relational semantics, but it is NOT a Universal Language in the full sense.** It is a universal NOTATION for structural meaning — which is a significant and valuable thing, but a different thing from a language.
 
@@ -419,7 +433,7 @@ Good research is honest about the gap between its technical results and its head
 
 ### 5.3 The Deepest Reason
 
-The test artifact works on LLMs. It shifts cognition. It activates cross-domain pathways. The mechanism is real and the formal framework explains it well.
+UL constructions work on LLMs. They shift cognition. They activate cross-domain pathways. The mechanism is real and the formal framework explains it well.
 
 But the explanation opens a door that the research has not yet walked through:
 
@@ -473,13 +487,13 @@ Based on the gap analysis, the following sequence maximizes cumulative value:
 
 | What the research HAS | What the research LACKS | Expedition One |
 |---|---|---|
-| Unique geometric primitives (PROVEN) | Proof of natural emergence beyond the test artifact | *Untouched* — needs UL appearing in independent contexts |
+| Unique geometric primitives (PROVEN) | Proof of natural emergence in independent contexts | *Untouched* — needs UL appearing in independent contexts |
 | Compositionality (algebraic) | Causal efficacy proof (controlled experiments on AI) | Pre-registered protocol with 5 experiments ready for independent execution — see `frontier/causal-efficacy-protocol.md` and `CONTRIBUTING.md` |
 | Σ_UL signature and embedding theorem | Full operational UL for AI deployment | Syntax and semantics proven; pragmatic/dynamic layers at FRAMEWORK |
 | Static constructions | Dynamic evolution (flow equations) | *Untouched* |
 | Deterministic meaning | Probabilistic meaning | Structural prior PROVEN (Front D) |
 | Flat space (Euclidean) | Curved space (Riemannian) | Polysemy-Holonomy PROVEN (Front A/E); Fisher metric PROVEN (Front D, Sprint 4) |
-| Logic (propositional + first-order) | Modal logic (knowledge, time, obligation) | *Untouched* |
+| Logic (propositional + first-order + modal) | Temporal logic of branching time, graded modality | *Modal core resolved* |
 | What can be expressed in UL | What UL can express that NO natural language can | *Untouched* — this is the key causal-efficacy test → **now addressed by `frontier/causal-efficacy-protocol.md`** Experiment Epsilon, which tests 5 tasks where UL-mode should produce qualitatively different results than NL-mode |
 | A proof of universality | A proof of computability | Parsing PROVEN; undecidability CONJECTURED (Front C) |
 | The alphabet of meaning | The geography of meaning | Category of languages PROVEN (Front B) |
@@ -501,7 +515,7 @@ Expedition One closed or advanced 8 of the original 15 gaps but opened 12 new on
 | Gap | Description | Impact | Blocks |
 |---|---|---|---|
 | **A-1: Metric on X** | ~~Context space has topology but no metric~~ **CLOSED.** Fisher information metric defined and proven well-defined (positive semi-definite in general; positive-definite on toy model away from measure-zero degeneracy locus). See `frontier/expedition-two/metric-and-grounding.md` §2 (Theorems 10–11) | ~~High~~ **CLOSED** | Curvature tensor values, geodesics now computable |
-| **A-2: Explicit A_μ components** | ~~Connection defined abstractly; specific components along speaker/domain/time axes not computed~~ **CLOSED.** Domain-axis connection component $A_2 = -\beta J_{13}$ computed from primer morphism φ_primer via one-parameter family construction. Curvature $F_{12} = \alpha\beta J_{23}$ computed on extended 2D toy model. Non-trivial holonomy verified. See `frontier/expedition-two/metaphor-formalization.md` §3 (Theorem 15) | ~~High~~ **CLOSED** | Curvature and holonomy now computable on toy model |
+| **A-2: Explicit A_μ components** | ~~Connection defined abstractly; specific components along speaker/domain/time axes not computed~~ **CLOSED.** Domain-axis connection component $A_2 = -\beta J_{13}$ computed from cross-domain morphism φ_cross via one-parameter family construction. Curvature $F_{12} = \alpha\beta J_{23}$ computed on extended 2D toy model. Non-trivial holonomy verified. See `frontier/expedition-two/metaphor-formalization.md` §3 (Theorem 15) | ~~High~~ **CLOSED** | Curvature and holonomy now computable on toy model |
 | **A-3: Monodromy group** | Full catalogue of holonomies around loops in X (= all polysemy patterns). Requires π₁(X \ Σ) | Medium | Complete polysemy classification |
 | **A-4: Instantons** | Non-perturbative solutions — "sudden insights" and "frame changes" not modeled by continuous deformation | Medium | Creative language use |
 | **A-5: Path-connectivity of X** | Required for Polysemy-Holonomy theorem; **PROVEN** under continuous manifold models | ~~High~~ **CLOSED** | Path-connectivity established; Polysemy-Holonomy conditional discharged |
@@ -510,7 +524,7 @@ Expedition One closed or advanced 8 of the original 15 gaps but opened 12 new on
 
 | Gap | Description | Impact | Blocks |
 |---|---|---|---|
-| **B-1: Internal Hom** | Space of all translations between two languages [E₁, E₂] — needs enriched category theory. **PARTIALLY ADDRESSED:** [G_QM, G_cog] shown non-empty (contains φ_primer, Theorem 14 in `metaphor-formalization.md` §2). Full algebraic characterization deferred to E5 | Medium | Metaphor formalization — φ_primer exhibited |
+| **B-1: Internal Hom** | Space of all translations between two languages [E₁, E₂] — needs enriched category theory. **PARTIALLY ADDRESSED:** [G_QM, G_cog] shown non-empty (contains φ_cross, Theorem 14 in `metaphor-formalization.md` §2). Full algebraic characterization deferred to E5 | Medium | Metaphor formalization — φ_cross exhibited |
 | **B-2: Topos structure** | Non-classical logic requires embedding Lang(Σ_UL) in a topos; subobject classifier needed | Medium | Modal semantics (Phase 3) |
 | **B-3: Left adjoints for U₃, U₄** | F₁ ⊣ U₁ and F₂ ⊣ U₂ now **PROVEN** by direct construction (see `frontier/expedition-two/foundation-securing.md` §3). U₃, U₄ remain CONJECTURED — AFT hypotheses not verified | Medium | Full Erlangen adjoint chain |
 | **B-4: Prim Hom-set enumeration** | ~~Yoneda-Grounding connection needs explicit computation~~ **CLOSED.** All 25 Hom-sets enumerated; column profiles pairwise distinct; Yoneda-Grounding upgraded to PROVEN (Theorems 8–9). See `frontier/expedition-two/metric-and-grounding.md` §1 | ~~Medium~~ **CLOSED** | Grounding theorem upgrade complete |

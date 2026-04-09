@@ -125,6 +125,7 @@ fn structural_similarity(a: &Gir, b: &Gir) -> f64 {
         NodeType::Angle,
         NodeType::Curve,
         NodeType::Enclosure,
+        NodeType::VariableSlot,
     ];
     for nt in &all_types {
         let ca = hist_a.get(nt).copied().unwrap_or(0);

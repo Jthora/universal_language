@@ -77,6 +77,7 @@ fn match_single_node(gir: &Gir, cx: f64, cy: f64, scale: f64) -> Option<Position
             x: cx,
             y: cy,
             shape: Shape::Point { radius: 3.0 },
+            css_class: None,
         },
         // #5: Concept (circle) / #6: Structure (triangle) / #7: Foundation (square)
         NodeType::Enclosure => {
@@ -95,6 +96,7 @@ fn match_single_node(gir: &Gir, cx: f64, cy: f64, scale: f64) -> Option<Position
                 x: cx,
                 y: cy,
                 shape,
+                css_class: None,
             }
         }
         // #2: Relation (arrow)
@@ -111,6 +113,7 @@ fn match_single_node(gir: &Gir, cx: f64, cy: f64, scale: f64) -> Option<Position
                     y2: cy,
                     directed: node.directed.unwrap_or(true),
                 },
+                css_class: None,
             }
         }
         // #3: Quality (angle)
@@ -124,6 +127,7 @@ fn match_single_node(gir: &Gir, cx: f64, cy: f64, scale: f64) -> Option<Position
                     radius: scale * 0.4,
                     degrees: m,
                 },
+                css_class: None,
             }
         }
         // #4: Process (curve)
@@ -139,9 +143,19 @@ fn match_single_node(gir: &Gir, cx: f64, cy: f64, scale: f64) -> Option<Position
                     x2: cx + half,
                     y2: cy,
                     curvature: node.curvature.unwrap_or(0.5),
+                    curvature_profile: node.curvature_profile.clone(),
                 },
+                css_class: None,
             }
         }
+        // Variable slot (binding)
+        NodeType::VariableSlot => PositionedElement {
+            node_id: node.id.clone(),
+            x: cx,
+            y: cy,
+            shape: Shape::VariableSlot { radius: scale * 0.15 },
+            css_class: None,
+        },
     };
 
     Some(PositionedGlyph {
@@ -169,12 +183,14 @@ fn existence_template(gir: &Gir, cx: f64, cy: f64, scale: f64) -> PositionedGlyp
                 x: cx,
                 y: cy,
                 shape: Shape::Circle { radius: r },
+                css_class: None,
             },
             PositionedElement {
                 node_id: point.map_or_else(|| "point".into(), |n| n.id.clone()),
                 x: cx,
                 y: cy,
                 shape: Shape::Point { radius: 3.0 },
+                css_class: None,
             },
         ],
         connections: Vec::new(),
@@ -202,6 +218,7 @@ fn connection_template(gir: &Gir, cx: f64, cy: f64, scale: f64) -> PositionedGly
             x: cx - half,
             y: cy,
             shape: Shape::Point { radius: 3.0 },
+            css_class: None,
         });
     }
     if let Some(p2) = points.get(1) {
@@ -210,6 +227,7 @@ fn connection_template(gir: &Gir, cx: f64, cy: f64, scale: f64) -> PositionedGly
             x: cx + half,
             y: cy,
             shape: Shape::Point { radius: 3.0 },
+            css_class: None,
         });
     }
 
@@ -248,6 +266,7 @@ fn adjacency_template(gir: &Gir, cx: f64, cy: f64, scale: f64) -> PositionedGlyp
             x: cx - r,
             y: cy,
             shape: Shape::Circle { radius: r },
+            css_class: None,
         });
     }
     if let Some(e2) = enclosures.get(1) {
@@ -256,6 +275,7 @@ fn adjacency_template(gir: &Gir, cx: f64, cy: f64, scale: f64) -> PositionedGlyp
             x: cx + r,
             y: cy,
             shape: Shape::Circle { radius: r },
+            css_class: None,
         });
     }
 
@@ -285,6 +305,7 @@ fn intersection_template(gir: &Gir, cx: f64, cy: f64, scale: f64) -> PositionedG
             x: cx - overlap,
             y: cy,
             shape: Shape::Circle { radius: r },
+            css_class: None,
         });
     }
     if let Some(e2) = enclosures.get(1) {
@@ -293,6 +314,7 @@ fn intersection_template(gir: &Gir, cx: f64, cy: f64, scale: f64) -> PositionedG
             x: cx + overlap,
             y: cy,
             shape: Shape::Circle { radius: r },
+            css_class: None,
         });
     }
 
@@ -317,12 +339,14 @@ fn containment_template(gir: &Gir, cx: f64, cy: f64, scale: f64) -> PositionedGl
                 x: cx,
                 y: cy,
                 shape: Shape::Circle { radius: r_outer },
+                css_class: None,
             },
             PositionedElement {
                 node_id: inner.map_or_else(|| "inner".into(), |n| n.id.clone()),
                 x: cx,
                 y: cy,
                 shape: Shape::Circle { radius: r_inner },
+                css_class: None,
             },
         ],
         connections: Vec::new(),

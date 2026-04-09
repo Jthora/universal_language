@@ -1,1 +1,0 @@
-Identify three non-obvious structural parallels between the theory of plate tectonics and the development of a national economy. For each parallel, explain the formal correspondence that makes them structurally equivalent, not merely analogous.

@@ -15,6 +15,12 @@ UL-GIR is a JSON document format that represents UL glyphs as typed graphs with 
 - Human-inspectable with standard JSON tools
 - Schema-validatable via JSON Schema
 
+> **TypeScript Perspective:** For the TypeScript types that mirror this specification
+> (including `Gir`, `Node`, `Edge`, `Sort`, `NodeType`, `EdgeType`), see
+> [wasm/typescript-api-reference.md](../wasm/typescript-api-reference.md) §15 Type Catalog.
+> For known version discrepancies in the `ul_gir` field, see
+> [wasm/known-issues.md](../wasm/known-issues.md) §2.
+
 ---
 
 ## Top-Level Structure

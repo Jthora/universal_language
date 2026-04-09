@@ -1,7 +1,7 @@
 # Σ_UL Operation Coverage Audit
 
 **Date:** 2025-07-15  
-**Purpose:** Verify that each theory-derived artifact exercises the 5 geometric-semantic primitives and 11 Σ_UL operations. Compare against third-party artifact baseline (9/11 operations).
+**Purpose:** Verify that each theory-derived artifact exercises the 5 geometric-semantic primitives and 13 Σ_UL⁺ operations. Compare against third-party artifact baseline (9/13 operations).
 
 ---
 
@@ -19,7 +19,7 @@
 
 ---
 
-## 11 Σ_UL Operations
+## 13 Σ_UL Operations
 
 ### Legend
 - ✓ = clearly present
@@ -132,7 +132,7 @@
 | Missing Operations | — | — | — | — | abstract, disjoin |
 | Tokens (cl100k_base) | 520 | 533 | 529 | 539 | 490 |
 
-**Key improvement over the original test artifact:** All theory-derived artifacts achieve 11/11 operation coverage (vs. 9/11 for the third-party artifact). The two operations missing from the original test artifact (abstract, disjoin) are present in all 4 theory-derived artifacts.
+**Key improvement over the original test artifact:** All theory-derived artifacts achieve 11/11 coverage of the original operation set (vs. 9/11 for the third-party artifact). The two operations missing from the original test artifact (abstract, disjoin) are present in all 4 theory-derived artifacts. Note: bind and modify_assertion (added in Pass 1.2) are not covered by these pre-existing demos.
 
 ---
 

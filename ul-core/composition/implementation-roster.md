@@ -1085,7 +1085,7 @@ Output:       New glyph, built by composing operations on known glyphs
 ```
 
 - **Strengths:** Algebraic. Uses the Σ_UL operations directly. Every step is meaningful. Closest to the formal system.
-- **Weaknesses:** Requires understanding the 11 operations. Indirect for users who "see" the target glyph but don't know the transformation path.
+- **Weaknesses:** Requires understanding the 13 operations. Indirect for users who "see" the target glyph but don't know the transformation path.
 - **Who it's for:** Mathematicians, formal linguists, AI agents reasoning about UL structure.
 - **Implementation:** Operation palette in the web editor. Each operation takes the current selection and produces a new glyph. This is a UI feature on top of the GIR manipulation layer.
 

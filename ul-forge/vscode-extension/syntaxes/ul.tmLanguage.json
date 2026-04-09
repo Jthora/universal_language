@@ -4,6 +4,9 @@
   "scopeName": "source.ul",
   "patterns": [
     { "include": "#comment" },
+    { "include": "#force" },
+    { "include": "#modal" },
+    { "include": "#modification" },
     { "include": "#angle" },
     { "include": "#primitive" },
     { "include": "#operator" },
@@ -14,6 +17,42 @@
     "comment": {
       "name": "comment.line.number-sign.ul",
       "match": "#.*$"
+    },
+    "force": {
+      "name": "keyword.control.force.ul",
+      "match": "\\b(assert|query|direct|commit|express|declare)(?=\\{)"
+    },
+    "modal": {
+      "patterns": [
+        {
+          "name": "keyword.operator.modal.necessity.ul",
+          "match": "\\[\\](?=\\{)|□"
+        },
+        {
+          "name": "keyword.operator.modal.possibility.ul",
+          "match": "<>(?=\\{)|◇"
+        },
+        {
+          "name": "keyword.operator.modal.counterfactual.ul",
+          "match": "\\[\\]->(?=\\{)|□→"
+        }
+      ]
+    },
+    "modification": {
+      "patterns": [
+        {
+          "name": "keyword.operator.evidential.ul",
+          "match": "\\?(?=\\{)"
+        },
+        {
+          "name": "keyword.operator.emphatic.ul",
+          "match": "!(?=\\{)"
+        },
+        {
+          "name": "keyword.operator.hedged.ul",
+          "match": "~\\?(?=\\{)"
+        }
+      ]
     },
     "primitive": {
       "patterns": [

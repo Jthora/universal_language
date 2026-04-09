@@ -57,6 +57,10 @@ cargo build --release -p ul-cli
 
 ### WASM Module
 
+> **See also:** [wasm/README.md](../wasm/README.md) for the complete WASM architecture guide,  
+> [wasm/known-issues.md](../wasm/known-issues.md) for build troubleshooting, and  
+> [wasm/integration-patterns.md](../wasm/integration-patterns.md) for deployment target recipes.
+
 ```bash
 cd crates/ul-wasm
 

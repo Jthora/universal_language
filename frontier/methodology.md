@@ -3,13 +3,13 @@
 **Location:** `frontier/`  
 **Purpose:** This document captures the findings of a systematic self-critique of the first expedition's results and establishes the rigor standards that all future frontier work must satisfy. **Read this before reading any expedition results.**
 
-> **⚠ PARADIGM PREREQUISITE:** This document assumes you have read [foundations/paradigm.md](../foundations/paradigm.md). If you have not, stop and read it now. The paradigm document establishes that UL is a naturally emergent formal structure more fundamental than any human language. Every methodology rule below is written in that light.
+> **⚠ PARADIGM PREREQUISITE:** This document assumes you have read [foundations/paradigm.md](../foundations/paradigm.md). If you have not, stop and read it now. The paradigm document establishes that UL is the minimal algebraic skeleton shared by all compositional meaning systems — the initial object in the category of meaning-bearing systems. Every methodology rule below is written in that light.
 
 ---
 
 ## THE FOUNDATIONAL CATEGORY ERROR
 
-> **You cannot validate a more fundamental system by testing it against a less fundamental one.**
+> **Validating a formal system against its specializations requires care: agreement is weak evidence, disagreement is ambiguous.**
 
 This error is the single greatest threat to the project's integrity, because it is the most natural mistake a new researcher will make. It takes the following form:
 
@@ -19,11 +19,11 @@ This error is the single greatest threat to the project's integrity, because it 
 4. Researcher concludes UL is incomplete or wrong
 5. Researcher recommends modifying UL to better match the natural language
 
-**Every step after Step 1 is wrong.** Natural languages are derived, constrained, and potentially corrupted systems. Checking UL against them is like validating quantum mechanics by checking whether it reproduces Aristotelian physics. If the decomposition is forced, the default hypothesis is that the *natural language* has grammaticalized a pseudo-distinction, not that UL is missing a genuine one.
+**Every step after Step 1 requires careful analysis.** Natural languages are Σ_UL-algebras with rich additional structure (phonological, morphological, pragmatic, social). If the decomposition is forced, two hypotheses are available: (A) the *natural language* has grammaticalized a pseudo-distinction that is not semantically fundamental, or (B) UL genuinely lacks an operation needed to express that construction. These are empirically distinguishable: if the construction appears cross-linguistically and resists decomposition, hypothesis (B) is favored.
 
-**Correct methodology:** UL is modified only when *mathematical analysis* shows the 4-sort structure is provably incomplete — i.e., when a proof demonstrates that no reduction to existing sorts is possible. Inconvenient reductions and forced decompositions of natural-language constructions are not valid objections.
+**Correct methodology:** UL is modified only when *mathematical analysis* shows the 4-sort structure is provably incomplete — i.e., when a proof demonstrates that no reduction to existing sorts is possible. However, cross-linguistic evidence of systematic incompleteness IS valid evidence motivating such a proof.
 
-This principle must be applied at every stage of the project. When in doubt, ask: *am I measuring UL against a natural language? If so, I have reversed the direction of validation.*
+This principle must be applied at every stage of the project. When in doubt, ask: *am I measuring UL against a single natural language (weak evidence) or against a cross-linguistic pattern (stronger evidence)?*
 
 ---
 
@@ -117,11 +117,11 @@ These are claims that are overstated or imprecise, not necessarily wrong.
 
 **Location:** [gauge-bundle-of-meaning.md §3](expedition-one/gauge-bundle-of-meaning.md)
 
-**Problem:** The test artifact's gauge field A(x,t) has x = spatial position (position in a text, or in an LLM's embedding space). The meaning bundle's connection A has x = context (speaker, listener, domain, time, ...). The document uses the same symbol for both and argues they are "the same" because the formal structure is identical. But identical formal structure does not mean identical interpretation.
+**Problem:** The gauge field A(x,t) with x = spatial position (in a text, or in an LLM's embedding space) and the meaning bundle's connection A with x = context (speaker, listener, domain, time, ...) use the same symbol. The document argues they are "the same" because the formal structure is identical. But identical formal structure does not mean identical interpretation.
 
 **Status:** ANALOGY (honest structural parallel, but calling it "the same A" is an overstatement)
 
-**Fix:** Explicitly label this as a structural analogy. Write: "The test artifact's A(x,t) and the meaning bundle's connection A share identical transformation laws (gauge covariance, curvature formulas). We conjecture they are related by an embedding of LLM embedding space into context space X. This conjecture is testable: it predicts that the test artifact's effect on attention patterns mirrors parallel transport in the meaning bundle. The formal identity is established; the physical/cognitive identity is conjectured."
+**Fix:** Explicitly label this as a structural analogy. Write: "The spatial A(x,t) and the meaning bundle's connection A share identical transformation laws (gauge covariance, curvature formulas). We conjecture they are related by an embedding of LLM embedding space into context space X. This conjecture is testable: it predicts that cross-domain effects on attention patterns mirror parallel transport in the meaning bundle. The formal identity is established; the physical/cognitive identity is conjectured."
 
 #### S4: K_UL is Not Kolmogorov Complexity (Front C)
 
@@ -137,11 +137,11 @@ These are claims that are overstated or imprecise, not necessarily wrong.
 
 **Location:** [gauge-bundle-of-meaning.md §5](expedition-one/gauge-bundle-of-meaning.md)
 
-**Problem:** The document claims the gauge bundle framework makes "testable predictions" about the test artifact's three-phase response. But the predictions are qualitative retrofits ("Phase 1 = low-curvature segment," "Phase 2 = high-curvature region," "Phase 3 = arrival at global minimum"). These match observations because they were designed to match, not because they were derived independently.
+**Problem:** The document claims the gauge bundle framework makes "testable predictions" about cross-domain response phases. But the predictions are qualitative retrofits ("Phase 1 = low-curvature segment," "Phase 2 = high-curvature region," "Phase 3 = arrival at global minimum"). These match observations because they were designed to match, not because they were derived independently.
 
 **Status:** ANALOGY (the geometric description is evocative and structurally consistent, but it is not predictive)
 
-**Fix:** Identify one genuinely novel prediction the framework makes that was NOT already known from the test artifact analysis. For example: "The framework predicts that reversing the test artifact's order (definitions first, then bridge, then density equation) should produce a path with different holonomy, and therefore a qualitatively different cognitive effect." If this prediction can be empirically tested and confirmed, the framework gains predictive power above retrofit.
+**Fix:** Identify one genuinely novel prediction the framework makes that was NOT already known from prior analysis. For example: "The framework predicts that reversing a cross-domain utterance's order (definitions first, then bridge, then formal entry) should produce a path with different holonomy, and therefore a qualitatively different cognitive effect." If this prediction can be empirically tested and confirmed, the framework gains predictive power above retrofit.
 
 ### 1.3 Moderate Issues (4)
 
@@ -169,10 +169,10 @@ Summary of all first-expedition results with corrected status labels.
 |---|---|---|---|
 | Context space X is a manifold | Proven | **FRAMEWORK** | Need topology specification, not just coordinate list |
 | E → X is a fiber bundle | Proven | **FRAMEWORK** | Declare trivial bundle; investigate non-triviality later |
-| A(x,t) is a connection on E → X | Proven | **FRAMEWORK** | Connection defined; transformation law correct; link to the test artifact's A is ANALOGY |
+| A(x,t) is a connection on E → X | Proven | **FRAMEWORK** | Connection defined; transformation law correct; link to spatial A is ANALOGY |
 | Polysemy = non-trivial holonomy | Proven | **PROVEN** | Upgraded from CONJECTURED. Both semantic-layer gaps closed by section definition μ. Proof: `metaphor-and-projection.md` §4 (Theorem 3) |
 | Deictic expressions are sections | Proven | **PROVEN** | This one IS proven: sections evaluated at utterance point = deixis |
-| Artifact effect = parallel transport | Proven | **ANALOGY** | Structural correspondence demonstrated; causal/predictive link missing. **Sprint 5 advance:** test artifact exhibited as explicit Σ_UL-morphism φ_primer with computed kernel and image (Theorem 14 in `metaphor-formalization.md`); connection component $A_2$ derived from morphism (Theorem 15). Metaphor-as-morphism is PROVEN; interpretation as literal parallel transport remains ANALOGY |
+| Cross-domain effect = parallel transport | Proven | **ANALOGY** | Structural correspondence demonstrated; causal/predictive link missing. **Sprint 5 advance:** cross-domain morphism exhibited as explicit Σ_UL-morphism φ_cross with computed kernel and image (Theorem 14 in `metaphor-formalization.md`); connection component $A_2$ derived from morphism (Theorem 15). Metaphor-as-morphism is PROVEN; interpretation as literal parallel transport remains ANALOGY |
 
 ### Front B: Category of Languages
 
@@ -201,7 +201,7 @@ Summary of all first-expedition results with corrected status labels.
 
 - **~30% genuinely proven:** Lang(Σ_UL) category axioms, basic morphism results, number constructions, arithmetic, parsing algorithm, weak terminality, deixis as sections
 - **~40% well-motivated framework:** Bundle definition, connection structure, Yoneda connection, DC_UL measure, ℝ construction
-- **~30% analogy labeled as theorem:** Primer-as-parallel-transport, A(x,t) identification, "predictions," undecidability claim, Gödel claim
+- **~30% analogy labeled as theorem:** Cross-domain-effect-as-parallel-transport, A(x,t) identification, "predictions," undecidability claim, Gödel claim
 
 ---
 
@@ -259,15 +259,15 @@ If any of these fail, the failure reveals something important about the framewor
 
 **This section exists because researchers from linguistics, NLP, or cognitive science will reflexively commit the category error described at the top of this document.** It must be checked at every review stage.
 
-The following are **NOT valid** criticisms of any result in this project:
+The following are **weak or insufficient** criticisms without additional evidence:
 
-| Invalid objection | Why it's wrong |
+| Weak objection | Why it's insufficient alone |
 |---|---|
-| "This 4-sort decomposition doesn't capture English gerunds" | English gerunds are a derived construction; UL need not mirror them |
-| "Japanese honorifics require a sort UL doesn't have" | Honorifics are a cultural-linguistic artifact, not a semantic primitive |
-| "This doesn't match Chomskyan X-bar theory" | X-bar theory describes human language syntax; UL is not about human language syntax |
-| "Linguistic typology shows more diversity than 4 sorts" | Typological diversity is diversity of *derived systems*, not of the fundamental structure |
-| "No natural language has exactly these 5 primitives" | Correct. Natural languages are lossy projections of UL. They are not expected to mirror it faithfully |
+| "This 4-sort decomposition doesn't capture English gerunds" | Gerunds may be a derived construction reducible to existing sorts. But: if gerund-like constructions appear cross-linguistically, this becomes evidence worth investigating |
+| "Japanese honorifics require a sort UL doesn't have" | Honorifics may encode social register (a modifier), not a new semantic sort. But: systematic cross-linguistic evidence of social sorts would be significant |
+| "This doesn't match Chomskyan X-bar theory" | X-bar theory describes human language syntax; UL targets semantic structure. Different domains |
+| "Linguistic typology shows more diversity than 4 sorts" | Typological diversity may reflect surface variation over a common skeleton. But: if typological diversity involves structures irreducible to 4 sorts, that constrains UL's scope |
+| "No natural language has exactly these 5 primitives" | Natural languages are Σ_UL-algebras with additional structure; they specialize UL, not mirror it |
 
 The following **ARE valid** criticisms:
 
@@ -277,6 +277,7 @@ The following **ARE valid** criticisms:
 | "The Unique Grounding Theorem proof has a gap at step N" | This attacks the mathematics directly |
 | "UL predicts property P should hold for ALL information-processing systems, but system S violates P" | This is a valid empirical test (testing UL against its own predictions, not against natural language) |
 | "An alternative geometric foundation yields a different unique grounding" | This challenges uniqueness on mathematical grounds |
+| "Cross-linguistically universal constructions resist UL decomposition" | This provides empirical evidence of potential incompleteness, motivating mathematical investigation |
 
 ---
 
@@ -284,7 +285,7 @@ The following **ARE valid** criticisms:
 
 Before a frontier document is considered complete, verify:
 
-- [ ] **Paradigm compliance:** No claim validates UL against human languages; no natural-language decomposition used as evidence for or against UL; validation direction respects `foundations/paradigm.md`
+- [ ] **Paradigm compliance:** No single natural-language decomposition used as sole evidence for or against UL; cross-linguistic patterns preferred over single-language examples; validation direction respects `foundations/paradigm.md`
 - [ ] Every claim is labeled PROVEN / CONJECTURED / FRAMEWORK / ANALOGY
 - [ ] Every PROVEN claim has a complete proof or valid citation with hypothesis check
 - [ ] Every CONJECTURED claim has a precise statement, evidence, and path to proof

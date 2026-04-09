@@ -196,3 +196,312 @@ fn validate_rejects_modified_gir() {
     let result = validate(&gir, false);
     assert!(!result.valid);
 }
+
+// ── Variable binding (bind operation) ──
+
+#[test]
+fn e2e_variable_slot() {
+    let gir = parse("○_x").unwrap();
+    let result = validate(&gir, false);
+    assert!(result.valid, "errors: {:?}", result.errors);
+    assert!(
+        gir.nodes.iter().any(|n| n.node_type == ul_core::NodeType::VariableSlot),
+        "Expected a VariableSlot node"
+    );
+    assert!(
+        gir.nodes.iter().any(|n| n.variable_id.as_deref() == Some("x")),
+        "Expected variable_id = 'x'"
+    );
+}
+
+#[test]
+fn e2e_bound_reference() {
+    let gir = parse("●_x").unwrap();
+    let result = validate(&gir, false);
+    assert!(result.valid, "errors: {:?}", result.errors);
+    assert!(
+        gir.nodes.iter().any(|n| n.node_type == ul_core::NodeType::Point && n.variable_id.as_deref() == Some("x")),
+        "Expected a Point node with variable_id = 'x'"
+    );
+}
+
+#[test]
+fn e2e_binding_pair() {
+    // ○_y → ●_y — a variable slot connected to its bound reference
+    let gir = parse("○_y → ●_y").unwrap();
+    let result = validate(&gir, false);
+    assert!(result.valid, "errors: {:?}", result.errors);
+    assert!(
+        gir.nodes.iter().any(|n| n.node_type == ul_core::NodeType::VariableSlot && n.variable_id.as_deref() == Some("y")),
+        "Expected VariableSlot with variable_id = 'y'"
+    );
+    assert!(
+        gir.nodes.iter().any(|n| n.node_type == ul_core::NodeType::Point && n.variable_id.as_deref() == Some("y")),
+        "Expected Point with variable_id = 'y'"
+    );
+}
+
+#[test]
+fn roundtrip_variable_slot() {
+    let gir = parse("○_x").unwrap();
+    let out = deparse(&gir).unwrap();
+    assert_eq!(out.trim(), "○_x");
+}
+
+#[test]
+fn roundtrip_bound_ref() {
+    let gir = parse("●_x").unwrap();
+    let out = deparse(&gir).unwrap();
+    assert_eq!(out.trim(), "●_x");
+}
+
+#[test]
+fn e2e_variable_slot_ascii() {
+    // ASCII alternative: /o_x
+    let gir = parse("/o_x").unwrap();
+    let result = validate(&gir, false);
+    assert!(result.valid, "errors: {:?}", result.errors);
+    assert!(
+        gir.nodes.iter().any(|n| n.node_type == ul_core::NodeType::VariableSlot),
+        "Expected a VariableSlot node from ASCII syntax"
+    );
+}
+
+#[test]
+fn e2e_bound_ref_ascii() {
+    // ASCII alternative: *_x
+    let gir = parse("*_x").unwrap();
+    let result = validate(&gir, false);
+    assert!(result.valid, "errors: {:?}", result.errors);
+    assert!(
+        gir.nodes.iter().any(|n| n.node_type == ul_core::NodeType::Point && n.variable_id.as_deref() == Some("x")),
+        "Expected a Point with variable_id from ASCII syntax"
+    );
+}
+
+// ── Assertion modifiers (modify_assertion operation) ──
+
+#[test]
+fn e2e_evidential_modifier() {
+    let gir = parse("?{● → ●}").unwrap();
+    let result = validate(&gir, false);
+    assert!(result.valid, "errors: {:?}", result.errors);
+    assert!(
+        gir.nodes.iter().any(|n| n.assertion_modifier == Some(ul_core::AssertionModifierKind::Evidential)),
+        "Expected an Evidential assertion modifier node"
+    );
+}
+
+#[test]
+fn e2e_emphatic_modifier() {
+    let gir = parse("!{● → ●}").unwrap();
+    let result = validate(&gir, false);
+    assert!(result.valid, "errors: {:?}", result.errors);
+    assert!(
+        gir.nodes.iter().any(|n| n.assertion_modifier == Some(ul_core::AssertionModifierKind::Emphatic)),
+        "Expected an Emphatic assertion modifier node"
+    );
+}
+
+#[test]
+fn e2e_hedged_modifier() {
+    let gir = parse("~?{● → ●}").unwrap();
+    let result = validate(&gir, false);
+    assert!(result.valid, "errors: {:?}", result.errors);
+    assert!(
+        gir.nodes.iter().any(|n| n.assertion_modifier == Some(ul_core::AssertionModifierKind::Hedged)),
+        "Expected a Hedged assertion modifier node"
+    );
+}
+
+#[test]
+fn roundtrip_evidential() {
+    let gir = parse("?{●}").unwrap();
+    let out = deparse(&gir).unwrap();
+    assert_eq!(out.trim(), "?{●}");
+}
+
+#[test]
+fn roundtrip_emphatic() {
+    let gir = parse("!{●}").unwrap();
+    let out = deparse(&gir).unwrap();
+    assert_eq!(out.trim(), "!{●}");
+}
+
+#[test]
+fn roundtrip_hedged() {
+    let gir = parse("~?{●}").unwrap();
+    let out = deparse(&gir).unwrap();
+    assert_eq!(out.trim(), "~?{●}");
+}
+
+#[test]
+fn e2e_assertion_modifier_renders_svg() {
+    let gir = parse("?{●}").unwrap();
+    let svg = render(&gir, &opts()).unwrap();
+    assert!(svg.contains("<svg"));
+    assert!(svg.contains("ul-evidential"), "Expected ul-evidential class in SVG: {svg}");
+}
+
+// ── Modal operator tests ──
+
+#[test]
+fn e2e_parse_necessity() {
+    let gir = parse("[]{● → ●}").unwrap();
+    // Root should be an enclosure labeled □
+    let root = gir.node(&gir.root).unwrap();
+    assert_eq!(root.label.as_deref(), Some("□"));
+    // Should have AccessibleFrom edge
+    assert!(
+        gir.edges.iter().any(|e| e.edge_type == ul_core::types::edge::EdgeType::AccessibleFrom),
+        "Expected AccessibleFrom edge"
+    );
+}
+
+#[test]
+fn e2e_parse_possibility() {
+    let gir = parse("<>{●}").unwrap();
+    let root = gir.node(&gir.root).unwrap();
+    assert_eq!(root.label.as_deref(), Some("◇"));
+    assert!(
+        gir.edges.iter().any(|e| e.edge_type == ul_core::types::edge::EdgeType::AccessibleFrom),
+        "Expected AccessibleFrom edge"
+    );
+}
+
+#[test]
+fn e2e_parse_counterfactual() {
+    let gir = parse("[]->{●}{●}").unwrap();
+    let root = gir.node(&gir.root).unwrap();
+    assert_eq!(root.label.as_deref(), Some("□→"));
+    assert!(
+        gir.edges.iter().any(|e| e.edge_type == ul_core::types::edge::EdgeType::AccessibleFrom),
+        "Expected AccessibleFrom edge"
+    );
+}
+
+#[test]
+fn e2e_necessity_validates() {
+    let gir = parse("[]{● → ●}").unwrap();
+    let result = ul_core::validator::validate(&gir, false);
+    assert!(
+        result.errors.is_empty(),
+        "Validation errors: {:?}",
+        result.errors
+    );
+}
+
+#[test]
+fn e2e_possibility_validates() {
+    let gir = parse("<>{●}").unwrap();
+    let result = ul_core::validator::validate(&gir, false);
+    assert!(
+        result.errors.is_empty(),
+        "Validation errors: {:?}",
+        result.errors
+    );
+}
+
+#[test]
+fn e2e_counterfactual_validates() {
+    let gir = parse("[]->{●}{●}").unwrap();
+    let result = ul_core::validator::validate(&gir, false);
+    assert!(
+        result.errors.is_empty(),
+        "Validation errors: {:?}",
+        result.errors
+    );
+}
+
+#[test]
+fn e2e_necessity_renders_svg() {
+    let gir = parse("[]{● → ●}").unwrap();
+    let svg = render(&gir, &opts()).unwrap();
+    assert!(svg.contains("<svg"));
+}
+
+#[test]
+fn roundtrip_necessity() {
+    let gir = parse("[]{●}").unwrap();
+    let out = deparse(&gir).unwrap();
+    assert!(out.contains("[]"), "Expected [] in output: {out}");
+}
+
+#[test]
+fn roundtrip_possibility() {
+    let gir = parse("<>{●}").unwrap();
+    let out = deparse(&gir).unwrap();
+    assert!(out.contains("<>"), "Expected <> in output: {out}");
+}
+
+#[test]
+fn roundtrip_counterfactual() {
+    let gir = parse("[]->{●}{●}").unwrap();
+    let out = deparse(&gir).unwrap();
+    assert!(out.contains("[]->"), "Expected []-> in output: {out}");
+}
+
+// ── Force annotation tests ──
+
+#[test]
+fn e2e_parse_query_force() {
+    let gir = parse("query{●}").unwrap();
+    let root = gir.node(&gir.root).unwrap();
+    assert_eq!(root.force, Some(ul_core::PerformativeForce::Query));
+}
+
+#[test]
+fn e2e_parse_direct_force() {
+    let gir = parse("direct{● → ●}").unwrap();
+    let root = gir.node(&gir.root).unwrap();
+    assert_eq!(root.force, Some(ul_core::PerformativeForce::Direct));
+}
+
+#[test]
+fn e2e_parse_all_six_forces() {
+    for (token, expected) in [
+        ("assert", ul_core::PerformativeForce::Assert),
+        ("query", ul_core::PerformativeForce::Query),
+        ("direct", ul_core::PerformativeForce::Direct),
+        ("commit", ul_core::PerformativeForce::Commit),
+        ("express", ul_core::PerformativeForce::Express),
+        ("declare", ul_core::PerformativeForce::Declare),
+    ] {
+        let input = format!("{token}{{●}}");
+        let gir = parse(&input).unwrap();
+        let root = gir.node(&gir.root).unwrap();
+        assert_eq!(root.force, Some(expected), "Force mismatch for {token}");
+    }
+}
+
+#[test]
+fn e2e_force_validates() {
+    let gir = parse("query{●}").unwrap();
+    let result = ul_core::validator::validate(&gir, false);
+    assert!(
+        result.errors.is_empty(),
+        "Validation errors: {:?}",
+        result.errors
+    );
+}
+
+#[test]
+fn e2e_force_renders_svg() {
+    let gir = parse("commit{● → ●}").unwrap();
+    let svg = render(&gir, &opts()).unwrap();
+    assert!(svg.contains("<svg"));
+}
+
+#[test]
+fn roundtrip_query_force() {
+    let gir = parse("query{●}").unwrap();
+    let out = deparse(&gir).unwrap();
+    assert!(out.contains("query"), "Expected query in output: {out}");
+}
+
+#[test]
+fn roundtrip_declare_force() {
+    let gir = parse("declare{●}").unwrap();
+    let out = deparse(&gir).unwrap();
+    assert!(out.contains("declare"), "Expected declare in output: {out}");
+}

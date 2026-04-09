@@ -197,6 +197,7 @@ fn sample_gir() -> Gir {
             generated_by: Some("ul-core tests".to_string()),
             timestamp: None,
         }),
+        binding_scope: None, modal_context: None,
     }
 }
 
@@ -289,6 +290,7 @@ fn validate_detects_duplicate_node_ids() {
         ],
         edges: vec![],
         metadata: None,
+        binding_scope: None, modal_context: None,
     };
     let result = validate(&gir, false);
     assert!(!result.valid);
@@ -306,6 +308,7 @@ fn validate_detects_dangling_edge_ref() {
         nodes: vec![Node::enclosure("root", EnclosureShape::Circle)],
         edges: vec![Edge::contains("root", "nonexistent")],
         metadata: None,
+        binding_scope: None, modal_context: None,
     };
     let result = validate(&gir, false);
     assert!(!result.valid);
@@ -326,6 +329,7 @@ fn validate_detects_sort_violation_modified_by() {
         ],
         edges: vec![Edge::modified_by("root", "p1")], // target should be modifier
         metadata: None,
+        binding_scope: None, modal_context: None,
     };
     let result = validate(&gir, false);
     assert!(!result.valid);
@@ -349,6 +353,7 @@ fn validate_detects_containment_cycle() {
             Edge::contains("b", "a"), // cycle!
         ],
         metadata: None,
+        binding_scope: None, modal_context: None,
     };
     let result = validate(&gir, false);
     assert!(!result.valid);
@@ -369,6 +374,7 @@ fn is_renderable_accepts_valid_gir() {
         ],
         edges: vec![Edge::contains("root", "p1")],
         metadata: None,
+        binding_scope: None, modal_context: None,
     };
     assert!(is_renderable(&gir));
 }

@@ -24,7 +24,7 @@
 ### NOT YET ADDRESSED
 - Metaphor as Σ_UL-morphism (E4)
 - Internal Hom (E5)
-- Primer as geometric projection (E6)
+- Cross-domain projection as geometric morphism (E6)
 - Explicit connection components (E7)
 
 ---
@@ -316,7 +316,7 @@ $$\exists t \in \mathcal{T}: \nabla \mu(t) \neq 0 \quad \xLeftrightarrow{\text{N
 
 **What remains an assumption:** Hypothesis S (smoothness) is the main assumption. It excludes discontinuous meaning shifts — these need separate treatment (gap A-4). The expressiveness condition is proven from the existing embedding theorem. Condition ND is an open condition (satisfied by any non-flat connection) and is generically true.
 
-**What this does NOT prove:** That the test artifact's *specific* effect is parallel transport. The test artifact-as-Wilson-line description (`gauge-bundle-of-meaning.md` §6.2) remains ANALOGY. The Polysemy-Holonomy theorem is a general statement about all expressions and all loops; applying it to the test artifact specifically requires computing the test artifact's connection components (Step E7, future sprint).
+**What this does NOT prove:** That any *specific* cross-domain effect is parallel transport. The Wilson-line description of cross-domain utterances (`gauge-bundle-of-meaning.md` §6.2) remains ANALOGY. The Polysemy-Holonomy theorem is a general statement about all expressions and all loops; applying it to specific cross-domain constructions requires computing their connection components (Step E7, future sprint).
 
 ---
 
@@ -364,9 +364,9 @@ The polysemy tensor $P_\mu(\text{``I''})$ has support only in the speaker direct
 
 ### 6.1 Definition
 
-**Definition 6 (Conceptual domain).** A **conceptual domain** is a Σ_UL-subalgebra $G_D \subseteq G$ — a subset of the geometric meaning algebra that is closed under all 11 Σ_UL operations.
+**Definition 6 (Conceptual domain).** A **conceptual domain** is a Σ_UL-subalgebra $G_D \subseteq G$ — a subset of the geometric meaning algebra that is closed under all 13 Σ_UL operations.
 
-This means: within a domain, you can form predicates, modify entities, negate, conjoin, embed, abstract, compose, invert, and quantify — and the result stays in the domain. A domain is a self-contained sublanguage.
+This means: within a domain, you can form predicates, modify entities, modify relations, negate, conjoin, disjoin, embed, abstract, compose, invert, quantify, bind, and modify assertions — and the result stays in the domain. A domain is a self-contained sublanguage.
 
 ### 6.2 Examples
 
@@ -380,20 +380,20 @@ This means: within a domain, you can form predicates, modify entities, negate, c
 
 The intersection $G_S \cap G_T$ of two domain subalgebras is itself a Σ_UL-subalgebra (intersection of subalgebras is a subalgebra). This intersection contains the **shared structure** — meanings that belong to both domains.
 
-For the test artifact's domains:
+For cross-domain pairs like quantum mechanics and cognition:
 
 $$G_{\text{QM}} \cap G_{\text{cog}} \ni \{\text{superposition-as-pattern}, \text{measurement-as-selection}, \text{entanglement-as-correlation}\}$$
 
-These are geometric constructions that have valid interpretations in both quantum mechanics and cognition. They are the bridge entities — precisely the constructions that the test artifact's cross-domain notation activates.
+These are geometric constructions that have valid interpretations in both quantum mechanics and cognition. They are the bridge entities — precisely the constructions that cross-domain notation activates.
 
-The non-emptiness of $G_{\text{QM}} \cap G_{\text{cog}}$ is what makes the test artifact possible. If the domains had no shared structure, no morphism between them could preserve operations, and the cross-domain activation would be noise rather than signal.
+The non-emptiness of $G_{\text{QM}} \cap G_{\text{cog}}$ is what makes cross-domain morphisms possible. If the domains had no shared structure, no morphism between them could preserve operations, and the cross-domain activation would be noise rather than signal.
 
-**[FRAMEWORK]** The explicit enumeration of domain generators and the proof that specific intersections are non-trivial require detailed analysis of the test artifact's constructions — this is the content of Steps E4–E6.
+**[FRAMEWORK]** The explicit enumeration of domain generators and the proof that specific intersections are non-trivial require detailed analysis of cross-domain constructions — this is the content of Steps E4–E6.
 
 **Post-Sprint-5 upgrade note.** Steps E3, E4, and E7 are now **PROVEN** in `frontier/expedition-two/metaphor-formalization.md`:
 - E3: Three domains ($G_{\text{QM}}, G_{\text{ling}}, G_{\text{cog}}$) formally enumerated with generator sets; subalgebra closure PROVEN (Theorem 12); $G_{\text{QM}} \cap G_{\text{cog}}$ non-emptiness PROVEN with 3 independent elements (Theorem 13)
-- E4: $\phi_{\text{primer}}: G_{\text{QM}} \to G_{\text{cog}}$ exhibited as Σ_UL-homomorphism (Theorem 14); kernel ≈ physical ontology; image = all of $G_{\text{cog}}$ (surjective); Erlangen level 3 CONJECTURED
-- E7: Connection component $A_2 = -\beta J_{13}$ computed from $\phi_{\text{primer}}$ (Theorem 15); curvature $F_{12} = \alpha\beta J_{23}$ computed; holonomy non-trivial on 2D model
+- E4: $\phi_{\text{cross}}: G_{\text{QM}} \to G_{\text{cog}}$ exhibited as Σ_UL-homomorphism (Theorem 14); kernel ≈ physical ontology; image = all of $G_{\text{cog}}$ (surjective); Erlangen level 3 CONJECTURED
+- E7: Connection component $A_2 = -\beta J_{13}$ computed from $\phi_{\text{cross}}$ (Theorem 15); curvature $F_{12} = \alpha\beta J_{23}$ computed; holonomy non-trivial on 2D model
 
 ---
 
@@ -413,7 +413,7 @@ The section definition $\mu$ connects the two expedition fronts:
 
 - **From Sprint 1 (Front D):** The structural prior $P(m) = 2^{-DC_{UL}^{\text{bit}}(m)}/Z$ weights meanings in a single fiber. With $\mu$, we can define the **context-conditioned distribution**: $P(m | x) = P(\{t : \llbracket t \rrbracket_x = m\})$ — the probability of meaning $m$ given context $x$. This is the input to the Fisher information metric (Step D5).
 
-- **For future sprints (E3–E7):** Metaphor is now definable as a Σ_UL-homomorphism between domain subalgebras that maps one section to another. The test artifact's morphism $\phi_{\text{primer}}: G_{\text{QM}} \to G_{\text{cog}}$ sends sections to sections — the connected meaning-field, not just isolated meanings.
+- **For future sprints (E3–E7):** Metaphor is now definable as a Σ_UL-homomorphism between domain subalgebras that maps one section to another. A cross-domain morphism $\phi_{\text{cross}}: G_{\text{QM}} \to G_{\text{cog}}$ sends sections to sections — the connected meaning-field, not just isolated meanings.
 
 ---
 

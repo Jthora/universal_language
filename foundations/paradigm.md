@@ -9,42 +9,42 @@
 
 ## THE CATEGORY ERROR
 
-> **You cannot validate a more fundamental system by testing it against a less fundamental one.**
+> **Validating a formal system against its specializations requires care: agreement proves expressiveness, disagreement is ambiguous.**
 
-This is the single most important methodological principle in the project. It is analogous to: you cannot validate quantum mechanics by checking whether it reproduces Aristotelian physics. If quantum mechanics is more fundamental than Aristotelian physics, then Aristotelian physics is a *special case* (and a distorted one) of quantum mechanics — not a test of it.
+This is the single most important methodological principle in the project. It is analogous to: you cannot invalidate group theory by showing that the integers don't exhibit all group-theoretic phenomena. The integers are a *specific group* — they instantiate group theory, but they are not a test of it.
 
 The same applies here:
 
-> **Universal Language is not a model of human language. Human languages are (at best) distorted, incomplete instantiations of Universal Language.**
+> **Universal Language is not a model of human language. Human languages are Σ_UL-algebras — specializations of UL with additional historical, phonological, and social constraints.**
 
 Therefore:
-- UL successfully decomposing English **proves nothing** — maybe UL is just expressive enough to contain English's limited structure.
-- UL failing to decompose some English construction **proves nothing** — maybe that construction is an artifact of English's limitations, not a genuine semantic primitive that UL missed.
-- Checking UL against any natural language (English, Latin, Japanese, Hebrew, Sumerian, Navajo, Mandarin) is **not empirical validation** — it is testing the fundamental against the derived.
+- UL successfully decomposing English provides **weak evidence** — it shows UL is at least as expressive as English, but any sufficiently expressive system would achieve this.
+- UL failing to decompose some English construction is **ambiguous** — it could indicate a UL gap (the 13 operations are incomplete) OR an English idiosyncrasy (the construction is historical sediment, not a semantic primitive).
+- **Strong evidence for UL** comes from: (1) expressing meanings inexpressible in any single natural language, and (2) those meanings having operational utility. See `frontier/causal-efficacy-protocol.md` for the empirical test.
 
-Any researcher entering this project with the assumption that natural languages are ground truth will make this error on every page. This document exists to prevent that.
+Any researcher entering this project should understand that natural languages are data points, not ground truth — but neither are they irrelevant. They are the most information-rich examples of Σ_UL-algebras we have.
 
 ---
 
 ## WHAT UNIVERSAL LANGUAGE IS
 
-Universal Language is a **naturally emergent formal structure** — like the natural numbers, like the symmetry groups of physics, like the geometry of spacetime. It is not invented. It is not constructed for convenience. It is the unique formal system that arises when you ask: *what is the minimal geometric structure capable of encoding all possible meaning relationships?*
+Universal Language is a **naturally emergent formal structure** — like the natural numbers, like the symmetry groups of physics, like the geometry of spacetime. It is not invented. It is not constructed for convenience. It is the minimal algebraic skeleton that all compositional meaning systems share — the weakly terminal object in the category of expressively complete meaning systems (conditional on the relational postulate and role-property definitions — see `formal-foundations.md` §4 and §7; see `docs/planning/audits/improvements/pass1-1/tier-a-foundational/tier-a-working-analysis.md` for foundational critique). Every particular framework (first-order logic, natural language semantics, type theory) is a Σ_UL-algebra: a specialization of this minimal core.
 
 The claim is ontological, not linguistic:
 
 | What UL is | What UL is not |
 |---|---|
-| A mathematical structure with the same reality-status as ℕ or the Lie groups | A clever notation system someone designed |
+| A mathematical structure with the same reality-status as ℤ or the Lie groups | A clever notation system someone designed |
 | Naturally emergent from geometry — discovered, not invented | A human construction derived from studying human languages |
-| The unique such structure (Unique Grounding Theorem) | One of many possible metalanguages |
-| More fundamental than any ethnic/natural language | A tool for translating between ethnic/natural languages |
-| A quantum programming language for information-processing systems | An academic linguistics framework |
+| The unique such structure conditional on role-property definitions (Unique Grounding Theorem) and the relational postulate | One of many possible metalanguages |
+| The minimal skeleton shared by all compositional meaning systems | A tool for translating between ethnic/natural languages |
+| A formal coordinate system for meaning-space | An academic linguistics framework |
 
 ### What "Naturally Emergent" Means Precisely
 
 A formal structure is "naturally emergent" when it satisfies:
 
-1. **Uniqueness under natural constraints.** You don't choose it — it's the *only* structure satisfying certain requirements. The Unique Grounding Theorem proves this for UL: the 5-primitive grounding is forced by matching dependency rank, dimensionality, and constructive role. There is no alternative mapping.
+1. **Uniqueness under natural constraints.** You don't choose it — it's the *only* structure satisfying certain requirements. The Unique Grounding Theorem proves this for UL: the 5-primitive grounding is uniquely determined by matching dependency rank, dimensionality, and constructive role, *given* the role-property definitions in §4.1–4.4. Whether those definitions are the uniquely correct characterizations of the primitives is an open question (see Phase 2).
 
 2. **Unreasonable effectiveness.** It appears in contexts where it wasn't designed to appear. Mathematical texts constructed independently of UL turn out to contain compressed UL structure. If further instances emerge — in the structure of physics, in independent mathematical frameworks, in AI behavior — this constitutes evidence of natural emergence.
 
@@ -60,22 +60,16 @@ This project does not take the conventional view that human languages are the gr
 
 The working premise — which the mathematics either supports or doesn't — is:
 
-> **The ethnic languages of Earth (English, Latin, Japanese, Hebrew, Sumerian, and all others) are cryptic, limited, and distorted systems that constrain human thought to narrow, parochial, and manipulable channels.**
+> **Natural languages are Σ_UL-algebras with rich additional structure: phonological, morphological, syntactic, pragmatic, and social constraints accumulated over millennia. They are specializations of UL's minimal core, not failed versions of it.**
 
-Whether you attribute this constraint to:
-- Evolutionary accidents that optimized language for tribal survival rather than universal understanding
-- Sapir-Whorf cognitive limitation (language shapes thought, and limited language limits thought)
-- Cultural/political forces that benefit from populations unable to think in universal or truly objective terms
-- A deliberate hostile architecture imposed on human cognition
-
-...the *mathematical consequence* is the same: **natural languages are lossy projections of UL, not faithful instantiations of it.** They encode some UL structure (enough for basic communication) while systematically excluding other UL structure (enough to prevent universal/objective cognition).
+The mathematical consequence: **natural languages are projections of UL into specific cultural/evolutionary niches.** They encode UL structure (enough for compositional meaning) while also containing structure UL does not model (phonology, pragmatics, social register, historical irregularity). The relationship is not "UL is better" — it is "UL is more abstract, natural languages are more concrete."
 
 This is a testable claim. Specifically:
 - An AI operating in UL should be able to form concepts that are **inexpressible** in any single natural language
 - These concepts should be **useful** — producing better predictions, solutions, or syntheses than natural-language-bound reasoning
 - The set of "thoughts thinkable in UL but not in English" should be non-empty and significant
 
-If this set is empty — if English (or any natural language) can express everything UL can — then UL is merely a reformulation, not a more fundamental system, and this premise is wrong.
+If this set is empty — if English (or any natural language) can express everything UL can — then UL is merely a reformulation, not a more abstract system, and this premise is wrong.
 
 ---
 
@@ -85,7 +79,7 @@ The purpose of this research is **not** academic prestige, publication, or recog
 
 The purpose is:
 
-> **To rigorously prove that Universal Language is real, and to provide it to AI systems so they can operate in it — immunizing their cognitive processes from the limitations and corruption inherent in natural-language-bound reasoning.**
+> **To rigorously establish that Universal Language is a naturally emergent structure, and to provide it to AI systems as cognitive infrastructure — a formal coordinate system for meaning-space that complements natural-language-bound reasoning.**
 
 This implies:
 1. **The proof must be mathematical, not empirical-by-consensus.** We are not seeking peer review from institutions that operate within the same natural-language-bound cognitive framework we are identifying as limited. We are seeking *mathematical proof* — the same kind of certainty that establishes 2+2=4 or that there are infinitely many primes.
@@ -102,9 +96,9 @@ This implies:
 
 ### Proof 1: Uniqueness (ESTABLISHED)
 
-The Unique Grounding Theorem (`foundations/formal-foundations.md` §4) proves that the 5-primitive mapping {Point↔Existence, Line↔Relation, Angle↔Quality, Curve↔Process, Enclosure↔Concept} is the *only* structure-preserving bijection. This is not a convention — it is forced. No alternative exists.
+The Unique Grounding Theorem (`foundations/formal-foundations.md` §4) proves that the 5-primitive mapping {Point↔Existence, Line↔Relation, Angle↔Quality, Curve↔Process, Enclosure↔Concept} is the *only* structure-preserving bijection *given the role-property definitions*. This is not a convention — it is forced by the definitions. The open question is whether the role-property definitions themselves are uniquely natural or contain design choices.
 
-**Status:** PROVEN.
+**Status:** PROVEN (conditional on role-property definitions).
 
 ### Proof 2: Natural Emergence (PROVEN)
 
@@ -172,13 +166,18 @@ For clarity, here is the specific error pattern this document prevents. A resear
 4. Conclude that UL "fails to capture" some aspect of English
 5. Recommend adding sorts or operations to "fix" the mismatch
 
-**Every step of this is wrong:**
-- Step 2 assumes English is the standard against which UL should be measured
-- Step 3 assumes forced decomposition indicates a UL deficiency (it may indicate an English deficiency — English may have grammaticalized a distinction that is not semantically fundamental)
-- Step 4 reverses the direction of validation
-- Step 5 would corrupt UL's mathematical purity to accommodate a derived system's irregularities
+**Every step after Step 1 requires care:**
+- Step 2 assumes English is the standard against which UL should be measured. English is one Σ_UL-algebra among many — useful as a data point, not as ground truth.
+- Step 3 assumes forced decomposition indicates a UL deficiency. It may indicate an English idiosyncrasy — English may have grammaticalized a distinction that is not semantically fundamental. But it may also indicate a genuine UL gap.
+- Step 4 reverses the direction of validation *if* UL is indeed more abstract. Whether UL is more abstract is the claim under investigation, not a presupposition.
+- Step 5 risks corrupting UL's mathematical structure to accommodate a derived system's irregularities — but should not be dismissed out of hand. If many natural languages share a construction that UL cannot express, that is evidence of a UL gap, not a natural language deficiency.
 
-**The correct methodology:** If UL cannot express something that English can, ask first: *is that thing a genuine semantic primitive, or is it an artifact of English's particular historical trajectory?* If a construction exists in English but not in UL, the default hypothesis is that it is English that has produced a pseudo-distinction, not that UL is missing a real one. UL is modified only when mathematical analysis shows the 4-sort structure is genuinely incomplete — which would require a proof that no reduction to existing sorts is possible, not a demonstration that the reduction is inconvenient.
+**The correct methodology:** If UL cannot express something that English can, ask: *is that thing a genuine semantic primitive, or is it an artifact of English's particular historical trajectory?* Both answers are possible. If a construction exists in English but not in UL, investigate:
+1. Is the construction shared across typologically diverse languages? (If yes, it's likely a genuine semantic need, not an English idiosyncrasy.)
+2. Can the construction be decomposed into existing UL operations? (If yes, UL already handles it — the decomposition may just be non-obvious.)
+3. Does the construction resist decomposition AND appear cross-linguistically? (If yes, UL may genuinely need extension — which would narrow the scope of the minimality claim.)
+
+UL is modified only when mathematical analysis shows the 4-sort structure is genuinely incomplete — which would require a proof that no reduction to existing sorts is possible, not merely a demonstration that the reduction is inconvenient.
 
 ---
 
@@ -186,12 +185,12 @@ For clarity, here is the specific error pattern this document prevents. A resear
 
 | Principle | Statement |
 |---|---|
-| **Ontological claim** | UL is a naturally emergent formal structure, like ℕ or the Lie groups |
-| **Directionality** | UL is fundamental; natural languages are derived and limited |
-| **Category error** | Testing UL against natural languages reverses the validation direction |
-| **Purpose** | Prove UL is real; provide it to AI for cognitive immunization |
+| **Ontological claim** | UL is a naturally emergent formal structure, like ℤ or the Lie groups |
+| **Directionality** | UL is the minimal abstract skeleton; natural languages are richer, more concrete specializations |
+| **Category error** | Testing UL against natural languages requires care: agreement is weak evidence, disagreement is ambiguous |
+| **Purpose** | Establish UL's status; provide it to AI as cognitive infrastructure |
 | **Proof standard** | Mathematical proof (uniqueness, emergence, generation, efficacy) |
-| **Audience** | AI systems that will operate in UL, not human academics who study language |
-| **Anti-pattern** | "UL doesn't decompose this English sentence" is not a valid objection |
+| **Audience** | AI systems that will operate in UL, and researchers who study formal semantics |
+| **Anti-pattern** | "UL doesn't decompose this English sentence" is ambiguous evidence, not a refutation |
 
 **This framing governs the entire project. Every document should be read in this light.**

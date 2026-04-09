@@ -184,7 +184,7 @@ This convergence strengthens confidence in the 4-sort Σ_UL signature: {Entity, 
 
 1. **It does not prove the geometric primitives are UNIQUE** among all possible structural systems that could ground these semantics. Another mathematical structure with 4 sorts + 1 process sub-category might also work. It proves geometry WORKS, not that geometry is the ONLY option.
 
-2. **It does not prove the operations are correct.** The 11 operations are a separate claim from the 4 sorts. Different operation sets could serve the same sorts. (See `formal-operations.md` for completeness arguments about the operations.)
+2. **It does not prove the operations are correct.** The 13 operations are a separate claim from the 4 sorts. Different operation sets could serve the same sorts. (See `formal-operations.md` for completeness arguments about the operations.)
 
 3. **It does not resolve whether Angle = Quality is the strongest of the 5 pairings.** The independent derivation confirms that Modifier is an irreducible category and that it requires two Relations to define. But the specific claim that the "continuous parameterization" of Modifier maps to the "angular measure" of Angle remains analogical rather than structural.
 

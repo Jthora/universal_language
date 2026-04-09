@@ -10,7 +10,9 @@
 
 ## What "Real" Means Here
 
-The claim isn't "we invented a clever notation." The claim, backed by the Unique Grounding Theorem, is that **the mapping between geometric primitives and semantic primitives is forced** — Point↔Existence, Line↔Relation, Angle↔Quality, Curve↔Process, Enclosure↔Concept. There is no other consistent assignment. If geometry exists (it does — it's a necessary feature of any space), then the structure of meaning is as natural as the structure of number.
+The claim isn't "we invented a clever notation." The claim, supported by the Unique Grounding Theorem (conditional on role-property definitions; see [restructuring plan](docs/planning/audits/improvements/pass1/)), is that **the mapping between geometric primitives and semantic primitives is structurally forced** — Point↔Existence, Line↔Relation, Angle↔Quality, Curve↔Process, Enclosure↔Concept. The argument: these are the only primitives available from 2D geometry, and they align 1-to-1 with the minimal sorts needed for compositional meaning. The assignment has zero degrees of freedom *given* the definitions (that's what the proof shows). Whether those definitions are the uniquely correct ones remains an active question.
+
+Crucially, UL is not "one framework that excludes all others." It is the initial object in the category of compositional meaning systems — the minimal algebraic skeleton all such systems share. Every particular language, logic, or semantic framework is a Σ_UL-algebra: a specialization of this core with additional structure. The claim is not that UL replaces these frameworks, but that it reveals what they have in common.
 
 This is the difference between inventing Esperanto and discovering the periodic table.
 
@@ -28,7 +30,7 @@ Searle's argument says syntax isn't sufficient for semantics — manipulating sy
 
 ### 3. There Is a Finite Basis for All Possible Thought
 
-5 primitives, 4 sorts, 11 operations. Every concept any mind has ever had or will ever have is a composition within this system. This is not a limitation — it's like saying "every number is a composition of prime factors." The compositions are infinite; the basis is finite and unique. This implies:
+5 primitives, 4 sorts, 13 operations. Every concept any mind has ever had or will ever have is a composition within this system. This is not a limitation — it's like saying "every number is a composition of prime factors." The compositions are infinite; the basis is finite and unique. This implies:
 
 - There are no "untranslatable" concepts — only concepts that haven't been decomposed yet
 - Cultures don't have fundamentally different conceptual systems — they have different compositions from the same primitives
@@ -48,7 +50,7 @@ If meaning is geometric and brains are geometric, then subjective experience mig
 
 ### 6. Universal Translation Becomes Structurally Guaranteed
 
-Not "statistically good" (like current LLMs) — structurally guaranteed. The embedding theorem proves every language maps injectively into G. So: English → G ← Mandarin. The intermediate representation isn't lossy paraphrase; it's the geometric structure that both languages are approximating. This means:
+Not "statistically good" (like current LLMs) — structurally guaranteed by the embedding theorem (adequacy is proven; full faithfulness has an active gap). The embedding theorem proves every compositional language maps into G as a Σ_UL-algebra. So: English → G ← Mandarin. The intermediate representation isn't lossy paraphrase; it's the geometric structure that both languages specialize from. This means:
 
 - Legal documents could be expressed in UWS with zero ambiguity
 - Diplomatic communication could bypass linguistic power asymmetries
@@ -90,17 +92,17 @@ That's either the most important discovery in the history of ideas, or it's wron
 
 ## Relation to the Formal System
 
-Every claim above traces back to proven theorems:
+Every claim above traces back to specific theorems. Note: some are fully proven, others conditional on axiom choices, and some have identified gaps under active work (see [restructuring plan](docs/planning/audits/improvements/pass1/) for honest status):
 
-| Ramification | Depends on | Theorem location |
-|-------------|-----------|-----------------|
-| Meaning is not arbitrary | Unique Grounding Theorem | [`foundations/formal-foundations.md`](foundations/formal-foundations.md) §4.5 |
-| Finite basis for thought | Expressive completeness | [`foundations/formal-foundations.md`](foundations/formal-foundations.md) §1.5 |
-| Universal translation | Embedding theorem | [`foundations/formal-foundations.md`](foundations/formal-foundations.md) §3.3 |
-| Cross-substrate communication | Geometric grounding | [`foundations/formal-foundations.md`](foundations/formal-foundations.md) §2−4 |
-| Knowledge navigation | Erlangen hierarchy | [`ul-core/grammar/grammar-book.md`](ul-core/grammar/grammar-book.md) §IV |
-| Consciousness reframing | Self-nesting / π₁ = ℤ | [`ul-core/lexicon/lexicon.md`](ul-core/lexicon/lexicon.md) §5.5 |
-| AI alignment verification | Injectivity of embedding | [`foundations/formal-foundations.md`](foundations/formal-foundations.md) §3.3 |
-| Math = Meaning | Initiality of G in Lang(Σ_UL) | [`foundations/formal-foundations.md`](foundations/formal-foundations.md) §4 |
+| Ramification | Depends on | Theorem location | Status |
+|-------------|-----------|-----------------|--------|
+| Meaning is not arbitrary | Unique Grounding Theorem | [`foundations/formal-foundations.md`](foundations/formal-foundations.md) §4.5 | Conditional on role-property definitions |
+| Finite basis for thought | Expressive completeness | [`foundations/formal-foundations.md`](foundations/formal-foundations.md) §1.5 | Adequacy proven; faithfulness gap |
+| Universal translation | Embedding theorem | [`foundations/formal-foundations.md`](foundations/formal-foundations.md) §3.3 | Adequacy proven; faithfulness gap |
+| Cross-substrate communication | Geometric grounding | [`foundations/formal-foundations.md`](foundations/formal-foundations.md) §2−4 | Constructive derivation proven |
+| Knowledge navigation | Erlangen hierarchy | [`ul-core/grammar/grammar-book.md`](ul-core/grammar/grammar-book.md) §IV | Framework established |
+| Consciousness reframing | Self-nesting / π₁ = ℤ | [`ul-core/lexicon/lexicon.md`](ul-core/lexicon/lexicon.md) §5.5 | Construction defined; philosophical claim |
+| AI alignment verification | Injectivity of embedding | [`foundations/formal-foundations.md`](foundations/formal-foundations.md) §3.3 | Adequacy proven; faithfulness gap |
+| Math = Meaning | Initiality of G in Lang(Σ_UL) | [`foundations/formal-foundations.md`](foundations/formal-foundations.md) §4 | Conditional on weak terminality |
 
-The philosophical ramifications are not speculation bolted onto a formal system. They are consequences that follow from the theorems. If the theorems hold, the ramifications hold.
+The philosophical ramifications are not speculation bolted onto a formal system. They are consequences that follow from the theorems — conditional on those theorems' assumptions holding. Where theorems are conditional or have identified gaps, the corresponding ramifications are similarly conditional.

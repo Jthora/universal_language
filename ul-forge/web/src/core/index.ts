@@ -19,7 +19,9 @@ export type EdgeType =
   | "adjacent"
   | "intersects"
   | "connects"
-  | "references";
+  | "references"
+  | "binds"
+  | "accessible_from";
 
 export interface Node {
   id: string;
@@ -95,7 +97,12 @@ export type OperationName =
   | "abstract"
   | "compose"
   | "invert"
-  | "quantify";
+  | "quantify"
+  | "necessity"
+  | "possibility"
+  | "counterfactual"
+  | "set_force"
+  | "infer_pragmatic";
 
 export type Grade = "exact" | "close" | "partial" | "unrelated";
 
@@ -293,6 +300,8 @@ import wasmInit, {
   getNextPuzzle as wasmGetNextPuzzle,
   queryLexicon as wasmQueryLexicon,
   lookupLexiconEntry as wasmLookupLexiconEntry,
+  set_force as wasmSetForce,
+  infer_pragmatics as wasmInferPragmatics,
 } from "ul-wasm";
 
 let initialized = false;
@@ -435,6 +444,33 @@ export function parseValidateRender(input: string): {
   const validation = validate(gir);
   const svg = validation.valid ? render(gir) : null;
   return { gir, validation, svg };
+}
+
+/**
+ * Extract embedded GIR JSON from an SVG string produced by render().
+ * Returns the parsed GIR, or null if the SVG has no embedded metadata.
+ *
+ * This enables lossless round-trip:
+ *   parse("○{●}") → render(gir) → extractGirFromSvg(svg) → deparse(gir) === "○{●}"
+ */
+export function extractGirFromSvg(svg: string): Gir | null {
+  const match = svg.match(/<!\[CDATA\[([\s\S]*?)\]\]>/);
+  if (!match) return null;
+  try {
+    return JSON.parse(match[1]) as Gir;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Full SVG round-trip: SVG → GIR → UL-Script text.
+ * Returns null if the SVG has no embedded GIR metadata.
+ */
+export function svgToUlScript(svg: string): string | null {
+  const gir = extractGirFromSvg(svg);
+  if (!gir) return null;
+  return deparse(gir);
 }
 
 // ── Game context ──
@@ -638,4 +674,33 @@ export function queryLexicon(query: string): LexiconEntry[] {
 export function lookupLexiconEntry(name: string): LexiconEntry | null {
   ensureInit();
   return wasmLookupLexiconEntry(name) as LexiconEntry | null;
+}
+
+// ── Performative & Pragmatic extensions ──
+
+export type ForceName = "assert" | "query" | "direct" | "commit" | "express" | "declare";
+
+export interface PragmaticInference {
+  rule: string;
+  surface: Gir;
+  intended: Gir;
+}
+
+/**
+ * Set performative force on an assertion GIR.
+ */
+export function setForce(gir: Gir, force: ForceName): Gir {
+  ensureInit();
+  const result = wasmSetForce(JSON.stringify(gir), force);
+  return (typeof result === "string" ? JSON.parse(result) : result) as Gir;
+}
+
+/**
+ * Run pragmatic inference on a surface GIR.
+ * Returns an array of {rule, surface, intended} objects.
+ */
+export function inferPragmatics(gir: Gir): PragmaticInference[] {
+  ensureInit();
+  const result = wasmInferPragmatics(JSON.stringify(gir));
+  return (typeof result === "string" ? JSON.parse(result) : result) as PragmaticInference[];
 }

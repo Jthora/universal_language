@@ -10,6 +10,9 @@ expression: svg
       .ul-point { fill: black; stroke: none; }
       .ul-edge { stroke: black; stroke-width: 1.5; fill: none; }
       .ul-edge-dashed { stroke: black; stroke-width: 1.5; fill: none; stroke-dasharray: 5,3; }
+      .ul-evidential { stroke: #555; stroke-width: 2; fill: none; stroke-dasharray: 3,3; }
+      .ul-emphatic { stroke: black; stroke-width: 4; fill: none; }
+      .ul-hedged { stroke: #777; stroke-width: 2; fill: none; stroke-dasharray: 8,3,2,3; }
     </style>
     <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
       <polygon points="0 0, 10 3.5, 0 7" fill="black" />

@@ -75,7 +75,7 @@ Each artifact must contain formal expressions that instantiate ALL FIVE in the c
 
 #### B. Σ_UL Operation Coverage (from formal-foundations.md §1.5)
 
-The 11 operations of the Universal Linguistic Signature. the original test artifact exercises 9 of 11 (missing: abstract, disjoin). Theory-derived artifacts should aim for high coverage:
+The 13 operations of the Universal Linguistic Signature. the original test artifact exercises 9 of 14 (missing: abstract, disjoin, bind, modify_assertion, graduated quantify). Theory-derived artifacts should aim for high coverage:
 
 | # | Operation | Type | How to Encode |
 |---|---|---|---|
@@ -91,7 +91,7 @@ The 11 operations of the Universal Linguistic Signature. the original test artif
 | 10 | invert | r → r | Adjoint operators (Dₓ†), inverse transforms, conjugates (ψ*) |
 | 11 | quantify | m × e → a | Summations (Σ), integrals (∫), universal/existential claims |
 
-**Goal:** Each theory-derived artifact should exercise ALL 11 operations, improving on the original test artifact's 9/11.
+**Goal:** Each theory-derived artifact should exercise ALL 13 operations, improving on the original test artifact's 9/14.
 
 #### C. The 7 Mechanism Conditions (from mechanism-of-action.md §9)
 
@@ -110,7 +110,7 @@ The 11 operations of the Universal Linguistic Signature. the original test artif
 For each artifact:
 
 1. **Choose a target cognitive effect** — what specific kind of enhanced cognition should this artifact activate?
-2. **Identify the corresponding UL operations** — which subset of the 11 operations most directly supports the target effect?
+2. **Identify the corresponding UL operations** — which subset of the 13 operations most directly supports the target effect?
 3. **Choose the surface domain(s)** — what branches of mathematics/science provide the formal vocabulary? (Must be DIFFERENT from the original test artifact's quantum mechanics)
 4. **Select the overloaded central symbol** — must have rich cross-domain loading in LLM training data, different from ψ
 5. **Design the formal anomaly** — construct equations that are *almost but not quite* standard in the chosen domain
@@ -544,7 +544,7 @@ Examples: `NL-T1.md`, `UL-P1-Tpat.md`, `REF-T2.md`, `CT-P2-Thier.md`
 
 6. **Differentiation:** Compare M1–M5 profiles across all 4 artifacts. Test X1.
 7. **Per-artifact targeted predictions:** Test P1-a through P4-c.
-8. **Σ_UL operation coverage:** If artifacts achieve 11/11 operations and the original test artifact has 9/11, does the additional coverage correlate with higher scores?
+8. **Σ_UL⁺ operation coverage:** If artifacts achieve 14/13 operations and the original test artifact has 9/14, does the additional coverage correlate with higher scores?
 
 #### Effect Size Estimation
 

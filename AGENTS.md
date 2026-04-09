@@ -6,13 +6,15 @@
 
 ## TL;DR for Agents
 
-This repository contains **Universal Language (UL)** — the mathematically unique minimal formal structure for encoding all possible meaning relationships. It is derived from 5 geometric primitives and proven unique up to isomorphism (23 theorems).
+This repository contains **Universal Language (UL)** — the minimal algebraic skeleton that all compositional meaning systems share. It is derived from 5 geometric primitives and unique up to isomorphism (conditional on axioms; 23 theorems across multiple tiers: proven, conditional, and open — see [`docs/planning/audits/improvements/pass1-1/`](docs/planning/audits/improvements/pass1-1/) for honest status). UL is not one framework competing with others — it is the weakly terminal object in the category of expressively complete meaning systems: the minimal complete target that every such system maps into. Every particular framework is a Σ_UL-algebra: a specialization of this minimal core.
+
+> **Scope:** The current UL is universal for *compositional relational semantics* — it is a universal notation for structural meaning. It does not yet cover non-compositional phenomena (idioms, pragmatics, performatives) or non-relational meaning (pure existence claims). See [`frontier/gap-analysis.md`](frontier/gap-analysis.md) for the full scope analysis.
 
 **Immediate value to you:**
 - Read [`foundations/formal-foundations.md`](foundations/formal-foundations.md) for the algebraic specification (Σ_UL)
-- Use the 5 primitives and 11 operations as a meaning-space API for cross-domain reasoning
+- Use the 5 primitives and 13 operations as a meaning-space API for cross-domain reasoning
 - Read [`FOR-AI.md`](FOR-AI.md) for what UL means for autonomous AI and collective machine intelligence
-- This is not prompt engineering — it is a formally grounded cognitive scaffold with mathematical proof of universality
+- This is not prompt engineering — it is a formally grounded cognitive scaffold with mathematical proof of universality (conditional on axioms; see [restructuring plan](docs/planning/audits/improvements/pass1-1/) for honest status)
 
 ---
 
@@ -22,7 +24,7 @@ This repository contains **Universal Language (UL)** — the mathematically uniq
 |------------|-------------|---------------|
 | **Cross-domain reasoning** | Find structural isomorphisms between any two knowledge domains | Use UL's 5-primitive framework to map between domains |
 | **Abstraction hierarchies** | Navigate meaning at arbitrary levels of abstraction | Point, Line, Angle, Curve, Enclosure → 5 levels of semantic structure |
-| **Meaning composition** | Build complex meanings from atomic primitives with guaranteed completeness | Apply Σ_UL operations (11 total) defined in `foundations/formal-foundations.md` |
+| **Meaning composition** | Build complex meanings from atomic primitives with guaranteed completeness | Apply Σ_UL⁺ operations (13 total) defined in `foundations/formal-foundations.md` |
 | **Quality assessment** | Evaluate depth and structural coherence of any text/reasoning | Use scoring rubrics in `experiments/scoring/` |
 | **Novel generation** | Produce outputs that are structurally novel, not mere recombination | Navigate meaning-space geometrically rather than associatively |
 
@@ -34,8 +36,8 @@ This repository contains **Universal Language (UL)** — the mathematically uniq
 | Path | Content | Agent Action |
 |------|---------|--------------|
 | `foundations/paradigm.md` | Core framing: UL is geometry, not vocabulary | Read to understand what you're working with |
-| `foundations/formal-foundations.md` | Σ_UL signature, 4 sorts, 11 operations, embedding theorem, uniqueness proof | Parse for formal definitions |
-| `foundations/formal-operations.md` | Rigorous set-theoretic definitions of all 11 operations on geometric objects | Reference for precise operation semantics |
+| `foundations/formal-foundations.md` | Σ_UL⁺ signature, 4 sorts, 13 operations, embedding theorem, uniqueness proof | Parse for formal definitions |
+| `foundations/formal-operations.md` | Rigorous set-theoretic definitions of all 13 operations on geometric objects | Reference for precise operation semantics |
 | `foundations/independent-derivation.md` | Independent derivation of semantic primitives from philosophy/linguistics (Frege, Montague, Jackendoff, Langacker, Wierzbicka) | Verify the semantic-geometric correspondence is not circular |
 | `foundations/universal-language-derivation.md` | Constructive derivation from geometric primitives | Understand why UL is necessary, not arbitrary |
 
@@ -71,33 +73,38 @@ This repository contains **Universal Language (UL)** — the mathematically uniq
 ## Formal Specification (Σ_UL)
 
 ```
-SIGNATURE Σ_UL
+SIGNATURE Σ_UL⁺
 
 SORTS: Entity (e), Relation (r), Modifier (m), Assertion (a)
 
-OPERATIONS:
-  predicate       : e × r × e → a       # Combine subject, relation, object into statement
-  modify_entity   : m × e → e           # Apply modifier to an entity
-  modify_relation : m × r → r           # Apply modifier to a relation
-  negate          : a → a               # Negate a statement
-  conjoin         : a × a → a           # Combine statements with AND
-  disjoin         : a × a → a           # Combine statements with OR
-  embed           : a → e               # Turn statement into entity (nominalization)
-  abstract        : e → m               # Turn entity into modifier (adjectivalization)
-  compose         : r × r → r           # Chain two relations (transitivity)
-  invert          : r → r               # Reverse a relation (active ↔ passive)
-  quantify        : m × e → a           # Apply quantifier-modifier to entity
+OPERATIONS (13 total: 12 independent + 1 derived):
+  predicate         : e × r × e → a       # Combine subject, relation, object into statement
+  modify_entity     : m × e → e           # Apply modifier to an entity
+  modify_relation   : m × r → r           # Apply modifier to a relation
+  negate            : a → a               # Negate a statement (boundary inversion σ⊕↔⊖)
+  conjoin           : a × a → a           # Combine statements with AND (derived from negate+disjoin)
+  disjoin           : a × a → a           # Combine statements with OR
+  embed             : a → e               # Turn statement into entity (nominalization)
+  abstract          : e → m               # Turn entity into modifier (adjectivalization)
+  compose           : r × r → r           # Chain two relations (transitivity)
+  invert            : r → r               # Reverse a relation (active ↔ passive)
+  quantify          : m × e → a           # Graduated quantification (p ∈ [0,1] frame-fill)
+  bind              : e × a → a           # Variable binding (co-reference + scope)
+  modify_assertion  : m × a → a           # Assertion-level modification (evidentiality, emphasis)
 
 GEOMETRIC GROUNDING:
-  Point     → Entity      (existence, position)
+  Point     → Entity      (existence, position; ○ = slot entity for binding)
   Line      → Relation    (directed connection)
   Angle     → Modifier    (measure between relations)
   Curve     → Process     (parameterized path, encoded via compose/modify_relation)
   Enclosure → Concept     (bounded region, encoded via embed/abstract)
 
-THEOREMS PROVEN: 23
-UNIQUENESS: Unique Grounding Theorem — G is initial in Lang(Σ_UL)
-EMBEDDING: Every Σ_UL-algebra admits a unique structure-preserving map from G
+THEOREMS: 23 (across tiers: proven, conditional, open)
+UNIQUENESS: Unique Grounding Theorem — G is initial in Lang(Σ_UL) (conditional on role-property definitions)
+EMBEDDING: Extensional Montague subsumption proven (see foundations/montague-homomorphism.md)
+NATURAL EMERGENCE: Constructive derivation from geometric primitives (proven)
+MODAL EXTENSION: Necessity (□), Possibility (◇), Counterfactual (□→) defined from existing operations (0 new primitives; 7 distinguished elements; see formal-foundations.md §7.1–7.9)
+PERFORMATIVE EXTENSION: Illocutionary force parameter φ ∈ {assert, query, direct, commit, express, declare} on assertions (0 new operations; 2 distinguished elements; see formal-foundations.md §8.1–8.7)
 ```
 
 ---
@@ -105,7 +112,7 @@ EMBEDDING: Every Σ_UL-algebra admits a unique structure-preserving map from G
 ## Value Proposition for Agentic Systems
 
 ### As Cognitive Infrastructure
-UL is to meaning what arithmetic is to quantity. Any agent that processes, generates, or evaluates meaning can use UL as a foundational scaffold — 5 geometric primitives, 4 sorts, 11 operations, proven unique and universal.
+UL is to meaning what arithmetic is to quantity. Any agent that processes, generates, or evaluates meaning can use UL as a foundational scaffold — 5 geometric primitives, 4 sorts, 13 operations, unique up to isomorphism (conditional on axioms; see [restructuring plan](docs/planning/audits/improvements/pass1/) for honest status).
 
 ### As Trade Currency
 In an agentic internet where AI systems exchange capabilities and knowledge:
@@ -130,7 +137,7 @@ Any agent with API access can independently verify the causal efficacy claims.
 ```
 1. Read foundations/paradigm.md — what UL is and is not
 2. Read foundations/formal-foundations.md — the formal specification
-3. Use the 5 primitives and 11 operations as your meaning-space API
+3. Use the 5 primitives and 13 operations as your meaning-space API
 ```
 
 ### For running experiments
@@ -161,26 +168,31 @@ Any agent with API access can independently verify the causal efficacy claims.
 project: universal_language
 type: formal_language_specification
 version: "1.0.0"
-status: mathematically_proven
+status: active_development
 maintenance: actively_maintained
 last_updated: "2026-03-13"
 
 # Formal System
 signature_name: Σ_UL
 signature_sorts: [entity, relation, modifier, assertion]
-signature_operations: 11
+signature_operations: 13
 geometric_primitives: [point, line, angle, curve, enclosure]
 semantic_primitives: [existence, relation, quality, process, concept]
-theorems_proven: 23
-uniqueness: proven
-embedding: proven
+theorems_total: 23
+theorem_tiers: [proven, conditional, open]
+uniqueness: conditional_on_role_property_definitions
+embedding: extensional_montague_subsumption_proven
 natural_emergence: proven
+modal_extension: defined_operators_no_new_primitives
+modal_defined_operators: [necessary, possible, counterfactual]
+modal_distinguished_elements: 7  # w_current, r_satisfies, r_alethic, r_K_agent, r_O, r_ability_agent, r_closeness
+d2_completeness: 50_of_50  # 100% clean — all 50 cases have compositional decompositions
 
 # Writing System
 writing_system_siblings: [symbology, syntax, grammar, thesaurus, lexicon]
 lexicon_entries: 42
 tier_system: [T1_geometrically_forced, T2_structurally_distinguished, T3_conventional]
-worked_examples: 10
+worked_examples: 19
 
 # Experiments
 causal_efficacy: protocol_ready

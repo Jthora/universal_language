@@ -75,7 +75,7 @@ Key design constraint: the WASM module returns **geometry** (PositionedGlyph) an
 | Document | Content |
 |----------|---------|
 | [game-crate.md](game-crate.md) | `ul-game` crate structure, Cargo.toml, module layout |
-| [composition-rules.md](composition-rules.md) | Rule engine: 5 primitives × 4 sorts × 11 operations |
+| [composition-rules.md](composition-rules.md) | Rule engine: 5 primitives × 4 sorts × 13 operations |
 | [evaluation-api.md](evaluation-api.md) | Scoring engine, graduated failure, partial credit |
 | [animation-bindings.md](animation-bindings.md) | Keyframe generation for Phaser tweens |
 | [integration-guide.md](integration-guide.md) | Phaser 3 boot sequence, data flow, save/load |
@@ -121,7 +121,7 @@ The game's mechanics emerge from UL's Σ_UL algebraic signature:
 |------------|---------------|
 | 5 Primitives (Point, Line, Angle, Curve, Enclosure) | The 5 building blocks Jane learns to compose |
 | 4 Sorts (Entity, Relation, Modifier, Assertion) | Structural constraints on valid compositions |
-| 11 Operations (predicate, embed, compose, ...) | What composition rules test for |
+| 13 Operations (predicate, embed, compose, ...) | What composition rules test for |
 | 3 Tiers (Forced, Distinguished, Conventional) | Difficulty progression |
 | Pattern matching (backtracking subgraph search) | How rules evaluate player compositions |
 | Graduated scoring (Exact/Close/Partial/Unrelated) | Player feedback granularity |

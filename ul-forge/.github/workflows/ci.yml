@@ -34,7 +34,7 @@ jobs:
         run: cargo clippy --workspace --all-targets -- -D warnings
 
       - name: Build
-        run: cargo build -p ul-core -p ul-cli -p ul-api -p ul-game
+        run: cargo build -p ul-core -p ul-cli -p ul-api -p ul-game -p ul-wasm
 
       - name: Test
         run: cargo test -p ul-core -p ul-cli -p ul-api
@@ -61,7 +61,7 @@ jobs:
         run: curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
 
       - name: Build WASM
-        run: wasm-pack build crates/ul-game --target web --out-dir ../../web/wasm-pkg --out-name ul_wasm
+        run: wasm-pack build crates/ul-wasm --target web --out-dir ../../web/wasm-pkg
 
   web:
     name: Web Editor
@@ -87,7 +87,7 @@ jobs:
         run: curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
 
       - name: Build WASM
-        run: wasm-pack build crates/ul-game --target web --out-dir ../../web/wasm-pkg --out-name ul_wasm
+        run: wasm-pack build crates/ul-wasm --target web --out-dir ../../web/wasm-pkg
 
       - name: Install
         working-directory: ul-forge/web

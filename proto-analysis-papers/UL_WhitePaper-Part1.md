@@ -1,5 +1,7 @@
 # The Universal Language
 
+> **⚠ HISTORICAL DOCUMENT:** This is a proto-analysis copy of the original whitepaper (pre-March 2026). The formal framework has since been restructured around Σ_UL (4 sorts, 11 operations, universal algebra). See `foundations/formal-foundations.md` for the current specification.
+
 ## A Mathematical Proof of a Geometrically Grounded System for Universal Communication
 
 Jordan Traña

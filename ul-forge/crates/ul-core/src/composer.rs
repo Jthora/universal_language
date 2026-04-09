@@ -1,4 +1,4 @@
-//! Algebraic composer: executable implementations of the 11 Σ_UL operations.
+//! Algebraic composer: executable implementations of the 13 Σ_UL operations.
 //!
 //! Each operation takes GIR input(s) and produces a new GIR with the operation applied.
 //! This transforms UL from a scoring engine into a composition engine — agents and
@@ -428,6 +428,88 @@ pub fn quantify(quantifier: &Gir, entity: &Gir) -> UlResult<Gir> {
     Ok(Gir::new(frame_id, nodes, edges))
 }
 
+// ── Operation 12: bind(e, a) → a ──
+
+/// Bind a variable entity to an assertion, establishing co-reference scope.
+///
+/// The entity `binder` becomes a VariableSlot that the assertion `body` can
+/// reference via Binds edges. The result is an assertion-level GIR whose
+/// binding_scope records the bound variable.
+pub fn bind(binder: &Gir, body: &Gir) -> UlResult<Gir> {
+    validate_root_sort(binder, Sort::Entity, "bind binder")?;
+    validate_root_sort(body, Sort::Assertion, "bind body")?;
+
+    let mut gen = IdGen::new("bind");
+    let frame_id = gen.next();
+    let mut frame = Node::enclosure(&frame_id, EnclosureShape::Circle);
+    frame.sort = Sort::Assertion;
+    frame.label = Some("bound".to_string());
+
+    // Create a VariableSlot node that represents the bound variable
+    let slot_id = gen.next();
+    let var_id = binder
+        .nodes
+        .first()
+        .and_then(|n| n.label.clone())
+        .unwrap_or_else(|| "x".to_string());
+    let slot = Node::variable_slot(&slot_id, &var_id);
+
+    let b_nodes = remap_nodes(&body.nodes, "b");
+    let b_edges = remap_edges(&body.edges, "b");
+    let b_root = remap_id(&body.root, "b");
+
+    let mut nodes = vec![frame, slot];
+    nodes.extend(b_nodes);
+
+    let mut edges = vec![
+        Edge::contains(&frame_id, &slot_id),
+        Edge::contains(&frame_id, &b_root),
+        Edge::binds(&slot_id, &b_root),
+    ];
+    edges.extend(b_edges);
+
+    let mut result = Gir::new(frame_id, nodes, edges);
+    result.binding_scope = Some(vec![var_id]);
+    Ok(result)
+}
+
+// ── Operation 13: modify_assertion(m, a) → a ──
+
+/// Apply an assertion-level modifier (evidentiality, emphasis, hedging) to an assertion.
+///
+/// The modifier's geometric properties determine the kind of assertion
+/// modification; the result is a wrapped assertion with the modifier applied.
+pub fn modify_assertion(modifier: &Gir, assertion: &Gir) -> UlResult<Gir> {
+    validate_root_sort(modifier, Sort::Modifier, "modify_assertion modifier")?;
+    validate_root_sort(assertion, Sort::Assertion, "modify_assertion body")?;
+
+    let mut gen = IdGen::new("ma");
+    let frame_id = gen.next();
+    let mut frame = Node::enclosure(&frame_id, EnclosureShape::Circle);
+    frame.sort = Sort::Assertion;
+    frame.label = Some("modified_assertion".to_string());
+
+    let m_nodes = remap_nodes(&modifier.nodes, "m");
+    let a_nodes = remap_nodes(&assertion.nodes, "a");
+    let m_edges = remap_edges(&modifier.edges, "m");
+    let a_edges = remap_edges(&assertion.edges, "a");
+    let m_root = remap_id(&modifier.root, "m");
+    let a_root = remap_id(&assertion.root, "a");
+
+    let mut nodes = vec![frame];
+    nodes.extend(m_nodes);
+    nodes.extend(a_nodes);
+
+    let mut edges = vec![
+        Edge::contains(&frame_id, &a_root),
+        Edge::modified_by(&a_root, &m_root),
+    ];
+    edges.extend(m_edges);
+    edges.extend(a_edges);
+
+    Ok(Gir::new(frame_id, nodes, edges))
+}
+
 // ── Decompose: reverse-engineer operations from a GIR ──
 
 /// Detected operation with the nodes involved.
@@ -606,6 +688,41 @@ pub fn detect_operations(gir: &Gir) -> Vec<DetectedOperation> {
                 operation: "quantify",
                 node_ids: vec![node.id.clone()],
             });
+        }
+    }
+
+    // Detect bind: assertion containing a VariableSlot with a Binds edge
+    for node in &gir.nodes {
+        if node.sort == Sort::Assertion
+            && node.node_type == NodeType::Enclosure
+            && node.label.as_deref() == Some("bound")
+        {
+            let has_binding = gir.edges.iter().any(|e| {
+                e.edge_type == EdgeType::Binds
+                    && node_map
+                        .get(e.source.as_str())
+                        .is_some_and(|n| n.node_type == NodeType::VariableSlot)
+            });
+            if has_binding {
+                ops.push(DetectedOperation {
+                    operation: "bind",
+                    node_ids: vec![node.id.clone()],
+                });
+            }
+        }
+    }
+
+    // Detect modify_assertion: assertion modified by a modifier (assertion-level)
+    for edge in &gir.edges {
+        if edge.edge_type == EdgeType::ModifiedBy {
+            if let Some(source) = node_map.get(edge.source.as_str()) {
+                if source.sort == Sort::Assertion {
+                    ops.push(DetectedOperation {
+                        operation: "modify_assertion",
+                        node_ids: vec![edge.source.clone(), edge.target.clone()],
+                    });
+                }
+            }
         }
     }
 
@@ -827,5 +944,66 @@ mod tests {
         let gir = modify_entity(&modifier_gir("m"), &entity_gir("e")).unwrap();
         let ops = detect_operations(&gir);
         assert!(ops.iter().any(|o| o.operation == "modify_entity"));
+    }
+
+    #[test]
+    fn bind_produces_assertion_with_variable_slot() {
+        let result = bind(&entity_gir("x"), &assertion_gir("a")).unwrap();
+        let root = result.node(&result.root).unwrap();
+        assert_eq!(root.sort, Sort::Assertion);
+        assert_eq!(root.label.as_deref(), Some("bound"));
+        // Should have a VariableSlot node
+        assert!(result
+            .nodes
+            .iter()
+            .any(|n| n.node_type == NodeType::VariableSlot));
+        // Should have a Binds edge
+        assert!(result
+            .edges
+            .iter()
+            .any(|e| e.edge_type == EdgeType::Binds));
+        // Should have binding_scope set
+        assert!(result.binding_scope.is_some());
+    }
+
+    #[test]
+    fn bind_rejects_wrong_sorts() {
+        assert!(bind(&relation_gir("r"), &assertion_gir("a")).is_err());
+        assert!(bind(&entity_gir("e"), &entity_gir("e2")).is_err());
+    }
+
+    #[test]
+    fn modify_assertion_produces_assertion() {
+        let result =
+            modify_assertion(&modifier_gir("m"), &assertion_gir("a")).unwrap();
+        let root = result.node(&result.root).unwrap();
+        assert_eq!(root.sort, Sort::Assertion);
+        assert_eq!(root.label.as_deref(), Some("modified_assertion"));
+        // Should have a modified_by edge from inner assertion to modifier
+        assert!(result
+            .edges
+            .iter()
+            .any(|e| e.edge_type == EdgeType::ModifiedBy));
+    }
+
+    #[test]
+    fn modify_assertion_rejects_wrong_sorts() {
+        assert!(modify_assertion(&entity_gir("e"), &assertion_gir("a")).is_err());
+        assert!(modify_assertion(&modifier_gir("m"), &entity_gir("e")).is_err());
+    }
+
+    #[test]
+    fn detect_operations_finds_bind() {
+        let gir = bind(&entity_gir("x"), &assertion_gir("a")).unwrap();
+        let ops = detect_operations(&gir);
+        assert!(ops.iter().any(|o| o.operation == "bind"));
+    }
+
+    #[test]
+    fn detect_operations_finds_modify_assertion() {
+        let gir =
+            modify_assertion(&modifier_gir("m"), &assertion_gir("a")).unwrap();
+        let ops = detect_operations(&gir);
+        assert!(ops.iter().any(|o| o.operation == "modify_assertion"));
     }
 }

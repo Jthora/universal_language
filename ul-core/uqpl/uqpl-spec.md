@@ -15,7 +15,7 @@ This specification builds on what is **proven** and is explicit about what is **
 | Claim | Status | Source |
 |-------|--------|--------|
 | 5 geometric primitives generate all meaning structures | **Proven** (Unique Grounding Theorem) | formal-foundations.md |
-| Σ_UL has 4 sorts, 11 operations | **Proven** (algebraic specification) | formal-foundations.md |
+| Σ_UL⁺ has 4 sorts, 13 operations | **Proven** (algebraic specification) | formal-foundations.md |
 | ℕ, ℤ, ℚ constructible as Σ_UL terms | **Proven** | numbers-and-computability.md |
 | All 4 arithmetic operations have Σ_UL realizations | **Proven** | numbers-and-computability.md |
 | Robinson's Q axioms verified → Gödel incompleteness holds | **Proven** | numbers-and-computability.md |
@@ -26,18 +26,24 @@ This specification builds on what is **proven** and is explicit about what is **
 
 UQPL is specified here as a **language definition** — the type system, operations, and semantics. Whether these operations are sufficient for universal computation is a separate mathematical question (the Turing-completeness gap). This spec defines the language regardless.
 
-> **⚠ KNOWN ISSUE — Operation Signature Alignment (March 2026):**  
-> UQPL's 11 operations do not exactly match the 11 Σ_UL operations from `formal-foundations.md`. Specifically:
-> - UQPL uses `exist` (generator) and `relate` (constructor) which are not Σ_UL operations
-> - UQPL's `qualify` (r × r → m) has no direct Σ_UL counterpart (Σ_UL has `modify_relation : m × r → r`)
-> - UQPL's `abstract` (m → m) differs from Σ_UL's `abstract : e → m`
-> - Σ_UL's `predicate` (e × r × e → a), `modify_entity` (m × e → e), `embed` (a → e), and `invert` (r → r) are missing from UQPL's primitives (some appear as derived operations)
+> **⚠ KNOWN ISSUE — Operation Signature Alignment (resolved April 2026):**  
+> UQPL's 11 operations do not exactly match the 13 Σ_UL⁺ operations from `formal-foundations.md`. A full alignment analysis is in `D3-ul-uqpl-analysis.md`. Summary:
+> - **3 exact matches:** `compose`, `negate`, `conjoin`
+> - **3 approximate matches:** `abstract` (different signature), `apply`/`quantify` (different mechanism), `quantify` (higher-order vs first-order)
+> - **5 UQPL operations with no Σ_UL counterpart:** `exist` (generator), `relate` (constructor), `qualify` (r×r→m), `transform` (process application), `bound` (set-based assertion)
+> - **4 Σ_UL operations missing from UQPL primitives:** `predicate`, `modify_entity`, `modify_relation`, `embed` (plus `bind` and `modify_assertion` added in Pass 1.2)
 >
-> **Sort names are now aligned** (Entity, Relation, Modifier, Assertion). Operation alignment is a separate research task — it requires deciding whether UQPL's operations are a valid *alternative basis* for Σ_UL or whether they should be brought into exact correspondence.
+> **Conclusion:** UQPL is a programming language inspired by UL's geometric foundations, not a strict Σ_UL-algebra. The relationship is analogous to group theory vs GAP, or relational algebra vs SQL. The recommended alignment path is to include all 13 Σ_UL operations as UQPL's core, then add programming-specific operations (`exist`, `relate`, etc.) as generators and extensions. See `D3-ul-uqpl-analysis.md` §4.2 for options.
+>
+> **Sort names are aligned** (Entity, Relation, Modifier, Assertion).
 
 ---
 
 ## 1. CORE DESIGN
+
+### 1.0 Relationship to UL (Σ_UL)
+
+UQPL is a **programming language** built on UL's geometric foundations. It is NOT a strict Σ_UL-algebra — it shares UL's 4 sorts and 3 core operations (compose, negate, conjoin) but implements a different operation set optimized for computation. The divergence is normal and expected: a programming language requires generators (to create values), constructors (to build structures), and an evaluation model (to execute programs) that a pure algebraic specification does not provide. See `D3-ul-uqpl-analysis.md` for the full alignment analysis.
 
 ### 1.1 What UQPL Computes
 
@@ -137,7 +143,7 @@ TYPING RULES:
 
 ## 3. OPERATIONS (Instruction Set)
 
-### 3.1 The 11 Σ_UL Operations as UQPL Instructions
+### 3.1 The 13 Σ_UL Operations as UQPL Instructions
 
 Each Σ_UL operation becomes a UQPL instruction with a precise computational semantics:
 
@@ -154,6 +160,10 @@ Each Σ_UL operation becomes a UQPL instruction with a precise computational sem
 | 9 | `negate` | `Assertion → Assertion` | Topological complement | **NOT** — logical negation |
 | 10 | `conjoin` | `Assertion × Assertion → Assertion` | Region intersection | **AND** — logical conjunction |
 | 11 | `quantify` | `(Entity → Assertion) → Assertion` | Sweep over all points | **FORALL** — universal quantification |
+| 12 | `bind` | `Entity × Assertion → Assertion` | Mark variable slot + co-references | **BIND** — variable binding (co-reference + scope) |
+| 13 | `modify_assertion` | `Modifier × Assertion → Assertion` | Decorate frame boundary | **QUALIFY_ASSERTION** — evidentiality, emphasis, hedge |
+
+> **Note:** UQPL v0.1 natively implements operations 1–11. Operations 12–13 were added to Σ_UL in Pass 1.2 and are not yet natively implemented in UQPL — they can be approximated using existing operations but lack dedicated instructions. A future UQPL v0.2 should add `bind` and `modify_assertion` as first-class instructions.
 
 ### 3.2 Derived Operations
 

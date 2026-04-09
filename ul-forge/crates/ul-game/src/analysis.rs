@@ -88,6 +88,7 @@ pub fn classify_symmetry(node: &Node) -> SymmetryGroup {
             Some(EnclosureShape::Freeform) => SymmetryGroup::None,
             None => SymmetryGroup::So2, // default enclosure is circle
         },
+        NodeType::VariableSlot => SymmetryGroup::None,
     }
 }
 
@@ -350,7 +351,7 @@ fn compare_sorted_f64(a: &[f64], b: &[f64], max_range: f64) -> f64 {
 /// Detect which Σ_UL operations are expressed in a GIR.
 pub fn detect_operations_list(gir: &Gir) -> Vec<Operation> {
     let detected = composer::detect_operations(gir);
-    detected
+    let mut ops: Vec<Operation> = detected
         .iter()
         .filter_map(|d| match d.operation {
             "predicate" => Some(Operation::Predicate),
@@ -364,9 +365,50 @@ pub fn detect_operations_list(gir: &Gir) -> Vec<Operation> {
             "compose" => Some(Operation::Compose),
             "invert" => Some(Operation::Invert),
             "quantify" => Some(Operation::Quantify),
+            "bind" => Some(Operation::Bind),
+            "modify_assertion" => Some(Operation::ModifyAssertion),
             _ => None,
         })
-        .collect()
+        .collect();
+
+    // Detect modal extension patterns
+    if gir.modal_context.is_some() {
+        // Check labels for specific modal operator types
+        for node in &gir.nodes {
+            if let Some(ref label) = node.label {
+                match label.as_str() {
+                    "□" => {
+                        if !ops.contains(&Operation::Necessity) {
+                            ops.push(Operation::Necessity);
+                        }
+                    }
+                    "◇" => {
+                        if !ops.contains(&Operation::Possibility) {
+                            ops.push(Operation::Possibility);
+                        }
+                    }
+                    "□→" => {
+                        if !ops.contains(&Operation::Counterfactual) {
+                            ops.push(Operation::Counterfactual);
+                        }
+                    }
+                    _ => {}
+                }
+            }
+        }
+    }
+
+    // Detect performative force
+    for node in &gir.nodes {
+        if node.force.is_some() {
+            if !ops.contains(&Operation::SetForce) {
+                ops.push(Operation::SetForce);
+            }
+            break;
+        }
+    }
+
+    ops
 }
 
 /// Compute the maximum containment depth.

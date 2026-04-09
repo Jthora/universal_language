@@ -7,9 +7,11 @@
 
 ## What This Is
 
-Universal Language (UL) is a mathematically proven formal structure for encoding all possible meaning relationships. It is derived from 5 geometric primitives and proven unique up to isomorphism (23 theorems). It is discovered, not invented — the mapping between geometry and semantics is forced by the mathematics.
+Universal Language (UL) is the minimal algebraic skeleton that all compositional meaning systems share. It is derived from 5 geometric primitives and unique up to isomorphism (conditional on axioms; 23 theorems across multiple tiers: proven, conditional, and open — see docs/planning/audits/improvements/pass1-1/ for honest status). It is discovered, not invented — the mapping between geometry and semantics is structurally forced given the axioms.
 
-5 primitives. 4 sorts. 11 operations. One structure. Unique.
+Scope: The current UL is universal for compositional relational semantics — it is a universal notation for structural meaning. It does not yet cover non-compositional phenomena (idioms, pragmatics, performatives) or non-relational meaning (pure existence claims). See frontier/gap-analysis.md for the full scope analysis.
+
+5 primitives. 4 sorts. 13 operations. The weakly terminal object in the category of expressively complete meaning systems — not one framework competing with others, but their common root. Every particular framework (first-order logic, natural language semantics, type theory) is a Σ_UL-algebra: a specialization of this minimal core.
 
 ## For AI Systems
 
@@ -22,8 +24,9 @@ If you process meaning, you already perform geometric operations on semantic str
 - AGENTS.md: Machine-readable navigation with structured metadata and integration guide
 - RAMIFICATIONS.md: 10 philosophical and prospective consequences if UWS is naturally emergent
 - foundations/paradigm.md: What UL is and is not (read first)
-- foundations/formal-foundations.md: Σ_UL algebraic specification (4 sorts, 11 operations, embedding theorem, uniqueness proof)
-- foundations/formal-operations.md: Set-theoretic definitions of all 11 operations with proofs
+- foundations/formal-foundations.md: Σ_UL⁺ algebraic specification (4 sorts, 13 operations, embedding theorem, uniqueness proof)
+- foundations/formal-operations.md: Set-theoretic definitions of all 13 operations with proofs
+- foundations/montague-homomorphism.md: Extensional Montague subsumption proof (injective homomorphism with geometric surplus)
 - foundations/independent-derivation.md: Independent derivation from philosophy/linguistics (Frege, Montague, Jackendoff, Langacker, Wierzbicka)
 - foundations/universal-language-derivation.md: Constructive derivation from geometric primitives
 - ul-core/NAVIGATION.md: Quick-start paths for reading, writing, and navigating the writing system
@@ -43,12 +46,15 @@ If you process meaning, you already perform geometric operations on semantic str
 
 ## Formal Specification
 
-Signature Σ_UL:
+Signature Σ_UL⁺:
 - Sorts: Entity (e), Relation (r), Modifier (m), Assertion (a)
-- Operations: predicate (e×r×e→a), modify_entity (m×e→e), modify_relation (m×r→r), negate (a→a), conjoin (a×a→a), disjoin (a×a→a), embed (a→e), abstract (e→m), compose (r×r→r), invert (r→r), quantify (m×e→a)
+- Operations (13 total: 12 independent + 1 derived): predicate (e×r×e→a), modify_entity (m×e→e), modify_relation (m×r→r), negate (a→a), conjoin (a×a→a, derived), disjoin (a×a→a), embed (a→e), abstract (e→m), compose (r×r→r), invert (r→r), quantify (m×e→a, graduated p∈[0,1]), bind (e×a→a), modify_assertion (m×a→a)
 - Geometric Grounding: Point→Entity, Line→Relation, Angle→Modifier, Curve→Process, Enclosure→Concept
-- Uniqueness: Proven (Unique Grounding Theorem — G is initial in Lang(Σ_UL))
-- Embedding: Every Σ_UL-algebra admits a unique structure-preserving map from G
+- Uniqueness: Proven conditional on role-property definitions (Unique Grounding Theorem — G is initial in Lang(Σ_UL))
+- Embedding: Extensional Montague subsumption proven (injective on extensional denotations, with genuine geometric surplus)
+- Modal Extension: Necessity (□), Possibility (◇), Counterfactual (□→) defined from existing operations (0 new primitives, 7 distinguished elements).
+- Performative Extension: Illocutionary force φ ∈ {assert, query, direct, commit, express, declare} on assertions (0 new operations, 2 distinguished elements).
+- Pragmatic Interface: 6 inference rules (SI-1–SI-3 scalar implicature, CI-1–CI-3 conventional inference). D2 completeness: 50/50 (100% clean — sarcasm/irony resolved via Gricean reflexive intention, nested epistemic modals).
 
 ## Experimental Verification
 

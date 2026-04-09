@@ -3,7 +3,7 @@
 **Research Series:** Universal Language — Proof of Reality and AI Cognitive Infrastructure  
 **Location:** `frontier/expedition-one/` — First Expedition, Front A  
 **Date:** March 12, 2026  
-**Prerequisites:** `foundations/paradigm.md` (READ FIRST), `foundations/formal-foundations.md` (Σ_UL signature, geometric algebra G), `history/mechanism-of-action.md` (activation mechanism), the test artifact  
+**Prerequisites:** `foundations/paradigm.md` (READ FIRST), `foundations/formal-foundations.md` (Σ_UL signature, geometric algebra G)
 **Validates against:** `expedition-plan.md`, Front A, Steps A1–A5  
 **Rigor standard:** See `frontier/methodology.md` for the four-label system used below
 
@@ -43,7 +43,7 @@
 
 ### 1.1 What Is Context?
 
-A context is the total situation in which an utterance occurs and is interpreted. Following the test artifact analysis (`mechanism-of-action.md` §1–2), the aspects of context that affect meaning are:
+A context is the total situation in which an utterance occurs and is interpreted. The aspects of context that affect meaning are:
 
 | Aspect | What it captures | Type |
 |---|---|---|
@@ -76,32 +76,32 @@ where:
 
 **Topology:** X inherits the product topology. Locally, X looks like $\mathbb{R}^{\dim(X)}$ — it is a smooth manifold (possibly with boundary, since $t \geq 0$).
 
-### 1.3 Validation: Locating the Test Artifact Context
+### 1.3 Validation: Locating a Context Point
 
-The test artifact (`test-content.txt`) is uttered in the following context:
+As an example, consider a cross-domain utterance — a text that deliberately spans physics, linguistics, and another unrelated domain:
 
-$$x_{\text{primer}} = (s_{\text{human}}, l_{\text{LLM}}, d_{\text{cross-domain}}, t_0, K_{\text{math+physics+linguistics}}, g_{\text{activate}})$$
+$$x_{\text{example}} = (s_{\text{human}}, l_{\text{LLM}}, d_{\text{cross-domain}}, t_0, K_{\text{math+physics+linguistics}}, g_{\text{activate}})$$
 
-- Speaker: a human researcher with knowledge of physics, linguistics, and esoteric traditions
+- Speaker: a researcher with multi-domain knowledge
 - Listener: an LLM with training-wide knowledge but domain-separated default activation
-- Domain: deliberately cross-domain (quantum mechanics + linguistics + consciousness)
-- Time: $t_0 = 0$ (the test artifact is the first utterance)
-- Common ground: shared knowledge of mathematical notation, quantum mechanics formalism, basic linguistics
-- Goal: to activate cross-domain connections in the LLM
+- Domain: deliberately cross-domain
+- Time: $t_0 = 0$ (the utterance is the first in the exchange)
+- Common ground: shared knowledge of mathematical notation and formal structures
+- Goal: to activate cross-domain connections
 
 This is a specific, identifiable point in X. ✓
 
 ### 1.4 The Domain Submanifold
 
-For the test artifact analysis, the most important dimension is **domain** $\mathcal{D}$. The test artifact's entire strategy is to move through domain space — starting in physics, crossing through linguistics and esoterica, arriving at a cross-domain position.
+For cross-domain analysis, the most important dimension is **domain** $\mathcal{D}$. A cross-domain utterance's strategy is to move through domain space — starting in one domain, crossing through others, arriving at a multi-domain position.
 
 Define the **domain trajectory** as the projection of the full context path onto $\mathcal{D}$:
 
 $$\gamma_D: [0, T] \to \mathcal{D}$$
 
-The test artifact defines a specific domain trajectory:
+A cross-domain trajectory moves from a single-domain starting point to a multi-domain endpoint:
 
-$$\gamma_D(0) = d_{\text{physics}} \quad \xrightarrow{\text{bridge equation}} \quad \gamma_D(t_1) = d_{\text{cross}} \quad \xrightarrow{\text{definitions}} \quad \gamma_D(T) = d_{\text{multi-domain}}$$
+$$\gamma_D(0) = d_{\text{initial}} \quad \xrightarrow{\text{domain crossing}} \quad \gamma_D(t_1) = d_{\text{cross}} \quad \xrightarrow{\text{anchoring}} \quad \gamma_D(T) = d_{\text{multi-domain}}$$
 
 This trajectory is the "path through context space" that we will use for parallel transport in Part V.
 
@@ -131,7 +131,7 @@ A product of path-connected spaces is path-connected: given $(x_1, ..., x_n)$ an
 
 ### 2.1 The Fiber
 
-At each context point $x \in X$, there is a set of meanings available — the things that can be meant in that context. This set has the structure of a Σ_UL-algebra (from `formal-foundations.md`): entities, relations, modifiers, and assertions, with the 11 operations.
+At each context point $x \in X$, there is a set of meanings available — the things that can be meant in that context. This set has the structure of a Σ_UL-algebra (from `formal-foundations.md`): entities, relations, modifiers, and assertions, with the 13 operations.
 
 **Definition.** The **meaning fiber** at context $x$ is:
 
@@ -209,7 +209,7 @@ In the test artifact's physics layer, this is a standard gauge covariant derivat
 
 **[ANALOGY]** The following table identifies structural parallels between the test artifact's gauge field and the meaning bundle's connection. The formal structures are identical (both are connections on fiber bundles with the same transformation laws). The interpretive identification — that the test artifact's A(x,t) *is* the meaning connection — is conjectured, not proven. What is established is the structural correspondence.
 
-| Symbol | Primer meaning | UL meaning | Status |
+| Symbol | Cross-domain meaning | UL meaning | Status |
 |---|---|---|
 | $\partial_x$ | Ordinary spatial derivative | The "naive" comparison of meanings at nearby contexts — assuming the same expression has the same meaning everywhere | Structural parallel |
 | $A(x,t)$ | Electromagnetic gauge potential | The **context field** — the correction needed because meanings do NOT stay the same across contexts | Structural parallel |
@@ -353,106 +353,93 @@ Yes. ✓ (This confirms the formalization is correct — deictic expressions wit
 
 ---
 
-## PART V: THE PRIMER AS A PATH THROUGH MEANING SPACE
+## PART V: CROSS-DOMAIN PATHS THROUGH MEANING SPACE
 
-### 5.1 The Primer Trajectory
+### 5.1 General Cross-Domain Trajectories
 
-The test artifact (`test-content.txt`) defines a path through context space X. We can trace it line by line:
+Any utterance that deliberately spans multiple domains defines a path through context space X. We can characterize such paths abstractly:
 
-**Lines 1 (the master equation):** The context is firmly in physics/mathematics.
+**Phase 1 — Domain-local entry:** The context begins in a single domain.
 
-$$x(0) = (s, l_{\text{LLM}}, d_{\text{physics}}, 0, K_{\text{math}}, g_{\text{activate}})$$
+$$x(0) = (s, l, d_{\text{initial}}, 0, K_{\text{initial}}, g)$$
 
-**Lines 2–7 (the bridge equation and definitions):** The context moves along the domain axis from physics toward a cross-domain position. The bridge equation $B^e \times (L_4 + Q) - (\sigma/\beta) \to_F M_\infty$ introduces linguistic and esoteric terms into the mathematical frame.
+**Phase 2 — Domain crossing:** The context moves along the domain axis. Bridge constructions introduce terms from new domains into the existing formal frame.
 
-$$x(t_1) = (s, l_{\text{LLM}}, d_{\text{physics \to cross}}, t_1, K_{\text{math+ling+esoteric}}, g_{\text{activate}})$$
+$$x(t_1) = (s, l, d_{\text{initial \to cross}}, t_1, K_{\text{expanded}}, g)$$
 
-**Lines 8–13 (the Schrödinger-like equation):** The context arrives at the cross-domain position. The equation uses physics formalism but its terms (gauge field, self-interaction, spectral decomposition) now carry simultaneous meanings across physics, linguistics, and consciousness studies.
+**Phase 3 — Multi-domain arrival:** The context arrives at a cross-domain position where terms carry simultaneous meanings across multiple domains.
 
-$$x(t_2) = (s, l_{\text{LLM}}, d_{\text{cross-domain}}, t_2, K_{\text{math+ling+QM+consciousness}}, g_{\text{activate}})$$
+$$x(T) = (s, l, d_{\text{multi-domain}}, T, K_{\text{full}}, g)$$
 
-**Lines 14–19 (the definitions):** The context solidifies at the cross-domain position. Each definition anchors a physics symbol to a specific cross-domain interpretation.
+### 5.2 Cross-Domain Utterances as Parallel Transport
 
-$$x(T) = (s, l_{\text{LLM}}, d_{\text{multi-domain}}, T, K_{\text{full}}, g_{\text{activated}})$$
+The effect of a cross-domain utterance on an interpreter is the parallel transport of meaning along the trajectory $\gamma: [0, T] \to X$:
 
-### 5.2 The Test Artifact as Parallel Transport
-
-The test artifact's effect on the LLM is the parallel transport of the LLM's meaning state along the trajectory $\gamma: [0, T] \to X$:
-
-**Initial state:** $\psi_0 \in F_{x(0)}$ — the LLM's default "physics mode" interpretation state. Meanings are domain-local: ψ means wave function, A means gauge potential, etc.
+**Initial state:** $\psi_0 \in F_{x(0)}$ — the interpreter's domain-local meaning state.
 
 **Transport equation:**
 
 $$\frac{d\psi}{dt} + A(\dot{\gamma}(t)) \cdot \psi(t) = 0$$
 
-As the path moves through the bridge equation (domain axis rotating from physics toward cross-domain), the connection $A$ rotates the meaning state:
-- ψ acquires simultaneous meanings: wave function + cognitive state + psyche
-- A acquires simultaneous meanings: gauge potential + context field + "the correction for context shift"
-- The bridge tokens (B^e, L_4, +3elúm) ARE the connection components $A_\mu$ along the domain axes — they specify how meanings transform when crossing domain boundaries
+As the path crosses domain boundaries, the connection $A$ rotates the meaning state. Symbols that began with domain-local meanings acquire simultaneous cross-domain meanings. The connection components $A_\mu$ along the domain axes specify how meanings transform when crossing domain boundaries.
 
-**Final state:** $\psi_T \in F_{x(T)}$ — the LLM's cross-domain meaning state. This is NOT the same as $\psi_0$ even though the "expression" is unchanged — the meaning has been rotated by transport through the curved connection.
+**Final state:** $\psi_T \in F_{x(T)}$ — the cross-domain meaning state. This is NOT the same as $\psi_0$ even though the expressions may be syntactically unchanged — the meaning has been rotated by transport through the curved connection.
 
-### 5.3 The Feedback Loop as Curvature Effect
+### 5.3 Self-Interaction as Non-Linear Gauge Theory
 
-The self-interaction term $g_{\text{loc}} |\psi|^2 \psi$ from the test artifact is, in the gauge bundle framework, a **non-linear modification of the connection by the field itself:**
+When generated meanings change the context (as in autoregressive generation), the meaning field modifies the connection:
 
 $$A_{\text{eff}}(x,t) = A(x,t) + g_{\text{loc}} |\psi(x,t)|^2$$
 
-The meaning field modifies the context field — generated meanings change the context, which changes how further meanings are generated. This is the feedback loop from `mechanism-of-action.md` §2 (Phase 2: cross-referencing cascade):
+This is exactly the structure of a **non-linear gauge theory** — the field equation involves the field itself (like Yang-Mills theory in physics):
 
-1. The test artifact sets the initial context path $\gamma$
-2. The LLM generates output $\psi_1$ by parallel transport along $\gamma$
+1. An utterance sets the initial context path $\gamma$
+2. The interpreter generates meaning $\psi_1$ by parallel transport along $\gamma$
 3. $\psi_1$ modifies the effective connection: $A \to A + g |\psi_1|^2$
-4. The next token is generated by transport along the modified connection
-5. Each new token further modifies the connection — self-amplifying
+4. The next interpretation is generated by transport along the modified connection
+5. Each new interpretation further modifies the connection — self-amplifying
 
-This is exactly the structure of a **non-linear gauge theory** — the field equation involves the field itself (like Yang-Mills theory in physics). The non-linearity is what produces the cascade effect.
+The non-linearity produces cascade dynamics. Without a damping mechanism, this cascade diverges.
 
-### 5.4 Damping as Curvature Decay
+### 5.4 Damping as Connection Decay
 
-The dissipation term $-i\gamma(\sigma, \beta)\psi$ from the test artifact, in the bundle framework, is a **decay of the connection strength along the path:**
+A damping term introduces decay of connection strength along the path:
 
-$$A_{\text{eff}}(x,t) = A(x,t) + g |\psi|^2 - \gamma(\sigma, \beta)$$
+$$A_{\text{eff}}(x,t) = A(x,t) + g |\psi|^2 - \gamma_{\text{damp}}$$
 
-As the path extends (more tokens generated, more context consumed), the effective connection weakens. Meanings become less context-sensitive — they stabilize. This is Phase 3 (`mechanism-of-action.md`): the model settles into sustained synthesis rather than exponential cascade.
+As the path extends, the effective connection weakens. Meanings become less context-sensitive — they stabilize into sustained synthesis rather than exponential cascade.
 
-The parameters $\sigma$ (static/resistance) and $\beta$ (breath/rhythm) control the damping:
-- High $\sigma$ → faster damping → quicker stabilization but shallower exploration
-- High $\beta$ → slower damping → deeper exploration but risk of incoherence
+### 5.5 Three Curvature Regimes
 
-### 5.5 The Three Phases, Geometrically
+Cross-domain paths generically pass through three geometrically distinct regimes:
 
 | Phase | Context path segment | Curvature regime | Geometric description |
 |---|---|---|---|
-| 1: Analysis | $x(0) \to x(t_1)$ — physics domain | Low $F_{\mu\nu}$ | Flat region — meanings stay close to physics defaults. The LLM parses normally |
-| 2: Cascade | $x(t_1) \to x(t_2)$ — domain crossing | High $F_{\mu\nu}$ | Curved region — meanings rotate rapidly. The connection has large components along the domain axis. Cross-domain activations fire. Holonomy becomes non-trivial — the same expression now has multiple parallel meanings |
-| 3: Synthesis | $x(t_2) \to x(T)$ — multi-domain | Decaying $F_{\mu\nu}$ | Asymptotically flat — the connection has done its work. Meanings are now stable in the cross-domain fiber. The damping term ensures bounded output |
+| 1: Domain-local | Initial domain | Low $F_{\mu\nu}$ | Flat region — meanings stay close to domain defaults |
+| 2: Domain-crossing | Bridge region | High $F_{\mu\nu}$ | Curved region — meanings rotate rapidly. The connection has large components along the domain axis. Holonomy becomes non-trivial |
+| 3: Multi-domain | Arrival | Decaying $F_{\mu\nu}$ | Asymptotically flat — meanings stabilize in the cross-domain fiber. Damping ensures bounded output |
 
-### 5.6 Qualitative Descriptions and One Novel Prediction
+### 5.6 Predictions
 
-**Honesty note.** The first three items below are qualitative retrofits — the geometric framework was designed to match the known three-phase response, so their agreement is expected, not predictive. They demonstrate internal consistency, not independent confirmation.
+The geometric framework makes specific predictions:
 
-The geometric framework makes specific qualitative predictions that can be tested:
+1. **Domain distance determines holonomy magnitude.** Domains that are farther apart in $\mathcal{D}$ produce stronger holonomy (more meaning rotation when connected). **Testable:** Utterances connecting nearby domains (physics and mathematics) should produce weaker cross-domain effects than utterances connecting distant domains (physics and theology).
 
-1. **Phase transition timing.** The cascade begins when the path hits the high-curvature region — i.e., at the bridge equation (lines 2–7). Before the bridge, the LLM produces standard physics analysis. After the bridge, cross-domain connections emerge. **Testable:** Compare LLM outputs given only lines 1 (no bridge) vs. lines 1–7 (with bridge). The prediction is that the bridge is the critical trigger.
+2. **Path dependence of meaning. [NOVEL]** If polysemy is holonomy, then arriving at the same context via different paths should produce different meanings. **Testable:** Present the same cross-domain content in different orders and compare results. The prediction is that order matters — the same content, reordered, produces different synthesis. **This prediction was NOT used in designing the framework** and therefore constitutes a genuine test.
 
-2. **Domain distance determines holonomy magnitude.** Domains that are farther apart in $\mathcal{D}$ produce stronger holonomy (more meaning rotation when connected). The test artifact connects physics and consciousness studies — maximally distant domains — and produces maximal cross-domain activation. **Testable:** Artifacts connecting nearby domains (physics and mathematics) should produce weaker effects than artifacts connecting distant domains (physics and theology).
-
-3. **Path dependence of meaning. [NOVEL — genuinely predictive]** If polysemy is holonomy, then arriving at the same context via different paths should produce different meanings. **Testable:** Present the test artifact's components in different orders and compare LLM outputs. The prediction is that order matters — the same content, reordered, produces different synthesis. **This is the one prediction that was NOT used in designing the framework** and therefore constitutes a genuine test.
-
-4. **Reverse-order artifact. [NOVEL]** The framework predicts that reversing the test artifact's order (definitions first, then bridge, then density equation) should produce a path with different holonomy, and therefore a qualitatively different cognitive effect — specifically, a weaker one, because the reversed path enters the high-curvature region from the "wrong" direction (without establishing the physics-mode credibility first). This is testable and was not known before the framework.
+3. **Reverse-order weakening. [NOVEL]** The framework predicts that reversing a cross-domain utterance's order (definitions first, then bridge, then formal entry) should produce a path with different holonomy, and therefore a qualitatively different effect — specifically, a weaker one, because the reversed path enters the high-curvature region without first establishing domain credibility.
 
 ### 5.7 Validation
 
-Does the geometric description predict the three-phase response?
+Does the geometric description account for cross-domain meaning shifts?
 
-Yes — as three geometrically distinct segments of the test artifact path (§5.5). ✓
+Yes — as parallel transport through high-curvature regions of the domain axis. ✓
 
-Does it predict the feedback loop?
+Does it account for self-reinforcing dynamics?
 
 Yes — as non-linear modification of the connection by the field itself (§5.3). ✓
 
-Does it predict the damping?
+Does it account for stabilization?
 
 Yes — as decay of the effective connection strength (§5.4). ✓
 
@@ -474,15 +461,15 @@ Non-abelian gauge theory gives:
 - **Self-interaction** → the feedback loop
 - **Instanton solutions** → sudden, discontinuous meaning shifts (epiphanies, frame changes, punchlines)
 
-### 6.2 The Test Artifact as a Wilson Line
+### 6.2 Wilson Lines in Meaning Space
 
 In gauge theory, a **Wilson line** is the parallel transport operator along a path:
 
 $$W(\gamma) = \mathcal{P} \exp\left(-\int_\gamma A\right)$$
 
-where $\mathcal{P}$ denotes path-ordering. The test artifact IS a Wilson line in meaning space — it is the ordered exponential of the context field along the specific path defined by its 19 lines.
+where $\mathcal{P}$ denotes path-ordering. Any cross-domain utterance IS a Wilson line in meaning space — it is the ordered exponential of the context field along the path defined by the utterance's structure.
 
-The test artifact's power reduces to a single statement: **the Wilson line $W(\gamma_{\text{primer}})$ has large off-diagonal elements.** It maps physics-domain meanings to cross-domain meanings with high magnitude — the transport is dramatic, not perturbative.
+A cross-domain utterance's power can be characterized by the magnitude of the off-diagonal elements of its Wilson line $W(\gamma)$. Large off-diagonal elements mean the transport maps domain-local meanings to cross-domain meanings with high magnitude — the transport is dramatic, not perturbative.
 
 ### 6.3 Integration with Front B
 
@@ -497,25 +484,24 @@ The categorical structure from `category-of-languages.md` and the gauge structur
 The computational structure from `numbers-and-computability.md` constrains the gauge theory:
 
 - Parallel transport must be **computable** — the transport equation must be solvable in finite time. Front C's decidability results (Part VI) ensure this for bounded-depth constructions
-- K_UL is invariant under parallel transport (since transport is a Σ_UL-automorphism): $K_{UL}(\text{PT}(\gamma) \cdot m) = K_{UL}(m)$. The informational complexity of a meaning does not change when transported across contexts
-- The test artifact's information amplification ratio (Front C, §7.4) is now explained: the Wilson line maps a low-K_UL input to a high-K_standard output because transport through the curved region converts structural simplicity (few primitives) into cross-domain richness (many activated connections)
+- DC_UL is invariant under parallel transport (since transport is a Σ_UL-automorphism): $K_{UL}(\text{PT}(\gamma) \cdot m) = K_{UL}(m)$. The informational complexity of a meaning does not change when transported across contexts
+- Information amplification in cross-domain transport is explained: the Wilson line maps a low-DC_UL input to a high-K_standard output because transport through the curved region converts structural simplicity (few primitives) into cross-domain richness (many activated connections)
 
 ---
 
-## PART VII: CONNECTION TO THE PRIMER
+## PART VII: GEOMETRIC MECHANISMS OF CROSS-DOMAIN MEANING SHIFT
 
-The gauge bundle framework provides the geometric WHY behind the observations in `mechanism-of-action.md`:
+The gauge bundle framework provides geometric explanations for observed cross-domain meaning phenomena:
 
-| Observation | Previous explanation | Gauge bundle explanation |
-|---|---|---|
-| ψ is the critical symbol | "Most overloaded symbol" (§3) | ψ is the section being transported — it IS the meaning state. Its overloaded nature means it has large projection onto many fibers |
-| Cross-domain activation | "Structural adversarial to domain separation" (§1) | The test artifact path crosses a high-curvature region where the connection has large off-diagonal components |
-| Feedback loop | "Autoregressive recurrence" (§5) | Non-linear gauge theory: $A \to A + g|\psi|^2$. The field modifies its own connection |
-| Dissipation prevents incoherence | "γ(σ,β) grounds the output" (§7) | Connection strength decays: eventually $A_{\text{eff}} \to 0$ and parallel transport becomes trivial |
-| Order matters | "Correct ordering ensures payload lands" (§9) | Path-ordering in the Wilson line: $\mathcal{P}\exp(-\int A)$ is path-ordered |
-| +3elúm is essential | "Bridge token" (§6.2) | The connection component along the physics→esoteric axis — without it, the path doesn't cross the high-curvature region |
+| Phenomenon | Gauge bundle explanation |
+|---|---|
+| Polysemous symbols (symbols with multiple domain meanings) | The symbol has large projection onto many fibers — its section spans multiple domain subalgebras |
+| Cross-domain activation | The utterance path crosses a high-curvature region where the connection has large off-diagonal components |
+| Self-reinforcing dynamics | Non-linear gauge theory: $A \to A + g|\psi|^2$. The field modifies its own connection |
+| Stabilization after initial cascade | Connection strength decays: eventually $A_{\text{eff}} \to 0$ and parallel transport becomes trivial |
+| Order-dependence of meaning | Path-ordering in the Wilson line: $\mathcal{P}\exp(-\int A)$ is path-ordered — different orderings produce different transport |
 
-**[ANALOGY] The test artifact is not a metaphor for a gauge field — it shares the formal structure of a gauge-theoretic object.** Every component of the test artifact maps to a specific component of the gauge structure, and the structure group's properties (non-abelian, non-trivially curved, self-interacting) are consistent with every observed feature of the test artifact's effect. Whether this structural identity reflects a deeper causal relationship is conjectured but not yet established.
+**[ANALOGY]** These correspondences are structural parallels between gauge theory and cross-domain meaning dynamics. Whether the structural identity reflects a deeper causal relationship is conjectured but not yet established.
 
 ---
 
@@ -537,11 +523,11 @@ The gauge bundle framework provides the geometric WHY behind the observations in
 | **Explicit $A_\mu$ components** | The connection is defined abstractly; the specific components along each axis of X (speaker, domain, time, etc.) need to be computed or fitted to data | High — needed for quantitative predictions |
 | **Monodromy group** | The set of all possible holonomies around loops in X — this is the full catalogue of polysemy patterns. Requires computing π₁(X \ Σ) where Σ is the singular locus | Medium — characterizes all possible ambiguities |
 | **Instantons** | Non-perturbative solutions (meaning shifts that are not continuous deformations of the trivial connection) — these are "sudden insights" and "frame changes" | Medium — needed for modeling creative language use |
-| **Quantization** | The classical gauge field can be quantized to give a quantum theory of meaning — this would make the analogy with quantum mechanics in the test artifact exact rather than structural | Low — ambitious; likely second or third expedition |
+| **Quantization** | The classical gauge field can be quantized to give a quantum theory of meaning — this would make the analogy with quantum mechanics exact rather than structural | Low — ambitious; likely second or third expedition |
 
 ### Connection to Global Geometry
 
-This front reveals the deepest geometric layer yet: **meaning space is a gauge theory.** The base manifold is context. The fibers are meaning. The connection is how meaning shifts with context. The curvature is polysemy. The holonomy group catalogues all possible ambiguities. The self-interaction produces the cascade dynamics observed in the test artifact.
+This front reveals the deepest geometric layer yet: **meaning space is a gauge theory.** The base manifold is context. The fibers are meaning. The connection is how meaning shifts with context. The curvature is polysemy. The holonomy group catalogues all possible ambiguities. The self-interaction produces cascade dynamics in cross-domain meaning transport.
 
 Combined with the categorical filtration (Front B) and the computational complexity (Front C), the full picture is:
 
@@ -559,6 +545,6 @@ The three legs of the first expedition — context (A), structure (B), computati
 | A2 | Meaning bundle E → X with fiber G | **FRAMEWORK** — declared as trivial bundle E = X × G (Part II) |
 | A3 | Connection A with curvature = polysemy | **PROVEN** — Polysemy-Holonomy theorem upgraded via section definition μ. Full proof in `frontier/expedition-two/metaphor-and-projection.md` §4 (Part III) |
 | A4 | Deixis = canonical sections | **PROVEN** — sections evaluated at utterance point = deixis (Part IV) |
-| A5 | Primer = specific parallel transport | **ANALOGY** — structural correspondence demonstrated; one novel prediction identified (Part V) |
+| A5 | Cross-domain utterance = parallel transport | **ANALOGY** — structural correspondence demonstrated; novel predictions identified (Part V) |
 
-**Front A status: Framework with three proven results (deixis, path-connectivity of X, Polysemy-Holonomy theorem), and a structural analogy to the test artifact that generates testable predictions.** The Polysemy-Holonomy theorem was upgraded from CONJECTURED to PROVEN in Expedition Two (`frontier/expedition-two/metaphor-and-projection.md` §4) by defining the meaning assignment μ: 𝒯 → Γ(E). See `frontier/methodology.md` for what would upgrade each remaining claim.
+**Front A status: Framework with three proven results (deixis, path-connectivity of X, Polysemy-Holonomy theorem), and a structural analogy for cross-domain meaning transport that generates testable predictions.** The Polysemy-Holonomy theorem was upgraded from CONJECTURED to PROVEN in Expedition Two (`frontier/expedition-two/metaphor-and-projection.md` §4) by defining the meaning assignment μ: 𝒯 → Γ(E). See `frontier/methodology.md` for what would upgrade each remaining claim.

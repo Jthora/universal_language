@@ -11,7 +11,7 @@
 ## STATUS SUMMARY
 
 ### PROVEN
-1. Op-code invariance: DC_UL^bit is exactly invariant under permutation of the 11 operation codes (§1.3, Theorem 1)
+1. Op-code invariance: DC_UL^bit is exactly invariant under permutation of the 13 operation codes (§1.3, Theorem 1)
 2. Atom-scheme invariance: change of prefix-free integer code shifts DC_UL^bit by at most δ·n*(m) bits (§1.4, Theorem 2)
 3. Atom-ordering invariance: permutation of atom enumeration shifts DC_UL^bit by at most n*(m)·⌈log₂ D(σ)⌉ bits (§1.5, Theorem 3)
 4. Base-point invariance at Similarity level and above (§1.6, Theorem 4)
@@ -38,7 +38,7 @@
 
 The structural prior $P(m) = 2^{-DC_{UL}^{\text{bit}}(m)} / Z$ from `probability-and-information.md` depends on a specific prefix-free encoding of Σ_UL constructions. That encoding involves four choices:
 
-1. **Operation codes:** which 4-bit string maps to which of the 11 operations
+1. **Operation codes:** which 4-bit string maps to which of the 13 operations
 2. **Atom encoding scheme:** which prefix-free integer code (Elias delta, Elias gamma, etc.) encodes atom indices
 3. **Atom ordering:** which vocabulary item is $a_1$, which is $a_2$, etc.
 4. **Base point and unit:** the origin O and unit U used in geometric constructions
@@ -59,7 +59,7 @@ What we can prove is **multiplicative invariance**: the encoding-dependent error
 
 An **encoding scheme** $\mathcal{E} = (C_\Omega, C_A, \pi)$ for Σ_UL constructions consists of:
 
-- **$C_\Omega$**: an injective map from the 11 Σ_UL operations to 4-bit strings (the op-code assignment)
+- **$C_\Omega$**: an injective map from the 13 Σ_UL⁺ operations to 4-bit strings (the op-code assignment)
 - **$C_A$**: a prefix-free code $C_A: \mathbb{N} \to \{0,1\}^*$ for atom indices (the atom encoding scheme)
 - **$\pi$**: a bijection $\pi: A \to \mathbb{N}$ ordering the atom set (the atom enumeration)
 
@@ -78,7 +78,7 @@ We analyze invariance one component at a time.
 
 $$DC_{UL}^{\text{bit}, \mathcal{E}_1}(m) = DC_{UL}^{\text{bit}, \mathcal{E}_2}(m) \qquad \text{for all } m \in \mathcal{M}$$
 
-**Proof.** Each of the 11 operations is encoded with a 4-bit code in both $\mathcal{E}_1$ and $\mathcal{E}_2$. Since $C_\Omega$ is an injection into 4-bit strings, every operation contributes exactly 4 bits to the encoding regardless of which 4-bit string is assigned. The total encoding length of any construction $t$ is:
+**Proof.** Each of the 13 operations is encoded with a 4-bit code in both $\mathcal{E}_1$ and $\mathcal{E}_2$. Since $C_\Omega$ is an injection into 4-bit strings, every operation contributes exactly 4 bits to the encoding regardless of which 4-bit string is assigned. The total encoding length of any construction $t$ is:
 
 $$|\text{enc}_{\mathcal{E}}(t)| = |t| + 4 \cdot n_{\text{op}}(t) + \sum_{\text{leaves } a} |C_A(\pi(a))|$$
 
@@ -198,7 +198,7 @@ This would be true if DC_UL were Kolmogorov complexity — because a universal m
 
 **Correction:** The $n^*(m)$-dependent bound of Theorem 5 is the correct statement. The bound is *per atom*, not *per meaning*.
 
-**Why multiplicative invariance suffices:** All the downstream results that depend on P(m) — simplicity bias, Erlangen monotonicity, sub-additivity, the coding theorem connection, and the test artifact compression analysis — survive under multiplicative invariance:
+**Why multiplicative invariance suffices:** All the downstream results that depend on P(m) — simplicity bias, Erlangen monotonicity, sub-additivity, the coding theorem connection, and the cross-domain compression analysis — survive under multiplicative invariance:
 
 | Result | Under additive invariance | Under multiplicative invariance | Status |
 |---|---|---|---|
@@ -206,7 +206,7 @@ This would be true if DC_UL were Kolmogorov complexity — because a universal m
 | Erlangen monotonicity | Exact | Exact (Theorem 4) | Unaffected |
 | Sub-additivity | Additive constant changes by $O(c)$ | Additive constant changes by $O(\kappa)$ | Survives |
 | Coding theorem connection | $P_{\text{struct}} \approx Q_{\text{freq}}$ up to constant | $P_{\text{struct}} \approx Q_{\text{freq}}$ up to polynomial in $n^*$ | Survives (polynomial factors are typical in AIT) |
-| Primer compression ratio ($\rho \approx 0.15$) | Ratio shifts by $2^{\pm c}$ | Ratio shifts by $2^{\pm \kappa \cdot n^*_{\text{primer}}}$ | Survives (primer's $n^* \sim 50$, giving a ratio range — but relative compression is preserved) |
+| Cross-domain compression ratio ($\rho \approx 0.15$) | Ratio shifts by $2^{\pm c}$ | Ratio shifts by $2^{\pm \kappa \cdot n^*}$ | Survives ($n^* \sim 50$, giving a ratio range — but relative compression is preserved) |
 
 The honest statement is: **P(m) is canonical up to polynomial factors in construction size, not up to constant factors.** This is weaker than Kolmogorov complexity's invariance but is the correct result for a descriptional (non-computational) complexity measure.
 

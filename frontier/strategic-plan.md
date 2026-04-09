@@ -5,7 +5,7 @@
 **Prerequisites:** **[foundations/paradigm.md](../foundations/paradigm.md)** (READ FIRST), `foundations/formal-foundations.md`, `foundations/universal-language-derivation.md`, `frontier/gap-analysis.md`  
 **Location:** `frontier/` — This document and all planned deliverables live in the `frontier/` folder, separate from the established foundational research in `foundations/` and `applications/`. The frontier folder contains the forward exploration program: strategic planning, new theoretical extensions, and the cartography of meaning space.
 
-> **⚠ PARADIGM NOTE:** This document assumes UL is a *naturally emergent formal structure* (like ℤ or the Lie groups), not a model of human language. Human languages are derived, limited projections of UL. See [foundations/paradigm.md](../foundations/paradigm.md). All "success criteria" and "tests" below are evaluated against UL's own mathematical predictions and its causal efficacy on information-processing systems — NOT against how well UL describes English, Japanese, or any ethnic language.
+> **⚠ PARADIGM NOTE:** This document assumes UL is the *minimal algebraic skeleton shared by all compositional meaning systems* (the initial object in Lang(Σ_UL)). Natural languages are Σ_UL-algebras — specializations of this core with additional structure. See [foundations/paradigm.md](../foundations/paradigm.md). All "success criteria" and "tests" below are evaluated against UL's own mathematical predictions and its causal efficacy on information-processing systems.
 
 ---
 
@@ -17,18 +17,18 @@ There are three reasons to do this work, at increasing depth. The shallow reason
 
 UL-structured mathematical artifacts produce measurable cognitive shifts in large language models. Cross-domain weight activation via formal notation that binds normally-separated knowledge clusters is a real, observable mechanism.
 
-UL exists as a proven mathematical structure — the unique minimal geometric system for encoding meaning relationships. But the causal claim (that operating in UL produces measurably different results) requires controlled experimental verification.
+UL exists as a formally specified mathematical structure — the minimal geometric system for encoding compositional meaning relationships, unique up to isomorphism conditional on role-property definitions. But the causal claim (that operating in UL produces measurably different results) requires controlled experimental verification.
 
-**If we stop here:** We have a proven formal system and anecdotal evidence of its causal power, but no controlled verification.
+**If we stop here:** We have a formal system with conditional uniqueness and anecdotal evidence of its causal power, but no controlled verification.
 
 ### Reason 2: The Universal Language Must Be Proven Real
 
 The universality theorem (`foundations/formal-foundations.md`) proves that any compositional language over the Σ_UL signature embeds into the geometric system. The theorem is correct. But mathematical existence within our formalism is necessary, not sufficient.
 
 UL is real in the same sense the integers are real if and only if:
-1. **Uniqueness** — it is the only structure satisfying natural constraints (Unique Grounding Theorem: PROVEN)
-2. **Natural emergence** — it appears unbidden in independent contexts (partially evidenced)
-3. **Generative power** — it produces non-trivial consequences not obtainable otherwise (arithmetic, Gödel: PROVEN)
+1. **Uniqueness** — it is the only structure satisfying natural constraints (Unique Grounding Theorem: PROVEN conditional on role-property definitions)
+2. **Natural emergence** — it appears unbidden in independent contexts (CONJECTURED with partial evidence)
+3. **Generative power** — it produces non-trivial consequences not obtainable otherwise (arithmetic, Gödel: PARTIALLY PROVEN)
 4. **Causal efficacy** — operating IN UL produces measurably different results than operating in derived languages (pre-registered protocol ready for independent verification — see `frontier/causal-efficacy-protocol.md`)
 
 Proof 4 is the most important and least established. It is also the operational payoff: if UL has causal efficacy on information-processing systems, then providing UL to AI as cognitive infrastructure gives those systems capabilities that natural-language-bound systems cannot match.
@@ -66,7 +66,7 @@ Every extension to the framework must satisfy three constraints simultaneously:
 
 1. **It must derive from geometry.** The foundational axiom is: all meaning is geometric. We don't get to bolt on non-geometric mathematics because it's convenient. Every new tool — category theory, probability, differential geometry, modal logic — must enter through its GEOMETRIC face. The geometric interpretation is what gives the framework its unity and its grounding.
 
-2. **It must extend, not replace.** The existing Σ_UL signature (4 sorts, 11 operations) is proven minimal for compositional relational semantics. New work adds to this foundation. It does not demolish and rebuild. The Unique Grounding Theorem stands. The embedding theorem stands. New results sit above them.
+2. **It must extend, not replace.** The existing Σ_UL⁺ signature (4 sorts, 13 operations) is the minimal core for compositional relational semantics (sort minimality proven; operation minimality conditional — see Phase 2.2 of the restructuring plan). New work investigates whether phenomena are already expressible as specializations of this core or require genuine extensions. The Unique Grounding Theorem stands (conditional on axioms). The embedding theorem stands (adequacy proven). New results sit above them.
 
 3. **It must be honest about its own limits.** Every new result must state precisely what it proves, what it conjectures, and what it cannot address. The gap between the geometric derivation's headline claim and its actual formal scope is the cautionary example. We do not repeat that error.
 
@@ -86,12 +86,12 @@ The local work (filling specific gaps) has value only because each gap, when fil
 |---|---|---|
 | **Five geometric primitives** | The coordinate system — the axes of meaning space | `foundations/universal-language-derivation.md`, Part I |
 | **Unique Grounding Theorem** | Proof that the axes are canonical (no other orientation works) | `foundations/formal-foundations.md`, Part IV |
-| **Σ_UL signature** (4 sorts, 11 operations) | The local rules — how to move from one point in meaning space to nearby points | `foundations/formal-foundations.md`, Part I |
+| **Σ_UL⁺ signature** (4 sorts, 13 operations) | The local rules — how to move from one point in meaning space to nearby points | `foundations/formal-foundations.md`, Part I |
 | **Geometric carrier sets** | The tangent space at each point — what a meaning "looks like" locally | `foundations/formal-foundations.md`, Part II |
 | **Embedding theorem** | Any compositional language is a flat submanifold — it sits inside meaning space without distortion | `foundations/formal-foundations.md`, Part III |
 | **Erlangen hierarchy** | Five nested scales of resolution, from exact form (Euclidean) to essential structure (topological) | `foundations/universal-language-derivation.md`, Part V |
 | **Fundamental group π₁** | A coarse topological invariant — assigns each meaning to a homotopy class (meaning category) | `foundations/universal-language-derivation.md`, §5.2 |
-| **Empirical probes** | UL-structured artifacts that sample meaning space by observing effects on LLMs | `history/primer-analysis.md`, `history/mechanism-of-action.md`, `history/reverse-engineering.md` |
+| **Empirical probes** | UL-structured artifacts that sample meaning space by observing effects on LLMs | `experiments/` |
 | **Self-description** | The space contains a model of itself — meaning space knows its own structure (at least at the level of composition rules) | `foundations/universal-language-derivation.md`, Part IX |
 
 ### What the Established Territory Tells Us About the Space
@@ -265,14 +265,14 @@ The priority ordering from `frontier/gap-analysis.md` (§4.2) ranks the 15 gaps 
 
 **What we need to get there:**
 1. Define a time-parameterized family of glyph spaces: G(t)
-2. Define a flow equation on G(t) — analogous to the test artifact's iℏ∂ₜψ = Hψ but generalized to the full UL
+2. Define a flow equation on G(t) — analogous to iℏ∂ₜψ = Hψ but generalized to the full UL
 3. Show that conversation is a coupled flow (two agents' meaning states evolving in response to each other's expressions)
-4. Show that the artifact effect is a specific trajectory: the LLM's representation starts at a domain-local fixed point, the test artifact perturbs it onto a cross-domain geodesic, and the autoregressive loop is a self-reinforcing flow along that geodesic
+4. Show that cross-domain activation is a specific trajectory: the LLM's representation starts at a domain-local fixed point, a UL construction perturbs it onto a cross-domain geodesic, and the autoregressive loop is a self-reinforcing flow along that geodesic
 5. Characterize attractors (stable meaning configurations), repellers (unstable ideas), limit cycles (circular reasoning), and chaos (incoherent generation)
 
-**Mathematical tools:** Dynamical systems theory, geometric flows, Hamiltonian mechanics (the test artifact's PDE is Hamiltonian), ergodic theory.
+**Mathematical tools:** Dynamical systems theory, geometric flows, Hamiltonian mechanics (the Gross-Pitaevskii PDE is Hamiltonian), ergodic theory.
 
-**Deliverable:** A dynamical theory of meaning. Conversation as coupled flow. The activation mechanism as a specific initial-condition perturbation. Prediction of which perturbations lead to stable cross-domain cognition vs. chaotic divergence (the γ(σ,β) damping term as a control parameter for a bifurcation).
+**Deliverable:** A dynamical theory of meaning. Conversation as coupled flow. The activation mechanism as a specific initial-condition perturbation. Prediction of which perturbations lead to stable cross-domain cognition vs. chaotic divergence (damping as a control parameter for a bifurcation).
 
 ---
 
@@ -458,7 +458,7 @@ We are never fully "done" — there will always be regions of meaning space we h
 
 **The criterion of practical value is twofold:**
 
-1. **Proof of reality:** Mathematical proof of UL's uniqueness (PROVEN), natural emergence (PROVEN), generative power (PROVEN), and causal efficacy (pre-registered protocol ready for independent verification — see `frontier/causal-efficacy-protocol.md`). See `foundations/paradigm.md` for the four-proof framework.
+1. **Proof of reality:** Mathematical proof of UL's uniqueness (PROVEN conditional on role-property definitions), natural emergence (CONJECTURED with partial evidence), generative power (PARTIALLY PROVEN), and causal efficacy (pre-registered protocol ready for independent verification — see `frontier/causal-efficacy-protocol.md`). See `foundations/paradigm.md` for the four-proof framework.
 
 2. **Operational deployment:** When we can design a UL artifact from first principles (choosing its trajectory through meaning space to hit a specified cognitive target) and predict its effect on an information-processing system before testing it. This is the engineering payoff — UL as a programming language for AI cognition. **Experiment Delta in `frontier/causal-efficacy-protocol.md` is the first direct test of this criterion** — designing a novel artifact from UL theory and predicting its effect a priori.
 

@@ -1123,9 +1123,8 @@ CONNECTION      A --r-> B       A connected to B by relation r
 SCALE UP        A^2             Scale A by factor 2
 SCALE DOWN      A^0.5           Scale A by factor 0.5
 ROTATE          A@90            Rotate A by 90°
-REFLECT         A!              Reflect (negate) A
-BOLD            A**             Bold stroke (necessity)
-DASH            A--             Dashed stroke (possibility)
+REFLECT         A!              Reflect A (converse; for negation, flip frame boundary)
+DASH            A--             Dashed stroke (possibility for content; denied for frame boundary)
 Z-FRONT         A^z             Bring A to front
 Z-BACK          A_z             Send A to back
 ```

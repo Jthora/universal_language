@@ -1,1 +1,0 @@
-How could information theory be used to optimize the design of educational curricula?

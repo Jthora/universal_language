@@ -3,15 +3,19 @@
 //! Grounded in the real Universal Language formal system (Σ_UL):
 //! - 5 geometric primitives: Point, Line, Angle, Curve, Enclosure
 //! - 4 sorts: Entity, Relation, Modifier, Assertion
-//! - 11 operations: predicate, modify_entity, modify_relation, negate,
-//!   conjoin, disjoin, embed, abstract, compose, invert, quantify
+//! - 13 operations: predicate, modify_entity, modify_relation, negate,
+//!   conjoin, disjoin, embed, abstract, compose, invert, quantify,
+//!   bind, modify_assertion
+//! - Modal extension: necessity (□), possibility (◇), counterfactual (□→)
+//! - Performative extension: 6 illocutionary forces (assert/query/direct/commit/express/declare)
+//! - Pragmatic extension: surface→intended inference (SI-1, SI-3, CI-3)
 
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 
 // ── Σ_UL operations ────────────────────────────────────────────
 
-/// The 11 operations of the Σ_UL algebraic signature.
+/// The 13 operations of the Σ_UL algebraic signature, plus modal/performative/pragmatic extensions.
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, Deserialize)]
 #[serde(rename_all = "snake_case")]
 pub enum Operation {
@@ -37,6 +41,29 @@ pub enum Operation {
     Invert,
     /// m × e → a: apply quantifier-modifier to entity.
     Quantify,
+    /// e × a → a: bind a variable entity to an assertion (co-reference scope).
+    Bind,
+    /// m × a → a: apply assertion-level modifier (evidentiality, emphasis, hedging).
+    ModifyAssertion,
+
+    // ── Modal extension (§7 of formal-foundations.md) ──────────
+
+    /// □a: necessarily a — world-frame quantification over accessible worlds.
+    Necessity,
+    /// ◇a: possibly a — existential quantification over accessible worlds.
+    Possibility,
+    /// □→(p, q): counterfactual — in closest p-worlds, q holds.
+    Counterfactual,
+
+    // ── Performative extension (§8 of formal-foundations.md) ───
+
+    /// Set illocutionary force on an assertion frame.
+    SetForce,
+
+    // ── Pragmatic extension (§9 of formal-foundations.md) ──────
+
+    /// Surface→intended inference (scalar, conventional, forceful).
+    InferPragmatic,
 }
 
 /// Tier classification from the UL lexicon.

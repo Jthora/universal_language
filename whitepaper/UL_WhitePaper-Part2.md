@@ -1,4 +1,6 @@
 
+> **⚠ HISTORICAL DOCUMENT:** This whitepaper represents the original formulation of UL (pre-March 2026). The formal framework has since been restructured around Σ_UL (4 sorts, 11 operations, universal algebra) rather than the first-order theory presented here. Several claims here (e.g., "terminal object" for universality, "completeness" via Henkin construction) use a different formalism than the current Σ_UL framework. Proof status claims should be cross-checked against `foundations/formal-foundations.md`. This paper is preserved for historical context and the ideas it introduces, not as the current formal specification.
+
 ### **5.1 Formal Definition of the Universal Language (UL) as a First-Order Theory**
 
 The Universal Language (UL) is formalized as a first-order theory to establish a precise and rigorous foundation for its structure and semantics. This approach leverages the tools of first-order logic—model theory, proof theory, and deductive systems—to ensure that UL is a consistent logical system capable of supporting proofs of its properties, such as consistency, completeness, and universality. By defining UL within this framework, we eliminate ambiguity and provide a robust basis for reasoning about geometric objects and their transformations.

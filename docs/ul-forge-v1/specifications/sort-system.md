@@ -17,7 +17,7 @@ From the formal specification (Σ_UL):
 
 ---
 
-## The 11 Operations and Their Sort Signatures
+## The 13 Operations and Their Sort Signatures
 
 | Operation | Signature | Description |
 |-----------|-----------|-------------|
@@ -144,6 +144,6 @@ When sort is overridden, the node's `sort` field must be explicitly set in the G
 
 ## Relationship to Formal Foundations
 
-This sort system is a direct implementation of the Σ_UL signature defined in [foundations/formal-foundations.md](../../../foundations/formal-foundations.md). The 4 sorts and 11 operations are not design choices — they are mathematically derived from the 5 geometric primitives and proven unique up to isomorphism (Theorem: Unique Grounding Theorem).
+This sort system is a direct implementation of the Σ_UL⁺ signature defined in [foundations/formal-foundations.md](../../../foundations/formal-foundations.md). The 4 sorts and 13 operations are not design choices — they are mathematically derived from the 5 geometric primitives and unique up to isomorphism conditional on role-property definitions (Theorem: Unique Grounding Theorem).
 
 UL Forge's sort enforcement is the *computational realization* of that mathematical proof. Every sort error caught by the validator is a violation of the formal system's axioms.

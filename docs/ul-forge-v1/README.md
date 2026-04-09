@@ -7,7 +7,7 @@
 
 ## What UL Forge Is
 
-UL Forge is the bridge between UL's formal theory and its visual, usable reality. The theory defines 5 geometric primitives, 4 sorts, 11 operations, and 5 spatial relationships — all proven mathematically unique and universal. UL Forge turns that theory into software: a parser that reads UL-Script, a data model that represents geometric meaning faithfully (including intersections, cycles, and cross-references), a layout engine that solves the hard placement problem, and renderers that produce output for screens, paper, and machines.
+UL Forge is the bridge between UL's formal theory and its visual, usable reality. The theory defines 5 geometric primitives, 4 sorts, 13 operations, and 5 spatial relationships — all proven mathematically unique and universal. UL Forge turns that theory into software: a parser that reads UL-Script, a data model that represents geometric meaning faithfully (including intersections, cycles, and cross-references), a layout engine that solves the hard placement problem, and renderers that produce output for screens, paper, and machines.
 
 **Three-layer architecture:**
 
@@ -100,6 +100,14 @@ UL Forge is the bridge between UL's formal theory and its visual, usable reality
 | [ai-integration/vision-interface.md](ai-integration/vision-interface.md) | Vision model interface |
 | [ai-integration/gnn-interface.md](ai-integration/gnn-interface.md) | Graph neural network interface |
 | [ai-integration/theorem-prover.md](ai-integration/theorem-prover.md) | Formal verification interface |
+
+### WASM Modules
+| Document | Purpose |
+|----------|---------|
+| [wasm/README.md](wasm/README.md) | WASM architecture, build pipeline, initialization, serialization boundary |
+| [wasm/typescript-api-reference.md](wasm/typescript-api-reference.md) | Complete TypeScript wrapper API: all 30+ functions with types, params, examples |
+| [wasm/integration-patterns.md](wasm/integration-patterns.md) | Integration recipes: React, game engines, Node.js, AI agents, Web Workers, CDN |
+| [wasm/known-issues.md](wasm/known-issues.md) | Validated behaviors, edge cases, version discrepancies, serialization gotchas |
 
 ### Appendices
 | Document | Purpose |

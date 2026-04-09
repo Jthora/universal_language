@@ -15,7 +15,7 @@ THOUGHT
   ↓
 [1. SYMBOLOGY]  — Select atomic marks for each semantic element
   ↓                (○ for universal, △ for fundamental, → for directed relation, etc.)
-[2. SYNTAX]     — Compose marks using the 11 operations
+[2. SYNTAX]     — Compose marks using the 13 operations
   ↓                (predicate, embed, modify, conjoin, negate, ...)
 [3. GRAMMAR]    — Verify the construction is geometrically justified
   ↓                (symmetry classification, Erlangen level, relationship class)
@@ -49,7 +49,7 @@ Each sibling answers exactly one question:
 | Sibling | Question | Answer type |
 |---------|----------|-------------|
 | Symbology | **What** marks exist? | Inventory (7 atomic, 100+ composed) |
-| Syntax | **How** do marks combine? | Rules (5 axioms, 11 operations, well-formedness) |
+| Syntax | **How** do marks combine? | Rules (5 axioms, 13 operations, well-formedness) |
 | Grammar | **Why** do combinations mean things? | Classification (symmetry → part of speech, Erlangen → abstraction depth) |
 | Lexicon | **Which** constructions are authoritative? | Reference table (42 entries, 3 tiers) |
 | Thesaurus | **Where** are the related meanings? | Navigation map (5 Erlangen-level synonym classes) |
@@ -137,10 +137,10 @@ Apply operations:
 
 ### Theoretical Guarantees
 
-- **Expressive completeness:** The 11 operations can encode any finite semantic relationship (formal-foundations.md §1.5)
+- **Expressive completeness:** The 13 operations can encode any finite semantic relationship (formal-foundations.md §1.5)
 - **Embedding theorem:** Any language embeds injectively into G (formal-foundations.md §3.3)
 - **Unique grounding:** The 5 primitive ↔ 5 semantic mappings are forced, not chosen (formal-foundations.md §4.5)
-- **Well-definedness:** All 11 operations are closed, total, deterministic, injective (formal-operations.md §§1.1–1.11)
+- **Well-definedness:** All 13 operations are closed, total, deterministic, injective (formal-operations.md §§1.1–1.13)
 
 ---
 
@@ -193,7 +193,7 @@ Each path is **already latent** in the formal structure — implied by the mathe
 | Hyperbolic | Infinitely many | Many-to-many mapping | Fluid, perspectival |
 | Elliptic | None | All concepts maximally related | Dense, holistic |
 
-**Why it works:** The embedding and grounding theorems are metric-independent. Changing the geometry changes what analogies are possible, not whether meaning can be expressed.
+**Why it works:** The embedding and grounding theorems are **conjectured to be** metric-independent. A detailed analysis (`docs/planning/audits/improvements/pass1-1/tier-a-foundational/tier-a-working-analysis.md` §A2) confirms the grounding theorem is geometry-independent but flags the embedding theorem's use of angle density in [0, 2π) as a Euclidean-specific step that needs verification under alternative geometries. Changing the geometry changes what analogies are possible, not whether meaning can be expressed.
 
 **Impact:** Hyperbolic UL might feel more like natural language (multiple metaphors for the same concept).
 

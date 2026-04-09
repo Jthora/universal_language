@@ -1,0 +1,454 @@
+openapi: "3.1.0"
+info:
+  title: UL Forge API
+  description: |
+    HTTP API for parsing, validating, rendering, composing, and analyzing
+    Universal Language (UL) expressions via the Geometric Intermediate
+    Representation (GIR).
+  version: "0.1.0"
+  license:
+    name: CC0-1.0
+    url: https://creativecommons.org/publicdomain/zero/1.0/
+
+servers:
+  - url: "{server}"
+    description: Custom server
+    variables:
+      server:
+        default: http://localhost:8080
+        description: API server URL (local development by default)
+
+paths:
+  /health:
+    get:
+      summary: Health check
+      operationId: health
+      responses:
+        "200":
+          description: Server status
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: ok
+                  version:
+                    type: string
+                    example: "0.1.0"
+                  uptime_seconds:
+                    type: integer
+                    example: 42
+
+  /parse:
+    post:
+      summary: Parse UL-Script to GIR
+      operationId: parse
+      requestBody:
+        required: true
+        content:
+          text/plain:
+            schema:
+              type: string
+              example: "○{ ● → ● }"
+      responses:
+        "200":
+          description: Parsed GIR
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ParseResponse"
+        "400":
+          $ref: "#/components/responses/Error"
+
+  /validate:
+    post:
+      summary: Validate GIR (4-layer pipeline)
+      operationId: validate
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ValidateRequest"
+      responses:
+        "200":
+          description: Validation result
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ValidationResponse"
+        "400":
+          $ref: "#/components/responses/Error"
+
+  /render:
+    post:
+      summary: Render GIR to SVG
+      operationId: render
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RenderRequest"
+      responses:
+        "200":
+          description: SVG output
+          content:
+            image/svg+xml:
+              schema:
+                type: string
+        "400":
+          $ref: "#/components/responses/Error"
+
+  /convert:
+    post:
+      summary: Convert between UL-Script and GIR JSON
+      operationId: convert
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ConvertRequest"
+      responses:
+        "200":
+          description: Converted output
+          content:
+            text/plain:
+              schema:
+                type: string
+        "400":
+          $ref: "#/components/responses/Error"
+
+  /compose:
+    post:
+      summary: Apply a Σ_UL operation to operands
+      operationId: compose
+      description: |
+        Accepts one of the 13 operations (predicate, modify_entity,
+        modify_relation, negate, conjoin, disjoin, embed, abstract,
+        compose, invert, quantify, bind, modify_assertion) plus
+        modal/performative/pragmatic extensions. Operands are GIR JSON
+        strings.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ComposeRequest"
+      responses:
+        "200":
+          description: Composed GIR + UL-Script
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ComposeResponse"
+        "400":
+          $ref: "#/components/responses/Error"
+
+  /analyze:
+    post:
+      summary: Analyze GIR structure
+      operationId: analyze
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AnalyzeRequest"
+      responses:
+        "200":
+          description: Analysis result
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AnalyzeResponse"
+        "400":
+          $ref: "#/components/responses/Error"
+
+  /force:
+    post:
+      summary: Set illocutionary force on assertion
+      operationId: setForce
+      description: |
+        Apply a performative force (assert, query, direct, commit,
+        express, declare) to a GIR assertion.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ForceRequest"
+      responses:
+        "200":
+          description: GIR with force applied
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ForceResponse"
+        "400":
+          $ref: "#/components/responses/Error"
+
+  /pragmatics:
+    post:
+      summary: Infer pragmatic meaning
+      operationId: inferPragmatics
+      description: |
+        Run pragmatic inference rules (SI-1 through CI-3) on a GIR
+        to detect scalar implicatures, exhaustivity inferences, and
+        conventional implicatures.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PragmaticsRequest"
+      responses:
+        "200":
+          description: Pragmatic inferences
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PragmaticsResponse"
+        "400":
+          $ref: "#/components/responses/Error"
+
+  /live:
+    get:
+      summary: WebSocket endpoint for live preview
+      operationId: livePreview
+      description: |
+        Upgrade to WebSocket. Send UL-Script text messages; receive
+        JSON messages with `{svg, errors, warnings}` for each keystroke.
+      responses:
+        "101":
+          description: Switching Protocols (WebSocket)
+
+components:
+  schemas:
+    Gir:
+      type: object
+      description: Geometric Intermediate Representation (GIR) — a graph of nodes and edges.
+      properties:
+        nodes:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              node_type:
+                type: string
+                enum: [point, line, angle, curve, enclosure]
+              sort:
+                type: string
+                enum: [entity, relation, modifier, assertion]
+              label:
+                type: string
+        edges:
+          type: array
+          items:
+            type: object
+            properties:
+              source:
+                type: string
+              target:
+                type: string
+              edge_type:
+                type: string
+                enum: [contains, modified_by, adjacent, intersects, connects, references, binds, accessible_from]
+
+    ParseResponse:
+      type: object
+      properties:
+        gir:
+          $ref: "#/components/schemas/Gir"
+        warnings:
+          type: array
+          items:
+            type: string
+
+    ValidateRequest:
+      type: object
+      required: [gir]
+      properties:
+        gir:
+          $ref: "#/components/schemas/Gir"
+        options:
+          type: object
+          properties:
+            check_geometry:
+              type: boolean
+              default: false
+
+    ValidationResponse:
+      type: object
+      properties:
+        valid:
+          type: boolean
+        errors:
+          type: array
+          items:
+            type: string
+        warnings:
+          type: array
+          items:
+            type: string
+
+    RenderRequest:
+      type: object
+      required: [gir]
+      properties:
+        gir:
+          $ref: "#/components/schemas/Gir"
+        options:
+          type: object
+          properties:
+            format:
+              type: string
+              default: svg
+            width:
+              type: number
+              default: 400
+            height:
+              type: number
+              default: 400
+            embed_gir:
+              type: boolean
+              default: true
+
+    ConvertRequest:
+      type: object
+      required: [input, input_format, output_format]
+      properties:
+        input:
+          type: string
+        input_format:
+          type: string
+          enum: [ul-script, gir-json]
+        output_format:
+          type: string
+          enum: [ul-script, gir-json]
+
+    ComposeRequest:
+      type: object
+      required: [operation, operands]
+      properties:
+        operation:
+          type: string
+          enum:
+            - predicate
+            - modify_entity
+            - modify_relation
+            - negate
+            - conjoin
+            - disjoin
+            - embed
+            - abstract
+            - compose
+            - invert
+            - quantify
+            - bind
+            - modify_assertion
+            - necessity
+            - possibility
+            - counterfactual
+            - set_force
+            - infer_pragmatic
+        operands:
+          type: array
+          items:
+            type: string
+          description: GIR JSON strings, one per operand
+
+    ComposeResponse:
+      type: object
+      properties:
+        gir:
+          $ref: "#/components/schemas/Gir"
+        ul_script:
+          type: string
+
+    AnalyzeRequest:
+      type: object
+      required: [gir]
+      properties:
+        gir:
+          $ref: "#/components/schemas/Gir"
+
+    AnalyzeResponse:
+      type: object
+      properties:
+        operations:
+          type: array
+          items:
+            type: string
+        node_count:
+          type: integer
+        edge_count:
+          type: integer
+
+    ForceRequest:
+      type: object
+      required: [gir, force]
+      properties:
+        gir:
+          $ref: "#/components/schemas/Gir"
+        force:
+          type: string
+          enum: [assert, query, direct, commit, express, declare]
+
+    ForceResponse:
+      type: object
+      properties:
+        gir:
+          $ref: "#/components/schemas/Gir"
+        ul_script:
+          type: string
+        force:
+          type: string
+
+    PragmaticsRequest:
+      type: object
+      required: [gir]
+      properties:
+        gir:
+          $ref: "#/components/schemas/Gir"
+
+    PragmaticsResponse:
+      type: object
+      properties:
+        inferences:
+          type: array
+          items:
+            type: object
+            properties:
+              rule:
+                type: string
+              surface:
+                $ref: "#/components/schemas/Gir"
+              intended:
+                $ref: "#/components/schemas/Gir"
+        count:
+          type: integer
+
+    ApiError:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+            message:
+              type: string
+
+  responses:
+    Error:
+      description: Client error
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ApiError"

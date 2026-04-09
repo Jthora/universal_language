@@ -13,6 +13,7 @@ fn minimal_gir(nodes: Vec<Node>, edges: Vec<Edge>) -> Gir {
         nodes,
         edges,
         metadata: None,
+        binding_scope: None, modal_context: None,
     }
 }
 
@@ -115,6 +116,7 @@ fn angle_arity_counts_only_lines_and_curves() {
             // (but will fail sort validation since enclosure is Entity, not Entity/Relation for modified_by source—actually Entity is allowed)
         ],
         metadata: None,
+        binding_scope: None, modal_context: None,
     };
     let result = validate(&gir, false);
     // Angle arity check: only l1 is a line pointing to a1, so arity = 1 (valid)
@@ -144,6 +146,7 @@ fn dangling_angle_not_contained_warns() {
             // a1 not connected to anything
         ],
         metadata: None,
+        binding_scope: None, modal_context: None,
     };
     let result = validate(&gir, false);
     assert!(
@@ -190,6 +193,7 @@ fn angle_with_modified_by_no_warning() {
         ],
         edges: vec![Edge::contains("root", "l1"), Edge::modified_by("l1", "a1")],
         metadata: None,
+        binding_scope: None, modal_context: None,
     };
     let result = validate(&gir, false);
     assert!(
@@ -215,6 +219,7 @@ fn contains_source_must_be_enclosure() {
         ],
         edges: vec![Edge::contains("p1", "p2")],
         metadata: None,
+        binding_scope: None, modal_context: None,
     };
     let result = validate(&gir, false);
     assert!(!result.valid);
@@ -267,6 +272,7 @@ fn deep_containment_cycle_detected() {
             Edge::contains("c", "a"),
         ],
         metadata: None,
+        binding_scope: None, modal_context: None,
     };
     let result = validate(&gir, false);
     assert!(!result.valid);
@@ -286,6 +292,7 @@ fn empty_nodes_invalid() {
         nodes: vec![],
         edges: vec![],
         metadata: None,
+        binding_scope: None, modal_context: None,
     };
     let result = validate(&gir, false);
     assert!(!result.valid);
@@ -331,6 +338,7 @@ fn adjacent_intersects_connects_references_no_sort_error() {
             Edge::references("p1", "e1"),
         ],
         metadata: None,
+        binding_scope: None, modal_context: None,
     };
     let result = validate(&gir, false);
     assert!(result.valid, "errors: {:?}", result.errors);
@@ -522,6 +530,7 @@ fn geometry_warns_multiple_containment_parents() {
             Edge::contains("b", "child"), // child has two parents
         ],
         metadata: None,
+        binding_scope: None, modal_context: None,
     };
     let result = validate(&gir, true);
     assert!(result.warnings.iter().any(|w| w.contains("multiple enclosures")));

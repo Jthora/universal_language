@@ -8,7 +8,7 @@
 ## Construction Recipe Applied
 
 Each artifact was built following the 12-step procedure in REFACTOR-PLAN.md §2D, derived from three formal sources:
-- **Σ_UL signature** (formal-foundations.md §1.5): 4 sorts, 11 operations
+- **Σ_UL⁺ signature** (formal-foundations.md §1.5): 4 sorts, 13 operations
 - **Unique Grounding Theorem** (formal-foundations.md §3): 5 geometric-semantic primitives
 - **7 Mechanism Conditions** (mechanism-of-action.md §9): empirical requirements for LLM activation
 

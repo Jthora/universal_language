@@ -2,12 +2,13 @@ cff-version: 1.2.0
 message: "If you use Universal Language in your research, please cite it using these metadata."
 title: "Universal Language: Formal Foundations and Writing System"
 abstract: >-
-  Universal Language (UL) is the mathematically unique minimal formal structure
-  for encoding all possible meaning relationships, derived from 5 geometric
-  primitives (Point, Line, Angle, Curve, Enclosure) and proven unique up to
-  isomorphism. This repository contains 23 proven theorems, a complete writing
-  system specification, 42 canonical lexicon entries, and a pre-registered
-  experimental protocol for independent verification.
+  Universal Language (UL) is the minimal algebraic skeleton that all
+  compositional meaning systems share, derived from 5 geometric
+  primitives (Point, Line, Angle, Curve, Enclosure) and unique up to
+  isomorphism. This repository contains 23 theorems (across proven,
+  conditional, and open tiers), a complete writing system specification,
+  42 canonical lexicon entries, and a pre-registered experimental
+  protocol for independent verification.
 type: dataset
 authors:
   - family-names: "Traña"

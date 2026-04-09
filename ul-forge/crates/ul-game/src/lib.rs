@@ -3,7 +3,7 @@
 //! Universal Language game module for ProtoFusionGirl — WASM evaluation engine.
 //!
 //! Grounded in the real UL formal system (Σ_UL): 5 geometric primitives,
-//! 4 sorts, 11 operations. No fantasy lore — pure UL writing system.
+//! 4 sorts, 13 operations. No fantasy lore — pure UL writing system.
 //!
 //! Provides 23 WASM-exported functions for game integration:
 //! - `init` — set up panic hook
@@ -337,7 +337,7 @@ pub fn validate_gir(gir_json: &str, check_geometry: bool) -> Result<JsValue, JsE
 }
 
 // ── Algebraic composer entry points ────────────────────────────
-// These expose the 11 Σ_UL operations as GIR transformations.
+// These expose the 13 Σ_UL operations as GIR transformations.
 
 /// Apply a Σ_UL operation to GIR operands.
 ///
@@ -426,6 +426,42 @@ pub fn apply_operation(operation: &str, operands_json: &str) -> Result<JsValue, 
                 }
                 ul_core::composer::quantify(&girs[0], &girs[1])
             }
+            "bind" => {
+                if girs.len() != 2 {
+                    return Err(JsError::new("bind requires 2 operands (binder, body)"));
+                }
+                ul_core::composer::bind(&girs[0], &girs[1])
+            }
+            "modify_assertion" => {
+                if girs.len() != 2 {
+                    return Err(JsError::new("modify_assertion requires 2 operands (modifier, assertion)"));
+                }
+                ul_core::composer::modify_assertion(&girs[0], &girs[1])
+            }
+            "necessity" => {
+                if girs.len() != 1 {
+                    return Err(JsError::new("necessity requires 1 operand (assertion)"));
+                }
+                let registry = ul_core::distinguished::default_registry();
+                ul_core::modal::necessity(&registry, &girs[0], "r_alethic")
+            }
+            "possibility" => {
+                if girs.len() != 1 {
+                    return Err(JsError::new("possibility requires 1 operand (assertion)"));
+                }
+                let registry = ul_core::distinguished::default_registry();
+                ul_core::modal::possibility(&registry, &girs[0], "r_alethic")
+            }
+            "counterfactual" => {
+                if girs.len() != 2 {
+                    return Err(JsError::new("counterfactual requires 2 operands (antecedent, consequent)"));
+                }
+                let registry = ul_core::distinguished::default_registry();
+                ul_core::modal::counterfactual(&registry, &girs[0], &girs[1])
+            }
+            "set_force" => {
+                return Err(JsError::new("set_force requires a force name, not GIR operands — use setForce() instead"));
+            }
             _ => return Err(JsError::new(&format!("unknown operation: {operation}"))),
         };
 
@@ -455,6 +491,12 @@ pub fn compose_gir(gir_a_json: &str, gir_b_json: &str, operation: &str) -> Resul
             "modify_entity" => ul_core::composer::modify_entity(&a, &b),
             "modify_relation" => ul_core::composer::modify_relation(&a, &b),
             "quantify" => ul_core::composer::quantify(&a, &b),
+            "bind" => ul_core::composer::bind(&a, &b),
+            "modify_assertion" => ul_core::composer::modify_assertion(&a, &b),
+            "counterfactual" => {
+                let registry = ul_core::distinguished::default_registry();
+                ul_core::modal::counterfactual(&registry, &a, &b)
+            }
             _ => return Err(JsError::new(&format!("not a binary operation or unknown: {operation}"))),
         };
 
@@ -525,6 +567,7 @@ pub fn compare_gir(gir_a_json: &str, gir_b_json: &str, level: &str) -> Result<Js
 /// Render a GIR to an SVG string.
 ///
 /// `width` and `height` define the viewBox dimensions.
+/// GIR JSON is embedded in SVG `<metadata>` for lossless round-trip extraction.
 #[wasm_bindgen(js_name = "renderSvg")]
 pub fn render_svg(gir_json: &str, width: f64, height: f64) -> Result<JsValue, JsError> {
     let gir_json = gir_json.to_owned();
@@ -534,7 +577,7 @@ pub fn render_svg(gir_json: &str, width: f64, height: f64) -> Result<JsValue, Js
             format: ul_core::renderer::OutputFormat::Svg,
             width,
             height,
-            embed_gir: false,
+            embed_gir: true,
         };
         let svg = ul_core::renderer::render(&gir, &opts).map_err(|e| JsError::new(&e.to_string()))?;
         Ok(JsValue::from_str(&svg))
@@ -543,6 +586,7 @@ pub fn render_svg(gir_json: &str, width: f64, height: f64) -> Result<JsValue, Js
 }
 
 /// Render a compact preview SVG for a GIR (fixed 64×64 viewBox).
+/// Embeds GIR JSON in metadata for lossless round-trip.
 #[wasm_bindgen(js_name = "renderGlyphPreview")]
 pub fn render_glyph_preview(gir_json: &str) -> Result<JsValue, JsError> {
     let gir_json = gir_json.to_owned();
@@ -552,7 +596,7 @@ pub fn render_glyph_preview(gir_json: &str) -> Result<JsValue, JsError> {
             format: ul_core::renderer::OutputFormat::Svg,
             width: 64.0,
             height: 64.0,
-            embed_gir: false,
+            embed_gir: true,
         };
         let svg = ul_core::renderer::render(&gir, &opts).map_err(|e| JsError::new(&e.to_string()))?;
         Ok(JsValue::from_str(&svg))
@@ -637,4 +681,58 @@ pub fn lookup_lexicon_entry(name: &str) -> Result<JsValue, JsError> {
         }
     }))
     .unwrap_or_else(|_| Err(JsError::new("internal panic in lookupLexiconEntry")))
+}
+
+// ── Performative + pragmatic extensions ────────────────────────
+// These mirror ul-wasm's exports so the web editor can access
+// all UL capabilities from a single WASM build.
+
+/// Set the performative force on an assertion GIR.
+///
+/// `force`: one of "assert", "query", "direct", "commit", "express", "declare".
+/// Returns the modified GIR JSON.
+#[wasm_bindgen]
+pub fn set_force(gir_json: &str, force: &str) -> Result<JsValue, JsError> {
+    let gir_json = gir_json.to_owned();
+    let force = force.to_owned();
+    catch_unwind(AssertUnwindSafe(move || {
+        let gir = ul_core::Gir::from_json(&gir_json).map_err(|e| JsError::new(&e.to_string()))?;
+        let perf_force = match force.as_str() {
+            "assert" => ul_core::PerformativeForce::Assert,
+            "query" => ul_core::PerformativeForce::Query,
+            "direct" => ul_core::PerformativeForce::Direct,
+            "commit" => ul_core::PerformativeForce::Commit,
+            "express" => ul_core::PerformativeForce::Express,
+            "declare" => ul_core::PerformativeForce::Declare,
+            other => return Err(JsError::new(&format!("unknown force: {other}"))),
+        };
+        let result = ul_core::performative::with_force(&gir, perf_force)
+            .map_err(|e| JsError::new(&e.to_string()))?;
+        Ok(serde_wasm_bindgen::to_value(&result)?)
+    }))
+    .unwrap_or_else(|_| Err(JsError::new("internal panic in set_force")))
+}
+
+/// Run pragmatic inference on a surface GIR.
+///
+/// Returns a JSON array of { rule, surface, intended } objects.
+#[wasm_bindgen]
+pub fn infer_pragmatics(gir_json: &str) -> Result<JsValue, JsError> {
+    let gir_json = gir_json.to_owned();
+    catch_unwind(AssertUnwindSafe(move || {
+        let gir = ul_core::Gir::from_json(&gir_json).map_err(|e| JsError::new(&e.to_string()))?;
+        let inferences = ul_core::pragmatic::infer(&gir);
+        let results: Vec<serde_json::Value> = inferences
+            .iter()
+            .map(|inf| {
+                serde_json::json!({
+                    "rule": format!("{:?}", inf.rule),
+                    "surface": serde_json::to_value(&inf.surface).unwrap_or_default(),
+                    "intended": serde_json::to_value(&inf.intended).unwrap_or_default(),
+                })
+            })
+            .collect();
+        Ok(serde_wasm_bindgen::to_value(&results)?)
+    }))
+    .unwrap_or_else(|_| Err(JsError::new("internal panic in infer_pragmatics")))
 }

@@ -13,15 +13,34 @@ import { initialize, parse, render, validate } from '@ul-forge/core';
 await initialize();
 
 // Parse UL-Script to GIR (Graph Intermediate Representation)
-const gir = parse('point(existence)');
+// UL-Script uses geometric symbols: ● (point), → (arrow), △ (angle), ~ (curve), □ (square)
+const gir = parse('●');           // single entity (point)
+const gir2 = parse('● → ●');     // predicate: entity relates to entity
+const gir3 = parse('□{ ● → ● }'); // enclosed assertion
 
 // Validate against Σ_UL constraints
-const result = validate(gir);
+const result = validate(gir2);
 console.log(result.valid); // true
 
 // Render to SVG
-const svg = render(gir, 200, 200);
+const svg = render(gir2, 200, 200);
 ```
+
+### UL-Script Syntax Quick Reference
+
+| Symbol | ASCII | Meaning | Sort |
+|--------|-------|---------|------|
+| `●` | `*` | Point (entity) | Entity |
+| `→` | `->` | Right arrow (directed relation) | Relation |
+| `←` | `<-` | Left arrow | Relation |
+| `↔` | `<->` | Bidirectional arrow | Relation |
+| `∠60` | `@60` | Angle modifier (degrees) | Modifier |
+| `~` | `~` | Curve (process) | Relation |
+| `○` | `/0` | Circle enclosure | Entity |
+| `△` | `/3` | Triangle enclosure | Entity |
+| `□` | `/4` | Square enclosure | Entity |
+| `⬠` | `/5` | Pentagon enclosure | Entity |
+| `⬡` | `/6` | Hexagon enclosure | Entity |
 
 ## What This Package Contains
 
@@ -44,7 +63,7 @@ const svg = render(gir, 200, 200);
 - `parseValidateRender(script)` — Full pipeline with validation
 
 ### Algebraic Composer (Σ_UL Operations)
-- `applyOperation(op, operands)` — Apply any of the 11 Σ_UL operations
+- `applyOperation(op, operands)` — Apply any of the 13 Σ_UL operations
 - `composeGir(a, b, op)` — Binary operation shortcut
 - `detectOperations(gir)` — Detect operations expressed in a GIR
 
@@ -74,7 +93,7 @@ package: "@ul-forge/core"
 formal_system: Σ_UL
 primitives: [point, line, angle, curve, enclosure]
 sorts: [entity, relation, modifier, assertion]
-operations: 11
+operations: 13
 theorems_proven: 23
 uniqueness: proven
 gir_schema: "@ul-forge/core/schemas/gir"

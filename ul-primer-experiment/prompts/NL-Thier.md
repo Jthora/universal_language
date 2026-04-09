@@ -1,1 +1,0 @@
-Take the concept of 'democracy' and recursively decompose it into its fundamental components at five levels — from the concrete institutional level down to the most abstract philosophical primitive. At each level, show how the components compose to produce the level above.

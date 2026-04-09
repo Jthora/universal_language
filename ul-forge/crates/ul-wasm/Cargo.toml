@@ -10,6 +10,7 @@ crate-type = ["cdylib", "rlib"]
 
 [dependencies]
 ul-core = { path = "../ul-core" }
+ul-game = { path = "../ul-game" }
 wasm-bindgen = "=0.2.99"
 serde = { workspace = true }
 serde_json = { workspace = true }

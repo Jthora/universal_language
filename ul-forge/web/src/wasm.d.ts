@@ -1,5 +1,7 @@
 declare module "ul-wasm" {
-  // ── Original UL-Core pass-throughs ──
+  // ── Runtime initialization ──
+  export function init(): void;
+  export function initSync(module: { module: SyncInitInput } | SyncInitInput): InitOutput;
   export function parseUlScript(input: string): any;
   export function deparseGir(gir_json: string): any;
   export function validateGir(gir_json: string, check_geometry: boolean): any;
@@ -7,7 +9,6 @@ declare module "ul-wasm" {
   export function renderGlyphPreview(gir_json: string): any;
 
   // ── Game context ──
-  export function init(): void;
   export function createContext(config_json: string): number;
   export function evaluate(ctx_id: number, gir_json: string): any;
   export function scoreComposition(ctx_id: number, gir_json: string, target_json: string): any;
@@ -31,6 +32,16 @@ declare module "ul-wasm" {
   // ── Lexicon ──
   export function queryLexicon(query: string): any;
   export function lookupLexiconEntry(name: string): any;
+
+  // ── Extensions (modal, performative, pragmatic) ──
+  export function set_force(gir_json: string, force: string): any;
+  export function infer_pragmatics(gir_json: string): any;
+
+  // ── Equivalence ──
+  export function compareGir(gir_a_json: string, gir_b_json: string, level: string): any;
+
+  type SyncInitInput = BufferSource | WebAssembly.Module;
+  type InitOutput = any;
 
   type InitInput =
     | RequestInfo

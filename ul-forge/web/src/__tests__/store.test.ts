@@ -86,7 +86,7 @@ describe("editorStore", () => {
     useEditorStore.getState().setResult({
       gir: { nodes: [], edges: [] } as any,
       svg: "<svg></svg>",
-      validation: { valid: true, errors: [], warnings: [] },
+      validation: { valid: true, errors: [], warnings: [], layers: { schema: [], sort: [], invariant: [], geometry: [] } },
       error: null,
     });
     const state = useEditorStore.getState();

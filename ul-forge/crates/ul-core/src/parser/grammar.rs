@@ -108,10 +108,7 @@ fn parse_composition(pair: pest::iterators::Pair<Rule>) -> Result<AstComposition
 fn parse_term(pair: pest::iterators::Pair<Rule>) -> Result<AstTerm, UlError> {
     let inner = expect_inner(pair, "term content")?;
     match inner.as_rule() {
-        Rule::Mark => {
-            let mark = parse_mark(inner)?;
-            Ok(AstTerm::Mark(mark))
-        }
+        Rule::Mark => parse_mark(inner),
         Rule::Group => {
             let comp_pair = expect_inner(inner, "group composition")?;
             let comp = parse_composition(comp_pair)?;
@@ -125,26 +122,127 @@ fn parse_term(pair: pest::iterators::Pair<Rule>) -> Result<AstTerm, UlError> {
     }
 }
 
-fn parse_mark(pair: pest::iterators::Pair<Rule>) -> Result<AstMark, UlError> {
+fn parse_mark(pair: pest::iterators::Pair<Rule>) -> Result<AstTerm, UlError> {
     let mut inner = pair.into_inner();
 
-    let prim_pair = expect_next(&mut inner, "mark primitive")?;
-    let primitive = parse_primitive(prim_pair)?;
+    let first = expect_next(&mut inner, "mark content")?;
+
+    // ModalOperator branch: []{...}, <>{...}, []->{...}{...}
+    if first.as_rule() == Rule::ModalOperator {
+        let mod_inner = expect_inner(first, "modal operator type")?;
+        match mod_inner.as_rule() {
+            Rule::Necessity => {
+                let content_pair = expect_inner(mod_inner, "necessity content")?;
+                let comp_pair = expect_inner(content_pair, "content composition")?;
+                let content = parse_composition(comp_pair)?;
+                return Ok(AstTerm::ModalUnary {
+                    kind: AstModalKind::Necessity,
+                    content,
+                });
+            }
+            Rule::Possibility => {
+                let content_pair = expect_inner(mod_inner, "possibility content")?;
+                let comp_pair = expect_inner(content_pair, "content composition")?;
+                let content = parse_composition(comp_pair)?;
+                return Ok(AstTerm::ModalUnary {
+                    kind: AstModalKind::Possibility,
+                    content,
+                });
+            }
+            Rule::Counterfactual => {
+                let mut cf_inner = mod_inner.into_inner();
+                let ante_content = expect_next(&mut cf_inner, "counterfactual antecedent")?;
+                let ante_comp = expect_inner(ante_content, "antecedent composition")?;
+                let antecedent = parse_composition(ante_comp)?;
+                let cons_content = expect_next(&mut cf_inner, "counterfactual consequent")?;
+                let cons_comp = expect_inner(cons_content, "consequent composition")?;
+                let consequent = parse_composition(cons_comp)?;
+                return Ok(AstTerm::ModalCounterfactual {
+                    antecedent,
+                    consequent,
+                });
+            }
+            rule => {
+                return Err(UlError::Parse {
+                    line: 0,
+                    column: 0,
+                    message: format!("unexpected modal operator: {rule:?}"),
+                });
+            }
+        }
+    }
+
+    // ForceAnnotation branch: assert{...}, query{...}, etc.
+    if first.as_rule() == Rule::ForceAnnotation {
+        let mut fa_inner = first.into_inner();
+        let token_pair = expect_next(&mut fa_inner, "force token")?;
+        let force = match token_pair.as_str() {
+            "assert" => AstForceKind::Assert,
+            "query" => AstForceKind::Query,
+            "direct" => AstForceKind::Direct,
+            "commit" => AstForceKind::Commit,
+            "express" => AstForceKind::Express,
+            "declare" => AstForceKind::Declare,
+            other => {
+                return Err(UlError::Parse {
+                    line: 0,
+                    column: 0,
+                    message: format!("unknown force token: {other}"),
+                });
+            }
+        };
+        let content_pair = expect_next(&mut fa_inner, "force content")?;
+        let comp_pair = expect_inner(content_pair, "content composition")?;
+        let content = parse_composition(comp_pair)?;
+        return Ok(AstTerm::ForceAnnotation { force, content });
+    }
+
+    // AssertionModifier branch: ?{...}, !{...}, ~?{...}
+    if first.as_rule() == Rule::AssertionModifier {
+        let mod_inner = expect_inner(first, "assertion modifier type")?;
+        let (kind, mod_pair) = match mod_inner.as_rule() {
+            Rule::EvidentialMark => (AstAssertionModifierKind::Evidential, mod_inner),
+            Rule::EmphaticMark => (AstAssertionModifierKind::Emphatic, mod_inner),
+            Rule::HedgedMark => (AstAssertionModifierKind::Hedged, mod_inner),
+            rule => {
+                return Err(UlError::Parse {
+                    line: 0,
+                    column: 0,
+                    message: format!("unexpected assertion modifier: {rule:?}"),
+                })
+            }
+        };
+        // Content is the first inner child of the specific modifier rule
+        let content_pair = expect_inner(mod_pair, "assertion modifier content")?;
+        let comp_pair = expect_inner(content_pair, "content composition")?;
+        let content = parse_composition(comp_pair)?;
+        return Ok(AstTerm::AssertionModifier { kind, content });
+    }
+
+    // Primitive branch
+    let primitive = parse_primitive(first)?;
 
     let content = if let Some(content_pair) = inner.next() {
-        // Content = { "{" ~ Composition ~ "}" }
         let comp_pair = expect_inner(content_pair, "content composition")?;
         Some(parse_composition(comp_pair)?)
     } else {
         None
     };
 
-    Ok(AstMark { primitive, content })
+    Ok(AstTerm::Mark(AstMark { primitive, content }))
 }
 
 fn parse_primitive(pair: pest::iterators::Pair<Rule>) -> Result<AstPrimitive, UlError> {
     let inner = expect_inner(pair, "primitive type")?;
     match inner.as_rule() {
+        Rule::VariableSlot => {
+            let id_pair = expect_inner(inner, "variable slot identifier")?;
+            Ok(AstPrimitive::VariableSlot(id_pair.as_str().to_string()))
+        }
+        Rule::BoundRef => {
+            let id_pair = expect_inner(inner, "bound reference identifier")?;
+            Ok(AstPrimitive::BoundRef(id_pair.as_str().to_string()))
+        }
         Rule::Point | Rule::FilledPoint => Ok(AstPrimitive::Point),
         Rule::Enclosure => {
             let shape = expect_inner(inner, "enclosure shape")?;

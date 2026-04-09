@@ -100,11 +100,13 @@ PROPERTY:  Given statement S and point P not in S,
 
 **What this means:** Every meaning has exactly one "structural analog" — a parallel meaning that never contradicts the original. This is the basis for **analogy** in UL: parallel lines = parallel meanings. The parallel postulate guarantees that analogy is unique (not many-to-many) in Euclidean meaning-space.
 
-**Note:** Non-Euclidean extensions (hyperbolic, elliptic) modify this axiom and would produce meaning-spaces with different analogy properties. This is an open research direction.
+**⚠ Caveat — The Euclidean Assumption:** The claim that analogy is unique (exactly one structural parallel per meaning) is a consequence of adopting Euclidean geometry. Empirical evidence suggests this may be wrong for global meaning-space: a single concept like "love" admits multiple non-intersecting structural analogs from a single external domain (chemical bonding, gravitational attraction, economic exchange, symbiosis, harmonic resonance). This pattern is characteristic of **hyperbolic** geometry (infinitely many parallels), not Euclidean (exactly one). Most core UL theorems (Unique Grounding, Free Algebra, Polysemy-Holonomy) are geometry-independent and survive under non-Euclidean alternatives. The Euclidean plane should be understood as a **local simplification**, not a claim about global meaning-space geometry. See `docs/planning/audits/improvements/pass1-1/tier-a-foundational/tier-a-working-analysis.md` §A2 for the full analysis.
+
+**Note:** Non-Euclidean extensions (hyperbolic, elliptic) modify this axiom and would produce meaning-spaces with different analogy properties. This is an active research direction — not merely open, but motivated by the evidence above.
 
 ---
 
-## III. THE 11 SYNTACTIC OPERATIONS (From Σ_UL)
+## III. THE 16 SYNTACTIC OPERATIONS (From Σ_UL⁺ + Extensions)
 
 Each operation has a **type signature** (what goes in, what comes out) and a **geometric realization** (how it looks).
 
@@ -191,19 +193,24 @@ INPUT:  Assertion
 OUTPUT: Negated Assertion
 
 GEOMETRIC REALIZATION:
-  Reflect the entire sentence-frame across its vertical axis.
+  Flip the frame boundary from solid to dashed (or dashed to solid).
+  Content is unchanged — only the assertional status flips.
   
-  ORIGINAL:                      NEGATED:
-  ┌───────────────┐              ┌───────────────┐
-  │  △ ──→ ○      │    REFLECT   │      ○ ←── △  │
-  └───────────────┘     ══►      └───────────────┘
-  "fundamental acts               "fundamental does NOT
-   on universal"                   act on universal"
+  ASSERTION:                   NEGATION:
+  ┌───────────────┐              ┌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┐
+  │  △ ──→ ○      │              ╎  △ ──→ ○      ╎
+  └───────────────┘              └╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┘
+  "fundamental acts              "NOT: fundamental
+   on universal"                  acts on universal"
 ```
 
+> **Design note:** The previous definition used reflection of content through a vertical axis. This was incorrect — reflection produces the *converse* (subject-object swap), not logical *negation* (truth-value flip). The converse is derivable from `predicate` + `invert`. See `docs/planning/audits/improvements/pass1-1/tier-b-structural/P0-negation-resolution.md`.
+
 **Properties:**
-- negate(negate(a)) = a (reflection is involutory — double negation = identity) ✓
+- negate(negate(a)) = a (double boundary flip = identity) ✓
 - negate is total (every assertion can be negated) ✓
+- conjoin(a, negate(a)) = ⊥ (same content, both asserted and denied = contradiction) ✓
+- disjoin(a, negate(a)) = ⊤ (content is either asserted or denied = tautology) ✓
 
 ### 3.5 conjoin: a × a → a
 **"Combine two statements with AND."**
@@ -268,11 +275,26 @@ INPUT:  Entity
 OUTPUT: Modifier (the entity's properties as a quality)
 
 GEOMETRIC REALIZATION:
-  Extract the boundary/shape properties of the entity-glyph.
-  Produce a transformation that imposes those properties on other entities.
+  Draw the entity's OUTLINE only (no interior content), detached from
+  any spatial position. This outline is now a modifier — a shape-template 
+  that can be applied to other entities.
+
+  Step 1: Original entity       Step 2: Extract outline      Step 3: Apply as modifier
   
-  "wood" (entity: □{⬠}) → "wooden" (modifier: the quality of being structured-organic)
-  △ (fundamental entity) → △-ness (the quality of being fundamental)
+    ┌───┐                          ┌───┐                       ┌───┐
+    │ ⬠ │  "wood"           →     │   │  "wooden"        →    │ △ │  "wooden thing"
+    │   │  (entity with            └───┘  (outline only,       └───┘  (triangle entity
+    └───┘   structure)                     no fill)                    reshaped by
+                                                                      wood-outline)
+
+  RULE: abstract(e) visually = ∂(e), the boundary of the entity glyph,
+        drawn as an empty outline detached from its original position.
+        When applied via modify_entity, the outline encloses/reshapes 
+        the target entity.
+
+  "wood" (entity: □{⬠}) → "wooden" (modifier: □ outline)
+  "circle" (entity: ●) → "circular" (modifier: ○ outline)
+  △ (entity) → "△-like" (modifier: △ outline, no fill)
 ```
 
 ### 3.9 compose: r × r → r
@@ -322,6 +344,220 @@ GEOMETRIC REALIZATION:
   UNIVERSAL (∀):     • scaled to fill GS    "ALL things"
   EXISTENTIAL (∃):   • small, off-center     "SOME thing"
   NEGATIVE (¬∃):     reflected + complement   "NO thing"
+
+  GRADUATED (p ∈ [0,1]):
+  Scale the entity to fill a PROPORTION of the frame:
+    p = 1.0 → fills entire frame         "ALL" (∀)
+    p ≈ 0.7 → fills most of frame        "MOST"
+    p ≈ 0.5 → fills half of frame         "ABOUT HALF"  
+    p ≈ 0.2 → fills small area            "FEW / SOME"
+    p → 0⁺  → point-like                  "AT LEAST ONE" (∃)
+  Area(σ_p(C))/Area(F) = p — the visual fill proportion IS the quantificational force.
+```
+
+### 3.12 bind: e × a → a
+**"Bind a slot entity to its assertion, establishing co-reference and scope."**
+
+```
+INPUT:  Slot Entity (○_x), Assertion (containing ○_x)
+OUTPUT: Assertion (with all ○_x replaced by ●_x)
+
+GEOMETRIC REALIZATION:
+  Before binding:              After binding:
+  ┌─────────────────┐          ┌─────────────────┐
+  │  ○_x ──→ ●      │          │  ●_x ──→ ●      │
+  │                  │    →     │     ↑ bound     │
+  │  ○_x ──→ ●      │          │  ●_x ──→ ●      │
+  └─────────────────┘          └─────────────────┘
+
+  ○_x = hollow mark (open slot for entity x)
+  ●_x = filled mark (bound variable — all occurrences denote the same entity)
+```
+
+**Scope ordering via nesting depth:**
+```
+  ∀x. ∃y. R(x, y):
+
+  ┌─────────────────────────────────┐    bind(x) — OUTER scope (wider)
+  │   ┌─────────────────────────┐   │
+  │   │  ●_x ───R──→ ●_y       │   │    bind(y) — INNER scope (narrower)
+  │   └─────────────────────────┘   │
+  └─────────────────────────────────┘
+```
+
+**Key rules:**
+- ○_x must appear inside the assertion's frame before binding
+- After binding, all ○_x → ●_x within that frame (co-reference)
+- Nesting depth = scope ordering (outer frame = wider scope)
+- See `formal-operations.md` §1.12 and `formal-grammar.md` C12
+
+### 3.13 modify_assertion: m × a → a
+**"Apply a modifier to an assertion's frame boundary, encoding epistemic stance."**
+
+```
+INPUT:  Modifier (epistemic type), Assertion
+OUTPUT: Assertion (with decorated frame boundary)
+
+GEOMETRIC REALIZATION:
+  The modifier transforms the frame BOUNDARY (∂F), not the content (C) or sign (σ):
+
+  Default:      ┌───────────────┐     Solid — direct assertion
+                │  ● ──→ ●      │
+                └───────────────┘
+
+  Evidential:   ┌···············┐     Dotted — "apparently," "reportedly"
+                ╎  ● ──→ ●      ╎
+                └···············┘
+
+  Emphatic:     ╔═══════════════╗     Double — "definitely," "certainly"
+                ║  ● ──→ ●      ║
+                ╚═══════════════╝
+
+  Hedged:       ┌~~~~~~~~~~~~~~~┐     Wavy — "maybe," "sort of," "arguably"
+                │  ● ──→ ●      │
+                └~~~~~~~~~~~~~~~┘
+```
+
+**Distinction from negate (C4):**
+- `negate` flips σ (solid ↔ dashed) — changes TRUTH STATUS
+- `modify_assertion` decorates ∂F — changes EPISTEMIC STANCE
+- Both can co-occur: dashed + dotted = "apparently NOT p"
+
+**Key rules:**
+- The modifier applies to the frame as a whole, not to individual entities or relations
+- Content inside the frame is unchanged
+- Multiple modifications can compose (dotted + emphatic = "reportedly and certainly")
+- See `formal-operations.md` §1.13 and `formal-grammar.md` C13
+
+### 3.14 Modal Operators (Defined Patterns)
+
+> These are **defined abbreviations**, not new primitive operations. They compose existing operations into standard modal constructions. See `formal-foundations.md` §7.1–7.9 for formal definitions.
+
+#### necessary(r_R, a): Necessity □_R
+
+**"In all R-accessible worlds, a holds."**
+
+```
+DEFINED AS:  bind(w, quantify(m_∀, w, disjoin(negate(predicate(w_current, r_R, w)),
+             predicate(w, r_satisfies, embed(a)))))
+
+GEOMETRIC REALIZATION:
+  Bold-border frame wrapping content, labeled with accessibility type:
+
+  ┏━━━━━━━━━━━━━━━━━━━━━━┓
+  ┃  •₁ ──r──→ •₂        ┃   r_R label on border
+  ┗━━━━━━━━━━━━━━━━━━━━━━┛
+```
+
+#### possible(r_R, a): Possibility ◇_R
+
+**"In some R-accessible world, a holds."**
+
+```
+DEFINED AS:  negate(necessary(r_R, negate(a)))
+
+GEOMETRIC REALIZATION:
+  Dashed-border frame wrapping content, labeled with accessibility type:
+
+  ┌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┐
+  ╎  •₁ ──r──→ •₂         ╎   r_R label on border
+  └╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┘
+```
+
+#### counterfactual(a, b): Counterfactual □→
+
+**"In the closest worlds where a holds, b holds."**
+
+```
+DEFINED AS:  necessary(r_closest(a), b)
+  WHERE:     r_closest(a) = modify_relation(abstract(embed(a)), r_closeness)
+
+GEOMETRIC REALIZATION:
+  Dashed-dot-border frame. Antecedent and consequent inside, separated:
+
+  ╌·╌·╌·╌·╌·╌·╌·╌·╌·╌·╌·╌
+  ╎  IF:   [antecedent]    ╎
+  ╎  THEN: [consequent]    ╎
+  ╌·╌·╌·╌·╌·╌·╌·╌·╌·╌·╌·╌
+```
+
+#### Stacking Rule
+
+Modal operators nest: each takes assertion-in, assertion-out. Nesting depth is limited only by legibility (see OP-4, §6.5).
+
+```
+  ┏━━━━━━━━━━━━━━━━━━━━━━━━━┓     outer: necessity (r_O)
+  ┃  ┌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┐  ┃     inner: possibility (r_ability)
+  ┃  ╎  •₁ ──r──→ •₂     ╎  ┃
+  ┃  └╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┘  ┃
+  ┗━━━━━━━━━━━━━━━━━━━━━━━━━┛
+```
+
+---
+
+### 3.15 Performative Force Annotations
+
+> Force annotations set the **illocutionary force** on assertion frames — they determine whether a claim is stated, questioned, commanded, promised, expressed, or declared. Not new operations: 0 new primitives. See `formal-foundations.md` §8.1–8.7.
+
+#### Notation: `φ[force]{content}`
+
+| Force | Token | ASCII | Border Convention | Example |
+|-------|-------|-------|-------------------|---------|
+| Assert | (default) | (none) | Single solid | "Water boils at 100°C" |
+| Query | `query{...}` | `query{...}` | Single + `?` corner | "Is it raining?" |
+| Direct | `direct{...}` | `direct{...}` | Double solid | "Close the door!" |
+| Commit | `commit{...}` | `commit{...}` | Bold + `⊢` corner | "I promise to return" |
+| Express | `express{...}` | `express{...}` | Wavy | "How beautiful!" |
+| Declare | `declare{...}` | `declare{...}` | Triple + `⊨` corner | "I pronounce you married" |
+
+#### Interaction Rules
+
+1. **One force per frame:** Each assertion enclosure has at most one force annotation. Nested frames may have different forces.
+2. **Force under negation:** `negate(query{a})` negates the content, not the force. Force is preserved.
+3. **Force under conjunction:** `conjoin(query{a}, query{b})` = `query{conjoin(a, b)}` (FC2: same-force conjunction).
+4. **Embedding strips force:** `embed(query{a})` produces an entity; the force is discarded (FC4).
+5. **Default = assert:** Bare assertion frames `○{...}` are assertive by default.
+
+#### Geometric Realization
+
+```
+  assert{a}        query{a}         direct{a}
+  ┌──────────┐     ┌──────────┐?    ╔══════════╗
+  │  content  │     │  content  │     ║  content  ║
+  └──────────┘     └──────────┘     ╚══════════╝
+```
+
+### 3.16 Pragmatic Inference Notation
+
+> Pragmatic notation documents the gap between surface (literal) and intended (implicated) meaning. The inference arrow ⟹ is **meta-syntactic** — it annotates meaning relationships, not compositional content. See `formal-foundations.md` §9.1–9.6.
+
+#### Notation: `surface ⟹ intended`
+
+The inference arrow ⟹ is not a Σ_UL operation. It sits outside the object language, documenting how compositional structure triggers pragmatic inferences.
+
+#### Inference Rules
+
+| Rule | Name | Pattern | Example |
+|------|------|---------|---------|
+| SI-1 | Scalar implicature | `quantify(∠p, e)` where 0 < p < 1.0 ⟹ `negate(quantify(∠1.0, e))` | "Some students passed" ⟹ "Not all passed" |
+| SI-2 | Quantity scale | `modify_entity(∠warm, e)` ⟹ `negate(modify_entity(∠hot, e))` | "It's warm" ⟹ "It's not hot" |
+| SI-3 | Disjunction exclusivity | `disjoin(a, b)` ⟹ `negate(conjoin(a, b))` | "A or B" ⟹ "not both" |
+| CI-1 | Contrastive "but" | `conjoin_but(a, b)` ⟹ contrast(a, b) | "Poor but honest" ⟹ unexpected combination |
+| CI-2 | Appositive | `modify_assertion(appositive, a)` ⟹ presupposed content | "John, who is tall, left" ⟹ John is tall (presupposed) |
+| CI-3 | Indirect speech act | `query{possible(r_ability, a)}` ⟹ `direct{a}` | "Can you pass the salt?" ⟹ "Pass the salt!" |
+
+#### Cancellability
+
+- **Scalar/conversational (SI):** Cancellable. "Some students passed — in fact, all did."
+- **Conventional (CI):** Not cancellable. *"Poor but honest — and it's not surprising" is incoherent.
+
+#### Geometric Realization
+
+```
+  Surface                    Intended
+  ┌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┐       ╔══════════════════╗
+  ╎ query{<>{ a }}   ╎  ⟹   ║  direct{ a }      ║
+  └╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌┘       ╚══════════════════╝
 ```
 
 ---
@@ -402,7 +638,7 @@ These change the form but not the meaning:
 |---------------|--------|-------------------|
 | Translation | Move entire construction | Change tense |
 | Rotation | Turn entire construction | Change perspective/voice |
-| Reflection | Mirror entire construction | Negate |
+| Reflection | Mirror entire construction | Converse (role swap; derivable from predicate + invert) |
 
 ### Meaning-Scaling Transformations (Similarities)
 
@@ -455,7 +691,7 @@ This mirrors reading a geometric diagram — from the largest features to the sm
 | predicate | e × r × e → a | Place entities, connect by relation, enclose in frame | Entity + Relation → Assertion |
 | modify_entity | m × e → e | Transform entity glyph | Modifier + Entity → Entity |
 | modify_relation | m × r → r | Transform relation glyph | Modifier + Relation → Relation |
-| negate | a → a | Reflect sentence frame | Assertion → Assertion |
+| negate | a → a | Flip frame boundary (solid ↔ dashed) | Assertion → Assertion |
 | conjoin | a × a → a | Overlap sentence frames | Assertion² → Assertion |
 | disjoin | a × a → a | Adjoin sentence frames | Assertion² → Assertion |
 | embed | a → e | Shrink frame into enclosure | Assertion → Entity |
@@ -463,3 +699,23 @@ This mirrors reading a geometric diagram — from the largest features to the sm
 | compose | r × r → r | Concatenate directed connections | Relation² → Relation |
 | invert | r → r | Reverse direction | Relation → Relation |
 | quantify | m × e → a | Scale entity relative to GS | Modifier + Entity → Assertion |
+| bind | e × a → a | Fill slot entity ○→● within frame | Entity + Assertion → Assertion |
+| modify_assertion | m × a → a | Decorate frame boundary | Modifier + Assertion → Assertion |
+| *necessary* (defined) | r × a → a | Bold-border frame + accessibility label | Relation + Assertion → Assertion |
+| *possible* (defined) | r × a → a | Dashed-border frame + accessibility label | Relation + Assertion → Assertion |
+| *counterfactual* (defined) | a × a → a | Dashed-dot frame, antecedent + consequent | Assertion² → Assertion |
+
+#### Force Parameter Convention
+
+The **illocutionary force** φ ∈ {assert, query, direct, commit, express, declare} is a frame-boundary decoration on assertions, orthogonal to content and epistemic modification:
+
+| Force | Frame decoration | Syntactic effect |
+|-------|-----------------|-----------------|
+| assert (default) | Solid border | Unchanged from base syntax |
+| query | Gapped border (open side) | Frame has open right side |
+| direct | Arrow-out border (→) | Frame arrows point outward |
+| commit | Arrow-in border (←) | Frame arrows point inward |
+| express | Wavy border (~~~) | Frame uses wavy lines |
+| declare | Bold double border (╔══╗) | Frame uses bold double lines |
+
+See `grammar-book.md` §VI-C for ASCII diagrams. See `formal-foundations.md` §8.1–8.7 for formal specification.

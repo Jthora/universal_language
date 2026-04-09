@@ -5,7 +5,7 @@
 
 use crate::types::edge::EdgeType;
 use crate::types::gir::Gir;
-use crate::types::node::{EnclosureShape, NodeType};
+use crate::types::node::{AssertionModifierKind, EnclosureShape, NodeType, PerformativeForce};
 
 /// Deparse a GIR document to canonical UL-Script.
 pub fn deparse(gir: &Gir) -> String {
@@ -39,7 +39,14 @@ fn deparse_node(gir: &Gir, node_id: &str, out: &mut String) {
 
     // Write the primitive symbol
     match node.node_type {
-        NodeType::Point => out.push('●'),
+        NodeType::Point => {
+            out.push('●');
+            // Bound reference: ●_x
+            if let Some(ref vid) = node.variable_id {
+                out.push('_');
+                out.push_str(vid);
+            }
+        }
         NodeType::Line => {
             if let Some(dir) = &node.direction {
                 if dir[0] < 0.0 {
@@ -60,6 +67,78 @@ fn deparse_node(gir: &Gir, node_id: &str, out: &mut String) {
         }
         NodeType::Curve => out.push('~'),
         NodeType::Enclosure => {
+            // Check for assertion modifier — emit ?{...}, !{...}, ~?{...}
+            if let Some(ref mod_kind) = node.assertion_modifier {
+                let prefix = match mod_kind {
+                    AssertionModifierKind::Evidential => "?",
+                    AssertionModifierKind::Emphatic => "!",
+                    AssertionModifierKind::Hedged => "~?",
+                };
+                out.push_str(prefix);
+                let children = gir.children_of(node_id);
+                out.push('{');
+                deparse_children(gir, &children, node_id, out);
+                out.push('}');
+                return; // content already emitted
+            }
+            // Check for modal operator patterns (labeled □, ◇, □→)
+            if let Some(ref label) = node.label {
+                match label.as_str() {
+                    "□" => {
+                        out.push_str("[]");
+                        let children = non_world_children(gir, node_id);
+                        out.push('{');
+                        deparse_children(gir, &children, node_id, out);
+                        out.push('}');
+                        return;
+                    }
+                    "◇" => {
+                        out.push_str("<>");
+                        let children = non_world_children(gir, node_id);
+                        out.push('{');
+                        deparse_children(gir, &children, node_id, out);
+                        out.push('}');
+                        return;
+                    }
+                    "□→" => {
+                        out.push_str("[]->");
+                        let children = non_world_children(gir, node_id);
+                        // Split into two halves (antecedent, consequent) by connected-to-world pattern
+                        // For simplicity, emit all content in first block
+                        out.push('{');
+                        let mid = children.len() / 2;
+                        let (ante, cons) = if mid > 0 && children.len() > 1 {
+                            (&children[..mid], &children[mid..])
+                        } else {
+                            (children.as_slice(), &[] as &[&str])
+                        };
+                        deparse_children(gir, ante, node_id, out);
+                        out.push('}');
+                        out.push('{');
+                        deparse_children(gir, cons, node_id, out);
+                        out.push('}');
+                        return;
+                    }
+                    _ => {}
+                }
+            }
+            // Check for force annotation
+            if let Some(ref force) = node.force {
+                let token = match force {
+                    PerformativeForce::Assert => "assert",
+                    PerformativeForce::Query => "query",
+                    PerformativeForce::Direct => "direct",
+                    PerformativeForce::Commit => "commit",
+                    PerformativeForce::Express => "express",
+                    PerformativeForce::Declare => "declare",
+                };
+                out.push_str(token);
+                let children = gir.children_of(node_id);
+                out.push('{');
+                deparse_children(gir, &children, node_id, out);
+                out.push('}');
+                return;
+            }
             match node.shape {
                 Some(EnclosureShape::Circle) => out.push('○'),
                 Some(EnclosureShape::Triangle) => out.push('△'),
@@ -72,6 +151,14 @@ fn deparse_node(gir: &Gir, node_id: &str, out: &mut String) {
                 Some(EnclosureShape::Ellipse) => out.push('○'), // render as circle in text
                 Some(EnclosureShape::Freeform) => out.push('○'),
                 None => out.push('○'), // default to circle
+            }
+        }
+        NodeType::VariableSlot => {
+            // Variable slot: ○ with subscript variable id
+            out.push('○');
+            if let Some(ref vid) = node.variable_id {
+                out.push('_');
+                out.push_str(vid);
             }
         }
     }
@@ -211,4 +298,18 @@ fn format_number(n: f64) -> String {
     } else {
         format!("{}", n)
     }
+}
+
+/// Get children of a modal enclosure that aren't world entities (w_current, w′, w_closest).
+fn non_world_children<'a>(gir: &'a Gir, parent_id: &str) -> Vec<&'a str> {
+    let world_labels = ["w_current", "w′", "w_closest"];
+    gir.children_of(parent_id)
+        .into_iter()
+        .filter(|cid| {
+            gir.node(cid)
+                .and_then(|n| n.label.as_deref())
+                .map(|l| !world_labels.contains(&l))
+                .unwrap_or(true)
+        })
+        .collect()
 }

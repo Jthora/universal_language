@@ -37,15 +37,46 @@ Intersection = { "&" }
 // MARKS (geometric primitives with optional content)
 // ═══════════════════════════════════════════════════
 
-Mark = { Primitive ~ Content? }
+Mark = { ModalOperator | ForceAnnotation | AssertionModifier | Primitive ~ Content? }
 
 Content = { "{" ~ Composition ~ "}" }
+
+// ═══════════════════════════════════════════════════
+// MODAL OPERATORS (necessity, possibility, counterfactual)
+// ASCII-only to avoid collision with □ (Square enclosure)
+// ═══════════════════════════════════════════════════
+
+ModalOperator     = { Counterfactual | Necessity | Possibility }
+Necessity         = { "[]" ~ Content }
+Possibility       = { "<>" ~ Content }
+Counterfactual    = { "[]->" ~ Content ~ Content }
+
+// ═══════════════════════════════════════════════════
+// FORCE ANNOTATIONS (performative illocutionary force)
+// ═══════════════════════════════════════════════════
+
+ForceAnnotation   = { ForceToken ~ Content }
+ForceToken        = { "assert" | "query" | "direct" | "commit" | "express" | "declare" }
+
+// ═══════════════════════════════════════════════════
+// ASSERTION MODIFIERS (evidential, emphatic, hedged)
+// ═══════════════════════════════════════════════════
+
+AssertionModifier = { EvidentialMark | EmphaticMark | HedgedMark }
+EvidentialMark    = { "?" ~ Content }
+EmphaticMark      = { "!" ~ Content }
+HedgedMark        = { "~?" ~ Content }
 
 // ═══════════════════════════════════════════════════
 // PRIMITIVES
 // ═══════════════════════════════════════════════════
 
-Primitive = { Point | Enclosure | Curve | Arrow | AngleMod }
+Primitive = { VariableSlot | BoundRef | Point | Enclosure | Curve | Arrow | AngleMod }
+
+// Variable binding
+VariableSlot = { ("\u{25CB}" | "/o") ~ "_" ~ Identifier }
+BoundRef     = { ("\u{25CF}" | "*") ~ "_" ~ Identifier }
+Identifier   = @{ (ASCII_ALPHA | "_") ~ (ASCII_ALPHANUMERIC | "_")* }
 
 // Points
 Point = { FilledPoint }

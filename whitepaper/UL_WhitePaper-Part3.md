@@ -1,4 +1,6 @@
 
+> **⚠ HISTORICAL DOCUMENT:** This whitepaper represents the original formulation of UL (pre-March 2026). The formal framework has since been restructured around Σ_UL (4 sorts, 11 operations, universal algebra) rather than the first-order theory presented here. Application claims and proof statuses should be cross-checked against `foundations/formal-foundations.md` and `frontier/gap-analysis.md`. This paper is preserved for historical context, not as the current specification.
+
 ### **6\. Applications and Implications**
 
 **Purpose**: This section provides an exploration of the Universal Language (UL)’s practical and theoretical significance, building on its formal definition as a consistent, complete, and universal system (as established in Sections 5.1–5.7). By demonstrating UL’s capacity to encode complex concepts across disciplines such as mathematics, physics, and philosophy, we highlight its versatility. Furthermore, we examine its potential to revolutionize human-AI interaction, particularly in the development of AGI and ASI, and discuss the implications for future research and implementation. This analysis underscores UL’s role as a transformative tool for interdisciplinary communication and technological advancement.

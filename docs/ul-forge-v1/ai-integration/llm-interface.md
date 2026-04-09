@@ -45,7 +45,7 @@ Validate GIR
 ## Prompt Engineering
 
 The system prompt includes:
-1. **Σ_UL specification** — 5 primitives, 4 sorts, 11 operations (condensed)
+1. **Σ_UL⁺ specification** — 5 primitives, 4 sorts, 13 operations (condensed)
 2. **Canonical lexicon** — 42 standard glyphs with their UL-Script and meanings
 3. **Sort rules** — what connects to what (Entity→Relation→Entity, Modifier→Entity, etc.)
 4. **Output format** — strict UL-Script text or JSON GIR

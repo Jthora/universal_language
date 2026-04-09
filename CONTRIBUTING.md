@@ -119,3 +119,116 @@ Then score, blind, reveal, and analyze as above.
 Be rigorous. Be honest. Label your certainty levels. Report what you find, not what you hope to find.
 
 This project uses explicit rigor labels (PROVEN, CONJECTURED, FRAMEWORK, ANALOGY) for good reason. If you extend the theory, use them too.
+
+---
+
+## Contributing to UL Forge (Rust)
+
+The Forge is an 8-crate Rust workspace in `ul-forge/`.
+
+### Prerequisites
+
+- Rust 1.70+ (`rustup update stable`)
+- `wasm-pack` for WASM builds (`cargo install wasm-pack`)
+
+### Structure
+
+| Crate | Purpose |
+|-------|---------|
+| `ul-core` | Parser, validator, renderer, 13 operations + modal/performative/pragmatic |
+| `ul-cli` | Command-line interface (8 subcommands) |
+| `ul-wasm` | WASM bindings (wasm-bindgen exports) |
+| `ul-api` | HTTP API server (Actix-web, 9 routes + websocket) |
+| `ul-game` | Game engine — scoring, templates, puzzles |
+| `ul-mcp` | Model Context Protocol server (10 tools) |
+| `ul-transceiver` | Agent-to-agent message protocol |
+| `bindings/python` | PyO3 bindings (8 functions) |
+
+### Running Tests
+
+```bash
+cd ul-forge
+cargo test --workspace        # 337 tests, all must pass
+cargo clippy --workspace      # No warnings allowed
+```
+
+### Code Style
+
+- Follow standard `rustfmt` formatting
+- Prefer `Result<T, UlError>` over panics
+- Public API functions need doc comments
+- Match arms for `Operation`/`Sort` enums must be exhaustive
+
+---
+
+## Contributing to Web Editor (TypeScript)
+
+The web editor is in `ul-forge/web/` — a React + Vite + Zustand app.
+
+### Prerequisites
+
+- Node.js 18+
+- WASM module built (`cd ul-forge && wasm-pack build --target web crates/ul-wasm`)
+
+### Development
+
+```bash
+cd ul-forge/web
+npm install
+npm run dev         # Starts dev server at localhost:5173
+npm test            # Run test suite
+```
+
+### Components
+
+| Component | Purpose |
+|-----------|---------|
+| `App.tsx` | Three-pane layout (palette + editor/canvas + preview) |
+| `ScriptEditor.tsx` | UL-Script text editor |
+| `VisualCanvas.tsx` | Visual glyph composition canvas |
+| `SvgPreview.tsx` | Live SVG preview panel |
+| `TemplatePalette.tsx` | 42 canonical templates + modal/force/pragmatic extensions |
+| `StatusBar.tsx` | Parse status, force picker (φ), pragmatic inference |
+| `ExportButtons.tsx` | SVG/TikZ/GIR export |
+
+---
+
+## Contributing to Python Bindings
+
+The Python bindings are in `ul-forge/bindings/python/` using PyO3 + maturin.
+
+### Prerequisites
+
+- Python 3.10+
+- `maturin` (`pip install maturin`)
+
+### Building
+
+```bash
+cd ul-forge/bindings/python
+maturin develop    # Build + install in current venv
+```
+
+### Available Functions
+
+`parse`, `validate`, `render`, `deparse`, `compose_bind`, `set_force`, `infer_pragmatics`, `analyze_structure`
+
+---
+
+## Contributing to UL Core (Documentation)
+
+UL Core documentation is in `ul-core/` — the 5 siblings + writing system.
+
+### Style Guide
+
+- Cross-references use relative paths: `see [Symbology](symbology/symbol-map.md)`
+- Σ_UL expressions use backtick code: `` `predicate(e₁, r, e₂) → a` ``
+- ASCII art diagrams for visual representations
+- Tier labels (T1/T2/T3) for all canonical constructions
+- Operation counts must say **13** (not 11 — that was pre-Pass 1.2)
+
+### Documents to Know
+
+- `formal-foundations.md` — Source of truth for all algebraic definitions
+- `NAVIGATION.md` — Cross-document navigation guide
+- `SYNTHESIS.md` — System overview and expansion paths

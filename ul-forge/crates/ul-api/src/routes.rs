@@ -86,6 +86,61 @@ struct ConvertRequest {
     output_format: String,
 }
 
+#[derive(Deserialize)]
+struct ComposeRequest {
+    operation: String,
+    operands: Vec<String>,
+}
+
+#[derive(Serialize)]
+struct ComposeResponse {
+    gir: serde_json::Value,
+    ul_script: String,
+}
+
+#[derive(Deserialize)]
+struct AnalyzeRequest {
+    gir: serde_json::Value,
+}
+
+#[derive(Serialize)]
+struct AnalyzeResponse {
+    operations: Vec<String>,
+    node_count: usize,
+    edge_count: usize,
+}
+
+#[derive(Deserialize)]
+struct ForceRequest {
+    gir: serde_json::Value,
+    force: String,
+}
+
+#[derive(Serialize)]
+struct ForceResponse {
+    gir: serde_json::Value,
+    ul_script: String,
+    force: String,
+}
+
+#[derive(Deserialize)]
+struct PragmaticsRequest {
+    gir: serde_json::Value,
+}
+
+#[derive(Serialize)]
+struct PragmaticsResponse {
+    inferences: Vec<PragmaticInferenceItem>,
+    count: usize,
+}
+
+#[derive(Serialize)]
+struct PragmaticInferenceItem {
+    rule: String,
+    surface: serde_json::Value,
+    intended: serde_json::Value,
+}
+
 #[derive(Serialize)]
 struct ApiError {
     error: ApiErrorBody,
@@ -122,6 +177,10 @@ pub fn api_routes() -> Router<AppState> {
         .route("/render", post(render))
         .route("/validate", post(validate))
         .route("/convert", post(convert))
+        .route("/compose", post(compose))
+        .route("/analyze", post(analyze))
+        .route("/force", post(set_force))
+        .route("/pragmatics", post(infer_pragmatics))
         .route("/live", get(ws_upgrade))
 }
 
@@ -332,6 +391,147 @@ async fn convert(Json(req): Json<ConvertRequest>) -> Response {
             (status, json).into_response()
         }
     }
+}
+
+// ────────────────────────────────────────────
+// POST /compose
+// ────────────────────────────────────────────
+
+async fn compose(
+    Json(req): Json<ComposeRequest>,
+) -> Result<Json<ComposeResponse>, (StatusCode, Json<ApiError>)> {
+    if req.operands.iter().any(|s| s.len() > 100_000) {
+        return Err(ApiError::new("PAYLOAD_TOO_LARGE", "Operand exceeds 100KB limit"));
+    }
+
+    let girs: Vec<ul_core::Gir> = req
+        .operands
+        .iter()
+        .map(|s| ul_core::parser::parse(s).map_err(|e| {
+            ApiError::new("PARSE_ERROR", format!("Parse error on '{}': {e}", s))
+        }))
+        .collect::<Result<Vec<_>, _>>()?;
+
+    let result = match req.operation.as_str() {
+        "negate" => { check_arity(&girs, 1, "negate")?; ul_core::composer::negate(&girs[0]) }
+        "embed" => { check_arity(&girs, 1, "embed")?; ul_core::composer::embed(&girs[0]) }
+        "abstract" => { check_arity(&girs, 1, "abstract")?; ul_core::composer::abstract_op(&girs[0]) }
+        "invert" => { check_arity(&girs, 1, "invert")?; ul_core::composer::invert(&girs[0]) }
+        "predicate" => { check_arity(&girs, 3, "predicate")?; ul_core::composer::predicate(&girs[0], &girs[1], &girs[2]) }
+        "modify_entity" => { check_arity(&girs, 2, "modify_entity")?; ul_core::composer::modify_entity(&girs[0], &girs[1]) }
+        "modify_relation" => { check_arity(&girs, 2, "modify_relation")?; ul_core::composer::modify_relation(&girs[0], &girs[1]) }
+        "conjoin" => { check_arity(&girs, 2, "conjoin")?; ul_core::composer::conjoin(&girs[0], &girs[1]) }
+        "disjoin" => { check_arity(&girs, 2, "disjoin")?; ul_core::composer::disjoin(&girs[0], &girs[1]) }
+        "compose" => { check_arity(&girs, 2, "compose")?; ul_core::composer::compose(&girs[0], &girs[1]) }
+        "quantify" => { check_arity(&girs, 2, "quantify")?; ul_core::composer::quantify(&girs[0], &girs[1]) }
+        "bind" => { check_arity(&girs, 2, "bind")?; ul_core::composer::bind(&girs[0], &girs[1]) }
+        "modify_assertion" => { check_arity(&girs, 2, "modify_assertion")?; ul_core::composer::modify_assertion(&girs[0], &girs[1]) }
+        other => return Err(ApiError::new("UNKNOWN_OPERATION", format!("Unknown operation: {other}"))),
+    }.map_err(|e| ApiError::new("COMPOSE_ERROR", e.to_string()))?;
+
+    let gir_json = serde_json::to_value(&result)
+        .map_err(|e| ApiError::new("INTERNAL_ERROR", e.to_string()))?;
+    let ul_script = ul_core::parser::deparse(&result).unwrap_or_default();
+
+    Ok(Json(ComposeResponse { gir: gir_json, ul_script }))
+}
+
+fn check_arity(
+    girs: &[ul_core::Gir],
+    expected: usize,
+    op: &str,
+) -> Result<(), (StatusCode, Json<ApiError>)> {
+    if girs.len() < expected {
+        Err(ApiError::new(
+            "INVALID_OPERANDS",
+            format!("{op} requires {expected} operand(s), got {}", girs.len()),
+        ))
+    } else {
+        Ok(())
+    }
+}
+
+// ────────────────────────────────────────────
+// POST /analyze
+// ────────────────────────────────────────────
+
+async fn analyze(
+    Json(req): Json<AnalyzeRequest>,
+) -> Result<Json<AnalyzeResponse>, (StatusCode, Json<ApiError>)> {
+    let gir_str = req.gir.to_string();
+    let gir = ul_core::Gir::from_json(&gir_str)
+        .map_err(|e| ApiError::new("INVALID_GIR", e.to_string()))?;
+
+    let ops = ul_core::composer::detect_operations(&gir);
+    let op_names: Vec<String> = ops.iter().map(|o| o.operation.to_string()).collect();
+
+    Ok(Json(AnalyzeResponse {
+        operations: op_names,
+        node_count: gir.nodes.len(),
+        edge_count: gir.edges.len(),
+    }))
+}
+
+// ────────────────────────────────────────────
+// POST /force
+// ────────────────────────────────────────────
+
+async fn set_force(
+    Json(req): Json<ForceRequest>,
+) -> Result<Json<ForceResponse>, (StatusCode, Json<ApiError>)> {
+    let gir_str = req.gir.to_string();
+    let gir = ul_core::Gir::from_json(&gir_str)
+        .map_err(|e| ApiError::new("INVALID_GIR", e.to_string()))?;
+
+    let force = match req.force.as_str() {
+        "assert" => ul_core::PerformativeForce::Assert,
+        "query" => ul_core::PerformativeForce::Query,
+        "direct" => ul_core::PerformativeForce::Direct,
+        "commit" => ul_core::PerformativeForce::Commit,
+        "express" => ul_core::PerformativeForce::Express,
+        "declare" => ul_core::PerformativeForce::Declare,
+        other => return Err(ApiError::new("UNKNOWN_FORCE", format!("Unknown force: {other}"))),
+    };
+
+    let result = ul_core::performative::with_force(&gir, force)
+        .map_err(|e| ApiError::new("FORCE_ERROR", e.to_string()))?;
+
+    let gir_json = serde_json::to_value(&result)
+        .map_err(|e| ApiError::new("INTERNAL_ERROR", e.to_string()))?;
+    let ul_script = ul_core::parser::deparse(&result).unwrap_or_default();
+
+    Ok(Json(ForceResponse {
+        gir: gir_json,
+        ul_script,
+        force: req.force,
+    }))
+}
+
+// ────────────────────────────────────────────
+// POST /pragmatics
+// ────────────────────────────────────────────
+
+async fn infer_pragmatics(
+    Json(req): Json<PragmaticsRequest>,
+) -> Result<Json<PragmaticsResponse>, (StatusCode, Json<ApiError>)> {
+    let gir_str = req.gir.to_string();
+    let gir = ul_core::Gir::from_json(&gir_str)
+        .map_err(|e| ApiError::new("INVALID_GIR", e.to_string()))?;
+
+    let inferences = ul_core::pragmatic::infer(&gir);
+    let items: Vec<PragmaticInferenceItem> = inferences
+        .iter()
+        .map(|inf| PragmaticInferenceItem {
+            rule: format!("{:?}", inf.rule),
+            surface: serde_json::to_value(&inf.surface).unwrap_or_default(),
+            intended: serde_json::to_value(&inf.intended).unwrap_or_default(),
+        })
+        .collect();
+
+    Ok(Json(PragmaticsResponse {
+        count: items.len(),
+        inferences: items,
+    }))
 }
 
 // ────────────────────────────────────────────

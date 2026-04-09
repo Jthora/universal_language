@@ -1,0 +1,25 @@
+{
+  "level": 4,
+  "title": "Quantification and Binding",
+  "description": "Use quantify and bind for variable expressions",
+  "exercises": [
+    {
+      "prompt": "Encode: \"Every cat sleeps\"",
+      "hint": "quantify(∠1.0) + bind + predicate",
+      "expectedOps": ["quantify", "bind", "predicate"],
+      "sampleAnswer": "○{ ∠1.0 ○_x ●_x → ● \"sleeps\" }"
+    },
+    {
+      "prompt": "Encode: \"Some bird can fly\"",
+      "hint": "quantify with p<1.0 for existential, plus possibility modal",
+      "expectedOps": ["quantify", "possibility"],
+      "sampleAnswer": "○{ ∠0.5 ○_x <>{ ●_x → ● \"fly\" } }"
+    },
+    {
+      "prompt": "Compose two relations: \"teaches\" then \"learns\" → \"teaches-to-learn\"",
+      "hint": "Use the compose operation on two relations",
+      "expectedOps": ["compose"],
+      "sampleAnswer": "→ \"teaches\" ; → \"learns\""
+    }
+  ]
+}

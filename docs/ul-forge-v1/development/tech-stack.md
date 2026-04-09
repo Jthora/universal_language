@@ -34,6 +34,12 @@
 | **JS bindings** | `wasm-bindgen` | Type-safe Rust↔JS interop, handles string/JSON marshalling |
 | **npm package** | `@ul-forge/core` | Consumed by web editor and VS Code extension |
 
+> **Deep WASM Documentation:** See [wasm/README.md](../wasm/README.md) for the complete
+> WASM architecture and build guide, [wasm/typescript-api-reference.md](../wasm/typescript-api-reference.md)
+> for all 33 WASM exports and their TypeScript wrapper signatures, and
+> [wasm/known-issues.md](../wasm/known-issues.md) for serialization gotchas (especially
+> `serde-wasm-bindgen` `HashMap` → `Map` behavior and version string discrepancies).
+
 ---
 
 ## Web Frontend: TypeScript + React

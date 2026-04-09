@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <rect width="200" height="200" fill="var(--gallery-bg, #1e1e1e)" rx="8"/>
+  <line x1="100" y1="100" x2="140" y2="70" stroke="var(--gallery-accent, #569cd6)" stroke-width="2"/>
+    <line x1="100" y1="100" x2="140" y2="130" stroke="var(--gallery-accent, #569cd6)" stroke-width="2"/>
+    <path d="M120,82 A22,22 0 0,1 120,118" fill="none" stroke="var(--gallery-fg, #d4d4d4)" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="100" y="185" text-anchor="middle" fill="var(--gallery-fg, #d4d4d4)" font-family="monospace" font-size="9" opacity="0.7">Single Angle</text>
+</svg>

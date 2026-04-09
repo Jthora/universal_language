@@ -107,6 +107,11 @@ Integration tests live in `tests/integration/`.
 
 ## Web Editor Tests
 
+> **WASM integration tests:** The project includes 1,358 tests across 22 test files
+> that validate the WASM module boundary. See [wasm/README.md](../wasm/README.md) §9
+> for the full testing breakdown and [wasm/known-issues.md](../wasm/known-issues.md)
+> for documented edge cases discovered during testing.
+
 ### Unit Tests (Vitest)
 
 ```typescript

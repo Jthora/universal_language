@@ -77,6 +77,19 @@ These cannot be decomposed further. They are the phonemes of UL.
 **Symmetry:** SO(n) — looks the same from every direction.  
 **Sort:** Entity (e)
 
+### ○ — The Hollow Mark (Slot Entity)
+```
+  ┌───────────┐
+  │           │
+  │     ○_x   │
+  │           │
+  └───────────┘
+```
+**Geometric:** Open circle at a position. Same dimension 0 as the Point, but unfilled.  
+**Semantic:** OPEN SLOT — "something (to be determined)." A placeholder for an entity not yet committed.  
+**Sort:** Entity (e), specifically Gₑ_slot ⊂ Gₑ. The label x distinguishes which slot this is.  
+**Binding:** When `bind(e_x, a)` is applied, ○_x → ●_x (hollow becomes filled), establishing co-reference for all occurrences within the assertion's frame. See `formal-operations.md` §1.12.
+
 ### ─ — The Line
 ```
   ┌───────────┐
@@ -179,6 +192,24 @@ These cannot be decomposed further. They are the phonemes of UL.
 
 *Note: The ordering by symmetry group is rigorous (Erlangen Program). Labels for pentagon and hexagon are conjectural conventions based on golden-ratio↔biology and optimal-packing↔networks associations. The circle and triangle labels are structurally forced (max symmetry = max generality; min polygon = min structure).*
 
+### Frame Decoration Marks (Assertion Modification)
+
+Frame decorations modify the enclosure boundary without changing the content or truth status. They encode the speaker's epistemic relationship to the assertion via `modify_assertion(m, a)`. See `formal-operations.md` §1.13 and `formal-grammar.md` C13.
+
+| Boundary Style | Visual | Semantic | Modifier Type |
+|---------------|--------|----------|---------------|
+| **Solid** (default) | `┌───────┐` | Assertive — direct claim | (none — baseline) |
+| **Dashed** | `┌╌╌╌╌╌╌╌┐` | Negated — denied (σ = ⊖) | negate, not modify_assertion |
+| **Dotted** | `┌·······┐` | Evidential — reported, inferred, hearsay | m_evidential ∈ Gₘ |
+| **Double** | `╔═══════╗` | Emphatic — certain, stressed, committed | m_emphatic ∈ Gₘ |
+| **Wavy** | `┌~~~~~~~┐` | Hedged — uncertain, approximate, tentative | m_hedged ∈ Gₘ |
+
+**Key distinction:**
+- **Dashed vs. dotted:** Dashed = negation (flips σ, changes truth value). Dotted = evidential (decorates ∂F, preserves truth value). These are orthogonal: a dashed+dotted frame means "apparently NOT p."
+- **Frame content vs. frame boundary:** Negate changes σ (the sign). Modify_assertion changes ∂F (the boundary style). Both can co-occur.
+
+**Sort:** The decoration marks are not standalone symbols — they are properties of an enclosure boundary. The modifier (m) is applied to the assertion (a) as a whole via `modify_assertion(m, a) → a`.
+
 ---
 
 ## III. COMPOUND SYMBOL CONSTRUCTION
@@ -270,8 +301,8 @@ These cannot be decomposed further. They are the phonemes of UL.
 | **Ignorance** | ○{• ─∠180°─ ○{}} | Opposition (180°) between existence and empty concept |
 | **Freedom** | •↑ (point with unbounded upward ray) | Existence with unconstrained directed relation |
 | **Constraint** | □{•} | Existence bounded by structure |
-| **Possibility** | •╌╌• (dashed line) | Broken continuity = uncertain/hypothetical relation |
-| **Necessity** | •━━• (bold/thick line) | Maximum visual weight = cannot be otherwise |
+| **Possibility** | •╌╌• (dashed line) | Broken continuity = uncertain/hypothetical relation. Formal: ◇_R(a). See `formal-foundations.md` §7.5 |
+| **Necessity** | •━━• (bold/thick line) | Maximum visual weight = cannot be otherwise. Formal: □_R(a). See `formal-foundations.md` §7.4 |
 | **Infinity** | ○{○{○{...}}} | Self-nesting totality — completeness containing completeness |
 | **Unity** | • (single point) | Irreducible oneness |
 | **Duality** | •──∠180°──• | Two existences in opposition |
@@ -327,7 +358,7 @@ Derived from geometric scaling operations within the Glyph Space. These are the 
 
 | Function | Symbol/Operation | Derivation |
 |----------|-----------------|------------|
-| **Negation** | Reflection across vertical axis | Geometric reflection = inversion. negate(negate(x)) = x ✓ |
+| **Negation** | Flip frame boundary: solid → dashed | Boundary style is topological. Solid = asserted, dashed = denied. negate(negate(x)) = x ✓ |
 | **Past tense** | Translate glyph leftward | Position shift left = prior in sequence |
 | **Future tense** | Translate glyph rightward | Position shift right = subsequent in sequence |
 | **Present tense** | Glyph at center | Default position = current |
@@ -335,9 +366,19 @@ Derived from geometric scaling operations within the Glyph Space. These are the 
 | **Emphasis** | Scale glyph up | Larger = more significant |
 | **Diminution** | Scale glyph down | Smaller = less significant |
 | **Plurality** | Translation copies (glyph repeated) | Pattern = multiple instances |
-| **Possibility** | Dashed lines | Broken continuity = hypothetical |
-| **Necessity** | Bold/thick lines | Maximum weight = cannot be otherwise |
+| **Possibility** | Dashed lines | Broken continuity = hypothetical. ◇_R(a) = ¬□_R(¬a) |
+| **Necessity** | Bold/thick lines | Maximum weight = cannot be otherwise. □_R(a) |
+| **Counterfactual** | Dashed-dot lines (╌·╌) | Mixed continuity = "if it were that…" □→(a,b) |
+| **World-enclosure** | Double-border enclosure (╔══╗) | Possible world w ∈ G_e. Double border distinguishes from concept-enclosure |
+| **Actual world** | Double-border + filled corner (╔▪═╗) | w_current — the evaluation context |
+| **Accessibility** | Labeled line between world-enclosures | r_acc: w₁ can "see" w₂ |
 | **Conditionality** | One enclosure inside another (A ⊂ B) | Containment = "if A then within B" |
+| **Assertive force** (default) | Solid frame border `┌──┐` | Default speech act — stating a proposition |
+| **Interrogative force** | Gapped frame border `┌──` | Query — open side invites response |
+| **Directive force** | Arrow-out frame border `┌──→` | Command — force directed outward |
+| **Commissive force** | Arrow-in frame border `←──┐` | Promise — force directed inward (obligation on speaker) |
+| **Expressive force** | Wavy frame border `┌~~┐` | Expressive — emotional/social act |
+| **Declarative force** | Bold double frame border `╔══╗` | Declaration — utterance changes reality |
 
 ---
 
@@ -350,6 +391,7 @@ Derived from geometric scaling operations within the Glyph Space. These are the 
 | "Grammar" | □{→,→,→} | "Structured arrangement of directed rules" |
 | "Meaning" | ○{•} ─∠60°─ ○{•} | "Harmonious connection between two self-aware concepts" |
 | "Universal" | ○ (unqualified circle) | Maximum symmetry = applies in all contexts |
+| "Inference" | ⟹ | Pragmatic inference arrow — connects surface expression to intended/implicated meaning. Meta-syntactic: not a compositional operation but a notation for documenting inference rules (SI-1→3, CI-1→3). See formal-foundations.md §9. |
 
 ---
 
@@ -367,8 +409,8 @@ Derived from geometric scaling operations within the Glyph Space. These are the 
 | Foundational concepts | ~20 | Open (extensible) |
 | Abstract concepts | ~30 | Open (extensible) |
 | Quantifiers | 6 | Complete |
-| Grammatical markers | 11 | Complete |
-| Meta-symbols | 5 | Open |
+| Grammatical markers | 21 | Complete (8 base + 7 modal + 6 force) |
+| Meta-symbols | 6 | Open (includes ⟹ inference arrow) |
 
 **Total defined symbols/constructions: ~105+**
 

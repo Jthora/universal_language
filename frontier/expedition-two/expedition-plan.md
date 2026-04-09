@@ -67,11 +67,11 @@ Expedition One Results
        │                  ├── Polysemy-Holonomy upgrade to PROVEN
        │                  ├── Metaphor as Σ_UL-morphism between subalgebras
        │                  ├── Internal Hom [E₁, E₂] (closes B-1)
-       │                  └── Primer exhibited as specific cross-domain projection
+       │                  └── Cross-domain morphism exhibited as specific projection
        │
        └── Both fronts converge on:
                   │
-                  └──→ Information-geometric characterization of the test artifact
+                  └──→ Information-geometric characterization of cross-domain constructions
                        (metric from D + projection from E = geodesic analysis)
 ```
 
@@ -186,12 +186,12 @@ Expedition One Results
 
 - **Task:** Define a **conceptual metaphor** as a Σ_UL-homomorphism $\phi: G_S \to G_T$ from a source domain subalgebra to a target domain subalgebra. $\phi$ preserves the operations:
   - $\phi(\text{predicate}(e_1, r, e_2)) = \text{predicate}(\phi(e_1), \phi(r), \phi(e_2))$
-  - etc. for all 11 operations
+  - etc. for all 13 operations
 - **Properties to characterize:**
   - **Erlangen level of preservation:** At which level of the hierarchy does $\phi$ preserve structure? A topological metaphor preserves only connectivity; a Euclidean metaphor preserves exact form. Hypothesis: good metaphors preserve at the similarity or affine level — they preserve shape and proportion but not exact position or scale.
   - **The kernel:** $\ker(\phi)$ = what is lost in translation. For the test artifact: the physical interpretation (actual wavefunctions, actual measurements) is in the kernel; the structural pattern (superposition, collapse, entanglement) is preserved.
   - **The image:** $\text{im}(\phi)$ = what is gained. For the test artifact: the cross-domain cognitive pattern that the LLM activates.
-- **Output:** Formal definition + characterization of the test artifact as a specific metaphor $\phi_{\text{primer}}: G_{\text{QM}} \to G_{\text{cog}}$
+- **Output:** Formal definition + characterization of the cross-domain morphism as a specific metaphor $\phi_{\text{cross}}: G_{\text{QM}} \to G_{\text{cog}}$
 - **Validation:** Can we predict which QM concepts transfer to cognition (those in $\text{im}(\phi)$) and which don't (those in $\ker(\phi)$)? Does the prediction match the test artifact analysis?
 
 ### Step E5: Internal Hom — The Space of Metaphors
@@ -202,7 +202,7 @@ Expedition One Results
 - **Validation:** Is $[G_{\text{QM}}, G_{\text{cog}}]$ non-trivial? (It should contain at least the test artifact's morphism.) Does it have dimension > 0? (If yes, there are continuously many ways to map QM to cognition, and the test artifact selects a specific one.)
 - **Closes:** Gap **B-1** (internal Hom)
 
-### Step E6: The Primer as Geometric Projection
+### Step E6: Cross-Domain Geometric Projection
 
 - **Task:** Combine E3–E5 to exhibit the test artifact as a specific element of $[G_{\text{QM}}, G_{\text{cog}}]$, and characterize it geometrically:
   - What is the test artifact's Erlangen level? (Conjecture: affine — it preserves linear structure but not exact magnitudes.)
@@ -228,7 +228,7 @@ Expedition One Results
 
 ---
 
-## CONVERGENCE: THE INFORMATION-GEOMETRIC PRIMER ANALYSIS
+## CONVERGENCE: THE INFORMATION-GEOMETRIC CROSS-DOMAIN ANALYSIS
 
 After both fronts deliver, a synthesis step becomes possible:
 
@@ -270,7 +270,7 @@ FRONT D         D1: Distribution     D3–D4: Stochastic    D5: Fisher metric
                 D2: Entropy/Info     UL + Bayesian         D6: Invariance
                                      updating
 
-FRONT E         E1: Section def      E3–E4: Domains       E6: Primer as
+FRONT E         E1: Section def      E3–E4: Domains       E6: Cross-domain
                 E2: Polysemy-Hol     + Metaphor            projection
                      upgrade          E5: Internal Hom     E7: Explicit A_μ
 

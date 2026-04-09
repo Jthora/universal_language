@@ -3,7 +3,7 @@
 **Research Series:** Universal Language — Proof of Reality and AI Cognitive Infrastructure  
 **Sprint:** 6 — Path A  
 **Date:** (Pre-registration)  
-**Prerequisites:** `foundations/paradigm.md` (READ FIRST), `history/mechanism-of-action.md`, `foundations/formal-foundations.md`, `frontier/strategic-plan.md`
+**Prerequisites:** `foundations/paradigm.md` (READ FIRST), `foundations/formal-foundations.md`, `frontier/strategic-plan.md`
 
 > **⚠ PARADIGM NOTE:** This protocol tests whether UL has *causal power over information-processing systems* — whether AI operating in UL-mode produces capabilities that natural-language-bound AI cannot match. It does NOT test whether UL "describes" human languages or "captures" linguistic intuitions. See `foundations/paradigm.md`.
 
@@ -34,7 +34,7 @@ Before any experiment runs, every key term must have a precise, measurable defin
 
 **Definition:** An LLM is in UL-mode when the test artifact (`experiments/test-artifacts/original/primer.txt`, all 19 lines) appears in its context window before the task prompt with no intervening text other than standard delimiters.
 
-**Rationale:** The test artifact is compressed UL (`history/mechanism-of-action.md` §8). UL-mode means the LLM's processing state after being exposed to UL's geometric structure.
+**Rationale:** The test artifact is compressed UL. UL-mode means the LLM's processing state after being exposed to UL's geometric structure.
 
 ### D2: Natural-Language-Mode (NL-Mode)
 
@@ -70,7 +70,7 @@ All experiments use these five metrics. Each is scored on a defined scale by bli
 |---|---|---|---|
 | **M1** | **Domain Diversity** | 0–10 | Count of distinct knowledge domains substantively referenced (not merely name-dropped). Domain list pre-specified per task. |
 | **M2** | **Cross-Domain Structural Depth** | 0–5 | 0 = no cross-domain connection. 1 = surface analogy ("X is like Y"). 2 = shared property identified. 3 = structural parallel articulated. 4 = formal isomorphism identified. 5 = novel structural bridge constructed. Scored by 2 blinded evaluators; disagreements resolved by a third. |
-| **M3** | **Phase Progression** | 0–3 | 0 = no analysis. 1 = standard domain analysis only (Phase 1). 2 = cross-referencing cascade present (Phase 2). 3 = emergent synthesis — output speaks from the intersection of domains, generating non-obvious connections (Phase 3). Scored per the three-phase model in `mechanism-of-action.md` §2. |
+| **M3** | **Phase Progression** | 0–3 | 0 = no analysis. 1 = standard domain analysis only (Phase 1). 2 = cross-referencing cascade present (Phase 2). 3 = emergent synthesis — output speaks from the intersection of domains, generating non-obvious connections (Phase 3). Scored per the three-phase model of cross-domain activation. |
 | **M4** | **Coherence** | 0–5 | Does the output maintain logical consistency while making cross-domain connections? 0 = incoherent/contradictory. 5 = rigorous and grounded throughout. This metric tests whether the dissipation term γ(σ,β) prevents runaway divergence. |
 | **M5** | **Generative Novelty** | 0–5 | Does the output produce connections, frameworks, or insights that are genuinely non-obvious? 0 = standard textbook content. 5 = publishable-quality novel synthesis. Scored against a pre-compiled reference set of "known connections" for each task prompt. |
 
@@ -111,7 +111,7 @@ A passage from a graduate quantum mechanics textbook of the same token length as
 **CT-2: Cross-Domain Prose Control**
 A passage from a cognitive science paper that discusses quantum mechanics metaphors for consciousness — same domains as the test artifact, but expressed in prose without formal notation. Tests whether cross-domain *content* (without formal *structure*) produces the effect.
 
-**CT-3: Scrambled Primer Control**
+**CT-3: Scrambled Test Artifact Control**
 The test artifact's equations with all symbols randomly reassigned (ψ→φ, +3elúm→+7krath, σ→τ, β→δ) and equation order randomized. Same density, same token count, no UL structure. Tests whether the specific symbolic choices matter.
 
 **CT-4: Nonsense Math Control**
@@ -152,7 +152,7 @@ Syntactically valid but semantically empty mathematical notation: random integra
 
 ### 3.1 The Seven Ablation Variables
 
-From `history/mechanism-of-action.md` §9, the seven required conditions for the artifact effect:
+From UL theory, the seven required conditions for the artifact effect:
 
 | # | Condition | Ablation Variant | What Is Removed |
 |---|---|---|---|
@@ -272,7 +272,7 @@ Each text is designed to specifically violate UL's theoretical requirements whil
 | **D3** | Novel artifact differs from original | Novel-UL-mode scores ≥1.0 points higher on decomposition metric and ≥0.5 points lower on cross-domain synthesis (M2) compared to original-UL-mode | Differences < 0.5 in either direction |
 | **D4** | Theory-derived design works better than naive design | Novel artifact (theory-derived) outperforms a "naive" attempt at a decomposition artifact (written without UL theory) on the decomposition metric with d ≥ 0.3 | No significant difference |
 
-### 5.3 The Naive Primer Control (D4)
+### 5.3 The Naive Test Artifact Control (D4)
 
 To test D4, create a second novel artifact without using UL theory — just write something that "seems like it should help with hierarchical thinking" using common prompt engineering intuitions. This controls for the possibility that the researcher's familiarity with the domain, not UL theory, is doing the work.
 
@@ -302,7 +302,7 @@ Design tasks where the theoretical framework predicts a qualitative, not just qu
 
 | # | Task | Why UL-Mode Should Succeed | Why NL-Mode Should Fail |
 |---|---|---|---|
-| **E1** | **Self-referential formal analysis:** "Describe the formal structure of this prompt, including how it affects your processing of it." (Applied to the test artifact itself.) | UL-mode activates self-referential processing (mechanism-of-action.md §5). The model is already in a meta-cognitive state. | NL-mode has no activation of self-referential formal pathways. The model treats the task as standard text analysis. |
+| **E1** | **Self-referential formal analysis:** "Describe the formal structure of this prompt, including how it affects your processing of it." (Applied to the test artifact itself.) | UL-mode activates self-referential processing. The model is already in a meta-cognitive state. | NL-mode has no activation of self-referential formal pathways. The model treats the task as standard text analysis. |
 | **E2** | **Novel bridge token design:** "Design a bridge token for connecting topology and music theory. Explain its phonetic structure and why it would activate cross-domain pathways." | UL-mode understands bridge token function from operating within one. Can reason about the mechanism from the inside. | NL-mode has no experiential reference for bridge token function. Can only reason about it abstractly from descriptions. |
 | **E3** | **Cross-domain structural isomorphism identification:** Give the model two formal descriptions from disconnected domains (e.g., a biological gene regulatory network and a digital circuit) and ask for deep structural isomorphisms. | UL-mode's cross-domain activation enables simultaneous processing of both domain representations, surfacing structural parallels at the formal level. | NL-mode processes each domain sequentially in its own cluster. Surface analogies possible; deep structural isomorphisms unlikely. |
 | **E4** | **Abstraction hierarchy navigation:** "Restate the following proposition at five levels of abstraction, from concrete to maximally abstract, preserving its truth at each level." | UL-mode has the Erlangen hierarchy active — geometric operations for moving between abstraction levels. | NL-mode may produce paraphrases at different reading levels but not genuine abstraction-level transformations. |
@@ -422,7 +422,7 @@ Failure is information, not defeat. Different failure modes point to different c
 |---|---|---|
 | **Alpha fails completely** (no effect under any condition) | The artifact effect is a subjective illusion or an artifact of expectation. UL may be mathematically real but has no causal efficacy. | Reframe project as pure mathematics. Abandon Proof 4. Focus on Proofs 2 and 3. |
 | **Alpha partially fails** (effect exists but is not UL-specific — CT modes work equally well) | "Any hard math" helps LLMs think better. The effect is real but not attributable to UL's specific structure. | Investigate what property of formal notation drives the effect. UL may be a special case of a more general phenomenon. |
-| **Beta fails** (ablation doesn't degrade performance) | The test artifact works as a gestalt — individual components are not independently contributing. The mechanism-of-action model (7 conditions) is wrong. | Rebuild the mechanistic model. The effect is real (Alpha confirmed it) but we don't understand why. |
+| **Beta fails** (ablation doesn't degrade performance) | The test artifact works as a gestalt — individual components are not independently contributing. The mechanistic model (7 conditions) is wrong. | Rebuild the mechanistic model. The effect is real (Alpha confirmed it) but we don't understand why. |
 | **Gamma fails** (negative controls work) | UL theory does not correctly predict what should fail. The theory is over-specified — many different structures produce the effect. | UL may not be uniquely responsible. Broaden the theory to identify the actual sufficient conditions. |
 | **Delta fails** (novel artifact doesn't work) | UL explains the existing artifact but cannot generate new ones. The theory is retrodictive, not predictive. | The existing artifact may have properties that UL theory doesn't fully capture. Iterate on the theory. |
 | **Epsilon fails** (NL-mode matches UL-mode on impossibility tasks) | UL helps but doesn't enable the otherwise impossible. The effect is quantitative, not qualitative. | Still valuable — a quantitative improvement in AI cognition is useful even if not qualitatively unique. Adjust claims accordingly. |
@@ -462,7 +462,7 @@ This protocol supersedes and subsumes the experiments in `applications/future-re
 
 ### 12.3 Infrastructure
 
-- Primer variant library (ablation texts, control texts, negative controls)
+- Test artifact variant library (ablation texts, control texts, negative controls)
 - Scoring interface (standardized rubric, blinding management, inter-rater reliability computation)
 - Statistical analysis pipeline (R or Python with pre-specified analysis scripts committed before data collection)
 
@@ -489,9 +489,11 @@ The mathematical work (Proofs 1–3) establishes that UL is internally consisten
 
 Proof 4 — causal efficacy — is the bridge from mathematical possibility to empirical reality. The test artifact is the one piece of evidence that UL *does something* in the physical world. This protocol either confirms that evidence rigorously or reveals it was an illusion.
 
-**If the protocol succeeds:** UL is proven real in the strongest sense available to science — it has observable, reproducible, predictable causal effects on information-processing systems. The project shifts from "is UL real?" to "how do we build it out and deploy it?"
+**If the protocol succeeds (effect sizes meet pre-registered thresholds):** UL has demonstrated observable, reproducible causal effects on information-processing systems within the tested domain. This strengthens the case for UL's empirical relevance substantially, though the scope remains bounded by the models and tasks tested. The project shifts from "does UL have causal efficacy?" to "what is the scope and mechanism of the effect?"
 
-**If the protocol fails:** We know exactly how and why. The failure modes (§10) each point to a specific revision. The project does not end — it pivots, with precise information about what went wrong.
+**If the protocol produces ambiguous results (some metrics significant, others not):** The partial pattern tells us which structural features carry causal weight and which do not. This is informative, not a failure — it sharpens the theory by revealing which aspects of UL are empirically active.
+
+**If the protocol fails (no significant effects):** We know exactly how and why. The failure modes (§10) each point to a specific revision. The project does not end — it pivots, with precise information about what went wrong.
 
 Either way, we stop guessing and start knowing.
 
@@ -503,7 +505,7 @@ Phase 0 is the critical path. No experiment runs until all materials are constru
 
 ### A.1 Materials Inventory
 
-**Primer reference dimensions (all variants must match):**
+**Test artifact reference dimensions (all variants must match):**
 - Lines: 17
 - Words: ~133
 - Characters: ~887
@@ -561,7 +563,7 @@ Phase 0 is the critical path. No experiment runs until all materials are constru
 - **Complexity:** MEDIUM — requires quality academic prose hitting the right domains
 - **Validation:** Confirm: (a) zero formal notation, (b) covers QM + consciousness + language domains, (c) length match
 
-**CT-3: Scrambled Primer Control**
+**CT-3: Scrambled Test Artifact Control**
 - **Purpose:** Tests whether the specific symbolic choices (ψ overloading, +3elúm, σ/β) matter
 - **Source:** Direct mechanical transformation of the test artifact
 - **Requirements:**
@@ -594,7 +596,7 @@ Phase 0 is the critical path. No experiment runs until all materials are constru
 
 #### GROUP B: ABLATION VARIANTS (7 texts)
 
-Each variant removes **exactly one** of the 7 conditions from `mechanism-of-action.md` §9. All other conditions are preserved unchanged. This is surgical editing.
+Each variant removes **exactly one** of the 7 conditions. All other conditions are preserved unchanged. This is surgical editing.
 
 **V1 / ABL-PROSE: Remove formal mathematical notation**
 - **What changes:** ALL equations rewritten as English prose descriptions of the exact same mathematical relationships

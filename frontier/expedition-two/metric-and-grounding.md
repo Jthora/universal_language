@@ -217,7 +217,7 @@ $$|\text{Hom}(\text{Cv}, \text{An})| = 4$$
 
 For precision: in the free algebra, $\kappa$ is *derived* from $c$ by a curvature operation (if such an operation is expressible in Σ_UL). But Σ_UL has no explicit curvature extraction operation — curvature is a property of the geometric object, not a Σ_UL operation. So $\kappa$ is not separately named in the free algebra; it's encoded in the geometric realization.
 
-The correct analysis: a Σ_UL-homomorphism Cv → An maps $c \mapsto$ some relation in An, and what matters is structural preservation of the 11 operations. Since curvature is a geometric property (not a named element), the homomorphism doesn't need to "send curvature to curvature." It sends the relation $c$ to a relation in An, and the entity-sort and operation-sort constraints are what matter.
+The correct analysis: a Σ_UL⁺-homomorphism Cv → An maps $c \mapsto$ some relation in An, and what matters is structural preservation of the 13 operations. Since curvature is a geometric property (not a named element), the homomorphism doesn't need to "send curvature to curvature." It sends the relation $c$ to a relation in An, and the entity-sort and operation-sort constraints are what matter.
 
 $$|\text{Hom}(\text{Cv}, \text{An})| = 4$$
 
@@ -739,7 +739,7 @@ After Sprint 4:
 
 The project now has: a probability measure (Sprint 1), meaning assignments (Sprint 2), invariance and left adjoints (Sprint 3), a metric and a grounding upgrade (Sprint 4). The two highest-impact remaining targets are:
 
-1. **Metaphor as morphism (E4)** — formalizes the test artifact mechanism, answers "why does the test artifact work?"
+1. **Metaphor as morphism (E4)** — formalizes the cross-domain mechanism, answers "why do cross-domain UL constructions work?"
 2. **Riemannian geometry of X** — compute Christoffel symbols, curvature, geodesics from the Fisher metric
 
 ---

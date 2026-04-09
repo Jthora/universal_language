@@ -41,7 +41,7 @@ Every entry carries one of three tier labels:
 Each entry provides:
 
 1. **Construction** — the geometric description (what you draw)
-2. **Σ_UL** — the formal algebraic expression using the 11 operations on 4 sorts, OR "—" when the construction has no clean single-term Σ_UL expression (see §0.8)
+2. **Σ_UL⁺** — the formal algebraic expression using the 13 operations on 4 sorts, OR "—" when the construction has no clean single-term Σ_UL⁺ expression (see §0.8)
 3. **Geometric** — *(only when Σ_UL is "—")* the geometric characterization that stands in place of a formal expression
 4. **Tier** — T1, T2, or T3
 5. **Justification** — why this construction, at this tier
@@ -120,7 +120,7 @@ There are exactly 5 classes of construction at Level 1, corresponding to the 5 g
 | **Construction** | Two points connected by a straight segment: •──• |
 | **Σ_UL** | predicate(e₁, r, e₂) → a (the minimal assertion: subject + relation + object) |
 | **Tier** | T1 — Geometrically Forced |
-| **Justification** | A line requires exactly two points (Euclid Postulate 1). This is the unique minimal construction that introduces Relation. It is the simplest possible statement — two things connected. Line is Relation (Unique Grounding Theorem). This entry is also the geometric realization of the `predicate` operation — the most fundamental of the 11 Σ_UL operations. |
+| **Justification** | A line requires exactly two points (Euclid Postulate 1). This is the unique minimal construction that introduces Relation. It is the simplest possible statement — two things connected. Line is Relation (Unique Grounding Theorem). This entry is also the geometric realization of the `predicate` operation — the most fundamental of the 13 Σ_UL operations. |
 | **Labels** | *Relation, Connection, "This relates to that"* |
 
 ### 2.3 Single Directed Line (Ray)
@@ -377,7 +377,7 @@ These two entries give the 11-operation primitives `modify_entity` and `modify_r
 | **Construction** | A transformation (modifier) applied to an entity glyph, altering its properties while preserving its identity as an entity |
 | **Σ_UL** | modify_entity(m, e) → e' |
 | **Tier** | T1 — Geometrically Forced |
-| **Justification** | One of the 11 primitive Σ_UL operations (formal-foundations.md §1.5). This is the geometric realization of qualification applied to entities: "the *large* point," "the *red* entity," "the *wooden* thing." Without this operation, modifiers cannot affect entities — every entity would be structurally identical except by position. Minimal: removing it makes the system unable to express modified entities. |
+| **Justification** | One of the 13 primitive Σ_UL operations (formal-foundations.md §1.5). This is the geometric realization of qualification applied to entities: "the *large* point," "the *red* entity," "the *wooden* thing." Without this operation, modifiers cannot affect entities — every entity would be structurally identical except by position. Minimal: removing it makes the system unable to express modified entities. |
 | **Labels** | *Qualification of entity, "the [adjective] thing", Entity transformation* |
 
 #### 3.5.2 — modify_relation (generic)
@@ -387,7 +387,7 @@ These two entries give the 11-operation primitives `modify_entity` and `modify_r
 | **Construction** | A transformation (modifier) applied to a relation, altering its quality while preserving its identity as a relation |
 | **Σ_UL** | modify_relation(m, r) → r' |
 | **Tier** | T1 — Geometrically Forced |
-| **Justification** | One of the 11 primitive Σ_UL operations (formal-foundations.md §1.5). The parameterized family of which the distinguished angle entries (§3.1.1–3.1.6) are specific instances. Geometrically: applying an angular modifier to a relation changes its character without changing its endpoints. Minimal: removing it makes the system unable to distinguish the quality of different relations ("loves" vs. "hates" vs. "ignores"). |
+| **Justification** | One of the 13 primitive Σ_UL operations (formal-foundations.md §1.5). The parameterized family of which the distinguished angle entries (§3.1.1–3.1.6) are specific instances. Geometrically: applying an angular modifier to a relation changes its character without changing its endpoints. Minimal: removing it makes the system unable to distinguish the quality of different relations ("loves" vs. "hates" vs. "ignores"). |
 | **Labels** | *Qualification of relation, "relates [adverb]", Relation transformation* |
 
 **Note:** Every distinguished angle entry in §3.1 is an instance of this operation with a specific modifier value. This entry captures the general pattern; those entries capture the structurally singular instances.
@@ -497,14 +497,14 @@ An entity placed inside an enclosure is the simplest construction that gives Con
 | **Justification** | The unique recursive construction using only enclosures. This is structurally distinguished because recursion/self-reference occupies a special role in formal systems (Gödel, Turing). The self-nesting enclosure is the geometric realization of a construction that refers to its own type-level structure. It is the simplest fractal in UL. |
 | **Labels** | *Infinity, Self-reference, Recursion, Meta-structure, Strange loop* |
 
-### 5.6 Reflected Assertion — Reflection of complete sentence frame
+### 5.6 Boundary-Inverted Assertion — Negation via frame boundary flip
 
 | | |
 |---|---|
-| **Construction** | A complete sentence frame reflected across its vertical axis |
+| **Construction** | A complete sentence frame with its boundary style flipped (solid → dashed or dashed → solid) |
 | **Σ_UL** | negate(a) → a' |
 | **Tier** | T1 — Geometrically Forced |
-| **Justification** | Reflection is an involution (reflecting twice returns to the original). It is the unique geometric operation that satisfies negate(negate(x)) = x. This makes it the forced realization of logical negation. Not a construction per se, but an operation on constructions — included here because negation is the most basic logical operation and its geometric realization is unique. See also §3.1.3 (180° sort disambiguation): this entry is negate on the Assertion sort specifically, distinct from invert on Relations (§6.6) and modify_relation with m₁₈₀ on Relations (§3.1.3). |
+| **Justification** | Boundary inversion is an involution (flipping twice returns to the original) and satisfies all four required properties of logical negation: N1 (involution), N2 (contradiction), N3 (excluded middle), N4 (De Morgan). The boundary's connected/disconnected topology is a genuine geometric property. Content is unchanged — only the assertional sign flips. Solid boundary = asserted; dashed boundary = denied. This replaces the previous reflection-based definition, which implemented converse (subject-object swap), not negation (truth-value flip). See `P0-negation-resolution.md`. |
 | **Labels** | *Not, Negation, Denial, "it is not the case that"* |
 
 ---
@@ -540,7 +540,7 @@ At this constructive level, the combinatorial space expands rapidly. Most constr
 | **Construction** | A sentence frame shrunk and placed inside an enclosure, converting it to an entity |
 | **Σ_UL** | embed(a) → e |
 | **Tier** | T1 — Geometrically Forced |
-| **Justification** | Placing a complete assertion inside a boundary converts it from a statement into a thing-that-can-be-talked-about. This is nominalization — the geometric realization of "the fact that..." One of the 11 primitive operations. |
+| **Justification** | Placing a complete assertion inside a boundary converts it from a statement into a thing-that-can-be-talked-about. This is nominalization — the geometric realization of "the fact that..." One of the 13 primitive operations. |
 | **Labels** | *Nominalization, Reification, "the fact that...", "that [clause]"* |
 
 ### 6.4 Shape-Properties-as-Modifier — Abstraction
@@ -550,7 +550,7 @@ At this constructive level, the combinatorial space expands rapidly. Most constr
 | **Construction** | Extracting the boundary shape of an entity and applying it as a modifier to another entity |
 | **Σ_UL** | abstract(e) → m |
 | **Tier** | T1 — Geometrically Forced |
-| **Justification** | The shape of an entity's boundary IS a transformation (a symmetry group action). Extracting it and applying it to another entity is the geometric realization of adjectivalization: "wood" → "wooden," "circle" → "circular." One of the 11 primitive operations. |
+| **Justification** | The shape of an entity's boundary IS a transformation (a symmetry group action). Extracting it and applying it to another entity is the geometric realization of adjectivalization: "wood" → "wooden," "circle" → "circular." One of the 13 primitive operations. |
 | **Labels** | *Adjectivalization, Quality-extraction, "-ness", "-like", "having the quality of"* |
 
 ### 6.5 Composed Relations — •→•→•
@@ -560,7 +560,7 @@ At this constructive level, the combinatorial space expands rapidly. Most constr
 | **Construction** | Three entities connected by two sequential directed relations |
 | **Σ_UL** | compose(r₁, r₂) → r₃, applied as predicate(e₁, compose(r₁, r₂), e₃) |
 | **Tier** | T1 — Geometrically Forced |
-| **Justification** | When the endpoint of one relation is the startpoint of another, they compose — the resulting relation goes from the start of the first to the end of the second. This is the geometric realization of transitivity. One of the 11 primitive operations. |
+| **Justification** | When the endpoint of one relation is the startpoint of another, they compose — the resulting relation goes from the start of the first to the end of the second. This is the geometric realization of transitivity. One of the 13 primitive operations. |
 | **Labels** | *Transitivity, Chain, Sequence, "through", "A relates to C via B"* |
 
 ### 6.6 Reversed Relation — •←•
@@ -570,7 +570,7 @@ At this constructive level, the combinatorial space expands rapidly. Most constr
 | **Construction** | A directed relation with its arrow reversed |
 | **Σ_UL** | invert(r) → r' |
 | **Tier** | T1 — Geometrically Forced |
-| **Justification** | Reversing a directed connection is the geometric realization of voice inversion: active ↔ passive, cause ↔ effect. It is the unique operation that reverses directionality without changing any other property of the relation. One of the 11 primitive operations. See also §3.1.3 (180° sort disambiguation): this entry is `invert` on the Relation sort (r → r), distinct from `negate` on Assertions (§5.6) and `modify_relation(m₁₈₀, r)` (§3.1.3). |
+| **Justification** | Reversing a directed connection is the geometric realization of voice inversion: active ↔ passive, cause ↔ effect. It is the unique operation that reverses directionality without changing any other property of the relation. One of the 13 primitive operations. See also §3.1.3 (180° sort disambiguation): this entry is `invert` on the Relation sort (r → r), distinct from `negate` on Assertions (§5.6) and `modify_relation(m₁₈₀, r)` (§3.1.3). |
 | **Labels** | *Passive voice, Reversal, Inverse relation, "is [verb]ed by"* |
 
 ### 6.7 Quantification — Scaling of Entity within Frame
@@ -580,21 +580,21 @@ At this constructive level, the combinatorial space expands rapidly. Most constr
 | **Construction** | An entity scaled relative to its sentence frame: large (fills frame) = universal; small (point-like) = particular |
 | **Σ_UL** | quantify(m_scale, e) → a |
 | **Tier** | T2 — Structurally Distinguished |
-| **Justification** | Quantification is one of the 11 primitive Σ_UL operations. Its geometric realization as scaling is motivated: entity filling the frame = "applies everywhere" = universal; entity as point within frame = "applies somewhere specific" = existential. The scaling interpretation is natural but not the only possible realization of quantification. |
+| **Justification** | Quantification is one of the 13 primitive Σ_UL operations. Its geometric realization as scaling is motivated: entity filling the frame = "applies everywhere" = universal; entity as point within frame = "applies somewhere specific" = existential. The scaling interpretation is natural but not the only possible realization of quantification. |
 | **Labels** | *All/Some/None (depending on scale), Quantification, "for all...", "there exists..."* |
 
 ---
 
 ## 7. OPERATIONS CROSS-REFERENCE
 
-The 11 Σ_UL operations are themselves "words" in UL — they are the verbs of the language, the ways of combining. Each has a dedicated entry elsewhere in this lexicon (or is realized through its distinguished instances). **This section is a navigation aid — it does not contribute additional entries to the count in §8.**
+The 13 Σ_UL operations are themselves "words" in UL — they are the verbs of the language, the ways of combining. Each has a dedicated entry elsewhere in this lexicon (or is realized through its distinguished instances). **This section is a navigation aid — it does not contribute additional entries to the count in §8.**
 
 | # | Operation | Signature | Entry Location | Tier |
 |---|-----------|-----------|----------------|------|
 | 1 | `predicate` | e × r × e → a | §2.2 (Single Line) | T1 |
 | 2 | `modify_entity` | m × e → e | §3.5.1 | T1 |
 | 3 | `modify_relation` | m × r → r | §3.5.2 (generic) + §3.1.x (instances) | T1 |
-| 4 | `negate` | a → a | §5.6 (Reflected Assertion) | T1 |
+| 4 | `negate` | a → a | §5.6 (Boundary-Inverted Assertion) | T1 |
 | 5 | `conjoin` | a × a → a | §6.1 (Conjunction) | T1 |
 | 6 | `disjoin` | a × a → a | §6.2 (Disjunction) | T1 |
 | 7 | `embed` | a → e | §6.3 (Embedding) | T1 |
@@ -603,7 +603,7 @@ The 11 Σ_UL operations are themselves "words" in UL — they are the verbs of t
 | 10 | `invert` | r → r | §6.6 (Reversed Relation) | T1 |
 | 11 | `quantify` | m × e → a | §6.7 (Quantification) | T2 |
 
-All 11 operations are Tier 1 or Tier 2. None is conventional. This is expected — they are the primitive operations of the algebraic signature, proved minimal in formal-foundations.md §1.5.
+All 13 operations are Tier 1 or Tier 2. None is conventional. This is expected — they are the primitive operations of the algebraic signature, proved minimal in formal-foundations.md §1.5.
 
 ---
 

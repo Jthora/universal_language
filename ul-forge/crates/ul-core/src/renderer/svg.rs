@@ -86,6 +86,21 @@ pub fn generate_svg(
         "      .ul-edge-dashed {{ stroke: black; stroke-width: 1.5; fill: none; stroke-dasharray: 5,3; }}"
     )
     .expect("String write is infallible");
+    writeln!(
+        svg,
+        "      .ul-evidential {{ stroke: #555; stroke-width: 2; fill: none; stroke-dasharray: 3,3; }}"
+    )
+    .expect("String write is infallible");
+    writeln!(
+        svg,
+        "      .ul-emphatic {{ stroke: black; stroke-width: 4; fill: none; }}"
+    )
+    .expect("String write is infallible");
+    writeln!(
+        svg,
+        "      .ul-hedged {{ stroke: #777; stroke-width: 2; fill: none; stroke-dasharray: 8,3,2,3; }}"
+    )
+    .expect("String write is infallible");
     writeln!(svg, "    </style>").expect("String write is infallible");
     writeln!(
         svg,
@@ -138,12 +153,13 @@ fn z_order(shape: &Shape) -> u8 {
         | Shape::Hexagon { .. } => 1,
         Shape::Line { .. } | Shape::Curve { .. } => 2,
         Shape::Angle { .. } => 3,
-        Shape::Point { .. } => 4,
+        Shape::Point { .. } | Shape::VariableSlot { .. } => 4,
     }
 }
 
 fn render_element(svg: &mut String, elem: &PositionedElement) {
     let id = &elem.node_id;
+    let class_override = elem.css_class.as_deref();
     match &elem.shape {
         Shape::Point { radius } => {
             writeln!(
@@ -154,9 +170,10 @@ fn render_element(svg: &mut String, elem: &PositionedElement) {
             .expect("String write is infallible");
         }
         Shape::Circle { radius } => {
+            let class = class_override.unwrap_or("ul-mark");
             writeln!(
                 svg,
-                r#"    <circle cx="{:.1}" cy="{:.1}" r="{:.1}" class="ul-mark" data-ul-node="{id}" />"#,
+                r#"    <circle cx="{:.1}" cy="{:.1}" r="{:.1}" class="{class}" data-ul-node="{id}" />"#,
                 elem.x, elem.y, radius
             )
             .expect("String write is infallible");
@@ -180,9 +197,10 @@ fn render_element(svg: &mut String, elem: &PositionedElement) {
         }
         Shape::Square { size } => {
             let half = size / 2.0;
+            let class = class_override.unwrap_or("ul-mark");
             writeln!(
                 svg,
-                r#"    <rect x="{:.1}" y="{:.1}" width="{:.1}" height="{:.1}" class="ul-mark" data-ul-node="{id}" />"#,
+                r#"    <rect x="{:.1}" y="{:.1}" width="{:.1}" height="{:.1}" class="{class}" data-ul-node="{id}" />"#,
                 elem.x - half,
                 elem.y - half,
                 size,
@@ -257,15 +275,66 @@ fn render_element(svg: &mut String, elem: &PositionedElement) {
             x2,
             y2,
             curvature,
+            ref curvature_profile,
         } => {
-            let mid_x = (x1 + x2) / 2.0;
-            let dy = (x2 - x1).abs() * curvature;
+            if let Some(profile) = curvature_profile {
+                if profile.len() >= 2 {
+                    // Multi-segment path from curvature profile
+                    let n = profile.len();
+                    let mut d = format!("M {:.1},{:.1}", x1, y1);
+                    let total_dx = x2 - x1;
+                    let total_dy = y2 - y1;
+                    let seg_len = 1.0 / n as f64;
+                    for i in 0..n {
+                        let t0 = i as f64 * seg_len;
+                        let t1 = (i + 1) as f64 * seg_len;
+                        let t_mid = (t0 + t1) / 2.0;
+                        let end_x = x1 + total_dx * t1;
+                        let end_y = y1 + total_dy * t1;
+                        let ctrl_x = x1 + total_dx * t_mid;
+                        let amplitude = (x2 - x1).abs() * profile[i] * 0.3;
+                        let ctrl_y = y1 + total_dy * t_mid - amplitude;
+                        write!(d, " Q {:.1},{:.1} {:.1},{:.1}", ctrl_x, ctrl_y, end_x, end_y)
+                            .expect("String write is infallible");
+                    }
+                    writeln!(
+                        svg,
+                        r#"    <path d="{d}" class="ul-edge" data-ul-node="{id}" />"#,
+                    )
+                    .expect("String write is infallible");
+                } else {
+                    // Single-value profile → treat as constant curvature
+                    let k = profile.first().copied().unwrap_or(*curvature);
+                    let mid_x = (x1 + x2) / 2.0;
+                    let dy = (x2 - x1).abs() * k;
+                    writeln!(
+                        svg,
+                        r#"    <path d="M {:.1},{:.1} Q {:.1},{:.1} {:.1},{:.1}" class="ul-edge" data-ul-node="{id}" />"#,
+                        x1, y1,
+                        mid_x, y1 - dy,
+                        x2, y2
+                    )
+                    .expect("String write is infallible");
+                }
+            } else {
+                // Simple quadratic Bézier with constant curvature
+                let mid_x = (x1 + x2) / 2.0;
+                let dy = (x2 - x1).abs() * curvature;
+                writeln!(
+                    svg,
+                    r#"    <path d="M {:.1},{:.1} Q {:.1},{:.1} {:.1},{:.1}" class="ul-edge" data-ul-node="{id}" />"#,
+                    x1, y1,
+                    mid_x, y1 - dy,
+                    x2, y2
+                )
+                .expect("String write is infallible");
+            }
+        }
+        Shape::VariableSlot { radius } => {
             writeln!(
                 svg,
-                r#"    <path d="M {:.1},{:.1} Q {:.1},{:.1} {:.1},{:.1}" class="ul-edge" data-ul-node="{id}" />"#,
-                x1, y1,
-                mid_x, y1 - dy,
-                x2, y2
+                r#"    <circle cx="{:.1}" cy="{:.1}" r="{:.1}" class="ul-edge-dashed" data-ul-node="{id}" />"#,
+                elem.x, elem.y, radius
             )
             .expect("String write is infallible");
         }
@@ -394,6 +463,16 @@ pub fn generate_tikz(glyph: &PositionedGlyph, _gir: &Gir) -> String {
                     x + radius * scale,
                     y,
                     degrees,
+                    radius * scale
+                )
+                .expect("String write is infallible");
+            }
+            Shape::VariableSlot { radius } => {
+                writeln!(
+                    out,
+                    "  \\draw[dashed] ({:.2},{:.2}) circle ({:.3});",
+                    x,
+                    y,
                     radius * scale
                 )
                 .expect("String write is infallible");

@@ -12,14 +12,19 @@ import { StatusBar } from "./components/StatusBar";
 import { TemplatePalette } from "./components/TemplatePalette";
 import { ExportButtons } from "./components/ExportButtons";
 import { VisualCanvas } from "./components/VisualCanvas";
+import { OperationComposer } from "./components/OperationComposer";
+import { ExerciseChecker } from "./components/ExerciseChecker";
+import { PracticeMode } from "./components/PracticeMode";
 import { useLivePreview } from "./hooks/useLivePreview";
 import { useKeyboardShortcuts } from "./hooks/useKeyboardShortcuts";
 
 type EditMode = "text" | "visual";
+type BottomPanel = "composer" | "exercises" | "practice";
 
 export default function App() {
   const [paletteOpen, setPaletteOpen] = useState(false);
   const [mode, setMode] = useState<EditMode>("text");
+  const [bottomPanel, setBottomPanel] = useState<BottomPanel>("composer");
   const togglePalette = useCallback(() => setPaletteOpen((v) => !v), []);
   const toggleMode = useCallback(() => setMode((m) => (m === "text" ? "visual" : "text")), []);
 
@@ -82,6 +87,21 @@ export default function App() {
           {mode === "text" ? "Visual" : "Text"}
         </button>
         <ExportButtons />
+        <button
+          onClick={() => setBottomPanel((p) => p === "composer" ? "exercises" : p === "exercises" ? "practice" : "composer")}
+          title="Cycle: Composer → Exercises → Practice"
+          style={{
+            background: bottomPanel !== "composer" ? "#094771" : "none",
+            border: "1px solid #555",
+            borderRadius: 3,
+            color: "#d4d4d4",
+            cursor: "pointer",
+            padding: "2px 10px",
+            fontSize: 12,
+          }}
+        >
+          {bottomPanel === "composer" ? "Exercises" : bottomPanel === "exercises" ? "Practice" : "Composer"}
+        </button>
       </header>
 
       <main style={{ flex: 1, display: "flex", overflow: "hidden" }}>
@@ -107,6 +127,7 @@ export default function App() {
         </div>
       </main>
 
+      {bottomPanel === "composer" ? <OperationComposer /> : bottomPanel === "exercises" ? <ExerciseChecker /> : <PracticeMode />}
       <StatusBar />
     </div>
   );

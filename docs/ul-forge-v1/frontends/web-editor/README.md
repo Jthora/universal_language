@@ -23,6 +23,13 @@ The web editor is the primary user-facing application of UL Forge. It provides:
 | Text editor | Monaco Editor | VS Code's editor — syntax highlighting, autocomplete, error squiggles |
 | SVG canvas | D3.js (selection/zoom/pan) | Mature SVG manipulation, force-directed layout optional |
 | GIR operations | ul-forge-core (WASM) | Same Rust library used by CLI and API, compiled to WebAssembly |
+
+> **WASM Integration Details:** See [wasm/README.md](../../wasm/README.md) for the full
+> WASM build pipeline and initialization lifecycle,
+> [wasm/typescript-api-reference.md](../../wasm/typescript-api-reference.md) for the
+> complete TypeScript wrapper API, and
+> [wasm/integration-patterns.md](../../wasm/integration-patterns.md) §1 for the
+> React + Vite + Zustand integration pattern used by this editor.
 | State management | Zustand | Lightweight, TypeScript-native store |
 | Styling | Tailwind CSS | Utility-first, minimal CSS maintenance |
 

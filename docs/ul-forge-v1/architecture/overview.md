@@ -28,6 +28,11 @@
     • WASM (browser, API)
 ```
 
+> **WASM Module Architecture:** For the detailed WASM compilation pipeline, 33 exported
+> functions, TypeScript wrapper layer, serialization boundary, and caching system, see
+> [wasm/README.md](../wasm/README.md). For integration recipes across different platforms
+> (browser, game engine, Node.js, AI agents), see [wasm/integration-patterns.md](../wasm/integration-patterns.md).
+
 ## Core Components
 
 ### Parser (`ul-parse`)

@@ -1,0 +1,26 @@
+{
+  "level": 5,
+  "title": "Modal and Performative",
+  "description": "Apply modal operators and illocutionary force",
+  "exercises": [
+    {
+      "prompt": "Encode: \"It must be true that water is wet\" (necessity)",
+      "hint": "Wrap the assertion in □ (necessity)",
+      "expectedOps": ["necessity", "predicate"],
+      "sampleAnswer": "□{ ○{ ● \"water\" → ● \"wet\" } }"
+    },
+    {
+      "prompt": "Encode: \"Close the door!\" (directive force)",
+      "hint": "Use set_force with 'direct'",
+      "expectedOps": ["predicate"],
+      "sampleAnswer": "direct{ ○{ ● \"you\" → ● \"door\" ~ \"close\" } }",
+      "force": "direct"
+    },
+    {
+      "prompt": "Encode: \"If it were sunny, we would go outside\" (counterfactual)",
+      "hint": "Use the counterfactual operator □→",
+      "expectedOps": ["counterfactual"],
+      "sampleAnswer": "○{ ○{ ● \"it\" → ● \"sunny\" } □→ ○{ ● \"we\" → ● \"outside\" ~ \"go\" } }"
+    }
+  ]
+}

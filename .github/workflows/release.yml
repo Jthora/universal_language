@@ -1,0 +1,131 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  test:
+    name: Pre-release Tests
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ul-forge
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: ul-forge
+      - run: cargo test --workspace
+
+  build-wasm:
+    name: Build WASM Package
+    needs: test
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ul-forge
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-unknown-unknown
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: ul-forge
+      - name: Install wasm-pack
+        run: curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+      - name: Build WASM (bundler target for npm)
+        run: wasm-pack build --target bundler crates/ul-wasm --out-dir ../../dist/npm
+      - uses: actions/upload-artifact@v4
+        with:
+          name: wasm-npm-pkg
+          path: ul-forge/dist/npm/
+
+  build-web:
+    name: Build Web Editor
+    needs: test
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ul-forge
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-unknown-unknown
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: ul-forge
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: ul-forge/web/package-lock.json
+      - name: Install wasm-pack
+        run: curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+      - name: Build WASM
+        run: wasm-pack build --target web crates/ul-wasm --out-dir ../../web/wasm-pkg
+      - name: Install & Build
+        working-directory: ul-forge/web
+        run: npm ci && npm run build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: web-dist
+          path: ul-forge/web/dist/
+
+  deploy-pages:
+    name: Deploy to GitHub Pages
+    needs: build-web
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: web-dist
+          path: dist
+      - uses: actions/configure-pages@v4
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+      - id: deployment
+        uses: actions/deploy-pages@v4
+
+  github-release:
+    name: Create GitHub Release
+    needs: [build-wasm, build-web]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: web-dist
+          path: artifacts/web
+      - uses: actions/download-artifact@v4
+        with:
+          name: wasm-npm-pkg
+          path: artifacts/npm
+      - name: Create tarball
+        run: |
+          tar -czf ul-forge-web-${{ github.ref_name }}.tar.gz -C artifacts/web .
+          tar -czf ul-forge-npm-${{ github.ref_name }}.tar.gz -C artifacts/npm .
+      - uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
+          files: |
+            ul-forge-web-${{ github.ref_name }}.tar.gz
+            ul-forge-npm-${{ github.ref_name }}.tar.gz

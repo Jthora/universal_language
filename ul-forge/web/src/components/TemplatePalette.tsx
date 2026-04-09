@@ -81,10 +81,26 @@ const TIER3: Template[] = [
   { name: "Full Glyph",       script: "○{● →∠60 △{● | ~}}", symbol: "✦", description: "Multi-primitive composition" },
 ];
 
+// ── Extensions: Modal, Performative, Pragmatic ───────────────────
+const EXTENSIONS: Template[] = [
+  { name: "Necessity",        script: "[]{○{● → ●}}",             symbol: "□",  description: "Necessarily: solid bold border" },
+  { name: "Possibility",      script: "<>{○{● → ●}}",             symbol: "◇",  description: "Possibly: dashed border" },
+  { name: "Counterfactual",   script: "[]->{○{● → ●}}{○{● → ●}}", symbol: "□→", description: "If P were true, Q" },
+  { name: "Query",            script: "query{○{● → ●}}",          symbol: "?",  description: "Question force" },
+  { name: "Direct",           script: "direct{○{● → ●}}",         symbol: "!",  description: "Command force" },
+  { name: "Commit",           script: "commit{○{● → ●}}",         symbol: "⊢",  description: "Promise force" },
+  { name: "Express",          script: "express{○{● → ●}}",        symbol: "♡",  description: "Expressive force" },
+  { name: "Declare",          script: "declare{○{● → ●}}",        symbol: "⊨",  description: "Declarative force" },
+  { name: "Evidential",       script: "?{○{● → ●}}",              symbol: "?…", description: "Evidential modification" },
+  { name: "Emphatic",         script: "!{○{● → ●}}",              symbol: "!…", description: "Emphatic modification" },
+  { name: "Hedged",           script: "~?{○{● → ●}}",             symbol: "~?", description: "Hedged modification" },
+];
+
 export const TEMPLATE_GROUPS: TemplateGroup[] = [
   { tier: "T1", label: "Geometrically Forced", templates: TIER1 },
   { tier: "T2", label: "Structurally Distinguished", templates: TIER2 },
   { tier: "T3", label: "Conventional", templates: TIER3 },
+  { tier: "EXT", label: "Modal / Force / Pragmatic", templates: EXTENSIONS },
 ];
 
 /** Flat list of all 42 templates */

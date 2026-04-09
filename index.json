@@ -22,13 +22,25 @@
   "formal_system": {
     "name": "Σ_UL",
     "sorts": ["entity", "relation", "modifier", "assertion"],
-    "operations": 11,
+    "operations": 13,
     "geometric_primitives": ["point", "line", "angle", "curve", "enclosure"],
     "semantic_primitives": ["existence", "relation", "quality", "process", "concept"],
-    "theorems_proven": 23,
-    "uniqueness": "proven",
-    "embedding": "proven",
-    "natural_emergence": "proven"
+    "theorems_total": 23,
+    "theorem_tiers": ["proven", "conditional", "open"],
+    "uniqueness": "conditional_on_role_property_definitions",
+    "embedding": "adequacy_proven_faithfulness_gap",
+    "natural_emergence": "proven",
+    "modal_extension": {
+      "defined_operators": ["necessary", "possible", "counterfactual"],
+      "new_primitives": 0,
+      "distinguished_elements": 7
+    },
+    "performative_extension": {
+      "force_parameter": ["assert", "query", "direct", "commit", "express", "declare"],
+      "new_operations": 0,
+      "distinguished_elements": 2,
+      "d2_completeness": "50_of_50"
+    }
   },
 
   "writing_system": {
@@ -41,7 +53,7 @@
     },
     "canonical_entries": 42,
     "tier_system": ["T1_geometrically_forced", "T2_structurally_distinguished", "T3_conventional"],
-    "worked_examples": 10
+    "worked_examples": 19
   },
 
   "experiments": {

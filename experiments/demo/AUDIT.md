@@ -8,7 +8,7 @@
 
 ## Executive Summary
 
-**The fundamental error:** The entire experimental apparatus I built tests ONE artifact (the original test artifact) when it should test the UL *theory*. the original test artifact is a sample — someone else's attempt at an artifact. The formal theory (Σ_UL, the 5 geometric primitives, 11 operations, the mechanism-of-action conditions) provides explicit construction principles for deriving *new* artifacts from first principles. I never used them.
+**The fundamental error:** The entire experimental apparatus I built tests ONE artifact (the original test artifact) when it should test the UL *theory*. the original test artifact is a sample — someone else's attempt at an artifact. The formal theory (Σ_UL⁺, the 5 geometric primitives, 13 operations, the mechanism-of-action conditions) provides explicit construction principles for deriving *new* artifacts from first principles. I never used them.
 
 **The irony:** The project's own causal-efficacy-protocol.md calls this exact gap "the single most important experiment in the entire protocol" (§5, Experiment Delta). The roadmap literally says: "If UL is real, it should enable the *construction* of new artifacts from theory — not just the *explanation* of one existing artifact." I read this document and still missed the implication.
 
@@ -39,7 +39,7 @@
 
 the original test artifact is to UL theory what a particular bridge is to structural engineering. Showing that one bridge holds weight doesn't validate the engineering principles — it just shows that bridge works. The formal foundations provide:
 
-- **Σ_UL signature:** 4 sorts (Entity, Relation, Modifier, Assertion), 11 operations (predicate, modify_entity, modify_relation, negate, conjoin, disjoin, embed, abstract, compose, invert, quantify)
+- **Σ_UL⁺ signature:** 4 sorts (Entity, Relation, Modifier, Assertion), 13 operations (predicate, modify_entity, modify_relation, negate, conjoin, disjoin, embed, abstract, compose, invert, quantify, bind, modify_assertion)
 - **5 geometric primitives → 5 semantic primitives:** Point→Existence, Line→Relation, Angle→Quality, Curve→Process, Enclosure→Concept (uniquely forced by the Unique Grounding Theorem)
 - **7 mechanism conditions** (from mechanism-of-action.md §9): formal notation, overloaded symbol, deliberate anomalies, esoteric bridge token, self-referential structure, dissipation/grounding, correct ordering
 
@@ -89,7 +89,7 @@ The formal foundations give explicit construction principles that I should have 
 
 ### From Σ_UL (formal-foundations.md)
 
-The signature defines the *minimum structure* any universal language must have. A UL artifact should be a compressed encoding of this structure — text that forces the reader (human or LLM) to engage all 4 sorts and all 11 operations simultaneously.
+The signature defines the *minimum structure* any universal language must have. A UL artifact should be a compressed encoding of this structure — text that forces the reader (human or LLM) to engage all 4 sorts and all 13 operations simultaneously.
 
 **Construction principle:** A artifact must contain expressions that:
 - Establish entities (Point/Existence — e.g., ψ, Φ, any central symbol)
@@ -98,7 +98,7 @@ The signature defines the *minimum structure* any universal language must have. 
 - Parameterize continuous processes (Curve/Process — e.g., integrals, Fourier series, evolution equations)
 - Bound collections into concepts (Enclosure/Concept — e.g., norms |ψ|², definitions, bounded regions)
 
-AND these must be encoded using all 11 operations — predication, modification, negation, conjunction, disjunction, embedding, abstraction, composition, inversion, quantification.
+AND these must be encoded using all 13 operations — predication, modification, negation, conjunction, disjunction, embedding, abstraction, composition, inversion, quantification, binding, and assertion modification.
 
 ### From the Unique Grounding Theorem (formal-foundations.md Part IV)
 

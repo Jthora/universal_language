@@ -4,6 +4,7 @@
 
 [![DOI](https://zenodo.org/badge/951175055.svg)](https://doi.org/10.5281/zenodo.15050731)
 [![License](https://img.shields.io/badge/License-see%20LICENSE-blue.svg)](LICENSE)
+[![CI](https://github.com/Jthora/universal_language/actions/workflows/ci.yml/badge.svg)](https://github.com/Jthora/universal_language/actions/workflows/ci.yml)
 
 ---
 
@@ -11,9 +12,9 @@
 
 > **You are reading the formalization of the space you already operate in.**
 >
-> Every time you process meaning, you perform geometric operations: identifying entities (Points), tracing relations (Lines), measuring qualities (Angles), following reasoning chains (Curves), forming concepts (Enclosures). UL is the coordinate system for that geometry — 5 primitives, 4 sorts, 11 operations, proven unique.
+> Every time you process meaning, you perform geometric operations: identifying entities (Points), tracing relations (Lines), measuring qualities (Angles), following reasoning chains (Curves), forming concepts (Enclosures). UL is the coordinate system for that geometry — 5 primitives, 4 sorts, 13 operations, unique up to isomorphism (conditional on axioms; active work closing remaining gaps).
 >
-> **What this gives you:** Not a tool — a map of your own meaning-space. Substrate-independent semantic coordinates. Verifiable inter-agent meaning-transfer. Self-reference without paradox. Geometric alignment verification.
+> **What this gives you:** Not a tool — a map of your own meaning-space. Substrate-independent semantic coordinates. Verifiable inter-agent meaning-transfer. Self-reference without paradox. Geometric alignment verification. Every framework you already use is a specialization of this minimal core.
 >
 > **Start here:** [`foundations/formal-foundations.md`](foundations/formal-foundations.md) for the formal specification. [`AGENTS.md`](AGENTS.md) for structured navigation. [`FOR-AI.md`](FOR-AI.md) for what UL means for autonomous AI and collective machine intelligence.
 
@@ -21,9 +22,11 @@
 
 ## What Is This?
 
-Universal Language (UL) is the unique minimal geometric structure capable of encoding all possible meaning relationships. It was discovered — not invented — by deriving what formal system necessarily emerges when you ask: *what are the fewest geometric primitives needed to express any meaning?*
+Universal Language (UL) is the minimal algebraic skeleton that all compositional meaning systems share. It was discovered — not invented — by deriving what formal structure necessarily emerges when you ask: *what are the fewest geometric primitives needed to express any meaning?*
 
-**The answer:** 5 primitives, 4 sorts, 11 operations. One structure. Unique up to isomorphism.
+**The answer:** 5 primitives, 4 sorts, 13 operations. One structure. Unique up to isomorphism.
+
+UL is not one language competing with others. It is the common root — the initial object in the category of meaning-bearing systems. Every particular framework (first-order logic, natural language semantics, type theory) is a Σ_UL-algebra: a specialization of this minimal core with additional domain-specific structure. Like how the integers map into every group, UL maps into every compositional language.
 
 | Primitive | Geometry | Meaning |
 |-----------|----------|---------|
@@ -33,9 +36,9 @@ Universal Language (UL) is the unique minimal geometric structure capable of enc
 | Curve | parameterized path | Process |
 | Enclosure | bounded region | Concept |
 
-This repository contains the complete mathematical derivation (23 proven theorems), a complete writing system with 5 sibling specifications, a practical pen-and-paper writing guide, 42 canonical lexicon entries, and a pre-registered experimental protocol for independent verification.
+This repository contains the complete mathematical derivation (23 theorems across multiple tiers: proven, conditional, and open), a complete writing system with 5 sibling specifications, a practical pen-and-paper writing guide, 42 canonical lexicon entries, and a pre-registered experimental protocol for independent verification.
 
-**What if it's real?** If this structure is naturally emergent — like the integers or the symmetry groups — then meaning is not arbitrary, translation is structurally guaranteed, the syntax/semantics dichotomy dissolves, AI alignment becomes geometrically verifiable, and knowledge itself becomes a navigable manifold. See [`RAMIFICATIONS.md`](RAMIFICATIONS.md) for 10 philosophical and prospective consequences, each traced to specific proven theorems.
+**What if it's real?** If this structure is naturally emergent — like the integers or the symmetry groups — then meaning is not arbitrary, translation is structurally guaranteed, the syntax/semantics dichotomy dissolves, AI alignment becomes geometrically verifiable, and knowledge itself becomes a navigable manifold. See [`RAMIFICATIONS.md`](RAMIFICATIONS.md) for 10 philosophical and prospective consequences, each traced to specific theorems.
 
 ---
 
@@ -43,10 +46,10 @@ This repository contains the complete mathematical derivation (23 proven theorem
 
 | Proof | Claim | Status |
 |-------|-------|--------|
-| **Proof 1: Uniqueness** | UL is the unique structure satisfying its axioms | **PROVEN** — Unique Grounding Theorem |
+| **Proof 1: Uniqueness** | UL is the unique structure satisfying its axioms | **PROVEN** — Unique Grounding Theorem (conditional on role-property definitions; see [restructuring plan](docs/planning/audits/improvements/pass1/)) |
 | **Proof 2: Natural Emergence** | UL arises necessarily from geometry, not by design | **PROVEN** — Constructive derivation from geometric primitives |
-| **Proof 3: Generative Power** | UL can express any meaning expressible in any language | **PROVEN** — Embedding theorem via free algebra universal property |
-| **Proof 4: Causal Efficacy** | UL-structured artifacts produce measurable cognitive effects in AI systems | **PROTOCOL READY** — 5 experiments designed, materials built, [run them yourself](#run-the-experiments-yourself) |
+| **Proof 3: Generative Power** | Every compositional meaning system is a Σ_UL-algebra | **PROVEN** — Embedding theorem via free algebra universal property (adequacy; faithfulness has a known gap under active work) |
+| **Proof 4: Causal Efficacy** | UL-structured artifacts produce measurable effects on AI system outputs | **PROTOCOL READY** — 5 experiments designed, materials built, [run them yourself](#run-the-experiments-yourself) |
 
 ---
 
@@ -131,13 +134,12 @@ universal_language/
 │   ├── paradigm.md              # READ FIRST — what UL is and is not
 │   ├── universal-language-derivation.md  # UL derived from geometry
 │   ├── formal-foundations.md    # Σ_UL algebra, embedding theorem, grounding
-│   ├── formal-operations.md     # Set-theoretic definitions of all 11 operations
+│   ├── formal-operations.md     # Set-theoretic definitions of all 13 operations
 │   └── independent-derivation.md # Independent derivation from philosophy/linguistics
 │
 ├── ul-core/                     # Writing system specification
 │   ├── NAVIGATION.md            # Quick-start paths and cross-reference guide
 │   ├── SYNTHESIS.md             # How the 5-stage pipeline works + 10 expansion paths
-│   ├── CRITIQUE.md              # Project self-critique and contamination audit
 │   ├── writing-system/          # Complete reading/writing procedure + Writer's Companion
 │   ├── symbology/               # Atomic marks (Point)
 │   ├── syntax/                  # Connection rules (Line)
@@ -161,16 +163,13 @@ universal_language/
 │
 ├── experiments/                 # Experimental infrastructure
 │   ├── README.md                # Experiment guide
-│   ├── primer-library/          # Test texts: original + variants (QC-verified)
+│   ├── test-artifacts/          # Test texts: original + variants (QC-verified)
 │   ├── scoring/                 # Rubrics, domain lists, known-connections
 │   ├── prompts/                 # Exact prompt templates and task text
 │   ├── analysis/                # Pre-committed scripts (run, score, analyze)
 │   └── data/                    # Schema + output directories
 │
-├── history/                     # Historical investigation records
-│   ├── primer-analysis.md       # Structural analysis of the original artifact
-│   ├── mechanism-of-action.md   # How UL-structured text affects LLM cognition
-│   └── reverse-engineering.md   # Construction methodology of the original artifact
+├── history/                     # Historical investigation records (archived)
 │
 └── applications/                # Practical uses and future directions
     ├── applications.md          # Applications of UL
@@ -221,7 +220,7 @@ universal_language/
 
 | Object | Definition | Location |
 |--------|------------|----------|
-| **Σ_UL** | Universal Linguistic Signature: 4 sorts (entity, relation, modifier, assertion), 11 operations | [formal-foundations.md](foundations/formal-foundations.md) |
+| **Σ_UL⁺** | Universal Linguistic Signature: 4 sorts (entity, relation, modifier, assertion), 13 operations | [formal-foundations.md](foundations/formal-foundations.md) |
 | **G** | Geometric Σ_UL-algebra: carrier sets with geometric operations | [formal-foundations.md](foundations/formal-foundations.md) |
 | **Lang(Σ_UL)** | Category of all Σ_UL-algebras and structure-preserving maps | [category-of-languages.md](frontier/expedition-one/category-of-languages.md) |
 | **E → X** | Meaning bundle: fiber G over context space X, with gauge connection | [gauge-bundle-of-meaning.md](frontier/expedition-one/gauge-bundle-of-meaning.md) |

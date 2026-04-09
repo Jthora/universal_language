@@ -51,6 +51,7 @@ pub fn validate(gir: &Gir, check_geometry: bool) -> ValidationResult {
 
     validate_sorts(gir, &mut result);
     validate_invariants(gir, &mut result);
+    validate_bindings(gir, &mut result);
 
     if check_geometry {
         validate_geometry(gir, &mut result);
@@ -253,6 +254,53 @@ fn validate_sorts(gir: &Gir, result: &mut ValidationResult) {
                     }
                 }
             }
+            EdgeType::Binds => {
+                // Source must be a VariableSlot entity
+                if source.node_type != crate::types::node::NodeType::VariableSlot {
+                    result.add_error(UlError::SortViolation {
+                        edge_type: EdgeType::Binds,
+                        from_node: edge.source.clone(),
+                        from_sort: source.sort,
+                        to_node: edge.target.clone(),
+                        to_sort: target.sort,
+                        reason: "binds source must be a variable_slot node".to_string(),
+                    });
+                }
+                // Target must be Entity (the co-referent)
+                if target.sort != Sort::Entity {
+                    result.add_error(UlError::SortViolation {
+                        edge_type: EdgeType::Binds,
+                        from_node: edge.source.clone(),
+                        from_sort: source.sort,
+                        to_node: edge.target.clone(),
+                        to_sort: target.sort,
+                        reason: "binds target must be entity".to_string(),
+                    });
+                }
+            }
+            EdgeType::AccessibleFrom => {
+                // Both source and target must be Entity (worlds)
+                if source.sort != Sort::Entity {
+                    result.add_error(UlError::SortViolation {
+                        edge_type: EdgeType::AccessibleFrom,
+                        from_node: edge.source.clone(),
+                        from_sort: source.sort,
+                        to_node: edge.target.clone(),
+                        to_sort: target.sort,
+                        reason: "accessible_from source must be entity (world)".to_string(),
+                    });
+                }
+                if target.sort != Sort::Entity {
+                    result.add_error(UlError::SortViolation {
+                        edge_type: EdgeType::AccessibleFrom,
+                        from_node: edge.source.clone(),
+                        from_sort: source.sort,
+                        to_node: edge.target.clone(),
+                        to_sort: target.sort,
+                        reason: "accessible_from target must be entity (world)".to_string(),
+                    });
+                }
+            }
         }
     }
 }
@@ -375,6 +423,16 @@ fn validate_invariants(gir: &Gir, result: &mut ValidationResult) {
             }
         }
     }
+
+    // Check force: warn if set on non-enclosure nodes (force is semantically for assertion frames)
+    for node in &gir.nodes {
+        if node.force.is_some() && node.node_type != crate::types::node::NodeType::Enclosure {
+            result.add_warning(format!(
+                "force set on non-enclosure node '{}' (type={:?})",
+                node.id, node.node_type
+            ));
+        }
+    }
 }
 
 fn has_cycle_dfs<'a>(
@@ -400,6 +458,44 @@ fn has_cycle_dfs<'a>(
 
     in_stack.remove(node);
     false
+}
+
+// -- Layer 3b: Binding validation --
+
+fn validate_bindings(gir: &Gir, result: &mut ValidationResult) {
+    use crate::types::node::NodeType;
+
+    // Every VariableSlot must have at least one Binds edge from it
+    for node in &gir.nodes {
+        if node.node_type == NodeType::VariableSlot {
+            let has_bind_edge = gir
+                .edges
+                .iter()
+                .any(|e| e.edge_type == EdgeType::Binds && e.source == node.id);
+            if !has_bind_edge {
+                result.add_warning(format!(
+                    "variable_slot node '{}' has no binds edge — may be an unresolved variable",
+                    node.id
+                ));
+            }
+        }
+    }
+
+    // Every Binds edge source variable_id must be listed in binding_scope (if scope exists)
+    if let Some(ref scope) = gir.binding_scope {
+        for node in &gir.nodes {
+            if node.node_type == NodeType::VariableSlot {
+                if let Some(ref vid) = node.variable_id {
+                    if !scope.contains(vid) {
+                        result.add_warning(format!(
+                            "variable_slot node '{}' (var '{}') is not in binding_scope {:?}",
+                            node.id, vid, scope
+                        ));
+                    }
+                }
+            }
+        }
+    }
 }
 
 // -- Layer 4: Geometric satisfiability --
@@ -461,6 +557,15 @@ fn validate_geometry(gir: &Gir, result: &mut ValidationResult) {
                 }
             }
             crate::types::node::NodeType::Point => {}
+            crate::types::node::NodeType::VariableSlot => {
+                // Variable slot must have variable_id set
+                if node.variable_id.is_none() {
+                    result.add_error(UlError::MissingField {
+                        node_id: node.id.clone(),
+                        field: "variable_id".to_string(),
+                    });
+                }
+            }
         }
     }
 

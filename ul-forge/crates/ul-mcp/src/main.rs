@@ -20,6 +20,7 @@ use ul_core::parser;
 use ul_core::renderer::{self, OutputFormat, RenderOptions};
 use ul_core::types::gir::Gir;
 use ul_core::validator;
+use ul_core::composer;
 
 // ── JSON-RPC 2.0 types ──
 
@@ -199,6 +200,73 @@ fn tool_definitions() -> Value {
                 },
                 "required": ["query"]
             }
+        },
+        {
+            "name": "ul_compose",
+            "description": "Apply a Σ_UL operation to compose two GIR documents. Operations: predicate, modify_entity, modify_relation, negate, conjoin, disjoin, embed, abstract, compose, invert, quantify, bind, modify_assertion.",
+            "inputSchema": {
+                "type": "object",
+                "properties": {
+                    "operation": {
+                        "type": "string",
+                        "description": "One of the 13 Σ_UL operations to apply",
+                        "enum": ["predicate", "modify_entity", "modify_relation", "negate", "conjoin", "disjoin", "embed", "abstract", "compose", "invert", "quantify", "bind", "modify_assertion"]
+                    },
+                    "operands": {
+                        "type": "array",
+                        "description": "Array of UL-Script strings to use as operands (1 or 2 depending on operation)",
+                        "items": { "type": "string" }
+                    }
+                },
+                "required": ["operation", "operands"]
+            }
+        },
+        {
+            "name": "ul_analyze",
+            "description": "Analyze a GIR document to detect which Σ_UL operations were used in its construction. Returns the detected operations and structural metrics.",
+            "inputSchema": {
+                "type": "object",
+                "properties": {
+                    "gir": {
+                        "type": "object",
+                        "description": "GIR JSON document to analyze"
+                    }
+                },
+                "required": ["gir"]
+            }
+        },
+        {
+            "name": "ul_set_force",
+            "description": "Set the performative force on a GIR assertion. Forces: assert (neutral statement), query (question), direct (command), commit (promise), express (feeling), declare (institutional act).",
+            "inputSchema": {
+                "type": "object",
+                "properties": {
+                    "gir": {
+                        "type": "object",
+                        "description": "GIR JSON document (must have Entity or Assertion root)"
+                    },
+                    "force": {
+                        "type": "string",
+                        "enum": ["assert", "query", "direct", "commit", "express", "declare"],
+                        "description": "Performative force to apply"
+                    }
+                },
+                "required": ["gir", "force"]
+            }
+        },
+        {
+            "name": "ul_infer_pragmatics",
+            "description": "Run pragmatic inference rules on a surface GIR. Detects scalar implicatures (SI-1: 'some' ⟹ 'not all'), disjunction implicatures (SI-3: 'A or B' ⟹ 'not both'), and indirect requests (CI-3: 'can you X?' ⟹ 'do X!').",
+            "inputSchema": {
+                "type": "object",
+                "properties": {
+                    "gir": {
+                        "type": "object",
+                        "description": "GIR JSON document to analyze for pragmatic inferences"
+                    }
+                },
+                "required": ["gir"]
+            }
         }
     ])
 }
@@ -361,6 +429,178 @@ fn handle_ul_lexicon(params: &Value) -> Result<Value, String> {
     Ok(json!({ "entries": entries_json, "count": entries_json.len() }))
 }
 
+fn handle_ul_compose(params: &Value) -> Result<Value, String> {
+    let operation = params
+        .get("operation")
+        .and_then(|v| v.as_str())
+        .ok_or("Missing required parameter: operation")?;
+    let operands = params
+        .get("operands")
+        .and_then(|v| v.as_array())
+        .ok_or("Missing required parameter: operands (array of UL-Script strings)")?;
+
+    let operand_strs: Vec<&str> = operands.iter().filter_map(|v| v.as_str()).collect();
+
+    // Parse operands
+    let girs: Vec<Gir> = operand_strs
+        .iter()
+        .map(|s| parser::parse(s).map_err(|e| format!("Parse error on '{}': {}", s, e)))
+        .collect::<Result<Vec<_>, _>>()?;
+
+    let result = match operation {
+        "negate" => {
+            ensure_operands(&girs, 1, "negate")?;
+            composer::negate(&girs[0]).map_err(|e| format!("Compose error: {e}"))
+        }
+        "embed" => {
+            ensure_operands(&girs, 1, "embed")?;
+            composer::embed(&girs[0]).map_err(|e| format!("Compose error: {e}"))
+        }
+        "abstract" => {
+            ensure_operands(&girs, 1, "abstract")?;
+            composer::abstract_op(&girs[0]).map_err(|e| format!("Compose error: {e}"))
+        }
+        "invert" => {
+            ensure_operands(&girs, 1, "invert")?;
+            composer::invert(&girs[0]).map_err(|e| format!("Compose error: {e}"))
+        }
+        "predicate" => {
+            ensure_operands(&girs, 3, "predicate")?;
+            composer::predicate(&girs[0], &girs[1], &girs[2])
+                .map_err(|e| format!("Compose error: {e}"))
+        }
+        "modify_entity" => {
+            ensure_operands(&girs, 2, "modify_entity")?;
+            composer::modify_entity(&girs[0], &girs[1])
+                .map_err(|e| format!("Compose error: {e}"))
+        }
+        "modify_relation" => {
+            ensure_operands(&girs, 2, "modify_relation")?;
+            composer::modify_relation(&girs[0], &girs[1])
+                .map_err(|e| format!("Compose error: {e}"))
+        }
+        "conjoin" => {
+            ensure_operands(&girs, 2, "conjoin")?;
+            composer::conjoin(&girs[0], &girs[1]).map_err(|e| format!("Compose error: {e}"))
+        }
+        "disjoin" => {
+            ensure_operands(&girs, 2, "disjoin")?;
+            composer::disjoin(&girs[0], &girs[1]).map_err(|e| format!("Compose error: {e}"))
+        }
+        "compose" => {
+            ensure_operands(&girs, 2, "compose")?;
+            composer::compose(&girs[0], &girs[1]).map_err(|e| format!("Compose error: {e}"))
+        }
+        "quantify" => {
+            ensure_operands(&girs, 2, "quantify")?;
+            composer::quantify(&girs[0], &girs[1]).map_err(|e| format!("Compose error: {e}"))
+        }
+        "bind" => {
+            ensure_operands(&girs, 2, "bind")?;
+            composer::bind(&girs[0], &girs[1]).map_err(|e| format!("Compose error: {e}"))
+        }
+        "modify_assertion" => {
+            ensure_operands(&girs, 2, "modify_assertion")?;
+            composer::modify_assertion(&girs[0], &girs[1])
+                .map_err(|e| format!("Compose error: {e}"))
+        }
+        _ => Err(format!("Unknown operation: {operation}")),
+    }?;
+
+    let gir_json: Value =
+        serde_json::from_str(&result.to_json_pretty().map_err(|e| format!("Serialize error: {e}"))?)
+            .map_err(|e| format!("JSON error: {e}"))?;
+    let ul_script = parser::deparse(&result).unwrap_or_default();
+
+    Ok(json!({
+        "gir": gir_json,
+        "ul_script": ul_script
+    }))
+}
+
+fn ensure_operands(girs: &[Gir], expected: usize, op: &str) -> Result<(), String> {
+    if girs.len() < expected {
+        Err(format!("{op} requires {expected} operand(s), got {}", girs.len()))
+    } else {
+        Ok(())
+    }
+}
+
+fn handle_ul_analyze(params: &Value) -> Result<Value, String> {
+    let gir_value = params.get("gir").ok_or("Missing required parameter: gir")?;
+    let gir_json = serde_json::to_string(gir_value).map_err(|e| format!("JSON error: {e}"))?;
+    let gir = Gir::from_json(&gir_json).map_err(|e| format!("Invalid GIR: {e}"))?;
+
+    let ops = composer::detect_operations(&gir);
+    let op_names: Vec<&str> = ops.iter().map(|o| o.operation).collect();
+
+    Ok(json!({
+        "operations": op_names,
+        "node_count": gir.nodes.len(),
+        "edge_count": gir.edges.len(),
+        "root": gir.root,
+    }))
+}
+
+fn handle_ul_set_force(params: &Value) -> Result<Value, String> {
+    let gir_value = params.get("gir").ok_or("Missing required parameter: gir")?;
+    let force_str = params
+        .get("force")
+        .and_then(|v| v.as_str())
+        .ok_or("Missing required parameter: force")?;
+
+    let gir_json = serde_json::to_string(gir_value).map_err(|e| format!("JSON error: {e}"))?;
+    let gir = Gir::from_json(&gir_json).map_err(|e| format!("Invalid GIR: {e}"))?;
+
+    let force = match force_str {
+        "assert" => ul_core::PerformativeForce::Assert,
+        "query" => ul_core::PerformativeForce::Query,
+        "direct" => ul_core::PerformativeForce::Direct,
+        "commit" => ul_core::PerformativeForce::Commit,
+        "express" => ul_core::PerformativeForce::Express,
+        "declare" => ul_core::PerformativeForce::Declare,
+        other => return Err(format!("Unknown force: {other}")),
+    };
+
+    let result = ul_core::performative::with_force(&gir, force)
+        .map_err(|e| format!("Force error: {e}"))?;
+
+    let result_json: Value =
+        serde_json::from_str(&result.to_json_pretty().map_err(|e| format!("Serialize error: {e}"))?)
+            .map_err(|e| format!("JSON error: {e}"))?;
+    let ul_script = parser::deparse(&result).unwrap_or_default();
+
+    Ok(json!({
+        "gir": result_json,
+        "ul_script": ul_script,
+        "force": force_str
+    }))
+}
+
+fn handle_ul_infer_pragmatics(params: &Value) -> Result<Value, String> {
+    let gir_value = params.get("gir").ok_or("Missing required parameter: gir")?;
+
+    let gir_json = serde_json::to_string(gir_value).map_err(|e| format!("JSON error: {e}"))?;
+    let gir = Gir::from_json(&gir_json).map_err(|e| format!("Invalid GIR: {e}"))?;
+
+    let inferences = ul_core::pragmatic::infer(&gir);
+    let results: Vec<Value> = inferences
+        .iter()
+        .map(|inf| {
+            json!({
+                "rule": format!("{:?}", inf.rule),
+                "surface": serde_json::to_value(&inf.surface).unwrap_or_default(),
+                "intended": serde_json::to_value(&inf.intended).unwrap_or_default(),
+            })
+        })
+        .collect();
+
+    Ok(json!({
+        "inferences": results,
+        "count": results.len()
+    }))
+}
+
 // ── MCP request dispatch ──
 
 fn handle_request(req: &JsonRpcRequest) -> JsonRpcResponse {
@@ -413,6 +653,10 @@ fn handle_request(req: &JsonRpcRequest) -> JsonRpcResponse {
                 "ul_deparse" => handle_ul_deparse(&arguments),
                 "ul_parse_and_render" => handle_ul_parse_and_render(&arguments),
                 "ul_lexicon" => handle_ul_lexicon(&arguments),
+                "ul_compose" => handle_ul_compose(&arguments),
+                "ul_analyze" => handle_ul_analyze(&arguments),
+                "ul_set_force" => handle_ul_set_force(&arguments),
+                "ul_infer_pragmatics" => handle_ul_infer_pragmatics(&arguments),
                 _ => Err(format!("Unknown tool: {tool_name}")),
             };
 
@@ -671,7 +915,7 @@ mod tests {
         let resp = handle_request(&req);
         let result = resp.result.unwrap();
         let tools = result.get("tools").unwrap().as_array().unwrap();
-        assert_eq!(tools.len(), 6);
+        assert_eq!(tools.len(), 10);
     }
 
     #[test]
@@ -731,5 +975,68 @@ mod tests {
         let resp = handle_request(&req);
         assert!(resp.result.is_some());
         assert!(resp.error.is_none());
+    }
+
+    // ── ul_compose ──
+
+    #[test]
+    fn compose_invert() {
+        let params = json!({
+            "operation": "invert",
+            "operands": ["→"]
+        });
+        let result = handle_ul_compose(&params).unwrap();
+        assert!(result.get("gir").is_some());
+        assert!(result.get("ul_script").is_some());
+    }
+
+    #[test]
+    fn compose_modify_entity() {
+        let params = json!({
+            "operation": "modify_entity",
+            "operands": ["∠60", "●"]
+        });
+        let result = handle_ul_compose(&params).unwrap();
+        assert!(result.get("gir").is_some());
+    }
+
+    #[test]
+    fn compose_missing_operands() {
+        let params = json!({
+            "operation": "negate",
+            "operands": []
+        });
+        let result = handle_ul_compose(&params);
+        assert!(result.is_err());
+    }
+
+    #[test]
+    fn compose_unknown_operation() {
+        let params = json!({
+            "operation": "nonexistent",
+            "operands": ["●"]
+        });
+        let result = handle_ul_compose(&params);
+        assert!(result.is_err());
+    }
+
+    // ── ul_analyze ──
+
+    #[test]
+    fn analyze_simple_gir() {
+        let parse_result = handle_ul_parse(&json!({ "ul_script": "○{●}" })).unwrap();
+        let gir = parse_result.get("gir").unwrap();
+        let params = json!({ "gir": gir });
+        let result = handle_ul_analyze(&params).unwrap();
+        assert!(result.get("operations").is_some());
+        assert!(result.get("node_count").is_some());
+        assert!(result.get("edge_count").is_some());
+    }
+
+    #[test]
+    fn analyze_missing_gir() {
+        let params = json!({});
+        let result = handle_ul_analyze(&params);
+        assert!(result.is_err());
     }
 }

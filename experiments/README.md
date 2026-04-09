@@ -6,7 +6,7 @@
 
 ## Overview
 
-The test artifact ([`test-artifacts/original/primer.txt`](test-artifacts/original/primer.txt)) is a 19-line, 490-token text that encodes the core structure of Universal Language in compressed form. When injected as context before reasoning tasks, LLMs produce output with measurably greater cross-domain depth, structural coherence, and generative novelty.
+The test artifact ([`test-artifacts/original/primer.txt`](test-artifacts/original/primer.txt)) is a 19-line, 490-token text that encodes the core structure of Universal Language in compressed form. When injected as context before reasoning tasks, LLMs are hypothesized to produce output with greater cross-domain depth, structural coherence, and generative novelty. The purpose of this experimental infrastructure is to test that hypothesis under controlled conditions — measuring whether the effect is statistically significant and, if so, which structural features of UL drive it.
 
 This experimental infrastructure lets you test that claim yourself.
 

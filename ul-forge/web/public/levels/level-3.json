@@ -1,0 +1,25 @@
+{
+  "level": 3,
+  "title": "Composition",
+  "description": "Conjoin, disjoin, and embed assertions",
+  "exercises": [
+    {
+      "prompt": "Encode: \"The sun shines AND birds sing\"",
+      "hint": "Create two assertions, then conjoin them",
+      "expectedOps": ["conjoin"],
+      "sampleAnswer": "○{ ○{ ● \"sun\" ~ \"shines\" } ○{ ● \"birds\" ~ \"sing\" } }"
+    },
+    {
+      "prompt": "Encode: \"Cats purr OR dogs bark\"",
+      "hint": "Create two assertions, then disjoin them",
+      "expectedOps": ["disjoin"],
+      "sampleAnswer": "○{ ○{ ● \"cats\" ~ \"purr\" } ∨ ○{ ● \"dogs\" ~ \"bark\" } }"
+    },
+    {
+      "prompt": "Embed: \"That fire is hot worries me\"",
+      "hint": "embed the inner assertion into an entity, then predicate",
+      "expectedOps": ["embed", "predicate"],
+      "sampleAnswer": "○{ ○{ ● \"fire\" → ● \"hot\" } → ● \"worries\" → ● \"me\" }"
+    }
+  ]
+}

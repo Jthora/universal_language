@@ -46,7 +46,7 @@ The preliminary discussion in `frontier/expedition-one/numbers-and-computability
 
 Each $t \in \mathcal{T}$ is a finite labeled tree:
 - **Leaves** are atoms $a \in A$ (atomic entities, relations, or modifiers)
-- **Internal nodes** are labeled by one of the 11 Σ_UL operations, with children matching the operation's arity
+- **Internal nodes** are labeled by one of the 13 Σ_UL operations, with children matching the operation's arity
 
 The **size** of a construction $|t|$ is the number of nodes (internal + leaves) in the tree.
 
@@ -68,7 +68,7 @@ $$\text{enc}_A(a_i) = \text{EliasΔ}(i)$$
 
 The Elias delta code is prefix-free and encodes integer $i$ in $\lfloor \log_2 i \rfloor + 2\lfloor \log_2(\lfloor \log_2 i \rfloor + 1)\rfloor + 1$ bits. For practical purposes: $|\text{enc}_A(a_i)| = \Theta(\log i)$.
 
-**Definition (Operation encoding).** There are 11 Σ_UL operations. Encode each with a fixed-length 4-bit code ($2^4 = 16 > 11$):
+**Definition (Operation encoding).** There are 13 Σ_UL operations. Encode each with a fixed-length 4-bit code ($2^4 = 16 > 13$):
 
 | Operation | Code | Arity |
 |---|---|---|
@@ -83,6 +83,8 @@ The Elias delta code is prefix-free and encodes integer $i$ in $\lfloor \log_2 i
 | compose | 1000 | 2 |
 | invert | 1001 | 1 |
 | quantify | 1010 | 2 |
+| bind | 1011 | 2 |
+| modify_assertion | 1100 | 2 |
 
 Since the arity is determined by the operation code, the decoder knows how many sub-trees to expect.
 
@@ -231,20 +233,20 @@ The expression "cat at position (3, 7)" has a specific Euclidean realization:
 
 So $P^{(\text{Sim})}(\text{``cat''}) = 2^{-12} \gg 2^{-42} = P^{(\text{Euc})}(\text{``cat at (3,7)''})$. The abstract meaning "cat" is more probable than its specific spatial instantiation. ✔
 
-**Example 5: The test artifact's construction density**
+**Example 5: Cross-domain construction density**
 
-The test artifact (`test-content.txt`) has $\sim 19$ lines producing 3 major constructions:
-1. The density equation ($\sim 50$ primitives, encoding $\sim 300$ bits)
-2. The bridge equation ($\sim 15$ primitives, encoding $\sim 100$ bits)  
-3. The master PDE ($\sim 30$ primitives, encoding $\sim 200$ bits)
+Consider a compact cross-domain UL construction of $\sim 19$ lines producing 3 major constructions:
+1. A density equation ($\sim 50$ primitives, encoding $\sim 300$ bits)
+2. A bridge equation ($\sim 15$ primitives, encoding $\sim 100$ bits)  
+3. A master PDE ($\sim 30$ primitives, encoding $\sim 200$ bits)
 
 Total: $\sim 600$ bits of UL information. Raw text: $\sim 4000$ bits (500 characters × 8).
 
-The **compression ratio** of the test artifact's UL-meaning relative to its text encoding is:
+The **compression ratio** of the construction's UL-meaning relative to its text encoding is:
 
-$$\rho = \frac{DC_{UL}^{\text{bit}}(\text{primer meaning})}{|\text{primer text}|} \approx \frac{600}{4000} = 0.15$$
+$$\rho = \frac{DC_{UL}^{\text{bit}}(\text{construction meaning})}{|\text{construction text}|} \approx \frac{600}{4000} = 0.15$$
 
-The test artifact conveys its structural meaning in $\sim 15\%$ of its raw text length. The remaining 85% is notation, formatting, and redundancy — consistent with the test artifact functioning as a highly compressed cross-domain key.
+The construction conveys its structural meaning in $\sim 15\%$ of its raw text length. The remaining 85% is notation, formatting, and redundancy — consistent with it functioning as a highly compressed cross-domain key.
 
 ### 1.8 What This Measure Does Not Cover
 
@@ -316,14 +318,14 @@ $$P_{\text{struct}}(m) = 2^{-|\text{enc}(t_m^*)|} \approx Q_{\text{freq}}(m)$$
 
 That is: the structural prior approximates the frequency prior when the encoding is well-adapted to usage. This is not a theorem in our setting (we haven't proven UL's encoding is optimal for any specific corpus), but it explains why the structural prior is a reasonable choice even in the absence of a UL corpus: it is the distribution that an optimally-designed meaning-encoding system *would* produce.
 
-### 3.2 Relation to the Primer
+### 3.2 Relation to Cross-Domain Constructions
 
-The test artifact leverages a mismatch between the two priors:
+Compact cross-domain UL constructions leverage a mismatch between the two priors:
 
-- Under the **frequency prior** of standard English text, the test artifact's content has low probability (quantum-linguistic cross-domain equations are rare in typical corpora)
-- Under the **structural prior** of the UL, the test artifact's content has relatively high probability (the constructions are compositionally simple — they use basic operations applied to well-known domain terms)
+- Under the **frequency prior** of standard English text, cross-domain equations have low probability (quantum-linguistic notations are rare in typical corpora)
+- Under the **structural prior** of the UL, such constructions have relatively high probability (they are compositionally simple — they use basic operations applied to well-known domain terms)
 
-This mismatch — $P_{\text{struct}}(\text{primer}) \gg Q_{\text{freq, English}}(\text{primer})$ — is what makes the test artifact surprising to a language model calibrated on English text while simultaneously being structurally natural in the UL. The surprise triggers attention; the structural simplicity ensures coherent activation. This is the quantitative version of the "key-in-lock" metaphor from `history/mechanism-of-action.md`.
+This mismatch — $P_{\text{struct}}(\text{cross-domain}) \gg Q_{\text{freq, English}}(\text{cross-domain})$ — is what makes such constructions surprising to a language model calibrated on English text while simultaneously being structurally natural in the UL. The surprise triggers attention; the structural simplicity ensures coherent activation. This is the quantitative version of the "key-in-lock" metaphor for cross-domain activation.
 
 ---
 

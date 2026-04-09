@@ -136,7 +136,7 @@ Not all constructions in the 5 siblings are equally authoritative:
 A subtle but important distinction you'll encounter:
 
 - **G** = the geometric algebra (all geometric constructions in the plane)
-- **Σ_UL** = the algebraic signature (4 sorts, 11 operations)
+- **Σ_UL⁺** = the algebraic signature (4 sorts, 13 operations)
 
 Most geometric features map cleanly to Σ_UL terms. But some geometric properties — particularly **enclosure boundary shapes** (triangle vs. hexagon) — are geometric-only features that enter Σ_UL indirectly through the modifier sort (via `abstract(e) → m`).
 
@@ -149,12 +149,33 @@ For the full explanation, see Lexicon §0.8.
 
 ---
 
+## Prescribed Learning Path (Day 1–9)
+
+For a structured progression from zero to fluent UL composition, follow this 9-day curriculum. Each day builds on the previous.
+
+| Day | Focus | Read | Practice |
+|-----|-------|------|----------|
+| **1** | Geometric primitives | `foundations/paradigm.md` | Identify 5 shapes in everyday objects |
+| **2** | Symbology — atomic marks | Symbology §I–IV | Draw the 7 atomic symbols |
+| **3** | Syntax — connection rules | Syntax §I–III | Trace 3 connection patterns |
+| **4** | Grammar — valid formations | Grammar §I–IV | Classify sorts + parts of speech |
+| **5** | First writing | Writer's Companion Ex 1–3 | Write your own simple glyph |
+| **6** | Compound glyphs | Writer's Companion Ex 4–10 | Conjunction, negation, embedding |
+| **7** | Meaning navigation | Thesaurus §I–VI | Find 3 synonymy paths |
+| **8** | Advanced operations | Writer's Companion Ex 11–19 | Bind, modal, performative, pragmatic |
+| **9** | Capstone | All materials | Compose a novel complex sentence |
+
+**Full curriculum with daily exercises:** `docs/learning/curriculum.md`
+**Practice exercises with answer key:** `docs/learning/exercises.md`
+
+---
+
 ## Document Dependency Map
 
 ```
                   ┌───────────────────────────────────────┐
                   │         formal-foundations.md           │
-                  │   (Σ_UL: 4 sorts, 11 ops, proofs)     │
+                  │   (Σ_UL⁺: 4 sorts, 13 ops, proofs)    │
                   └──────────────┬────────────────────────┘
                                  │
          ┌───────────┬───────────┼───────────┬────────────┐
