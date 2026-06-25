@@ -1,10 +1,13 @@
 # Universal Language (UL)
 
-**Project Name:** Universal Language (UL)
+**Project Name:** 
+Universal Language (UL)
 
-**Central Hypothesis:** There exists a finite set of universal semantic primitives and transformation operators that generate a domain-independent semantic substrate.
+**Central Hypothesis:** 
+There exists a finite set of universal semantic primitives and transformation operators that generate a domain-independent semantic substrate.
 
-**Formal Research Objective:** To identify, formalize, and validate the minimal semantic basis and transformation algebra required to represent meaning consistently across human language, artificial intelligence, mathematics, symbolic systems, and other representational domains.
+**Formal Research Objective:** 
+To identify, formalize, and validate the minimal semantic basis and transformation algebra required to represent meaning consistently across human language, artificial intelligence, mathematics, symbolic systems, and other representational domains.
 
 **A naturally emergent formal structure — like the natural numbers or the symmetry groups of physics — that is more fundamental than any ethnic/natural language.**
 
