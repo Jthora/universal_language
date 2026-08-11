@@ -251,8 +251,14 @@ claims:
       designing each invariant as a convex constraint makes the region convex by construction and
       restores the Hilbert projection theorem. Gardenfors' conceptual spaces gives this independent
       cognitive-science motivation: a natural concept is a convex region, and convexity is argued to
-      be what makes concepts learnable and communicable. Now two viable repair routes exist and
-      should be compared explicitly rather than one being assumed.
+      be what makes concepts learnable and communicable.
+      CAVEAT ADDED ON REVIEW: convexity is a property of a set RELATIVE TO a choice of quality
+      dimensions and metric — given freedom over the embedding, a wide class of sets can be made
+      convex. So this may inherit a Zadrozny-style vacuity unless the quality dimensions are
+      justified independently, which is roughly as hard as the original problem. Gardenfors'
+      criterion is also normative/definitional rather than an empirical finding. Still worth
+      comparing; advantage is conditional.
+      See research/source-critique-2026-08.md section 4.
     compare_with: [CURE-REPAIR-FORMULATION]
 
   - id: UWS-AMR-BENCHMARK
@@ -261,11 +267,16 @@ claims:
     falsified_by: "AMR structures turn out to be systematically inexpressible in UWS for reasons that make the comparison uninformative rather than diagnostic."
     evidence: research/unexplored-territory-2026-08.md
     notes: >
-      AMR 3.0 contains 59,255 human-annotated meaning graphs built for unrelated purposes. Attempting
-      to express each in UWS and logging every failure converts UWS-as-instrument from aspiration
-      into a runnable experiment with tens of thousands of non-cherry-picked cases. AMR also hit the
-      same reentrancy/sharing problem and solved it with variables — a third independent
-      confirmation of the IR decision.
+      AMR 3.0 contains 59,255 human-annotated meaning graphs built for unrelated purposes. Useful as
+      a STRESS TEST (does UWS break on structures someone else designed?). AMR also hit the same
+      reentrancy/sharing problem and solved it with variables — a third independent confirmation of
+      the IR decision.
+      CRITICAL CAVEAT: the corpus is ENGLISH ONLY, built on PropBank (an English predicate-argument
+      lexicon), annotated by English speakers. Any coverage figure measures ENGLISH expressibility.
+      Reporting it as universality would reproduce UNL's single most documented failure mode
+      (English bias in a "universal" vocabulary). Requires a non-English counterpart — cross-lingual
+      and Chinese AMR efforts exist and should be checked before use.
+      See research/source-critique-2026-08.md section 2.
     priority: 2
 
   - id: GROUNDING-PROBLEM

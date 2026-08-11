@@ -207,3 +207,39 @@ UNL had United Nations University backing, 17 national language centers, a Genev
 decades — and did not achieve adoption either.
 **Status:** Open. Adoption must be treated as a first-class problem with its own strategy, not as a
 downstream consequence of quality. No such strategy currently exists.
+
+---
+
+## F-012a — CORRECTION to F-012 (scope was too broad)
+**Date:** 2026-08-01
+**What F-012 claimed:** iconicity does not bootstrap comprehension, full stop.
+**Why that was over-stated:** the ISO evidence tests *referential* pictograms — symbols standing for
+culturally-embedded institutional objects (fire extinguisher, prohibited action). UWS primitives are
+*structural*: existence, connection, quality, containment. Basic spatial-diagrammatic conventions
+(containment as membership, arrow as direction) are in fact robustly understood with little
+instruction, and were not weighed. Pictograms are also tested one-shot in isolation, whereas a
+notation is learned as a mutually-reinforcing system. ISO studies additionally select for symbols
+already suspected of being problematic.
+**Narrowed claim:** iconicity does not bootstrap **referential** meaning for arbitrary
+culturally-embedded objects. Whether it bootstraps **structural/relational** meaning is **untested**,
+and is cheaply testable — a good experiment, not a settled defeat.
+**Status of the downstream conclusion:** "UWS is a taught notation" still stands, but on the music-
+notation and system-learning evidence rather than on the pictogram data.
+See `research/source-critique-2026-08.md` §1.
+
+---
+
+## F-013a — CORRECTION to F-013 (evidence came from an extreme incumbent case)
+**Date:** 2026-08-01
+**What F-013 claimed:** design quality is insufficient for adoption, evidenced by music-notation
+reform failure and UNL.
+**Why that was over-stated:** the music-notation evidence concerns displacing Western staff notation
+— roughly 1,000 years of investment, every extant score, all pedagogy, and instruments physically
+built around it. A near-maximal network-effect case. UWS is not attempting to displace an entrenched
+standard; no dominant notation occupies its niche. UNL's failure is separately confounded: it
+launched in 1996 and the entire MT field abandoned interlingua because statistical and then neural
+direct translation outperformed it — an economic outcome, not a conceptual refutation.
+**Narrowed claim:** adoption is a genuine first-class problem and deserves explicit strategy, but the
+cited evidence bears on *replacement of an entrenched standard*, and applies far more weakly to
+creation in an unserved niche.
+See `research/source-critique-2026-08.md` §7 and §6.
