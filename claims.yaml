@@ -188,6 +188,60 @@ claims:
     priority: 0
     blocks: [SEMANTIC-EQUALITY, NEG-INVOLUTION, UQPL-REDUCTION]
 
+  - id: CURE-IS-TMS
+    statement: "The Cure is an instance of Truth Maintenance, and ATMS multi-context maintenance is the leading candidate architecture."
+    tier: DESIGN-CHOICE
+    rationale: research/who-has-our-problem-2026-08.md
+    alternatives_considered:
+      - "metric projection onto admissible region (multivalued for non-convex regions)"
+      - "ontology pinpointing / minimal diagnoses"
+      - "sheaf cohomology (needs a cover we have not identified)"
+      - "ATMS multi-context maintenance (front-runner)"
+    notes: >
+      Doyle's JTMS (1979) and de Kleer's ATMS (1986) already implement every component the Cure
+      specifies: contradiction detection, justifications, dependency-directed backtracking to locate
+      causes rather than symptoms, nogood databases, and belief revision under change — explicitly
+      domain-independent.
+      Critically, ATMS DISSOLVES F-009 rather than engineering around it: instead of collapsing to a
+      single repaired state (nondeterministic when the admissible region is non-convex), it
+      maintains all consistent contexts simultaneously and lets downstream reasoning select.
+      Multivaluedness becomes the represented object rather than a defect.
+      Third independent mature field found solving this problem (after ontology repair and AGM), all
+      descending from justification-based reasoning about belief change. The Cure is not a novel
+      problem; the work is integration, not invention.
+
+  - id: INVARIANT-INFERENCE
+    statement: "Semantic invariants can be bootstrapped by inference from a corpus of valid structures rather than specified a priori."
+    tier: CONJECTURED
+    falsified_by: "Inferred invariants over a valid-structure corpus are dominated by corpus artifacts and fail to generalize to held-out valid structures."
+    evidence: research/who-has-our-problem-2026-08.md
+    notes: >
+      Daikon dynamically detects LIKELY invariants from observed traces, with a template vocabulary
+      (constancy, non-zero, range, linear relation, ordering, sortedness) that maps onto what we
+      need, and works over record-structured data sources, not only program execution. Neural
+      network analysis is a listed application.
+      Converts the project's sharpest concrete gap — not one semantic invariant has ever been
+      written as a checkable predicate — from a philosophical problem into an empirical one.
+      CAVEAT: Daikon reports LIKELY invariants, which may be corpus artifacts. It is a candidate
+      generator requiring validation, not an oracle. But a candidate generator is exactly what is
+      missing.
+    priority: 1
+
+  - id: CURE-PREVENTION-VS-REPAIR
+    statement: "Where representation updates are interceptable, constraint enforcement at write time (prevention) is preferable to detect-then-repair."
+    tier: CONJECTURED
+    falsified_by: "Representation updates in the target systems are shown to be non-interceptable or non-discrete, making a write barrier impossible."
+    evidence: research/who-has-our-problem-2026-08.md
+    notes: >
+      Databases enforce integrity constraints on every INSERT/UPDATE/DELETE — invalid states never
+      exist. The Cure assumes corruption has already occurred and must be detected and repaired.
+      This is a genuine architectural fork the project has never articulated. Prevention is cheaper,
+      deterministic, and requires no repair operator at all. It may be unavailable for
+      representations that evolve through learning rather than discrete writes — but that should be
+      an argued conclusion rather than an unexamined default.
+      Also note CASCADE: databases specify repair per-constraint at DESIGN time as a declared
+      propagation rule, rather than solving for a repair at runtime. A fourth repair route.
+
   - id: CURE-CHECK-SHACL
     statement: "The shape-constraint half of the Cure's check phase is served by SHACL rather than built from scratch."
     tier: DESIGN-CHOICE
