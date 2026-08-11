@@ -300,3 +300,34 @@ coarse-graining behaviour, the Layer 0 link) is provable and should be built as 
 whether its objects are mathematical. If they are, the burden is to find the theorem, not to design
 a study.
 See `research/what-is-actually-provable-2026-08.md`.
+
+---
+
+## F-016 — never audited for obstruction theorems
+**Date:** 2026-08-01
+**What was missing:** the project has repeatedly asked "how do we build this?" and never asked "what
+theorem says we can't?" A systematic sweep of the CONJECTURED backlog found two obstruction results
+that bear directly on the architecture and appeared **nowhere** in the repository:
+- **Löb's theorem / the Löbian obstacle.** *"An agent X can only trust the reasoning of an agent Y
+  with a strictly weaker reasoning system than themselves."* The Cure repairs representations and
+  must trust its own repairs; if it is part of the system it repairs, or repairs its own successor,
+  it **provably cannot verify soundness at equal logical strength.** This forces an architectural
+  choice (external-and-stronger, accept a descending strength chain, or abandon proof-based
+  self-trust) that was heading toward being discovered during implementation.
+- **Rice's theorem.** All non-trivial semantic properties of programs are undecidable, which bounds
+  `SEMANTIC-EQUALITY` from above for any Turing-expressive representation. Additionally
+  (Baldan et al., ICALP 2021) *every decidable overapproximation "necessarily includes an infinite
+  set of false positives."* The Cure will have false positives, provably and infinitely many; the
+  only design question is which.
+**Why it matters:** both are settled mathematics in fields the project already cites. They were
+missed because the questions were filed as empirical and never re-examined — the same root cause as
+F-015, applied to feasibility rather than to structure.
+**Near miss worth recording:** `IR-NORMALIZATION-STRATEGY` chose an acyclic, strongly-normalizing,
+non-Turing-complete core for *confluence* reasons (Plump). That choice is also what keeps the IR out
+of Rice's full reach. **The right decision was made for adjacent reasons, by luck.** It is now
+load-bearing for two independent results, and anything reintroducing general recursion silently
+re-imports undecidability.
+**Standing rule this establishes:** for any new subsystem, search for the impossibility result
+before designing the mechanism. "What would make this provably impossible?" is a required question,
+not an optional one.
+See `research/proof-availability-audit-2026-08.md`.

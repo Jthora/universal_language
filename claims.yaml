@@ -85,8 +85,14 @@ claims:
       equality by normal-form comparison. BLOCKED on IR-NORMALIZATION-STRATEGY: that machinery
       applies cleanly to terms, and confluence is undecidable for general graph rewriting.
       See research/prior-art-audit-2026-08.md.
+      BOUNDED FROM ABOVE 2026-08 by RICE-BOUNDS-SEMANTIC-EQUALITY: the falsified_by condition below
+      is already MET for Turing-expressive representations — Rice's theorem settles it negatively.
+      This claim survives only in the restricted regime IR-NORMALIZATION-STRATEGY carves out (acyclic,
+      strongly normalizing, non-Turing-complete), and must be read as scoped to it. Outside that
+      regime the correct target is sound approximation via abstract interpretation, not decision.
     priority: 1
     blocked_by: [IR-NORMALIZATION-STRATEGY]
+    bounded_by: [RICE-BOUNDS-SEMANTIC-EQUALITY]
 
   # ─── Implementation: what is actually verified ─────────────────────────────
 
@@ -114,6 +120,12 @@ claims:
       Cannot hold as specified. Projection onto a non-convex admissible region is multivalued
       (Hilbert projection theorem requires convexity for uniqueness), and 𝒜 is almost certainly
       non-convex given non-contradiction. Needs redesign, not repair.
+      REOPENED ON BETTER FOUNDATIONS 2026-08 — see AGM-PREORDER-REPAIR. The retirement was correct
+      against METRIC PROJECTION but wrong as a verdict on repair operators generally. Katsuno &
+      Mendelzon's representation theorem gives rational revision from a faithful PREORDER, which
+      needs no metric, no distance, and no convexity. The obstacle was an artifact of the chosen
+      formalism, not a fact about semantics. Do not cite this entry as evidence that repair is
+      impossible.
 
   - id: IR-NORMALIZATION-STRATEGY
     statement: "GIR's normalizing core is an acyclic term graph; coreference and self-reference are expressed as labels (CGIF-style *x/?x), not cyclic edges."
@@ -633,15 +645,21 @@ claims:
       scope reduction in the program.
 
   - id: IR-PRIOR-ART-POSITION
-    statement: "GIR's relationship to Sowa's Conceptual Graphs / ISO 24707 Common Logic is stated explicitly before any new IR spec is written."
-    tier: CONJECTURED
-    falsified_by: "A new IR spec authored without addressing CGIF interoperability or stating the difference."
+    statement: >
+      GIR's graph-IR layer is not novel — Sowa's Conceptual Graphs under ISO/IEC 24707 are direct
+      prior art — and UWS's actual differentiator is the iconic 2D visual layer, not the IR.
+    tier: ARGUED
     evidence: research/prior-art-audit-2026-08.md
     notes: >
-      Conceptual Graphs are a graph representation for logic with full FOL power, formal semantics
-      under ISO/IEC 24707, and a standard interchange format (CGIF). This is direct prior art for
-      the IR layer, standardized in 2007. UWS's differentiator is the iconic 2D visual layer, not
-      the graph IR.
+      RESTATED 2026-08. The previous version was a PROCESS REQUIREMENT ("...is stated explicitly
+      before any new IR spec is written") mis-registered as a CONJECTURED claim, with a falsifier
+      describing a workflow failure rather than a fact about the world. Registry entries are claims
+      about what is true; process requirements belong in the contributing rules. See
+      research/proof-availability-audit-2026-08.md §1.
+      Substance unchanged: Conceptual Graphs are a graph representation for logic with full FOL
+      power, formal semantics under ISO/IEC 24707, and a standard interchange format (CGIF) —
+      standardized 2007. Any new IR spec should state its relationship to CGIF explicitly, which is
+      now tracked as a task rather than as a claim.
 
   - id: CURE-SCOPE
     statement: "The Cure enforces local structural validity under defined semantic invariants — it is not alignment, adversarial immunity, or ethical correctness."
@@ -867,3 +885,94 @@ claims:
       probability. CALIBRATION: Cox's theorem itself required repair — Halpern's counterexamples
       showed it needs additional density/continuity assumptions. Expect the first version to have
       holes.
+
+  # ─── Obstruction theorems (added 2026-08, proof-availability audit) ─────────
+
+  - id: LOBIAN-OBSTACLE
+    statement: >
+      A self-repairing Cure cannot verify the soundness of its own repairs at equal logical
+      strength; trust flows only toward strictly weaker reasoning systems.
+    tier: ARGUED
+    evidence: research/proof-availability-audit-2026-08.md
+    priority: 0
+    notes: >
+      Lob's theorem: no system T at least as strong as PA proves (box phi -> phi) unless it proves
+      phi outright. Lobian obstacle: an agent cannot trust its future self, and X can only trust the
+      reasoning of a Y with a STRICTLY WEAKER reasoning system. Bites directly because the Cure must
+      trust that its repairs preserve invariants. This is a proof, not a risk — no engineering
+      effort routes around it. Known escape routes (waterfall constructions with an infinite
+      descending trust chain; source-code-visible agents proving mutual cooperation) all pay in
+      weakened successors or a changed logic. FORCES AN ARCHITECTURAL DECISION ON PAPER, BEFORE
+      IMPLEMENTATION: the Cure is external-and-stronger than what it repairs, OR the design
+      explicitly accepts a descending strength chain, OR proof-based self-trust is abandoned for
+      something weaker. Absent from this repository until 2026-08 — see FAILURES.md F-016.
+
+  - id: RICE-BOUNDS-SEMANTIC-EQUALITY
+    statement: >
+      Semantic equality is undecidable for any Turing-expressive representation; sound decidable
+      approximation is available via abstract interpretation, at the provable cost of infinitely
+      many false positives.
+    tier: ARGUED
+    evidence: research/proof-availability-audit-2026-08.md
+    priority: 0
+    notes: >
+      Rice's theorem: all non-trivial semantic properties of programs are undecidable. Bounds
+      SEMANTIC-EQUALITY from above — not an open question at that generality. The workaround is
+      itself theorem-backed: abstract interpretation gives sound approximation, and Galois
+      connections yield a CALCULATIONAL construction where abstraction . concrete-op .
+      concretization is provably the best possible approximation. So the semantic checker has a
+      derivable design, not a heuristic to tune. Sharp cost (Baldan et al., ICALP 2021): any
+      nontrivial abstract property is undecidable, and every decidable overapproximation
+      necessarily includes an infinite set of false positives covering all values of the abstract
+      domain. NEAR MISS: IR-NORMALIZATION-STRATEGY's acyclic non-Turing-complete core, chosen for
+      confluence reasons, is what keeps GIR out of Rice's full reach. That decision is now
+      load-bearing for two independent results; reintroducing general recursion re-imports
+      undecidability silently.
+
+  - id: AGM-PREORDER-REPAIR
+    statement: >
+      A rational repair operator is exactly one induced by a faithful preorder over interpretations;
+      no metric, distance, or convexity is required.
+    tier: ARGUED
+    evidence: research/proof-availability-audit-2026-08.md
+    priority: 0
+    supersedes: CURE-REPAIR-DETERMINISM
+    notes: >
+      Katsuno & Mendelzon proved that the functions induced from faithful preorders are PRECISELY
+      those satisfying the AGM postulates for revision — an if-and-only-if representation theorem.
+      DISSOLVES THE BLOCKER: CURE-REPAIR-DETERMINISM was retired because metric projection onto a
+      non-convex admissible region is multivalued (Hilbert projection theorem requires convexity).
+      A preorder is not a metric, so minimal change defined by an ordering needs no convexity, no
+      distance, and no projection — the three things that broke the original formulation. The
+      convexity problem was an artifact of choosing metric projection, never a fact about semantics.
+      HONEST STATUS: this makes the problem tractable, not solved. "Find a projection onto a
+      non-convex set" (ill-posed) becomes "specify an entrenchment ordering" (a design problem with
+      a theorem guaranteeing any admissible choice yields a rational operator). Also supplies the
+      mechanism CURE-CONSISTENCY-VS-OPENENDEDNESS needs: epistemic entrenchment is exactly how one
+      decides what must hold versus what may change. Generalized beyond propositional logic to base
+      revision in arbitrary monotonic logics.
+
+  - id: ORDER-PARAMETER-FROM-SYMMETRY-BREAKING
+    statement: >
+      The semantic order parameter is derivable from the symmetry-breaking structure G/H rather than
+      discoverable by benchmarking candidate metrics.
+    tier: CONJECTURED
+    falsified_by: >
+      Identify the symmetry group G of the disordered phase and residual symmetry H of the ordered
+      phase, construct the order parameter on G/H, and find it fails to exhibit the critical
+      behaviour that TopSim or context independence do exhibit empirically. Also falsified if no
+      well-defined G and H can be identified for semantic systems.
+    evidence: research/proof-availability-audit-2026-08.md
+    notes: >
+      Landau theory: the existence of an order parameter is directly associated with spontaneous
+      symmetry breaking, and because the free energy must respect the system's symmetries, its
+      expansion in powers of the order parameter "can be constructed systematically." So the order
+      parameter is determined by WHICH SYMMETRY IS BROKEN, and lives in the coset space G/H. This
+      replaces the previously-planned empirical search over TopSim / context independence /
+      positional disentanglement with a group-theory computation. The research move is "identify G
+      and H," not "benchmark three metrics."
+      IMPORTANT LIMIT — DO NOT CLAIM NOETHER. Noether's theorem requires a Lagrangian/action
+      formulation with continuous symmetries. Semantics has no action principle, so that route is
+      unavailable until one is constructed. Landau theory is phenomenological and carries no such
+      requirement, which is why it applies and Noether does not. Claiming Noether here would be
+      precisely the borrowed-authority move this project has been caught making before.
