@@ -1,0 +1,169 @@
+# claims.yaml — the claim registry
+#
+# Every substantive claim in this repository has an entry here, with a tier and evidence.
+# Documentation states claims; this file is what makes them checkable.
+#
+# TIERS (see GLOSSARY.md):
+#   VERIFIED      machine-checked      -> requires `evidence:` resolving to a real test/proof artifact
+#   ARGUED        written proof        -> requires `evidence:` linking a proof document
+#   CONJECTURED   believed, unproven   -> requires `falsified_by:`
+#   DESIGN-CHOICE a decision           -> requires `rationale:` and `alternatives_considered:`
+#   RETIRED       withdrawn            -> requires `superseded_by:`
+#
+# INTENDED CI CHECKS (not yet implemented — see design/enforcement-plan.md):
+#   - VERIFIED entries must have an `evidence` path that exists and a test that passes
+#   - ARGUED entries must have an `evidence` path that exists
+#   - CONJECTURED entries must have `falsified_by`
+#   - DESIGN-CHOICE entries must have `rationale` and `alternatives_considered`
+#   - RETIRED entries must have `superseded_by`
+#   - No document outside archive/ may cite a RETIRED claim id as current
+#
+# Seeded 2026-08-01. Honestly tiered — note how few are VERIFIED. That is the accurate picture.
+
+version: 1
+last_updated: "2026-08-01"
+
+claims:
+
+  # ─── Notation: design decisions, not discoveries ───────────────────────────
+
+  - id: UWS-PRIMITIVE-COUNT
+    statement: "The UWS alphabet consists of a small fixed set of iconic mark-features."
+    tier: DESIGN-CHOICE
+    rationale: research/uws-as-methodology-2026-08.md
+    alternatives_considered: [5, 6]
+    notes: >
+      Repo currently ships 5 (Point, Line, Angle, Curve, Enclosure); the wiki uses 6 (adds Wave)
+      with a genuine generative structure the 5 lacks: three binary axes, 6 = C(4,2) via tetrahedral
+      rectification, and a clean Linear/Curved split. Decision pending. The tiebreaker is empirical,
+      not aesthetic — see UWS-PERCEPTUAL-GROUNDING.
+    status: OPEN-DECISION
+
+  - id: UWS-SORT-COUNT
+    statement: "The notation's type system uses four sorts: Entity, Relation, Modifier, Assertion."
+    tier: DESIGN-CHOICE
+    rationale: research/emergence-investigation/phase3-formal-necessity-rebuild.md
+    alternatives_considered: [2, 3, 4, 6]
+    notes: >
+      A 3-sort flattening was demonstrated expressively equivalent at the cost of relocating
+      disambiguating information into explicit tags. Standard model theory (Montague) needs only
+      2 base types. Four is a drawability-motivated flattening.
+
+  - id: UWS-OPERATION-SET
+    statement: "The notation provides 13 composition operations."
+    tier: DESIGN-CHOICE
+    rationale: uws/formal-specification.md
+    alternatives_considered: ["10 (pre-2026-04)", "13 (current)"]
+    notes: "Complete and natural generating set, NOT minimal — see FAILURES.md F-002."
+
+  # ─── Notation: laws that are asserted but unverified ───────────────────────
+
+  - id: NEG-INVOLUTION
+    statement: "negate(negate(a)) is semantically equivalent to a."
+    tier: CONJECTURED
+    falsified_by: "A pair (a, negate(negate(a))) that semantically_equal reports as unequal."
+    evidence: null
+    notes: >
+      Documentation asserted this as proven. The implementation wraps in a new enclosure node, so
+      it is structurally FALSE, and no equivalence procedure exists to evaluate the semantic reading.
+      See FAILURES.md F-006. Blocked on SEMANTIC-EQUALITY.
+    blocks: [CURE-REPAIR-DETERMINISM, UQPL-REDUCTION]
+
+  - id: SEMANTIC-EQUALITY
+    statement: "There exists a decision procedure determining whether two GIR structures mean the same thing."
+    tier: CONJECTURED
+    falsified_by: "A proof that GIR semantic equivalence is undecidable in the general case."
+    evidence: null
+    notes: >
+      DOES NOT EXIST IN ANY FORM. This is the true prerequisite for the Cure, for UQPL, and for
+      every algebraic law in the notation. Highest-priority engineering work in the program.
+    priority: 1
+
+  # ─── Implementation: what is actually verified ─────────────────────────────
+
+  - id: GIR-SCHEMA-VALIDATION
+    statement: "The validator rejects malformed GIR: duplicate node IDs, dangling edge references, missing root, incompatible edge-endpoint sorts."
+    tier: VERIFIED
+    evidence: ul-forge/crates/ul-core/src/validator.rs
+    notes: >
+      Genuinely works and is well-structured. NOTE the terminology trap: these are GRAPH invariants,
+      not SEMANTIC invariants. See GLOSSARY.md. The Cure's layer does not exist.
+
+  - id: PARSER-ROUNDTRIP
+    statement: "UL-Script parses to GIR and deparses back."
+    tier: VERIFIED
+    evidence: ul-forge/crates/ul-core/src/parser/
+    notes: "Covered by the existing test suite (135 tests across the workspace)."
+
+  # ─── The Cure ──────────────────────────────────────────────────────────────
+
+  - id: CURE-REPAIR-DETERMINISM
+    statement: "The repair operator returns a unique admissible state for any corrupted input."
+    tier: RETIRED
+    superseded_by: FAILURES.md#f-009
+    notes: >
+      Cannot hold as specified. Projection onto a non-convex admissible region is multivalued
+      (Hilbert projection theorem requires convexity for uniqueness), and 𝒜 is almost certainly
+      non-convex given non-contradiction. Needs redesign, not repair.
+
+  - id: CURE-SCOPE
+    statement: "The Cure enforces local structural validity under defined semantic invariants — it is not alignment, adversarial immunity, or ethical correctness."
+    tier: DESIGN-CHOICE
+    rationale: research/reassessment-2026-08-purpose-anchored.md
+    alternatives_considered: ["broader alignment claim (rejected)"]
+    notes: >
+      Deliberately scoped down. Comprehension does not entail alignment (orthogonality thesis);
+      a structurally valid system can optimize undesirable objectives.
+
+  # ─── UQPL ──────────────────────────────────────────────────────────────────
+
+  - id: UQPL-TOTALITY
+    statement: "UQPL is a total language: every program terminates."
+    tier: DESIGN-CHOICE
+    rationale: research/reassessment-2026-08-purpose-anchored.md
+    alternatives_considered: ["Turing-complete via fix (rejected for the Cure's repair loop)"]
+    notes: >
+      As specified (typed lambda calculus, beta-reduction, no fix/recursion) the language is
+      strongly normalizing, hence provably NOT Turing-complete. Adopt this as a guarantee rather
+      than a limitation: a repair loop that can diverge is unusable in a safety path. Precedent:
+      Dhall, Gallina.
+
+  - id: UQPL-QUANTUM-LAYER
+    statement: "UQPL's superposition and entanglement operations are mathematically well-founded."
+    tier: RETIRED
+    superseded_by: research/deep-critique-2026-08-wiki-and-implementation.md
+    notes: >
+      The Semantic Hilbert Space has no concrete inner product, no basis, and no completeness or
+      separability treatment; the Psi Condensation Threshold that would make the quantum reading
+      physical has an underived formula and an uncalibrated critical value. Not a design target.
+      If revived, start by specifying an RKHS kernel.
+
+  # ─── Open research questions ───────────────────────────────────────────────
+
+  - id: UL-EXISTS
+    statement: "A mind-independent universal semantic structure exists."
+    tier: CONJECTURED
+    falsified_by: >
+      No agreed falsifier — this is the open question, and part of the finding is that it may not
+      be decidable as posed. See F-004.
+    evidence: research/emergence-investigation/phase6-synthesis-and-verdict.md
+    notes: "Not established, not refuted. Explicitly NOT a premise of any buildable work here."
+
+  - id: UWS-PERCEPTUAL-GROUNDING
+    statement: "UWS mark features are grounded in visual discriminability and natural-scene statistics, not in Platonic geometry."
+    tier: ARGUED
+    evidence: research/uws-as-methodology-2026-08.md
+    notes: >
+      Changizi et al. (2006, American Naturalist) analyzed 100+ writing systems and found shared
+      contour-configuration signatures matching natural-scene junction statistics. This is the
+      strongest convergence evidence available to the project. Upgrade to VERIFIED by running the
+      confusion-matrix / legibility studies the wiki's "Content-Prime Test" promises.
+
+  - id: UWS-AS-INSTRUMENT
+    statement: "Expressive failures of the notation are empirical data about the structure of meaning."
+    tier: DESIGN-CHOICE
+    rationale: research/uws-as-methodology-2026-08.md
+    alternatives_considered: ["UWS as pure output/rendering of UL (rejected — loses the discovery mechanism)"]
+    notes: >
+      Only valid under a hard rule: failures are logged in FAILURES.md and never patched into
+      successes. The D2 history (32%->100% via nine patches) is what happens without that rule.

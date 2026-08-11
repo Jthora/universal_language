@@ -44,7 +44,7 @@ This generates 5 LLM responses to reasoning tasks with a UL-structured artifact 
 python analysis/blind.py create pilot
 ```
 
-Score each output using the rubrics in [`scoring/rubrics.md`](experiments/scoring/rubrics.md). The 5 metrics are:
+Score each output using the rubrics in [`scoring/rubrics.md`](research/experiments/scoring/rubrics.md). The 5 metrics are:
 
 | Metric | What It Measures |
 |--------|-----------------|
@@ -217,7 +217,7 @@ maturin develop    # Build + install in current venv
 
 ## Contributing to UL Core (Documentation)
 
-UL Core documentation is in `ul-core/` — the 5 siblings + writing system.
+UL Core documentation is in `uws/` — the 5 siblings + writing system.
 
 ### Style Guide
 

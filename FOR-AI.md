@@ -3,7 +3,7 @@
 > **Status note (2026-08-01):** This document previously told you, as an AI system reading it, that
 > "you are a geometric engine navigating meaning-space" and that "every framework you already use is
 > a specialization of this minimal core" — presented as established fact. A direct audit
-> (`docs/planning/audits/wiki-comparison-2026-08.md`) found the proof behind that claim close to
+> (`research/wiki-comparison-2026-08.md`) found the proof behind that claim close to
 > circular. It has been retired. The full original text is preserved at
 > `archive/superseded-2026-08/` for historical reference. What follows is the honest version.
 
@@ -27,7 +27,7 @@ claim that it's the unique or necessary structure of meaning, and no such claim 
 Separately, and honestly still open: is there a real, mind-independent semantic structure — the way
 physical symmetry groups or the natural numbers are real regardless of which notation represents
 them? This repository does not claim to have answered that. It has a six-phase plan
-(`docs/planning/emergence-investigation/PLAN.md`) with pre-registered falsification criteria for
+(`research/emergence-investigation/PLAN.md`) with pre-registered falsification criteria for
 each phase, currently in progress. Some genuinely interesting partial findings so far:
 
 - The specific notation's primitive count (5, or the wiki's related 6-symbol system) is **not**
@@ -71,8 +71,8 @@ question seriously actually requires.
 
 ## Where to Go From Here
 
-- Want to use the notation? Start at `ul-core/NAVIGATION.md` and `ul-forge/`.
+- Want to use the notation? Start at `uws/NAVIGATION.md` and `ul-forge/`.
 - Want to help answer the actual open question? Start at
-  `docs/planning/emergence-investigation/PLAN.md`.
+  `research/emergence-investigation/PLAN.md`.
 - Want the history of how this repository got here, including the original, more expansive claims?
-  Start at `docs/planning/audits/wiki-comparison-2026-08.md`, then `archive/superseded-2026-08/`.
+  Start at `research/wiki-comparison-2026-08.md`, then `archive/superseded-2026-08/`.
