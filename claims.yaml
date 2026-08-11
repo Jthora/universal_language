@@ -188,6 +188,53 @@ claims:
     priority: 0
     blocks: [SEMANTIC-EQUALITY, NEG-INVOLUTION, UQPL-REDUCTION]
 
+  - id: CURE-BENCHMARK-RIPPLE
+    statement: "Knowledge-editing ripple-effect evaluation is a valid benchmark for the Cure's consistency machinery."
+    tier: CONJECTURED
+    falsified_by: "Ripple-effect failures turn out to be dominated by parametric/optimization artifacts of weight editing rather than by missing dependency propagation, making consistency machinery irrelevant to the metric."
+    evidence: research/the-triangulation-2026-08.md
+    notes: >
+      Knowledge editing (ROME, MEMIT) modifies a fact in an LLM's weights; the published failure mode
+      is that edits "are mostly applied at a surface-level without propagating to other related
+      facts." Parametric methods score UNDER 50% on ripple-effect tasks, with highest failure in
+      logical generalization and compositionality. That is the Cure's problem statement with a task,
+      a metric, a dataset and a baseline already attached.
+      FIRST CONCRETE EMPIRICAL FOOTHOLD THE PROJECT HAS EVER HAD. Requires no UL claim, no notation,
+      no metaphysics — only the consistency machinery.
+    priority: 0
+
+  - id: CURE-ASSUMPTION-DERIVED
+    statement: "The Cure requires an assumption/derived distinction and an entrenchment ordering; without them it cannot distinguish legitimate revision from corruption."
+    tier: DESIGN-CHOICE
+    rationale: research/the-triangulation-2026-08.md
+    alternatives_considered:
+      - "invariants + repair operator only (current spec — cannot tell learning from drift)"
+      - "TMS assumption/derived distinction"
+      - "AGM epistemic entrenchment ordering"
+    notes: >
+      A desired edit and a corruption are indistinguishable to a checker that only knows "this
+      contradicts what was there." A system that repairs every inconsistency back toward established
+      invariants is a conservatism engine that cannot learn.
+      TMS separates ASSUMPTIONS (revisable, held directly) from DERIVED beliefs (must follow); AGM
+      supplies epistemic entrenchment (which beliefs yield first under contradiction). The Cure as
+      specified has NEITHER. Adding them also partly dissolves F-009: repair revises the
+      least-entrenched assumption rather than selecting an arbitrary nearest state.
+
+  - id: EMERGENT-COMMUNICATION-UNCHECKED
+    statement: "Emergent communication / signaling games is the formalized version of this project's founding question and has never been examined."
+    tier: CONJECTURED
+    falsified_by: "On examination the field turns out to address only lexicon convergence under shared perception, with no bearing on bootstrapping between agents lacking common reference."
+    evidence: research/the-triangulation-2026-08.md
+    notes: >
+      The field asks "how does a signal signal its own signalhood?" — the founding question,
+      formalized — with signaling games (Lewis), deep-learning emergent communication where neural
+      agents develop a protocol from nothing, and ELCC (Emergent Language Corpus Collection) as an
+      empirical resource. This is the mouth-less-robot scenario in silico, with published results.
+      Never surfaced across ~55 threads and three separate "what haven't we checked" sweeps. Bears
+      directly on GROUNDING-PROBLEM (priority 1): it runs the experiment rather than arguing about
+      it philosophically.
+    priority: 1
+
   - id: CURE-IS-TMS
     statement: "The Cure is an instance of Truth Maintenance, and ATMS multi-context maintenance is the leading candidate architecture."
     tier: DESIGN-CHOICE
