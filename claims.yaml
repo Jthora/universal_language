@@ -111,8 +111,70 @@ claims:
       non-convex given non-contradiction. Needs redesign, not repair.
 
   - id: IR-NORMALIZATION-STRATEGY
-    statement: "GIR admits a decidable notion of structural/semantic equivalence via normalization."
-    tier: CONJECTURED
+    statement: "GIR's normalizing core is an acyclic term graph; coreference and self-reference are expressed as labels (CGIF-style *x/?x), not cyclic edges."
+    tier: DESIGN-CHOICE
+    rationale: research/ir-decision-2026-08.md
+    alternatives_considered:
+      - "cyclic general graph (rejected: confluence undecidable, Plump)"
+      - "pure tree (rejected: loses sharing, which term graphs give for free)"
+      - "DPO with interfaces (viable; equivalent effect, more invasive reframing)"
+      - "abandon normalization (rejected: loses all algebraic law checking)"
+    notes: >
+      Decidability boundary is CYCLES, not graphs. Term graphs / DAGs retain the Critical Pair Lemma
+      and a decision procedure for confluence given termination; general cyclic DPO does not. GIR is
+      currently cyclic by deliberate design (self-reference), which is exactly what placed it in the
+      undecidable regime. Three independent lines — term graph rewriting, DPO-with-interfaces
+      ("interfaces play the same role as variables"), and CGIF coreference labels — converge on
+      expressing cross-links as variables rather than edges. Nothing expressive is lost; coreference
+      moves from the edge layer to the label layer.
+    superseded_conjecture: "IR-NORMALIZATION-STRATEGY (CONJECTURED form, 2026-08-01) — see FAILURES.md F-011"
+
+  - id: SEMANTIC-EQUALITY-IMPL
+    statement: "semantically_equal is implemented as e-class equality under equality saturation (e-graphs)."
+    tier: DESIGN-CHOICE
+    rationale: research/ir-decision-2026-08.md
+    alternatives_considered:
+      - "Knuth-Bendix completion to normal forms (viable but requires orienting rules; may not complete)"
+      - "e-graphs / equality saturation (preferred: no canonical normal form needed, degrades gracefully with timeout)"
+    notes: >
+      egg (POPL 2021) is a fast extensible equality-saturation library in Rust; ul-forge is Rust.
+      Equality saturation applies rewrites non-destructively until saturation and checks whether two
+      terms occupy the same e-class, so confluence becomes an optimization rather than a
+      prerequisite. First milestone: encode the notation's laws as egg rewrites over the acyclic
+      core and implement semantically_equal as e-class equality. Closes F-006, unblocks
+      SEMANTIC-EQUALITY.
+
+  - id: NEGATE-REIMPLEMENTATION
+    statement: "negate is implemented as a sigma field (assertional sign) on the assertion, not a self-loop marker edge."
+    tier: DESIGN-CHOICE
+    rationale: research/ir-decision-2026-08.md
+    alternatives_considered:
+      - "self-loop references edge as marker (current implementation; introduces a cycle)"
+      - "boundary inversion via sigma field (documented April 2026, never built)"
+    notes: >
+      The current self-loop implementation is the specific construct that makes involution
+      unverifiable: negation is built from the cyclic feature that makes confluence undecidable.
+      Reimplementing with sigma both removes a cycle from the core and finally makes the documented
+      F-001 fix real. See FAILURES.md F-001, F-006, F-011.
+
+  - id: UWS-FORMAL-TARGET
+    statement: "UWS aims at soundness and completeness for a stated fragment, following the Shin template."
+    tier: DESIGN-CHOICE
+    rationale: research/ir-decision-2026-08.md
+    alternatives_considered:
+      - "no formal target (status quo)"
+      - "full-FOL completeness immediately (rejected: Shin's Venn-II reaches only monadic predicate logic; UWS is relational, hence strictly harder)"
+    notes: >
+      Shin (1994) proved soundness and completeness for Venn-I and Venn-II by giving each a syntax
+      (well-formed diagrams, permitted manipulations) and a semantics (logical consequence among
+      diagrams). Venn-II is equivalent to monadic predicate logic. UWS targets polyadic relations,
+      so completeness is harder — prove it for a stated fragment first and grow the fragment, which
+      is how Euler -> Venn -> Peirce -> Shin actually progressed.
+
+  - id: IR-NORMALIZATION-STRATEGY-OLD
+    statement: "GIR admits a decidable notion of structural/semantic equivalence via normalization (unrestricted)."
+    tier: RETIRED
+    superseded_by: research/ir-decision-2026-08.md
     falsified_by: >
       Confirmed: FALSE for general graph rewriting. Confluence of terminating DPO graph rewriting
       is undecidable (Plump), and critical-pair joinability does not entail confluence as it does
