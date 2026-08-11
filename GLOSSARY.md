@@ -18,7 +18,7 @@ Full stack in `research/emergent-universality-framework-2026-08.md`.
 | **0** | **Distinction** | The mark; marked/unmarked (Spencer-Brown). Bateson's "difference that makes a difference." The pre-semantic floor — required by any information-bearing system, not chosen. |
 | **1** | **Universal Symbology** | The primitive marks. Geometric primitives live here. **Status: microscopic detail / symmetry clue, not foundation.** |
 | **2** | **Universal Syntax** | How marks combine. Measurable via TopSim, positional disentanglement, context independence. |
-| **3** | **Universal Compositional Constraints** | Which combinations are well-formed. **NOT "Universal Grammar"** — see the warning below. |
+| **3** | **Universal Grammar (cross-substrate)** | Which combinations are well-formed. **Always carry the qualifier** — see below. |
 | **4** | **Renderings** | UWS (written/spatial), Vocal Semantic Correspondence (prosodic), others. UWS is one rendering, not privileged. |
 | **5** | **UL** | The emergent universal structure — **the universality class itself**, characterized by order parameter and symmetry rather than by a primitive inventory. Not a code, not a dictionary. |
 | **⊥** | **UP — Universal Protocol** | The bootstrapping/coupling procedure by which two independent instantiations reach correspondence. |
@@ -32,12 +32,20 @@ Full stack in `research/emergent-universality-framework-2026-08.md`.
 | **Semantic Coarse-Graining** | The projection under which universals appear. Strong candidate: the Erlangen hierarchy (Euclidean → … → Topological). |
 | **Semantic Fixed Point** | A structure invariant under repeated coarse-graining. **If UL exists, this is what it is.** |
 | **Relevant / irrelevant operator** | Borrowed from RG. An *irrelevant* feature does not affect behaviour at the fixed point. The primitive count (5 vs 6) is predicted to be irrelevant — not arbitrary, but below the level where universality lives. |
+| **presentation** | A specific choice of primitive set used to describe the structure. Base-6/octahedral, {point, line, angle, curve, enclosure}, and {point, circle, line, wave} are *different presentations of one object* — tools and evidence, not competing truth claims. |
+| **generating set (not basis)** | The primitives **generate** rather than span: a wave is a periodic curve, an angle is two lines meeting, so they are not independent. Unlike a vector-space basis, **generating sets of the same structure may differ in cardinality** — which is exactly why the count varies while the primitives remain. See `research/superseding-chomsky-and-the-primitive-question-2026-08.md` §4. |
 
-> ⚠ **"Universal Grammar" — do not use unqualified.** Chomsky's UG asserts a *species-specific innate
-> human* language faculty. This framework needs nearly the opposite: *cross-substrate emergent*
-> constraints, demonstrated in non-human agents. Use **Universal Compositional Constraints**. Using
-> the Chomskyan term imports a nativist commitment nobody here holds and invites dismissal on
-> grounds unrelated to the actual claim.
+> ⚠ **"Universal Grammar" — always qualify as *cross-substrate*.** Chomsky's UG attributes universals
+> to a *species-specific innate human* faculty. We claim the same phenomenon with a different cause:
+> **constraints on any learner**. This is not a fringe position — Christiansen & Chater (*BBS* 2008)
+> already argue universals are "emergent properties of how the brain learns, rather than genetically
+> encoded principles," since language changes far faster than genes can track. **We extend them by
+> one step:** those constraints aren't human-specific, and emergent-communication agents demonstrate
+> them in non-human learners. So Chomskyan UG is the *special case* — cross-substrate constraints
+> seen when the learner is a human brain. **Supersede the term; don't cede it.** Bare "Universal
+> Grammar" still reads as the nativist claim, so the qualifier is mandatory.
+>
+> *(This reverses the 2026-08 recommendation to avoid the term entirely — see FAILURES.md F-014.)*
 
 ## The four-layer stack (superseded — retained for reference)
 

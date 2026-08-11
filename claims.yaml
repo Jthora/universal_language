@@ -31,13 +31,18 @@ claims:
     statement: "The UWS alphabet consists of a small fixed set of iconic mark-features."
     tier: DESIGN-CHOICE
     rationale: research/uws-as-methodology-2026-08.md
-    alternatives_considered: [5, 6]
+    alternatives_considered: [4, 5, 6, "any base-N presentation"]
     notes: >
-      Repo currently ships 5 (Point, Line, Angle, Curve, Enclosure); the wiki uses 6 (adds Wave)
-      with a genuine generative structure the 5 lacks: three binary axes, 6 = C(4,2) via tetrahedral
-      rectification, and a clean Linear/Curved split. Decision pending. The tiebreaker is empirical,
-      not aesthetic — see UWS-PERCEPTUAL-GROUNDING.
-    status: OPEN-DECISION
+      REFRAMED 2026-08. This is no longer an open decision awaiting a tiebreaker — the question was
+      malformed. Known presentations: 5 (Point, Line, Angle, Curve, Enclosure); 6 (adds Wave; three
+      binary axes, 6 = C(4,2) via tetrahedral rectification); 4a (Point, Circle, Line, Wave —
+      curve collapses into wave, angle into line); 4b (Point, Circle, Line, Curve). The collapses
+      show the primitives are NOT independent, so these are generating sets, not bases — and
+      generating sets of one structure may differ in cardinality. The count is a property of the
+      presentation, not of the object. Ship whichever presentation serves the task; do not argue
+      about the number.
+    status: RESOLVED-AS-MALFORMED
+    superseded_by: research/superseding-chomsky-and-the-primitive-question-2026-08.md
 
   - id: UWS-SORT-COUNT
     statement: "The notation's type system uses four sorts: Entity, Relation, Modifier, Assertion."
@@ -695,3 +700,72 @@ claims:
     notes: >
       Only valid under a hard rule: failures are logged in FAILURES.md and never patched into
       successes. The D2 history (32%->100% via nine patches) is what happens without that rule.
+
+  # ─── Cross-substrate universals (added 2026-08, Chomsky/primitive-set pass) ─
+
+  - id: UG-IS-CROSS-SUBSTRATE
+    statement: >
+      Chomskyan Universal Grammar describes a real phenomenon but misattributes its cause; the
+      universals arise from constraints on any learner, making them cross-substrate rather than
+      species-specific. Chomskyan UG is the special case where the learner is a human brain.
+    tier: ARGUED
+    evidence: research/superseding-chomsky-and-the-primitive-question-2026-08.md
+    priority: 0
+    notes: >
+      Two established steps plus one extension. Step 1 (Christiansen & Chater, BBS 2008): universals
+      are "emergent properties of how the brain learns, rather than genetically encoded principles";
+      UG could not have arisen by biological adaptation because language change outpaces genetic
+      change. Step 2 (ours): the argument nowhere requires the learner to be human. Step 3
+      (evidence): emergent-communication agents show convergent compositional structure with no
+      human involvement. Supersedes the earlier recommendation to avoid the term — see F-014.
+
+  - id: SURFACE-DIVERSITY-IS-PREDICTED
+    statement: >
+      Evans & Levinson's finding of vanishingly few surface universals across 6,000-8,000 languages
+      is consistent with, and predicted by, emergent universality — invariants appear only under
+      coarse-graining, never at the microscopic level.
+    tier: CONJECTURED
+    falsified_by: >
+      Coarse-grain the WALS typological database under a defined projection and find no invariant
+      structure. If surface diversity persists all the way up the coarse-graining hierarchy with
+      nothing stable emerging, the universality-class reading of language typology dies.
+    evidence: research/superseding-chomsky-and-the-primitive-question-2026-08.md
+    notes: >
+      Converts the strongest counter-evidence in linguistics into supporting context WITHOUT making
+      it unfalsifiable — the coarse-graining test is the price of the reframe and must actually be
+      run. Nobody appears to have attempted it.
+
+  - id: PRIMITIVE-SETS-ARE-GENERATING-SETS
+    statement: >
+      Alternative primitive sets (4a, 4b, 5, 6, base-N) are generating sets for one structure, not
+      competing bases; therefore their differing cardinalities are presentation artifacts and carry
+      no information about the object.
+    tier: ARGUED
+    evidence: research/superseding-chomsky-and-the-primitive-question-2026-08.md
+    notes: >
+      Grounded in the collapse relations the sets themselves exhibit: a wave is a periodic curve,
+      an angle is two lines meeting. Non-independence rules out the basis reading. Vector-space
+      bases have invariant cardinality; generating sets do not. Corroborating external evidence:
+      five independent traditions give five different counts (Montague 2, UWS 4-6, Vaisesika 6-7,
+      Aristotle 10, Wierzbicka NSM 65), and NSM's own count moved 60 -> 65 over two decades.
+      Non-convergence on count is the predicted signature of an irrelevant operator.
+
+  - id: DEFINITIONAL-DEPENDENCY-ISOMORPHISM
+    statement: >
+      The dependency ordering of Euclid's geometric definitions is isomorphic to the dependency
+      orderings of independently developed ontological category systems (Aristotle, Vaisesika).
+    tier: CONJECTURED
+    falsified_by: >
+      Formalize all three as partial orders and check for isomorphism. If the orderings do not
+      match, the geometry-to-meaning path loses its only non-circular support and must be argued
+      some other way.
+    evidence: research/superseding-chomsky-and-the-primitive-question-2026-08.md
+    priority: 0
+    notes: >
+      This is the replacement for the RETIRED Unique Grounding Theorem, and it is non-circular where
+      that was circular. The old theorem defined semantic primitives to mirror geometric ones
+      already chosen. Here both sides are fixed independently and in advance: Euclid's definitional
+      dependency graph is a fact about a text written for geometry (point -> line -> angle ->
+      enclosure), and the substance-first orderings of Aristotle and Vaisesika (guna and karma
+      inhere in dravya) are facts about texts written for ontology. Neither was constructed to match
+      the other. Cheap to run and decisive in both directions.

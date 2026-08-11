@@ -243,3 +243,29 @@ direct translation outperformed it — an economic outcome, not a conceptual ref
 cited evidence bears on *replacement of an entrenched standard*, and applies far more weakly to
 creation in an unserved niche.
 See `research/source-critique-2026-08.md` §7 and §6.
+
+---
+
+## F-014 — recommended ceding "Universal Grammar" without checking the emergentist literature
+**Date:** 2026-08-01
+**What I recommended:** avoid the term "Universal Grammar" entirely, on the grounds that Chomsky's UG
+asserts a species-specific innate human faculty and using the term would import a nativist commitment
+nobody here holds. Recommended "Universal Compositional Constraints" instead.
+**Why that was wrong:** I took Chomsky's framing as *the* definition of the territory and reasoned
+only from it. I never checked whether the field already contains a non-nativist account of the same
+phenomenon. It does, prominently: **Christiansen & Chater, "Language as shaped by the brain"
+(*Behavioral and Brain Sciences*, 2008)** argues universals are *"emergent properties of how the
+brain learns, rather than genetically encoded principles"* — because language changes far faster
+than genetic change, making it *"an unstable target for biological adaptation."*
+**Error class:** identical to the one that produced the "No. You failed." correction — treating one
+researcher's conclusion as the settled shape of the question. Here it cost a naming decision that
+would have positioned the project as sidestepping an established field rather than extending it.
+**Corrected position:** claim the term with a mandatory qualifier — **Universal Grammar
+(cross-substrate)**. Chomskyan UG is the special case: cross-substrate learning constraints observed
+in a human learner. The project's actual contribution is one step past C&C — that the constraints
+are not human-specific — which emergent-communication results in non-human agents now support.
+**Also corrected by the same pass:** I had treated Evans & Levinson (2009) as counter-evidence. Their
+finding of *"vanishingly few universals"* at the surface level is what universality theory
+**predicts** (microscopic diversity, invariants only under coarse-graining). Measured at the wrong
+level, it is supporting context rather than refutation.
+See `research/superseding-chomsky-and-the-primitive-question-2026-08.md` §§1–2.
