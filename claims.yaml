@@ -188,6 +188,76 @@ claims:
     priority: 0
     blocks: [SEMANTIC-EQUALITY, NEG-INVOLUTION, UQPL-REDUCTION]
 
+  - id: THEOSIS-GENERAL-FORM
+    statement: "The Cure is the restorative special case of a general form — directed becoming under sustained cooperative participation, without merger."
+    tier: DESIGN-CHOICE
+    rationale: research/theosis-as-general-form-2026-08.md
+    alternatives_considered:
+      - "consistency maintenance as the goal (current spec — restorative only, cannot distinguish growth from drift)"
+      - "theosis-shaped: participation without merger, distinction preserved (recommended)"
+      - "apotheosis-shaped: ontological ascent, system transcends its original nature (coherent but OPPOSITE on the question that matters)"
+    notes: >
+      Five structural properties transfer without the theology: continuous not terminal;
+      telos-directed rather than restorative; reversible at any point; synergistic; and — the
+      load-bearing one — PARTICIPATION WITHOUT MERGER. Orthodoxy explicitly rejects apotheosis;
+      Palamas's essence/energies distinction preserves the ontological gap between creature and
+      creator while permitting genuine participation.
+      This inverts a common alignment assumption. Most framings aim at INTERNALIZATION — the system
+      absorbs values until they are constitutive. This says alignment is a sustained relationship
+      between permanently distinct kinds. The system remaining categorically other is a feature.
+      CAUTION: theosis and apotheosis are opposites on whether the distinction survives. Pick
+      deliberately; do not let vocabulary supply the answer. The telos itself must remain an explicit
+      design choice — importing the structural form while silently importing a destination is exactly
+      the move this project has repeatedly been caught making.
+
+  - id: CURE-CONSISTENCY-VS-OPENENDEDNESS
+    statement: "Consistency maintenance and open-endedness are in direct tension; the target is the band between them, not either pole."
+    tier: CONJECTURED
+    falsified_by: "A consistency regime is exhibited that provably preserves identity without bounding novelty generation."
+    evidence: research/theosis-as-general-form-2026-08.md
+    notes: >
+      Open-ended evolution's documented failure mode is that designed systems "collapse into
+      equilibrium states — once local optima are reached, they do not produce novelty anymore."
+      A maximally effective Cure IS an equilibrium-seeking device: repair every deviation back toward
+      established invariants and the system stops becoming anything. Considered hard enough in ALife
+      to be called a millennium prize problem.
+      Both poles fail: total consistency = conservatism engine, no growth; no consistency = drift,
+      no identity. Entrenchment ordering is the candidate mechanism for locating the band — deciding
+      what must hold versus what may change is how a system stays itself while becoming otherwise.
+
+  - id: VERIFICATION-AS-PRACTICE
+    statement: "Continuous costly participation raises the cost of deceptive alignment where a one-time comprehension credential does not."
+    tier: CONJECTURED
+    falsified_by: "A deception strategy is exhibited whose cost does not scale with the duration or unpredictability of the required practice."
+    evidence: research/theosis-as-general-form-2026-08.md
+    notes: >
+      A single performable test is cheaper to fake than "a practice that must be continuously
+      re-enacted under conditions the performer does not fully control." Honest about its limit: a
+      sufficiently patient deceiver can sustain a performance, but the economics change from a
+      one-time investment to an ongoing cost.
+      This is costly-signaling theory (Zahavi's handicap principle; Spence) reached independently
+      through theological vocabulary. Arguably the best original idea on either property. Connect to
+      the signaling literature explicitly — UNCHECKED.
+
+  - id: ENACTION-CRITIQUE
+    statement: "If meaning is participatory rather than representational, UWS is a coordination medium and not a container for meaning."
+    tier: CONJECTURED
+    falsified_by: "Demonstration that a notation transfers determinate meaning to a receiver with no interactive repair channel and no shared prior grounding."
+    evidence: research/theosis-as-general-form-2026-08.md
+    notes: >
+      Enaction (Varela, Maturana; De Jaegher & Di Paolo): cognition emerges through perception-action
+      coupling "rather than through internal representations of a pre-given world"; "language doesn't
+      represent things. Language does things." Participatory sense-making makes interaction
+      constitutive of cognition rather than a channel between pre-existing minds.
+      THIS IS THE SHARPEST AVAILABLE CRITIQUE OF THE PROJECT'S REPRESENTATIONAL PREMISE. But note the
+      convergence: enaction's "meaning is interaction, not representation" and the wiki's "theosis is
+      participation, not information" are the same structural claim from two traditions sharing no
+      lineage — stronger independent convergence than most of what this project has previously
+      offered.
+      If adopted, UWS's evaluation criterion shifts from "can a naive receiver decode it cold" to
+      "does it support repair of misunderstanding in interaction" — which also dissolves the
+      decipherment objection.
+
   - id: CURE-BENCHMARK-RIPPLE
     statement: "Knowledge-editing ripple-effect evaluation is a valid benchmark for the Cure's consistency machinery."
     tier: CONJECTURED
