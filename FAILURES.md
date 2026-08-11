@@ -168,3 +168,42 @@ fragment to a term/tree structure, exploiting the existing `graph-with-tree-spin
 (b) adopt DPO-with-Interfaces, where confluence *is* decidable; (c) decide equivalence by
 non-normalization means. Must be chosen before further IR or evaluator work.
 See `research/prior-art-audit-2026-08.md`.
+
+---
+
+## F-012 — Iconicity does not bootstrap comprehension
+**Date:** 2026-08-01
+**Claim that failed:** The UWS/Universal Symbology primitives are justified because "each feature's
+shape resembles its meaning" — i.e. iconic symbols are self-evidently readable, so a suitably
+designed geometric notation is comprehensible without instruction. The wiki's only support was an
+explicitly untested "Content-Prime Test."
+**How it failed:** Contradicted by the closest available empirical evidence. ISO 3864 sets a 67%
+comprehension criterion for safety pictograms; in testing, **only post-training averages exceeded
+it**. Fire equipment and fire-action pictograms scored **45%**. These are professionally designed,
+internationally standardized symbols in a high-stakes domain with maximum incentive for
+self-evidence — and they still require training. Interpretation differences tracked educational
+background more strongly than culture, and the design guidance is explicit that images must "align
+with the beliefs, society, and culture of the target audience."
+Converges with decipherment (Linear A: abundant structure, unread for 70+ years) and with music
+notation (glyph-to-value associations must be pre-memorized; notation is "inherently not
+self-evident").
+**Status:** Claim retired. UWS is reclassified as a **taught** notation, in the tradition of
+mathematical and musical notation — which is respectable and unremarkable, but makes learnability,
+curriculum, and comprehension testing core deliverables rather than afterthoughts. Does not affect
+UWS's compositional or expressive properties.
+See `research/research-cycle-2026-08-answers.md` Q3.
+
+---
+
+## F-013 — Design quality was assumed sufficient for adoption
+**Date:** 2026-08-01
+**Claim that failed:** Implicit throughout the project — that a sufficiently well-designed universal
+notation would be taken up on its merits.
+**How it failed:** Every comparable effort found failed at adoption rather than design. A
+multi-decade international project to improve music notation produced a result "only marginally
+better than existing notation" and continues "lamenting failure at adoption"; once a notation is
+standardized and taught, collective knowledge investment defeats improvement regardless of merit.
+UNL had United Nations University backing, 17 national language centers, a Geneva foundation, and
+decades — and did not achieve adoption either.
+**Status:** Open. Adoption must be treated as a first-class problem with its own strategy, not as a
+downstream consequence of quality. No such strategy currently exists.

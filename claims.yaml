@@ -188,6 +188,58 @@ claims:
     priority: 0
     blocks: [SEMANTIC-EQUALITY, NEG-INVOLUTION, UQPL-REDUCTION]
 
+  - id: CURE-CHECK-SHACL
+    statement: "The shape-constraint half of the Cure's check phase is served by SHACL rather than built from scratch."
+    tier: DESIGN-CHOICE
+    rationale: research/research-cycle-2026-08-answers.md
+    alternatives_considered: ["hand-rolled constraint checker", "SHACL (W3C standard, tooled)"]
+    notes: >
+      SHACL provides node/property shapes, cardinality, type, enumeration and pattern constraints,
+      closed-world validation via sh:closed, and per-violation conformance reports. It is already
+      used as a type system and its shape containment is decidable via DL reasoning. It CANNOT
+      express non-contradiction or entailment conflict — that half needs a reasoner. The useful
+      result is that the check phase cleanly splits: SHACL for shape, DL reasoner for consistency,
+      and neither needs inventing.
+
+  - id: CURE-SHEAF-ROUTE
+    statement: "Semantic inconsistency is an obstruction to the existence of a global section, detectable via sheaf cohomology."
+    tier: CONJECTURED
+    falsified_by: "The IR admits no natural sheaf structure, or H^1 fails to distinguish genuine semantic inconsistency from benign local variation."
+    evidence: research/research-cycle-2026-08-answers.md
+    notes: >
+      Abramsky-Brandenburger formalize contextuality as exactly "a discrepancy between local
+      consistency and global inconsistency," with contextuality corresponding to obstructions to
+      global sections and first Cech cohomology H^1 != 0 giving a rigorous, linear-algebraically
+      computable obstruction. This is the closest structural match to the Cure's failure mode found
+      so far, and the only candidate route that both DETECTS and LOCALIZES with a computable
+      invariant. Third route alongside metric projection and ontology pinpointing; all three should
+      be compared head to head.
+    compare_with: [CURE-REPAIR-FORMULATION, CURE-REPAIR-CONVEX-ROUTE]
+
+  - id: UWS-TAUGHT-NOTATION
+    statement: "UWS is a taught notation; learnability and curriculum are core deliverables, not afterthoughts."
+    tier: DESIGN-CHOICE
+    rationale: research/research-cycle-2026-08-answers.md
+    alternatives_considered: ["self-evident iconic notation (retired — see FAILURES.md F-012)"]
+    notes: >
+      ISO-standardized safety pictograms fail a 67% comprehension bar without training; Linear A is
+      structurally rich and unread; music notation requires pre-memorized glyph-value associations.
+      Iconicity does not bootstrap meaning. Being a taught notation is normal and respectable — it
+      just makes comprehension testing against an ISO-style criterion a real deliverable.
+
+  - id: UWS-COGNITIVE-DIMENSIONS
+    statement: "UWS design decisions, including the primitive count, are evaluated against the Cognitive Dimensions of Notations framework."
+    tier: DESIGN-CHOICE
+    rationale: research/research-cycle-2026-08-answers.md
+    alternatives_considered: ["aesthetic/ad hoc judgement (status quo)"]
+    notes: >
+      Green & Petre's framework supplies real criteria — viscosity, hidden dependencies, premature
+      commitment, progressive evaluation, closeness of mapping — and its seminal case study analyzed
+      visual dataflow languages (LabVIEW, Prograph), closely analogous to UWS. Notably "hidden
+      dependencies" names exactly the coreference problem the IR decision introduced: a notation
+      where ?x refers to a distant *x has hidden dependencies by construction and must make them
+      visible.
+
   - id: CURE-REPAIR-CONVEX-ROUTE
     statement: "If each semantic invariant is designed to carve a convex constraint, the admissible region is convex by construction and metric projection yields a unique repair."
     tier: CONJECTURED
