@@ -67,20 +67,75 @@ claims:
 
   - id: UWS-SORT-COUNT
     statement: "The notation's type system uses four sorts: Entity, Relation, Modifier, Assertion."
-    tier: DESIGN-CHOICE
-    rationale: research/emergence-investigation/phase3-formal-necessity-rebuild.md
-    alternatives_considered: [2, 3, 4, 6]
+    tier: RETIRED
+    superseded_by: IMPL-SORT-ENUM
+    formalization: "Sigma_UL's sort inventory, relabeled DESIGN-CHOICE after Sigma_UL was retired (R3)"
+    scope: >
+      Retiring the CLAIM does not delete the enum. Sort is real in code and the validator genuinely
+      uses it to check edge-endpoint compatibility. What is retired is the assertion that FOUR is a
+      considered design decision about the notation. Cite IMPL-SORT-ENUM for what the code does.
+    revival_condition: >
+      An argument for exactly four that does not derive from Sigma_UL — i.e. one that survives the
+      observations already on record against it: a 3-category flattening was shown expressively
+      equivalent (phase3), and standard model theory needs 2 base types (Montague). Any revival must
+      answer both rather than restate the number.
+    refutation_tier: >
+      ARGUED — provenance audit. The DESIGN-CHOICE tier was satisfied FORMALLY (non-empty
+      alternatives_considered) while empty SUBSTANTIVELY: the field held bare numerals [2,3,4,6] with
+      no reasons, where every other DESIGN-CHOICE in this file uses the form "option (rejected:
+      reason)". A hollow alternatives field is the signature of laundered residue.
     notes: >
-      A 3-sort flattening was demonstrated expressively equivalent at the cost of relocating
-      disambiguating information into explicit tags. Standard model theory (Montague) needs only
-      2 base types. Four is a drawability-motivated flattening.
+      The cited rationale (phase3) does not support the claim — it demonstrated that THREE works.
+      No decision for four was ever made; the number was inherited. See FAILURES.md F-018.
 
   - id: UWS-OPERATION-SET
     statement: "The notation provides 13 composition operations."
-    tier: DESIGN-CHOICE
-    rationale: uws/formal-specification.md
-    alternatives_considered: ["10 (pre-2026-04)", "13 (current)"]
-    notes: "Complete and natural generating set, NOT minimal — see FAILURES.md F-002."
+    tier: RETIRED
+    superseded_by: IMPL-COMPOSER-CONSTRUCTORS
+    formalization: "Sigma_UL's operation inventory, relabeled DESIGN-CHOICE after Sigma_UL was retired (R3)"
+    scope: >
+      "13 operations" is a true statement about ul-forge/crates/ul-core/src/composer.rs and nothing
+      more. It is NOT a fact about UWS, UL, or any established algebra. Cite
+      IMPL-COMPOSER-CONSTRUCTORS for the code fact.
+    revival_condition: >
+      An algebraic structure is established for which these are demonstrably THE operations —
+      i.e. a domain is fixed first. The question "13 operations OF WHAT?" currently has no answer:
+      they were operations over the Sigma_UL signature, and Sigma_UL is retired. Conceptual
+      foundations must be settled before an operation inventory can mean anything.
+    refutation_tier: >
+      ARGUED — provenance audit. alternatives_considered held ["10 (pre-2026-04)", "13 (current)"],
+      which is a CHANGELOG, not alternatives. The count grew 10 -> 13 by accretion, which is
+      positive evidence that no design decision was ever taken.
+    notes: >
+      Previously annotated "complete and natural generating set, NOT minimal" (F-002) — an honest
+      caveat that nonetheless kept the number alive as though it described the notation. See
+      FAILURES.md F-018.
+
+  # ─── Implementation facts: what the code contains, no more ─────────────────
+  # These exist so the codebase can be described without dignifying its counts as design decisions.
+
+  - id: IMPL-SORT-ENUM
+    statement: "The Rust enum `Sort` has four variants (Entity, Relation, Modifier, Assertion), used by the validator to check edge-endpoint compatibility."
+    tier: VERIFIED
+    evidence: ul-forge/crates/ul-core/src/types/sort.rs
+    notes: >
+      A fact about the code, deliberately NOT a claim about the notation or about meaning. The count
+      is an implementation detail inherited from the retired Sigma_UL and is NOT load-bearing for
+      anything: no result in this repo depends on it being four. Modifier additionally has no
+      discriminant, so four distinct function shapes type-check identically (F-007 territory).
+      Do not cite this entry as support for a four-sort design.
+
+  - id: IMPL-COMPOSER-CONSTRUCTORS
+    statement: "composer.rs implements 13 Gir -> Gir constructors plus one detect_operations utility."
+    tier: VERIFIED
+    evidence: ul-forge/crates/ul-core/src/composer.rs
+    notes: >
+      A fact about the code, deliberately NOT a claim about the notation. Verified by direct count:
+      predicate, modify_entity, modify_relation, negate, conjoin, disjoin, embed, abstract_op,
+      compose, invert, quantify, bind, modify_assertion (13), plus detect_operations (utility).
+      The inventory grew 10 -> 13 by accretion and answers to no established algebra. NOT
+      load-bearing: nothing in this repo depends on there being thirteen. Do not restate this count
+      as a property of UWS or UL.
 
   # ─── Notation: laws that are asserted but unverified ───────────────────────
 

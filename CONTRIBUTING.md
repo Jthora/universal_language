@@ -135,7 +135,7 @@ The Forge is an 8-crate Rust workspace in `ul-forge/`.
 
 | Crate | Purpose |
 |-------|---------|
-| `ul-core` | Parser, validator, renderer, 13 operations + modal/performative/pragmatic |
+| `ul-core` | Parser, validator, renderer, composer constructors + modal/performative/pragmatic |
 | `ul-cli` | Command-line interface (8 subcommands) |
 | `ul-wasm` | WASM bindings (wasm-bindgen exports) |
 | `ul-api` | HTTP API server (Actix-web, 9 routes + websocket) |

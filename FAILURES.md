@@ -365,3 +365,36 @@ entries in the same commit — writing the rules without applying them would hav
 a third time.
 **Meta-rule established:** when a correction is written twice for the same pattern, stop patching
 instances and fix the generator. Two corrections of one shape is the signal.
+
+---
+
+## F-018 — retiring Σ_UL did not retire its numbers; the DESIGN-CHOICE tier laundered them
+**Date:** 2026-08-01
+**What happened:** Σ_UL (5 primitives / 4 sorts / 13 operations / 23 theorems) was retired as a
+claim. **Its component numbers were not retired — they were relabeled from PROVEN to
+DESIGN-CHOICE.** That relabeling read as an honesty improvement and functioned as laundering: a
+DESIGN-CHOICE asserts *a decision was made for reasons*, which gave retired-theorem residue a
+legitimate-looking home in `claims.yaml`. The numbers then kept propagating into live documentation
+as though they described the notation.
+**The tell, found by audit:** every genuine DESIGN-CHOICE in the registry states alternatives in the
+form `"option (rejected: reason)"`. **The two Σ_UL survivors were the only hollow ones.**
+`UWS-SORT-COUNT` held bare numerals `[2, 3, 4, 6]` with no reasons. `UWS-OPERATION-SET` held
+`["10 (pre-2026-04)", "13 (current)"]` — **a changelog, not alternatives.** The count grew 10 → 13 by
+accretion, which is positive evidence that no design decision was ever taken. **The tier requirement
+was satisfied formally while empty substantively.**
+**Compounding evidence:** `UWS-SORT-COUNT` cited phase3 as its rationale, and phase3 *demonstrated
+that three sorts work*. The rationale field pointed at a document that undercut the claim.
+**The unanswerable question that exposed it:** *"13 operations of what?"* They were operations over
+the Σ_UL signature. Σ_UL is retired, so the domain is gone and the inventory answers to nothing. An
+operation count cannot be meaningful before the conceptual foundations that fix a domain exist.
+**Inverse of R3.** R3 says retire formalizations, not claims. Here the opposite happened — the claim
+was retired and the formalization was kept, then given a respectable tier. **Both directions of that
+mismatch produce zombie content.**
+**Fix applied:** both entries RETIRED with full R3/R4/R5 fields. Replaced by `IMPL-SORT-ENUM` and
+`IMPL-COMPOSER-CONSTRUCTORS`, tiered VERIFIED and scoped explicitly as *facts about Rust files,
+load-bearing for nothing*, each carrying "do not restate this count as a property of UWS or UL."
+Live carriers corrected in `FOR-AI.md` and `CONTRIBUTING.md`.
+**Standing rule this establishes:** **when a claim is retired, audit what instantiates it.** A
+retirement that leaves its artifacts, counts, and specs standing has not happened. And a
+DESIGN-CHOICE whose `alternatives_considered` contains bare values or version history is not a
+design choice — it is residue wearing a tier.
