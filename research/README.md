@@ -11,6 +11,13 @@ research here is worth anything — see `postmortem-and-rebuild-2026-08.md` FM2.
 
 ---
 
+## Complete index
+
+**`RESEARCH-REGISTER.md`** — itemized index of every research thread run, what it returned, the
+transfer caveat that applies, its status (adopted / narrowed / retired / open / unchecked), and the
+follow-up it generated. **Start here if you want to know what has been checked** rather than what
+was concluded. ~55 threads across sections A–G, with consolidated follow-ups in section H.
+
 ## Current state of the program (read in this order)
 
 | Document | What it is |

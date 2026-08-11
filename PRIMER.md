@@ -186,6 +186,12 @@ construct that made verification undecidable).
 | 1 hr | `research/reassessment-2026-08-purpose-anchored.md` → `research/prior-art-audit-2026-08.md` → `research/ir-decision-2026-08.md` | Why it was reframed, what's already solved elsewhere, the IR decision |
 | Half day | `research/emergence-investigation/phase6-synthesis-and-verdict.md` + `phase7-position-c-mathematical-derivation.md` + `research/postmortem-and-rebuild-2026-08.md` | Why the metaphysics failed, and why the practice failed |
 | To build | `uws/` (notation) · `ul-forge/` (code) · `claims.yaml` (what's actually true) | Enough to contribute |
+| Reference | `research/RESEARCH-REGISTER.md` | Every research thread run, what it returned, its caveat and status — the index, not an argument |
+
+> **Note (2026-08-01):** this primer predates three later findings — that the Cure is a rediscovery
+> of Truth Maintenance Systems (Doyle 1979 / de Kleer 1986), that invariants may be *inferred*
+> rather than specified (Daikon-style), and that prevention-at-write-time is an unexamined
+> alternative to detect-then-repair. See `research/RESEARCH-REGISTER.md` §E and §H.
 
 **Companion wiki:** `wiki.fusiongirl.app` holds substantial related material — sometimes ahead of
 this repo (its architecture and AI-safety epistemics are better), sometimes wrong in its own ways
