@@ -269,3 +269,34 @@ finding of *"vanishingly few universals"* at the surface level is what universal
 **predicts** (microscopic diversity, invariants only under coarse-graining). Measured at the wrong
 level, it is supporting context rather than refutation.
 See `research/superseding-chomsky-and-the-primitive-question-2026-08.md` §§1–2.
+
+---
+
+## F-015 — reached for experiment where proof was available
+**Date:** 2026-08-01
+**What I did:** repeatedly framed the project's open questions as awaiting *experimental* resolution
+— "zero experiments have ever been run" as the standing indictment — and filed as CONJECTURED
+several claims about mathematical objects that are in fact derivable. Also labelled the
+Euclid/Aristotle/Vaiśeṣika dependency-order check an "experiment"; formalizing two partial orders
+and testing isomorphism is a **proof**.
+**Why that was wrong:** the primitives are mathematical objects with geometric definitions. For such
+objects proof is available, and it is the **stronger** instrument — the project's characteristic
+failure mode is patching evidence to fit an assertion (the D2 history, 32%→100% over nine rounds),
+and a proof cannot be patched into agreement the way a benchmark can. I adopted empiricism as the
+antidote to a disease that proof cures better.
+**What was actually available, and missed:**
+- The **Fundamental Theorem of Plane Curves** makes the primitive inventory a *stratification of
+  curvature-function space*, and **derives** the collapse relations (wave = periodic κ ⊂ variable κ;
+  angle = piecewise κ=0 with singularities) that had been recorded as observations.
+- The **Erlangen** subgroup relation ("any notion invariant in projective geometry is a priori
+  meaningful in affine geometry, but not the other way round") makes the coarse-graining survival
+  table a **computation**, not an experiment. It was filed as CONJECTURED.
+- **Jordan separation** links Enclosure to Spencer-Brown's mark by derivation. This had been sitting
+  in the framework as a philosophical posit adjacent to an unrelated geometric inventory.
+**Corrected position:** the empirical residue is **one question** — whether any real semantic system
+instantiates the class. Everything upstream (classification, extension to higher dimensions,
+coarse-graining behaviour, the Layer 0 link) is provable and should be built as proof.
+**Standing rule this establishes:** before filing a claim as CONJECTURED-pending-experiment, check
+whether its objects are mathematical. If they are, the burden is to find the theorem, not to design
+a study.
+See `research/what-is-actually-provable-2026-08.md`.

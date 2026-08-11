@@ -260,6 +260,10 @@ claims:
       larger groups, and RG fixed points show enhanced symmetry.
       Status: structural hypothesis, not established. RG is a flow in coupling space with fixed
       points; Erlangen is a lattice of groups. Analogous, not identical — but testable.
+      DO NOT CONFUSE WITH ERLANGEN-SURVIVAL-RANKING (ARGUED). That claim — which primitives survive
+      which Erlangen level — is a computation from the subgroup relation and is settled. THIS claim
+      — that the Erlangen lattice IS the semantic RG flow — is a separate and still-open analogy.
+      The survival table being derivable does not upgrade the correspondence.
       Supporting context: RG-for-deep-learning is a real active area, not an analogy. Both are
       coarse-graining over information flow, and RG "relevance" is formally equivalent to
       Information Bottleneck "relevant information" — which the wiki's Universal Semantic Manifold
@@ -769,3 +773,97 @@ claims:
       enclosure), and the substance-first orderings of Aristotle and Vaisesika (guna and karma
       inhere in dravya) are facts about texts written for ontology. Neither was constructed to match
       the other. Cheap to run and decisive in both directions.
+
+  # ─── Provable geometry (added 2026-08, "prove it don't test it" pass) ───────
+
+  - id: KAPPA-STRATIFICATION
+    statement: >
+      The UWS primitives are a stratification of plane-curve curvature-function space, and the
+      collapse relations between alternative primitive sets are theorems of that stratification
+      rather than observations about it.
+    tier: ARGUED
+    evidence: research/what-is-actually-provable-2026-08.md
+    priority: 0
+    notes: >
+      Fundamental Theorem of Plane Curves: a smooth curvature function kappa(s) plus initial
+      conditions determines a unique arc-length curve, and two unit-speed plane curves with equal
+      curvature differ only by a Euclidean motion. A plane curve IS its curvature function up to
+      rigid motion. Strata: kappa=0 line; kappa=const circle; kappa periodic wave; kappa variable
+      general curve; kappa=0 a.e. with isolated singularities angle; closed (total turning 2*pi*n)
+      enclosure. Derives the user-reported collapses: wave is a sub-stratum of variable curvature,
+      and angle is piecewise-zero curvature with singular points. Does NOT prove the hand-chosen
+      set was forced; it proves the question "which primitives" is well-posed as "which partition
+      of curvature space" with an enumerable answer space. Upgrade to VERIFIED by formalizing the
+      partition lattice in a proof assistant.
+
+  - id: ERLANGEN-SURVIVAL-RANKING
+    statement: >
+      Under the Erlangen hierarchy the primitives are ranked by robustness, and only Point and
+      Enclosure survive to the topological level; the entire curvature family is eliminated by the
+      projective level.
+    tier: ARGUED
+    evidence: research/what-is-actually-provable-2026-08.md
+    priority: 0
+    supersedes_tier_of: ERLANGEN-AS-COARSE-GRAINING
+    notes: >
+      Derivable, not experimental — this was previously filed as awaiting an experiment. The
+      subgroup relation does the work: any notion invariant in projective geometry is a priori
+      meaningful in affine geometry, but not conversely. Affine kills circle/ellipse and
+      angle-as-magnitude; projective merges all conics and eliminates curvature distinctions;
+      topological retains only connectivity and separation. This settles by computation the claim
+      that primitive count is an irrelevant operator.
+
+  - id: ENCLOSURE-IS-DISTINCTION
+    statement: >
+      Enclosure, the topologically-surviving primitive, is the same object as the Layer 0
+      distinction (Spencer-Brown's mark), via Jordan separation.
+    tier: ARGUED
+    evidence: research/what-is-actually-provable-2026-08.md
+    priority: 0
+    notes: >
+      Jordan Curve Theorem: a simple closed curve separates the plane into inside and outside.
+      Spencer-Brown's Laws of Form opens by drawing a distinction as a boundary, marked from
+      unmarked. Same object. This is the first FORMAL link between the framework's philosophical
+      floor and its geometric inventory — previously they sat adjacent with nothing connecting
+      them. Consequence: if a semantic fixed point exists, what sits at it is distinction and
+      incidence, not a five- or six-element primitive inventory.
+
+  - id: DIMENSIONAL-EXTENSION-DERIVABLE
+    statement: >
+      The primitive inventory at each dimensional level is derivable from the corresponding
+      classification theorem rather than chosen; plane-curve symbology is exactly the torsion=0
+      slice of the space-curve system.
+    tier: ARGUED
+    evidence: research/what-is-actually-provable-2026-08.md
+    notes: >
+      Fundamental Theorem of Space Curves: a unique space curve up to rigid motion exists for given
+      positive curvature and arbitrary torsion; torsion identically zero iff planar. 3D therefore
+      adds one derived axis (torsion) yielding helix, knotting, and chirality — the last provably
+      unavailable in the plane, since signed torsion makes left- and right-handed helices
+      inequivalent under rigid motion in R^3. Surfaces are classified by principal curvatures,
+      giving plane/sphere/cylinder/saddle/minimal, with Gaussian curvature intrinsic by the
+      Theorema Egregium (readable from within the surface, no embedding required). This is a growth
+      mechanism that expands by derivation — the inverse of the project's historical pattern of
+      invention followed by justification.
+
+  - id: COX-STYLE-CHARACTERIZATION
+    statement: >
+      Any system satisfying independently-motivated desiderata for a semantic notation is isomorphic
+      to a single structure S.
+    tier: CONJECTURED
+    falsified_by: >
+      Exhibit two systems satisfying the stated desiderata that are provably non-isomorphic. Note
+      this cannot even be attempted until the desiderata are written, so the claim is currently
+      unfalsifiable-in-practice and must not be cited as support for anything.
+    evidence: research/what-is-actually-provable-2026-08.md
+    notes: >
+      The correct form of the claim the RETIRED Unique Grounding Theorem was reaching for. Cox's
+      theorem is the template: qualitative, intuitively-appealing requirements for plausible
+      reasoning imply any such system is probability theory in disguise, concluding in a
+      representation theorem (order isomorphism onto the unit interval). HARD CONSTRAINT, and the
+      exact point where the old theorem failed: the desiderata may not mention the target structure.
+      The Unique Grounding Theorem defined semantic primitives to mirror geometric ones already
+      chosen and presented the forced bijection as proof. Cox's desiderata never mention
+      probability. CALIBRATION: Cox's theorem itself required repair — Halpern's counterexamples
+      showed it needs additional density/continuity assumptions. Expect the first version to have
+      holes.
