@@ -12,15 +12,15 @@
     "url": "https://jono.archangel.agency"
   },
 
-  "status_note": "As of 2026-08-01, the project's earlier proof claims (Sigma_UL 'unique up to isomorphism') were retired following a direct audit that found the central proof close to circular. See docs/planning/audits/wiki-comparison-2026-08.md. The project is now split into the Universal Writing System (a constructed notation, unaffected) and the Emergence Investigation (an open, falsifiable research question, tracked in docs/planning/emergence-investigation/PLAN.md).",
+  "status_note": "As of 2026-08-01, the project's earlier proof claims (Sigma_UL 'unique up to isomorphism') were retired following a direct audit that found the central proof close to circular. See research/wiki-comparison-2026-08.md. The project is now split into the Universal Writing System (a constructed notation, unaffected) and the Emergence Investigation (an open, falsifiable research question, tracked in research/emergence-investigation/PLAN.md).",
 
   "entry_points": {
     "human": "README.md",
     "ai_agent": "AGENTS.md",
     "ai_philosophical": "FOR-AI.md",
     "machine_readable": "llms.txt",
-    "investigation": "docs/planning/emergence-investigation/PLAN.md",
-    "audit": "docs/planning/audits/wiki-comparison-2026-08.md",
+    "investigation": "research/emergence-investigation/PLAN.md",
+    "audit": "research/wiki-comparison-2026-08.md",
     "archive": "archive/superseded-2026-08/"
   },
 
@@ -44,7 +44,7 @@
   },
 
   "emergence_investigation": {
-    "plan": "docs/planning/emergence-investigation/PLAN.md",
+    "plan": "research/emergence-investigation/PLAN.md",
     "status": "in_progress",
     "phases": 6,
     "current_phase": 1,
@@ -57,11 +57,11 @@
 
   "writing_system": {
     "siblings": {
-      "symbology": {"primitive": "point", "concern": "what marks exist", "path": "ul-core/symbology/symbol-map.md"},
-      "syntax": {"primitive": "line", "concern": "how marks connect", "path": "ul-core/syntax/syntax-dictionary.md"},
-      "grammar": {"primitive": "angle", "concern": "why constructions mean things", "path": "ul-core/grammar/grammar-book.md"},
-      "thesaurus": {"primitive": "curve", "concern": "paths between related meanings", "path": "ul-core/thesaurus/thesaurus.md"},
-      "lexicon": {"primitive": "enclosure", "concern": "canonical definitions", "path": "ul-core/lexicon/lexicon.md"}
+      "symbology": {"primitive": "point", "concern": "what marks exist", "path": "uws/symbology/symbol-map.md"},
+      "syntax": {"primitive": "line", "concern": "how marks connect", "path": "uws/syntax/syntax-dictionary.md"},
+      "grammar": {"primitive": "angle", "concern": "why constructions mean things", "path": "uws/grammar/grammar-book.md"},
+      "thesaurus": {"primitive": "curve", "concern": "paths between related meanings", "path": "uws/thesaurus/thesaurus.md"},
+      "lexicon": {"primitive": "enclosure", "concern": "canonical definitions", "path": "uws/lexicon/lexicon.md"}
     },
     "canonical_entries": 42,
     "tier_system": ["T1_geometrically_forced", "T2_structurally_distinguished", "T3_conventional"],
@@ -75,9 +75,9 @@
     "qc_verified": "16_of_16",
     "api_support": ["openai", "anthropic", "google"],
     "scoring_metrics": ["M1_cross_domain_depth", "M2_structural_coherence", "M3_generative_novelty", "M4_hierarchical_integration", "M5_self_referential_depth", "SQS_composite"],
-    "protocol": "frontier/causal-efficacy-protocol.md",
-    "schema": "experiments/data/SCHEMA.md",
-    "runner": "experiments/analysis/run_trials.py",
+    "protocol": "research/frontier/causal-efficacy-protocol.md",
+    "schema": "research/experiments/data/SCHEMA.md",
+    "runner": "research/experiments/analysis/run_trials.py",
     "rehabilitation_needed": ["true pre-registration before any run", "matched arbitrary-notation control (not just no-structure control)", "blinded scoring actually executed, not just available"]
   },
 
@@ -104,7 +104,7 @@
       "audience": "ai_agents"
     },
     {
-      "path": "docs/planning/audits/wiki-comparison-2026-08.md",
+      "path": "research/wiki-comparison-2026-08.md",
       "title": "Repo vs. Wiki Comparison — Universal Language, August 2026",
       "type": "audit",
       "prerequisites": [],
@@ -112,138 +112,138 @@
       "priority": "read_first"
     },
     {
-      "path": "docs/planning/emergence-investigation/PLAN.md",
+      "path": "research/emergence-investigation/PLAN.md",
       "title": "Emergence Investigation — Is Universal Language Real, and What Would Prove It?",
       "type": "research_plan",
-      "prerequisites": ["docs/planning/audits/wiki-comparison-2026-08.md"],
+      "prerequisites": ["research/wiki-comparison-2026-08.md"],
       "audience": "all"
     },
     {
-      "path": "foundations/formal-foundations.md",
+      "path": "uws/formal-specification.md",
       "title": "Formal Specification — Universal Writing System Notation & Operations",
       "type": "specification",
       "prerequisites": [],
       "audience": "all"
     },
     {
-      "path": "foundations/formal-operations.md",
+      "path": "uws/formal-operations.md",
       "title": "Formal Operations — Set-Theoretic Definitions",
       "type": "specification",
-      "prerequisites": ["foundations/formal-foundations.md"],
+      "prerequisites": ["uws/formal-specification.md"],
       "audience": "all"
     },
     {
-      "path": "foundations/independent-derivation.md",
+      "path": "research/independent-derivation.md",
       "title": "Independent Derivation from Philosophy and Linguistics",
       "type": "investigation_raw_material",
       "prerequisites": [],
       "audience": "all"
     },
     {
-      "path": "foundations/universal-language-derivation.md",
+      "path": "uws/design-rationale.md",
       "title": "Universal Writing System — Geometric Design Rationale",
       "type": "design_rationale",
       "prerequisites": [],
       "audience": "all"
     },
     {
-      "path": "ul-core/NAVIGATION.md",
+      "path": "uws/NAVIGATION.md",
       "title": "Navigation Guide — Universal Writing System",
       "type": "navigation",
       "prerequisites": [],
       "audience": "all"
     },
     {
-      "path": "ul-core/SYNTHESIS.md",
+      "path": "uws/SYNTHESIS.md",
       "title": "Synthesis — How the Universal Writing System Works",
       "type": "analysis",
-      "prerequisites": ["foundations/formal-foundations.md"],
+      "prerequisites": ["uws/formal-specification.md"],
       "audience": "all"
     },
     {
-      "path": "ul-core/writing-system/writing-system.md",
+      "path": "uws/writing-system/writing-system.md",
       "title": "Universal Writing System — Complete Specification",
       "type": "specification",
       "prerequisites": [],
       "audience": "all"
     },
     {
-      "path": "ul-core/writing-system/writers-companion.md",
+      "path": "uws/writing-system/writers-companion.md",
       "title": "Writer's Companion Guide — Practical Pen-and-Paper Guide",
       "type": "guide",
-      "prerequisites": ["ul-core/writing-system/writing-system.md"],
+      "prerequisites": ["uws/writing-system/writing-system.md"],
       "audience": "all"
     },
     {
-      "path": "ul-core/symbology/symbol-map.md",
+      "path": "uws/symbology/symbol-map.md",
       "title": "Universal Symbology Map",
       "type": "reference",
-      "prerequisites": ["foundations/formal-foundations.md"],
+      "prerequisites": ["uws/formal-specification.md"],
       "audience": "all",
       "geometric_primitive": "point"
     },
     {
-      "path": "ul-core/syntax/syntax-dictionary.md",
+      "path": "uws/syntax/syntax-dictionary.md",
       "title": "Universal Syntax Dictionary",
       "type": "reference",
-      "prerequisites": ["foundations/formal-foundations.md"],
+      "prerequisites": ["uws/formal-specification.md"],
       "audience": "all",
       "geometric_primitive": "line"
     },
     {
-      "path": "ul-core/grammar/grammar-book.md",
+      "path": "uws/grammar/grammar-book.md",
       "title": "Universal Grammar Book",
       "type": "reference",
-      "prerequisites": ["foundations/formal-foundations.md"],
+      "prerequisites": ["uws/formal-specification.md"],
       "audience": "all",
       "geometric_primitive": "angle"
     },
     {
-      "path": "ul-core/thesaurus/thesaurus.md",
+      "path": "uws/thesaurus/thesaurus.md",
       "title": "Universal Language Thesaurus",
       "type": "reference",
-      "prerequisites": ["foundations/formal-foundations.md"],
+      "prerequisites": ["uws/formal-specification.md"],
       "audience": "all",
       "geometric_primitive": "curve"
     },
     {
-      "path": "ul-core/lexicon/lexicon.md",
+      "path": "uws/lexicon/lexicon.md",
       "title": "Universal Lexicon — 42 Canonical Definitions",
       "type": "reference",
-      "prerequisites": ["foundations/formal-foundations.md"],
+      "prerequisites": ["uws/formal-specification.md"],
       "audience": "all",
       "geometric_primitive": "enclosure"
     },
     {
-      "path": "frontier/causal-efficacy-protocol.md",
+      "path": "research/frontier/causal-efficacy-protocol.md",
       "title": "Causal Efficacy Protocol — Pre-Registered Experimental Design",
       "type": "protocol_needing_rehabilitation",
-      "prerequisites": ["foundations/formal-foundations.md"],
+      "prerequisites": ["uws/formal-specification.md"],
       "audience": "researchers"
     },
     {
-      "path": "frontier/expedition-one/category-of-languages.md",
+      "path": "research/frontier/expedition-one/category-of-languages.md",
       "title": "Category of Languages — Lang(Sigma)",
       "type": "investigation_raw_material",
-      "prerequisites": ["foundations/formal-foundations.md"],
+      "prerequisites": ["uws/formal-specification.md"],
       "audience": "advanced"
     },
     {
-      "path": "frontier/expedition-one/gauge-bundle-of-meaning.md",
+      "path": "research/frontier/expedition-one/gauge-bundle-of-meaning.md",
       "title": "Gauge Bundle of Meaning — Context-Dependence via Fiber Bundles",
       "type": "investigation_raw_material",
-      "prerequisites": ["foundations/formal-foundations.md"],
+      "prerequisites": ["uws/formal-specification.md"],
       "audience": "advanced"
     }
   ],
 
   "reading_paths": {
-    "current_status": ["README.md", "docs/planning/audits/wiki-comparison-2026-08.md"],
-    "writing_system": ["ul-core/NAVIGATION.md", "ul-core/writing-system/writers-companion.md", "ul-core/writing-system/writing-system.md", "ul-core/lexicon/lexicon.md"],
-    "ai_systems": ["FOR-AI.md", "AGENTS.md", "foundations/formal-foundations.md"],
-    "emergence_investigation": ["docs/planning/emergence-investigation/PLAN.md", "docs/planning/emergence-investigation/keep-retire-inventory.md", "foundations/independent-derivation.md"],
-    "verification": ["experiments/README.md", "frontier/causal-efficacy-protocol.md"],
-    "advanced_theory": ["frontier/expedition-one/category-of-languages.md", "frontier/expedition-one/gauge-bundle-of-meaning.md", "frontier/expedition-two/probability-and-information.md"],
+    "current_status": ["README.md", "research/wiki-comparison-2026-08.md"],
+    "writing_system": ["uws/NAVIGATION.md", "uws/writing-system/writers-companion.md", "uws/writing-system/writing-system.md", "uws/lexicon/lexicon.md"],
+    "ai_systems": ["FOR-AI.md", "AGENTS.md", "uws/formal-specification.md"],
+    "emergence_investigation": ["research/emergence-investigation/PLAN.md", "research/emergence-investigation/keep-retire-inventory.md", "research/independent-derivation.md"],
+    "verification": ["research/experiments/README.md", "research/frontier/causal-efficacy-protocol.md"],
+    "advanced_theory": ["research/frontier/expedition-one/category-of-languages.md", "research/frontier/expedition-one/gauge-bundle-of-meaning.md", "research/frontier/expedition-two/probability-and-information.md"],
     "historical_record": ["whitepaper/UL_WhitePaper-Part1.md", "archive/superseded-2026-08/README.md"]
   }
 }

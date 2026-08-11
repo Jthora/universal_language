@@ -11,7 +11,7 @@ This project previously claimed its formal signature (Σ_UL: 5 primitives, 4 sor
 23 theorems) was "unique up to isomorphism" — proven, not designed. A direct audit found the
 central proof close to circular, and a from-scratch minimality analysis (standard model theory)
 gives a smaller, different answer (2 base types) than the claimed counts. That proof apparatus has
-been retired; see `docs/planning/audits/wiki-comparison-2026-08.md` for the audit and
+been retired; see `research/wiki-comparison-2026-08.md` for the audit and
 `archive/superseded-2026-08/` for the original claims, preserved for historical reference.
 
 ## What This Is Now
@@ -23,7 +23,7 @@ Two separate things:
    Judged on composability/learnability/expressiveness, in the tradition of Blissymbolics — not on
    a claim of cosmic necessity.
 2. **The Emergence Investigation** — an open, six-phase, falsifiable research program
-   (`docs/planning/emergence-investigation/PLAN.md`) into whether any mind-independent universal
+   (`research/emergence-investigation/PLAN.md`) into whether any mind-independent universal
    semantic structure is real. Not assumed true or false; currently in progress.
 
 ## Start Here
@@ -37,24 +37,24 @@ Two separate things:
 - AGENTS.md: Machine-readable navigation for AI agents
 - FOR-AI.md: Honest reframing of what this project offers AI systems (retired the earlier "you are
   a geometric engine" framing)
-- docs/planning/audits/wiki-comparison-2026-08.md: The audit that surfaced the core problem
-- docs/planning/emergence-investigation/PLAN.md: The active six-phase research plan
-- foundations/universal-language-derivation.md: UWS design rationale (reframed, not a proof)
-- foundations/formal-foundations.md: UWS notation's formal operation spec (reframed, not a proof)
-- foundations/formal-operations.md: Set-theoretic definitions of the notation's operations
-- foundations/independent-derivation.md: Raw material for the Investigation (not a settled result)
-- foundations/montague-homomorphism.md: Raw material for the Investigation
-- ul-core/NAVIGATION.md: Quick-start paths for reading, writing, and navigating the writing system
-- ul-core/writing-system/writing-system.md: Complete reading/writing specification
-- ul-core/writing-system/writers-companion.md: Practical pen-and-paper guide (10 worked examples)
-- ul-core/symbology/symbol-map.md: Atomic marks (Point primitive)
-- ul-core/syntax/syntax-dictionary.md: Connection rules (Line primitive)
-- ul-core/grammar/grammar-book.md: Construction rules (Angle primitive)
-- ul-core/thesaurus/thesaurus.md: Meaning pathways (Curve primitive)
-- ul-core/lexicon/lexicon.md: 42 canonical definitions (Enclosure primitive)
-- frontier/causal-efficacy-protocol.md: Experimental protocol — target of Investigation Phase 5,
+- research/wiki-comparison-2026-08.md: The audit that surfaced the core problem
+- research/emergence-investigation/PLAN.md: The active six-phase research plan
+- uws/design-rationale.md: UWS design rationale (reframed, not a proof)
+- uws/formal-specification.md: UWS notation's formal operation spec (reframed, not a proof)
+- uws/formal-operations.md: Set-theoretic definitions of the notation's operations
+- research/independent-derivation.md: Raw material for the Investigation (not a settled result)
+- research/montague-homomorphism.md: Raw material for the Investigation
+- uws/NAVIGATION.md: Quick-start paths for reading, writing, and navigating the writing system
+- uws/writing-system/writing-system.md: Complete reading/writing specification
+- uws/writing-system/writers-companion.md: Practical pen-and-paper guide (10 worked examples)
+- uws/symbology/symbol-map.md: Atomic marks (Point primitive)
+- uws/syntax/syntax-dictionary.md: Connection rules (Line primitive)
+- uws/grammar/grammar-book.md: Construction rules (Angle primitive)
+- uws/thesaurus/thesaurus.md: Meaning pathways (Curve primitive)
+- uws/lexicon/lexicon.md: 42 canonical definitions (Enclosure primitive)
+- research/frontier/causal-efficacy-protocol.md: Experimental protocol — target of Investigation Phase 5,
   needs pre-registration/blinding/matched-control fixes before results count as evidence
-- experiments/README.md: Experimental infrastructure (Phase 5 target)
+- research/experiments/README.md: Experimental infrastructure (Phase 5 target)
 - archive/superseded-2026-08/: Full original text of everything retired in this restructuring
 
 ## Notation Specification (Design Choice, Not Proven Necessity)
@@ -73,7 +73,7 @@ Signature (as implemented in ul-forge/):
 ## Emergence Investigation — Current Findings (Provisional)
 
 - Convergent-mathematics and non-human-semiosis literature reviews are in progress
-  (docs/planning/emergence-investigation/PLAN.md Phases 1–2).
+  (research/emergence-investigation/PLAN.md Phases 1–2).
 - Real, checked evidence exists for partial pieces (honeybee waggle-dance geometric encoding,
   Bengalese finch bounded hierarchical syntax) — neither shows full relational-algebra structure
   (negation/quantification/embedding) outside humans yet.
