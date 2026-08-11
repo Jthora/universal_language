@@ -150,3 +150,21 @@ CI. README code examples used `point(existence)`, syntax the parser rejects — 
 hit an immediate failure. `preregister.py` and `blind.py` were built, documented, and never run.
 **Status:** Partially addressed by the 2026-08 restructuring (README rewritten). Publish workflow
 still absent; example syntax still needs verification against the parser.
+
+---
+
+## F-011 — Normalization over GIR was assumed tractable; graph confluence is undecidable
+**Date:** 2026-08-01
+**Claim that failed:** Implicit throughout the notation work — that algebraic laws over GIR could be
+enforced by normalizing structures and comparing normal forms (the standard term-rewriting route).
+**How it failed:** GIR is a **graph**, and the composer is a graph-rewriting system. For *term*
+rewriting, Knuth-Bendix completion yields a confluent terminating system that decides equality by
+normal-form comparison. For *graph* rewriting this does not carry over: joinability of critical pairs
+does not entail confluence, and **confluence of terminating DPO graph rewriting systems is undecidable
+in general** (Plump). The route to `semantically_equal` assumed a property that is not guaranteed and
+not checkable over the chosen IR.
+**Status:** Open — and now **blocking**. Three candidate resolutions: (a) restrict the normalizing
+fragment to a term/tree structure, exploiting the existing `graph-with-tree-spine` architecture;
+(b) adopt DPO-with-Interfaces, where confluence *is* decidable; (c) decide equivalence by
+non-normalization means. Must be chosen before further IR or evaluator work.
+See `research/prior-art-audit-2026-08.md`.

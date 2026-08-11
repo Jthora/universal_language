@@ -75,9 +75,13 @@ claims:
     falsified_by: "A proof that GIR semantic equivalence is undecidable in the general case."
     evidence: null
     notes: >
-      DOES NOT EXIST IN ANY FORM. This is the true prerequisite for the Cure, for UQPL, and for
-      every algebraic law in the notation. Highest-priority engineering work in the program.
+      DOES NOT EXIST IN ANY FORM, but is no longer novel research. Term rewriting + Knuth-Bendix
+      completion is the standard solution shape: confluent terminating rewrite system -> decide
+      equality by normal-form comparison. BLOCKED on IR-NORMALIZATION-STRATEGY: that machinery
+      applies cleanly to terms, and confluence is undecidable for general graph rewriting.
+      See research/prior-art-audit-2026-08.md.
     priority: 1
+    blocked_by: [IR-NORMALIZATION-STRATEGY]
 
   # ─── Implementation: what is actually verified ─────────────────────────────
 
@@ -105,6 +109,45 @@ claims:
       Cannot hold as specified. Projection onto a non-convex admissible region is multivalued
       (Hilbert projection theorem requires convexity for uniqueness), and 𝒜 is almost certainly
       non-convex given non-contradiction. Needs redesign, not repair.
+
+  - id: IR-NORMALIZATION-STRATEGY
+    statement: "GIR admits a decidable notion of structural/semantic equivalence via normalization."
+    tier: CONJECTURED
+    falsified_by: >
+      Confirmed: FALSE for general graph rewriting. Confluence of terminating DPO graph rewriting
+      is undecidable (Plump), and critical-pair joinability does not entail confluence as it does
+      for terms. Holds only under a restricted strategy.
+    evidence: research/prior-art-audit-2026-08.md
+    notes: >
+      BLOCKING DESIGN DECISION. Options: (a) restrict normalizing fragment to a term/tree structure
+      (the existing graph-with-tree-spine architecture suggests this was half-intuited);
+      (b) adopt DPO-with-Interfaces, where confluence IS decidable; (c) abandon normalization and
+      decide equivalence another way. Nothing downstream should be built before this is chosen.
+    priority: 0
+    blocks: [SEMANTIC-EQUALITY, NEG-INVOLUTION, UQPL-REDUCTION]
+
+  - id: CURE-REPAIR-FORMULATION
+    statement: "Repair should be formulated discretely (pinpointing / minimal diagnoses) rather than as metric projection."
+    tier: DESIGN-CHOICE
+    rationale: research/prior-art-audit-2026-08.md
+    alternatives_considered: ["metric projection onto admissible region (rejected: multivalued for non-convex 𝒜)", "AGM belief revision", "ontology-repair pinpointing"]
+    notes: >
+      The ontology debugging/repair field solves this problem discretely — minimal inconsistent
+      subsets, justifications, minimal vs minimal-cardinality diagnoses, root unsatisfiable concepts
+      — which sidesteps the convexity obstruction in F-009 entirely. AGM belief revision supplies
+      the minimal-change postulates, already extended to description logics. Largest available
+      scope reduction in the program.
+
+  - id: IR-PRIOR-ART-POSITION
+    statement: "GIR's relationship to Sowa's Conceptual Graphs / ISO 24707 Common Logic is stated explicitly before any new IR spec is written."
+    tier: CONJECTURED
+    falsified_by: "A new IR spec authored without addressing CGIF interoperability or stating the difference."
+    evidence: research/prior-art-audit-2026-08.md
+    notes: >
+      Conceptual Graphs are a graph representation for logic with full FOL power, formal semantics
+      under ISO/IEC 24707, and a standard interchange format (CGIF). This is direct prior art for
+      the IR layer, standardized in 2007. UWS's differentiator is the iconic 2D visual layer, not
+      the graph IR.
 
   - id: CURE-SCOPE
     statement: "The Cure enforces local structural validity under defined semantic invariants — it is not alignment, adversarial immunity, or ethical correctness."
