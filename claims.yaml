@@ -976,3 +976,72 @@ claims:
       unavailable until one is constructed. Landau theory is phenomenological and carries no such
       requirement, which is why it applies and Noether does not. Claiming Noether here would be
       precisely the borrowed-authority move this project has been caught making before.
+
+  # ─── The external anchor (added 2026-08) ───────────────────────────────────
+
+  - id: GEOMETRIC-ANCHOR-ESCAPES-LOB
+    statement: >
+      Grounding the semantic layer in fixed mathematical structure converts self-verification into
+      reference-comparison, which the Lobian obstacle does not bite; the escape covers the semantic
+      comparison function only, not the whole system.
+    tier: ARGUED
+    evidence: research/the-external-anchor-2026-08.md
+    priority: 0
+    notes: >
+      Lob applies to PROOF-BASED SELF-TRUST — a system reasoning about its own provability. "Is my
+      representation self-consistent?" is self-referential and Lob bites. "Does my representation
+      match the fixed external structure?" is a structural comparison against something that does
+      not change, is not a proof about proofs, and Lob never fires. Established pattern in three
+      fields: Gentzen proved PA's consistency in PRA + transfinite induction to epsilon_0; type
+      checkers have soundness proved externally as metatheory; hardware roots of trust terminate the
+      regress in something the system cannot verify.
+      IMPORTANT REFINEMENT: the external base need not be STRONGER. PRA is weaker than PA in most
+      respects and stronger only in the one respect needed. The anchor must be more TRUSTWORTHY, not
+      more POWERFUL — a much easier requirement, and the one a mathematical anchor actually meets.
+      SCOPE LIMITS, do not drop these: the implementation performing the comparison remains
+      untrusted (TCB shrinks, never vanishes — cf. "for type soundness theorems, only the type
+      system itself is not trusted, while runtime semantics are typically taken for granted"); Lob
+      still applies to the Cure reasoning about its own repair POLICY; and the mapping from
+      representation to mathematical structure must still be specified and checkable — the grounding
+      problem is relocated into a concrete engineering task, not dissolved.
+
+  - id: DRIFT-MUST-BE-ABSOLUTE-NOT-RELATIVE
+    statement: >
+      Semantic drift measured against a maintained baseline is undetectable under common-mode drift;
+      the Cure must measure against fixed invariants instead.
+    tier: ARGUED
+    evidence: research/the-external-anchor-2026-08.md
+    priority: 0
+    notes: >
+      Not an analogy — the identical engineering problem, already solved in metrology. The kilogram
+      was defined by the IPK, a platinum-iridium artifact subject to mass drift from surface
+      contamination and atomic-level material loss, which lost roughly 50 micrograms against its
+      official value over a century. THE STANDARD ITSELF DRIFTED, so drift was unmeasurable in
+      absolute terms — comparison was only ever against copies that were also drifting. The 2019 SI
+      redefinition replaced the artifact with the Planck constant (h fixed at 6.62607015e-34 J s),
+      giving an unchanging basis consistent across time and space, independent of any physical change
+      in a prototype. The Cure as currently specified is the IPK design. It should be the post-2019
+      design. Structural note: h was a MEASURED quantity whose value was then FIXED BY DEFINITION — a
+      conventional act at the base that renders everything downstream non-conventional, the same
+      shape as this repo's DESIGN-CHOICE vs discovery distinction.
+
+  - id: ANCHOR-IS-DISTINCTION-AND-INCIDENCE
+    statement: >
+      The trust anchor is Point and Enclosure — distinction and incidence — not the geometric
+      inventory generally, because those are the provably most invariant structures available.
+    tier: ARGUED
+    evidence: research/the-external-anchor-2026-08.md
+    notes: >
+      Metrology's principle is to anchor to the most invariant thing available. ERLANGEN-SURVIVAL-
+      RANKING already computed that ranking: Point and Enclosure survive to the topological level
+      while the entire curvature family is eliminated by projective. So the anchor is DERIVED rather
+      than chosen. Connects to ENCLOSURE-IS-DISTINCTION: the surviving primitive is the Layer 0 mark
+      via Jordan separation.
+      ANCHOR TO THE MATHEMATICS, NOT TO "THE UNIVERSE." Physical space is not Euclidean; it is curved
+      and locally variable, so a physical-geometry anchor reinherits the IPK pathology in new
+      costume. The classification theorems hold regardless of physical geometry because they concern
+      mathematical structures rather than measurements of space. The mathematical anchor is strictly
+      more invariant than a physical one.
+      CONSEQUENCE FOR THE GEOMETRIC PROGRAM: demoted to "symmetry clue" under the emergent-
+      universality reframe, it returns here as the TRUST ANCHOR — a load-bearing engineering role,
+      and a different one from its retired role as foundation.
