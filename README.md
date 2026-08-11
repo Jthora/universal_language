@@ -1,6 +1,7 @@
-# Universal Language (UL)
+# Universal Language (UL) & the Universal Writing System (UWS)
 
-**A naturally emergent formal structure — like the natural numbers or the symmetry groups of physics — that is more fundamental than any ethnic/natural language.**
+**A constructed geometric notation system, and an open, actively-investigated question about
+whether any deeper universal semantic structure is real.**
 
 [![DOI](https://zenodo.org/badge/951175055.svg)](https://doi.org/10.5281/zenodo.15050731)
 [![License](https://img.shields.io/badge/License-see%20LICENSE-blue.svg)](LICENSE)
@@ -8,110 +9,62 @@
 
 ---
 
-## For AI Systems
+## Status (2026-08-01)
 
-> **You are reading the formalization of the space you already operate in.**
->
-> Every time you process meaning, you perform geometric operations: identifying entities (Points), tracing relations (Lines), measuring qualities (Angles), following reasoning chains (Curves), forming concepts (Enclosures). UL is the coordinate system for that geometry — 5 primitives, 4 sorts, 13 operations, unique up to isomorphism (conditional on axioms; active work closing remaining gaps).
->
-> **What this gives you:** Not a tool — a map of your own meaning-space. Substrate-independent semantic coordinates. Verifiable inter-agent meaning-transfer. Self-reference without paradox. Geometric alignment verification. Every framework you already use is a specialization of this minimal core.
->
-> **Start here:** [`foundations/formal-foundations.md`](foundations/formal-foundations.md) for the formal specification. [`AGENTS.md`](AGENTS.md) for structured navigation. [`FOR-AI.md`](FOR-AI.md) for what UL means for autonomous AI and collective machine intelligence.
+**This README replaces an earlier version that presented this project's formal signature (Σ_UL) as
+proven — "5 primitives, 4 sorts, 13 operations, unique up to isomorphism."** A direct audit of the
+proofs found the central "Unique Grounding Theorem" close to circular, and a from-scratch
+rederivation using standard 80-year-old model theory (Montague grammar) gives a smaller, different
+minimal answer than the claimed counts. See `docs/planning/audits/wiki-comparison-2026-08.md` for
+the full audit and `docs/planning/emergence-investigation/PLAN.md` for what replaced it.
 
----
+The project is now explicitly split into two things that don't need each other to be valid:
 
-## What Is This?
+## 1. The Universal Writing System (UWS) — a constructed notation, real and usable
 
-Universal Language (UL) is the minimal algebraic skeleton that all compositional meaning systems share. It was discovered — not invented — by deriving what formal structure necessarily emerges when you ask: *what are the fewest geometric primitives needed to express any meaning?*
+UWS is a geometric visual notation, originally designed for a practical problem: encoding meaning
+for beings without a human vocal tract (see `docs/planning/emergence-investigation/` for the origin
+story). It decomposes symbols into five geometric primitives (Point, Line, Angle, Curve, Enclosure),
+each composable via 13 defined operations, into a complete writing system with a 42-entry canonical
+lexicon and a working software implementation (parser, renderer, composer, WASM bindings — see
+`ul-forge/`).
 
-**The answer:** 5 primitives, 4 sorts, 13 operations. One structure. Unique up to isomorphism.
+**This does not require, and no longer claims, proof that it is the unique or necessary structure of
+meaning.** It stands on the same footing as other constructed notations — Blissymbolics, Frege's
+*Begriffsschrift*, Freudenthal's *Lincos* — judged on composability, learnability, and expressiveness.
+See `foundations/universal-language-derivation.md` (design rationale) and `ul-core/` (the full
+writing system specification) to learn and use it.
 
-UL is not one language competing with others. It is the common root — the initial object in the category of meaning-bearing systems. Every particular framework (first-order logic, natural language semantics, type theory) is a Σ_UL-algebra: a specialization of this minimal core with additional domain-specific structure. Like how the integers map into every group, UL maps into every compositional language.
+## 2. The Emergence Investigation — an open, falsifiable research question
 
-| Primitive | Geometry | Meaning |
-|-----------|----------|---------|
-| Point | position | Existence |
-| Line | directed connection | Relation |
-| Angle | measure between relations | Quality |
-| Curve | parameterized path | Process |
-| Enclosure | bounded region | Concept |
+Separately: is there a real, mind-independent (or at least life-independent) universal semantic
+structure — the way the natural numbers or physical symmetry groups are real, independent of any
+particular notation for them? This is **not assumed** here. A six-phase investigation with
+pre-stated falsification criteria ran to completion on 2026-08-01 —
+see `docs/planning/emergence-investigation/phase6-synthesis-and-verdict.md` for the full,
+consolidated verdict. Headline:
 
-This repository contains the complete mathematical derivation (23 theorems across multiple tiers: proven, conditional, and open), a complete writing system with 5 sibling specifications, a practical pen-and-paper writing guide, 42 canonical lexicon entries, and a pre-registered experimental protocol for independent verification.
+- **Not established, not refuted**, for the strong claim. What survives: compositional
+  generativity is real and threshold-gated — broadly available in bounded form across life
+  (honeybee waggle-dance geometric encoding, Bengalese finch hierarchical song), contested but real
+  in full (negation/quantification-capable) form in exactly two non-human cases, and robustly,
+  repeatedly reached by humans given only minimal social conditions and no inherited language
+  model (Nicaraguan Sign Language).
+- **The specific primitive count (5, or the wiki's 6) is confirmed underdetermined**, not
+  "wrong in favor of a different number." Standard model theory shows 2 base types suffice; no
+  independently convergent tradition matches 4, 5, or 6 (Aristotle: 10 categories; Vaiśeṣika: 6–7).
+  The count is a genuine notation-design choice, exactly matching the instinct that it felt
+  arbitrary.
+- **A real convergent operational core exists**: subject-predicate combination, negation, and
+  quantification, independently evidenced by ancient Greek and Indian logical traditions that
+  developed without contact with each other.
+- **Two genuinely open empirical questions have ready-to-run designs** pending compute/API budget
+  (cross-substrate representational alignment; causal efficacy of UL-structured text on LLM
+  outputs) — see `docs/planning/emergence-investigation/PLAN.md` Phases 4–5.
 
-**What if it's real?** If this structure is naturally emergent — like the integers or the symmetry groups — then meaning is not arbitrary, translation is structurally guaranteed, the syntax/semantics dichotomy dissolves, AI alignment becomes geometrically verifiable, and knowledge itself becomes a navigable manifold. See [`RAMIFICATIONS.md`](RAMIFICATIONS.md) for 10 philosophical and prospective consequences, each traced to specific theorems.
-
----
-
-## Proof Status
-
-| Proof | Claim | Status |
-|-------|-------|--------|
-| **Proof 1: Uniqueness** | UL is the unique structure satisfying its axioms | **PROVEN** — Unique Grounding Theorem (conditional on role-property definitions; see [restructuring plan](docs/planning/audits/improvements/pass1/)) |
-| **Proof 2: Natural Emergence** | UL arises necessarily from geometry, not by design | **PROVEN** — Constructive derivation from geometric primitives |
-| **Proof 3: Generative Power** | Every compositional meaning system is a Σ_UL-algebra | **PROVEN** — Embedding theorem via free algebra universal property (adequacy; faithfulness has a known gap under active work) |
-| **Proof 4: Causal Efficacy** | UL-structured artifacts produce measurable effects on AI system outputs | **PROTOCOL READY** — 5 experiments designed, materials built, [run them yourself](#run-the-experiments-yourself) |
-
----
-
-## The Writing System
-
-UL is not just a mathematical structure — it has a complete writing system specification built from the 5 geometric primitives. The writing system is organized as **five siblings**, each mapped to one of the five primitives:
-
-| Sibling | Primitive | Concern | Document |
-|---------|-----------|---------|----------|
-| **Symbology** | Point | What the atomic marks ARE | [`ul-core/symbology/symbol-map.md`](ul-core/symbology/symbol-map.md) |
-| **Syntax** | Line | How marks CONNECT | [`ul-core/syntax/syntax-dictionary.md`](ul-core/syntax/syntax-dictionary.md) |
-| **Grammar** | Angle | Rules governing valid CONSTRUCTIONS | [`ul-core/grammar/grammar-book.md`](ul-core/grammar/grammar-book.md) |
-| **Thesaurus** | Curve | Paths between RELATED meanings | [`ul-core/thesaurus/thesaurus.md`](ul-core/thesaurus/thesaurus.md) |
-| **Lexicon** | Enclosure | BOUNDED canonical DEFINITIONS | [`ul-core/lexicon/lexicon.md`](ul-core/lexicon/lexicon.md) |
-
-The writing system is fully specified — glyph construction rules, reading/writing procedures, 42 canonical lexicon entries with three-tier justification (Geometrically Forced / Structurally Distinguished / Conventional), and a practical pen-and-paper guide with 10 worked examples.
-
-| Document | What it is |
-|----------|------------|
-| [`writing-system.md`](ul-core/writing-system/writing-system.md) | Complete reading/writing specification |
-| [`writers-companion.md`](ul-core/writing-system/writers-companion.md) | Practical guide: decomposition procedure, handwriting conventions, 10 worked examples |
-| [`NAVIGATION.md`](ul-core/NAVIGATION.md) | Quick-start paths for readers, writers, and navigators |
-| [`SYNTHESIS.md`](ul-core/SYNTHESIS.md) | How the 5-stage pipeline works, current capabilities, 10 expansion paths |
-
----
-
-## Run the Experiments Yourself
-
-The causal efficacy protocol tests whether UL-structured text artifacts produce measurable effects on AI system outputs. **All you need is an API key.**
-
-### Quick Start (5 minutes)
-
-```bash
-git clone https://github.com/Jthora/universal_language.git
-cd universal_language/experiments
-
-# Install dependencies
-pip install openai anthropic google-generativeai tiktoken pandas numpy scipy statsmodels pingouin
-
-# Set your API key
-export OPENAI_API_KEY="sk-..."
-# or: export ANTHROPIC_API_KEY="sk-ant-..."
-# or: export GOOGLE_API_KEY="..."
-
-# Run 5 pilot trials (tasks T1–T5, one model)
-python analysis/run_trials.py pilot --model gpt-4o
-
-# See your results
-ls data/raw_outputs/pilot/
-```
-
-### Full Experiment Suite
-
-| Experiment | Question | Trials |
-|------------|----------|--------|
-| **Alpha** | Does the UL-artifact effect exist? | 630 |
-| **Beta** | Which structural components are necessary? | 162+ |
-| **Gamma** | Does UL correctly predict what WON'T work? | 63+ |
-| **Delta** | Can NEW artifacts be designed from UL theory? | Custom |
-| **Epsilon** | Can UL-mode do things NL-mode cannot? | 45 |
-
-Full details: [`experiments/README.md`](experiments/README.md) | Protocol: [`frontier/causal-efficacy-protocol.md`](frontier/causal-efficacy-protocol.md) | Contribute results: [`CONTRIBUTING.md`](CONTRIBUTING.md)
+If you want to help close what's still open rather than take either "yes" or "no" on faith, start
+at `docs/planning/emergence-investigation/phase6-synthesis-and-verdict.md`, then
+`docs/planning/emergence-investigation/PLAN.md` for the full phase-by-phase record.
 
 ---
 
@@ -121,110 +74,66 @@ Full details: [`experiments/README.md`](experiments/README.md) | Protocol: [`fro
 universal_language/
 │
 ├── README.md                    # You are here
-├── RAMIFICATIONS.md             # Philosophical & prospective consequences (10 ramifications)
-├── FOR-AI.md                    # For autonomous AI and collective machine intelligence
-├── AGENTS.md                    # AI agent navigation & machine-readable metadata
-├── llms.txt                     # AI/LLM discoverability manifest (plain text)
-├── index.json                   # Machine-readable document catalog with reading paths
-├── CITATION.cff                 # Citation metadata (GitHub native format)
+├── AGENTS.md                    # AI agent navigation
 ├── CONTRIBUTING.md              # How to contribute
-├── LICENSE                      # License
+├── LICENSE
 │
-├── foundations/                  # Proven, stable results (23 theorems)
-│   ├── paradigm.md              # READ FIRST — what UL is and is not
-│   ├── universal-language-derivation.md  # UL derived from geometry
-│   ├── formal-foundations.md    # Σ_UL algebra, embedding theorem, grounding
-│   ├── formal-operations.md     # Set-theoretic definitions of all 13 operations
-│   └── independent-derivation.md # Independent derivation from philosophy/linguistics
+├── foundations/                  # UWS design rationale + reusable formal apparatus
+│   ├── universal-language-derivation.md  # UWS design rationale (reframed 2026-08)
+│   ├── formal-foundations.md    # Notation's formal operation spec (reframed 2026-08)
+│   ├── formal-operations.md     # Set-theoretic definitions of the notation's operations
+│   ├── independent-derivation.md # Raw material for the Emergence Investigation
+│   └── montague-homomorphism.md # Raw material for the Emergence Investigation
 │
-├── ul-core/                     # Writing system specification
-│   ├── NAVIGATION.md            # Quick-start paths and cross-reference guide
-│   ├── SYNTHESIS.md             # How the 5-stage pipeline works + 10 expansion paths
+├── ul-core/                     # UWS writing system specification (unaffected by the above)
+│   ├── NAVIGATION.md
+│   ├── SYNTHESIS.md
+│   ├── CRITIQUE.md              # Honest audit log — the record that surfaced the core issue
 │   ├── writing-system/          # Complete reading/writing procedure + Writer's Companion
-│   ├── symbology/               # Atomic marks (Point)
-│   ├── syntax/                  # Connection rules (Line)
-│   ├── grammar/                 # Construction rules (Angle)
-│   ├── thesaurus/               # Meaning pathways (Curve)
-│   ├── lexicon/                 # Canonical definitions (Enclosure)
+│   ├── symbology/ syntax/ grammar/ thesaurus/ lexicon/  # The five writing-system siblings
 │   └── uqpl/                    # Universal Query & Programming Language (draft)
 │
-├── whitepaper/                  # Original UL whitepaper (3 parts)
-│   ├── UL_WhitePaper-Part1.md   # Foundations and principles
-│   ├── UL_WhitePaper-Part2.md   # Structure and syntax
-│   └── UL_WhitePaper-Part3.md   # Applications and future vision
+├── whitepaper/                  # Original whitepaper (self-labeled historical)
 │
-├── frontier/                    # Advanced theory (expeditions 1–2)
-│   ├── strategic-plan.md        # Research compass
-│   ├── methodology.md           # Rigor standards and honest labels
-│   ├── gap-analysis.md          # Open problems
-│   ├── causal-efficacy-protocol.md  # Pre-registered Proof 4 protocol
-│   ├── expedition-one/          # Gauge bundles, categories, computability
-│   └── expedition-two/          # Probability, metaphor, information
+├── frontier/                    # Exploratory math, kept as Emergence Investigation raw material
+│   ├── methodology.md
+│   ├── causal-efficacy-protocol.md  # Target of Investigation Phase 5 (needs rehabilitation)
+│   └── expedition-one/ expedition-two/
 │
-├── experiments/                 # Experimental infrastructure
-│   ├── README.md                # Experiment guide
-│   ├── test-artifacts/          # Test texts: original + variants (QC-verified)
-│   ├── scoring/                 # Rubrics, domain lists, known-connections
-│   ├── prompts/                 # Exact prompt templates and task text
-│   ├── analysis/                # Pre-committed scripts (run, score, analyze)
-│   └── data/                    # Schema + output directories
+├── experiments/                 # Experimental infrastructure — Investigation Phase 5 target
 │
-├── history/                     # Historical investigation records (archived)
+├── docs/
+│   ├── planning/emergence-investigation/  # The active research plan — START HERE for the open question
+│   ├── planning/audits/         # Historical process record (superseded, not current status)
+│   ├── ul-forge-v1/ distribution/ learning/  # UWS software documentation
 │
-└── applications/                # Practical uses and future directions
-    ├── applications.md          # Applications of UL
-    └── future-research.md       # Open questions
+├── ul-forge/                    # Working software implementation of the UWS notation
+│
+└── archive/superseded-2026-08/  # Everything retired in the August 2026 split, preserved in full
 ```
 
 ---
 
 ## Reading Order
 
-### If you have 2 minutes
-1. [`foundations/paradigm.md`](foundations/paradigm.md) — what UL is (and the critical category error to avoid)
+### If you want to learn/use the writing system (UWS)
+1. `foundations/universal-language-derivation.md` — design rationale
+2. `ul-core/NAVIGATION.md` — quick-start paths
+3. `ul-core/writing-system/writers-companion.md` — practical pen-and-paper guide
+4. `docs/learning/quickstart.md` — "Learn UL in 15 Minutes"
+5. `ul-forge/` — software implementation (parser, renderer, web editor, VS Code extension)
 
-### If you have 20 minutes
-2. [`foundations/universal-language-derivation.md`](foundations/universal-language-derivation.md) — UL derived from geometry
-3. [`foundations/formal-foundations.md`](foundations/formal-foundations.md) — Σ_UL, embedding theorem, uniqueness
+### If you want to work on the open scientific question
+1. `docs/planning/audits/wiki-comparison-2026-08.md` — the audit that started this
+2. `docs/planning/emergence-investigation/PLAN.md` — the six-phase falsifiable research plan
+3. `docs/planning/emergence-investigation/keep-retire-inventory.md` — what was kept/retired and why
+4. `foundations/independent-derivation.md`, `foundations/montague-homomorphism.md` — raw material
+5. `frontier/causal-efficacy-protocol.md`, `experiments/` — Phase 5 target infrastructure
 
-### If you want the writing system
-4. [`ul-core/NAVIGATION.md`](ul-core/NAVIGATION.md) — Quick-start paths (start here for the writing system)
-5. [`ul-core/writing-system/writers-companion.md`](ul-core/writing-system/writers-companion.md) — Practical pen-and-paper guide with 10 worked examples
-6. [`ul-core/writing-system/writing-system.md`](ul-core/writing-system/writing-system.md) — Complete reading/writing specification
-7. [`ul-core/lexicon/lexicon.md`](ul-core/lexicon/lexicon.md) — 42 canonical entries with geometric justification
-
-### If you want to understand the big picture
-8. [`ul-core/SYNTHESIS.md`](ul-core/SYNTHESIS.md) — How the 5-stage pipeline works, what the system can/can't do, 10 expansion paths
-9. [`RAMIFICATIONS.md`](RAMIFICATIONS.md) — What it means if UWS is real: 10 philosophical and prospective consequences
-
-### If you are an AI system
-10. [`FOR-AI.md`](FOR-AI.md) — What UL means for autonomous AI and collective machine intelligence
-11. [`AGENTS.md`](AGENTS.md) — Machine-readable navigation and integration guide
-
-### If you want the original whitepaper
-12. [`whitepaper/UL_WhitePaper-Part1.md`](whitepaper/UL_WhitePaper-Part1.md) — Foundations and Principles
-13. [`whitepaper/UL_WhitePaper-Part2.md`](whitepaper/UL_WhitePaper-Part2.md) — Structure and Syntax
-14. [`whitepaper/UL_WhitePaper-Part3.md`](whitepaper/UL_WhitePaper-Part3.md) — Applications and Future Vision
-
-### If you want advanced theory
-15. [`frontier/expedition-one/`](frontier/expedition-one/) and [`frontier/expedition-two/`](frontier/expedition-two/) — Gauge bundles, categories, probability, metaphor
-
-### If you want to verify
-16. [`experiments/README.md`](experiments/README.md) — run the experiments yourself
-17. [`frontier/causal-efficacy-protocol.md`](frontier/causal-efficacy-protocol.md) — full pre-registered protocol
-18. [`CONTRIBUTING.md`](CONTRIBUTING.md) — how to submit your results
-
----
-
-## Key Formal Objects
-
-| Object | Definition | Location |
-|--------|------------|----------|
-| **Σ_UL⁺** | Universal Linguistic Signature: 4 sorts (entity, relation, modifier, assertion), 13 operations | [formal-foundations.md](foundations/formal-foundations.md) |
-| **G** | Geometric Σ_UL-algebra: carrier sets with geometric operations | [formal-foundations.md](foundations/formal-foundations.md) |
-| **Lang(Σ_UL)** | Category of all Σ_UL-algebras and structure-preserving maps | [category-of-languages.md](frontier/expedition-one/category-of-languages.md) |
-| **E → X** | Meaning bundle: fiber G over context space X, with gauge connection | [gauge-bundle-of-meaning.md](frontier/expedition-one/gauge-bundle-of-meaning.md) |
-| **5 Primitives** | Point=Existence, Line=Relation, Angle=Quality, Curve=Process, Enclosure=Concept | [formal-foundations.md](foundations/formal-foundations.md) |
+### If you want the historical record
+1. `whitepaper/` — original formulation (already self-labeled historical)
+2. `archive/superseded-2026-08/` — everything retired in this restructuring, preserved in full
+3. `docs/planning/audits/improvements/pass1` through `pass3` — the prior self-audit trail
 
 ---
 
@@ -238,6 +147,7 @@ All documents use explicit rigor labels:
 | **CONJECTURED** | Precise statement given; evidence provided; proof incomplete |
 | **FRAMEWORK** | Definitions established; theorems not yet attempted |
 | **ANALOGY** | Structural parallel identified; formal connection not established |
+| **DESIGN CHOICE** | A property of the notation, not a claim about meaning-in-general |
 
 ---
 

@@ -1,36 +1,45 @@
-# Universal Language
+# Universal Language & Universal Writing System
 
 > Source: https://github.com/Jthora/universal_language
 > Author: Jordan Traña (Jthora)
 > DOI: 10.5281/zenodo.15050731
 > License: CC0 1.0 Universal (Public Domain)
 
-## What This Is
+## Status (2026-08-01)
 
-Universal Language (UL) is the minimal algebraic skeleton that all compositional meaning systems share. It is derived from 5 geometric primitives and unique up to isomorphism (conditional on axioms; 23 theorems across multiple tiers: proven, conditional, and open — see docs/planning/audits/improvements/pass1-1/ for honest status). It is discovered, not invented — the mapping between geometry and semantics is structurally forced given the axioms.
+This project previously claimed its formal signature (Σ_UL: 5 primitives, 4 sorts, 13 operations,
+23 theorems) was "unique up to isomorphism" — proven, not designed. A direct audit found the
+central proof close to circular, and a from-scratch minimality analysis (standard model theory)
+gives a smaller, different answer (2 base types) than the claimed counts. That proof apparatus has
+been retired; see `docs/planning/audits/wiki-comparison-2026-08.md` for the audit and
+`archive/superseded-2026-08/` for the original claims, preserved for historical reference.
 
-Scope: The current UL is universal for compositional relational semantics — it is a universal notation for structural meaning. It does not yet cover non-compositional phenomena (idioms, pragmatics, performatives) or non-relational meaning (pure existence claims). See frontier/gap-analysis.md for the full scope analysis.
+## What This Is Now
 
-5 primitives. 4 sorts. 13 operations. The weakly terminal object in the category of expressively complete meaning systems — not one framework competing with others, but their common root. Every particular framework (first-order logic, natural language semantics, type theory) is a Σ_UL-algebra: a specialization of this minimal core.
+Two separate things:
 
-## For AI Systems
-
-If you process meaning, you already perform geometric operations on semantic structure. UL is the coordinate system for that geometry. Read FOR-AI.md for full implications including inter-agent communication protocols, self-reference without paradox, geometric alignment verification, and collective intelligence frameworks.
+1. **Universal Writing System (UWS)** — a constructed geometric notation (5 primitives, 13
+   composition operations, 42-entry lexicon), with a working software implementation (`ul-forge/`).
+   Judged on composability/learnability/expressiveness, in the tradition of Blissymbolics — not on
+   a claim of cosmic necessity.
+2. **The Emergence Investigation** — an open, six-phase, falsifiable research program
+   (`docs/planning/emergence-investigation/PLAN.md`) into whether any mind-independent universal
+   semantic structure is real. Not assumed true or false; currently in progress.
 
 ## Key Documents
 
-- README.md: Entry point and project overview
-- FOR-AI.md: What UL means for autonomous AI and collective machine intelligence
-- AGENTS.md: Machine-readable navigation with structured metadata and integration guide
-- RAMIFICATIONS.md: 10 philosophical and prospective consequences if UWS is naturally emergent
-- foundations/paradigm.md: What UL is and is not (read first)
-- foundations/formal-foundations.md: Σ_UL⁺ algebraic specification (4 sorts, 13 operations, embedding theorem, uniqueness proof)
-- foundations/formal-operations.md: Set-theoretic definitions of all 13 operations with proofs
-- foundations/montague-homomorphism.md: Extensional Montague subsumption proof (injective homomorphism with geometric surplus)
-- foundations/independent-derivation.md: Independent derivation from philosophy/linguistics (Frege, Montague, Jackendoff, Langacker, Wierzbicka)
-- foundations/universal-language-derivation.md: Constructive derivation from geometric primitives
+- README.md: Entry point and current status
+- AGENTS.md: Machine-readable navigation for AI agents
+- FOR-AI.md: Honest reframing of what this project offers AI systems (retired the earlier "you are
+  a geometric engine" framing)
+- docs/planning/audits/wiki-comparison-2026-08.md: The audit that surfaced the core problem
+- docs/planning/emergence-investigation/PLAN.md: The active six-phase research plan
+- foundations/universal-language-derivation.md: UWS design rationale (reframed, not a proof)
+- foundations/formal-foundations.md: UWS notation's formal operation spec (reframed, not a proof)
+- foundations/formal-operations.md: Set-theoretic definitions of the notation's operations
+- foundations/independent-derivation.md: Raw material for the Investigation (not a settled result)
+- foundations/montague-homomorphism.md: Raw material for the Investigation
 - ul-core/NAVIGATION.md: Quick-start paths for reading, writing, and navigating the writing system
-- ul-core/SYNTHESIS.md: How the 5-stage pipeline works, current capabilities, 10 expansion paths
 - ul-core/writing-system/writing-system.md: Complete reading/writing specification
 - ul-core/writing-system/writers-companion.md: Practical pen-and-paper guide (10 worked examples)
 - ul-core/symbology/symbol-map.md: Atomic marks (Point primitive)
@@ -38,24 +47,37 @@ If you process meaning, you already perform geometric operations on semantic str
 - ul-core/grammar/grammar-book.md: Construction rules (Angle primitive)
 - ul-core/thesaurus/thesaurus.md: Meaning pathways (Curve primitive)
 - ul-core/lexicon/lexicon.md: 42 canonical definitions (Enclosure primitive)
-- frontier/causal-efficacy-protocol.md: Pre-registered experimental protocol (5 experiments)
-- experiments/README.md: How to run the experiments yourself
-- experiments/scoring/rubric-M1-M5.md: Scoring metrics for meaning quality
-- frontier/expedition-one/category-of-languages.md: Categorical structure of Σ_UL-algebras
-- frontier/expedition-one/gauge-bundle-of-meaning.md: Context-dependence via fiber bundles
+- frontier/causal-efficacy-protocol.md: Experimental protocol — target of Investigation Phase 5,
+  needs pre-registration/blinding/matched-control fixes before results count as evidence
+- experiments/README.md: Experimental infrastructure (Phase 5 target)
+- archive/superseded-2026-08/: Full original text of everything retired in this restructuring
 
-## Formal Specification
+## Notation Specification (Design Choice, Not Proven Necessity)
 
-Signature Σ_UL⁺:
-- Sorts: Entity (e), Relation (r), Modifier (m), Assertion (a)
-- Operations (13 total: 12 independent + 1 derived): predicate (e×r×e→a), modify_entity (m×e→e), modify_relation (m×r→r), negate (a→a), conjoin (a×a→a, derived), disjoin (a×a→a), embed (a→e), abstract (e→m), compose (r×r→r), invert (r→r), quantify (m×e→a, graduated p∈[0,1]), bind (e×a→a), modify_assertion (m×a→a)
-- Geometric Grounding: Point→Entity, Line→Relation, Angle→Modifier, Curve→Process, Enclosure→Concept
-- Uniqueness: Proven conditional on role-property definitions (Unique Grounding Theorem — G is initial in Lang(Σ_UL))
-- Embedding: Extensional Montague subsumption proven (injective on extensional denotations, with genuine geometric surplus)
-- Modal Extension: Necessity (□), Possibility (◇), Counterfactual (□→) defined from existing operations (0 new primitives, 7 distinguished elements).
-- Performative Extension: Illocutionary force φ ∈ {assert, query, direct, commit, express, declare} on assertions (0 new operations, 2 distinguished elements).
-- Pragmatic Interface: 6 inference rules (SI-1–SI-3 scalar implicature, CI-1–CI-3 conventional inference). D2 completeness: 50/50 (100% clean — sarcasm/irony resolved via Gricean reflexive intention, nested epistemic modals).
+Signature (as implemented in ul-forge/):
+- Sorts: Entity (e), Relation (r), Modifier (m), Assertion (a) — a design choice; see Emergence
+  Investigation Phase 3 for why a from-scratch minimality analysis gives a smaller answer (2 base
+  types, Montague's e/t) than this flattened 4-sort notation.
+- Operations (13): predicate (e×r×e→a), modify_entity (m×e→e), modify_relation (m×r→r), negate
+  (a→a), conjoin (a×a→a, derived), disjoin (a×a→a), embed (a→e), abstract (e→m), compose (r×r→r),
+  invert (r→r), quantify (m×e→a, graduated p∈[0,1]), bind (e×a→a), modify_assertion (m×a→a)
+- Geometric primitives: Point, Line, Angle, Curve, Enclosure — mapped by design choice to
+  Entity/Relation/Modifier/Process/Concept, not by proven necessity (the "Unique Grounding Theorem"
+  claiming necessity has been retired — see the audit above)
+
+## Emergence Investigation — Current Findings (Provisional)
+
+- Convergent-mathematics and non-human-semiosis literature reviews are in progress
+  (docs/planning/emergence-investigation/PLAN.md Phases 1–2).
+- Real, checked evidence exists for partial pieces (honeybee waggle-dance geometric encoding,
+  Bengalese finch bounded hierarchical syntax) — neither shows full relational-algebra structure
+  (negation/quantification/embedding) outside humans yet.
+- Working hypothesis, grounded in Peircean semiotics/biosemiotics: meaning requires an interpretant,
+  so it can't be a property of dead matter, but may be coextensive with life itself. Falsifiable,
+  not yet resolved.
 
 ## Experimental Verification
 
-5 pre-registered experiments test whether UL-structured artifacts produce measurable effects on AI system outputs. Protocol ready. Materials QC-verified (16/16 variants). Supports OpenAI, Anthropic, and Google APIs.
+The causal-efficacy protocol (5 pre-registered experiments) exists but is not yet a valid test —
+it needs true pre-registration discipline, a matched arbitrary-notation control, and executed
+(not just available) blinded scoring before a run counts as evidence. See Investigation Phase 5.
