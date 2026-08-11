@@ -188,6 +188,93 @@ claims:
     priority: 0
     blocks: [SEMANTIC-EQUALITY, NEG-INVOLUTION, UQPL-REDUCTION]
 
+  - id: UL-IS-EMERGENT-UNIVERSAL
+    statement: "UL is an emergent universality class — structure arising reliably across substrates under coarse-graining — not a logically forced signature nor a convention."
+    tier: CONJECTURED
+    falsified_by: "Independently emerged communication protocols show no shared invariants under progressive coarse-graining, or fall on a continuum rather than into discrete classes."
+    evidence: research/emergent-universality-framework-2026-08.md
+    notes: >
+      Corrects a level error. Three kinds of universality were collapsed into two — logical necessity
+      (dead, Zadrozny) and convention (the retreat) — omitting EMERGENT universality entirely.
+      Keystone: "The critical exponents are not visible in the microscopic description. A complete
+      Hamiltonian for water does not contain them. They emerge only under the projection defined by
+      renormalization group operations." Water and uniaxial magnets share identical critical
+      exponents despite different atoms and force laws; class membership is set by dimensionality
+      and order-parameter symmetry, everything else being an irrelevant operator.
+      Zadrozny operates at the microscopic level. It says compositionality does not pin down a
+      signature. It says NOTHING about what emerges under coarse-graining. Applying it as a global
+      impossibility was an error of level, not of rigour.
+      FIRST FALSIFIABLE-BY-EXPERIMENT form of the project's central claim.
+    priority: 0
+
+  - id: SYMMETRY-EMERGES-NOT-INSTALLED
+    statement: "The symmetry of a semantic fixed point is discovered, not designed; the primitive inventory is an irrelevant operator."
+    tier: CONJECTURED
+    falsified_by: "Semantic structure shows no scale-invariant fixed point, or emergent structure varies systematically with primitive inventory rather than being invariant to it."
+    evidence: research/emergent-universality-framework-2026-08.md
+    notes: >
+      "Near a second order transition, long-distance properties are invariant under dilatations EVEN
+      THOUGH microscopic models have typical scales." Conformal symmetry is an EMERGENT property at
+      criticality, and the literature finds it notable that systems show ENHANCED symmetry rather
+      than merely inherited symmetry.
+      So symmetry at a fixed point can EXCEED the symmetry of the model it came from. One does not
+      have to choose the right symmetry.
+      This is the rigorous form of "the primitives are clues": they are microscopic details hinting
+      at a symmetry class without being it. Whether there are five or six is predicted IRRELEVANT —
+      not arbitrary, but below the level where universality lives. Supersedes the "arbitrary design
+      choice" conclusion in phase3-formal-necessity-rebuild.md, which was right about
+      non-derivability and wrong about what that implies.
+
+  - id: COMPOSITIONALITY-CONVERGES-EMPIRICALLY
+    statement: "Independently trained agents converge on compositional structure, measurably and reliably."
+    tier: ARGUED
+    evidence: research/emergent-universality-framework-2026-08.md
+    notes: >
+      Emergent communication research: scaling to 3+ agents, 100% of seeds converge to near-perfect
+      compositionality; four agents reach 100% across 80 seeds versus 54% for two. Agents develop
+      TOPOGRAPHIC ORGANIZATION — specific message positions encoding specific semantic properties —
+      without explicit supervision.
+      Different seeds, no shared design, no supervision, non-human agents. Not logical necessity,
+      not convention: emergence, measured.
+      Note that "position encodes property" is placement carrying meaning — UWS's spatial grammar,
+      arising spontaneously and unprompted.
+      Established metrics exist off the shelf: TopSim (Spearman correlation between input-space and
+      message-space distances — effectively an empirical homomorphism condition), context
+      independence, positional and bag-of-symbols disentanglement, RSA, zero-shot generalization.
+      THE FIRST GENUINE EMPIRICAL EVIDENCE THE PROJECT HAS EVER HAD FOR ITS CORE CLAIM.
+
+  - id: ERLANGEN-AS-COARSE-GRAINING
+    statement: "The Erlangen hierarchy is the semantic coarse-graining flow, analogous to RG."
+    tier: CONJECTURED
+    falsified_by: "The Erlangen sequence admits no fixed-point structure, or coarse-graining under it fails to preserve the invariants that RG flow would require."
+    evidence: research/emergent-universality-framework-2026-08.md
+    notes: >
+      Euclidean -> Similarity -> Affine -> Projective -> Topological progressively enlarges the
+      transformation group and forgets structure; RG integrates out short-range detail and flows to
+      fixed points. Both say COARSE-GRAINING INCREASES SYMMETRY — coarser Erlangen levels have
+      larger groups, and RG fixed points show enhanced symmetry.
+      Status: structural hypothesis, not established. RG is a flow in coupling space with fixed
+      points; Erlangen is a lattice of groups. Analogous, not identical — but testable.
+      Supporting context: RG-for-deep-learning is a real active area, not an analogy. Both are
+      coarse-graining over information flow, and RG "relevance" is formally equivalent to
+      Information Bottleneck "relevant information" — which the wiki's Universal Semantic Manifold
+      page already invoked, closer to the mark than previously credited.
+      If it holds, archived Erlangen material becomes load-bearing again in a new role.
+
+  - id: DISTINCTION-AS-LAYER-ZERO
+    statement: "Distinction (marked/unmarked) is the pre-semantic floor — required by any information-bearing system, not chosen."
+    tier: ARGUED
+    evidence: research/emergent-universality-framework-2026-08.md
+    notes: >
+      Spencer-Brown's Laws of Form "begins and ends with the notion of a distinction" — the mark
+      dividing a space into marked and unmarked. Bateson: information is "the difference that makes
+      a difference." Developed through the cyberneticists (Bateson, von Foerster, Varela — the same
+      lineage as autopoiesis and enaction).
+      This is the project's least anthropocentric footing and it has never been cited. A point being
+      "always a point, an absolutely singular simple construct" has a rigorous formalization here.
+      Any system that bears information must distinguish; distinction is prior to meaning rather
+      than downstream of it.
+
   - id: CURE-MONITORS-COUPLING-NOT-CONSISTENCY
     statement: "The Cure's primary signal is coupling asymmetry (extraction vs communion), not semantic inconsistency."
     tier: CONJECTURED

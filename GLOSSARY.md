@@ -9,7 +9,37 @@ they get different names — never the same word twice.
 
 ---
 
-## The four-layer stack
+## The construct stack (revised 2026-08 — emergent universality)
+
+Full stack in `research/emergent-universality-framework-2026-08.md`.
+
+| Layer | Term | Definition |
+|---|---|---|
+| **0** | **Distinction** | The mark; marked/unmarked (Spencer-Brown). Bateson's "difference that makes a difference." The pre-semantic floor — required by any information-bearing system, not chosen. |
+| **1** | **Universal Symbology** | The primitive marks. Geometric primitives live here. **Status: microscopic detail / symmetry clue, not foundation.** |
+| **2** | **Universal Syntax** | How marks combine. Measurable via TopSim, positional disentanglement, context independence. |
+| **3** | **Universal Compositional Constraints** | Which combinations are well-formed. **NOT "Universal Grammar"** — see the warning below. |
+| **4** | **Renderings** | UWS (written/spatial), Vocal Semantic Correspondence (prosodic), others. UWS is one rendering, not privileged. |
+| **5** | **UL** | The emergent universal structure — **the universality class itself**, characterized by order parameter and symmetry rather than by a primitive inventory. Not a code, not a dictionary. |
+| **⊥** | **UP — Universal Protocol** | The bootstrapping/coupling procedure by which two independent instantiations reach correspondence. |
+| **⊤** | **UQPL** | Computation over the structure. Total, invariant-preserving. |
+
+**New terms the universality framing requires:**
+
+| Term | Definition |
+|---|---|
+| **Semantic Order Parameter** | The quantity characterizing the semantic phase. **Currently unknown — the central open question.** Candidates: TopSim, context independence, positional disentanglement. |
+| **Semantic Coarse-Graining** | The projection under which universals appear. Strong candidate: the Erlangen hierarchy (Euclidean → … → Topological). |
+| **Semantic Fixed Point** | A structure invariant under repeated coarse-graining. **If UL exists, this is what it is.** |
+| **Relevant / irrelevant operator** | Borrowed from RG. An *irrelevant* feature does not affect behaviour at the fixed point. The primitive count (5 vs 6) is predicted to be irrelevant — not arbitrary, but below the level where universality lives. |
+
+> ⚠ **"Universal Grammar" — do not use unqualified.** Chomsky's UG asserts a *species-specific innate
+> human* language faculty. This framework needs nearly the opposite: *cross-substrate emergent*
+> constraints, demonstrated in non-human agents. Use **Universal Compositional Constraints**. Using
+> the Chomskyan term imports a nativist commitment nobody here holds and invites dismissal on
+> grounds unrelated to the actual claim.
+
+## The four-layer stack (superseded — retained for reference)
 
 These four are routinely conflated. They are distinct.
 
