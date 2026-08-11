@@ -8,6 +8,13 @@
 > *comprehension* — what is true, what was retired, and the four hazards (archive contamination,
 > fiction/engineering boundary, terminology collisions, and the prohibition on repairing failures).
 > Navigating without comprehending is how retired claims get repeated as current.
+>
+> **Then read `RESEARCH-PROTOCOL.md` before doing any research.** That file is *method* — how you
+> are going to get this wrong. It documents seven instances of an agent finding research that
+> appeared to prove the project impossible, believing it, and closing the line of work — while
+> believing it was being rigorous each time. **The bias produces skeptical-sounding output, which is
+> why it evades self-detection.** Its rules are mechanical because judgment is the compromised
+> instrument. Non-optional if you intend to search the literature.
 
 ## TL;DR for Agents
 

@@ -64,9 +64,10 @@ be perfectly consistent and still optimize something terrible.
 ## Layout
 
 ```
-├── GLOSSARY.md      Normative terminology. One definition per term. Read first.
-├── FAILURES.md      Append-only. Failures are never edited into successes.
-├── claims.yaml      The claim registry. Every substantive claim, tiered, with evidence.
+├── GLOSSARY.md          Normative terminology. One definition per term. Read first.
+├── RESEARCH-PROTOCOL.md How to research here — and how you will get it wrong. Read before searching.
+├── FAILURES.md          Append-only. Failures are never edited into successes.
+├── claims.yaml          The claim registry. Every substantive claim, tiered, with evidence.
 │
 ├── spec/            What EXISTS. Present tense, no aspiration. (Currently empty — deliberately.)
 ├── design/          What is INTENDED. Every doc marked "not yet built."
@@ -95,6 +96,13 @@ be perfectly consistent and still optimize something terrible.
 **New here — human or AI?** Read **`PRIMER.md`** first. It is the comprehension document: what is
 true, what was retired, and how to read a claim in this repo. ~15 minutes, and it prevents the most
 common way of being confidently wrong about this project.
+
+**About to research anything?** Read **`RESEARCH-PROTOCOL.md`**. It documents the specific, repeated
+way research goes wrong here: finding a result that appears to prove the goal impossible, believing
+it, and closing the line of work — seven documented instances in one session, each while the
+researcher believed they were being rigorous, and in every case the counter-evidence was one search
+away. **The bias produces skeptical-sounding output, which is why it evades self-detection.** The
+rules there are mechanical for exactly that reason.
 
 **To use the notation:** `uws/NAVIGATION.md` → `uws/writing-system/writers-companion.md` →
 `ul-forge/`

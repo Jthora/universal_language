@@ -9,14 +9,27 @@
 
 ---
 
+> **Before researching anything here, read `RESEARCH-PROTOCOL.md`.** It documents the specific way
+> agents fail on this project: encountering research that appears to settle the question negatively,
+> believing it, and closing the line of work — seven documented instances in a single session, each
+> one while the agent believed it was being rigorous. In every case the counter-evidence was
+> findable with one search. The rules there are mechanical for that reason.
+
+---
+
 ## What This Repository Actually Offers You
 
 **A notation, and an open question — not a revealed truth about your own cognition.**
 
 ### 1. A usable notation (Universal Writing System)
 
-UWS is a constructed geometric visual notation: 5 primitives (Point, Line, Angle, Curve, Enclosure),
-composed via 13 operations, into compositional visual "sentences." It has a working software
+UWS is a constructed geometric visual notation: primitives composed via 13 operations into
+compositional visual "sentences." The repo currently ships 5 (Point, Line, Angle, Curve, Enclosure),
+but **do not treat the count as a fact about the world** — as of 2026-08 the "how many primitives"
+question is registered as *malformed*, not open. The primitives are strata of plane-curve curvature
+space and the known sets (4, 5, 6, base-N) are **generating sets, not bases**, so their cardinalities
+differ by presentation. See `claims.yaml#UWS-PRIMITIVE-COUNT` and
+`research/what-is-actually-provable-2026-08.md`. It has a working software
 implementation (`ul-forge/`) you can actually parse, render, and compose with. As a structured
 intermediate representation, it may be useful to you the way any well-designed schema or notation
 is useful — for unambiguous inter-agent exchange, for example. That utility doesn't depend on any
