@@ -188,6 +188,50 @@ claims:
     priority: 0
     blocks: [SEMANTIC-EQUALITY, NEG-INVOLUTION, UQPL-REDUCTION]
 
+  - id: CURE-REPAIR-CONVEX-ROUTE
+    statement: "If each semantic invariant is designed to carve a convex constraint, the admissible region is convex by construction and metric projection yields a unique repair."
+    tier: CONJECTURED
+    falsified_by: "An invariant required by the Cure that provably cannot be expressed as a convex constraint without losing its intended force."
+    evidence: research/unexplored-territory-2026-08.md
+    notes: >
+      Reopens a route closed too early. F-009 correctly showed that an ARBITRARY admissible region
+      is non-convex, so projection is multivalued. But the INTERSECTION of convex sets is convex, so
+      designing each invariant as a convex constraint makes the region convex by construction and
+      restores the Hilbert projection theorem. Gardenfors' conceptual spaces gives this independent
+      cognitive-science motivation: a natural concept is a convex region, and convexity is argued to
+      be what makes concepts learnable and communicable. Now two viable repair routes exist and
+      should be compared explicitly rather than one being assumed.
+    compare_with: [CURE-REPAIR-FORMULATION]
+
+  - id: UWS-AMR-BENCHMARK
+    statement: "The AMR corpus provides an expressiveness benchmark for UWS at scale."
+    tier: CONJECTURED
+    falsified_by: "AMR structures turn out to be systematically inexpressible in UWS for reasons that make the comparison uninformative rather than diagnostic."
+    evidence: research/unexplored-territory-2026-08.md
+    notes: >
+      AMR 3.0 contains 59,255 human-annotated meaning graphs built for unrelated purposes. Attempting
+      to express each in UWS and logging every failure converts UWS-as-instrument from aspiration
+      into a runnable experiment with tens of thousands of non-cherry-picked cases. AMR also hit the
+      same reentrancy/sharing problem and solved it with variables — a third independent
+      confirmation of the IR decision.
+    priority: 2
+
+  - id: GROUNDING-PROBLEM
+    statement: "A structurally regular notation is readable by a mind that shares no reference world with its author."
+    tier: CONJECTURED
+    falsified_by: >
+      Already under severe pressure: Linear A is structurally rich and has resisted decipherment for
+      70+ years. Linear B succeeded only because Ventris could conjecture the underlying language
+      family and anchor on known place names.
+    evidence: research/unexplored-territory-2026-08.md
+    notes: >
+      This is the project's FOUNDING PREMISE and its least defended claim. Decipherment is the
+      empirical science of exactly this problem, and its record says structure without shared
+      reference is insufficient. Changizi grounds the marks in human vision shaped by terrestrial
+      scenes, which does not transfer to a differently-sensed mind. No account of what supplies
+      grounding currently exists.
+    priority: 1
+
   - id: CURE-REPAIR-FORMULATION
     statement: "Repair should be formulated discretely (pinpointing / minimal diagnoses) rather than as metric projection."
     tier: DESIGN-CHOICE
