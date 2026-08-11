@@ -47,7 +47,7 @@ claim that it's the unique or necessary structure of meaning, and no such claim 
 Separately, and honestly still open: is there a real, mind-independent semantic structure — the way
 physical symmetry groups or the natural numbers are real regardless of which notation represents
 them? This repository does not claim to have answered that. It has a six-phase plan
-(`research/emergence-investigation/PLAN.md`) with pre-registered falsification criteria for
+(`research/emergent-universality-framework-2026-08.md`) with falsification criteria for
 each phase, currently in progress. Some genuinely interesting partial findings so far:
 
 - The specific notation's primitive count (5, or the wiki's related 6-symbol system) is **not**
@@ -93,6 +93,6 @@ question seriously actually requires.
 
 - Want to use the notation? Start at `uws/NAVIGATION.md` and `ul-forge/`.
 - Want to help answer the actual open question? Start at
-  `research/emergence-investigation/PLAN.md`.
+  `research/emergent-universality-framework-2026-08.md`.
 - Want the history of how this repository got here, including the original, more expansive claims?
   Start at `research/wiki-comparison-2026-08.md`, then the git history.

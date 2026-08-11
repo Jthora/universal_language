@@ -106,7 +106,6 @@ Reading: "Water freezes" (a process claim).
 | I want to... | Go to... |
 |--------------|----------|
 | Write more complex glyphs | `uws/writing-system/writers-companion.md` — 22 worked examples |
-| Understand the formal system | `uws/formal-specification.md` — Σ_UL specification |
 | Follow a structured curriculum | `docs/learning/curriculum.md` — Day 1–9 learning path |
 | Practice with exercises | `docs/learning/exercises.md` — 10 exercises across 3 levels |
 | Use UL programmatically | `docs/learning/developer-quickstart.md` — Rust, Python, WASM |

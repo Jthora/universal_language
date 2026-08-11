@@ -187,7 +187,7 @@ Raw per-page notes were written to scratch files (session-local, not preserved i
 ### Documentation debt
 12. **`PRIMER.md` is stale** — predates TMS, prevention-vs-repair, invariant inference.
 13. **No consolidated current-architecture document** — findings are spread across 13 research files that supersede each other without cross-marking.
-14. **`design/uqpl/uqpl-spec.md` §0 still invalid** — cites retired theorems as "Proven."
+14. **`(removed — see git history)` §0 still invalid** — cites retired theorems as "Proven."
 
 ---
 

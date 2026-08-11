@@ -811,10 +811,16 @@ claims:
     statement: "A mind-independent universal semantic structure exists."
     tier: CONJECTURED
     falsified_by: >
-      No agreed falsifier — this is the open question, and part of the finding is that it may not
-      be decidable as posed. See F-004.
-    evidence: research/emergence-investigation/phase6-synthesis-and-verdict.md
-    notes: "Not established, not refuted. Explicitly NOT a premise of any buildable work here."
+      Reformulated 2026-08 and now genuinely falsifiable: coarse-grain independently emerged
+      protocols and find no shared invariants, or find that emergent protocols form a continuum
+      rather than a small number of discrete classes. The earlier "no agreed falsifier" position
+      belonged to a framing that treated this as a metaphysical question rather than a
+      universality-class question.
+    evidence: research/emergent-universality-framework-2026-08.md
+    notes: >
+      Not established, not refuted. Explicitly NOT a premise of any buildable work here. Evidence
+      repointed from the superseded six-phase investigation, whose verdict was itself overturned by
+      the emergent-universality reframe.
 
   - id: UWS-PERCEPTUAL-GROUNDING
     statement: "UWS mark features are grounded in visual discriminability and natural-scene statistics, not in Platonic geometry."

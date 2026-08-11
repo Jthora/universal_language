@@ -47,7 +47,6 @@ inherited.
 | ID | Finding | Why |
 |---|---|---|
 | **D2** | The 50-case completeness challenge, scored 100%. | **Not evidence.** Reached 100% across nine rounds of patching the theory after each failure. `FAILURES.md` header explains why this is worthless as validation. Test *cases* may be reusable; the *score* is not. |
-| **D3** | "UQPL is a Σ_UL-algebra" relationship analysis. | Superseded. Only 3 of 13 operations ever mapped, and Σ_UL is retired. The wiki independently concluded "no intervening algebraic signature required." See `design/uqpl/`. |
 | **B6** | "Yoneda generalizes the Unique Grounding Theorem." | Retired with the theorem. The original authors already noted it is a reformulation that "does not strengthen the conditional dependency" — correct, and it means the result carried no evidential weight. |
 
 ---

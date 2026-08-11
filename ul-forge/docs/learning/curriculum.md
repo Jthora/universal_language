@@ -27,8 +27,6 @@
 **Goal:** Internalize that UL is geometry, not vocabulary. Every meaning has a shape.
 
 ### Reading
-- `archive/superseded-2026-08/foundations/paradigm.md` — full read (the core framing document)
-- `uws/design-rationale.md` §1–3 (why these 5 shapes are necessary)
 
 ### Key Concepts
 | Primitive | Shape | What it captures |
@@ -227,7 +225,6 @@ The thesaurus uses a compact notation for meaning relationships. Here's how it m
 
 ### Reading
 - Writer's Companion Examples 11–19 (all advanced examples)
-- `uws/formal-specification.md` §6 (bind), §7 (modality), §8 (performatives), §9 (pragmatics)
 
 ### Binding (Ex 11)
 `bind(e, a)` — "For every x, ..." Creates co-reference across an assertion.
@@ -281,4 +278,3 @@ Choose a sentence of your own that uses at least 5 different operations. Suggest
 If you can complete the capstone, you are ready to:
 - Contribute to UL-Core documentation
 - Use UL Forge programmatically (see `docs/learning/developer-quickstart.md`)
-- Explore the frontier: modality, metaphor, gauge bundles (`research/frontier/`)

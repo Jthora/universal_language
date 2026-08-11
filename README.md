@@ -35,7 +35,6 @@ true. The work got smaller, more concrete, and considerably harder to knock over
 |---|---|---|
 | **UL** | The hypothesized semantic structure itself. Not a notation. | Open question — `research/` |
 | **UWS** | The written rendering: iconic mark-features plus a spatial placement grammar. | **Exists** — `uws/`, `ul-forge/` |
-| **UPL / UQPL** | Languages that execute on semantic structure rather than machine state. | Design only — `design/uqpl/` |
 | **The Cure** | AI-safety application: detect and repair semantic drift via Encode → Check → Detect → Repair → Reconstruct. | Blocked on the repair operator |
 
 These are routinely conflated. `GLOSSARY.md` is normative — read it before writing anything here.
@@ -74,9 +73,6 @@ be perfectly consistent and still optimize something terrible.
 ├── design/          What is INTENDED. Every doc marked "not yet built."
 │   └── uqpl/        UQPL specification drafts
 ├── research/        Open questions. Speculation permitted, must be labeled.
-│   ├── emergence-investigation/   Seven-phase record, pre-registered criteria
-│   ├── frontier/                  Exploratory mathematics
-│   └── experiments/               Experimental infrastructure (never run)
 │
 ├── uws/             The Universal Writing System corpus
 │   ├── symbology/ syntax/ grammar/ thesaurus/ lexicon/   The five siblings

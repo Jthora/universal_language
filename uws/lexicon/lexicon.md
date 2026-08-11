@@ -695,7 +695,6 @@ The Lexicon is the Enclosure sibling: it draws a boundary around each constructi
 | **Tier boundary for quantify** | Listed as T2. Some arguments for T1 (it's a primitive operation). | Affects the T1/T2 ratio. The geometric realization via scaling is motivated but may not be unique. |
 | **Higher-polygon enclosures** (heptagon, octagon, ...) | Not included. D₇, D₈, ... symmetry groups exist but have no structurally distinguished status beyond D₆. | If a mathematical property distinguishes some higher polygon (as φ distinguishes the pentagon), it should be added. |
 | **3D and higher-dimensional constructions** | Not addressed. This lexicon is planar (2D). | UL's axiomatics work on any 2D surface. Extension to 3D introduces new primitives (volume, curvature of surfaces) — a genuine open problem. |
-| **Interaction with gauge connection** | The gauge bundle (research/frontier/expedition-one) adds context-dependence. Whether context shifts Tier assignments is open. | A T2 construction might become T1 or T3 in specific gauge contexts. |
 | **G ≠ Σ_UL boundary** | Several entries have Σ_UL: — because their geometric properties don't map to single algebraic terms (§0.8). Enriching Σ_UL with shape/curvature sorts could close this gap. | This is a foundational question: should Σ_UL be extended, or is the geometric-only characterization correct? |
 
 ---

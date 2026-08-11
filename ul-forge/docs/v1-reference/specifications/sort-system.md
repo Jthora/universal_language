@@ -144,6 +144,6 @@ When sort is overridden, the node's `sort` field must be explicitly set in the G
 
 ## Relationship to Formal Foundations
 
-This sort system is a direct implementation of the Σ_UL⁺ signature defined in [uws/formal-specification.md](../../../uws/formal-specification.md). The 4 sorts and 13 operations are not design choices — they are mathematically derived from the 5 geometric primitives and unique up to isomorphism conditional on role-property definitions (Theorem: Unique Grounding Theorem).
+This sort system is a direct implementation of the Σ_UL⁺ signature defined in [(removed — see git history)](../../../(removed — see git history)). The 4 sorts and 13 operations are not design choices — they are mathematically derived from the 5 geometric primitives and unique up to isomorphism conditional on role-property definitions (Theorem: Unique Grounding Theorem).
 
 UL Forge's sort enforcement is the *computational realization* of that mathematical proof. Every sort error caught by the validator is a violation of the formal system's axioms.

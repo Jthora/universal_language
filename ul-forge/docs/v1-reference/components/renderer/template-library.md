@@ -81,7 +81,7 @@ Compositions that are unique among alternatives for their meaning.
 Each entry has a deterministic visual form derived from its geometric structure.
 
 > **Cross-reference:** Lexicon entries at `uws/lexicon/lexicon.md`.
-> Sort signatures from Σ_UL in `uws/formal-specification.md`.
+> Sort signatures from Σ_UL in `(removed — see git history)`.
 
 | # | Label | UL-Script | Sort | GIR Pattern | Visual Description | Anchors |
 |---|-------|-----------|------|-------------|--------------------|---------| 

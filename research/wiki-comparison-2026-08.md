@@ -1,5 +1,8 @@
 # Repo vs. Wiki Comparison — Universal Language, August 2026
 
+> **Historical.** Written before the August 2026 prune; paths it cited have been deleted from the
+> working tree. Git history is the archive.
+
 **Date:** 2026-08-01
 **Scope:** Compare the GitHub repo `universal_language` (formal Σ_UL system) against the UL-adjacent
 content on `wiki.fusiongirl.app` (the companion "Fusion Girl" lore wiki), both owned by the same
@@ -265,16 +268,16 @@ external research, not just internally self-consistent lore.
 1. **Reconcile the 4-sorts-vs-5-categories mismatch first.** This is the smallest, highest-value
    fix: the repo's own primitive table and the wiki's hub-page primitive table are the same
    object, but grouped differently (4 sorts vs. 5 semantic categories). Worth a one-paragraph note
-   in `uws/formal-specification.md` either reconciling or explicitly scoping the difference.
+   in (since removed — git history) either reconciling or explicitly scoping the difference.
 2. **Don't conflate the octahedral 6-symbol system with the repo's 5 primitives when writing about
    either publicly.** They're related (3-of-6 symbol overlap) but distinct systems; presenting
    them as the same thing (or as contradictory) would misrepresent both. A short cross-reference
    note in `foundations/` stating "see wiki's Octahedral Symbolic Geometry System for a related but
    distinct 6-symbol/3-axis system" would prevent confusion for anyone reading both.
 3. **The Universal Semantic Manifold / Information Geometry material is the strongest candidate
-   for real absorption into `research/frontier/`.** It's the most mathematically substantive wiki content,
+   for real absorption into (since removed — git history).** It's the most mathematically substantive wiki content,
    uses real machinery (Fisher metric, geodesics, Information Bottleneck), and plausibly extends
-   `research/frontier/expedition-two/probability-and-information.md` rather than duplicating it.
+   (since removed — git history) rather than duplicating it.
 4. **The octahedral/Platonic-solid group-theory family (Oₕ=W(B₃), so(7) root system, the 5-solid
    family) is the second-strongest candidate** — it's checkable, finite, and self-consistent group
    theory, distinct from the more speculative "Effective Physics" stack.
@@ -309,17 +312,17 @@ into this report or into the repo proper.
 
 The user pushed back on the initial comparison: does "Σ_UL signature (5 primitives, 4 sorts, 13
 operations, 23 theorems)" actually hold together, or is something inconsistent across the repo and
-wiki? This section reports a direct read of the proofs themselves (`uws/formal-specification.md`,
-`uws/design-rationale.md`, `research/independent-derivation.md`) plus the
+wiki? This section reports a direct read of the proofs themselves ((since removed — git history),
+(since removed — git history), (since removed — git history)) plus the
 repo's own internal audit trail, rather than trusting the summary labels.
 
 ### 5.1 The "5 primitives" claim is internally inconsistent within the repo — not just vs. the wiki
 
-- `research/independent-derivation.md` §2.5 explicitly concludes: **"Process is NOT a fifth
+- (since removed — git history) §2.5 explicitly concludes: **"Process is NOT a fifth
   independent sort. It is a property of relations... a structurally distinguished sub-category of
   Relation."** By this document's own reasoning, there are 4 real primitives (Entity/Relation/
   Modifier/Assertion), and Curve/Process is not their structural peer.
-- Yet `uws/formal-specification.md` §4.3–4.5 (the "Unique Grounding Theorem") treats all 5
+- Yet (since removed — git history) §4.3–4.5 (the "Unique Grounding Theorem") treats all 5
   geometric primitives (Point/Line/Angle/Curve/Enclosure) and all 5 "semantic primitives"
   (Existence/Relation/Quality/Process/Concept) as **structural peers** in a single proof — directly
   contradicting the other document's demotion of Process to a non-independent sub-case.
@@ -328,7 +331,7 @@ repo's own internal audit trail, rather than trusting the summary labels.
   (research/legacy-findings.md), logged status "CLEAR
   RESOLUTION — needs documentation additions." The prescribed fix (a reconciling note in
   `formal-foundations.md`, `AGENTS.md`, and `symbol-map.md`) was **never actually added** — verified
-  by grep across `README.md`, `AGENTS.md`, `FOR-AI.md`, `uws/formal-specification.md`, and
+  by grep across `README.md`, `AGENTS.md`, `FOR-AI.md`, (since removed — git history), and
   `uws/symbology/symbol-map.md`: zero matches for any reconciling language. The fix was designed
   and approved in the audit trail but never propagated to the live docs.
 
@@ -338,7 +341,7 @@ The proof works by defining 5 "semantic primitives" (S1–S5, `formal-foundation
 properties written to mirror the 5 geometric primitives (G1–G5, §4.4) property-for-property, then
 proving a bijection exists between two hand-matched 5-element lists. Given how S1–S5 were
 constructed, the "uniqueness" result is close to definitional, not a forcing argument from
-independent first principles. The repo is self-aware of this weakness — `independent-derivation.md`
+independent first principles. The repo is self-aware of this weakness — (since removed — git history)
 opens by naming exactly this as "a circular confirmation bias" identified by an earlier critique —
 but the fix it offers (re-deriving semantic primitives from Frege/Montague/Jackendoff/Langacker/
 Wierzbicka without reference to geometry) arrives at **4** sorts, which undercuts rather than
@@ -366,7 +369,7 @@ not only interpretive looseness.
 
 The repo's public-facing top layer (`README.md`, `AGENTS.md`, `universal-language-derivation.md`)
 states "5 primitives" flatly, with no hedge. The repo's own internal audit layer
-(`independent-derivation.md`, `CRITIQUE.md`, `pass1-1/findings/`) already knows this is overstated
+((since removed — git history), `CRITIQUE.md`, `pass1-1/findings/`) already knows this is overstated
 and downgrades it to "4 sorts + 1 dependent, distinguished sub-case" — but that correction never
 propagated to the public docs. The wiki's `Universal_Language` hub page quotes the repo's public
 layer near-verbatim (same "5 primitives" table, same 4-sorts/13-ops/23-theorems figures) — it is
@@ -374,9 +377,9 @@ reproducing the repo's own unfixed overstatement, not introducing an independent
 
 ### 5.6 Recommendation
 Actually close finding F7: add the reconciling note the repo's own 2026-04 audit already drafted
-language for, to `uws/formal-specification.md` (near §4.5), `AGENTS.md` (formal spec block),
+language for, to (since removed — git history) (near §4.5), `AGENTS.md` (formal spec block),
 and `uws/symbology/symbol-map.md` (near the Curve entry) — and consider softening the "Unique
 Grounding Theorem" framing on public-facing pages to match the more honest framing already present
-in `independent-derivation.md` and `CRITIQUE.md`. This is a documentation-propagation fix, not new
+in (since removed — git history) and `CRITIQUE.md`. This is a documentation-propagation fix, not new
 research — the honest version of the claim already exists in the repo, it just isn't where readers
 (or the wiki) encounter it first.

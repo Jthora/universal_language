@@ -11,13 +11,12 @@
     "github": "Jthora",
     "url": "https://jono.archangel.agency"
   },
-  "status_note": "As of 2026-08-01, the project's earlier proof claims (Sigma_UL 'unique up to isomorphism') were retired following a direct audit that found the central proof close to circular. See research/wiki-comparison-2026-08.md. The project is now split into the Universal Writing System (a constructed notation, unaffected) and the Emergence Investigation (an open, falsifiable research question, tracked in research/emergence-investigation/PLAN.md).",
+  "status_note": "The project's earlier claims of mathematical necessity are retired, along with the fixed inventory counts attached to them. Current framing: UL as an emergent universality class. See research/emergent-universality-framework-2026-08.md and research/what-is-actually-provable-2026-08.md. Superseded material is deleted from the working tree; git history is the archive.",
   "entry_points": {
     "human": "README.md",
     "ai_agent": "AGENTS.md",
     "ai_philosophical": "FOR-AI.md",
     "machine_readable": "llms.txt",
-    "investigation": "research/emergence-investigation/PLAN.md",
     "audit": "research/wiki-comparison-2026-08.md"
   },
   "notation_system": {
@@ -67,7 +66,6 @@
     }
   },
   "emergence_investigation": {
-    "plan": "research/emergence-investigation/PLAN.md",
     "status": "in_progress",
     "phases": 6,
     "current_phase": 1,
@@ -131,9 +129,6 @@
       "M5_self_referential_depth",
       "SQS_composite"
     ],
-    "protocol": "research/frontier/causal-efficacy-protocol.md",
-    "schema": "research/experiments/data/SCHEMA.md",
-    "runner": "research/experiments/analysis/run_trials.py",
     "rehabilitation_needed": [
       "true pre-registration before any run",
       "matched arbitrary-notation control (not just no-structure control)",
@@ -171,41 +166,9 @@
       "priority": "read_first"
     },
     {
-      "path": "research/emergence-investigation/PLAN.md",
-      "title": "Emergence Investigation \u2014 Is Universal Language Real, and What Would Prove It?",
-      "type": "research_plan",
-      "prerequisites": [
-        "research/wiki-comparison-2026-08.md"
-      ],
-      "audience": "all"
-    },
-    {
-      "path": "uws/formal-specification.md",
-      "title": "Formal Specification \u2014 Universal Writing System Notation & Operations",
-      "type": "specification",
-      "prerequisites": [],
-      "audience": "all"
-    },
-    {
       "path": "uws/formal-operations.md",
       "title": "Formal Operations \u2014 Set-Theoretic Definitions",
       "type": "specification",
-      "prerequisites": [
-        "uws/formal-specification.md"
-      ],
-      "audience": "all"
-    },
-    {
-      "path": "research/independent-derivation.md",
-      "title": "Independent Derivation from Philosophy and Linguistics",
-      "type": "investigation_raw_material",
-      "prerequisites": [],
-      "audience": "all"
-    },
-    {
-      "path": "uws/design-rationale.md",
-      "title": "Universal Writing System \u2014 Geometric Design Rationale",
-      "type": "design_rationale",
       "prerequisites": [],
       "audience": "all"
     },
@@ -220,9 +183,7 @@
       "path": "uws/SYNTHESIS.md",
       "title": "Synthesis \u2014 How the Universal Writing System Works",
       "type": "analysis",
-      "prerequisites": [
-        "uws/formal-specification.md"
-      ],
+      "prerequisites": [],
       "audience": "all"
     },
     {
@@ -245,9 +206,7 @@
       "path": "uws/symbology/symbol-map.md",
       "title": "Universal Symbology Map",
       "type": "reference",
-      "prerequisites": [
-        "uws/formal-specification.md"
-      ],
+      "prerequisites": [],
       "audience": "all",
       "geometric_primitive": "point"
     },
@@ -255,9 +214,7 @@
       "path": "uws/syntax/syntax-dictionary.md",
       "title": "Universal Syntax Dictionary",
       "type": "reference",
-      "prerequisites": [
-        "uws/formal-specification.md"
-      ],
+      "prerequisites": [],
       "audience": "all",
       "geometric_primitive": "line"
     },
@@ -265,9 +222,7 @@
       "path": "uws/grammar/grammar-book.md",
       "title": "Universal Grammar Book",
       "type": "reference",
-      "prerequisites": [
-        "uws/formal-specification.md"
-      ],
+      "prerequisites": [],
       "audience": "all",
       "geometric_primitive": "angle"
     },
@@ -275,9 +230,7 @@
       "path": "uws/thesaurus/thesaurus.md",
       "title": "Universal Language Thesaurus",
       "type": "reference",
-      "prerequisites": [
-        "uws/formal-specification.md"
-      ],
+      "prerequisites": [],
       "audience": "all",
       "geometric_primitive": "curve"
     },
@@ -285,38 +238,9 @@
       "path": "uws/lexicon/lexicon.md",
       "title": "Universal Lexicon \u2014 42 Canonical Definitions",
       "type": "reference",
-      "prerequisites": [
-        "uws/formal-specification.md"
-      ],
+      "prerequisites": [],
       "audience": "all",
       "geometric_primitive": "enclosure"
-    },
-    {
-      "path": "research/frontier/causal-efficacy-protocol.md",
-      "title": "Causal Efficacy Protocol \u2014 Pre-Registered Experimental Design",
-      "type": "protocol_needing_rehabilitation",
-      "prerequisites": [
-        "uws/formal-specification.md"
-      ],
-      "audience": "researchers"
-    },
-    {
-      "path": "research/frontier/expedition-one/category-of-languages.md",
-      "title": "Category of Languages \u2014 Lang(Sigma)",
-      "type": "investigation_raw_material",
-      "prerequisites": [
-        "uws/formal-specification.md"
-      ],
-      "audience": "advanced"
-    },
-    {
-      "path": "research/frontier/expedition-one/gauge-bundle-of-meaning.md",
-      "title": "Gauge Bundle of Meaning \u2014 Context-Dependence via Fiber Bundles",
-      "type": "investigation_raw_material",
-      "prerequisites": [
-        "uws/formal-specification.md"
-      ],
-      "audience": "advanced"
     }
   ],
   "reading_paths": {
@@ -332,25 +256,7 @@
     ],
     "ai_systems": [
       "FOR-AI.md",
-      "AGENTS.md",
-      "uws/formal-specification.md"
-    ],
-    "emergence_investigation": [
-      "research/emergence-investigation/PLAN.md",
-      "research/emergence-investigation/keep-retire-inventory.md",
-      "research/independent-derivation.md"
-    ],
-    "verification": [
-      "research/experiments/README.md",
-      "research/frontier/causal-efficacy-protocol.md"
-    ],
-    "advanced_theory": [
-      "research/frontier/expedition-one/category-of-languages.md",
-      "research/frontier/expedition-one/gauge-bundle-of-meaning.md",
-      "research/frontier/expedition-two/probability-and-information.md"
-    ],
-    "historical_record": [
-      "whitepaper/UL_WhitePaper-Part1.md"
+      "AGENTS.md"
     ]
   }
 }

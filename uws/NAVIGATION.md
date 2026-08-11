@@ -155,7 +155,6 @@ For a structured progression from zero to fluent UL composition, follow this 9-d
 
 | Day | Focus | Read | Practice |
 |-----|-------|------|----------|
-| **1** | Geometric primitives | `archive/superseded-2026-08/foundations/paradigm.md` | Identify 5 shapes in everyday objects |
 | **2** | Symbology — atomic marks | Symbology §I–IV | Draw the 7 atomic symbols |
 | **3** | Syntax — connection rules | Syntax §I–III | Trace 3 connection patterns |
 | **4** | Grammar — valid formations | Grammar §I–IV | Classify sorts + parts of speech |

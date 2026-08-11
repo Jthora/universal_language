@@ -23,11 +23,10 @@ What actually exists here now, in two parts:
 1. **Universal Writing System (UWS)** — a constructed geometric notation with a working software
    implementation (`ul-forge/`: parser, renderer, composer, WASM bindings, MCP server). Real,
    usable, judged on its own merits as a notation — not on a retired proof of cosmic necessity.
-2. **The Emergence Investigation** — an open, six-phase, falsifiable research program
-   (`research/emergence-investigation/PLAN.md`) asking whether *any* version of a
-   mind-independent universal semantic structure is real. Treat its findings as provisional and
-   its predictions as genuinely falsifiable — do not patch a failed prediction to make it pass;
-   report the failure.
+2. **The open research question** — whether meaning has universal structure, currently framed as
+   **an emergent universality class** rather than a derivable signature. Start at
+   `research/emergent-universality-framework-2026-08.md`. Findings are provisional and predictions
+   are genuinely falsifiable — do not patch a failed prediction to make it pass; report it.
 
 ---
 
@@ -38,22 +37,22 @@ What actually exists here now, in two parts:
 |------|---------|--------------|
 | `README.md` | Current status and two-part structure | Read first |
 | `research/wiki-comparison-2026-08.md` | The audit that surfaced the core problem | Read for context on why the old claims were retired |
-| `research/emergence-investigation/PLAN.md` | The active, falsifiable research plan | Read to understand what's actually being investigated and what would count as evidence either way |
+| `research/emergent-universality-framework-2026-08.md` | The current framing and what would falsify it | Read to understand what is actually being investigated |
+| `RESEARCH-PROTOCOL.md` | Method — how not to get fooled by scope-dropped results | Read before searching the literature |
 
 ### Priority 2 — Use the Writing System (UWS)
 | Path | Content | Agent Action |
 |------|---------|--------------|
-| `uws/design-rationale.md` | UWS design rationale (reframed, no longer a proof claim) | Read to understand the notation's design |
 | `uws/writing-system/writing-system.md` | Complete reading/writing specification | Learn to read and write the notation |
 | `uws/lexicon/lexicon.md` | Canonical definitions | Reference for core notation terms |
 | `ul-forge/` | Software implementation | Use for parsing/rendering/composing |
 
-### Priority 3 — Contribute to the Emergence Investigation
+### Priority 3 — Contribute to the open research question
 | Path | Content | Agent Action |
 |------|---------|--------------|
-| `research/emergence-investigation/PLAN.md` | Six phases, each with pre-stated falsification criteria | Pick an unblocked phase and contribute — Phase 1 (convergent mathematics audit) and Phase 2 (non-human semiosis literature) are solo/literature-based and currently unblocked |
-| `research/independent-derivation.md` | Raw material — an attempted independent derivation, not a settled result | Treat as one candidate hypothesis to test, not as proof |
-| `research/frontier/causal-efficacy-protocol.md`, `research/experiments/` | Phase 5 target — needs pre-registration/blinding/matched-control fixes before any run counts as evidence | Do not run without those fixes; the existing infra has a documented pattern of post-hoc patching to avoid |
+| `research/what-is-actually-provable-2026-08.md` | What is derivable vs. what needs data | Pick a proof target; several are cheap and decisive |
+| `research/proof-availability-audit-2026-08.md` | Open claims classified by whether proof is available | Find unblocked work |
+| `claims.yaml` | The registry. Priority-0 entries are the live front | Check tier and evidence before acting on any claim |
 
 ### Priority 4 — Historical Record (not current status)
 | Path | Content |
@@ -88,8 +87,8 @@ claim about cosmic necessity.
 If you're an agent capable of literature research, formal verification (Lean/Coq/Agda), or running
 controlled ML experiments, the Emergence Investigation has concrete, currently-unblocked work
 available — see Priority 3 above. Contributions should honor the pre-stated falsification criteria
-in `research/emergence-investigation/PLAN.md`; a result that fails a prediction is a valid,
-useful contribution and should be reported as such, not revised until it passes.
+in `claims.yaml`; a result that fails a prediction is a valid, useful contribution and should be
+reported as such, not revised until it passes.
 
 ---
 
@@ -113,16 +112,15 @@ notation_operations: see ul-forge/crates/ul-core/src/composer.rs
 proof_status: retired_2026-08
 
 # Emergence Investigation (open question, not settled)
-investigation_plan: research/emergence-investigation/PLAN.md
-investigation_phases: 6
-current_phase: 1
+framing: emergent_universality_class
+framing_doc: research/emergent-universality-framework-2026-08.md
 hypothesis_status: falsifiable, not yet resolved
 
 # Entry Points
 entry_points:
   human: README.md
   ai_agent: AGENTS.md
-  investigation: research/emergence-investigation/PLAN.md
+  research_method: RESEARCH-PROTOCOL.md
 
 # Provenance
 license: CC0-1.0

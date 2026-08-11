@@ -18,7 +18,6 @@
 | 5 | Universal Lexicon | [lexicon/lexicon.md](lexicon/lexicon.md) | v2 — 42 entries, 3-tier justification, cross-sibling refs, normative-status note, semantic index (§10.5) |
 | 6 | Universal Writing System | [writing-system/writing-system.md](writing-system/writing-system.md) | **Rewritten v2** — bottom-up from axiom "what can be drawn, counts" |
 | 6b | Writer's Companion Guide | [writing-system/writers-companion.md](writing-system/writers-companion.md) | **New** — practical pen-and-paper guide: meaning decomposition, handwriting conventions, 10 worked examples, compound statements, grammar bridge |
-| 7 | UQPL Specification | [uqpl/uqpl-spec.md](uqpl/uqpl-spec.md) | Draft — programming language inspired by UL, not a strict Σ_UL-algebra (3/14 ops match exactly). Sort names aligned; relationship characterized in [uqpl/D3-ul-uqpl-analysis.md](uqpl/D3-ul-uqpl-analysis.md) |
 
 ---
 

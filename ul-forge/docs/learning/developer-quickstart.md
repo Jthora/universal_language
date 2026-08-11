@@ -194,7 +194,6 @@ const composed = compose("conjoin", JSON.stringify(["●", "●"]));
 
 ## What's Next
 
-- **13 operations reference:** `uws/formal-specification.md`
 - **Writing guide:** `uws/writing-system/writers-companion.md`
 - **MCP server (for AI agents):** `ul-forge/crates/ul-mcp/` — 10 JSON-RPC tools
 - **Learn UL concepts:** `docs/learning/quickstart.md`

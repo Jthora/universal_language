@@ -1,11 +1,14 @@
 # Reassessment — Purpose-Anchored Restructuring of UL / UWS / UQPL
 
+> **Historical.** Written before the August 2026 prune; paths it cited have been deleted from the
+> working tree. Git history is the archive.
+
 **Date:** 2026-08-01
 **Trigger:** Recognition that (a) UL Forge and UL Core need rebuilding, (b) UL and UWS are
 distinct things that were being conflated, (c) Σ_UL is not a viable foundation for UQPL, and
 (d) the actual purpose of this research — **The Cure for the Terminators** — was never written
 down in this repository.
-**Supersedes:** the framing in `research/emergence-investigation/phase6-synthesis-and-verdict.md`
+**Supersedes:** the framing in (since removed — git history)
 (not its findings, which stand — its *framing* of what the project is for).
 
 ---
@@ -109,7 +112,7 @@ now a **design decision to make**, not a truth to discover.
 **Verdict: Σ_UL dies as a foundation. It was load-bearing for nothing that matters.**
 
 Evidence that UQPL never actually depended on it — from this repo's *own* prior analysis
-(`design/uqpl/D3-ul-uqpl-analysis.md`): only **3 of 13** Σ_UL operations map cleanly to UQPL;
+((since removed — git history)): only **3 of 13** Σ_UL operations map cleanly to UQPL;
 6 Σ_UL operations have no UQPL counterpart; 5 UQPL operations have no Σ_UL counterpart. The repo
 concluded UQPL "is not a strict Σ_UL-algebra." That was correct, and it means **cutting Σ_UL costs
 UQPL almost nothing** — the wiki's "no intervening algebraic signature required" is the same
@@ -117,7 +120,7 @@ finding, stated more decisively.
 
 **What must be removed from the repo:**
 
-- `design/uqpl/uqpl-spec.md` §0 "STATUS AND HONESTY" cites as **Proven**: "5 geometric primitives
+- (since removed — git history) §0 "STATUS AND HONESTY" cites as **Proven**: "5 geometric primitives
   generate all meaning structures (Unique Grounding Theorem)" and "Σ_UL⁺ has 4 sorts, 13
   operations." Both are retired. **The spec's foundation section is invalid as written** even
   though most of the spec body survives.

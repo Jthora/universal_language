@@ -53,10 +53,9 @@ These four are routinely conflated. They are distinct.
 
 | Term | Definition |
 |---|---|
-| **UL** — Universal Language | The hypothesized semantic structure itself. **Not a notation.** Whether it exists in any mind-independent sense is an *open research question*, not an assumption of this repo. See `research/emergence-investigation/`. |
+| **UL** — Universal Language | The hypothesized semantic structure itself. **Not a notation.** Whether it exists in any mind-independent sense is an *open research question*, not an assumption of this repo. See `research/emergent-universality-framework-2026-08.md`. |
 | **UWS** — Universal Writing System | The **written** rendering of meaning as visible marks: an alphabet of iconic features plus a spatial placement grammar. A constructed notation. Real, buildable, exists today. Lives in `uws/`. |
 | **UPL** — Universal Programming Language | A *class* of languages that execute on semantic structure rather than machine state. Design stage. |
-| **UQPL** | A **subclass** of UPL exploring quantum-inspired semantic state spaces. **Not synonymous with UPL.** Spec exists; unimplemented. Lives in `design/uqpl/`. |
 
 Shorthand for the relationship: **UL defines meaning; UWS renders meaning; UPL/UQPL operates on meaning.**
 
