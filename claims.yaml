@@ -8,14 +8,35 @@
 #   ARGUED        written proof        -> requires `evidence:` linking a proof document
 #   CONJECTURED   believed, unproven   -> requires `falsified_by:`
 #   DESIGN-CHOICE a decision           -> requires `rationale:` and `alternatives_considered:`
-#   RETIRED       withdrawn            -> requires `superseded_by:`
+#   RETIRED       withdrawn            -> requires `superseded_by:`, `formalization:`,
+#                                         `revival_condition:`, `refutation_tier:`
+#
+# NEGATIVE-RESULT DISCIPLINE (normative; see research/negative-result-discipline-2026-08.md):
+#   R1  Every negative finding requires at least one ADVERSARIAL SEARCH against it before it is
+#       recorded ("criticisms of X", "scope of X", "X superseded", "alternatives to X"). Always,
+#       not when it seems warranted — that judgment is the compromised one.
+#   R2  A negative result may not be CITED without its `scope:` conditions, and citing it requires
+#       showing the target falls inside them. No scope, not citable.
+#   R3  Retire FORMALIZATIONS, not claims. `formalization:` names what actually failed. A claim is
+#       retired only when every known formalization fails, and that must be stated.
+#   R4  Every retirement records a `revival_condition:` — what would have to be true for this to
+#       come back — written at kill time, not discovered later.
+#   R5  Refutations are tiered like claims via `refutation_tier:`. A finding that kills project
+#       work meets the same evidentiary bar as one that advances it.
+#   R6  State the steelman before the kill: what would have to be true for the positive to survive.
+#
+#   Origin: FAILURES.md F-017. Seven instances of using a finding to close a line of work that was
+#   not closed, including two after the pattern had already been corrected twice mid-session.
 #
 # INTENDED CI CHECKS (not yet implemented; enforcement plan not yet written):
 #   - VERIFIED entries must have an `evidence` path that exists and a test that passes
 #   - ARGUED entries must have an `evidence` path that exists
 #   - CONJECTURED entries must have `falsified_by`
 #   - DESIGN-CHOICE entries must have `rationale` and `alternatives_considered`
-#   - RETIRED entries must have `superseded_by`
+#   - RETIRED entries must have `superseded_by`, `formalization`, `revival_condition`,
+#     `refutation_tier`  (R3, R4, R5)
+#   - Any entry carrying a `scope` must have it non-empty; negatives without `scope` are not
+#     citable elsewhere in the repo (R2)
 #   - No document outside archive/ may cite a RETIRED claim id as current
 #
 # Seeded 2026-08-01. Honestly tiered — note how few are VERIFIED. That is the accurate picture.
@@ -116,6 +137,19 @@ claims:
     statement: "The repair operator returns a unique admissible state for any corrupted input."
     tier: RETIRED
     superseded_by: FAILURES.md#f-009
+    formalization: "metric projection onto the admissible region (R3)"
+    scope: >
+      Hilbert projection theorem requires CONVEXITY for uniqueness, and applies to metric/distance
+      formulations only. It says nothing about order-theoretic minimal change, which uses no metric.
+      Do not cite this retirement against non-metric repair operators.
+    revival_condition: >
+      Any non-metric formalization of minimal change. MET 2026-08 by AGM-PREORDER-REPAIR — Katsuno
+      & Mendelzon's representation theorem gives rational revision from a faithful preorder, needing
+      no distance and no convexity. This entry is the R4 worked example: the revival condition was
+      NOT written at kill time, so the claim sat dead for the whole interval and was recovered only
+      by accident. Had it been recorded, "non-metric minimal change" would have been a standing
+      open search from the day of retirement.
+    refutation_tier: "ARGUED — sound theorem, wrongly scoped to the domain instead of the formalism"
     notes: >
       Cannot hold as specified. Projection onto a non-convex admissible region is multivalued
       (Hilbert projection theorem requires convexity for uniqueness), and 𝒜 is almost certainly
@@ -192,6 +226,18 @@ claims:
     statement: "GIR admits a decidable notion of structural/semantic equivalence via normalization (unrestricted)."
     tier: RETIRED
     superseded_by: research/ir-decision-2026-08.md
+    formalization: "unrestricted cyclic graph rewriting (R3)"
+    scope: >
+      Plump's undecidability result applies to GENERAL CYCLIC graph rewriting. It does NOT apply to
+      term graphs / DAGs, which retain the Critical Pair Lemma, nor to DPO-with-interfaces. The
+      decidability boundary is CYCLES, not graphs — a distinction this retirement turns on, and the
+      textbook case of R2. Citing it against the acyclic core would be out of scope.
+    revival_condition: >
+      Already superseded rather than revived: IR-NORMALIZATION-STRATEGY restricts the normalizing
+      core to acyclic term graphs, which is inside the decidable regime. Full revival of the
+      unrestricted form would require a decidability result for confluence of cyclic DPO rewriting,
+      which is not expected.
+    refutation_tier: "VERIFIED — published theorem (Plump), correctly scoped in the superseding decision"
     falsified_by: >
       Confirmed: FALSE for general graph rewriting. Confluence of terminating DPO graph rewriting
       is undecidable (Plump), and critical-pair joinability does not entail confluence as it does
@@ -687,6 +733,17 @@ claims:
     statement: "UQPL's superposition and entanglement operations are mathematically well-founded."
     tier: RETIRED
     superseded_by: research/deep-critique-2026-08-wiki-and-implementation.md
+    formalization: "Semantic Hilbert Space as specified — no concrete inner product, no basis, no completeness/separability treatment (R3)"
+    scope: >
+      The critique is of THIS specification's underdetermination, not of quantum-inspired semantic
+      state spaces as a class. Vector-space and kernel models of meaning are well-established. Do
+      not cite this retirement as evidence that the approach is unsound in principle.
+    revival_condition: >
+      Specify a concrete RKHS kernel with a stated inner product, basis, and completeness treatment;
+      and either derive the Psi Condensation Threshold formula or drop it. Either half alone is
+      insufficient — the formula is separately underdetermined (r and phi are outputs rather than
+      independent inputs; g_c uncalibrated).
+    refutation_tier: "ARGUED — the specification genuinely lacks these objects; no theorem says it must"
     notes: >
       The Semantic Hilbert Space has no concrete inner product, no basis, and no completeness or
       separability treatment; the Psi Condensation Threshold that would make the quantum reading

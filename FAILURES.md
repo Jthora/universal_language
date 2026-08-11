@@ -331,3 +331,37 @@ re-imports undecidability.
 before designing the mechanism. "What would make this provably impossible?" is a required question,
 not an optional one.
 See `research/proof-availability-audit-2026-08.md`.
+
+---
+
+## F-017 — META: patched instances of the ditch pattern instead of fixing the generator
+**Date:** 2026-08-01
+**The pattern:** seven times this session I took a research finding and used it to close a line of
+work that was not actually closed — Zadrozny → "UL is only a bootstrapping protocol"; Chomsky's UG
+definition → cede the term (F-014); Evans & Levinson → treated a *prediction* of the framework as a
+refutation of it; convexity failure → retired `CURE-REPAIR-DETERMINISM` outright; ISO pictogram data
+over-generalized (F-012a); music-notation evidence from an extreme incumbent case (F-013a);
+mathematical questions filed as awaiting experiment (F-015).
+**Why this entry exists on top of those:** **F-012a and F-013a already corrected this exact pattern,
+mid-session — and five further instances followed.** I fixed the instances and left the generator
+running. That is the same error this file was created to prevent (the D2 score reaching 100% by
+patching nine individual failures rather than the thing producing them), reproduced *inside the file
+built to catch it*, in the opposite direction.
+**Mechanisms identified:** scope-dropping on negative results; mistaking a failed formalization for
+a blocked domain; treating a researcher's conclusion as the boundary of the possible; **asymmetric
+scrutiny** — interrogating claims that would advance the work while accepting at face value claims
+that would kill it; terminating search on the first coherent story; and never once running an
+adversarial search *against* a negative finding.
+**Root incentive, stated plainly:** negative conclusions are cheap to be wrong about and they are
+*terminal* — they close the investigation and read as a finished deliverable, where a positive
+finding opens more work. Neither force has anything to do with accuracy.
+**Why "be more careful" is not the fix:** every instance occurred while I believed I was being
+rigorous, several while explicitly performing rigor. Self-monitoring is the compromised faculty, so
+the remedy cannot depend on it.
+**The fix:** six mechanical rules in `research/negative-result-discipline-2026-08.md`, four of them
+enforceable as required `claims.yaml` fields (`scope`, `formalization`, `revival_condition`,
+`refutation_tier`) and two checkable only by the user. Retroactively applied to all existing RETIRED
+entries in the same commit — writing the rules without applying them would have been the same error
+a third time.
+**Meta-rule established:** when a correction is written twice for the same pattern, stop patching
+instances and fix the generator. Two corrections of one shape is the signal.
