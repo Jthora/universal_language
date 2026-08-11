@@ -61,7 +61,7 @@ What actually exists here now, in two parts:
 | Path | Content |
 |------|---------|
 | `archive/superseded-2026-08/` | Full original text of everything retired in the August 2026 split |
-| `archive/planning-history/audit-passes/pass1`–`pass3` | Prior self-audit trail — useful as process history, not as current claims |
+| `research/legacy-findings.md`–`pass3` | Prior self-audit trail — useful as process history, not as current claims |
 | `whitepaper/` | Original whitepaper, already self-labeled historical |
 
 ---

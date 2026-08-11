@@ -10,7 +10,7 @@
 #   DESIGN-CHOICE a decision           -> requires `rationale:` and `alternatives_considered:`
 #   RETIRED       withdrawn            -> requires `superseded_by:`
 #
-# INTENDED CI CHECKS (not yet implemented — see design/enforcement-plan.md):
+# INTENDED CI CHECKS (not yet implemented; enforcement plan not yet written):
 #   - VERIFIED entries must have an `evidence` path that exists and a test that passes
 #   - ARGUED entries must have an `evidence` path that exists
 #   - CONJECTURED entries must have `falsified_by`

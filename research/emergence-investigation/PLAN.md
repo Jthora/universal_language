@@ -77,7 +77,7 @@ below applies this from the start rather than needing a correction pass afterwar
 
 ## Phase 0 — Pre-registration discipline (do this first, keep it honest)
 
-**Why:** The repo's own resolution log (`uws/CRITIQUE.md`) shows its internal "D2 completeness"
+**Why:** The repo's own resolution log (`research/legacy-findings.md`) shows its internal "D2 completeness"
 score climbing from 32% to 100% via nine sequential patches, each one invented after a specific
 case failed. That pattern must not repeat here. Before gathering more evidence:
 
@@ -346,8 +346,8 @@ extend to this document itself.
 **2026-08-01 — Repo restructuring executed.** Following the keep/retire inventory
 (`keep-retire-inventory.md`), the Σ_UL proof apparatus was retired from the live repo and
 preserved in full at `archive/superseded-2026-08/`:
-- Archived outright: `RAMIFICATIONS.md`, `archive/superseded-2026-08/foundations/paradigm.md`, `research/frontier/strategic-plan.md`,
-  `research/frontier/gap-analysis.md`, `history/`, `applications/`, `proto-analysis-papers/` (duplicate of
+- Archived outright: `RAMIFICATIONS.md`, `archive/superseded-2026-08/foundations/paradigm.md`, `(removed 2026-08; see git history)`,
+  `(removed 2026-08; see git history)`, `history/`, `applications/`, `proto-analysis-papers/` (duplicate of
   `whitepaper/`).
 - Split and rewritten in place (full originals archived): `uws/formal-specification.md`
   (kept: language-as-Σ-homomorphism definition, the notation's operation spec, modal/performative/
@@ -358,7 +358,7 @@ preserved in full at `archive/superseded-2026-08/`:
 - Rewritten to reflect the new two-part structure (UWS + Investigation), not proof claims:
   `README.md`, `AGENTS.md`, `FOR-AI.md`, `llms.txt`, `index.json`.
 - Retagged as historical process record (not current status), via a new top-level notice:
-  `archive/planning-history/audit-passes/README.md`.
+  `research/legacy-findings.md`.
 - `uws/` (the actual writing-system content), `ul-forge/`, `docs/ul-forge-v1/`,
   `docs/distribution/`, `docs/learning/`, `research/frontier/methodology.md`, `research/frontier/causal-efficacy-protocol.md`,
   `research/frontier/expedition-one/`, `research/frontier/expedition-two/`, and `research/experiments/` were left in place per

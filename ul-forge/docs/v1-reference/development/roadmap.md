@@ -38,7 +38,7 @@ UL Forge v1 is the minimum viable toolchain for composing, validating, and rende
 
 ### Deliverables
 
-- [ ] Repository scaffold: `crates/uws/`, `crates/ul-cli/`, `web/`, `bindings/`
+- [ ] Repository scaffold: `crates/ul-core/`, `crates/ul-cli/`, `web/`, `bindings/`
 - [ ] Rust workspace `Cargo.toml` with workspace members
 - [ ] Core types: `Node`, `Edge`, `Gir`, `Sort`, `EdgeType` (Rust structs/enums)
 - [ ] GIR serialization: `serde` JSON round-trip for all core types

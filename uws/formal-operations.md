@@ -18,7 +18,7 @@
 
 All constructions take place in the Euclidean plane ℝ² equipped with its standard metric, orientation, and topology.
 
-> **Note on the Euclidean assumption:** The Euclidean plane is adopted here as a simplification — a concrete, well-understood carrier space. Most core theorems (Unique Grounding, Free Algebra, Yoneda-Grounding, Polysemy-Holonomy) are geometry-independent: they hold for any carrier space with sufficient structure (infinite distinct positions, continuous angle parameter, compact subsets). The Euclidean-specific content is: (1) the Erlangen hierarchy group names (Euc(2), Sim(2), Aff(2), Proj(2), Homeo(ℝ²)) and (2) the 5th-postulate implication of unique analogy. See `archive/planning-history/audit-passes/pass1-1/tier-a-foundational/tier-a-working-analysis.md` §A2 for the full dependency analysis.
+> **Note on the Euclidean assumption:** The Euclidean plane is adopted here as a simplification — a concrete, well-understood carrier space. Most core theorems (Unique Grounding, Free Algebra, Yoneda-Grounding, Polysemy-Holonomy) are geometry-independent: they hold for any carrier space with sufficient structure (infinite distinct positions, continuous angle parameter, compact subsets). The Euclidean-specific content is: (1) the Erlangen hierarchy group names (Euc(2), Sim(2), Aff(2), Proj(2), Homeo(ℝ²)) and (2) the 5th-postulate implication of unique analogy. See `research/legacy-findings.md` §A2 for the full dependency analysis.
 
 ### 0.1 Carrier Sets (Restated Precisely)
 
@@ -128,7 +128,7 @@ negate(a) = (F, C, −σ)
 
 where −⊕ = ⊖ and −⊖ = ⊕. The frame and content are preserved; only the assertional sign is flipped. Visually, the frame boundary changes from solid to dashed (or vice versa).
 
-> **Design note (April 2026):** The previous definition used reflection of content through a vertical axis: `negate(a) = (F, ρ_c(C))`. This was **incorrect** — reflection produces the *converse* (subject-object swap, same truth value), not logical *negation* (truth-value flip). The converse operation is derivable from `predicate` and `invert`: for a = predicate(e₁, r, e₂), the converse is predicate(e₂, invert(r), e₁). See `archive/planning-history/audit-passes/pass1-1/tier-b-structural/P0-negation-resolution.md` for the full analysis.
+> **Design note (April 2026):** The previous definition used reflection of content through a vertical axis: `negate(a) = (F, ρ_c(C))`. This was **incorrect** — reflection produces the *converse* (subject-object swap, same truth value), not logical *negation* (truth-value flip). The converse operation is derivable from `predicate` and `invert`: for a = predicate(e₁, r, e₂), the converse is predicate(e₂, invert(r), e₁). See `research/legacy-findings.md` for the full analysis.
 
 **Closure:** (F, C, −σ) has a valid frame F, valid content C, and valid sign −σ ∈ {⊕, ⊖}. The result is an assertion. ✓  
 **Totality:** Every assertion has a sign that can be flipped. ✓  

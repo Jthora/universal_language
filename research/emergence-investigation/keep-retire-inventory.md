@@ -32,7 +32,7 @@ deletion or rewrite happens. No files have been touched yet — this is the prop
 | `CONTRIBUTING.md` | KEEP-UWS | Generic contribution process, not proof-dependent. |
 | `CITATION.cff` | KEEP (as-is) | Just citation metadata. |
 | `llms.txt`, `index.json` | **RETIRE** (rewrite) | AI-discoverability manifests built around the same claims; regenerate once top-level docs change. |
-| `archive/README2-draft.md` | No action | Already inert/unused draft (never became the live README); actually the *most* overclaiming text in the repo ("sacred geometry," "bridges human consciousness"), but it's already archived, not live. Leave alone. |
+| `archive/README2-draft.md` (since deleted) | No action at the time | Already inert/unused draft (never became the live README); actually the *most* overclaiming text in the repo ("sacred geometry," "bridges human consciousness"), but it's already archived, not live. Leave alone. |
 
 ## `foundations/`
 
@@ -93,7 +93,7 @@ Theorem. Zero external artifacts." Once that theorem is retired, this document's
 gone; rewrite from whatever the Investigation actually establishes, or hold until then.
 `applications/research/` is an empty directory — no action needed.
 
-## `archive/planning-history/audit-passes/` (pass1 through pass3)
+## `research/legacy-findings.md` (pass1 through pass3)
 
 **Keep as historical record, retag — do not delete.** This is the actual paper trail showing the
 patch-until-it-passes pattern (useful, honest evidence of process, referenced in the emergence
@@ -121,8 +121,8 @@ notation's compositional feature set.
 
 | Bucket | Rough scope |
 |---|---|
-| RETIRE (rewrite) | README.md, AGENTS.md, FOR-AI.md, RAMIFICATIONS.md, llms.txt, index.json, `archive/superseded-2026-08/foundations/paradigm.md`, the Foundational-Axiom/proof parts of `universal-language-derivation.md` and `formal-foundations.md`, `research/frontier/strategic-plan.md` + `gap-analysis.md`, `history/*`, `applications/*` |
-| KEEP-INVESTIGATION | `independent-derivation.md`, `montague-homomorphism.md`, `uws/CRITIQUE.md`, `research/frontier/causal-efficacy-protocol.md`, `research/frontier/expedition-one/`, `research/frontier/expedition-two/`, `research/experiments/`, `research/audits/*` (retagged) |
+| RETIRE (rewrite) | README.md, AGENTS.md, FOR-AI.md, RAMIFICATIONS.md, llms.txt, index.json, `archive/superseded-2026-08/foundations/paradigm.md`, the Foundational-Axiom/proof parts of `universal-language-derivation.md` and `formal-foundations.md`, `(removed 2026-08; see git history)` + `gap-analysis.md`, `history/*`, `applications/*` |
+| KEEP-INVESTIGATION | `independent-derivation.md`, `montague-homomorphism.md`, `research/legacy-findings.md`, `research/frontier/causal-efficacy-protocol.md`, `research/frontier/expedition-one/`, `research/frontier/expedition-two/`, `research/experiments/`, `research/audits/*` (retagged) |
 | KEEP-UWS | All of `uws/` (writing system content), `ul-forge/`, `docs/ul-forge-v1/`, `docs/distribution/`, `docs/learning/`, plus the salvageable Parts I–IV of `universal-language-derivation.md` |
 
 No files have been modified. This is the proposal for your review before anything is touched.

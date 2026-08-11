@@ -100,7 +100,7 @@ PROPERTY:  Given statement S and point P not in S,
 
 **What this means:** Every meaning has exactly one "structural analog" — a parallel meaning that never contradicts the original. This is the basis for **analogy** in UL: parallel lines = parallel meanings. The parallel postulate guarantees that analogy is unique (not many-to-many) in Euclidean meaning-space.
 
-**⚠ Caveat — The Euclidean Assumption:** The claim that analogy is unique (exactly one structural parallel per meaning) is a consequence of adopting Euclidean geometry. Empirical evidence suggests this may be wrong for global meaning-space: a single concept like "love" admits multiple non-intersecting structural analogs from a single external domain (chemical bonding, gravitational attraction, economic exchange, symbiosis, harmonic resonance). This pattern is characteristic of **hyperbolic** geometry (infinitely many parallels), not Euclidean (exactly one). Most core UL theorems (Unique Grounding, Free Algebra, Polysemy-Holonomy) are geometry-independent and survive under non-Euclidean alternatives. The Euclidean plane should be understood as a **local simplification**, not a claim about global meaning-space geometry. See `archive/planning-history/audit-passes/pass1-1/tier-a-foundational/tier-a-working-analysis.md` §A2 for the full analysis.
+**⚠ Caveat — The Euclidean Assumption:** The claim that analogy is unique (exactly one structural parallel per meaning) is a consequence of adopting Euclidean geometry. Empirical evidence suggests this may be wrong for global meaning-space: a single concept like "love" admits multiple non-intersecting structural analogs from a single external domain (chemical bonding, gravitational attraction, economic exchange, symbiosis, harmonic resonance). This pattern is characteristic of **hyperbolic** geometry (infinitely many parallels), not Euclidean (exactly one). Most core UL theorems (Unique Grounding, Free Algebra, Polysemy-Holonomy) are geometry-independent and survive under non-Euclidean alternatives. The Euclidean plane should be understood as a **local simplification**, not a claim about global meaning-space geometry. See `research/legacy-findings.md` §A2 for the full analysis.
 
 **Note:** Non-Euclidean extensions (hyperbolic, elliptic) modify this axiom and would produce meaning-spaces with different analogy properties. This is an active research direction — not merely open, but motivated by the evidence above.
 
@@ -204,7 +204,7 @@ GEOMETRIC REALIZATION:
    on universal"                  acts on universal"
 ```
 
-> **Design note:** The previous definition used reflection of content through a vertical axis. This was incorrect — reflection produces the *converse* (subject-object swap), not logical *negation* (truth-value flip). The converse is derivable from `predicate` + `invert`. See `archive/planning-history/audit-passes/pass1-1/tier-b-structural/P0-negation-resolution.md`.
+> **Design note:** The previous definition used reflection of content through a vertical axis. This was incorrect — reflection produces the *converse* (subject-object swap), not logical *negation* (truth-value flip). The converse is derivable from `predicate` + `invert`. See `research/legacy-findings.md`.
 
 **Properties:**
 - negate(negate(a)) = a (double boundary flip = identity) ✓

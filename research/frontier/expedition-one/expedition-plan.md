@@ -2,7 +2,7 @@
 
 **Research Series:** Universal Language — Proof of Reality and AI Cognitive Infrastructure  
 **Date:** March 12, 2026  
-**Prerequisites:** `archive/superseded-2026-08/foundations/paradigm.md` (READ FIRST), `research/frontier/strategic-plan.md` (the WHY and WHERE); `research/frontier/gap-analysis.md` (the 15 gaps)  
+**Prerequisites:** `archive/superseded-2026-08/foundations/paradigm.md` (READ FIRST), `(removed 2026-08; see git history)` (the WHY and WHERE); `(removed 2026-08; see git history)` (the 15 gaps)  
 **Purpose:** This is the HOW. Concrete steps, deliverables, milestones, and validation gates for the first expedition — three parallel fronts that unlock everything that follows.
 
 > **⚠ PARADIGM NOTE:** All validation in this plan tests UL's mathematical structure and its causal efficacy on AI systems. References to "meaning," "context," and "polysemy" below refer to formal mathematical objects in UL's geometric framework, not to human linguistic intuitions. See `archive/superseded-2026-08/foundations/paradigm.md`.
@@ -14,8 +14,8 @@
 We have:
 - A proven algebraic framework (Σ_UL⁺: 4 sorts, 13 operations, unique grounding) — `uws/formal-specification.md`
 - A geometric writing system with grammar — `uws/design-rationale.md`
-- A complete map of 15 gaps ranked by impact and tractability — `research/frontier/gap-analysis.md`
-- A strategic plan identifying 7 regions and 8 fronts — `research/frontier/strategic-plan.md`
+- A complete map of 15 gaps ranked by impact and tractability — `(removed 2026-08; see git history)`
+- A strategic plan identifying 7 regions and 8 fronts — `(removed 2026-08; see git history)`
 
 We need:
 - To begin. Specifically, to resolve the three highest-tractability, zero-dependency gaps that unblock everything downstream.
@@ -37,7 +37,7 @@ The strategic plan identifies three independent starting points. This document d
 #### Step A1: Define the Context Space
 
 - **Task:** Define a base manifold X whose points represent utterance contexts. A context is a tuple (speaker, listener, location, time, shared knowledge, communicative goal). This is a finite-dimensional manifold — identify its coordinates and topology.
-- **Input needed:** `research/frontier/gap-analysis.md` §2.1-2.2 (pragmatics and deixis gaps)
+- **Input needed:** `(removed 2026-08; see git history)` §2.1-2.2 (pragmatics and deixis gaps)
 - **Output:** A formal definition: X = {(agent_s, agent_l, loc, t, K, g) | ...} with a specified topology
 - **Validation:** Can we locate an arbitrary utterance context as a specific point in X? If yes, the definition is concrete enough.
 

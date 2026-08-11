@@ -29,7 +29,7 @@
 6. The Yoneda Lemma generalizes the Unique Grounding Theorem (B6) — connection asserted but Prim Hom-sets not enumerated
 
 ### CRITIQUED
-- The §6.4 interpretation of Yoneda as proving the relational postulate ("all meaning is relationship") has been critiqued as circular — the Yoneda lemma holds in ANY locally small category and does not independently establish the postulate. See `archive/planning-history/audit-passes/pass1-1/tier-a-foundational/tier-a-working-analysis.md` §A1.
+- The §6.4 interpretation of Yoneda as proving the relational postulate ("all meaning is relationship") has been critiqued as circular — the Yoneda lemma holds in ANY locally small category and does not independently establish the postulate. See `research/legacy-findings.md` §A1.
 
 ## WHAT IS NOT ADDRESSED
 
@@ -421,7 +421,7 @@ The Unique Grounding Theorem proves the mapping for the five **primitives**. Yon
 
 This means: the meaning of ANY expression (not just the primitives) is nothing other than its position in the web of all possible relationships. Meaning is relational all the way up, not just at the base level.
 
-**Scope of this result:** This is a categorical reformulation of the relational postulate — it proves that IF meaning has Σ_UL structure, THEN meaning is determined by relationships. The Yoneda Lemma holds in ANY locally small category; it validates the internal consistency of the relational framework but does not independently establish the foundational postulate ("all meaning is relationship") itself. That postulate connects a formal concept (Σ_UL relational structure) to an informal concept (meaning) — a bridge that, like the Church-Turing Thesis, is well-supported by convergent evidence (Frege, Montague, Jackendoff, Langacker, Wierzbicka — see `research/independent-derivation.md`) but cannot be formally proven from within the framework. See `archive/planning-history/audit-passes/pass1-1/tier-a-foundational/tier-a-working-analysis.md` §A1 for the full analysis.
+**Scope of this result:** This is a categorical reformulation of the relational postulate — it proves that IF meaning has Σ_UL structure, THEN meaning is determined by relationships. The Yoneda Lemma holds in ANY locally small category; it validates the internal consistency of the relational framework but does not independently establish the foundational postulate ("all meaning is relationship") itself. That postulate connects a formal concept (Σ_UL relational structure) to an informal concept (meaning) — a bridge that, like the Church-Turing Thesis, is well-supported by convergent evidence (Frege, Montague, Jackendoff, Langacker, Wierzbicka — see `research/independent-derivation.md`) but cannot be formally proven from within the framework. See `research/legacy-findings.md` §A1 for the full analysis.
 
 ---
 
@@ -443,7 +443,7 @@ The feedback loop (g_loc|ψ|²ψ) is categorically: **the composition operation 
 
 ### Gaps Closed
 
-| Gap (from `research/frontier/gap-analysis.md`) | Status |
+| Gap (from `(removed 2026-08; see git history)`) | Status |
 |---|---|
 | **§1.1 Category theory framing** | **CLOSED.** Lang(Σ_UL) defined, languages as morphisms, translations as natural transformations |
 | **Erlangen as analogy vs. theorem** | **CLOSED.** Erlangen is a proven chain of forgetful functors with left adjoints |

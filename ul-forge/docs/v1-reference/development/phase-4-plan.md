@@ -87,7 +87,7 @@ The renderer currently has 6 multi-node templates. The web palette lists 24 T1 e
 | 17 | Void Enclosure | `◌` | Low — dashed/empty enclosure | templates.rs |
 | 18 | Coincident Points | `● \| ●` | Low — two overlapping points | templates.rs |
 
-- [ ] Implement templates 1–18 in `crates/uws/src/renderer/templates.rs`
+- [ ] Implement templates 1–18 in `crates/ul-core/src/renderer/templates.rs`
 - [ ] Add `anchor_points: HashMap<String, (f64, f64)>` to `Template` struct
 - [ ] Add snapshot tests for each new template (reference SVG comparison)
 - [ ] Verify each template parses → validates → renders round-trip
@@ -340,7 +340,7 @@ Mirror the Rust AI client in TypeScript for the web editor:
 
 #### M4.3a.1: Diff Algorithm
 
-- [ ] `crates/uws/src/diff.rs` — new module in ul-core
+- [ ] `crates/ul-core/src/diff.rs` — new module in ul-core
 - [ ] `DiffOperation` enum: `AddNode`, `RemoveNode`, `ModifyNode`, `AddEdge`, `RemoveEdge`
 - [ ] `pub fn diff(a: &Gir, b: &Gir) -> Vec<DiffOperation>` — structural diff
 - [ ] Node matching: by ID first, then by `(type, sort, label)` triple fallback
@@ -349,7 +349,7 @@ Mirror the Rust AI client in TypeScript for the web editor:
 
 #### M4.3a.2: Three-Way Merge
 
-- [ ] `crates/uws/src/merge.rs` — three-way merge
+- [ ] `crates/ul-core/src/merge.rs` — three-way merge
 - [ ] `Conflict` struct: `{ type, node_id, field, base, ours, theirs }`
 - [ ] `MergeResult { merged: Gir, conflicts: Vec<Conflict> }`
 - [ ] `pub fn merge(base: &Gir, ours: &Gir, theirs: &Gir) -> MergeResult`
@@ -546,9 +546,9 @@ This ordering ensures:
 ## File Deliverables Checklist
 
 ### Rust
-- [ ] `crates/uws/src/renderer/templates.rs` — expanded from 6 to 42 templates
-- [ ] `crates/uws/src/diff.rs` — structural diff module
-- [ ] `crates/uws/src/merge.rs` — three-way merge module
+- [ ] `crates/ul-core/src/renderer/templates.rs` — expanded from 6 to 42 templates
+- [ ] `crates/ul-core/src/diff.rs` — structural diff module
+- [ ] `crates/ul-core/src/merge.rs` — three-way merge module
 - [ ] `crates/ul-ai/Cargo.toml` — AI client crate
 - [ ] `crates/ul-ai/src/lib.rs` — compose, explain, suggest public API
 - [ ] `crates/ul-ai/src/providers/{openai,anthropic,ollama}.rs` — provider implementations
@@ -576,7 +576,7 @@ This ordering ensures:
 - [ ] `collab-server/server.js` — room management + Yjs relay
 
 ### Tests
-- [ ] `crates/uws/tests/template_snapshots/` — 42 reference SVGs
-- [ ] `crates/uws/tests/diff_tests.rs` — diff unit tests
-- [ ] `crates/uws/tests/merge_tests.rs` — merge unit tests
+- [ ] `crates/ul-core/tests/template_snapshots/` — 42 reference SVGs
+- [ ] `crates/ul-core/tests/diff_tests.rs` — diff unit tests
+- [ ] `crates/ul-core/tests/merge_tests.rs` — merge unit tests
 - [ ] `crates/ul-ai/tests/` — mock-provider integration tests

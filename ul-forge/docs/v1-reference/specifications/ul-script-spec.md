@@ -62,7 +62,7 @@ UL-Script is a text format that encodes the geometric structure of UL glyphs. It
 
 > **Abridged grammar** for quick reference. The canonical annotated grammar is in
 > [components/parser/grammar.md](../components/parser/grammar.md). The Pest
-> implementation is in `crates/uws/src/parser/ul_script.pest`.
+> implementation is in `crates/ul-core/src/parser/ul_script.pest`.
 
 ```peg
 # Top-level

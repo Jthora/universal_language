@@ -36,7 +36,7 @@
 
 Every quantitative result about meaning — distances, information content, entropy, the metric on thought-space — requires a probability measure on the set of UL constructions. Without it, we can say "these two meanings are connected" but not "how likely is this meaning" or "how much information does this expression carry."
 
-This is gap **C-1** from `research/frontier/gap-analysis.md`: "Shannon entropy and DC_UL depend on P; no canonical P exists."
+This is gap **C-1** from `(removed 2026-08; see git history)`: "Shannon entropy and DC_UL depend on P; no canonical P exists."
 
 The preliminary discussion in `research/frontier/expedition-one/numbers-and-computability.md` §7.3 noted two candidates (uniform and usage-weighted) but did not define either rigorously or prove normalizability. We now do both.
 

@@ -3,7 +3,7 @@
 **Research Series:** Universal Language — Proof of Reality and AI Cognitive Infrastructure  
 **Sprint:** 6 — Path A  
 **Date:** (Pre-registration)  
-**Prerequisites:** `archive/superseded-2026-08/foundations/paradigm.md` (READ FIRST), `uws/formal-specification.md`, `research/frontier/strategic-plan.md`
+**Prerequisites:** `archive/superseded-2026-08/foundations/paradigm.md` (READ FIRST), `uws/formal-specification.md`, `(removed 2026-08; see git history)`
 
 > **⚠ PARADIGM NOTE:** This protocol tests whether UL has *causal power over information-processing systems* — whether AI operating in UL-mode produces capabilities that natural-language-bound AI cannot match. It does NOT test whether UL "describes" human languages or "captures" linguistic intuitions. See `archive/superseded-2026-08/foundations/paradigm.md`.
 

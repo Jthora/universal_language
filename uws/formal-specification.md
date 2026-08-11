@@ -105,7 +105,7 @@ standard simple type theory).
 This gives a **complete and natural** generating set for the notation (in the sense that natural
 languages universally have both AND and OR, etc.) — not a claim of minimal independence.
 `conjoin` is derivable from `{negate, disjoin}` via De Morgan's law and is retained for
-naturalness/readability, consistent with `archive/planning-history/audit-passes/pass1-1/findings/critical-errors.md`
+naturalness/readability, consistent with `research/legacy-findings.md`
 finding F2, which corrected an earlier overclaim that this set was minimal.
 
 ### 1.6 Definition: Expressively Complete Language (for this notation)

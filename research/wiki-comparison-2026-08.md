@@ -62,7 +62,7 @@ Per `README.md` / `AGENTS.md` / `FOR-AI.md`:
   19 worked examples.
 
 ### 2.2 Repo's own self-audit trail (already exists — don't re-derive)
-Three self-audit passes live under `archive/planning-history/audit-passes/`:
+Three self-audit passes live under `research/legacy-findings.md`:
 - **Pass 1 (1-1 → 1-4):** Formal-foundations hardening. D2-completeness 37/50 → 37/50 (74%),
   established the 13-operation count, added `bind`/`modify_assertion` to the *spec*.
 - **Pass 2:** Modal (□/◇/□→), performative (φ), pragmatic (SI/CI inference) extensions — zero new
@@ -325,7 +325,7 @@ repo's own internal audit trail, rather than trusting the summary labels.
   contradicting the other document's demotion of Process to a non-independent sub-case.
 - **This exact tension is already catalogued by the repo's own April 2026 audit**: finding **F7,
   "4-Sort Algebra vs. 5-Primitive Geometry Tension"**
-  (`archive/planning-history/audit-passes/pass1-1/findings/structural-gaps.md`), logged status "CLEAR
+  (research/legacy-findings.md), logged status "CLEAR
   RESOLUTION — needs documentation additions." The prescribed fix (a reconciling note in
   `formal-foundations.md`, `AGENTS.md`, and `symbol-map.md`) was **never actually added** — verified
   by grep across `README.md`, `AGENTS.md`, `FOR-AI.md`, `uws/formal-specification.md`, and
@@ -346,7 +346,7 @@ rescues the "5 primitives" framing used on the public-facing pages.
 
 ### 5.3 The "100% D2 completeness" figure was reached by iterative self-patching, not external validation
 
-`uws/CRITIQUE.md`'s resolution log shows the internal completeness self-test climbing
+`research/legacy-findings.md`'s resolution log shows the internal completeness self-test climbing
 32%→38%→40%→48%→52%→74%→84%→94%→100% across nine sequential patches (Pass 1.2–1.3, Pass 2), each
 one adding a new operation, distinguished element, or reinterpretation specifically to fix a case
 that had just failed. This is the same team designing the test and repeatedly amending the theory
@@ -355,7 +355,7 @@ completeness" should be read as "we closed every gap we found in our own checkli
 external validation of the theory.
 
 ### 5.4 A real math bug did occur and was fixed — the project is not just loosely argued, it has had actual errors
-Finding **F1** (`archive/planning-history/audit-passes/pass1-1/findings/critical-errors.md`): negation
+Finding **F1** (research/legacy-findings.md): negation
 was implemented as geometric reflection, which produces logical *converse* ("B is acted upon by A"),
 not *negation* ("A does NOT act on B") — a genuine correctness bug that broke the De Morgan/
 propositional-completeness proofs relying on it. Fixed 2026-04-07 by switching to boundary inversion.

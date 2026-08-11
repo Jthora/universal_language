@@ -509,7 +509,7 @@ The gauge bundle framework provides geometric explanations for observed cross-do
 
 ### Gaps Closed
 
-| Gap (from `research/frontier/gap-analysis.md`) | Status |
+| Gap (from `(removed 2026-08; see git history)`) | Status |
 |---|---|
 | **§1.2 Gauge field / fiber bundle** | **FRAMEWORK established.** Trivial bundle E = X × G constructed, connection defined. Polysemy-holonomy relationship CONJECTURED (path-connectivity now proven). |
 | **§2.1 Deixis** | **CLOSED. [PROVEN]** "I", "here", "now" formalized as canonical sections of E → X |

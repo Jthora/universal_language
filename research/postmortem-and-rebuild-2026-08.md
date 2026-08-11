@@ -166,7 +166,7 @@ Every non-trivial claim gets an entry. Machine-readable, CI-validated.
 - id: NEG-INVOLUTION
   statement: "negate(negate(a)) is semantically equivalent to a"
   tier: VERIFIED
-  evidence: ul-forge/crates/uws/tests/laws.rs::negate_involution
+  evidence: ul-forge/crates/ul-core/tests/laws.rs::negate_involution
   last_verified: 2026-08-01
 
 - id: UWS-PRIMITIVE-COUNT
@@ -195,7 +195,7 @@ the 4-sort flattening, totality-vs-Turing-completeness — all are decisions. Ha
 
 ### R3 — Every claimed algebraic law becomes a property test
 
-`ul-forge/crates/uws/tests/laws.rs`, using `proptest`:
+`ul-forge/crates/ul-core/tests/laws.rs`, using `proptest`:
 
 ```rust
 proptest! {

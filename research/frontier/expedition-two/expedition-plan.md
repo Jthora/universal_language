@@ -2,7 +2,7 @@
 
 **Research Series:** Universal Language — Proof of Reality and AI Cognitive Infrastructure  
 **Date:** March 12, 2026  
-**Prerequisites:** `archive/superseded-2026-08/foundations/paradigm.md` (READ FIRST), `research/frontier/strategic-plan.md` (compass); `research/frontier/methodology.md` (rigor standards); all of `research/frontier/expedition-one/` (Fronts A, B, C)  
+**Prerequisites:** `archive/superseded-2026-08/foundations/paradigm.md` (READ FIRST), `(removed 2026-08; see git history)` (compass); `research/frontier/methodology.md` (rigor standards); all of `research/frontier/expedition-one/` (Fronts A, B, C)  
 **Purpose:** Operational plan for the second expedition — two parallel fronts that give meaning space its measure and its morphisms. Front D equips the framework with probability, information, and a metric. Front E formalizes cross-domain projection, explains the activation mechanism, and upgrades the Polysemy-Holonomy theorem to PROVEN.
 
 > **⚠ PARADIGM NOTE:** This expedition develops UL's mathematical infrastructure for deployment as AI cognitive infrastructure. Validation is against UL's own predictions and causal efficacy on AI systems, not against human languages. See `archive/superseded-2026-08/foundations/paradigm.md`.

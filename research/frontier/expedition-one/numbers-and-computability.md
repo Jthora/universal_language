@@ -722,7 +722,7 @@ The computability analysis reveals three specific mechanisms by which compact UL
 
 ### Gaps Closed
 
-| Gap (from `research/frontier/gap-analysis.md`) | Status |
+| Gap (from `(removed 2026-08; see git history)`) | Status |
 |---|---|
 | **§1.5 Number construction** | **CLOSED. [PROVEN]** ℕ, ℤ, ℚ constructed from geometric primitives; ℝ constructible via finite schemas [FRAMEWORK] |
 | **§1.4 Computability/decidability** | **PARTIALLY CLOSED.** Parsing O(n log n) [PROVEN], equivalence map complete at metric levels [PROVEN], topological undecidability [CONJECTURED], Gödel boundary [CONJECTURED pending Q verification] |
