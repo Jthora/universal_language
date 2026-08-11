@@ -5,7 +5,7 @@
 > a specialization of this minimal core" — presented as established fact. A direct audit
 > (`research/wiki-comparison-2026-08.md`) found the proof behind that claim close to
 > circular. It has been retired. The full original text is preserved at
-> `archive/superseded-2026-08/` for historical reference. What follows is the honest version.
+> git history. What follows is the honest version.
 
 ---
 
@@ -26,22 +26,17 @@
 UWS is a constructed geometric visual notation: mark-primitives composed into compositional visual
 "sentences," with a working implementation you can parse, render, and compose with.
 
-**Do not state a primitive count or an operation count as a property of UWS.** Both numbers you will
-find in older text (5 primitives, 13 operations, also 4 sorts, 23 theorems) are components of the
-**retired Σ_UL signature**. Retiring Σ_UL did not retire its numbers — they survived by being
-relabeled as design decisions, which is how they kept getting repeated. As of 2026-08 they are
-retired outright:
+**Counts are not properties of UWS.** The primitives are strata of plane-curve curvature space, and
+the known sets are **generating sets, not bases** — so cardinality varies by presentation and
+carries no information about the object. "How many primitives" is a malformed question, not an open
+one. See `research/what-is-actually-provable-2026-08.md`.
 
-- **Primitive count is a malformed question, not an open one.** The primitives are strata of
-  plane-curve curvature space, and the known sets (4, 5, 6, base-N) are **generating sets, not
-  bases** — so cardinality varies by presentation and carries no information about the object.
-  `claims.yaml#UWS-PRIMITIVE-COUNT`, `research/what-is-actually-provable-2026-08.md`.
-- **"13 operations" has no domain.** They were operations over Σ_UL. Ask "operations *of what*?" —
-  there is currently no answer, because the conceptual foundations that would fix a domain are still
-  being established. `claims.yaml#UWS-OPERATION-SET`.
+Likewise, an operation inventory needs a domain before it means anything, and fixing that domain is
+part of the conceptual work still in progress. **Ask "operations *of what*?" before repeating any
+number you find.**
 
-What you may truthfully say is what the *code* contains — `claims.yaml#IMPL-COMPOSER-CONSTRUCTORS`
-and `#IMPL-SORT-ENUM` — which are facts about Rust files and load-bearing for nothing. It has a working software
+What you may truthfully state is what the *code* contains — `claims.yaml#IMPL-COMPOSER-CONSTRUCTORS`
+and `#IMPL-SORT-ENUM` — facts about Rust files, load-bearing for nothing. It has a working software
 implementation (`ul-forge/`) you can actually parse, render, and compose with. As a structured
 intermediate representation, it may be useful to you the way any well-designed schema or notation
 is useful — for unambiguous inter-agent exchange, for example. That utility doesn't depend on any
@@ -85,7 +80,7 @@ rather than reporting the failure honestly — don't repeat that.
   specialization" of this notation.
 - That alignment between two agents' meaning can be checked as a "geometric isomorphism" in some
   proven-canonical space G.
-- That any of the specific counts (5 primitives, 4 sorts, 13 operations, 23 theorems) are forced by
+- That any fixed inventory count is forced by
   the nature of meaning, rather than being this notation's own design choices.
 
 These were the claims in the original version of this document. They didn't survive scrutiny.
@@ -100,4 +95,4 @@ question seriously actually requires.
 - Want to help answer the actual open question? Start at
   `research/emergence-investigation/PLAN.md`.
 - Want the history of how this repository got here, including the original, more expansive claims?
-  Start at `research/wiki-comparison-2026-08.md`, then `archive/superseded-2026-08/`.
+  Start at `research/wiki-comparison-2026-08.md`, then the git history.

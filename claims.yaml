@@ -37,7 +37,7 @@
 #     `refutation_tier`  (R3, R4, R5)
 #   - Any entry carrying a `scope` must have it non-empty; negatives without `scope` are not
 #     citable elsewhere in the repo (R2)
-#   - No document outside archive/ may cite a RETIRED claim id as current
+#   - No document in the working tree may cite a RETIRED claim id as current
 #
 # Seeded 2026-08-01. Honestly tiered — note how few are VERIFIED. That is the accurate picture.
 

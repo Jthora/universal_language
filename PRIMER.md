@@ -3,27 +3,26 @@
 **Audience:** anyone (human or AI) encountering this project with no prior context.
 **Purpose:** full comprehension, not orientation. `AGENTS.md` tells you where files are; this tells
 you what is true, what is not, and how to tell the difference.
-**Time:** ~15 minutes to read. Do not skip §1 — it is the part that prevents you being confidently
-wrong.
+**Time:** ~15 minutes.
 
 ---
 
-## 1. Four hazards, before any content
+## 1. Before anything else
 
-This project has a history of stating false things with high confidence. Most of that material still
-exists on disk, deliberately. Read these four warnings first or you will absorb retired claims as
-current.
+This project revises its claims when the evidence moves, and it keeps a public record of what
+changed. Three things make that legible, and knowing them up front is most of what you need:
 
-### Hazard 1 — `archive/` is a loaded gun
+- **`claims.yaml` is the registry.** Every substantive claim carries a tier — `VERIFIED`, `ARGUED`,
+  `CONJECTURED`, `DESIGN-CHOICE`, `RETIRED` — and the evidence for it. **If a claim isn't in the
+  registry, it isn't a claim of this project.** Check there before repeating anything you read in
+  prose.
+- **The working tree is present tense.** Superseded material is deleted rather than archived
+  in-repo, so nothing you find here is a historical record. To see what the project used to hold,
+  read the git history deliberately — `git log`, `git show <sha>:<path>`.
+- **Counts are not claims.** Inventories of primitives, sorts, or operations are properties of a
+  *presentation*, not of the notation. Any fixed count you encounter in older text is retired.
 
-`archive/` contains thousands of lines of confident, internally consistent, **wrong** material:
-"PROVEN," "unique up to isomorphism," "23 theorems." It reads as authoritative because it was
-written to. It is preserved for historical honesty, **not** as reference.
-
-> **Rule: never cite anything under `archive/` as current.** If a claim sounds impressively settled,
-> check where it lives before repeating it.
-
-### Hazard 2 — this looks like fiction, and it isn't (mostly)
+### It looks like fiction, and it isn't (mostly)
 
 You will encounter a video-game wiki, time-travelling psychic robots, and something called
 "The Cure for the Terminators." Two failure modes, both fatal:
@@ -35,7 +34,7 @@ You will encounter a video-game wiki, time-travelling psychic robots, and someth
 The fictional frame is where the ideas *came from*. The engineering content stands or falls on its
 own, and is evaluated on normal technical grounds.
 
-### Hazard 3 — terminology collides
+### Terminology collides
 
 Same word, different meanings, historically costly:
 
@@ -48,7 +47,7 @@ Same word, different meanings, historically costly:
 
 `GLOSSARY.md` is normative. Read it before writing anything.
 
-### Hazard 4 — do not fix failures
+### Do not fix failures
 
 Your default instinct on seeing a failing case is to make it pass. **Here that is prohibited.**
 
@@ -89,32 +88,36 @@ perfectly consistent and optimize something terrible. Comprehension does not ent
 
 ---
 
-## 3. What was retired, and why it matters that you know
+## 3. The question that got reformulated
 
-The project spent years trying to prove UL is *real* — that meaning has exactly N primitives,
-forced by mathematics. **That effort failed, and the failure is itself the most valuable result.**
+An earlier direction sought to prove that meaning has a fixed number of primitives, forced by
+mathematics. **The result was that the question is underdetermined as posed** — and that finding
+redirected the work productively rather than ending it.
 
-- The central "Unique Grounding Theorem" was close to **circular**: semantic primitives were defined
-  with role-properties written to mirror geometric primitives already chosen, and the resulting
-  forced bijection was presented as proof of necessity.
-- **Zadrozny (1994)** proves bare compositionality is formally vacuous — for *any* meaning
-  assignment, a re-encoding exists making it compositional. So compositionality **cannot** determine
-  a primitive count without importing conventions from outside the mathematics.
-- Three blind, mutually isolated rederivations independently converged on ~2 base types and
-  independently concluded the count is not forced. None approached 4, 5, 6, or 13.
+- The argument offered for necessity turned out to be close to **circular**: semantic primitives were
+  defined with role-properties mirroring geometric primitives already chosen, and the resulting
+  bijection was then presented as proof.
+- **Zadrozny (1994)** shows bare compositionality is formally vacuous — for *any* meaning assignment,
+  a re-encoding exists making it compositional. Compositionality alone therefore cannot fix an
+  inventory. *(Note the scope: this is a microscopic-level result and says nothing about structure
+  emerging under coarse-graining. Reading it as a global impossibility is a documented error —
+  `RESEARCH-PROTOCOL.md`.)*
 
-**The question was not unproven. It was underdetermined as posed.** No amount of further derivation
-changes this. The primitive count is a **design choice**, and this repo now labels it as one.
+**What replaced it is sharper.** The primitives are strata of plane-curve curvature space, and
+candidate inventories are **generating sets, not bases** — so their cardinalities differ by
+presentation and carry no information about the object. *How many primitives* is a malformed
+question rather than an open one, which is a genuine advance over treating it as an unresolved
+dispute. See `research/what-is-actually-provable-2026-08.md`.
 
-What survives is smaller and much harder to knock over: compositional generativity is real and
-threshold-gated; a convergent operational core (predication, negation, quantification) shows up
-independently in Greek and Indian logic; and 100+ writing systems converge on shared contour
-statistics matching natural-scene structure (Changizi et al. 2006) — which is the strongest evidence
-in the project and grounds UWS in *perception*, not Platonism.
+Also standing: compositional generativity is real and threshold-gated; a convergent operational core
+(predication, negation, quantification) appears independently in Greek and Indian logic; and 100+
+writing systems converge on shared contour statistics matching natural-scene structure
+(Changizi et al. 2006) — the strongest empirical result here, grounding UWS in *perception* rather
+than Platonism.
 
 ---
 
-## 4. How to read a claim here
+## 4. The tiers
 
 Every substantive claim is registered in **`claims.yaml`** with a tier. Trust the tier, not the prose.
 
@@ -126,12 +129,12 @@ Every substantive claim is registered in **`claims.yaml`** with a tier. Trust th
 | `DESIGN-CHOICE` | **A decision, not a discovery** | Rationale + alternatives |
 | `RETIRED` | Withdrawn | What superseded it |
 
-`DESIGN-CHOICE` is the tier this project most needed and never had. Having no word for *decision* is
-exactly what pushed decisions to be reported as discoveries. Very little is `VERIFIED`. That is the
-honest picture, not a gap in the bookkeeping.
+`DESIGN-CHOICE` carries weight here: without a word for *decision*, decisions get reported as
+discoveries. Very little is `VERIFIED` — that is the accurate picture of a project at this stage,
+not a gap in the bookkeeping.
 
 **Directory tiers:** `spec/` = what exists (currently empty, deliberately) · `design/` = intended,
-not built · `research/` = open questions, speculation allowed but labelled · `archive/` = dead.
+not built · `research/` = open questions, speculation allowed but labelled.
 
 ---
 

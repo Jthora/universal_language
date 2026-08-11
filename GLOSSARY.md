@@ -104,7 +104,7 @@ Never write bare "invariant" in this repo. Say which one.
 
 ## Retired terms
 
-Do not use these as live claims. They appear only in `archive/` and in historical discussion.
+Do not use these as live claims. They survive only in git history and in historical discussion.
 
 | Term | Status |
 |---|---|

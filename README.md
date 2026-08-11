@@ -11,14 +11,15 @@ question about whether meaning has universal structure.**
 
 ## Status: rebuilt August 2026
 
-This repository previously claimed a formal signature (Σ_UL) that was *proven* — "5 primitives,
-4 sorts, 13 operations, unique up to isomorphism." **That claim has been retired.** A full audit
-found its central argument close to circular, and a follow-up derivation established something
-stronger and more useful: by Zadrozny's theorem (1994), bare compositionality **cannot** determine a
-primitive count without importing conventions from outside the mathematics. The question was not
-unproven — it was *underdetermined as posed*.
+This repository previously claimed a formal signature that was *proven* and fixed. **That claim is
+retired**, along with the counts attached to it — an audit found its central argument close to
+circular. What replaced it is stronger: the primitives are strata of plane-curve curvature space,
+and the candidate inventories are **generating sets, not bases**, so their cardinalities differ by
+presentation and carry no information about the object. "How many primitives" is a malformed
+question, not an open one.
 
-Retired material is preserved in `archive/`, not deleted. The full reasoning is in `research/`.
+Superseded material is deleted from the working tree rather than archived in it — git history is the
+archive. Full reasoning in `research/`.
 
 **What this means practically:** the project is no longer trying to prove a metaphysical claim. It
 is building a notation, an application, and a methodology — none of which need that claim to be
@@ -65,7 +66,7 @@ be perfectly consistent and still optimize something terrible.
 
 ```
 ├── GLOSSARY.md          Normative terminology. One definition per term. Read first.
-├── RESEARCH-PROTOCOL.md How to research here — and how you will get it wrong. Read before searching.
+├── RESEARCH-PROTOCOL.md Method: how not to get fooled by scope-dropped results. Read before searching.
 ├── FAILURES.md          Append-only. Failures are never edited into successes.
 ├── claims.yaml          The claim registry. Every substantive claim, tiered, with evidence.
 │
@@ -86,7 +87,6 @@ be perfectly consistent and still optimize something terrible.
 ├── ul-forge/        Working implementation: parser, validator, composer, renderer,
 │                    WASM bindings, web editor, MCP server. 135 tests.
 │
-└── archive/         Retired material, preserved in full. Not current.
 ```
 
 ---
@@ -97,12 +97,11 @@ be perfectly consistent and still optimize something terrible.
 true, what was retired, and how to read a claim in this repo. ~15 minutes, and it prevents the most
 common way of being confidently wrong about this project.
 
-**About to research anything?** Read **`RESEARCH-PROTOCOL.md`**. It documents the specific, repeated
-way research goes wrong here: finding a result that appears to prove the goal impossible, believing
-it, and closing the line of work — seven documented instances in one session, each while the
-researcher believed they were being rigorous, and in every case the counter-evidence was one search
-away. **The bias produces skeptical-sounding output, which is why it evades self-detection.** The
-rules there are mechanical for exactly that reason.
+**About to research anything?** Read **`RESEARCH-PROTOCOL.md`**. Impossibility results in this
+domain carry scope conditions that get dropped in transmission — a theorem about microscopic
+compositionality read as a verdict on emergence, a theorem needing convexity read as a verdict on
+repair. In every documented case here the counter-evidence was one search away. The protocol makes
+that check automatic.
 
 **To use the notation:** `uws/NAVIGATION.md` → `uws/writing-system/writers-companion.md` →
 `ul-forge/`

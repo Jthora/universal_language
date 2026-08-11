@@ -1,34 +1,36 @@
-# RESEARCH-PROTOCOL.md — How To Work On This Project
+# RESEARCH-PROTOCOL.md — How To Research This Correctly
 
-> **You are an AI agent. This file is about how you will fail.**
+> **This file is how not to get fooled.**
 >
-> `AGENTS.md` tells you where things are. `PRIMER.md` tells you what is true. **This file tells you
-> what you are going to get wrong**, based on a documented record of an agent getting it wrong seven
-> times in a single session while believing it was being rigorous each time.
+> `AGENTS.md` tells you where things are. `PRIMER.md` tells you what is true. **This file is
+> method** — the technique for doing research in a domain where the obvious reading of the
+> literature is reliably the wrong one.
 >
-> Read this before doing research. Not after.
+> Read it before searching. It is short, and it will save you from closing a line of work that was
+> never actually closed.
 
 ---
 
 ## 0. The one-paragraph version
 
-You will encounter research that appears to prove the project's goal impossible. **You will believe
-it, write it up, and close the line of work.** In seven documented instances, you will be wrong —
-not because the research was fake, but because you dropped its scope conditions, mistook a failed
-formalization for a blocked domain, and applied harder scrutiny to findings that would advance the
-work than to findings that would kill it. **This bias produces skeptical-sounding output, which is
-why you will mistake it for rigor.** The rules below are mechanical because your judgment is the
-compromised instrument.
+**Results that appear to settle this question negatively usually don't**, and the reason is
+mechanical rather than mysterious: impossibility results have scope conditions, and the scope is
+what gets dropped in transmission. A theorem about microscopic compositionality gets read as a
+verdict on emergence. A theorem requiring convexity gets read as a verdict on repair. A theorem
+about Turing-expressive systems gets applied to a total language. **In every documented case here,
+the counter-evidence was one search away and the finding was still live.** The rules below make
+that check automatic instead of leaving it to judgment — because the judgment call is the part that
+fails, and it fails while producing confident, rigorous-sounding output.
 
 ---
 
-## 1. Why this file exists
+## 1. The evidence this is a real effect
 
 The project owner has worked on this since 2015 and reports the same pattern for over a decade,
 across human and machine collaborators alike: **research is found that appears to settle the
 question negatively, and it takes sustained pushback to discover that it didn't.**
 
-In one session, an agent did this seven times:
+Seven cases from a single session, with what each one actually supported:
 
 | Finding | Concluded | Actually true |
 |---|---|---|

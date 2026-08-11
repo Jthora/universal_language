@@ -5,27 +5,18 @@
 ---
 
 > **Read `PRIMER.md` first.** This file is *navigation* — where things are. `PRIMER.md` is
-> *comprehension* — what is true, what was retired, and the four hazards (archive contamination,
-> fiction/engineering boundary, terminology collisions, and the prohibition on repairing failures).
-> Navigating without comprehending is how retired claims get repeated as current.
+> *comprehension* — what is true and how to read a claim here.
 >
-> **Then read `RESEARCH-PROTOCOL.md` before doing any research.** That file is *method* — how you
-> are going to get this wrong. It documents seven instances of an agent finding research that
-> appeared to prove the project impossible, believing it, and closing the line of work — while
-> believing it was being rigorous each time. **The bias produces skeptical-sounding output, which is
-> why it evades self-detection.** Its rules are mechanical because judgment is the compromised
-> instrument. Non-optional if you intend to search the literature.
+> **Then read `RESEARCH-PROTOCOL.md` before searching the literature.** That file is *method*:
+> results that look like they settle this question negatively usually have scope conditions that
+> get dropped in transmission, and it gives you the check that catches it.
 
 ## TL;DR for Agents
 
-**As of 2026-08-01, this repo's earlier claims of proof have been retired.** This file previously
-asserted that "Universal Language" (Σ_UL: 5 primitives, 4 sorts, 13 operations, 23 theorems) was
-"unique up to isomorphism" and mathematically forced. A direct audit
-(`research/wiki-comparison-2026-08.md`) found the central proof ("Unique Grounding
-Theorem") close to circular, and a from-scratch minimality analysis gives a different, smaller
-answer (2 base types under standard model theory) than the claimed counts. **Do not cite the old
-claims as established.** The retired material is preserved at `archive/superseded-2026-08/` for
-historical reference only.
+**This repo's earlier claims of mathematical necessity have been retired**, along with the fixed
+counts that went with them — those were components of a retired signature, and no count of
+primitives, sorts, or operations is a claim of this project. Superseded material has been deleted
+from the working tree; git history is the archive.
 
 What actually exists here now, in two parts:
 
@@ -54,7 +45,7 @@ What actually exists here now, in two parts:
 |------|---------|--------------|
 | `uws/design-rationale.md` | UWS design rationale (reframed, no longer a proof claim) | Read to understand the notation's design |
 | `uws/writing-system/writing-system.md` | Complete reading/writing specification | Learn to read and write the notation |
-| `uws/lexicon/lexicon.md` | 42 canonical definitions | Reference for core notation terms |
+| `uws/lexicon/lexicon.md` | Canonical definitions | Reference for core notation terms |
 | `ul-forge/` | Software implementation | Use for parsing/rendering/composing |
 
 ### Priority 3 — Contribute to the Emergence Investigation
@@ -67,34 +58,21 @@ What actually exists here now, in two parts:
 ### Priority 4 — Historical Record (not current status)
 | Path | Content |
 |------|---------|
-| `archive/superseded-2026-08/` | Full original text of everything retired in the August 2026 split |
 | `research/legacy-findings.md`–`pass3` | Prior self-audit trail — useful as process history, not as current claims |
 | `whitepaper/` | Original whitepaper, already self-labeled historical |
 
 ---
 
-## Notation Signature (Design Choice, Not Proven Necessity)
+## What the implementation contains
 
-```
-NOTATION Σ (Universal Writing System)
+The Rust crate exposes a `Sort` enum and a set of `Gir -> Gir` composer constructors. **Read them
+from the source** — `ul-forge/crates/ul-core/src/types/sort.rs` and `composer.rs` — rather than from
+any count written in prose.
 
-SORTS: Entity (e), Relation (r), Modifier (m), Assertion (a)
-  — a design choice for this notation. A from-scratch minimality analysis
-  (research/emergence-investigation/PLAN.md, Phase 3) finds the actual minimal
-  answer under standard model theory is 2 base types (Montague's e, t) — these 4
-  sorts are a flattening choice for drawability, not a discovered constant.
-
-OPERATIONS (13, as implemented in ul-forge/):
-  predicate, modify_entity, modify_relation, negate, conjoin, disjoin,
-  embed, abstract, compose, invert, quantify, bind, modify_assertion
-
-GEOMETRIC PRIMITIVES (5, as drawn in the notation):
-  Point, Line, Angle, Curve, Enclosure
-
-STATUS: This is a notation specification. It is not a proof that meaning
-necessarily has this structure. See research/emergence-investigation/
-for the open question of what, if anything, about this is actually forced.
-```
+Those are facts about code and are load-bearing for nothing. An inventory of operations needs a
+domain before it means anything, and fixing that domain is open conceptual work. **Ask "operations
+*of what*?" before repeating any number.** See `claims.yaml#IMPL-COMPOSER-CONSTRUCTORS`,
+`#IMPL-SORT-ENUM`.
 
 ---
 
@@ -127,11 +105,12 @@ last_updated: "2026-08-01"
 
 # Universal Writing System (notation — design choice, not proven necessity)
 notation_name: UWS
-notation_sorts: [entity, relation, modifier, assertion]
-notation_operations: 13
-geometric_primitives: [point, line, angle, curve, enclosure]
-proof_status: retired_2026-08 — see research/wiki-comparison-2026-08.md
-minimality_status: superseded — from-scratch analysis finds 2 base types (Montague e,t) sufficient
+# Counts are deliberately NOT published here. Primitive/sort/operation inventories are
+# properties of a presentation, not of the notation, and prior fixed counts are retired.
+# Read the source of truth: ul-forge/crates/ul-core/src/ and claims.yaml.
+notation_sorts: see ul-forge/crates/ul-core/src/types/sort.rs
+notation_operations: see ul-forge/crates/ul-core/src/composer.rs
+proof_status: retired_2026-08
 
 # Emergence Investigation (open question, not settled)
 investigation_plan: research/emergence-investigation/PLAN.md
@@ -144,7 +123,6 @@ entry_points:
   human: README.md
   ai_agent: AGENTS.md
   investigation: research/emergence-investigation/PLAN.md
-  archive: archive/superseded-2026-08/
 
 # Provenance
 license: CC0-1.0
