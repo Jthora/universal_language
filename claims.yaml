@@ -1102,3 +1102,67 @@ claims:
       CONSEQUENCE FOR THE GEOMETRIC PROGRAM: demoted to "symmetry clue" under the emergent-
       universality reframe, it returns here as the TRUST ANCHOR — a load-bearing engineering role,
       and a different one from its retired role as foundation.
+
+  # ─── Research methodology under an untrusted literature (added 2026-08) ─────
+
+  - id: EVIDENCE-VERIFIABILITY-RANKING
+    statement: >
+      Evidence is ranked by how much trust it requires, not by citation weight; no foundational
+      claim may rest on a single citation read via summary.
+    tier: DESIGN-CHOICE
+    rationale: research/source-independence-protocol-2026-08.md
+    alternatives_considered:
+      - "rank by citation count / journal prestige (rejected: exactly the axis a corrupted or biased literature controls)"
+      - "accept literature consensus as baseline (rejected: consensus can drift or be pushed — the IPK pathology applied to research)"
+    notes: >
+      Tiers: (1) proof we can check ourselves — source-independent by construction; (2) primary
+      source read directly; (3) convergence across mutually hostile or non-contacting traditions —
+      no single actor seeds all of them; (4) reproduction we ran ourselves; (5) single citation via
+      summary, which may NOT be load-bearing. Orthogonal to the existing claims.yaml tiers: those
+      rank how well established a claim is, this ranks how much trust its evidence requires.
+      STRUCTURAL NOTE: this is the same move as DRIFT-MUST-BE-ABSOLUTE-NOT-RELATIVE, applied to
+      research rather than to representations. Anchor to what you can verify yourself. A theorem
+      does not care who funded it — Gentzen's proof can be checked line by line without trusting
+      Gentzen, the journal, or the century. Mathematics is the only evidence whose source is
+      irrelevant because verification is available to anyone who does the work.
+      COST, honestly: tier-1/2 evidence is slow. Apply to load-bearing claims only or it consumes
+      the project. And the research TCB never reaches zero — the goal is small, explicit, and
+      mathematical.
+
+  - id: LOOP-ATTRIBUTION-IS-INTERNAL-SO-FAR
+    statement: >
+      The recurring "found proof it's impossible" loop is attributable to internal asymmetric
+      scrutiny rather than to literature corruption, on all seven documented instances.
+    tier: ARGUED
+    evidence: research/source-independence-protocol-2026-08.md
+    notes: >
+      DISCRIMINATOR: if the literature were seeded, counter-evidence should be systematically hard
+      to find — obscure, low-quality, poorly indexed, or absent. If the loop is internal bias,
+      counter-evidence sits in plain sight and simply was not sought. On all seven instances
+      (F-017) counter-evidence was trivially findable with a single search: Christiansen & Chater is
+      in Behavioral and Brain Sciences and heavily cited; AGM/Katsuno-Mendelzon is textbook
+      belief revision; Landau theory is undergraduate physics.
+      SCOPE — R2 applies to this claim as much as to any other: this bears on SEVEN DATA POINTS. It
+      does not test whether any literature is corrupted elsewhere or at levels these questions do
+      not reach. Do not cite it as a general refutation of the corruption hypothesis.
+      Instrumented going forward by the S7 logging rule, so attribution accumulates evidence rather
+      than remaining a standoff.
+
+  - id: CORRUPTION-HYPOTHESIS-MUST-STAY-FALSIFIABLE
+    statement: >
+      Per-negative logging of whether counter-evidence was easy or hard to find is required for the
+      corruption hypothesis to function as a hypothesis rather than as an unfalsifiable frame.
+    tier: DESIGN-CHOICE
+    rationale: research/source-independence-protocol-2026-08.md
+    alternatives_considered:
+      - "treat absence of supporting research as evidence of suppression (rejected: unfalsifiable, and absences are overwhelmingly explained by nobody having cared)"
+      - "ignore the possibility entirely (rejected: literature corruption is documented at smaller scales — industry-funded research, trial suppression, publication bias, the replication crisis)"
+    notes: >
+      A corruption hypothesis that explains away every disconfirming finding as planted is
+      unfalsifiable BY CONSTRUCTION — structurally identical to the D2 failure this project already
+      documented, where theory was patched after each disconfirmation until it scored 100%. The
+      same discipline that protects against internal bias protects against this. Making it
+      measurable keeps it a hypothesis.
+      Corresponding discipline on conspicuous absences (S5): an unrun experiment is a WORK ITEM,
+      never evidence. Log it, then run it — which converts speculation into tier-4 evidence
+      regardless of why the gap existed.
