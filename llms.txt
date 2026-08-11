@@ -26,6 +26,11 @@ Two separate things:
    (`docs/planning/emergence-investigation/PLAN.md`) into whether any mind-independent universal
    semantic structure is real. Not assumed true or false; currently in progress.
 
+## Start Here
+
+- PRIMER.md: **Read first.** Full comprehension document — the four-layer stack, what was retired
+  and why, how to read a claim, and four specific hazards that cause readers to absorb false claims.
+
 ## Key Documents
 
 - README.md: Entry point and current status

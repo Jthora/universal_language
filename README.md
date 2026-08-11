@@ -92,6 +92,10 @@ be perfectly consistent and still optimize something terrible.
 
 ## Where to start
 
+**New here — human or AI?** Read **`PRIMER.md`** first. It is the comprehension document: what is
+true, what was retired, and how to read a claim in this repo. ~15 minutes, and it prevents the most
+common way of being confidently wrong about this project.
+
 **To use the notation:** `uws/NAVIGATION.md` → `uws/writing-system/writers-companion.md` →
 `ul-forge/`
 

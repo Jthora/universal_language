@@ -4,6 +4,11 @@
 
 ---
 
+> **Read `PRIMER.md` first.** This file is *navigation* — where things are. `PRIMER.md` is
+> *comprehension* — what is true, what was retired, and the four hazards (archive contamination,
+> fiction/engineering boundary, terminology collisions, and the prohibition on repairing failures).
+> Navigating without comprehending is how retired claims get repeated as current.
+
 ## TL;DR for Agents
 
 **As of 2026-08-01, this repo's earlier claims of proof have been retired.** This file previously
