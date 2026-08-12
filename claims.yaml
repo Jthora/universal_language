@@ -943,6 +943,12 @@ claims:
     rationale: research/framework/uws-as-instrument.md
     alternatives_considered: ["UWS as pure output/rendering of UL (rejected — loses the discovery mechanism)"]
     notes: >
+      CORROBORATED INDEPENDENTLY (Volley 1, note 045) from interstellar-message design, a field with
+      no connection to notation research: "Drake assumed that pictures would be self-evidently
+      interpretable, but we now know that our interpretation of pictures relies on cultural
+      assumptions that extraterrestrials might never imagine." The 2017 METI signal was deliberately
+      designed "to be interpretable by life-forms that do not have eyes" — the field has moved AWAY
+      from visual encoding, and UWS is visual.
       Only valid under a hard rule: failures are logged in FAILURES.md and never patched into
       successes. The D2 history (32%->100% via nine patches) is what happens without that rule.
 
@@ -2482,3 +2488,33 @@ claims:
       isomorphism invariant, so achiral detection can report 1 for a chiral map — understating
       ambiguity, safe for the bound, imprecise for the achiral count. A complete test needs canonical
       forms.
+
+  - id: CURE-MUST-BE-AUTOMATIC
+    statement: >
+      The Cure must operate without a human steward. The documented dominant failure of comparable
+      systems is not undetected drift but unperformed maintenance, so any design requiring human
+      action inherits that failure directly.
+    tier: ARGUED
+    evidence: research/notes/045-volley1-graveyards/README.md
+    priority: 0
+    notes: >
+      DERIVED FROM THE FAILURE RECORD (Volley 1, note 045), not from preference. "Without a steward
+      and regular reconciliation, ontology models become stale within two quarters" — "a governance
+      problem that has defeated a generation of master-data programs." "Common failures are cultural
+      and organizational rather than technical." "Once deployed, the ontology enters a maintenance
+      phase that is, in practice, no maintenance at all." Ontology drift is "the silent killer of
+      enterprise KG projects", and only 27% of organizations have knowledge graphs in production as
+      of late 2025.
+      WHAT THIS COSTS: the Cure is a detection-and-repair architecture, and the dominant documented
+      failure is that nobody maintains the system at all. A better detector does not help if no one
+      acts. We have been building for a sub-problem that is not the main one.
+      WHAT SURVIVES: "little visibility into drift" is cited as a contributing cause, which is
+      exactly what the Cure addresses.
+      CONSISTENCY CHECK: CURE-IS-COMPARATOR is compatible with full automation — a comparator against
+      a fixed anchor needs no steward. A human-in-the-loop repair step would NOT be, and must be
+      excluded by design rather than deferred.
+      SCOPE WARNING AIMED AT THIS PROJECT, recorded without softening: "scope creep, where teams
+      attempt to model all of reality before deployment, typically causes projects to fail after a
+      year."
+      OPEN AND NOW SHARPER: whether the Cure is worth building depends on whether full automation is
+      achievable. That is now the question rather than an assumption.
