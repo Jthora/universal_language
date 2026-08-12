@@ -121,3 +121,5 @@ Course corrections in **bold** — the load-bearing entries.
 | `009` | decision | Superseded material kept in-repo was being read as current | Deleted; git history is the archive. 224 → 49 files |
 | `010` | brainstorm | Which literature crawls would most change what we can see? | Eight rosters, falsification-first. **Open** |
 | `011` | **correction** | **Zadrozny had never had an adversarial search run against it.** Sound theorem, over-broad conclusion — its encoding does not preserve synonymy | Necessity route reopened; fixed-point table is canonical; F-019 |
+
+| `012` | cycle | **Roster A — adversarial search against our own load-bearing legs.** TopSim damaged; Newman survives as a constraint; Erlangen↔RG burden raised | `TOPSIM-INSUFFICIENT`, `NEWMAN-OBJECTION`; compositionality claim downgraded ARGUED→CONJECTURED |

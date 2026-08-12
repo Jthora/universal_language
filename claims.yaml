@@ -344,9 +344,16 @@ claims:
       non-derivability and wrong about what that implies.
 
   - id: COMPOSITIONALITY-CONVERGES-EMPIRICALLY
-    statement: "Independently trained agents converge on compositional structure, measurably and reliably."
-    tier: ARGUED
-    evidence: research/framework/emergent-universality.md
+    statement: >
+      Independently trained agents converge on consistent structure. The stronger quantitative form
+      — "near-perfect compositionality in 100% of seeds" — is DOWNGRADED, because its measure does
+      not establish compositionality.
+    tier: CONJECTURED
+    falsified_by: >
+      Under a measure that distinguishes derivational structure rather than string edit distance
+      (e.g. Concept-Best-Matching), independently trained agents show no convergence on shared
+      structure; or zero-shot cross-play between independently trained agents fails.
+    evidence: research/notes/012-roster-a-falsification/README.md
     notes: >
       Emergent communication research: scaling to 3+ agents, 100% of seeds converge to near-perfect
       compositionality; four agents reach 100% across 80 seeds versus 54% for two. Agents develop
@@ -356,10 +363,18 @@ claims:
       not convention: emergence, measured.
       Note that "position encodes property" is placement carrying meaning — UWS's spatial grammar,
       arising spontaneously and unprompted.
-      Established metrics exist off the shelf: TopSim (Spearman correlation between input-space and
-      message-space distances — effectively an empirical homomorphism condition), context
-      independence, positional and bag-of-symbols disentanglement, RSA, zero-shot generalization.
-      THE FIRST GENUINE EMPIRICAL EVIDENCE THE PROJECT HAS EVER HAD FOR ITS CORE CLAIM.
+      DOWNGRADED 2026-08 from ARGUED after adversarial search (note 012). TopSim carries the
+      headline result and is substantively criticized: it cannot distinguish different compositional
+      structures (fixed-order concatenation and free-ordered insertion/deletion can score
+      identically), it does not correlate with generalization in image settings, it does not
+      correlate with task success, and it provides no mapping from emergent atoms to concepts.
+      SURVIVES: that agents converge on SOMETHING consistent; and topographic organization —
+      position encoding property — which is a structural observation rather than a TopSim reading,
+      and remains the closest empirical analogue to UWS spatial grammar.
+      DOES NOT SURVIVE: the quantitative "100% of seeds, near-perfect compositionality" claim as
+      load-bearing, and TopSim as a candidate semantic order parameter.
+      NEXT: re-evaluate under Concept-Best-Matching (arXiv 2403.14705), and prefer zero-shot
+      cross-play compatibility, which is behavioural and sidesteps the metric problem entirely.
 
   - id: ERLANGEN-AS-COARSE-GRAINING
     statement: "The Erlangen hierarchy is the semantic coarse-graining flow, analogous to RG."
@@ -373,6 +388,14 @@ claims:
       larger groups, and RG fixed points show enhanced symmetry.
       Status: structural hypothesis, not established. RG is a flow in coupling space with fixed
       points; Erlangen is a lattice of groups. Analogous, not identical — but testable.
+      BURDEN RAISED 2026-08 (note 012). Adversarial search found that RG transfer outside physics is
+      not generally legitimate, and the named defect is precisely ours: "there is no precise or
+      canonical notion of what defines scale in data or models, and how coarse-graining should be
+      implemented," and "RG is commonly applied to physical systems with many symmetries, in
+      contrast to deep learning which is often applied to data with limited structure." Erlangen is
+      an actual group-theoretic candidate for the missing canonical coarse-graining, which is more
+      than the ML literature has — but this correspondence must now be DEMONSTRATED, not asserted as
+      a structural analogy.
       DO NOT CONFUSE WITH ERLANGEN-SURVIVAL-RANKING (ARGUED). That claim — which primitives survive
       which Erlangen level — is a computation from the subgroup relation and is settled. THIS claim
       — that the Erlangen lattice IS the semantic RG flow — is a separate and still-open analogy.
@@ -1281,3 +1304,55 @@ claims:
       the Landau G/H derivation of the order parameter are the same move from two directions. If a
       symmetry group generates the table, the group determines its contents. "Which symbol table"
       and "what are G and H" (ORDER-PARAMETER-FROM-SYMMETRY-BREAKING) are one question, not two.
+
+  # ─── Roster A falsification results (added 2026-08, note 012) ──────────────
+
+  - id: NEWMAN-OBJECTION
+    statement: >
+      Structural claims are vulnerable to Newman's objection — any domain of sufficient cardinality
+      admits a suitable structure — and the framework's answer must be that its privileged relations
+      are DERIVED by transformation group rather than stipulated.
+    tier: CONJECTURED
+    falsified_by: >
+      Show that the Erlangen group tower is itself an arbitrary choice with no principled
+      justification, in which case the group-theoretic privileging reduces to stipulation and the
+      framework inherits Newman's triviality in full.
+    evidence: research/notes/012-roster-a-falsification/README.md
+    priority: 0
+    scope: >
+      Newman's objection bites PURELY ABSTRACT structural claims — where the only content is that
+      some relation with given formal properties exists. Standard responses privilege "natural" or
+      "founded" relations (Melia & Saatsi 2006; Carnap's founded relations), which STIPULATE the
+      privileging. Do not cite the objection as defeating structural claims generally.
+    notes: >
+      SAME SHAPE AS ZADROZNY: "you can always construct it that way, therefore the claim is empty."
+      Two of the three deepest objections this project faces are that identical move, which is worth
+      noticing as a pattern — such arguments are defeated by supplying the constraint the
+      construction quietly drops, not by abandoning the claim.
+      OUR POSITION IS STRONGER THAN THE STANDARD RESPONSE: Erlangen privileges relations by
+      transformation group, and ERLANGEN-SURVIVAL-RANKING is a computation rather than an appeal to
+      experience. It is not free, however.
+      THE OPEN OBLIGATION, and currently the sharpest philosophical one on the framework: say why
+      the group tower is not itself arbitrary.
+
+  - id: TOPSIM-INSUFFICIENT
+    statement: >
+      Topographic similarity does not establish compositional structure and cannot serve as the
+      semantic order parameter.
+    tier: ARGUED
+    evidence: research/notes/012-roster-a-falsification/README.md
+    scope: >
+      MANDATORY BEFORE CITING (R2). These criticisms target TopSim AS A MEASURE. They do NOT show
+      that agent protocols fail to converge, nor that compositionality is absent — only that this
+      metric cannot establish it. Do not cite as "emergent communication shows no structure."
+    formalization: "TopSim as the operationalization of compositionality — not the convergence claim itself (R3)"
+    revival_condition: >
+      A measure that distinguishes derivational structure rather than string edit distance.
+      Concept-Best-Matching (arXiv 2403.14705) is a live candidate. Zero-shot cross-play
+      compatibility is preferable still, being behavioural and metric-independent.
+    refutation_tier: "ARGUED — multiple independent papers, consistent finding"
+    notes: >
+      Steelman before the kill (R6): TopSim would be adequate if message-space edit distance
+      reliably tracked semantic composition. It does not — different derivations can yield identical
+      edit-distance profiles, so fixed-order concatenation and free-ordered insertion/deletion score
+      the same.

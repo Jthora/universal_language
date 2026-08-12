@@ -206,8 +206,16 @@ problem identically: **anchor to what you can verify yourself.**
 
 ## 10. Reconstruction — what to build, in dependency order
 
-**The honest headline: 2 of 67 claims are `VERIFIED`. Almost everything upstream is provable and
+**The honest headline: 2 of 71 claims are `VERIFIED`. Almost everything upstream is provable and
 almost nothing has been proven.** That gap *is* the reconstruction.
+
+**Updated after note `012` (Roster A).** Adversarial search damaged the empirical leg: TopSim —
+which carries the "100% of seeds converge to near-perfect compositionality" headline — does not
+establish compositional structure, so that claim is downgraded to CONJECTURED. Two consequences.
+The order parameter must be **derived** from `G/H` rather than selected from candidate metrics,
+which was already the plan and is now the only route. And **Newman's objection** stands as the
+sharpest open obligation: we must say why the Erlangen group tower is not itself arbitrary,
+otherwise the privileging is stipulation and the structural claim inherits Newman's triviality.
 
 ### Tier 1 — Formalize what is already derivable
 1. **κ-stratification** — formalize the partition lattice; derive the known sets and the collapse
