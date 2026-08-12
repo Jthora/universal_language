@@ -506,3 +506,33 @@ suspect too.** F-006 assumed the documented law was correct and the code wrong, 
 which one the framework supported. That default is wrong roughly half the time by construction.
 **Standing consequence:** any notation law presupposing DNE or excluded middle must be re-derived or
 retired. `NEG-INVOLUTION` was the first found; the rest need an audit.
+
+---
+
+## F-023 — an impossibility theorem was imported without checking its preconditions
+**Date:** 2026-08-01
+**What was recorded (F-016, note 006):** that **Rice's theorem** bounds `SEMANTIC-EQUALITY` from
+above, that the claim's *"own stated falsifier was already met and nobody had noticed,"* and that
+abstract interpretation with infinitely many false positives was therefore **forced**.
+**What the R7 sweep found:** Rice concerns *"any nontrivial **extensional** property of **partial
+computable functions**"* — *"the extensional content of **programs**."* And explicitly: *"intensional,
+or **syntactic**, properties of program codes are **decidable** precisely because they concern the
+program's structure rather than its behavior."*
+**GIR is a typed graph, not a program.** Unless GIR expressions denote partial computable functions,
+**Rice does not apply**, and structural properties of it are decidable *because* they are structural.
+**What this does not show:** that semantic equality is decidable. Only that **Rice never established
+that it wasn't.** Any undecidability must come from the semantics actually assigned.
+**Consequences:** abstract interpretation is a design choice rather than a requirement; the
+"infinitely many false positives" cost was inherited from the same misapplication; and on the
+acyclic, strongly-normalizing core, equality-by-normal-form may simply work — the Knuth-Bendix plan
+that predated invoking Rice. **The real constraint was always confluence (Plump), which the same
+sweep separately confirmed.**
+**The generalizable failure:** F-016 was itself about *failing to look for obstruction theorems*.
+Having found one, I applied it without checking that its preconditions held. **Finding the right
+theorem and applying it to the right object are two separate acts of diligence**, and enthusiasm for
+the first substituted for the second. This is T8 — check the target is inside the scope — failing on
+a theorem I had just introduced.
+**Scorecard from the sweep, which is the argument for R7 being permanent:** of nine load-bearing
+negatives, **five were over-broad as recorded** — Zadrozny, TopSim, the dependency test, Rice, and
+double-negation elimination. Two held with refinements (Löb, Plump), one was inverted into a
+prediction (Evans & Levinson), one stands (Newman).

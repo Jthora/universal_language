@@ -57,11 +57,14 @@ exactly what happened to Σ_UL.
 
 ## Phase 1 — Clear standing debt
 
+**STATUS: CLOSED 2026-08-01.** All three items done — notes `019` (D2), `020` (A3), `021` (D1).
+Five of nine load-bearing negatives were over-broad as recorded.
+
 | Item | Output tier | Cost |
 |---|---|---|
 | ~~**D2** Read *Drawing with Strangers* + SEP on Zadrozny~~ **DONE** — note `019` | ARGUED (narrowed) | 2 fetches |
 | ~~**A3** Intuitionistic-logic coherence check~~ **DONE** — note `020` | DESIGN-CHOICE + a lead | 2 searches |
-| **D1** R7 sweep — adversarial search on every cited negative | varies | ~10–20 searches |
+| ~~**D1** R7 sweep~~ **DONE** — note `021` | varies | 3 unchecked negatives, all three changed |
 
 **D2 is a standing S1 violation:** two priority-0 claims rest on summaries. One is our best empirical
 result, one reopens the necessity route.

@@ -225,11 +225,13 @@ claims:
       equality by normal-form comparison. BLOCKED on IR-NORMALIZATION-STRATEGY: that machinery
       applies cleanly to terms, and confluence is undecidable for general graph rewriting.
       See research/engineering/prior-art.md.
-      BOUNDED FROM ABOVE 2026-08 by RICE-BOUNDS-SEMANTIC-EQUALITY: the falsified_by condition below
-      is already MET for Turing-expressive representations — Rice's theorem settles it negatively.
-      This claim survives only in the restricted regime IR-NORMALIZATION-STRATEGY carves out (acyclic,
-      strongly normalizing, non-Turing-complete), and must be read as scoped to it. Outside that
-      regime the correct target is sound approximation via abstract interpretation, not decision.
+      UN-BOUNDED 2026-08 (note 021). This was previously recorded as already falsified by Rice's
+      theorem. That was an unchecked import: Rice applies to extensional properties of programs, and
+      GIR is a data structure — see RICE-BOUNDS-SEMANTIC-EQUALITY and F-023. The claim is OPEN
+      again. The genuine constraint is confluence of the rewrite system (Plump), which
+      IR-NORMALIZATION-STRATEGY already addresses by restricting to acyclic term graphs.
+      SEE ALSO SEMANTIC-APARTNESS (note 020): constructively, apartness rather than equality may be
+      the right primitive to pursue first.
     priority: 1
     blocked_by: [IR-NORMALIZATION-STRATEGY]
     bounded_by: [RICE-BOUNDS-SEMANTIC-EQUALITY]
@@ -290,6 +292,14 @@ claims:
       - "DPO with interfaces (viable; equivalent effect, more invasive reframing)"
       - "abandon normalization (rejected: loses all algebraic law checking)"
     notes: >
+      CONFIRMED by the R7 sweep (note 021): "in contrast to term graph rewriting, confluence of
+      terminating graph rewrite systems turns out to be undecidable in general... but is decidable
+      under the termination assumption for term graph rewriting specifically", and "for DPOI
+      rewriting the Knuth-Bendix property is saved." Both recorded escapes hold.
+      REFINEMENT TO CARRY INTO IMPLEMENTATION: joinability alone is NOT sufficient in the graph
+      setting. "The mere existence of common reducts for all critical pairs does not imply local
+      confluence" — the Critical Pair Lemma requires joining derivations that are COMPATIBLE
+      (strong joinability), a stricter condition than the term-rewriting version.
       Decidability boundary is CYCLES, not graphs. Term graphs / DAGs retain the Critical Pair Lemma
       and a decision procedure for confluence given termination; general cyclic DPO does not. GIR is
       currently cyclic by deliberate design (self-reference), which is exactly what placed it in the
@@ -1148,8 +1158,21 @@ claims:
     evidence: research/engineering/obstructions.md
     priority: 0
     notes: >
-      Rice's theorem: all non-trivial semantic properties of programs are undecidable. Bounds
-      SEMANTIC-EQUALITY from above — not an open question at that generality. The workaround is
+      SCOPE CORRECTED 2026-08 by the R7 sweep (note 021). Rice concerns "any nontrivial EXTENSIONAL
+      property of PARTIAL COMPUTABLE FUNCTIONS", i.e. "the extensional content of programs, namely
+      the partial recursive functions that programs compute." And explicitly: "intensional, or
+      syntactic, properties of program codes are DECIDABLE precisely because they concern the
+      program's structure rather than its behavior."
+      GIR IS A TYPED GRAPH, NOT A PROGRAM. Unless GIR expressions denote partial computable
+      functions, Rice does not apply. The earlier statement — that Rice bounds SEMANTIC-EQUALITY
+      from above and that its falsifier was already met — was an unchecked import. See F-023.
+      WHAT THIS DOES NOT SHOW: that semantic equality is decidable. Only that Rice never established
+      it was not. Undecidability would have to come from the semantics actually assigned.
+      CONSEQUENCE FOR PHASE 5: abstract interpretation is a DESIGN CHOICE, not a requirement forced
+      by Rice, and the "infinitely many false positives" cost was inherited from the same
+      misapplication. On the acyclic strongly-normalizing core, equality-by-normal-form may simply
+      work — the Knuth-Bendix plan that predated invoking Rice. The real constraint is confluence
+      (Plump), which is separately confirmed. The workaround is
       itself theorem-backed: abstract interpretation gives sound approximation, and Galois
       connections yield a CALCULATIONAL construction where abstraction . concrete-op .
       concretization is provably the best possible approximation. So the semantic checker has a
