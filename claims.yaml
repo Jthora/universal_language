@@ -168,6 +168,7 @@ claims:
       wrong. The failing test was testing the wrong thing.
 
   - id: NOTATION-LOGIC-IS-INTUITIONISTIC
+    scope_reviewed: [NEG-INVOLUTION, CONSTRUCTIVE-PRIORITY-OF-POINT]   # accounted for — this claim supersedes NEG-INVOLUTION and rests deliberately on the constructive framing
     statement: >
       The notation's logic is intuitionistic, not classical: double-negation elimination and excluded
       middle are not available as universal laws.
@@ -361,6 +362,7 @@ claims:
       is how Euler -> Venn -> Peirce -> Shin actually progressed.
 
   - id: IR-NORMALIZATION-STRATEGY-OLD
+    scope_reviewed: [NEG-INVOLUTION]   # no effect — historical reference only
     statement: "GIR admits a decidable notion of structural/semantic equivalence via normalization (unrestricted)."
     tier: RETIRED
     superseded_by: research/engineering/ir-decision.md
@@ -386,7 +388,6 @@ claims:
       (the existing graph-with-tree-spine architecture suggests this was half-intuited);
       (b) adopt DPO-with-Interfaces, where confluence IS decidable; (c) abandon normalization and
       decide equivalence another way. Nothing downstream should be built before this is chosen.
-    priority: 0
     blocks: [SEMANTIC-EQUALITY, NEG-INVOLUTION]
 
   - id: UL-IS-EMERGENT-UNIVERSAL
@@ -521,7 +522,6 @@ claims:
       drift is a symptom; coupling asymmetry is the signal.
       Consistency machinery (TMS, invariants, ripple propagation) remains correct for REPAIRING
       known corruption, but is triage rather than the primary monitor.
-    priority: 0
 
   - id: EXTRACTION-CANNOT-REACH-RECIPROCAL
     statement: "Some content is inaccessible to one-directional extraction regardless of capability, because extraction is observation and reciprocity is intervention."
@@ -644,7 +644,6 @@ claims:
       a metric, a dataset and a baseline already attached.
       FIRST CONCRETE EMPIRICAL FOOTHOLD THE PROJECT HAS EVER HAD. Requires no UL claim, no notation,
       no metaphysics — only the consistency machinery.
-    priority: 0
 
   - id: CURE-ASSUMPTION-DERIVED
     statement: "The Cure requires an assumption/derived distinction and an entrenchment ordering; without them it cannot distinguish legitimate revision from corruption."
@@ -956,7 +955,6 @@ claims:
       species-specific. Chomskyan UG is the special case where the learner is a human brain.
     tier: ARGUED
     evidence: research/framework/cross-substrate-grammar.md
-    priority: 0
     notes: >
       Two established steps plus one extension. Step 1 (Christiansen & Chater, BBS 2008): universals
       are "emergent properties of how the brain learns, rather than genetically encoded principles";
@@ -1040,7 +1038,6 @@ claims:
       failure of invariance. These are distinct.
     tier: ARGUED
     evidence: research/notes/022-phase2-derivations/README.md
-    priority: 0
     notes: >
       DERIVED in note 022, having been asserted in prose since note 005. The derivation CORRECTED
       the framing: three of the six primitives are not regular C2 curves at all (Angle has a corner,
@@ -1108,7 +1105,6 @@ claims:
       projective level.
     tier: ARGUED
     evidence: research/framework/provable-geometry.md
-    priority: 0
     supersedes_tier_of: ERLANGEN-AS-COARSE-GRAINING
     notes: >
       DERIVED case by case in note 014, having previously been asserted in prose. Survival is
@@ -1132,12 +1128,12 @@ claims:
       artifact.
 
   - id: ENCLOSURE-IS-DISTINCTION
+    scope_reviewed: [NEG-INVOLUTION]   # accounted for — the DNE conflict is why the Spencer-Brown calculus half was withdrawn
     statement: >
       Enclosure, the topologically-surviving primitive, is the same object as the Layer 0
       distinction (Spencer-Brown's mark), via Jordan separation.
     tier: ARGUED
     evidence: research/framework/provable-geometry.md
-    priority: 0
     notes: >
       SPLIT IN NOTE 022. Two things had been bundled and only one survives.
       RETAINED — Jordan Curve Theorem: a simple closed curve separates the plane into exactly two
@@ -1206,7 +1202,6 @@ claims:
       strength; trust flows only toward strictly weaker reasoning systems.
     tier: ARGUED
     evidence: research/engineering/obstructions.md
-    priority: 0
     notes: >
       Lob's theorem: no system T at least as strong as PA proves (box phi -> phi) unless it proves
       phi outright. Lobian obstacle: an agent cannot trust its future self, and X can only trust the
@@ -1226,7 +1221,6 @@ claims:
       many false positives.
     tier: ARGUED
     evidence: research/engineering/obstructions.md
-    priority: 0
     notes: >
       SCOPE CORRECTED 2026-08 by the R7 sweep (note 021). Rice concerns "any nontrivial EXTENSIONAL
       property of PARTIAL COMPUTABLE FUNCTIONS", i.e. "the extensional content of programs, namely
@@ -1255,12 +1249,12 @@ claims:
       undecidability silently.
 
   - id: AGM-PREORDER-REPAIR
+    scope_reviewed: [CURE-REPAIR-DETERMINISM]   # accounted for — the metric-only scope is exactly what the preorder route avoids
     statement: >
       A rational repair operator is exactly one induced by a faithful preorder over interpretations;
       no metric, distance, or convexity is required.
     tier: ARGUED
     evidence: research/engineering/obstructions.md
-    priority: 0
     supersedes: CURE-REPAIR-DETERMINISM
     notes: >
       Katsuno & Mendelzon proved that the functions induced from faithful preorders are PRECISELY
@@ -1311,7 +1305,6 @@ claims:
       comparison function only, not the whole system.
     tier: ARGUED
     evidence: research/framework/external-anchor.md
-    priority: 0
     notes: >
       Lob applies to PROOF-BASED SELF-TRUST — a system reasoning about its own provability. "Is my
       representation self-consistent?" is self-referential and Lob bites. "Does my representation
@@ -1336,7 +1329,6 @@ claims:
       the Cure must measure against fixed invariants instead.
     tier: ARGUED
     evidence: research/framework/external-anchor.md
-    priority: 0
     notes: >
       Not an analogy — the identical engineering problem, already solved in metrology. The kilogram
       was defined by the IPK, a platinum-iridium artifact subject to mass drift from surface
@@ -1453,7 +1445,6 @@ claims:
       requires.
     tier: ARGUED
     evidence: research/notes/011-zadrozny-scope/README.md
-    priority: 0
     scope: >
       MANDATORY BEFORE CITING (R2). Zadrozny (1994) is mathematically sound but achieves
       compositionality by re-encoding meanings in a way that DOES NOT PRESERVE SYNONYMY RELATIONS.
@@ -1491,7 +1482,6 @@ claims:
       universal symbol table is the table at the fixed point.
     tier: ARGUED
     evidence: research/notes/011-zadrozny-scope/README.md
-    priority: 0
     notes: >
       CORRECTS an over-general statement. "There is no fixed universal symbol table" and
       ERLANGEN-SURVIVAL-RANKING ("Point and Enclosure survive to the topological level") cannot both
@@ -1531,7 +1521,6 @@ claims:
       justification, in which case the group-theoretic privileging reduces to stipulation and the
       framework inherits Newman's triviality in full.
     evidence: research/notes/012-roster-a-falsification/README.md
-    priority: 0
     scope: >
       Newman's objection bites PURELY ABSTRACT structural claims — where the only content is that
       some relation with given formal properties exists. Standard responses privilege "natural" or
@@ -1584,6 +1573,7 @@ claims:
   # ─── Roster G: emergent communication (added 2026-08, note 013) ────────────
 
   - id: SYMBOLIC-PROTOCOLS-FAIL-CROSSPLAY
+    scope_reviewed: [ICONIC-GROUNDING-ENABLES-CROSSPLAY]   # no effect — this claim rests on the zero-shot coordination literature, not on the sketching result
     statement: >
       Arbitrary symbolic protocols developed by independently trained agent populations are mutually
       unintelligible, because token permutation invariance leaves many equally valid equilibria.
@@ -1607,6 +1597,7 @@ claims:
       supply to escape.
 
   - id: ICONIC-GROUNDING-ENABLES-CROSSPLAY
+    scope_reviewed: [SYMBOLIC-PROTOCOLS-FAIL-CROSSPLAY]   # accounted for — this claim is the stated counter-case to that scope
     statement: >
       Within a fixed architecture and dataset, increasing population size raises cross-group
       intelligibility in a sketch-based channel, with correlational evidence that perceptual
@@ -1676,7 +1667,6 @@ claims:
       Euclid, unlike the definitional ordering.
     tier: ARGUED
     evidence: research/notes/016-constructive-priority/README.md
-    priority: 0
     scope: >
       Holds in the CONSTRUCTIVE framework. Does NOT hold axiomatically — Hilbert and Tarski's plane
       geometry take point and line as co-primitive — and is INVERTED in region-based/point-free
@@ -1710,7 +1700,6 @@ claims:
       depictable.
     tier: ARGUED
     evidence: research/notes/023-dimension-and-missing-primitives/README.md
-    priority: 0
     notes: >
       PROOF CASE: Coxeter-Dynkin diagrams. "A Coxeter polyhedron is FULLY DETERMINED by its Gram
       matrix, which can be conveniently described via a Coxeter diagram", and "every uniform polytope
@@ -1738,7 +1727,6 @@ claims:
       tangent-discontinuous cell, an intersection of two axes rather than a primitive of either.
     tier: ARGUED
     evidence: research/notes/024-junction-axis/README.md
-    priority: 0
     notes: >
       The three axes of KAPPA-STRATIFICATION — curvature, singularity, closure — are all properties
       of a SINGLE CURVE. A notation is marks meeting other marks. Axis 2 classifies corners on one
@@ -1767,6 +1755,7 @@ claims:
       are metric and die at affine with angle-magnitude.
 
   - id: FIXED-POINT-IS-COMBINATORIAL-MAP
+    scope_reviewed: [SEMANTIC-FORMALISMS-USE-LABELS-NOT-ORDER]   # MATERIAL — see the correction recorded in notes below
     statement: >
       The fixed point of the coarse-graining is the rotation system — the graph plus a cyclic
       ordering of branches at each vertex — not a small inventory of primitives. Separation and
@@ -1782,6 +1771,14 @@ claims:
       SECONDARY NOTATION — comprehension aid, not formal content. Calling this UL's fixed point
       requires an argument that is currently unsupported. See SEMANTIC-FORMALISMS-USE-LABELS-NOT-ORDER.
       (b) Note 032 — CONNECTED CONFIGURATIONS ONLY.
+      SCOPE (a) RE-WEIGHTED 2026-08-12 (notes 039). It rests on
+      SEMANTIC-FORMALISMS-USE-LABELS-NOT-ORDER, which note 038 narrowed from "independently developed
+      formalisms" (plural) to CONCEPTUAL GRAPHS ALONE, after the AMR evidence was found inadmissible.
+      WHAT STANDS: "not established as UL's fixed point" — that is absence of evidence and remains
+      true regardless, since nothing has established it either way.
+      WHAT DOES NOT: note 034's stronger reading, that this was "the first positive evidence the gap
+      may be structural". One formalism is not a survey. The gap is UNBUILT, which was already known;
+      the claim that it is likely STRUCTURAL is no longer supported at the strength recorded.
       (c) Note 035 — the map has a DEFENSIBLE role in UP, the bootstrapping layer, even though its
       UL role is doubtful: it minimizes the arbitrary convention two independent parties must share.
       See ROTATION-MINIMIZES-CONVENTION. UWS fixed point: established. UP optimum: argued. UL fixed
@@ -1822,13 +1819,13 @@ claims:
       about the notation as drawn.
 
   - id: TABLES-ARE-PROJECTIONS
+    scope_reviewed: [FIXED-POINT-IS-COMBINATORIAL-MAP]   # no effect — projections of the axis product are independent of connectivity, and this claim never asserted UL relevance
     statement: >
       A symbol table is a projection of the axis product onto a subset of axes. Symbols recur across
       tables because a cell projects into every table; n axes yield C(n,2) two-dimensional tables;
       and the number of live tables falls under coarse-graining to a single indexed family.
     tier: ARGUED
     evidence: research/notes/025-many-tables/README.md
-    priority: 0
     notes: >
       DERIVED, not observed. The classification of notes 022 and 024 is a product of four axes —
       curvature, singularity, closure, junction degree — so a primitive is a CELL in a
@@ -1869,13 +1866,13 @@ claims:
       such correspondences as this project's documented failure mode.
 
   - id: TWO-KINDS-OF-AXIS
+    scope_reviewed: [FIXED-POINT-IS-COMBINATORIAL-MAP, BINARY-AXES-ARE-HYPEROCTAHEDRAL]   # no effect — the shape/transformation distinction is independent of connectivity and of the polytope exclusion
     statement: >
       Table axes are of two categorically different kinds: shape axes, which are properties of a
       configuration, and transformation axes, which are elements of a group acting on it. The full
       structure is a G-set, and coarse-graining is quotienting by the group.
     tier: ARGUED
     evidence: research/notes/026-transformation-axes/README.md
-    priority: 0
     notes: >
       SHAPE AXES: curvature, singularity, closure, junction degree — what the mark IS.
       TRANSFORMATION AXES: orientation, mirroring, scale, translation — how the same mark is PLACED.
@@ -1896,12 +1893,12 @@ claims:
       the first time.
 
   - id: NONSTRETCHABILITY-BOUNDS-DRAWING
+    scope_reviewed: [FIXED-POINT-IS-COMBINATORIAL-MAP]   # no material effect — the combinatorial-vs-drawn gap holds regardless of connectivity
     statement: >
       There exist combinatorial configurations that no straight-line drawing realizes, so the
       combinatorial map is strictly more expressive than straightedge construction.
     tier: ARGUED
     evidence: research/notes/026-transformation-axes/README.md
-    priority: 0
     notes: >
       "The Pappus arrangement of 9 lines... is an arrangement of pseudolines which cannot be
       straightened while preserving their face structure — called NONSTRETCHABLE."
@@ -1923,7 +1920,6 @@ claims:
       spaces of a fixed combinatorics can be arbitrarily complex semialgebraic sets.
     tier: ARGUED
     evidence: research/notes/027-status-and-next-research/README.md
-    priority: 0
     notes: >
       TWO THEOREMS, characterizing the gap from both sides.
       NOT SURJECTIVE — nonstretchability (NONSTRETCHABILITY-BOUNDS-DRAWING): the Pappus arrangement
@@ -2000,6 +1996,7 @@ claims:
   # ─── Phase 4 decisions (added 2026-08, note 029) ───────────────────────────
 
   - id: REGIONS-ARE-FACE-UNIONS
+    scope_reviewed: [FIXED-POINT-IS-COMBINATORIAL-MAP]   # MATERIAL — see the correction recorded in notes below
     statement: >
       Spatial regions are unions of faces of the combinatorial map. RCC-8 is the relation vocabulary
       and is decidable by construction, because the region domain is a finite Boolean algebra.
@@ -2011,6 +2008,22 @@ claims:
       - "hand-rolled spatial predicates (rejected: RCC-8 is a standard vocabulary with known semantics; no reason to invent one)"
     priority: 0
     notes: >
+      CORRECTED 2026-08-12 (notes 039) — THE CONNECTIVITY LIMIT APPLIES AND WAS NOT CARRIED.
+      FIXED-POINT-IS-COMBINATORIAL-MAP is scoped to CONNECTED configurations: for a disconnected
+      plane graph the rotation system does not determine an embedding, because the NESTING of
+      components — which component lies inside which face of another — is not carried. Face tracing
+      then treats each component as embedded on its own sphere, returning four faces for two disjoint
+      triangles rather than the three they bound.
+      A NOTATION WITH MORE THAN ONE STROKE IS DISCONNECTED BY DEFAULT, so this is the normal case,
+      not an edge case.
+      EFFECT ON THIS CLAIM: decidability SURVIVES — a disconnected map still yields a finite face
+      set, hence a finite Boolean algebra, hence computable RCC-8. But the faces do not correspond to
+      the actual planar regions, so the RELATIONS COMPUTED OVER THEM ARE WRONG. Decidable and
+      incorrect is worse than undecidable, because nothing signals the failure.
+      THE FIX, and it is concrete: the IR must carry the NESTING RELATION between components in
+      addition to the rotation system. That is additional structure beyond the combinatorial map and
+      is exactly what CONNECTIVITY-AXIS-MISSING identifies as absent. This claim holds GIVEN that
+      data and not without it.
       RCC-8 primitive is a binary C(x,y), "x connects with y", over non-null regions, giving eight
       jointly exhaustive pairwise disjoint relations: DC, EC, PO, EQ, TPP, NTPP, TPPi, NTPPi.
       THE COMPLEXITY IS BAD IN GENERAL: consistency checking NP-complete, entailment co-NP-complete,
@@ -2090,7 +2103,6 @@ claims:
       distinction.
     tier: VERIFIED
     evidence: ul-forge/crates/ul-core/src/map.rs
-    priority: 0
     notes: >
       FIRST SUBSTANTIVE VERIFIED CLAIM IN THE PROJECT. The previous four are facts about file
       contents (enum variants, function counts); this one machine-checks a derived result.
@@ -2117,7 +2129,6 @@ claims:
       is unbounded and no finite polytope has an infinite axis.
     tier: ARGUED
     evidence: research/notes/031-junctions-and-the-octahedral-question/README.md
-    priority: 0
     scope: >
       HOLDS for the binary shape axes only. FAILS once junctions are included. Cite with the
       exclusion stated — the unconditional form is false.
@@ -2145,6 +2156,7 @@ claims:
       is CONDITIONAL and names its own obstruction rather than being a bare numerical match.
 
   - id: CONNECTIVITY-AXIS-MISSING
+    scope_reviewed: [FIXED-POINT-IS-COMBINATORIAL-MAP]   # already accounted for — this claim IS the connectivity limitation
     statement: >
       Connectivity — the number of components — is a topological axis absent from the classification,
       independent of degree sequence, and not recoverable from the combinatorial map for disconnected
@@ -2169,13 +2181,13 @@ claims:
       Erlangen hierarchy is for. That derivation is outstanding.
 
   - id: AXES-HAVE-DIFFERENT-TYPES
+    scope_reviewed: [BINARY-AXES-ARE-HYPEROCTAHEDRAL]   # accounted for — this claim explains the exclusion rather than inheriting it
     statement: >
       The classification axes are of four different types — binary, discrete-unbounded, continuous,
       and mixed — and the type determines whether an axis can sit in a finite grid and whether it
       survives coarse-graining.
     tier: ARGUED
     evidence: research/notes/033-axis-types-and-ul-focus/README.md
-    priority: 0
     notes: >
       TYPES: closure is genuinely BINARY (a curve closes or it does not, no partial closure);
       junction degree is DISCRETE UNBOUNDED (N); curvature is CONTINUOUS and infinite-dimensional
@@ -2198,7 +2210,6 @@ claims:
       or differential detail is microscopic and, by universality, cannot generalize.
     tier: ARGUED
     evidence: research/notes/033-axis-types-and-ul-focus/README.md
-    priority: 0
     notes: >
       THE PROBLEM AT ITS SHARPEST: if UL is a universality class then microscopic details do not
       determine the class — that is what universality means. So characterizing UWS's microscopic
@@ -2228,13 +2239,13 @@ claims:
       from note 010, still unrun.
 
   - id: SEMANTIC-FORMALISMS-USE-LABELS-NOT-ORDER
+    scope_reviewed: [DESSINS-PRECEDENT]   # no effect — dessins concern mathematical content, this claim concerns semantic content; the scopes are complementary
     statement: >
       Conceptual Graphs distinguish a vertex's edges by label rather than by cyclic position, and
       spatial arrangement in semantic diagrams is secondary notation. NARROWED from a claim about
       formalisms in general.
     tier: ARGUED
     evidence: research/notes/034-bridge-test/README.md
-    priority: 0
     scope: >
       Establishes that no other formalism CONVERGED on rotation systems. Does NOT establish that
       rotation systems are semantically empty — see the steelman below. Do not cite as showing
@@ -2274,6 +2285,7 @@ claims:
       Not proof, but the cheapest available check ran and did not go our way.
 
   - id: ROTATION-MINIMIZES-CONVENTION
+    scope_reviewed: [SYMBOLIC-PROTOCOLS-FAIL-CROSSPLAY]   # accounted for — the symbolic-only scope is precisely what makes rotation the contrasting case
     statement: >
       A rotation system breaks strictly less arbitrary symmetry than a label alphabet — Z/2
       (orientation) versus S_n — so it minimizes the shared prior two independent parties need to
@@ -2364,7 +2376,6 @@ claims:
       is the first kind; the UL question became the second at note 003.
     tier: ARGUED
     evidence: research/notes/037-the-universal-language-landscape/README.md
-    priority: 0
     notes: >
       KIND A, INVENTED NOTATION — build a system everyone could learn. Leibniz's characteristica
       universalis, Wilkins' Real Character, Dalgarno, Blissymbolics, Solresol, Esperanto, Lojban.
@@ -2410,7 +2421,6 @@ claims:
       instantiated and a caution about how much any derivation could ever pin down.
     tier: ARGUED
     evidence: research/notes/037-the-universal-language-landscape/README.md
-    priority: 0
     notes: >
       CONSTRAINED: "the probability to reach the same level of error minimization as in the standard
       genetic code by random permutation of codons is below 10^-6" — the one-in-a-million result. It

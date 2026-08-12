@@ -10,6 +10,7 @@ checks = [
   ['internal references resolve',    'check-links.rb'],
   ['no retired counts in the tree',  'check-retired-content.rb'],
   ['caveats travel with citations',  'check-caveats.rb'],
+  ['scope corrections propagate',    'check-propagation.rb'],
 ]
 
 failed = []

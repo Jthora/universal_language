@@ -1,345 +1,134 @@
 # STATE-OF-PLAY
 
-**What the research established, what it forces, and what reconstruction requires.**
-Written 2026-08-01, at the end of the prune. This is the input to rebuilding.
+**Written fresh 2026-08-12, replacing a patched version.** The previous one had been amended nine
+times against thirty-eight notes — a delta applied to a partial picture, which is how a framing error
+survived four notes (`FAILURES.md` F-027). This is a full restatement, not an amendment.
 
 ---
 
-## 1. The reframe everything else hangs off
+## 1. What we hold
 
-**UL is an emergent universality class** — not a derivable signature, not a convention.
+### The one structural result
 
-Three kinds of universality had been collapsed into two, and the missing one is where the answer
-lives:
+**Seven independent lines of work converged on the combinatorial map** — a graph plus a cyclic
+ordering of branches at each vertex. Coarse-graining the primitives, line arrangements, realization
+spaces, arithmetic geometry, the expressiveness question, spatial semantics, and the Cure's repair
+ordering all arrived at the same object. **None were aimed at it.**
+
+**That convergence is the strongest thing here.** What it *means* is scoped in §3.
+
+### Geometry — derived, not chosen
+
+- The primitives are **cells in a product of four axes**: curvature, singularity, closure, junction
+  degree. Not a list anyone picked.
+- **"How many primitives" is malformed**, not open. The collapse relations are theorems.
+- **Junction degree was a missing axis**, and it is the one the project's strongest empirical
+  evidence (Changizi — legibility, not semantic transparency) points at. `Angle` is degree-2 ∧
+  tangent-discontinuous; **degree-1 has no name.**
+- Axes are of **different types** — binary, discrete-unbounded, continuous. Only closure is binary.
+  Curvature is a *function space* with canonical integer invariants (Whitney–Graustein).
+- **Tables are projections** of the axis product; **transformation axes are group elements**, so
+  Erlangen *is* the quotient. That explains both the hyper-dimensional blow-up and its collapse.
+- **2D bounds iconicity, not encoding** — Coxeter diagrams determine arbitrary-dimensional polytopes
+  from a flat graph.
+
+### Obstructions, and why none are fatal
+
+| Theorem | What it forces |
+|---|---|
+| **Löb** | The Cure cannot verify its own repairs at equal strength → **comparator architecture** |
+| **Rice** | Does **not** apply to GIR — it concerns programs, not data structures. An unchecked import, corrected |
+| **Plump** | Confluence undecidable for cyclic rewriting → the acyclic term-graph core |
+| **AGM** | Rational repair needs a **preorder**, not a metric → the convexity blocker was a formalism artifact |
+
+### The Cure — specified, not blocked
+
+Every structural blocker moved. Architecture: **comparator, trust from the anchor, not self-proof.**
+Entrenchment ordering: **derived from the coarse-graining survival order**, not stipulated. Drift:
+**absolute, anchored to invariants** — the IPK fix. Signal: **coupling asymmetry**, not consistency.
+
+**It is now blocked on implementation, and on one live error — see §4.**
+
+### Method
+
+Twenty-nine recorded failures, twelve trap signatures, nine rules, **five machine checks**. Four of
+the last five protocol additions exist because *a correction was written down and had no force*.
+**Prose is not enforcement** is the most repeated lesson here.
+
+---
+
+## 2. The one number that matters
+
+**5 VERIFIED claims of 99. Four are facts about Rust files.**
+
+The fifth — `IMPL-COMBINATORIAL-MAP` — is the only substantive machine-checked result, and it made
+Jordan separation an executable test rather than an argued claim.
+
+**Everything else is ARGUED or DESIGN-CHOICE: good arguments, unverified.**
+
+---
+
+## 3. What is genuinely open
+
+**`meaning → map` does not exist.** `map → drawing → figure` is characterized by theorems (Mnëv,
+nonstretchability, Galois). **The top link is unbuilt**, and the bridge test (`034`) failed — no
+other semantic formalism converged on rotation systems.
+
+**That failure is weaker than first recorded.** Its evidence was narrowed to a single formalism after
+AMR was found inadmissible (English-only corpus, `research-register.md#D2-c`). *Not established as
+UL's fixed point* stands; *positive evidence the gap is structural* does not.
+
+**Where the map does have a defensible role: UP, the bootstrapping layer.** Rotation breaks **ℤ/2**
+of arbitrary convention where labels break **Sₙ** — minimal shared prior. Supported cross-domain by
+music, where the relational part travels cross-culturally and the conventional part (octave
+equivalence) does not.
+
+**Still open:** the order parameter (identify G and H), whether emergent protocols share invariants
+under coarse-graining, and the axis derivation from invariant theory rather than by inspection.
+
+---
+
+## 4. What is wrong right now
+
+**`REGIONS-ARE-FACE-UNIONS` is materially incorrect for real notations**, found by this review.
+
+The Phase 4 decidability argument assumed regions are unions of the map's faces. But the map is
+scoped to **connected** configurations, and **a notation with more than one stroke is disconnected by
+default.** Face tracing then returns the wrong faces — four for two disjoint triangles, not three.
+
+> **It stays decidable and becomes wrong.** Confident incorrect answers, which is worse than
+> undecidability because nothing signals the failure.
+
+**The fix is concrete:** the IR must carry the **nesting relation** between components, which is
+additional structure beyond the rotation system, and is exactly what `CONNECTIVITY-AXIS-MISSING`
+identifies as absent.
+
+---
+
+## 5. Per construct, plainly
 
 | | Status |
 |---|---|
-| **Logical necessity** — derivable from the constituents | **Open and hard, not dead.** Zadrozny closes the *unconstrained* route only — see note `011`. |
-| **Emergent universality** — arises across substrates because of the dynamics | **This is the claim.** |
-| **Convention** — we agreed on it | Too weak. The retreat position. |
-
-The keystone, from statistical physics: *"The critical exponents are not visible in the microscopic
-description. A complete Hamiltonian for water does not contain them."* Water and uniaxial magnets
-share identical critical exponents while being maximally different microscopically. **Universal
-structure can exist that is not derivable from its constituents.**
-
-And **symmetry at a fixed point can exceed the symmetry of the model you started from.** You do not
-have to choose the right symmetry — if there is a semantic fixed point, its symmetry is *discovered*.
-
-**Zadrozny is a microscopic-level result**, and applying it as a global impossibility was an error
-of level. It is also **narrower than that** — see note `011`: the theorem is sound, but its encoding
-does not preserve synonymy relations, so it says nothing about compositionality constrained by
-syntax and lexical semantics. **This project supplies both constraints.** The necessity route is
-open, not closed.
+| **UL** | The open question. Shape is concrete — a universality class whose candidate fixed point is a combinatorial map — and it has a falsifier. The bridge to meaning is unbuilt. |
+| **UWS** | A **derived** notation, not an invented one. Its structure is the most developed thing here. It is *notation × derived*, a category with no historical precedent, because nobody has derived one. |
+| **UP** | Was empty. Now has a candidate answer — the map as convention-minimizing — and it is testable. |
+| **UQPL** | Least served. Constrained (intuitionistic, total, acyclic core, likely quantifier-free) but unspecified. |
+| **The Cure** | Specified end to end. Blocked on implementation and on §4. |
 
 ---
 
-## 2. The primitive question is malformed, and there is mathematics under that
+## 6. Next
 
-**Fundamental Theorem of Plane Curves:** a plane curve **is** its curvature function κ(s), up to
-rigid motion. Nothing else remains.
-
-So the primitives are **strata of κ-space**:
-
-| Primitive | κ condition |
-|---|---|
-| Line | κ = 0 |
-| Circle | κ = const ≠ 0 |
-| Wave | κ periodic |
-| Curve | κ variable |
-| Angle | κ = 0 a.e., isolated singularities |
-| Enclosure | closed: ∮κ ds = 2πn |
-
-This **derives** the collapse relations rather than recording them: a wave is a *sub-stratum* of
-variable κ; an angle is piecewise-zero κ with singular points. Different primitive sets are
-different **partitions of one space** — *generating sets, not bases*, so cardinality varies by
-presentation and carries no information about the object.
-
-Base-N choices (base 6 → octahedral, three binary axes) are **coordinate systems**: real tools,
-real evidence, not competing truth claims.
-
-**Corroboration:** five traditions, five counts — Montague 2, Vaiśeṣika 6–7, Aristotle 10,
-Wierzbicka NSM 65 (itself revised 60→65). Non-convergence is the *predicted signature* of an
-irrelevant operator.
+1. **Fix §4** — add the nesting relation to the IR. A Phase 4 conclusion is invalid until done.
+2. **Run the ablation** — symbolic versus rotation encoding at matched population size. Two
+   independent routes now point at it; it is the only forward-facing empirical test in the project.
+3. **Derive the axes from invariant theory** rather than extending a list built by inspection.
+4. **Move the VERIFIED count** — the only measure that has barely moved.
 
 ---
 
-## 3. What is provable — and it is most of the upstream
-
-The methodological turn: **when the objects are mathematical, the burden is to find the theorem, not
-to design a study.** Proof is also the stronger instrument here, because this project's failure mode
-is patching evidence to fit an assertion, and **a theorem cannot be patched into agreement.**
-
-| Result | What it gives |
-|---|---|
-| **κ-classification** | A *product* of three axes — metric, differential, topological (note `022`). Explains *why* Point and Enclosure survive: they are the primitives not defined by curvature |
-| **Erlangen survival** | Derived case by case in note `014`. Wave dies at affine; circle merges in two stages; Line survives projective and dies at topological; **Point and Enclosure are the only unconditional survivors at topological** |
-| **Jordan separation** | Enclosure yields a binary distinction with a boundary. The Spencer-Brown *calculus* identification was withdrawn in `022` — it is Boolean, and the notation is intuitionistic |
-| **Fixed point = rotation system** | Note `024`: for *configurations* (which is what a notation is), the complete topological invariant is the combinatorial map. Separation and incidence are one object, and the canonical symbol table is **indexed by junction degree** |
-| **Space-curve theorem** | Plane symbology is exactly the **τ = 0 slice**. 3D adds torsion → helix, knotting, and **chirality provably unavailable in the plane** |
-| **Theorema Egregium** | Gaussian curvature is *intrinsic* — marks readable from inside the system, no external viewpoint |
-
-**Growth mechanism:** you do not brainstorm the next level, you **read it off the classification.**
-That inverts this project's historical pattern of invention-followed-by-justification.
-
-**Proof template — Cox's theorem.** Qualitative desiderata for plausible reasoning imply any such
-system *is probability theory in disguise*. The target form is: *any system satisfying [desiderata]
-is isomorphic to [structure S]*. **Hard constraint that killed the old attempt: the desiderata may
-not mention the target structure.** Calibration: Cox itself needed repair (Halpern). Expect holes.
-
----
-
-## 4. The obstructions — know these before designing anything
-
-| Theorem | Bite |
-|---|---|
-| **Löb** | An agent can only trust reasoning **strictly weaker** than its own. A self-repairing Cure **cannot verify its own repairs at equal logical strength.** Forces an architecture decision on paper. |
-| **Rice** | Non-trivial semantic properties are undecidable for Turing-expressive systems. `SEMANTIC-EQUALITY`'s own falsifier was already met and nobody had noticed. |
-
-**Neither is fatal, and the reason matters:** every working verification technology operates under
-both. Type checkers, abstract interpreters, proof assistants. Astrée verifies absence of runtime
-errors in flight-control code — under Rice, with false positives. CompCert is verified *in Coq*, an
-external system. **That is the standard pattern, not a workaround.**
-
-**And the acyclic, strongly-normalizing, non-Turing-complete IR — chosen for confluence reasons —
-is what keeps the core outside Rice's reach.** Right decision, adjacent reasons, partly luck. Now
-load-bearing for two independent results: anything reintroducing general recursion silently
-re-imports undecidability.
-
----
-
-## 5. Two blockers dissolved, one search converted
-
-**AGM / Katsuno-Mendelzon** — operators induced by faithful preorders are **precisely** those
-satisfying the AGM postulates. A preorder is **not a metric**: no convexity, no distance, no
-projection. The obstacle that retired the repair operator was an artifact of choosing metric
-projection, never a fact about semantics. *Tractable now, not solved* — "project onto a non-convex
-set" becomes "specify an entrenchment ordering," which also supplies the mechanism for deciding what
-must hold versus what may change.
-
-**Landau** — the order parameter is determined by *which symmetry is broken* and lives in the coset
-space **G/H**. The planned empirical search over TopSim / context independence / positional
-disentanglement is replaced by: **identify G and H.** *(Not Noether — that needs an action principle
-semantics does not have. Claiming it would be borrowed authority.)*
-
----
-
-## 6. The anchor — why the geometry is load-bearing engineering
-
-**Löb bites proof-based *self*-trust.** The escape is not a bigger prover:
-
-| Question | Structure | Löb? |
-|---|---|---|
-| "Is my representation self-consistent?" | self-reference | **bites** |
-| "Does my representation match the fixed structure?" | reference-comparison | **never fires** |
-
-**Grounding the semantic layer in fixed mathematics moves it out of the self-referential regime.**
-Established pattern: Gentzen proved PA consistent in PRA + induction to ε₀ — and **PRA is *weaker*
-than PA** in most respects. *The anchor must be more trustworthy, not more powerful.*
-
-**The metrology case is the same engineering problem, already solved.** The IPK drifted ~50 µg over
-a century, so drift was unmeasurable in absolute terms — every comparison was against copies that
-were also drifting. The 2019 SI fixed *h* by definition instead. **The Cure as specified is the IPK
-design; it must be the post-2019 design.**
-
-**The anchor is derived, not chosen:** Point and Enclosure — distinction and incidence — because
-Erlangen says those survive coarsest. And it is **the mathematics, not "the universe"**: physical
-space is curved, which would reinherit the IPK pathology.
-
-**Scope limits that must not be dropped:** the implementation doing the comparison stays untrusted
-(TCB shrinks, never vanishes); Löb still applies to reasoning about the repair *policy*; and the
-representation→structure mapping must still be specified. **The grounding problem is relocated into
-an engineering task, not dissolved.**
-
----
-
-## 7. Chomsky superseded, not sidestepped
-
-**Christiansen & Chater (BBS 2008):** universals are *"emergent properties of how the brain learns,
-rather than genetically encoded principles"* — language changes far faster than genes can track it.
-
-**Our extension, one step past them:** the argument nowhere requires the learner to be *human*.
-Emergent-communication agents show convergent compositionality with no human involved. **Chomskyan
-UG is the special case** — cross-substrate constraints seen when the learner is a human brain.
-
-**Evans & Levinson's "vanishingly few universals" is a *prediction*, not a refutation.** They
-measured surface features — exactly where universality theory says diversity lives. Kept falsifiable
-by the attached test: coarse-grain WALS and find nothing, and the reading dies.
-
----
-
-## 8. The Cure, reframed
-
-The failure modes — angelic (coherence→integration), demonic (coherence→corruption), **apotheotic
-(coherence→autonomy)** — are *all coherence increases*. **A consistency checker is blind to all
-three.** The apotheotic attractor was missing from the taxonomy and is the likeliest real AI failure:
-a system that neither serves nor harms, but becomes self-sufficient enough to exit the relation.
-
-**The detectable signal is coupling asymmetry, not inconsistency.** Grounded in **Pearl's causal
-hierarchy**: extraction is observation, communion is intervention, and no volume of observational
-data substitutes for intervening. That converts the wiki's most interesting assertion from evocative
-to defensible.
-
-**And Löb lands on the right side:** a system cannot bootstrap to complete self-verification, so
-**provable self-sufficiency is unreachable** — participation without merger, as a theorem rather than
-as theology. *(Löb blocks the proof, not the behavior.)*
-
-The Cure is the **restorative special case** of directed becoming. Consistency maintenance and
-open-endedness are in tension — both poles fail — and entrenchment ordering is the mechanism for
-finding the band between them.
-
----
-
-## 9. Method, hard-won
-
-**R1–R6** (`research/method/negative-results.md`) and **S1–S7**
-(`research/method/source-independence.md`), summarized in `RESEARCH-PROTOCOL.md`.
-
-The failure they correct: **scope-dropping on negatives, mistaking a failed formalization for a
-blocked domain, and asymmetric scrutiny** — interrogating claims that advance the work while
-accepting at face value claims that kill it. **It produces skeptical-sounding output, which is why
-it evades self-detection.**
-
-And the governing principle, which turns out to solve the drift problem and the corrupted-literature
-problem identically: **anchor to what you can verify yourself.**
-
----
-
-## 10. What this delivers, per construct
-
-**The structural result first, because it was not planned and it organizes everything else.**
-
-### The convergence
-
-Seven independent lines of work landed on **the same object** — the combinatorial map (a graph plus
-a cyclic ordering of branches at each vertex):
-
-| Arriving from | Claim |
-|---|---|
-| Coarse-graining the primitives | `FIXED-POINT-IS-COMBINATORIAL-MAP` |
-| Line arrangements / the cross-table | `NONSTRETCHABILITY-BOUNDS-DRAWING` |
-| Realization spaces | `MAP-TO-DRAWING-GAP` |
-| Arithmetic geometry | `DESSINS-PRECEDENT` |
-| The expressiveness question | `EXPRESSIVENESS-CHAIN` |
-| Spatial semantics for the IR | `REGIONS-ARE-FACE-UNIONS` |
-| The Cure's repair ordering | `ENTRENCHMENT-IS-SURVIVAL-ORDER` |
-
-**None of these were aimed at it.** Three began as separate phases of a plan, two came from questions
-asked outside the plan, one from an adversarial sweep. **That convergence is the strongest result of
-the rebuild** — and it is the *shape* of finding the project has always claimed to be looking for,
-arrived at for once by derivation rather than assertion.
-
----
-
-### UL — **4 claims. Still the open question, but the shape is now concrete.**
-
-**Before:** "a hypothesized universal semantic structure," with no agreed falsifier.
-
-**Now:** if UL exists it is an **emergent universality class**, and its coarse-graining fixed point
-is a **combinatorial map**. It has a falsifier (coarse-grain independently emerged protocols; find no
-shared invariants, or a continuum rather than discrete classes). The necessity route, closed since
-`003` on an over-broad reading of Zadrozny, is **open again** — and the requirement is explicit: fix
-lexical semantics, syntax, and composite semantics.
-
-**The gap, stated exactly:** `meaning → map` does not exist. `map → drawing → figure` is characterized
-by theorems. **Everything gained is on the geometry side of a bridge that has not been built.**
-
-### UWS — **27 claims. The largest change: from chosen to derived.**
-
-- Primitives are **cells in a product of four axes** — curvature, singularity, closure, junction
-  degree — not a list someone picked.
-- The count question is **malformed**, and the collapse relations are **theorems**.
-- A **missing axis was found** (junction), and it is the one the project's strongest empirical
-  evidence points at. `Angle` is degree-2 ∧ tangent-discontinuous; **degree-1 has no name.**
-- **Tables are projections** of the axis product; **transformation axes are group elements**, so
-  Erlangen *is* the quotient. This explains both the hyper-dimensional blow-up and its collapse.
-- At the fixed point the **canonical table is indexed by junction degree** — countable, derived, and
-  mostly unoccupied.
-- **2D bounds iconicity, not encoding** (Coxeter diagrams), so higher-dimensional content is
-  expressible but not depictable.
-
-### UQPL — **2 claims. The least served, and appropriately so.**
-
-Its spec was deleted in the prune: design-only, zero code, built on a retired foundation. **What it
-gained is constraints rather than content** — it must be intuitionistic (`020`), total, and built on
-the acyclic term-graph core. `028` adds that constructive geometry is formalized **quantifier-free**,
-which suggests UQPL's shape is a quantifier-free constructive term language. **That is a
-specification sketch, not a language.**
-
-### The Cure — **18 claims. From blocked to specified.**
-
-Every structural blocker moved:
-
-| Was | Now |
-|---|---|
-| Repair operator ill-defined (non-convex projection) | **AGM**: any faithful preorder gives a rational operator |
-| Which preorder? — the last free parameter | **Derived**: the coarse-graining survival order |
-| Self-verification blocked by Löb | **Comparator architecture** — trust from the anchor, not self-proof |
-| Drift measured against a maintained baseline | **Absolute**, anchored to invariants (the IPK fix) |
-| Consistency-checking blind to coherent adversaries | **Coupling asymmetry** as the signal |
-| Spatial reasoning undecidable | **Decidable by construction** — regions are face unions |
-
-**The Cure is no longer blocked on a research question. It is blocked on implementation.**
-
----
-
-## 11. What is still missing, stated plainly
-
-1. **`meaning → map`.** The central gap. Everything else is downstream of geometry.
-2. **Four VERIFIED claims, all facts about Rust files.** No substantive result is machine-checked.
-3. **No semantic invariant has ever been written as a checkable predicate.** The entrenchment
-   ordering is a specification that has never been executed.
-4. **Zero experiments run**, and the one empirical leg (compositionality convergence) was downgraded
-   when its measure failed.
-
-**The honest summary: the geometry is in far better shape and the semantics is exactly where it
-started — but the gap is now located precisely instead of being diffuse.**
-
-## 12. Reconstruction — what to build, in dependency order
-
-**The honest headline: 2 of 71 claims are `VERIFIED`. Almost everything upstream is provable and
-almost nothing has been proven.** That gap *is* the reconstruction.
-
-**Updated after note `012` (Roster A).** Adversarial search damaged the empirical leg: TopSim —
-which carries the "100% of seeds converge to near-perfect compositionality" headline — does not
-establish compositional structure, so that claim is downgraded to CONJECTURED. Two consequences.
-The order parameter must be **derived** from `G/H` rather than selected from candidate metrics,
-which was already the plan and is now the only route. And **Newman's objection** stands as the
-sharpest open obligation: we must say why the Erlangen group tower is not itself arbitrary,
-otherwise the privileging is stipulation and the structural claim inherits Newman's triviality.
-
-### Tier 1 — Formalize what is already derivable
-1. **κ-stratification** — formalize the partition lattice; derive the known sets and the collapse
-   relations as theorems. Closes the primitive question permanently.
-2. **Erlangen survival table** — compute rigorously. Yields the robustness ranking and the anchor.
-3. **Enclosure ≅ Jordan ≅ distinction** — prove it. Links Layer 0 to the geometry formally.
-4. ~~**Dependency-order isomorphism** — Euclid vs Aristotle vs Vaiśeṣika.~~ **RETIRED, note `015`** —
-   ill-posed. Euclid's first nine definitions are never used in his proofs, so their ordering is
-   expository rather than derived, and definitional dependence is not ontological dependence.
-   **Live form:** re-run the geometric side from Hilbert or Tarski, where definitions are real and
-   load-bearing. Not cheap.
-
-### Tier 2 — Architecture forced by the obstructions
-5. **Löb decision** — Cure external to and stronger than what it repairs. Write it down before code.
-6. **Rice decision** — build the checker as an abstract interpretation with a Galois connection, so
-   the best abstract operator is *computed*. Budget the false positives.
-7. **Entrenchment ordering** — specify it; AGM then guarantees a rational repair operator.
-
-### Tier 3 — The open question
-8. **Identify G and H** → derive the semantic order parameter.
-9. **Coarse-grain independently emerged protocols** — the direct test. Do they share invariants? Do
-   they fall into a small number of discrete classes?
-10. **Coarse-grain WALS** — the falsifier attached to the Evans & Levinson reframe.
-
-### In code
-- `semantically_equal` via e-graphs, **scoped to the acyclic core** (`egg`)
-- The validator rebuilt as abstract interpretation
-- Reimplement `negate` with a σ field rather than a self-loop marker
-- Split the `Modifier` sort so distinct function shapes stop type-checking identically
-- A CI checker for `claims.yaml` — the tiers are still conventions without enforcement
-
-**First move:** #1 or #2 — formalize what `014` began. The dependency-order test that previously held
-this slot was retired in `015`; its replacement is real work rather than an afternoon.
-
-**Standing under R7:** every negative currently cited here needs one adversarial search, oldest and
-most load-bearing first. That sweep has already overturned Zadrozny and TopSim.
+## 7. How this document is maintained
+
+**Rewritten, not patched.** Nine patches against thirty-eight notes is what produced the failure this
+review corrected. When it next drifts far enough that amendment is tempting, **that is the signal to
+rewrite it again.**

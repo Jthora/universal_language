@@ -2,7 +2,7 @@
 
 **Type:** correction
 **Opened:** 2026-08-12
-**Status:** open — this is the review's opening, not its conclusion
+**Status:** closed — review executed; see §5
 **Thread:** audits everything
 
 **Prompted by:** *"we should review all our notes and rebuild consensus… see how our discernments
@@ -100,3 +100,42 @@ one that caused it: **treating "we moved fast" as grounds to doubt everything**,
 skepticism wearing a different hat (F-017).
 
 **The target is specific: judgments that contradict the record.** Not judgments that are merely old.
+
+---
+
+## 5. Review executed
+
+**All five steps done.**
+
+| Step | Result |
+|---|---|
+| Propagation audit | **17 dependency edges, 0 previously reviewed.** All 17 now carry an explicit determination |
+| Material findings | **2** — `REGIONS-ARE-FACE-UNIONS` (§2) and the re-weighting of the map's UL scoping |
+| Priority re-rank | **39 → 10** priority-0 claims, ranked by *blast radius* rather than reference count |
+| Consensus | `STATE-OF-PLAY.md` **rewritten from scratch**, not amended |
+| Enforcement | `tools/check-propagation.rb` added — five checkers now run in CI |
+
+### The second material finding
+
+`FIXED-POINT-IS-COMBINATORIAL-MAP`'s scoping *"not established as UL's"* rests on
+`SEMANTIC-FORMALISMS-USE-LABELS-NOT-ORDER`, which `038` narrowed from *"independently developed
+formalisms"* to **Conceptual Graphs alone** after the AMR evidence proved inadmissible.
+
+**What stands:** *not established as UL's* — absence of evidence, true regardless.
+**What does not:** `034`'s stronger reading that this was *"the first positive evidence the gap may
+be structural."* **One formalism is not a survey.**
+
+### A near-miss in the re-rank, worth recording
+
+The first ranking attempt sorted by **reference count**. It flagged `CURE-IS-COMPARATOR` and
+`ENTRENCHMENT-IS-SURVIVAL-ORDER` for demotion — **the Cure's entire architecture**, unreferenced only
+because nothing has been built on them yet.
+
+**Demoting on that basis would have been exactly the mechanical judgment this review exists to
+catch.** Re-ranked by blast radius instead: *if this is wrong, what else falls?*
+
+### What the review did not do
+
+**It did not re-litigate the derivations.** `022`–`032` were checked when made and are internally
+valid. The failure mode being corrected was *judgments contradicting the record*, and treating "we
+moved fast" as grounds to doubt everything is the same asymmetric skepticism in a different hat.
