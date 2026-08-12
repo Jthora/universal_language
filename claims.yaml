@@ -2288,6 +2288,50 @@ claims:
       claim predicts rotation-based encodings coordinate zero-shot better than label-based ones,
       which is a DIFFERENT and untested prediction. It also has independent support and addresses a
       stated open problem, rather than relocating to wherever the evidence is absent.
+      CROSS-DOMAIN EVIDENCE (note 036), from a field with no connection to notation or geometry:
+      music splits exactly along this line. Transposition invariance is cross-culturally universal —
+      "a melody played in one key or register is recognised as the same melody when shifted to any
+      other", with "a universal logarithmic representation of pitch" and "striking cross-cultural
+      similarities" in interval and temporal structure. But OCTAVE EQUIVALENCE, a conventional
+      identification, "may be culturally contingent" and is absent in Tsimane' participants.
+      THE PART REQUIRING NO SHARED CONVENTION TRAVELS; THE PART REQUIRING ONE DOES NOT.
+      CAVEAT, and it matters: the symmetry groups are NOT the same. Transposition invariance is
+      invariance under a translation of log-frequency; relabelling invariance is invariance under
+      S_n. What is shared is the PRINCIPLE — relational structure travels, conventional
+      identification does not — not the group. Do not claim music and rotation systems share a
+      structure. The picture in music is also genuinely mixed, with some features biologically
+      grounded and others heavily culture-dependent.
       TIER HONESTY: the symmetry-group comparison is an ARGUMENT. The experiment is the
       symbolic-versus-rotation ablation at matched population size from note 019, now motivated by
       two independent routes.
+
+  - id: UNIVERSAL-MEANS-CONVENTION-FREE
+    statement: >
+      In ordinary usage "universal language" means something that travels without a shared
+      convention. Under that criterion music's relational structure qualifies empirically, a
+      label-based notation does not, and a rotation-based notation is predicted to.
+    tier: ARGUED
+    evidence: research/notes/036-music-and-love/README.md
+    notes: >
+      Extracted from two folk claims by stripping the sentiment. "Music is the universal language"
+      asserts meaning carried by RELATIONS — intervals, ratios, temporal pattern — with no label
+      alphabet. "Love is the universal language" asserts meaning carried by a MODE OF ENGAGEMENT
+      rather than transmitted content. NEITHER NAMES A REPRESENTATIONAL SYSTEM, which is the first
+      thing worth noticing.
+      THE CRITERION IS USABLE: music's relational part qualifies (empirically, see
+      ROTATION-MINIMIZES-CONVENTION); love as coupling mode arguably qualifies but is untested; a
+      label-based notation does NOT; a rotation-based notation is predicted to and that is the open
+      test. So the folk usage is CONSISTENT with ROTATION-MINIMIZES-CONVENTION and INCONSISTENT with
+      label-based semantics — a real constraint on what UL could be, extracted from a saying.
+      THE LOVE HALF IS ARGUMENT ONLY, no data. Its structural content lands on
+      CURE-MONITORS-COUPLING-NOT-CONSISTENCY, on the enaction convergence ("language doesn't
+      represent things, language does things"), and on theosis as "participation, not information".
+      Recorded as directional, not as support.
+      DIRECTIONAL CONVERGENCE, three independent routes: note 034 (the map is not semantic), note 035
+      (its defensible role is protocol), and this note (folk claims name non-representational things,
+      with music data supporting the convention-minimizing reading). Mild corroboration, not
+      evidence.
+      WARNING ATTACHED DELIBERATELY: this is the most agreeable result in many notes — folk
+      intuition, empirical data and our own derivation all pointing one way is exactly when motivated
+      reading is easiest. The temptation is to conclude "UL is music-like" or "UL is love". NEITHER
+      FOLLOWS. What follows is narrow: convention-minimizing structure travels better.
