@@ -96,6 +96,11 @@ stated definitions, as `014` does.
 
 ## Phase 3 — New ground: the expressiveness bound
 
+**STATUS: half-closed by unplanned work — see `027`.** Notes `023`–`026` delivered the dimension
+split, the full axis list, the combinatorial-map fixed point, and nonstretchability. With Mnëv, the
+map/drawing gap is characterized. **The constructibility ladder below is now optional rather than
+central.** A2 and A4 remain unstarted.
+
 | Item | Output tier | Notes |
 |---|---|---|
 | **A4** Read *A Finite, Feasible, Quantifier-free Foundation for Constructive Geometry* | — | **First** — may change how A1 is done |

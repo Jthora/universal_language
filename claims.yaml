@@ -1863,3 +1863,55 @@ claims:
       158830, 14320182, 2343203071, ... reaching 366477801792538 at n=13, with enumeration beyond
       that OPEN. An exploration that "gets very complex very fast" ran into an open enumeration
       problem rather than into a lack of rigour.
+
+  - id: MAP-TO-DRAWING-GAP
+    statement: >
+      Fixing the combinatorial map does not fix the drawing: the straight-line realization map is
+      neither surjective nor simple-fibred. Some maps have empty realization space, and realization
+      spaces of a fixed combinatorics can be arbitrarily complex semialgebraic sets.
+    tier: ARGUED
+    evidence: research/notes/027-status-and-next-research/README.md
+    priority: 0
+    notes: >
+      TWO THEOREMS, characterizing the gap from both sides.
+      NOT SURJECTIVE — nonstretchability (NONSTRETCHABILITY-BOUNDS-DRAWING): the Pappus arrangement
+      of 9 lines is a pseudoline arrangement that cannot be straightened while preserving its face
+      structure. Some combinatorial maps have EMPTY straight-line realization space.
+      FIBRES ARBITRARILY COMPLEX — Mnev's universality theorem: "every primary semialgebraic set
+      defined over Z is stably equivalent to the realization space of some oriented matroid of rank
+      3", and "point configurations of a fixed combinatorics can show arbitrarily complicated
+      behaviour."
+      SO THE GAP BETWEEN COMBINATORIAL STRUCTURE AND DRAWN REALIZATION IS AS COMPLICATED AS
+      ALGEBRAIC GEOMETRY GETS. This is the strongest content the expressiveness question (Phase 3 A1)
+      has, and it arrived topologically rather than via the constructibility ladder that was planned.
+      The constructibility route is now OPTIONAL rather than central.
+
+  - id: DESSINS-PRECEDENT
+    statement: >
+      Combinatorial maps — the fixed point of this project's coarse-graining — are the same type of
+      object as Grothendieck's dessins d'enfants, which are known to carry equivalences across
+      permutation groups, field extensions and algebraic curves simultaneously.
+    tier: ARGUED
+    evidence: research/notes/027-status-and-next-research/README.md
+    scope: >
+      MANDATORY BEFORE CITING (R2). This establishes that combinatorial maps CARRY ENORMOUS
+      MATHEMATICAL CONTENT — it says nothing whatever about MEANING. The absolute Galois group acts
+      on the arithmetic side; there is no bridge from semantic content to Galois stability and none
+      is suggested. The OBJECT TYPE matches; the theory attached to it is arithmetic geometry.
+      DO NOT cite this as evidence that UL exists, that meaning is Galois-structured, or that the
+      notation inherits any universality from dessins. It is a structural precedent for the CHOICE
+      of fixed point.
+    notes: >
+      Dessins are "drawings with vertices and edges on topological surfaces"; the theory "describes
+      the equivalence of many categories including graphs embedded nicely on surfaces, finite sets
+      with certain permutations, certain field extensions, and some classes of algebraic curves",
+      with the absolute Galois group acting faithfully. Grothendieck "was fascinated by the fact that
+      very simple drawings can encode very sophisticated mathematical information."
+      A combinatorial map with a rotation system IS a dessin, up to the bipartite normalization,
+      which is a subdivision away.
+      WHY IT IS RECORDED AT ALL: it is a PROVEN instance of one structure recurring across unrelated
+      domains, which is the shape of result this project has been looking for — and it supports the
+      choice of fixed point without supporting any claim about semantics.
+      WHY IT IS FENCED: this is exactly the finding that would have been patched into a claim under
+      the old regime. F-024's standing check applies — adopt the structure, decline the unearned
+      interpretation.
