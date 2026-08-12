@@ -148,7 +148,7 @@ claims:
       Documentation asserted this as proven. The implementation wraps in a new enclosure node, so
       it is structurally FALSE, and no equivalence procedure exists to evaluate the semantic reading.
       See FAILURES.md F-006. Blocked on SEMANTIC-EQUALITY.
-    blocks: [CURE-REPAIR-DETERMINISM, UQPL-REDUCTION]
+    blocks: [CURE-REPAIR-DETERMINISM]
 
   - id: SEMANTIC-EQUALITY
     statement: "There exists a decision procedure determining whether two GIR structures mean the same thing."
@@ -304,7 +304,7 @@ claims:
       (b) adopt DPO-with-Interfaces, where confluence IS decidable; (c) abandon normalization and
       decide equivalence another way. Nothing downstream should be built before this is chosen.
     priority: 0
-    blocks: [SEMANTIC-EQUALITY, NEG-INVOLUTION, UQPL-REDUCTION]
+    blocks: [SEMANTIC-EQUALITY, NEG-INVOLUTION]
 
   - id: UL-IS-EMERGENT-UNIVERSAL
     statement: "UL is an emergent universality class — structure arising reliably across substrates under coarse-graining — not a logically forced signature nor a convention."

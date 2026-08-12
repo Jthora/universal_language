@@ -1,0 +1,22 @@
+name: Repository checks
+
+# Enforces the claim registry and documentation discipline.
+# This repo's named historical failure mode is "conventions without enforcement" —
+# rigor labels nobody checked. These checks are that enforcement.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  checks:
+    name: claims, links, retired content
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+      - name: Run all repository checks
+        run: ruby tools/check.rb --strict
