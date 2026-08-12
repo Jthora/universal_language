@@ -453,3 +453,30 @@ any other adversarial search.
 and line as **both primitive and undefined** — co-primitive, no ordering — which converges with the
 Erlangen derivation's finding that Point and Enclosure are **co-survivors**. Two independent routes
 agree the base is a small co-primitive set, not a descent from one root.
+
+---
+
+## F-021 — a cross-study contrast was presented as a controlled comparison
+**Date:** 2026-08-01
+**What I wrote (note 013 §3.2):** *"Iconic, spatially structured, perceptually anchored notation
+achieves zero-shot mutual intelligibility across disjoint populations **where symbolic protocols
+fail**."*
+**Why that was wrong:** the symbolic failure results come from the zero-shot coordination / MARL
+literature; the sketching result comes from a different paper with a different task, different
+scale and different setup. **No study compared them.** The contrast was my inference across two
+literatures, written as though it were a finding.
+**What the primary read established:** the sketching paper *"provides no direct ablation comparing
+sketching to symbolic communication at matched population size."* It varies population size and
+communication topology, **not modality** — so it cannot show iconicity is the mechanism at all.
+Perceptual grounding is supported only correlationally (r = −0.50 to −0.74).
+**Also narrowed by the same read:** "disjoint populations" means training isolation only — identical
+CNN architectures across groups, same dataset — and the emergent sketches *"remain highly abstract
+to human observers."*
+**Standing rule this establishes (T11):** before contrasting two results, check whether **one study
+varied both.** Different papers do not form a controlled comparison, and "X succeeds where Y fails"
+requires a single study varying X and Y.
+**What it turned into:** the missing ablation is now a concrete experiment worth running — symbolic
+versus sketch channel at matched population size — rather than a citation. That is a better outcome
+than the claim I started with.
+**Note on process:** the claim was deliberately held at CONJECTURED in note 013 to avoid asymmetric
+treatment against the TopSim downgrade. **That caution is exactly what made this narrowing cheap.**

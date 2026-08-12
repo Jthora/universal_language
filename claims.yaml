@@ -1304,8 +1304,15 @@ claims:
       "for compositionality to be a substantive constraint it must be paired with background
       constraints on syntax and the semantics of the basic lexical items."
       DO NOT cite Zadrozny as closing the necessity route. It closes the UNCONSTRAINED route only.
-      This project supplies both missing constraints: a synonymy relation (SEMANTIC-EQUALITY, wanted
-      regardless) and a fixed syntactic structure (the geometric composition rules).
+      SHARPENED by primary reading (note 019, Stanford Encyclopedia of Philosophy). The escape
+      condition is precise: the construction works "provided that the meanings of the simpler
+      expressions can be replaced with new 'meanings' from which the old are uniformly recoverable."
+      FIX THE LEXICAL SEMANTICS AND THE CONSTRUCTION IS UNAVAILABLE.
+      And the constraint list is THREE-part, not two as note 011 recorded: compositionality is
+      substantive when "paired with background constraints on syntax, the semantics of the basic
+      lexical items, AND the semantics of composites."
+      This project supplies candidate fixings of all three: geometric primitives (lexical), the
+      composition rules (syntax and composites), and SEMANTIC-EQUALITY (synonymy).
     notes: >
       Consequence: the logical-necessity route is OPEN AND HARD, not dead. It had been recorded as
       dead since note 003 on an over-broad reading of a correctly-proved theorem. This does NOT
@@ -1439,32 +1446,41 @@ claims:
 
   - id: ICONIC-GROUNDING-ENABLES-CROSSPLAY
     statement: >
-      Iconic, spatially structured, perceptually anchored notation achieves zero-shot mutual
-      intelligibility between independently trained populations where symbolic protocols fail.
-    tier: CONJECTURED
-    falsified_by: >
-      Primary reading shows the effect is carried by population scaling alone rather than by
-      iconicity, or fails to replicate, or the "disjoint populations" are less independent than the
-      summary implies.
-    evidence: research/notes/013-roster-g-emergent-communication/README.md
-    priority: 0
+      Within a fixed architecture and dataset, increasing population size raises cross-group
+      intelligibility in a sketch-based channel, with correlational evidence that perceptual
+      grounding mediates it.
+    tier: ARGUED
+    evidence: research/notes/019-phase1-primary-reads/README.md
+    scope: >
+      MANDATORY BEFORE CITING (R2). NARROWED SHARPLY after primary reading (note 019). Three limits,
+      each stated by the paper itself.
+      (1) "Disjoint populations" means TRAINING ISOLATION ONLY: "all agents use identical CNN
+      architectures within and across groups", all groups train on the SAME dataset, and disjointness
+      is enforced purely by forbidding cross-group communication. This is two runs of one setup that
+      were not allowed to talk — NOT independent invention.
+      (2) NO ABLATION ISOLATES ICONICITY. The paper varies population size and communication
+      topology; it does NOT vary modality. There is no symbolic-vs-sketch comparison at matched
+      population size, so it CANNOT establish iconicity as the mechanism. Perceptual-grounding
+      evidence is correlational (r = -0.50 to -0.74).
+      (3) The emergent iconicity is not human-legible: "sketches remain highly abstract to human
+      observers"; "achieving true human-interpretable, iconic communication likely requires
+      additional mechanisms."
+      NUMBERS: MNIST N=256 gives ZMI mean 0.898 against chance 0.1 with in-group 0.95; CIFAR-10 N=64
+      gives ZMI mean 0.460 with in-group 0.60. The headline describes MNIST at large N, not the
+      general case, and the two rows differ in N as well as dataset.
+      DO NOT cite this as "iconic notation succeeds where symbolic fails" — see F-021.
     notes: >
-      "Sketches communicate iconically through visual resemblance and spatial structure, thereby
-      anchoring meaning in perceptual reality, enabling independently trained agents sampled from
-      disjoint populations to achieve high mutual intelligibility." (arXiv 2606.10582, "Drawing with
-      Strangers".)
-      This describes UWS's design — iconic mark-features plus spatial placement grammar — and it
-      dissolves the permutation-invariance problem in SYMBOLIC-PROTOCOLS-FAIL-CROSSPLAY, since an
-      iconic mark is not arbitrary with respect to its referent.
-      CONVERGENCE: independently supports UWS-PERCEPTUAL-GROUNDING, which rests on Changizi's
-      finding that 100+ writing systems share contour statistics matching natural-scene structure.
-      Two unrelated lines land on perceptual grounding as what makes a notation work across
-      independently developed systems.
-      DELIBERATELY HELD AT CONJECTURED. Single paper, read via summary — evidence tier S1-5, which
-      by our own rule may not be load-bearing. TOPSIM-INSUFFICIENT was downgraded one note earlier on
-      multiple independent criticisms; banking this at ARGUED would be precisely the asymmetric
-      scrutiny F-017 documents. Also note the finding is population scaling PLUS iconicity, not
-      iconicity alone. Read the primary source at tier S1-2 before it carries weight.
+      Registered CONJECTURED in note 013 specifically to avoid banking a favourable single-source
+      result at ARGUED while an unfavourable multi-source result was being downgraded. The primary
+      read then narrowed it substantially, which is what that caution was for. Now ARGUED at the
+      narrowed statement, on a primary read (S1-2).
+      WHAT DOES NOT SURVIVE: the causal claim about iconicity, and the contrast with
+      SYMBOLIC-PROTOCOLS-FAIL-CROSSPLAY. That contrast was drawn by me across two different
+      literatures with different tasks and scales and presented as a controlled comparison. No study
+      compared them. See F-021 and trap signature T11.
+      STILL LIVE, and now a concrete experiment rather than a citation: run symbolic and sketch
+      channels at matched population size. That is the ablation nobody has done, and it would settle
+      the iconicity question directly.
 
   - id: COMPOSITIONALITY-REQUIRES-PRESSURE
     statement: >

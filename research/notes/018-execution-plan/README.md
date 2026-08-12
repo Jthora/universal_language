@@ -59,7 +59,7 @@ exactly what happened to Σ_UL.
 
 | Item | Output tier | Cost |
 |---|---|---|
-| **D2** Read *Drawing with Strangers* + Kazmi & Pelletier / Westerståhl | ARGUED or RETIRED | 2 fetches |
+| ~~**D2** Read *Drawing with Strangers* + SEP on Zadrozny~~ **DONE** — note `019` | ARGUED (narrowed) | 2 fetches |
 | **A3** Intuitionistic-logic coherence check | ARGUED | 1–2 searches |
 | **D1** R7 sweep — adversarial search on every cited negative | varies | ~10–20 searches |
 
