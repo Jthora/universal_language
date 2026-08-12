@@ -89,6 +89,8 @@ be perfectly consistent and still optimize something terrible.
 
 ## Where to start
 
+**Where the project stands and what is being built next:** **`STATE-OF-PLAY.md`**.
+
 **New here — human or AI?** Read **`PRIMER.md`** first. It is the comprehension document: what is
 true, what was retired, and how to read a claim in this repo. ~15 minutes, and it prevents the most
 common way of being confidently wrong about this project.

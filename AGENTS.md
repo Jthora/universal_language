@@ -4,6 +4,9 @@
 
 ---
 
+> **`STATE-OF-PLAY.md`** is the current synthesis — what the research established, what it forces,
+> and the reconstruction order. Read it to know what to work on.
+>
 > **Read `PRIMER.md` first.** This file is *navigation* — where things are. `PRIMER.md` is
 > *comprehension* — what is true and how to read a claim here.
 >
