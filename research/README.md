@@ -70,6 +70,15 @@ enforces it. See `notes/README.md` for the convention and the index.
 
 ---
 
+## Checks
+
+```bash
+ruby tools/check-links.rb            # internal references resolve
+ruby tools/check-retired-content.rb  # no retired counts in the working tree
+```
+
+Both exit non-zero with `--strict`, for CI.
+
 ## Conventions
 
 - **Dates live in document headers, not filenames.** Git has the rest.
