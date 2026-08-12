@@ -1775,7 +1775,13 @@ claims:
     evidence: research/notes/024-junction-axis/README.md
     priority: 0
     scope: >
-      SCOPED 2026-08 (note 032) — CONNECTED CONFIGURATIONS ONLY. Heffter-Edmonds is stated for a
+      SCOPED TWICE. (a) Note 034 — this is UWS's fixed point. It is NOT established as UL's. No
+      independently developed semantic formalism uses cyclic order as load-bearing structure; they
+      use LABELLED edges, and AMR explicitly "abstracts away from elements of surface syntactic
+      structure such as word order." Where spatial order appears in semantic diagrams it is
+      SECONDARY NOTATION — comprehension aid, not formal content. Calling this UL's fixed point
+      requires an argument that is currently unsupported. See SEMANTIC-FORMALISMS-USE-LABELS-NOT-ORDER.
+      (b) Note 032 — CONNECTED CONFIGURATIONS ONLY. Heffter-Edmonds is stated for a
       CONNECTED graph, and this entry quoted that sentence verbatim including the word "connected"
       while stating the result without it. See FAILURES.md F-025.
       FOR DISCONNECTED CONFIGURATIONS THE ROTATION SYSTEM DOES NOT DETERMINE AN EMBEDDING. The
@@ -2209,3 +2215,40 @@ claims:
       the order parameter, better placed now that note 026 supplied the group action; (3)
       coarse-grain independently emerged protocols and check for shared invariants, the standing test
       from note 010, still unrun.
+
+  - id: SEMANTIC-FORMALISMS-USE-LABELS-NOT-ORDER
+    statement: >
+      Independently developed semantic formalisms distinguish a vertex's edges by label rather than
+      by cyclic position, and spatial arrangement in semantic diagrams is secondary notation. The
+      rotation system does not appear as semantic structure outside UWS.
+    tier: ARGUED
+    evidence: research/notes/034-bridge-test/README.md
+    priority: 0
+    scope: >
+      Establishes that no other formalism CONVERGED on rotation systems. Does NOT establish that
+      rotation systems are semantically empty — see the steelman below. Do not cite as showing
+      cyclic order is meaningless.
+    notes: >
+      AMR: "rooted, directed acyclic graphs where vertices represent concepts and LABELLED arcs are
+      used to represent semantic relationships", with PropBank roles ARG0, ARG1, and — decisively —
+      "AMR annotation abstracts away from elements of surface syntactic structure such as WORD
+      ORDER." Conceptual Graphs are the same family.
+      Where node ordering does matter it is for "legible and informative tree layouts" and "visual
+      saliency of clusters" — comprehension criteria, i.e. SECONDARY NOTATION. UWS claims spatial
+      arrangement is PRIMARY. No other formalism makes that claim.
+      STEELMAN (R6), and it survives weakened: rotation and labels are only PARTLY
+      inter-translatable. Rotation to labels is trivial — number edges by cyclic position. Labels to
+      rotation REQUIRES EXTRA DATA, since nothing in ARG0/ARG1/ARG2 supplies a cyclic successor. So
+      rotation is STRICTLY MORE STRUCTURE than labelled distinguishability; the two are not
+      equivalent, one refines the other.
+      WHICH SHARPENS THE QUESTION RATHER THAN SETTLING IT: either cyclic order is semantically real
+      and every other formalism is missing it, or it is spatial overhead carrying no meaning. There
+      is a genuine argument for the first, from notes 013 and 019 — cyclic order is INTRINSIC while
+      labels require a SHARED VOCABULARY, and two systems can agree on "clockwise from here" without
+      agreeing on a label alphabet, which is exactly what cross-population intelligibility needs.
+      That is an argument, not evidence, and it now needs testing rather than repeating.
+      WHAT THIS COSTS: the convergent-evidence form of the meaning-to-map bridge FAILS. Nobody else
+      arrived at rotation systems. DESSINS-PRECEDENT shows combinatorial maps carry deep MATHEMATICAL
+      content; this shows they carry no SEMANTIC content anyone else found. The EXPRESSIVENESS-CHAIN
+      gap is not merely unbuilt — this is the first positive evidence that it may be structural.
+      Not proof, but the cheapest available check ran and did not go our way.
