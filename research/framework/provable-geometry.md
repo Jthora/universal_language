@@ -25,7 +25,14 @@ Three things I had wrongly filed as open or empirical turn out to be theorems.
 
 ---
 
-## 1. The primitives are a stratification of curvature space — and this is a classification theorem
+## 1. The primitives are cells in a three-axis classification
+
+> **Superseded framing.** This section originally described the primitives as strata of a single
+> curvature-function space. **The derivation in `../notes/022-phase2-derivations/` corrected that** —
+> three of the six primitives are not regular C² curves at all, and the classification is a *product*
+> of curvature (metric), singularity structure (differential) and closure (topological). That
+> correction is what explains which primitives survive coarse-graining: Enclosure is defined on the
+> closure axis alone, and Point is not in the curve space at all. Read the note for the derived form.
 
 ### The theorem
 
@@ -223,7 +230,7 @@ about membership.** Everything upstream is proof, and I should have been buildin
 ## 6. Revised program
 
 **Provable now, in rough dependency order:**
-1. **Formalize the κ-stratification** and derive the known primitive sets as partitions, with the
+1. ~~**Formalize the κ-stratification**~~ **DONE** — `../notes/022-phase2-derivations/`. Derive the known primitive sets as partitions, with the
    collapse relations as theorems. Makes "which primitives?" well-posed and closes it.
 2. **Compute the Erlangen survival table rigorously.** Cheap, and it yields the robustness ranking
    plus the fixed-point identification in §3.
