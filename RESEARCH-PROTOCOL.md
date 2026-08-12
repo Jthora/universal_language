@@ -67,6 +67,7 @@ specifies rules rather than lessons.
 | **T7** | stop searching because you have a coherent story | **notice that a coherent story arrives early** and is usually your first framing |
 | **T8** | apply an impossibility result | **check that the target is inside its scope.** Rice needs Turing-expressiveness. Convexity is metric-only |
 | **T9** | cite a theorem for a conclusion | **check the theorem proves the conclusion.** A sound theorem can support an unsound reading — Zadrozny proves an encoding exists, *not* that compositionality is substantively empty. The gap was a condition his construction quietly drops |
+| **T12** | introduce a classification and sort things by it | **a classification is a claim.** State what would show the object does *not* fit, *before* sorting. A framework introduced and applied in one motion has never been checked — and a framing determines what every later claim means |
 | **T11** | contrast two results as though they were arms of one experiment | **check whether any study actually compared them.** Different papers, tasks, scales and setups do not form a controlled comparison. "X succeeds where Y fails" needs one study varying X and Y — otherwise it is your inference, not a finding |
 | **T10** | accept a null result | **ask what was measured.** A theorem states its scope; a null result does not — its scope *is* its operationalization |
 
@@ -208,6 +209,7 @@ Before recording any finding that closes a line of work:
 - [ ] **R6** Stated the steelman
 - [ ] **R8** If this is my own proposal — searched against it too
 - [ ] **T11** If contrasting two results — did one study actually compare them?
+- [ ] **T12** If classifying — stated what would show the object doesn't fit?
 - [ ] **T5** Checked whether the objects are mathematical
 - [ ] **T6** Gave it the same scrutiny as the last positive finding
 - [ ] **T9** Checked the theorem proves the conclusion, not just something adjacent
@@ -215,7 +217,7 @@ Before recording any finding that closes a line of work:
       objection regardless of direction
 - [ ] **S7** Logged whether counter-evidence was easy or hard to find
 
-Twelve boxes. If you can't tick them, you haven't finished the finding.
+Thirteen boxes. If you can't tick them, you haven't finished the finding.
 
 ---
 

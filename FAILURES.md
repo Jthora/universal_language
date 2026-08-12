@@ -609,3 +609,35 @@ disabled individuals."*
 **Pattern to note in the correction itself:** F-013a narrowed a negative on the grounds that its
 evidence was drawn from an extreme case. That was right in method and wrong in extent — **the fix
 for an over-broad negative is a narrower negative, not the absence of one**, and I recorded absence.
+
+---
+
+## F-027 — a framework was introduced and applied in the same motion, four notes running
+**Date:** 2026-08-12
+**What happened:** note `037` proposed a three-kind taxonomy of universal-language claims and, in the
+same note, filed **UWS as "kind A — invented notation."** That contradicts **eleven consecutive
+notes** (`022`–`033`) which *derive* UWS structure: curvature strata, Erlangen survival, the junction
+axis, the combinatorial map, the table projections.
+**The taxonomy was malformed.** It collapsed two independent dimensions — *what kind of object*
+(notation / structure / relation) and *how it is arrived at* (invented / derived / discovered).
+**UWS is notation × derived, a cell the list had no room for**, so it was assimilated to
+"notation × invented" purely for being a notation.
+**Consequence for the historical argument:** the 300-year failure record of Leibniz, Wilkins,
+Solresol and Blissymbolics is a record of **inventions** failing. **Whether a derived notation fares
+differently is untested — nobody has derived one.** `037` implied that record applies to UWS; it does
+not.
+**The chain runs back further than the visible error.** `033` asserted that *"characterizing UWS's
+microscopic structure would tell us nothing about UL"* — the same assumption, three notes earlier,
+and it was used to re-sort the entire backlog. `034` then read a null result as refutation, and `035`
+relocated the map on that basis. **One root error stated four ways: treating UWS as an arbitrary
+construction rather than a derivation attempt.**
+**Compounding, and worse:** `034`'s primary evidence was **AMR** — which this repository had *already*
+recorded at `research-register.md#D2-c` as an *"English-only corpus, English predicate lexicon,
+English annotators"* whose use as universality evidence *"would reproduce UNL's single most
+documented failure mode,"* marked **"near-miss caught."** **The error was caught, written down, and
+re-committed.**
+**Standing rule this establishes (T12):** **a classification is a claim.** State what would show the
+object does *not* fit **before** sorting anything by it. A framework introduced and applied in one
+motion has never been checked against anything — and unlike a claim, a *framing* silently determines
+what every subsequent claim means. Had `037` asked "what would show UWS is not kind A?", the
+answer — eleven notes deriving its structure — was already in the repository.

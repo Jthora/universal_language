@@ -2203,8 +2203,15 @@ claims:
       THE PROBLEM AT ITS SHARPEST: if UL is a universality class then microscopic details do not
       determine the class — that is what universality means. So characterizing UWS's microscopic
       structure tells us NOTHING about UL.
-      THE CUT: curvature strata and singularity refinements are microscopic and not UL-relevant.
-      Closure, junction degree, connectivity and the combinatorial map are class-level and are.
+      RE-CUT IN NOTE 038. The original cut was UWS versus UL, which assumed UWS structure is
+      arbitrary microscopic detail. UWS is a DERIVED notation, so its derived structure is a
+      CANDIDATE FOR the class-level structure rather than one realization among many.
+      THE CORRECT CUT IS DERIVED VERSUS CONVENTIONAL, INSIDE UWS: glyph-to-concept assignments and
+      the lexicon are conventional and are microscopic detail; the curvature classification, the
+      Erlangen survival ordering and the combinatorial map are DERIVED and are not.
+      ORIGINAL CUT, superseded: curvature strata and singularity refinements are microscopic and not
+      UL-relevant. Closure, junction degree, connectivity and the combinatorial map are class-level
+      and are.
       AND THE TWO COINCIDE WITH NOTE 032's FINDING: the metric and differential axes are exactly the
       underdetermined ones. The axes that are hard to pin down are precisely the ones that do not
       matter for UL — the difficulty and the irrelevance have the same cause.
@@ -2222,9 +2229,9 @@ claims:
 
   - id: SEMANTIC-FORMALISMS-USE-LABELS-NOT-ORDER
     statement: >
-      Independently developed semantic formalisms distinguish a vertex's edges by label rather than
-      by cyclic position, and spatial arrangement in semantic diagrams is secondary notation. The
-      rotation system does not appear as semantic structure outside UWS.
+      Conceptual Graphs distinguish a vertex's edges by label rather than by cyclic position, and
+      spatial arrangement in semantic diagrams is secondary notation. NARROWED from a claim about
+      formalisms in general.
     tier: ARGUED
     evidence: research/notes/034-bridge-test/README.md
     priority: 0
@@ -2233,8 +2240,17 @@ claims:
       rotation systems are semantically empty — see the steelman below. Do not cite as showing
       cyclic order is meaningless.
     notes: >
-      AMR: "rooted, directed acyclic graphs where vertices represent concepts and LABELLED arcs are
-      used to represent semantic relationships", with PropBank roles ARG0, ARG1, and — decisively —
+      NARROWED IN NOTE 038 — THE AMR EVIDENCE IS INADMISSIBLE AND THIS REPO ALREADY KNEW IT. The
+      research register records at D2-c that AMR is an "English-only corpus, English predicate
+      lexicon, English annotators" and that using it as universality evidence "would reproduce UNL's
+      single most documented failure mode", marked "NARROWED (near-miss caught)". The error was
+      caught once, recorded, and re-committed. AMR is an annotation convention for an English corpus,
+      not an attempt at universal structure, so "AMR uses labels" reflects its design purpose.
+      WHAT SURVIVES: Conceptual Graphs remain a legitimate data point. ONE formalism is not
+      "independently developed formalisms" — the plural was doing unearned work. The finding is real
+      and far weaker than originally recorded.
+      ORIGINAL EVIDENCE, retained for the record: AMR is "rooted, directed acyclic graphs where
+      vertices represent concepts and LABELLED arcs are used to represent semantic relationships", with PropBank roles ARG0, ARG1, and — decisively —
       "AMR annotation abstracts away from elements of surface syntactic structure such as WORD
       ORDER." Conceptual Graphs are the same family.
       Where node ordering does matter it is for "legible and informative tree layouts" and "visual
@@ -2362,7 +2378,20 @@ claims:
       KIND C, MODE OF ENGAGEMENT — the universal is relation, not content. Love, presence,
       participatory sense-making. Kinds B and C agree that A looks in the wrong place and disagree
       about where to look instead: structure versus relation.
-      THE CONSTRAINT THIS PLACES ON US: UWS is a kind-A project. The UL question became kind-B at
+      CORRECTED IN NOTE 038 — THE TAXONOMY COLLAPSED TWO INDEPENDENT DIMENSIONS. It is a GRID, not a
+      list: (what it is) notation / structure / relation, crossed with (how arrived at) invented /
+      derived / discovered. UWS is NOTATION x DERIVED, a cell the three-kind list had no room for, so
+      it was forced into notation x invented purely for being a notation. The criterion should have
+      been how the structure is ARRIVED AT, not what kind of object it is — which is exactly what
+      distinguishes UWS from Esperanto and Solresol, designed by taste.
+      CONSEQUENCE: the 300-year failure record below is a record of INVENTIONS failing. Whether a
+      DERIVED notation fares differently is UNTESTED, because nobody has derived one. That cell is
+      empty — neither good news nor bad, but the accurate statement.
+      EVIDENCE AGAINST THE ORIGINAL CLASSIFICATION, eleven notes long: 022 through 033 each DERIVE
+      UWS structure — curvature strata, Erlangen survival, junction axis, combinatorial map, table
+      projections. I filed UWS as invented while actively deriving it. "A constructed notation" in
+      the glossary is where the reading came from, but constructed does not mean arbitrary.
+      SUPERSEDED TEXT FOLLOWS: THE CONSTRAINT THIS PLACES ON US: UWS is a kind-A project. The UL question became kind-B at
       note 003, without the lineage being noticed. THIS IS THE CLEANEST EXPLANATION OF WHY NOTE 034
       FAILED — it tested a kind-B claim (does the structure appear independently?) against an
       artefact of kind-A work (the notation's fixed point). Kind-A artefacts are INVENTED; there is
