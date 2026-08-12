@@ -924,9 +924,10 @@ claims:
       What fails is THIS comparison. It does NOT show that geometry and ontology have unrelated
       structure, nor that cross-civilizational corroboration (S4) is unavailable in general.
     revival_condition: >
-      Run the geometric side from a source whose definitions are REAL and load-bearing — Hilbert's
-      Grundlagen or Tarski's axioms, where primitives and defined terms are explicitly separated and
-      definitions are used in proofs. Fine's essentialist criterion then supplies a principled
+      Run the geometric side from a source whose definitions are REAL and load-bearing. THREE live
+      options, per note 016: Hilbert's Grundlagen; Tarski's axioms; or — newly available and closest
+      to the notation's actual practice — EUCLID'S POSTULATES read constructively, which are
+      load-bearing where his definitions are not. Fine's essentialist criterion then supplies a principled
       bridge to ontological dependence. NOT cheap: requires real work on both sides.
     refutation_tier: "ARGUED — documented fact about the Elements plus a standard distinction in the dependence literature"
     notes: >
@@ -1329,6 +1330,13 @@ claims:
       Below the fixed point: many presentations, cardinality varies, no privileged choice
       (PRIMITIVE-SETS-ARE-GENERATING-SETS still holds there).
       At the fixed point: distinction (Jordan separation) and incidence. Small, derived, canonical.
+      TWO TRADITIONS, TWO CO-PRIMITIVES — the sharpest form, from note 016. The frameworks that pick
+      a SINGLE primitive pick either point (constructive: Euclid's postulates, straightedge-and-
+      compass) or region (point-free: Whitehead, Tarski's geometry of solids, points reconstructed
+      as concentric families of balls). Those are exactly the two co-survivors of the Erlangen
+      derivation. THE EXISTENCE OF TWO RIVAL TRADITIONS IS EXPLAINED BY THERE BEING TWO
+      CO-PRIMITIVES: each privileges one and derives the other, neither is wrong, neither is
+      complete alone.
       CO-PRIMITIVE, NOT A CHAIN — sharpened by note 015. Two independent routes agree that the base
       is a small co-primitive set rather than a descent from one root. (a) The Erlangen derivation
       (note 014) gives Point and Enclosure as CO-survivors at the fixed point, neither prior to the
@@ -1480,3 +1488,37 @@ claims:
       UNCHECKED LEADS: "compositional structure can emerge without generational transmission"
       (Cognition); compositionality and systematicity emerging in DEEP LINEAR NETWORKS (PNAS) — a
       substrate-independence datapoint owing nothing to agents playing games.
+
+  # ─── Constructive priority (added 2026-08, note 016) ───────────────────────
+
+  - id: CONSTRUCTIVE-PRIORITY-OF-POINT
+    statement: >
+      In the constructive framework — Euclid's postulates, straightedge-and-compass, drawing — the
+      point is prior: points are inputs and lines and circles are outputs. This is load-bearing in
+      Euclid, unlike the definitional ordering.
+    tier: ARGUED
+    evidence: research/notes/016-constructive-priority/README.md
+    priority: 0
+    scope: >
+      Holds in the CONSTRUCTIVE framework. Does NOT hold axiomatically — Hilbert and Tarski's plane
+      geometry take point and line as co-primitive — and is INVERTED in region-based/point-free
+      geometry (Whitehead, Tarski's geometry of solids), where regions are primitive and points are
+      reconstructed as concentric families of balls. Cite with the framework named.
+    notes: >
+      CORRECTS an overreach in note 015, which examined Euclid's DEFINITIONS (which do no work) and
+      concluded about Euclid entire. The POSTULATES do the work and are constructive: "Postulates 1,
+      2, 3 and 5 assert the existence and uniqueness of certain geometric figures, and these
+      assertions are of a constructive nature." Postulate 1 connects any two distinct POINTS with a
+      segment; Postulate 3 draws a circle with any POINT as centre.
+      The postulates "function as rules constraining what may be drawn in a diagram... the rules of
+      the game, not its opening positions." They ARE drawing rules — the pen-on-paper phenomenology
+      is what they formalize, not an analogy to it.
+      EVIDENCE TIER S1-1, not empirical. Inspecting what a construction procedure requires is not
+      measuring a system: it carries no operationalization dependence, so R2a/T10 do not apply. "You
+      cannot draw a line without first placing a point" is checkable by anyone and Euclid formalized
+      it as Postulate 1.
+      INSTRUMENT SELECTS THE PRESENTATION: stylus (contact area -> 0) gives point-first, i.e. Euclid;
+      brush or stamp (bounded first contact) gives region-first, i.e. Whitehead. Another instance of
+      PRIMITIVE-SETS-ARE-GENERATING-SETS — presentation-dependent below the fixed point.
+      PEN-UP IS THE UNMARKED STATE. unmarked -> mark -> generated structure is the opening of Laws of
+      Form, reached phenomenologically rather than philosophically. See ENCLOSURE-IS-DISTINCTION.
