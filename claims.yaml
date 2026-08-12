@@ -1781,6 +1781,11 @@ claims:
       DERIVED, not observed. The classification of notes 022 and 024 is a product of four axes —
       curvature, singularity, closure, junction degree — so a primitive is a CELL in a
       4-dimensional space. That space is the "super matrix"; a table is a projection of it.
+      CORRECTED BY NOTE 026: this treats all axes as the same kind, and they are not. SHAPE axes
+      (curvature, singularity, closure, junction) are properties of a configuration; TRANSFORMATION
+      axes (orientation, mirroring, scale, translation) are elements of a GROUP acting on
+      configurations. The C(n,2) count below applies to SHAPE AXES ONLY. The full structure is
+      (shape space) x (group) — a G-set, not an n-dimensional grid. See TWO-KINDS-OF-AXIS.
       TWO CONSEQUENCES FOLLOW IMMEDIATELY. (a) The number of 2D tables is C(n,2): six for four axes.
       (b) EVERY symbol appears in EVERY table, since a cell has a coordinate on each axis and
       projects into all of them at different positions with different neighbours. Recurrence across
@@ -1810,3 +1815,51 @@ claims:
       is not matching structure. Interesting only if an independent reason emerges why primitives
       should correspond to pairwise projections, and there is none. Note 017 recorded retrofitting
       such correspondences as this project's documented failure mode.
+
+  - id: TWO-KINDS-OF-AXIS
+    statement: >
+      Table axes are of two categorically different kinds: shape axes, which are properties of a
+      configuration, and transformation axes, which are elements of a group acting on it. The full
+      structure is a G-set, and coarse-graining is quotienting by the group.
+    tier: ARGUED
+    evidence: research/notes/026-transformation-axes/README.md
+    priority: 0
+    notes: >
+      SHAPE AXES: curvature, singularity, closure, junction degree — what the mark IS.
+      TRANSFORMATION AXES: orientation, mirroring, scale, translation — how the same mark is PLACED.
+      EXPLAINS THE HYPER-DIMENSIONALITY: rotation and scale are continuous, so crossing a discrete
+      shape classification with a continuous group produces unbounded blow-up. No enumeration
+      terminates because one factor is not finite.
+      EXPLAINS THE COLLAPSE, and unifies it with Erlangen: "invariant under G" MEANS "constant along
+      the G-directions", so the transformation axes are exactly what coarse-graining quotients away.
+      The Erlangen programme is not a separate tool applied to the tables — it IS the statement that
+      transformation axes are the ones to remove. Shape axes partially survive per notes 014 and 022;
+      transformation axes die entirely.
+      ONE OBJECT, TWO OPERATIONS: crossing with G explodes the table, quotienting by G collapses it
+      to the single indexed family of FIXED-POINT-IS-COMBINATORIAL-MAP.
+      NOTED, UNRESOLVED: an empirical UWS table used rows of periodic/open/closed, which blends the
+      periodicity value of the curvature axis with the closure axis — a diagonal through the derived
+      product rather than a coordinate of it. Neither decomposition is privileged, which is
+      PRIMITIVE-SETS-ARE-GENERATING-SETS applying at the level of AXES rather than primitives, for
+      the first time.
+
+  - id: NONSTRETCHABILITY-BOUNDS-DRAWING
+    statement: >
+      There exist combinatorial configurations that no straight-line drawing realizes, so the
+      combinatorial map is strictly more expressive than straightedge construction.
+    tier: ARGUED
+    evidence: research/notes/026-transformation-axes/README.md
+    priority: 0
+    notes: >
+      "The Pappus arrangement of 9 lines... is an arrangement of pseudolines which cannot be
+      straightened while preserving their face structure — called NONSTRETCHABLE."
+      THE FIRST CONCRETE EXPRESSIVENESS GAP FOUND. A face structure can be perfectly coherent as a
+      combinatorial map (FIXED-POINT-IS-COMBINATORIAL-MAP) and be undrawable with straight strokes.
+      Bears directly on Phase 3 A1, and arrived from the cross/X table rather than from the
+      constructibility literature.
+      CONTEXT: the cross/X exploration is the classification of LINE ARRANGEMENTS. "Each rank-3
+      oriented matroid is equivalent to an arrangement of pseudolines." Growth of simple
+      pseudoline arrangements with a marked cell (OEIS A006247), n=3 upward: 1, 2, 3, 16, 135, 3315,
+      158830, 14320182, 2343203071, ... reaching 366477801792538 at n=13, with enumeration beyond
+      that OPEN. An exploration that "gets very complex very fast" ran into an open enumeration
+      problem rather than into a lack of rigour.
