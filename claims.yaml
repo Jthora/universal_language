@@ -1064,7 +1064,19 @@ claims:
       MERGE vs DISSOLVE, formalized: merge is a fact about the partition; dissolve is failure of
       invariance under the group (kappa=const is not affine-invariant — an ellipse has non-constant
       Euclidean curvature).
-      TWO AXES ARE UNDERDETERMINED (note 032, audit). CURVATURE: P is a proper subset of V, since
+      CURVATURE AXIS REPAIRED (note 033). Note 032 called it underdetermined, which was too
+      pessimistic. The problem was the COORDINATES, not the axis: {Z,C,P,V} is a discretization
+      imposed on a function space, and function spaces have no canonical finite partition. But plane
+      curves carry canonical INTEGER invariants.
+      WHITNEY-GRAUSTEIN: "regular closed curves in the 2-plane are classified, up to regular
+      homotopy, by their ROTATION NUMBER" — two regular closed curves are regularly homotopic iff
+      their rotation numbers are equal. A COMPLETE classification by a single integer.
+      Also canonical: vertex count (curvature extrema), with the four-vertex theorem giving >= 4 for
+      a simple closed curve; and inflection count.
+      SO THE AXIS SHOULD BE INDEXED BY INTEGER INVARIANTS, NOT AD-HOC CLASSES. {Z,C,P,V} was a
+      guess; rotation number is a theorem. Re-deriving the axis on these coordinates is outstanding.
+      TWO AXES WERE UNDERDETERMINED (note 032, audit) — curvature now has a repair path; singularity
+      does not yet. CURVATURE: P is a proper subset of V, since
       periodic kappa is a special case of non-constant kappa — so {Z,C,P,V} is a partition with one
       arbitrary refinement inside it. And kappa has unboundedly many properties (monotonic, bounded,
       sign-definite, analytic, of bounded variation) with nothing selecting these four. This entry
@@ -2145,3 +2157,55 @@ claims:
       completeness criterion, which is why two axes are underdetermined and at least one was missed.
       The principled method is to derive axes from invariant theory level by level, which is what the
       Erlangen hierarchy is for. That derivation is outstanding.
+
+  - id: AXES-HAVE-DIFFERENT-TYPES
+    statement: >
+      The classification axes are of four different types — binary, discrete-unbounded, continuous,
+      and mixed — and the type determines whether an axis can sit in a finite grid and whether it
+      survives coarse-graining.
+    tier: ARGUED
+    evidence: research/notes/033-axis-types-and-ul-focus/README.md
+    priority: 0
+    notes: >
+      TYPES: closure is genuinely BINARY (a curve closes or it does not, no partial closure);
+      junction degree is DISCRETE UNBOUNDED (N); curvature is CONTINUOUS and infinite-dimensional
+      (kappa is a function, so the axis is a function space); singularity is MIXED (corner count in
+      N, positions continuous). Only one of four is binary.
+      STRUCTURAL CONSEQUENCE, which explains BINARY-AXES-ARE-HYPEROCTAHEDRAL without needing the
+      polytope argument: grids and polytopes need FINITE DISCRETE axes. Closure sits in a grid
+      cleanly; junction degree is unbounded and breaks any finite polytope; curvature enters a grid
+      only after discretization, which must be canonical or the grid is arbitrary.
+      THE DEEPER PATTERN: what survives coarse-graining is TOPOLOGICAL, and topological invariants
+      are typically DISCRETE — counts and classes. Metric structure is CONTINUOUS. So the fixed point
+      is discrete and the axes that die are continuous. This explains note 032's observation that the
+      underdetermined axes are the ones that do not matter: continuous axes are hard to stratify
+      canonically because they carry no canonical stratification, which is the same property that
+      makes coarse-graining discard them.
+
+  - id: UL-WORK-IS-FIXED-POINT-WORK
+    statement: >
+      Work on UWS bears on UL only where it concerns the coarse-graining fixed point. Work on metric
+      or differential detail is microscopic and, by universality, cannot generalize.
+    tier: ARGUED
+    evidence: research/notes/033-axis-types-and-ul-focus/README.md
+    priority: 0
+    notes: >
+      THE PROBLEM AT ITS SHARPEST: if UL is a universality class then microscopic details do not
+      determine the class — that is what universality means. So characterizing UWS's microscopic
+      structure tells us NOTHING about UL.
+      THE CUT: curvature strata and singularity refinements are microscopic and not UL-relevant.
+      Closure, junction degree, connectivity and the combinatorial map are class-level and are.
+      AND THE TWO COINCIDE WITH NOTE 032's FINDING: the metric and differential axes are exactly the
+      underdetermined ones. The axes that are hard to pin down are precisely the ones that do not
+      matter for UL — the difficulty and the irrelevance have the same cause.
+      HONEST ACCOUNTING: notes 022 and 032 spent real effort on curvature strata, which under this
+      criterion is one notation's microscopic detail. Partly misdirected. Not wholly — note 022's
+      derivation revealed that enclosure lives on a DIFFERENT axis from curvature, which produced the
+      fixed-point explanation. The payoff came from the boundary, not the strata.
+      ATTENTION AUDIT: 27 claims mention UWS, 4 mention UL. Heavily over-focused.
+      THE TEST FOR WHETHER SOMETHING IS UL WORK: a UL result should survive UWS being wrong.
+      THREE CONCRETE UL ITEMS, none requiring UWS to be correct: (1) does the combinatorial map
+      appear as a fixed point in systems that are NOT UWS — the bridge test; (2) identify G and H for
+      the order parameter, better placed now that note 026 supplied the group action; (3)
+      coarse-grain independently emerged protocols and check for shared invariants, the standing test
+      from note 010, still unrun.
