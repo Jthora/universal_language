@@ -88,7 +88,7 @@ These cannot be decomposed further. They are the phonemes of UL.
 **Geometric:** Open circle at a position. Same dimension 0 as the Point, but unfilled.  
 **Semantic:** OPEN SLOT — "something (to be determined)." A placeholder for an entity not yet committed.  
 **Sort:** Entity (e), specifically Gₑ_slot ⊂ Gₑ. The label x distinguishes which slot this is.  
-**Binding:** When `bind(e_x, a)` is applied, ○_x → ●_x (hollow becomes filled), establishing co-reference for all occurrences within the assertion's frame. See `formal-operations.md` §1.12.
+**Binding:** When `bind(e_x, a)` is applied, ○_x → ●_x (hollow becomes filled), establishing co-reference for all occurrences within the assertion's frame. See `ul-forge/crates/ul-core/src/composer.rs`.12.
 
 ### ─ — The Line
 ```
@@ -194,7 +194,7 @@ These cannot be decomposed further. They are the phonemes of UL.
 
 ### Frame Decoration Marks (Assertion Modification)
 
-Frame decorations modify the enclosure boundary without changing the content or truth status. They encode the speaker's epistemic relationship to the assertion via `modify_assertion(m, a)`. See `formal-operations.md` §1.13 and `formal-grammar.md` C13.
+Frame decorations modify the enclosure boundary without changing the content or truth status. They encode the speaker's epistemic relationship to the assertion via `modify_assertion(m, a)`. See `ul-forge/crates/ul-core/src/composer.rs`.13 and `formal-grammar.md` C13.
 
 | Boundary Style | Visual | Semantic | Modifier Type |
 |---------------|--------|----------|---------------|
@@ -301,8 +301,8 @@ Frame decorations modify the enclosure boundary without changing the content or 
 | **Ignorance** | ○{• ─∠180°─ ○{}} | Opposition (180°) between existence and empty concept |
 | **Freedom** | •↑ (point with unbounded upward ray) | Existence with unconstrained directed relation |
 | **Constraint** | □{•} | Existence bounded by structure |
-| **Possibility** | •╌╌• (dashed line) | Broken continuity = uncertain/hypothetical relation. Formal: ◇_R(a). See `formal-foundations.md` §7.5 |
-| **Necessity** | •━━• (bold/thick line) | Maximum visual weight = cannot be otherwise. Formal: □_R(a). See `formal-foundations.md` §7.4 |
+| **Possibility** | •╌╌• (dashed line) | Broken continuity = uncertain/hypothetical relation. Formal: ◇_R(a). See `claims.yaml` (retired) |
+| **Necessity** | •━━• (bold/thick line) | Maximum visual weight = cannot be otherwise. Formal: □_R(a). See `claims.yaml` (retired) |
 | **Infinity** | ○{○{○{...}}} | Self-nesting totality — completeness containing completeness |
 | **Unity** | • (single point) | Irreducible oneness |
 | **Duality** | •──∠180°──• | Two existences in opposition |
@@ -391,7 +391,7 @@ Derived from geometric scaling operations within the Glyph Space. These are the 
 | "Grammar" | □{→,→,→} | "Structured arrangement of directed rules" |
 | "Meaning" | ○{•} ─∠60°─ ○{•} | "Harmonious connection between two self-aware concepts" |
 | "Universal" | ○ (unqualified circle) | Maximum symmetry = applies in all contexts |
-| "Inference" | ⟹ | Pragmatic inference arrow — connects surface expression to intended/implicated meaning. Meta-syntactic: not a compositional operation but a notation for documenting inference rules (SI-1→3, CI-1→3). See formal-foundations.md §9. |
+| "Inference" | ⟹ | Pragmatic inference arrow — connects surface expression to intended/implicated meaning. Meta-syntactic: not a compositional operation but a notation for documenting inference rules (SI-1→3, CI-1→3). See (retired foundations) §9. |
 
 ---
 

@@ -389,7 +389,7 @@ GEOMETRIC REALIZATION:
 - ○_x must appear inside the assertion's frame before binding
 - After binding, all ○_x → ●_x within that frame (co-reference)
 - Nesting depth = scope ordering (outer frame = wider scope)
-- See `formal-operations.md` §1.12 and `formal-grammar.md` C12
+- See `ul-forge/crates/ul-core/src/composer.rs`.12 and `formal-grammar.md` C12
 
 ### 3.13 modify_assertion: m × a → a
 **"Apply a modifier to an assertion's frame boundary, encoding epistemic stance."**
@@ -427,11 +427,11 @@ GEOMETRIC REALIZATION:
 - The modifier applies to the frame as a whole, not to individual entities or relations
 - Content inside the frame is unchanged
 - Multiple modifications can compose (dotted + emphatic = "reportedly and certainly")
-- See `formal-operations.md` §1.13 and `formal-grammar.md` C13
+- See `ul-forge/crates/ul-core/src/composer.rs`.13 and `formal-grammar.md` C13
 
 ### 3.14 Modal Operators (Defined Patterns)
 
-> These are **defined abbreviations**, not new primitive operations. They compose existing operations into standard modal constructions. See `formal-foundations.md` §7.1–7.9 for formal definitions.
+> These are **defined abbreviations**, not new primitive operations. They compose existing operations into standard modal constructions. See `claims.yaml` (retired) for formal definitions.
 
 #### necessary(r_R, a): Necessity □_R
 
@@ -497,7 +497,7 @@ Modal operators nest: each takes assertion-in, assertion-out. Nesting depth is l
 
 ### 3.15 Performative Force Annotations
 
-> Force annotations set the **illocutionary force** on assertion frames — they determine whether a claim is stated, questioned, commanded, promised, expressed, or declared. Not new operations: 0 new primitives. See `formal-foundations.md` §8.1–8.7.
+> Force annotations set the **illocutionary force** on assertion frames — they determine whether a claim is stated, questioned, commanded, promised, expressed, or declared. Not new operations: 0 new primitives. See `claims.yaml` (retired)
 
 #### Notation: `φ[force]{content}`
 
@@ -529,7 +529,7 @@ Modal operators nest: each takes assertion-in, assertion-out. Nesting depth is l
 
 ### 3.16 Pragmatic Inference Notation
 
-> Pragmatic notation documents the gap between surface (literal) and intended (implicated) meaning. The inference arrow ⟹ is **meta-syntactic** — it annotates meaning relationships, not compositional content. See `formal-foundations.md` §9.1–9.6.
+> Pragmatic notation documents the gap between surface (literal) and intended (implicated) meaning. The inference arrow ⟹ is **meta-syntactic** — it annotates meaning relationships, not compositional content. See `claims.yaml` (retired)
 
 #### Notation: `surface ⟹ intended`
 
@@ -718,4 +718,4 @@ The **illocutionary force** φ ∈ {assert, query, direct, commit, express, decl
 | express | Wavy border (~~~) | Frame uses wavy lines |
 | declare | Bold double border (╔══╗) | Frame uses bold double lines |
 
-See `grammar-book.md` §VI-C for ASCII diagrams. See `formal-foundations.md` §8.1–8.7 for formal specification.
+See `grammar-book.md` §VI-C for ASCII diagrams. See `claims.yaml` (retired) for formal specification.

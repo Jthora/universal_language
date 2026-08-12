@@ -20,7 +20,7 @@ Raw per-page notes were written to scratch files (session-local, not preserved i
 
 | ID | Topic | Finding | Status |
 |---|---|---|---|
-| **A1** | Universal Language (hub page) | Restates the repo's Σ_UL verbatim (5 primitives / 4 sorts / 13 ops / 23 theorems) and **explicitly cites the GitHub repo + Zenodo DOI as canonical**. Not independent convergence — same project, two surfaces. | REFERENCE |
+| **A1** | Universal Language (hub page) | Restates the repo's retired Σ_UL signature verbatim and **explicitly cites the GitHub repo + Zenodo DOI as canonical**. Not independent convergence — same project, two surfaces. | REFERENCE |
 | **A2** | Universal Language Control Systems | Defines 𝒰 = (Σ, 𝒢, 𝒞): symbolic state space, generative grammar, control map 𝒞:Σ→𝒪(X), with 𝒞(s₁·s₂)=𝒞(s₁)∘𝒞(s₂), non-commutative. **Σ here ≠ Σ_UL** — same glyph, unrelated object. | REFERENCE |
 | **A3** | Universal Semantic Manifold | (ℳ, g, ∇) with Fisher metric, geodesics, Riemann tensor, Information Bottleneck. Densest math on the wiki. **Explicitly leaves dimensionality open**; never invokes Chentsov. | REFERENCE |
 | **A4** | Semantic Hilbert Space | **No concrete inner product, no basis, no completeness or separability treatment.** Nine open problems, first being "what is a semantic state?" RKHS gestured at but no kernel specified. | RETIRED (as foundation) |

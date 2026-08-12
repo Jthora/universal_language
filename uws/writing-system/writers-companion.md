@@ -226,7 +226,7 @@ The inner frame (sun rises) is shrunk and placed inline as an entity — this is
 
 ### 3.1 The Practical Problem
 
-The formal definitions (see `formal-operations.md`) specify exact angles and curvature functions. But you're writing with a pen on paper. You can't draw a mathematically precise 60° angle freehand. You don't need to.
+The formal definitions (see `ul-forge/crates/ul-core/src/composer.rs`. But you're writing with a pen on paper. You can't draw a mathematically precise 60° angle freehand. You don't need to.
 
 **Principle:** Handwriting operates at the **topological level** by default (connectivity and containment) with **exaggerated features** to signal when metric-level properties matter.
 
@@ -864,7 +864,7 @@ The word "is" in natural language is structurally ambiguous. UL forces you to pi
 
 ### 8.2 When Is a Frame Required?
 
-**Formal rule** (from `formal-operations.md`): An assertion (Gₐ) requires a Jordan domain — a closed bounding region.
+**Formal rule** (from `ul-forge/crates/ul-core/src/composer.rs`.
 
 **Practical rules for pen and paper:**
 
@@ -1005,7 +1005,7 @@ NOT (negate):               IF-THEN (implication):
 
 ### 9.3 Negation in Practice
 
-Negation is defined as **boundary inversion** — flipping the assertional sign σ ∈ {⊕, ⊖} (see `formal-operations.md` §1.4). In practice:
+Negation is defined as **boundary inversion** — flipping the assertional sign σ ∈ {⊕, ⊖} (see `ul-forge/crates/ul-core/src/composer.rs`.4). In practice:
 
 **Method 1 — Boundary flip (formal):** Change the frame boundary from solid (asserted, σ = ⊕) to dashed (denied, σ = ⊖). The content inside the frame is unchanged — only the assertion's sign is flipped.
 
@@ -1560,7 +1560,7 @@ negate(necessary(r_ability, negate(predicate(e_hearer, r_pass, e_salt))))[σ=⊕
 - Pass 3: The ⟹ arrow between frames marks a conventional inference, not a logical entailment.
 - Pass 4: Reading: Surface "Are you able to pass the salt?" conventionally infers directive "Pass the salt."
 
-**Teaching point:** CI-1 is the most common indirect speech act in human language. The ⟹ notation distinguishes conventional inference (culturally stable, compositionally predictable) from truly non-compositional phenomena like sarcasm (⚠️ scope boundary). See `formal-foundations.md` §9.4.
+**Teaching point:** CI-1 is the most common indirect speech act in human language. The ⟹ notation distinguishes conventional inference (culturally stable, compositionally predictable) from truly non-compositional phenomena like sarcasm (⚠️ scope boundary). See `claims.yaml` (retired)
 
 ### 10.14 Example 20: "The ball was kicked by the child" (Explicit Invert — Passive Voice)
 
@@ -1770,7 +1770,7 @@ After drawing, verify:
 
 ---
 
-## APPENDIX A: THE FOUR SORTS AT A GLANCE
+## APPENDIX A: THE SORTS AT A GLANCE
 
 | Sort | Symbol | What it IS | How to draw it | Example |
 |------|--------|-----------|----------------|---------|
@@ -1779,7 +1779,7 @@ After drawing, verify:
 | **Modifier (m)** | ∠θ | A quality/transformation | The angle between two strokes | ∠0° ∠60° ∠90° ∠180° |
 | **Assertion (a)** | [ ... ] | A complete claim | A closed frame around entities + relations | [•──→──•] |
 
-## APPENDIX B: THE 13 OPERATIONS AT A GLANCE
+## APPENDIX B: the composition operations AT A GLANCE
 
 | Operation | Signature | Plain English | How to draw it |
 |-----------|-----------|---------------|----------------|

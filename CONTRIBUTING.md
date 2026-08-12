@@ -142,7 +142,7 @@ UL Core documentation is in `uws/` — the 5 siblings + writing system.
 
 ### Style Guide
 
-- Cross-references use relative paths: `see [Symbology](symbology/symbol-map.md)`
+- Cross-references use relative paths: `see [Symbology](uws/symbology/symbol-map.md)`
 - Composition expressions use backtick code: `` `predicate(e₁, r, e₂) → a` ``
 - ASCII art diagrams for visual representations
 - **Do not state inventory counts.** Primitive, sort, and operation counts are properties of a

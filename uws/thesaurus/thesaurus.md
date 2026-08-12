@@ -288,7 +288,7 @@ The graduated `quantify` operation (p ∈ [0,1]) encodes quantificational force 
 
 ### Modal Semantic Pathways
 
-The defined modal operators (`formal-foundations.md` §7.4–7.6) create pathways between actual assertions and their modal counterparts. Modality = quantification over possible worlds via accessibility relations.
+The defined modal operators (`claims.yaml` (retired)) create pathways between actual assertions and their modal counterparts. Modality = quantification over possible worlds via accessibility relations.
 
 | Concept | UL Construction | Synonymous Expressions |
 |---------|----------------|----------------------|
@@ -382,7 +382,7 @@ Conventional inference patterns connecting surface meaning to intended meaning:
 - "A or B" → "not (A and B)" (SI-2: disjunction exclusivity)
 - "possible" → "not necessary" (SI-3: modal scale)
 
-**Scope boundary (⚠️):** Sarcasm and irony have representable structure (epistemic state ≠ asserted content) but detection requires non-compositional reasoning. See `formal-foundations.md` §9.5–9.6.
+**Scope boundary (⚠️):** Sarcasm and irony have representable structure (epistemic state ≠ asserted content) but detection requires non-compositional reasoning. See `claims.yaml` (retired)
 
 ---
 

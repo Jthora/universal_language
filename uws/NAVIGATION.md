@@ -55,7 +55,7 @@ Additionally:
 1. Symbology §II — What are the atomic symbols and their geometric properties?
 2. Grammar §II — How do symmetry groups determine parts of speech?
 3. Grammar §IV — How does the Erlangen hierarchy create layers of meaning?
-4. formal-foundations.md — The mathematical proofs (Σ_UL, embedding theorem, uniqueness)
+4. (formal foundations — retired; see `claims.yaml`)
 ```
 
 ### "I want to find SYNONYMS or related concepts"
@@ -136,7 +136,7 @@ Not all constructions in the 5 siblings are equally authoritative:
 A subtle but important distinction you'll encounter:
 
 - **G** = the geometric algebra (all geometric constructions in the plane)
-- **Σ_UL⁺** = the algebraic signature (4 sorts, 13 operations)
+- **Σ_UL⁺** = the retired algebraic signature (see `claims.yaml`)
 
 Most geometric features map cleanly to Σ_UL terms. But some geometric properties — particularly **enclosure boundary shapes** (triangle vs. hexagon) — are geometric-only features that enter Σ_UL indirectly through the modifier sort (via `abstract(e) → m`).
 
@@ -173,8 +173,8 @@ For a structured progression from zero to fluent UL composition, follow this 9-d
 
 ```
                   ┌───────────────────────────────────────┐
-                  │         formal-foundations.md           │
-                  │   (Σ_UL⁺: 4 sorts, 13 ops, proofs)    │
+                  │         (retired foundations)           │
+                  │   (retired signature)    │
                   └──────────────┬────────────────────────┘
                                  │
          ┌───────────┬───────────┼───────────┬────────────┐
@@ -199,4 +199,4 @@ For a structured progression from zero to fluent UL composition, follow this 9-d
 
 ```
 
-All 5 siblings derive from `formal-foundations.md` and are peers — none depends on another. Glyph Composition extends the system with the visual composition algebra and rendering pipeline. The Writing System and Writer's Companion synthesize all into practical procedures.
+All 5 siblings derive from `(retired foundations)` and are peers — none depends on another. Glyph Composition extends the system with the visual composition algebra and rendering pipeline. The Writing System and Writer's Companion synthesize all into practical procedures.

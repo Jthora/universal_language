@@ -54,7 +54,7 @@ Every entry carries one of three tier labels:
 Each entry provides:
 
 1. **Construction** — the geometric description (what you draw)
-2. **Σ_UL⁺** — the formal algebraic expression using the 13 operations on 4 sorts, OR "—" when the construction has no clean single-term Σ_UL⁺ expression (see §0.8)
+2. **Σ_UL⁺** — the formal algebraic expression using the composition operations on sorts, OR "—" when the construction has no clean single-term Σ_UL⁺ expression (see §0.8)
 3. **Geometric** — *(only when Σ_UL is "—")* the geometric characterization that stands in place of a formal expression
 4. **Tier** — T1, T2, or T3
 5. **Justification** — why this construction, at this tier
@@ -83,7 +83,7 @@ Entries are organized by **constructive level** — the minimum number of geomet
 
 ### 0.8 On Geometric vs. Algebraic Expressions
 
-The geometric system **G** (defined in formal-foundations.md §2.1) and the algebraic signature **Σ_UL** (§1.5) are different algebras connected by a structure-preserving homomorphism. They are NOT identical. This has consequences for lexicon entries:
+The geometric system **G**  and the algebraic signature **Σ_UL** (§1.5) are different algebras connected by a structure-preserving homomorphism. They are NOT identical. This has consequences for lexicon entries:
 
 - **Some geometric constructions have clean Σ_UL expressions.** Example: two entities connected by a directed relation = `predicate(e₁, r, e₂) → a`. These entries carry a **Σ_UL** expression.
 
@@ -91,7 +91,7 @@ The geometric system **G** (defined in formal-foundations.md §2.1) and the alge
 
 - **Some geometric constructions realize multiple sort-distinct operations.** Example: 180° rotation is ONE geometric angle but realizes THREE algebraically distinct operations on THREE different sorts (see §3.1.3). The lexicon entry must distinguish these carefully.
 
-The Unique Grounding Theorem (formal-foundations.md §4) guarantees that G embeds into any Σ_UL-algebra. But the embedding may require multiple operations and parameter choices — not every geometric form maps to a single algebraic term.
+But the embedding may require multiple operations and parameter choices — not every geometric form maps to a single algebraic term.
 
 ---
 
@@ -123,7 +123,7 @@ There are exactly 5 classes of construction at Level 1, corresponding to the 5 g
 | **Construction** | A single point in the glyph space: • |
 | **Σ_UL** | e₁ (an atomic entity) |
 | **Tier** | T1 — Geometrically Forced |
-| **Justification** | The unique construction consisting of exactly one instance of the simplest primitive. Point is Existence (Unique Grounding Theorem, formal-foundations.md §4.5). A single point is the minimum act of meaning: asserting that something IS. |
+| **Justification** | The unique construction consisting of exactly one instance of the simplest primitive. Point is Existence ((retired grounding argument), (retired foundations) §4.5). A single point is the minimum act of meaning: asserting that something IS. |
 | **Labels** | *Existence, Being, Something, "This is"* |
 
 ### 2.2 Single Line Segment
@@ -133,7 +133,7 @@ There are exactly 5 classes of construction at Level 1, corresponding to the 5 g
 | **Construction** | Two points connected by a straight segment: •──• |
 | **Σ_UL** | predicate(e₁, r, e₂) → a (the minimal assertion: subject + relation + object) |
 | **Tier** | T1 — Geometrically Forced |
-| **Justification** | A line requires exactly two points (Euclid Postulate 1). This is the unique minimal construction that introduces Relation. It is the simplest possible statement — two things connected. Line is Relation (Unique Grounding Theorem). This entry is also the geometric realization of the `predicate` operation — the most fundamental of the 13 Σ_UL operations. |
+| **Justification** | A line requires exactly two points (Euclid Postulate 1). This is the unique minimal construction that introduces Relation. It is the simplest possible statement — two things connected. Line is Relation ((retired grounding argument)). This entry is also the geometric realization of the `predicate` operation — the most fundamental of the 13 Σ_UL operations. |
 | **Labels** | *Relation, Connection, "This relates to that"* |
 
 ### 2.3 Single Directed Line (Ray)
@@ -153,7 +153,7 @@ There are exactly 5 classes of construction at Level 1, corresponding to the 5 g
 | **Construction** | Two rays sharing a vertex, with angle θ between them |
 | **Σ_UL** | modify_relation(m, r) → r', where m is parameterized by θ |
 | **Tier** | T1 (as a class) — Geometrically Forced |
-| **Justification** | An angle requires exactly two lines meeting at a point (Euclid Definition 8). The angle is the unique way to introduce Quality — the character of a relationship. Angle is Quality (Unique Grounding Theorem). The specific angle value θ parameterizes a continuous spectrum of quality. |
+| **Justification** | An angle requires exactly two lines meeting at a point (Euclid Definition 8). The angle is the unique way to introduce Quality — the character of a relationship. Angle is Quality ((retired grounding argument)). The specific angle value θ parameterizes a continuous spectrum of quality. |
 | **Labels** | *Quality, Character, Manner, "Relates in this way"* |
 
 **The distinguished values within this continuous spectrum are listed at Level 2 (§3.1), since each requires a specific geometric configuration.**
@@ -166,7 +166,7 @@ There are exactly 5 classes of construction at Level 1, corresponding to the 5 g
 | **Σ_UL** | — (the curvature profile κ(s) is geometric data, not an algebraic term; see §0.8) |
 | **Geometric** | A relation whose direction changes continuously along its length. The curvature κ(s) parameterizes the rate of change at each point. |
 | **Tier** | T1 — Geometrically Forced |
-| **Justification** | A curve is the unique primitive that introduces continuously varying direction. Where a line holds constant direction, a curve changes it. This is Process — the geometric basis of becoming, change, transformation. Curve is Process (Unique Grounding Theorem). |
+| **Justification** | A curve is the unique primitive that introduces continuously varying direction. Where a line holds constant direction, a curve changes it. This is Process — the geometric basis of becoming, change, transformation. Curve is Process ((retired grounding argument)). |
 | **Labels** | *Process, Change, Becoming, Transformation, "This becomes that through continuous change"* |
 
 ### 2.6 Single Enclosure (Empty)
@@ -177,7 +177,7 @@ There are exactly 5 classes of construction at Level 1, corresponding to the 5 g
 | **Σ_UL** | — (a boundary with empty interior; the closed-curve property is geometric) |
 | **Geometric** | A closed curve partitioning the plane into interior and exterior (Jordan Curve Theorem). The interior is empty. |
 | **Tier** | T1 — Geometrically Forced |
-| **Justification** | An enclosure requires a closed curve (Jordan Curve Theorem: partitions the plane into interior and exterior). The empty enclosure is the unique construction that introduces Concept without yet instantiating it. It is a definition with nothing defined — a category with no members. Enclosure is Concept (Unique Grounding Theorem). |
+| **Justification** | An enclosure requires a closed curve (Jordan Curve Theorem: partitions the plane into interior and exterior). The empty enclosure is the unique construction that introduces Concept without yet instantiating it. It is a definition with nothing defined — a category with no members. Enclosure is Concept ((retired grounding argument)). |
 | **Labels** | *Empty concept, Null set, Category without members, Potential* |
 
 **The specific shapes of enclosure (△, □, ⬠, ⬡, ○) are classified at Level 2 (§3.2), since each requires a specific boundary configuration.**
@@ -390,7 +390,7 @@ These two entries give the 11-operation primitives `modify_entity` and `modify_r
 | **Construction** | A transformation (modifier) applied to an entity glyph, altering its properties while preserving its identity as an entity |
 | **Σ_UL** | modify_entity(m, e) → e' |
 | **Tier** | T1 — Geometrically Forced |
-| **Justification** | One of the 13 primitive Σ_UL operations (formal-foundations.md §1.5). This is the geometric realization of qualification applied to entities: "the *large* point," "the *red* entity," "the *wooden* thing." Without this operation, modifiers cannot affect entities — every entity would be structurally identical except by position. Minimal: removing it makes the system unable to express modified entities. |
+| **Justification** | One of the 13 primitive Σ_UL operations (retired — see `claims.yaml`). This is the geometric realization of qualification applied to entities: "the *large* point," "the *red* entity," "the *wooden* thing." Without this operation, modifiers cannot affect entities — every entity would be structurally identical except by position. Minimal: removing it makes the system unable to express modified entities. |
 | **Labels** | *Qualification of entity, "the [adjective] thing", Entity transformation* |
 
 #### 3.5.2 — modify_relation (generic)
@@ -400,7 +400,7 @@ These two entries give the 11-operation primitives `modify_entity` and `modify_r
 | **Construction** | A transformation (modifier) applied to a relation, altering its quality while preserving its identity as a relation |
 | **Σ_UL** | modify_relation(m, r) → r' |
 | **Tier** | T1 — Geometrically Forced |
-| **Justification** | One of the 13 primitive Σ_UL operations (formal-foundations.md §1.5). The parameterized family of which the distinguished angle entries (§3.1.1–3.1.6) are specific instances. Geometrically: applying an angular modifier to a relation changes its character without changing its endpoints. Minimal: removing it makes the system unable to distinguish the quality of different relations ("loves" vs. "hates" vs. "ignores"). |
+| **Justification** | One of the 13 primitive Σ_UL operations (retired — see `claims.yaml`). The parameterized family of which the distinguished angle entries (§3.1.1–3.1.6) are specific instances. Geometrically: applying an angular modifier to a relation changes its character without changing its endpoints. Minimal: removing it makes the system unable to distinguish the quality of different relations ("loves" vs. "hates" vs. "ignores"). |
 | **Labels** | *Qualification of relation, "relates [adverb]", Relation transformation* |
 
 **Note:** Every distinguished angle entry in §3.1 is an instance of this operation with a specific modifier value. This entry captures the general pattern; those entries capture the structurally singular instances.
@@ -619,7 +619,7 @@ The 13 Σ_UL⁺ operations are themselves "words" in UL — they are the verbs o
 | 13 | `modify_assertion` | m × a → a | §6.7 (Assertion Modification — evidentiality, emphasis) | T1 |
 | — | `conjoin` (derived) | a × a → a | Row 5 above (derived from negate + disjoin) | T1 |
 
-All 13 operations are Tier 1 or Tier 2. None is conventional. This is expected — they are the primitive operations of the algebraic signature, proved minimal in formal-foundations.md §1.5.
+all composition operations are Tier 1 or Tier 2. None is conventional. This is expected — they are the primitive operations of the algebraic signature, proved minimal in (retired foundations) §1.5.
 
 ---
 
@@ -659,7 +659,7 @@ The following constructions appear in other siblings but are **not included here
 
 These entries remain in their sibling files as **examples and illustrations** — they are useful for showing how UL constructions work. But they are not canonical definitions. They are applications of the lexicon, not the lexicon itself.
 
-**Modal operators (□, ◇, □→) and illocutionary forces (φ):** Evaluated for inclusion in Pass 3. These are *defined operators*, not primitives — they are composed from existing operations plus distinguished elements (e.g., `□a = quantify(m_∀, bind(e_w, predicate(e_w, r_alethic, embed(a))))`). Since they require choosing distinguished elements (r_alethic, r_closeness, etc.) that are contextual rather than geometrically forced, they are T3 at best. Their definitions live in `formal-foundations.md` §7–8; their symbol notation in `symbol-map.md` §VII; their syntactic rules in `syntax-dictionary.md` §3.15–3.16. No lexicon entries are warranted.
+**Modal operators (□, ◇, □→) and illocutionary forces (φ):** Evaluated for inclusion in Pass 3. These are *defined operators*, not primitives — they are composed from existing operations plus distinguished elements (e.g., `□a = quantify(m_∀, bind(e_w, predicate(e_w, r_alethic, embed(a))))`). Since they require choosing distinguished elements (r_alethic, r_closeness, etc.) that are contextual rather than geometrically forced, they are T3 at best. Their definitions live in `claims.yaml` (retired); their symbol notation in `symbol-map.md` §VII; their syntactic rules in `syntax-dictionary.md` §3.15–3.16. No lexicon entries are warranted.
 
 ### 8.4 The Boundary Principle
 

@@ -35,7 +35,7 @@ If any drawing is valid, why isn't reading hopeless? Because of a mathematical f
 
 > **Decomposition Theorem (informal):** Every mark on a 2D surface is composed of instances of exactly 5 geometric primitives: points, lines, angles, curves, and enclosures.
 
-This isn't a claim about UL — it's a theorem about plane geometry (see `formal-foundations.md` §1 for formal treatment; the proof relies on standard results from differential topology applied to ℝ²). Any subset of ℝ² can be analyzed into:
+This isn't a claim about UL — it's a theorem about plane geometry (see `claims.yaml` (retired) for formal treatment; the proof relies on standard results from differential topology applied to ℝ²). Any subset of ℝ² can be analyzed into:
 - **Points** — where marks begin, end, intersect, or exist in isolation (0D features)
 - **Lines** — straight connections between points (1D features, zero curvature)
 - **Angles** — where two lines or curves meet at a vertex (relationship between 1D features)
@@ -53,7 +53,7 @@ This decomposition is what makes reading possible. You don't need to recognize t
 | Two strokes meeting | 2 lines + 1 angle + 3 points | A qualified relation — "something relates to something *in this way*" |
 | A wavy line | 2 points + 1 curve (with curvature profile) | A process — "something becomes something through change" |
 | A closed shape | N points + N lines/curves + 1 enclosure | A concept — "something is bounded/defined" |
-| A random scribble | Many points + many curves + possibly self-intersecting enclosures + many angles | A complex expression with all five primitives active |
+| A random scribble | Many points + many curves + possibly self-intersecting enclosures + many angles | A complex expression with every mark-feature active |
 
 ---
 
@@ -225,7 +225,7 @@ When reading a UL text, interpretation happens at three levels:
   - Each nested assertion → an `embed(a)` → entity operation
   - Each line connecting entities → a Relation (r)
   - Each angle between relations → a `modify_relation(m, r)` operation
-  - And so on for all 13 operations
+  - And so on for all composition operations
 - This is also objective given the structural decomposition. Two readers applying Σ_UL will produce the same formal expression.
 
 **Level 3: Contextual (What the expression REFERS TO in a domain)**
@@ -441,7 +441,7 @@ The reading procedure extracts geometric structure. To get a formal UL expressio
 | Hollow marks (○_x) replaced by filled marks (●_x) within a frame | `bind` | bind(e_x, a) → a |
 | Frame boundary styled (dotted, double, wavy) without content change | `modify_assertion` | modify_assertion(m, a) → a |
 
-**This mapping is exhaustive.** If the drawing contains geometric features not captured by these 13 operations, those features are either (a) reducible to combinations of these operations, or (b) evidence that UL's operation set is incomplete — which would be a genuine finding.
+**This mapping is exhaustive.** If the drawing contains geometric features not captured by these composition operations, those features are either (a) reducible to combinations of these operations, or (b) evidence that UL's operation set is incomplete — which would be a genuine finding.
 
 ### 7.3 Ambiguity and Resolution
 

@@ -8,7 +8,6 @@
 
 | # | Deliverable | File | Status |
 |---|------------|------|--------|
-| 0 | Project Critique | [CRITIQUE.md](CRITIQUE.md) | Complete — known errors, gaps, open questions, resolution log |
 | — | Navigation Guide | [NAVIGATION.md](NAVIGATION.md) | Quick-start paths, sibling cross-references, two-classification-system explanation |
 | — | Synthesis | [SYNTHESIS.md](SYNTHESIS.md) | **New** — how the 5-pipeline works, current capabilities, 10 expansion paths, strategic priorities |
 | 1 | Universal Symbology Map | [symbology/symbol-map.md](symbology/symbol-map.md) | Complete — cross-sibling refs, G≠Σ_UL note, tier labels on §V |
@@ -29,8 +28,7 @@ Every document in this directory derives ONLY from:
 |--------|-----------------|
 | 5 Geometric Primitives | Point, Line, Angle, Curve, Enclosure |
 | 5 Semantic Primitives | Existence, Relation, Quality, Process, Concept |
-| Unique Grounding Theorem | Point↔Existence, Line↔Relation, Angle↔Quality, Curve↔Process, Enclosure↔Concept |
-| Σ_UL⁺ Signature | 4 sorts (Entity, Relation, Modifier, Assertion), 13 operations |
+| Σ_UL⁺ Signature | sorts (Entity, Relation, Modifier, Assertion), composition operations |
 | Euclidean Postulates | 5 axioms → 5 grammatical rules |
 | Erlangen Program | Symmetry hierarchy → abstraction levels |
 | Jordan Curve Theorem | Closed curves partition space → categorization |

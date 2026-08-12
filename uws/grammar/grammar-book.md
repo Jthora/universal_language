@@ -215,7 +215,7 @@ This corresponds to the `predicate` operation: predicate(e₁, r, e₂) → a.
 
 ### Extending Sentences
 
-Every sentence can be extended via the 13 operations:
+Every sentence can be extended via the composition operations:
 
 | Extension | Operation | Example |
 |-----------|-----------|---------|
@@ -310,7 +310,7 @@ NOT (complement):            IF...THEN (containment):
 
 ### VI-B. Modal Grammar
 
-> **Reference:** Formal definitions in `formal-foundations.md` §7.1–7.9. This section describes the grammatical conventions for reading and writing modal constructions.
+> **Reference:** Formal definitions in `claims.yaml` (retired) This section describes the grammatical conventions for reading and writing modal constructions.
 
 Modal logic extends the logical grammar above with **world-enclosures** and **accessibility relations**. The key insight: modality is quantification over possible worlds, and UL already has the operations for quantification.
 
@@ -432,7 +432,7 @@ EXPRESSIVE:                 DECLARATIVE:
 
 **Composition with modals:** Modal operators (§VI-B) are force-transparent — they operate on content, not force. A modal nested inside a performative frame preserves the outer force.
 
-**See:** `formal-foundations.md` §8.1–8.7 for the formal specification, including FC1–FC4 composition rules.
+**See:** `claims.yaml` (retired) for the formal specification, including FC1–FC4 composition rules.
 
 ### VI-D. Pragmatic Inference Notation
 
@@ -455,7 +455,7 @@ Some expressions have a **conventional inference** from surface meaning to inten
 | **Conventional inference** (CI) | surface ⟹ intended | ability-query ⟹ directive |
 | **Disambiguation boundary** | all readings decomposable, context selects | sarcasm (sincere vs. ironic reading), scope ambiguity |
 
-The disambiguation boundary indicates that the compositional structure of all candidate readings IS expressible in UL. Selecting the intended reading from context is a parsing problem outside the algebra — structurally identical to scope ambiguity (Category 3, D2 ✅). See `formal-foundations.md` §9.5.
+The disambiguation boundary indicates that the compositional structure of all candidate readings IS expressible in UL. Selecting the intended reading from context is a parsing problem outside the algebra — structurally identical to scope ambiguity (Category 3, D2 ✅). See `claims.yaml` (retired)
 
 ---
 

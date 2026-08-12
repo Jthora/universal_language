@@ -15,7 +15,7 @@ THOUGHT
   ↓
 [1. SYMBOLOGY]  — Select atomic marks for each semantic element
   ↓                (○ for universal, △ for fundamental, → for directed relation, etc.)
-[2. SYNTAX]     — Compose marks using the 13 operations
+[2. SYNTAX]     — Compose marks using the composition operations
   ↓                (predicate, embed, modify, conjoin, negate, ...)
 [3. GRAMMAR]    — Verify the construction is geometrically justified
   ↓                (symmetry classification, Erlangen level, relationship class)
@@ -49,7 +49,7 @@ Each sibling answers exactly one question:
 | Sibling | Question | Answer type |
 |---------|----------|-------------|
 | Symbology | **What** marks exist? | Inventory (7 atomic, 100+ composed) |
-| Syntax | **How** do marks combine? | Rules (5 axioms, 13 operations, well-formedness) |
+| Syntax | **How** do marks combine? | Rules (5 axioms, composition operations, well-formedness) |
 | Grammar | **Why** do combinations mean things? | Classification (symmetry → part of speech, Erlangen → abstraction depth) |
 | Lexicon | **Which** constructions are authoritative? | Reference table (42 entries, 3 tiers) |
 | Thesaurus | **Where** are the related meanings? | Navigation map (5 Erlangen-level synonym classes) |
@@ -137,10 +137,10 @@ Apply operations:
 
 ### Theoretical Guarantees
 
-- **Expressive completeness:** The 13 operations can encode any finite semantic relationship (formal-foundations.md §1.5)
-- **Embedding theorem:** Any language embeds injectively into G (formal-foundations.md §3.3)
-- **Unique grounding:** The 5 primitive ↔ 5 semantic mappings are forced, not chosen (formal-foundations.md §4.5)
-- **Well-definedness:** All 13 operations are closed, total, deterministic, injective (formal-operations.md §§1.1–1.13)
+- **Expressive completeness:** the composition operations can encode any finite semantic relationship (retired — see `claims.yaml`)
+- **Embedding theorem:** Any language embeds injectively into G (retired — see `claims.yaml`)
+- **Unique grounding:** The 5 primitive ↔ 5 semantic mappings are forced, not chosen (retired — see `claims.yaml`)
+- **Well-definedness:** all composition operations are closed, total, deterministic, injective (see `ul-forge/crates/ul-core/src/composer.rs`)
 
 ---
 

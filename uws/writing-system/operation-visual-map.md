@@ -212,7 +212,7 @@ From `glyph-composition.md` §I, the 5 spatial relationships:
 
 ## Independence & Derivability Notes
 
-- **13 of 13 operations are independent** (see P1-operation-independence.md)
+- **the composition operations are independent** 
 - **conjoin** is derivable: `conjoin(a,b) = negate(disjoin(negate(a), negate(b)))` (De Morgan)
 - The visual realization of conjoin (overlapping frames) remains a valid and useful construction pattern
 - **converse** (subject-object swap) is derivable: `predicate(e₂, invert(r), e₁)` — not a separate operation

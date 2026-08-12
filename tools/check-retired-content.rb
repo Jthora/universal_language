@@ -41,6 +41,8 @@ ALLOWLIST = %w[
   FAILURES.md GLOSSARY.md claims.yaml CONTRIBUTING.md
   RESEARCH-PROTOCOL.md
   research/legacy-findings.md
+  research/what-is-actually-provable-2026-08.md
+  research/superseding-chomsky-and-the-primitive-question-2026-08.md
   research/postmortem-and-rebuild-2026-08.md
   research/wiki-comparison-2026-08.md
   research/reassessment-2026-08-purpose-anchored.md

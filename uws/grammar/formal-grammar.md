@@ -62,7 +62,7 @@ A **modifier** is a geometric transformation. Visually, modifiers appear as:
 - **Curve-shape transformation** on a connector (aspect: progressive/perfective/habitual)
 - **Stroke weight change** on a connector (manner: forceful/gentle)
 
-See `formal-operations.md` §5 for the full canonical modifier assignment table mapping semantic categories to Gₘ elements.
+See `ul-forge/crates/ul-core/src/composer.rs`.
 
 ### 2.4 Frames (Sort: Assertion)
 
@@ -135,8 +135,8 @@ Each construction rule corresponds to one Σ_UL operation. The rules are numbere
 - Scale: thicken/thin the connector stroke (manner: forceful/gentle)
 - Curve: change the path curvature (manner: quickly/slowly)
 - Style: change the stroke pattern (solid, wavy, etc.)
-- Translate: displace along temporal axis (tense: past/future; see formal-operations.md §5.1)
-- Shape: open arc (progressive), closed sub-frame (perfective), repeating wave (habitual), truncated (inchoative) (see formal-operations.md §5.2)
+- Translate: displace along temporal axis (tense: past/future; see `ul-forge/crates/ul-core/src/composer.rs`)
+- Shape: open arc (progressive), closed sub-frame (perfective), repeating wave (habitual), truncated (inchoative) (see `ul-forge/crates/ul-core/src/composer.rs`)
 
 **Result sort:** Relation (r) — same sort, modified form
 
@@ -319,7 +319,7 @@ Each construction rule corresponds to one Σ_UL operation. The rules are numbere
 - Entity scaled to point-like (p → 0⁺) = existential ("some/a")
 - Dashed frame + existential = negative universal ("none") — composed from C4 + C11
 
-**Graduated quantification:** The frame-fill proportion p ∈ [0,1] is continuous. See `formal-operations.md` §1.11 for the area-proportion formula and conventional p-ranges for natural language quantifiers.
+**Graduated quantification:** The frame-fill proportion p ∈ [0,1] is continuous. See `ul-forge/crates/ul-core/src/composer.rs`.11 for the area-proportion formula and conventional p-ranges for natural language quantifiers.
 
 **Result sort:** Assertion (a)
 
