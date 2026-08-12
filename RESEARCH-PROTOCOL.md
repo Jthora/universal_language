@@ -152,6 +152,13 @@ so you never have to settle how bad it is to act on them.
   building. The Leibniz/Wilkins/Solresol/Blissymbolics survey was the most informative crawl about
   UWS's prospects and it ran at note 37 of 43. **A field's graveyard is better documented than its
   frontier.**
+- **S13 — Pair every graveyard survey with a survivor survey.** S10 sends you to the failures, and
+  **a graveyard contains only the dead.** `045` surveyed ontology failure and derived a design rule
+  — *the Cure must be automatic* — from the causes of death alone. Two volleys later a primary read
+  found the **Gene Ontology**: sixty monthly releases, monotonous growth, no decay, and **manually
+  curated throughout.** The survivor falsified the rule. **The failure record tells you what kills;
+  only the survivors tell you what saves.** A design derived from failures alone optimizes against
+  the causes of death without ever learning the causes of life.
 - **S11 — Scope-before-cite.** One query on a source's own limitations *before* using it as evidence.
   AMR was cited as universality evidence twice, the second time after the repo had recorded it as
   English-only.

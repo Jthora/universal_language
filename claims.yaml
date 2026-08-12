@@ -391,9 +391,46 @@ claims:
     blocks: [SEMANTIC-EQUALITY, NEG-INVOLUTION]
 
   - id: UL-IS-EMERGENT-UNIVERSAL
+    scope_reviewed: [FIXED-POINT-IS-COMBINATORIAL-MAP, UL-WORK-IS-FIXED-POINT-WORK]   # hub 1 MATERIAL and accounted for — that hub is the ERLANGEN fixed point and this claim is the RG one; the separation is now written into this claim's own scope, and the hub's "not established as UL's fixed point" is precisely why it cannot be used as evidence here. hub 2 no effect on this claim's content — the withdrawal recorded there is DOWNSTREAM of this claim, which is the source of the withdrawn leg rather than a consumer of it.
     statement: "UL is an emergent universality class — structure arising reliably across substrates under coarse-graining — not a logically forced signature nor a convention."
     tier: CONJECTURED
-    falsified_by: "Independently emerged communication protocols show no shared invariants under progressive coarse-graining, or fall on a continuum rather than into discrete classes."
+    falsified_by: >
+      PRIMARY: no order parameter can be identified for the system. Universality classes are defined
+      AT A CRITICAL POINT, and class membership is set by dimensionality and ORDER-PARAMETER
+      SYMMETRY. With no order parameter there is no symmetry to break, no critical point and no
+      class — the claim is then not false but a CATEGORY ERROR, and should be RETIRED rather than
+      disconfirmed. Note 033's "identify G and H" is therefore not a refinement of this claim; it is
+      its HYPOTHESIS, and it has been open since 2026-08-01.
+      SECONDARY: independently emerged communication protocols show no shared invariants under
+      progressive coarse-graining, or fall on a continuum rather than into discrete classes.
+    scope: >
+      PRECONDITION MADE EXPLICIT 2026-08-12 (note 047), from a primary read of Ansanelli, "Critical
+      Exponents and the Renormalization Group" (2019). THE ANALOGY HAS A HYPOTHESIS AND THIS PROJECT
+      HAS NOT MET IT.
+      "The most important step to connect all the theory of the Renormalization Group with the phase
+      transitions in statistical mechanics is to identify the critical point with the fixed point of
+      the RG flow."
+      Away from criticality the block-spin transformation flows to TRIVIAL fixed points: above T_c
+      "the configuration looks more randomized"; below T_c the system "would go closer and closer to
+      the configuration with all the spins aligned". Only AT T_c does it hold still — "the
+      configuration does not suffer substantial changes ... the system has scale invariance ... So,
+      the correlation length diverges at this point."
+      CONSEQUENCE: coarse-graining has fixed points everywhere, and generically they carry NO
+      STRUCTURE. A non-trivial fixed point requires tuning to a critical point. "Structure survives
+      coarse-graining" is FALSE in general and true only at criticality.
+      AND DIMENSION IS A PRECONDITION, NOT A PARAMETER: "for d = 1 it fails completely: there is no
+      phase transition."
+      NOT MET HERE: no critical point, no order parameter, no diverging correlation length and no
+      tuning parameter has been identified for anything in this project.
+      CRITICAL SEPARATION — TWO DIFFERENT FIXED POINTS HAVE BEEN RUNNING TOGETHER UNDER ONE WORD.
+      (i) The ERLANGEN fixed point: what survives an increasing tower of transformation groups. It
+      rests on theorems (Jordan, Whitney-Graustein, Heffter-Edmonds), needs NO critical point, and
+      has a genuinely non-trivial limit. Notes 014, 022, 024, 032 and 046 depend on NONE of the
+      physics.
+      (ii) The RG fixed point: a universality class, which needs all of the above.
+      THIS CLAIM IS (ii). FIXED-POINT-IS-COMBINATORIAL-MAP IS (i). They are not the same object and
+      neither supports the other. See UL-WORK-IS-FIXED-POINT-WORK, which used (ii) to justify a
+      criterion it then applied to (i).
     evidence: research/framework/emergent-universality.md
     notes: >
       Corrects a level error. Three kinds of universality were collapsed into two — logical necessity
@@ -2108,6 +2145,24 @@ claims:
       Justin found all seven in 1986, Huzita's 1991 list of six was incomplete, and Hatori recovered
       the seventh in 2001. Six was an enumeration error, not a structure. Dismissal was predicted in
       advance (note 028 section 1).
+      COMPLETENESS SCOPED 2026-08-12 (note 047). "The complete set" IS A THEOREM OVER A STATED
+      DOMAIN, NOT A DEFINITION — and the count moved again after the sentence quoted above was
+      written. LUCERO (2017) ADDED AN EIGHTH, found "after enumerating all possible incidences
+      between constructible points and lines on a plane": "exhaustive analysis of all possible
+      incidences reveals a set of eight elementary operations." The domain is the precondition —
+      incidences among CONSTRUCTIBLE points and lines, IN THE PLANE.
+      WHY THIS MATTERS BEYOND THE CORRECTION: this project retired a primitive count as "legacy
+      numbers" because it was chosen rather than derived. Origami is the case where a count WAS
+      derived, by exhaustive enumeration over an explicitly stated domain, AND IT STILL MOVED 7 -> 8
+      when the domain was re-examined. A derived count is a count PLUS a domain specification, and is
+      exactly as stable as that specification. FIXED-POINT-TABLE-IS-CANONICAL should be held to that
+      standard.
+      AND THE EIGHTH AXIOM HAS OUR SHAPE: it "does not create a new line" but is "needed in actual
+      paper folding when it is required to fold a layer of paper along a line marked on the layer
+      immediately below" — real in the physical practice, null in the construction algebra. That is
+      precisely the status of the DEGREE-1 FREE END that note 024 derived and found unnamed in the
+      inventory. An independent field enumerated its operations and found the same kind of gap in the
+      same place, which is a reason to register the free end rather than a curiosity.
 
   # ─── Phase 4 decisions (added 2026-08, note 029) ───────────────────────────
 
@@ -2333,15 +2388,30 @@ claims:
       makes coarse-graining discard them.
 
   - id: UL-WORK-IS-FIXED-POINT-WORK
+    scope_reviewed: [UL-IS-EMERGENT-UNIVERSAL]   # MATERIAL — one of this claim's two legs is withdrawn; see the 2026-08-12 correction in notes below
     statement: >
-      Work on UWS bears on UL only where it concerns the coarse-graining fixed point. Work on metric
-      or differential detail is microscopic and, by universality, cannot generalize.
+      Work on UWS bears on UL only where it concerns the coarse-graining fixed point. Metric and
+      differential detail dies before that fixed point — which is a theorem. That it therefore
+      "cannot generalize to UL" was an inference from universality and is WITHDRAWN.
     tier: ARGUED
     evidence: research/notes/033-axis-types-and-ul-focus/README.md
+    scope: >
+      ONE LEG WITHDRAWN 2026-08-12 (note 047). This claim rested on two supports and only one holds.
+      SURVIVES — THE ERLANGEN LEG: curvature and other metric/differential structure do not survive
+      the transformation-group tower. That is derived (note 022) and machine-checked, and it needs
+      nothing from physics.
+      WITHDRAWN — THE UNIVERSALITY LEG: "therefore it cannot generalize to UL". That step read
+      "microscopic details do not determine the class" off UL-IS-EMERGENT-UNIVERSAL, whose
+      precondition — a critical point and an order parameter — IS UNMET. A claim with an unmet
+      hypothesis cannot be used to demote other work.
+      CONSEQUENCE, RECORDED BECAUSE IT IS THE THIRD MOVE ON THIS ITEM: the curvature-axis repair
+      (note 033) was demoted twice by this criterion. It is NO LONGER EXCLUDED ON PRINCIPLE. It is
+      simply not a priority — which is a scheduling judgement, not a structural one.
     notes: >
-      THE PROBLEM AT ITS SHARPEST: if UL is a universality class then microscopic details do not
-      determine the class — that is what universality means. So characterizing UWS's microscopic
-      structure tells us NOTHING about UL.
+      THE PROBLEM AS ORIGINALLY STATED, retained to show what was withdrawn: if UL is a universality
+      class then microscopic details do not determine the class — that is what universality means.
+      So characterizing UWS's microscopic structure tells us NOTHING about UL. THE ANTECEDENT IS NOT
+      ESTABLISHED, so the conditional does not fire.
       RE-CUT IN NOTE 038. The original cut was UWS versus UL, which assumed UWS structure is
       arbitrary microscopic detail. UWS is a DERIVED notation, so its derived structure is a
       CANDIDATE FOR the class-level structure rather than one realization among many.
@@ -2442,7 +2512,29 @@ claims:
       equivalent and mutually incompatible, so labelling breaks S_n. A rotation system is invariant
       under relabelling and fixes only an orientation, so it breaks Z/2. The gap grows factorially:
       6, 24, 720, 40320 against 2.
-      FORMAL HOME, and it developed independently of notation: Other-Play is "a method of preventing
+      CITATION CORRECTED 2026-08-12 (note 047), from a primary read of Hu, Lerer, Peysakhovich &
+      Foerster, "Other-Play for Zero-Shot Coordination" (ICML 2020), section 4.
+      "FORMAL HOME" WAS TOO STRONG AND IS WITHDRAWN. Other-Play's symmetry class is defined over the
+      ENVIRONMENT, not over a label alphabet: "Each element of Phi is a bijection of each of S, O,
+      and A onto itself, such that it leaves the Dec-POMDP unchanged." The S_n-versus-Z/2 count is
+      OURS and inherits no authority from that paper.
+      BUT THE LINK TO LABELLING IS THEIRS, NOT OUR ANALOGY — predicted the wrong way round. The paper
+      grounds the symmetry group in the ABSENCE of labels: "These symmetries are the 'payoff
+      irrelevant' parts of the Dec-POMDP. They come from the fact that the actions and states in the
+      Dec-POMDP do not come with labels", and "Note that OP does not use any action labels." The
+      zero-shot setting is DEFINED by their absence: focal points "are grounded in exogenous
+      features, action labels, that are meaningful due to a prior shared context. The zero-shot
+      coordination setting thus is a special form of the tacit coordination problem in which there
+      are no shared exogenous features between the different agents."
+      THE MECHANISM, QUANTIFIED, FROM THE LEVER GAME: nine levers paying 1.0, symmetric and
+      interchangeable, and one paying 0.9, uniquely identifiable. "Picking one of the 1.0 levers
+      leads to 0.11 expected return. By contrast, OP suggests the choice of the 0.9 lever." Choosing
+      among n symmetric options pays 1/n; taking a WORSE but uniquely identifiable option pays 0.9 —
+      an eight-fold gap from arbitrary symmetry-breaking alone. That is this claim's mechanism
+      demonstrated numerically in an unrelated field: a rotation system beats a label alphabet not
+      because it is better, but because it is not one of n! equivalent choices.
+      NET: the claim's SUBSTANCE is stronger than recorded and its CITATION was weaker. Both fixed.
+      ORIGINAL WORDING, retained for the record — it developed independently of notation: Other-Play is "a method of preventing
       conventions that rely on arbitrarily breaking the symmetries of the setting", and the named
       failure mode is agents "arbitrarily converging on one out of many equivalent but mutually
       incompatible policies" — which is exactly the idioglossia of
@@ -2570,12 +2662,22 @@ claims:
       asymmetry as Pearl's hierarchy in CURE-MONITORS-COUPLING-NOT-CONSISTENCY.
 
   - id: GENETIC-CODE-IS-CONSTRAINED-NOT-DETERMINED
+    scope_reviewed: [UL-IS-EMERGENT-UNIVERSAL]   # MATERIAL — the "emergent-universality position instantiated" reading is withdrawn; see the 2026-08-12 correction in scope below
     statement: >
       The genetic code — the only empirically existing near-universal code — is strongly constrained
-      by selection yet not uniquely determined, which is the emergent-universality position
-      instantiated and a caution about how much any derivation could ever pin down.
+      by selection yet not uniquely determined: a caution about how much any derivation could ever
+      pin down.
     tier: ARGUED
     evidence: research/notes/037-the-universal-language-landscape/README.md
+    scope: >
+      NARROWED 2026-08-12 (note 047). The original statement read this as "the emergent-universality
+      position instantiated". THAT READING IS WITHDRAWN. UL-IS-EMERGENT-UNIVERSAL's precondition —
+      a critical point, an order parameter, a diverging correlation length — is unmet, and the
+      genetic code meets it no better: it is a FROZEN ACCIDENT REFINED BY SELECTION, not a system
+      tuned to criticality. It is not an instance of a universality class and cannot serve as one.
+      WHAT SURVIVES, and it is the substantive part: strongly constrained yet not uniquely
+      determined. That supports "CONSTRAINED BUT CONTINGENT", which is a weaker and different
+      proposition than "a universality class", and it is independent of the RG analogy entirely.
     notes: >
       CONSTRAINED: "the probability to reach the same level of error minimization as in the standard
       genetic code by random permutation of codons is below 10^-6" — the one-in-a-million result. It
@@ -2613,14 +2715,38 @@ claims:
 
   - id: CURE-MUST-BE-AUTOMATIC
     statement: >
-      The Cure must operate without a human steward. The documented dominant failure of comparable
-      systems is not undetected drift but unperformed maintenance, so any design requiring human
-      action inherits that failure directly.
-    tier: ARGUED
-    evidence: research/notes/045-volley1-graveyards/README.md
+      The Cure is designed to operate without a human steward — not because human involvement causes
+      failure, but because a sustaining institution is the scarce resource, and a design that
+      requires one will only work where one already exists.
+    tier: DESIGN-CHOICE
+    evidence: research/notes/047-volley3-primaries/README.md
     priority: 0
+    rationale: >
+      The documented dominant failure of comparable systems is unperformed maintenance rather than
+      undetected drift. Automation substitutes for the institution whose ABSENCE is what the failure
+      record actually indicts. This is a reason to prefer automation. It is NOT a proof that
+      automation is necessary, and the claim was registered at ARGUED on exactly that overreach.
+    alternatives_considered:
+      - "human-in-the-loop repair with a designated steward (rejected NOT as unworkable — the Gene Ontology proves it works — but as unavailable: it presupposes funded, sustained curation that most deployments will never have)"
+      - "periodic manual reconciliation on a schedule (rejected: this is the exact practice the failure record describes as decaying to 'in practice no maintenance at all' once attention moves on; it is the unstewarded version of the GO process, with the institution removed)"
+      - "no maintenance layer at all, treating drift as acceptable (rejected: 'little visibility into drift' is a cited contributing cause of failure, and this is the residue the Cure legitimately addresses)"
     notes: >
-      DERIVED FROM THE FAILURE RECORD (Volley 1, note 045), not from preference. "Without a steward
+      CORRECTED 2026-08-12 (note 047) — THE DERIVATION WAS INVALID AND A PRIMARY READ FALSIFIED IT
+      ONE DAY AFTER REGISTRATION. The claim was registered at priority 0 on seven search-summary
+      quotations with NO primary read, in the volley immediately after note 044 promoted S8. See
+      FAILURES.md F-030.
+      THE COUNTEREXAMPLE: the Gene Ontology, sixty monthly releases January 2008 to December 2012
+      (PLOS ONE, open access). "Number of classes and relations increased monotonously" — classes
+      +50%, relations +85%. Sustained by "active curation" and "continuous evolution": MANUAL
+      curation, curators making monthly release decisions. FIVE YEARS, NO STALENESS, NO DECAY.
+      WHAT THAT KILLS: the original inference, "any human-in-the-loop step inherits the documented
+      failure." It does not follow. The failure literature shows that ABSENCE OF A SUSTAINING
+      INSTITUTION kills an ontology; it does not show that HUMAN INVOLVEMENT does. The operative
+      variable is institutional sustainment, not automation.
+      METHOD FINDING: a graveyard contains only the dead. Note 045 ran S10 and derived a design rule
+      from failures alone, never asking who SURVIVED. Earns S13 — pair every graveyard survey with a
+      survivor survey.
+      ORIGINAL EVIDENCE, retained for the record and no longer load-bearing. "Without a steward
       and regular reconciliation, ontology models become stale within two quarters" — "a governance
       problem that has defeated a generation of master-data programs." "Common failures are cultural
       and organizational rather than technical." "Once deployed, the ontology enters a maintenance
@@ -2633,8 +2759,8 @@ claims:
       WHAT SURVIVES: "little visibility into drift" is cited as a contributing cause, which is
       exactly what the Cure addresses.
       CONSISTENCY CHECK: CURE-IS-COMPARATOR is compatible with full automation — a comparator against
-      a fixed anchor needs no steward. A human-in-the-loop repair step would NOT be, and must be
-      excluded by design rather than deferred.
+      a fixed anchor needs no steward. A human-in-the-loop repair step is now DISPREFERRED rather
+      than "excluded by design"; the earlier wording asserted a necessity the evidence does not carry.
       SCOPE WARNING AIMED AT THIS PROJECT, recorded without softening: "scope creep, where teams
       attempt to model all of reality before deployment, typically causes projects to fail after a
       year."

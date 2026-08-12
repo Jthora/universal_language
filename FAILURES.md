@@ -680,3 +680,28 @@ on a novelty claim, which is too late and too narrow; S12 fires when the term en
 Absence of a word is visible and prompts a search; presence of a word feels like knowledge and
 suppresses one. **The words we have already adopted are the least likely to be looked up and,
 because we adopted them for a reason, the most likely to lead somewhere.**
+
+## F-030 — S8 was violated one volley after being promoted, and the claim it produced was false
+**Date:** 2026-08-12
+**What happened:** `044` ranked **S8 — read one primary before registering a priority-0 claim** as the
+highest expected yield per query in the entire research plan, on the record that four primary reads
+had changed a claim four times out of four. **In the very next volley I registered
+`CURE-MUST-BE-AUTOMATIC` at priority 0, tier ARGUED, on seven search-summary quotations and no
+primary read.**
+**Why it matters beyond the instance:** the claim was **wrong**, and wrong in a way one read exposed.
+It inferred *"any human-in-the-loop step inherits the documented failure"* from a graveyard of
+ontology projects. The Gene Ontology — sixty monthly releases, classes +50%, relations +85%,
+sustained by **manual curation** — is a human-in-the-loop process that did not fail. **The failure
+record indicts the absence of a sustaining institution, not the presence of humans.**
+**How it was caught:** running Volley 3 as planned, and auditing which priority-0 claims rested on
+summaries **before** reading anything. The audit named the violation; the primary read killed the
+claim. **Not by re-reading the claim, which sounded fine.**
+**Fix:** claim demoted ARGUED → DESIGN-CHOICE and rewritten; **S13** added — pair every graveyard
+survey with a survivor survey.
+**The generalizable point, and it is about how rules fail here:** the rule was not forgotten. It was
+**written, ranked first, and argued for in the same document**, one volley before being broken. **A
+rule stated in a plan does not fire at the moment of writing a claim** — nothing in the act of
+registering `CURE-MUST-BE-AUTOMATIC` pointed back at `044`. This is F-019's shape (rules not applied
+retroactively) turned forward: **rules are not applied prospectively either, unless something in the
+authoring path enforces them.** The tier contract in `check-claims.rb` is the only thing in this repo
+that fires at authoring time, and it checks *shape*, not *provenance*.
