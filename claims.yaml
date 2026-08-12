@@ -1025,13 +1025,39 @@ claims:
 
   - id: KAPPA-STRATIFICATION
     statement: >
-      The UWS primitives are a stratification of plane-curve curvature-function space, and the
-      collapse relations between alternative primitive sets are theorems of that stratification
-      rather than observations about it.
+      The UWS primitives are cells in a PRODUCT of three independent classifications — curvature
+      (metric), singularity structure (differential), and closure (topological) — not strata of a
+      single curvature space. Collapse relations are partition coarsenings; loss under a group is
+      failure of invariance. These are distinct.
     tier: ARGUED
-    evidence: research/framework/provable-geometry.md
+    evidence: research/notes/022-phase2-derivations/README.md
     priority: 0
     notes: >
+      DERIVED in note 022, having been asserted in prose since note 005. The derivation CORRECTED
+      the framing: three of the six primitives are not regular C2 curves at all (Angle has a corner,
+      Enclosure is a global closure condition, Point is 0-dimensional), so the space cannot be
+      curvature functions alone. The classification is a product of three axes:
+      AXIS 1 curvature (metric, local): Z (kappa=0), C (kappa=const!=0), P (non-constant periodic),
+      V (non-constant aperiodic).
+      AXIS 2 singularities (differential, local): S0 none, S+ finitely many corners.
+      AXIS 3 closure (topological, global): O open, L closed.
+      Cells: Line (Z,S0,O); Circle (C,S0,L); Wave (P,S0,O); Curve (V,S0,O); Angle (Z,S+,O);
+      ENCLOSURE (.,.,L) — axis 3 ALONE, curvature unconstrained.
+      THE RESULT, and it explains ERLANGEN-SURVIVAL-RANKING rather than merely agreeing with it:
+      Enclosure is defined by axis 3 only and Point is not in the space at all, so the two survivors
+      are exactly the primitives NOT defined by curvature conditions. Coarse-graining discards metric
+      structure first, then differential, retaining topological — so the axes die in that order and
+      survival is determined by which axis a primitive lives on.
+      COLLAPSES AS THEOREMS: Wave/Curve differ only by periodicity within "kappa non-constant", so a
+      partition that does not resolve periodicity merges them — they are siblings, not nested.
+      Angle/Line differ ONLY on axis 2, so forgetting the singularity set merges them, which is
+      exactly what topological coarse-graining does.
+      MERGE vs DISSOLVE, formalized: merge is a fact about the partition; dissolve is failure of
+      invariance under the group (kappa=const is not affine-invariant — an ellipse has non-constant
+      Euclidean curvature).
+      LIMITS: no particular primitive set (4a, 4b, 5, 6) is derived as canonical, and none is
+      claimed. Periodicity requires a domain long enough to exhibit a period; undefined for short
+      arcs. Tier remains ARGUED — hand derivation; VERIFIED needs a proof assistant.
       Fundamental Theorem of Plane Curves: a smooth curvature function kappa(s) plus initial
       conditions determines a unique arc-length curve, and two unit-speed plane curves with equal
       curvature differ only by a Euclidean motion. A plane curve IS its curvature function up to
@@ -1081,9 +1107,21 @@ claims:
     evidence: research/framework/provable-geometry.md
     priority: 0
     notes: >
-      Jordan Curve Theorem: a simple closed curve separates the plane into inside and outside.
-      Spencer-Brown's Laws of Form opens by drawing a distinction as a boundary, marked from
-      unmarked. Same object. This is the first FORMAL link between the framework's philosophical
+      SPLIT IN NOTE 022. Two things had been bundled and only one survives.
+      RETAINED — Jordan Curve Theorem: a simple closed curve separates the plane into exactly two
+      connected components, one bounded and one unbounded, with the curve as their common boundary.
+      This is the axis-3 condition of KAPPA-STRATIFICATION and it commits to no logic.
+      WITHDRAWN — the identification with Spencer-Brown's primary algebra. "The primary algebra is
+      essentially isomorphic with classical propositional calculus"; Spencer-Brown "ended up with an
+      algebra that later writers showed to be the Boolean algebra of two elements." Its crossing
+      axiom is INVOLUTIVE, which is the double-negation elimination that
+      NOTATION-LOGIC-IS-INTUITIONISTIC rules out. Adopting the LoF calculus would make the notation
+      classical — the same conflict as NEG-INVOLUTION, from a different direction.
+      FURTHER CAVEAT weakening it in both directions: some scholars hold LoF is "not isomorphic to
+      Boolean Algebra" given representational differences, with "a many-to-one map from Boolean
+      Algebra to LoF". So it is not a clean isomorphism either way, which is an additional reason not
+      to rest Layer 0 on it.
+      LAYER 0 AS DISTINCTION SURVIVES; LAYER 0 AS SPENCER-BROWN'S CALCULUS DOES NOT. This is the first FORMAL link between the framework's philosophical
       floor and its geometric inventory — previously they sat adjacent with nothing connecting
       them. Consequence: if a semantic fixed point exists, what sits at it is distinction and
       incidence, not a five- or six-element primitive inventory.

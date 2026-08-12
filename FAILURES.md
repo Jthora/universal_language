@@ -536,3 +536,25 @@ a theorem I had just introduced.
 negatives, **five were over-broad as recorded** — Zadrozny, TopSim, the dependency test, Rice, and
 double-negation elimination. Two held with refinements (Löb, Plump), one was inverted into a
 prediction (Evans & Levinson), one stands (Newman).
+
+---
+
+## F-024 — a recurring pull toward classical formalisms
+**Date:** 2026-08-01
+**The pattern:** twice in three notes I adopted a structure that turns out to be **classical**,
+without noticing, in a project that has committed to an **intuitionistic** logic.
+- **F-022 / note 020:** `NEG-INVOLUTION` asserted double-negation elimination as a universal law.
+- **Note 022:** `ENCLOSURE-IS-DISTINCTION` identified enclosure with Spencer-Brown's mark. *"The
+  primary algebra is essentially isomorphic with classical propositional calculus."* LoF's crossing
+  axiom is **involutive** — DNE again, arriving from a different direction.
+**Why it will keep happening:** Boolean framings are the default in most of the material this project
+draws on — logic, algebra, formal semantics, systems theory. **Importing one is the path of least
+resistance**, and neither instance announced itself as a logical commitment. Both looked like
+structural observations.
+**What survived each time:** the *topological* or *structural* content, once separated from the
+*calculus* built on it. Jordan separation holds; the Boolean algebra over it does not. That split is
+available generally and is the right move rather than abandoning the underlying observation.
+**Standing check this establishes:** **when adopting an external formalism, ask whether it is
+classical before adopting it.** Specifically: does it have an involution? Does it assume excluded
+middle or a two-valued semantics? A formalism can be imported as *structure* while declining its
+*logic*, but that has to be a deliberate act rather than an oversight.

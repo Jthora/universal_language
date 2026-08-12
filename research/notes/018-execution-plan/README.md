@@ -79,6 +79,8 @@ adversarial search logged.
 
 ## Phase 2 — Discharge the prose-asserted claims
 
+**STATUS: CLOSED 2026-08-01** — note `022`. Both derived; both changed on derivation.
+
 | Item | Output tier | Notes |
 |---|---|---|
 | **C1** κ-stratification as a partition lattice, collapses as theorems | ARGUED | VERIFIED needs a proof assistant |
