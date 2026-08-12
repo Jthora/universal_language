@@ -1064,6 +1064,17 @@ claims:
       MERGE vs DISSOLVE, formalized: merge is a fact about the partition; dissolve is failure of
       invariance under the group (kappa=const is not affine-invariant — an ellipse has non-constant
       Euclidean curvature).
+      TWO AXES ARE UNDERDETERMINED (note 032, audit). CURVATURE: P is a proper subset of V, since
+      periodic kappa is a special case of non-constant kappa — so {Z,C,P,V} is a partition with one
+      arbitrary refinement inside it. And kappa has unboundedly many properties (monotonic, bounded,
+      sign-definite, analytic, of bounded variation) with nothing selecting these four. This entry
+      derived that primitives ARE strata of kappa-space; it never derived WHICH strata.
+      SINGULARITY: S+ lumps every singular case together and could refine by count of corners, order
+      of discontinuity, or isolation. Binary is a choice, not a result.
+      WHY THIS DOES NOT PROPAGATE: the two underdetermined axes are the METRIC and DIFFERENTIAL ones
+      — exactly the axes that die under coarse-graining. Nothing at the fixed point depends on them.
+      That is not luck: metric structure has no canonical stratification, which is the same reason
+      coarse-graining discards it.
       LIMITS: no particular primitive set (4a, 4b, 5, 6) is derived as canonical, and none is
       claimed. Periodicity requires a domain long enough to exhibit a period; undefined for short
       arcs. Tier remains ARGUED — hand derivation; VERIFIED needs a proof assistant.
@@ -1752,9 +1763,19 @@ claims:
     evidence: research/notes/024-junction-axis/README.md
     priority: 0
     scope: >
-      ERLANGEN-SURVIVAL-RANKING and note 014 asked which SINGLE-CURVE primitives survive, and that
-      computation stands for single curves. This claim concerns CONFIGURATIONS, which is what a
-      notation actually is. Do not read the two as competing.
+      SCOPED 2026-08 (note 032) — CONNECTED CONFIGURATIONS ONLY. Heffter-Edmonds is stated for a
+      CONNECTED graph, and this entry quoted that sentence verbatim including the word "connected"
+      while stating the result without it. See FAILURES.md F-025.
+      FOR DISCONNECTED CONFIGURATIONS THE ROTATION SYSTEM DOES NOT DETERMINE AN EMBEDDING. The
+      relative NESTING of components — which component lies inside which face of another — is
+      information the map does not carry. Face tracing treats each component as embedded on its own
+      sphere: two disjoint triangles trace FOUR faces rather than the three they bound in the plane,
+      and chi = 2c rather than 2. Verified as a test,
+      map::tests::degree_sequence_cannot_see_connectivity.
+      CONSEQUENCE: a notation with more than one stroke is disconnected by default, so this claim
+      does not cover the general case. It remains complete for connected configurations.
+      ALSO: ERLANGEN-SURVIVAL-RANKING and note 014 asked which SINGLE-CURVE primitives survive, and
+      that computation stands for single curves. Do not read the two as competing.
     notes: >
       Heffter-Edmonds principle: "every embedding of a connected graph on an orientable surface is
       uniquely determined up to equivalence by its rotation system", and that cyclic order
@@ -2100,3 +2121,27 @@ claims:
       reference to any octahedral structure, the polytope question was asked afterwards, and it could
       have returned negative. The guard against note 017's documented failure mode is that the answer
       is CONDITIONAL and names its own obstruction rather than being a bare numerical match.
+
+  - id: CONNECTIVITY-AXIS-MISSING
+    statement: >
+      Connectivity — the number of components — is a topological axis absent from the classification,
+      independent of degree sequence, and not recoverable from the combinatorial map for disconnected
+      configurations.
+    tier: ARGUED
+    evidence: research/notes/032-axis-audit/README.md
+    priority: 0
+    notes: >
+      A hexagon and two disjoint triangles have the SAME degree sequence [2,2,2,2,2,2], the same
+      vertex count and the same edge count. No existing axis distinguishes them. Verified as a test:
+      map::tests::degree_sequence_cannot_see_connectivity.
+      WORSE THAN A MISSING AXIS: for disconnected configurations the rotation system does not
+      determine an embedding at all, because relative nesting is not carried. See the scope now
+      attached to FIXED-POINT-IS-COMBINATORIAL-MAP.
+      SECOND LIKELY OMISSION, not yet derived: ORIENTATION CLASS. Mirror-image configurations are
+      distinguishable under an orientation-preserving group and identified under one including
+      reflection. Note 024 observed the map is determined "up to reflection" and never made that an
+      axis.
+      METHOD PROBLEM UNDERNEATH: the axes were LISTED by inspection, not DERIVED. Inspection has no
+      completeness criterion, which is why two axes are underdetermined and at least one was missed.
+      The principled method is to derive axes from invariant theory level by level, which is what the
+      Erlangen hierarchy is for. That derivation is outstanding.

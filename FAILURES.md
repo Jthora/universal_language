@@ -558,3 +558,29 @@ available generally and is the right move rather than abandoning the underlying 
 classical before adopting it.** Specifically: does it have an involution? Does it assume excluded
 middle or a two-valued semantics? A formalism can be imported as *structure* while declining its
 *logic*, but that has to be a deliberate act rather than an oversight.
+
+---
+
+## F-025 — scope dropped from a theorem quoted verbatim in the same entry
+**Date:** 2026-08-01
+**What happened:** `FIXED-POINT-IS-COMBINATORIAL-MAP` states that the combinatorial map is the
+complete topological invariant for configurations. **Its own notes quote the theorem as: *"every
+embedding of a **connected** graph on an orientable surface is uniquely determined up to equivalence
+by its rotation system."*** The word *connected* is present in the quotation and absent from the
+claim.
+**What follows:** for **disconnected** configurations the rotation system does **not** determine an
+embedding. The relative *nesting* of components — which component lies inside which face of another
+— is information the map does not carry. Face tracing treats each component as embedded on its own
+sphere: **two disjoint triangles trace four faces**, not the three they bound in the plane, and
+`χ = 2c` rather than 2.
+**Why it matters:** a notation with more than one stroke is disconnected by default, so the
+unscoped claim covered almost nothing it was being used for.
+**How it was found:** by **writing a test**, not by rereading the claim. The test was aimed at a
+different question — whether connectivity is independent of degree sequence — and failed with 4
+faces where 3 were expected. The code was correct; the expectation encoded the unscoped claim.
+**The generalizable failure:** this is T8 — check the target is inside the theorem's scope — failing
+**on a scope condition I had transcribed myself.** Quoting a qualifier is not the same as applying
+it, and having the correct sentence in the same paragraph provided no protection at all.
+**What worked:** executable checks catch what rereading does not. `ENCLOSURE-IS-DISTINCTION` became a
+test in note 030 and passed; this one became a test in note 032 and failed. **The tests that fail are
+the ones worth writing**, and neither would have been found by further argument.

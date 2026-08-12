@@ -283,6 +283,57 @@ mod tests {
         assert_eq!(m.genus(), Some(1), "genus 1 — the torus");
     }
 
+    /// Two disjoint triangles, as one map.
+    fn two_triangles() -> CombinatorialMap {
+        // Edges 0,1,2 form triangle A on v0..v2; edges 3,4,5 form triangle B on v3..v5.
+        let mut rotations: Vec<(NodeId, Vec<Dart>)> = Vec::new();
+        for (base, off) in [(0usize, 0usize), (3, 3)] {
+            for i in 0..3 {
+                let v = base + i;
+                let outgoing = 2 * (off + i);
+                let incoming = 2 * (off + (i + 2) % 3) + 1;
+                rotations.push((format!("v{v}"), vec![outgoing, incoming]));
+            }
+        }
+        CombinatorialMap::from_rotations(rotations, 12)
+    }
+
+    #[test]
+    fn degree_sequence_cannot_see_connectivity() {
+        // A hexagon and two disjoint triangles have the SAME degree sequence.
+        // Connectivity is therefore an axis the junction axis does not capture —
+        // see research/notes/032-axis-audit/.
+        let hex = cycle(6);
+        let tris = two_triangles();
+        assert_eq!(
+            hex.degree_sequence(),
+            tris.degree_sequence(),
+            "same degree sequence: [2;6]"
+        );
+        assert_eq!(hex.vertices().len(), tris.vertices().len());
+        assert_eq!(hex.edge_count(), tris.edge_count());
+
+        // The face counts do distinguish them — but NOT in the way a planar reading expects.
+        assert_eq!(hex.faces().len(), 2, "hexagon: inside and outside");
+        assert_eq!(
+            tris.faces().len(),
+            4,
+            "two triangles trace FOUR faces, not three: the map treats each component as \
+             embedded on its own sphere, so the two 'outside' faces are never identified"
+        );
+        assert_eq!(hex.euler_characteristic(), 2, "connected planar: chi = 2");
+        assert_eq!(
+            tris.euler_characteristic(),
+            4,
+            "chi = 2c for c components — two separate spheres, not one plane"
+        );
+        // Heffter-Edmonds is stated for CONNECTED graphs. For a disconnected configuration the
+        // rotation system does not determine a single-surface embedding: the relative nesting of
+        // components is information the map does not carry. See FAILURES.md F-025.
+        assert_eq!(hex.genus(), Some(0));
+        assert_eq!(tris.genus(), None, "genus formula does not apply to a disconnected map");
+    }
+
     #[test]
     fn origin_labels_survive_construction() {
         let m = theta(vec![1, 5, 3]);
