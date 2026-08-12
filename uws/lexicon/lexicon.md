@@ -517,7 +517,7 @@ An entity placed inside an enclosure is the simplest construction that gives Con
 | **Construction** | A complete sentence frame with its boundary style flipped (solid → dashed or dashed → solid) |
 | **Σ_UL** | negate(a) → a' |
 | **Tier** | T1 — Geometrically Forced |
-| **Justification** | Boundary inversion is an involution (flipping twice returns to the original) and satisfies all four required properties: N1 (involution), N2 (contradiction), N3 (excluded middle), N4 (De Morgan). The boundary's connected/disconnected topology is a genuine geometric property. Content is unchanged — only the assertional sign flips. Solid boundary = asserted; dashed boundary = denied. This replaces the previous reflection-based definition, which was incorrect (see `research/legacy-findings.md`). |
+| **Justification** | Boundary inversion is an involution (flipping twice returns to the original) and satisfies all four required properties: N1 (involution), N2 (contradiction), N3 (excluded middle), N4 (De Morgan). The boundary's connected/disconnected topology is a genuine geometric property. Content is unchanged — only the assertional sign flips. Solid boundary = asserted; dashed boundary = denied. This replaces the previous reflection-based definition, which was incorrect . |
 | **Labels** | *Not, Negation, Denial, "it is not the case that"* |
 
 ---

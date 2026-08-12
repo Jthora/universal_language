@@ -193,7 +193,7 @@ Each path is **already latent** in the formal structure — implied by the mathe
 | Hyperbolic | Infinitely many | Many-to-many mapping | Fluid, perspectival |
 | Elliptic | None | All concepts maximally related | Dense, holistic |
 
-**Why it works:** The embedding and grounding theorems are **conjectured to be** metric-independent. A detailed analysis (`research/legacy-findings.md` §A2) confirms the grounding theorem is geometry-independent but flags the embedding theorem's use of angle density in [0, 2π) as a Euclidean-specific step that needs verification under alternative geometries. Changing the geometry changes what analogies are possible, not whether meaning can be expressed.
+**Why it works:** The embedding and grounding theorems are **conjectured to be** metric-independent. A detailed analysis  confirms the grounding theorem is geometry-independent but flags the embedding theorem's use of angle density in [0, 2π) as a Euclidean-specific step that needs verification under alternative geometries. Changing the geometry changes what analogies are possible, not whether meaning can be expressed.
 
 **Impact:** Hyperbolic UL might feel more like natural language (multiple metaphors for the same concept).
 
