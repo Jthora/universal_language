@@ -142,6 +142,19 @@ that can't be articulated, the claim isn't understood well enough to kill.
 
 ---
 
+### R8 — Adversarially check your own proposals, not only inherited claims
+
+R1 covers findings you encounter. **It does not cover tests and methods you invent**, and those carry
+the same failure modes — a proposal is a claim about what a test would show.
+
+**Worked example:** the Euclid/Aristotle/Vaiśeṣika dependency-order test was proposed, registered at
+priority 0, and promoted for a dozen turns as *"cheap, non-circular, decisive either way."* One
+search found it ill-posed on three independent grounds. Every claim taken from the literature had
+been adversarially checked; a test of my own design had not.
+
+**Before promoting a test:** search against its premises. Does the source say what you think? Are the
+two things being compared the same kind of thing?
+
 ### R7 — Apply every new rule retroactively before applying it forward
 
 A rule that governs only new work **grandfathers in the foundational decisions** — the ones that

@@ -426,3 +426,30 @@ anywhere in the repo needs one adversarial search, oldest and most load-bearing 
 **Second-order, and worth recording honestly:** the protocol worked once pointed at the right target
 — the challenge was raised, the search was a single query, the answer was unambiguous. The mechanism
 functions. It had a blind spot for its own back-catalogue.
+
+---
+
+## F-020 — the adversarial-search rule covered inherited claims but not my own proposals
+**Date:** 2026-08-01
+**What happened:** the Euclid/Aristotle/Vaiśeṣika dependency-order test was proposed in note 004,
+promoted across a dozen turns as *"cheap, non-circular, decisive either way"* and *"the replacement
+for the retired grounding argument,"* and registered at priority 0. **It is ill-posed, and one search
+showed it.**
+**Three independent defects, any one sufficient:** (a) *"Euclid never refers to the first nine
+definitions… to justify steps in his proofs"* — those nine are exactly the ones the test needs, so
+their ordering is expository rather than derived; (b) definitional and ontological dependence are
+distinct relations, bridged (per Fine) only through **real** definitions, where Euclid's function as
+**nominal**; (c) Aristotle himself distinguishes definitional from ontological priority, so
+collapsing them misreads the source. And even granting all three, a chain of depth ≥4 is not
+isomorphic to a fan of depth 2.
+**The generalizable failure:** **R1 mandates adversarial search on negatives. Nothing mandated it on
+my own positive proposals.** Every claim inherited from the literature got the discipline; a test I
+invented did not, despite carrying the same failure modes — I had assumed the comparison was
+well-formed, which is a scope error of exactly the family in F-017.
+**Standing rule this establishes (R8):** **adversarially check your own proposed tests and methods
+before promoting them.** A proposal is a claim about what a test would show. Cost is identical to
+any other adversarial search.
+**What was salvaged:** attempting the revival produced a real result. Hilbert and Tarski take point
+and line as **both primitive and undefined** — co-primitive, no ordering — which converges with the
+Erlangen derivation's finding that Point and Enclosure are **co-survivors**. Two independent routes
+agree the base is a small co-primitive set, not a descent from one root.

@@ -917,23 +917,36 @@ claims:
     statement: >
       The dependency ordering of Euclid's geometric definitions is isomorphic to the dependency
       orderings of independently developed ontological category systems (Aristotle, Vaisesika).
-    tier: CONJECTURED
-    falsified_by: >
-      Formalize all three as partial orders and check for isomorphism. If the orderings do not
-      match, the geometry-to-meaning path loses its only non-circular support and must be argued
-      some other way.
-    evidence: research/framework/cross-substrate-grammar.md
-    priority: 0
+    tier: RETIRED
+    superseded_by: research/notes/015-dependency-order-test/README.md
+    formalization: "Euclid's Elements Book I definitional sequence as the geometric side (R3)"
+    scope: >
+      What fails is THIS comparison. It does NOT show that geometry and ontology have unrelated
+      structure, nor that cross-civilizational corroboration (S4) is unavailable in general.
+    revival_condition: >
+      Run the geometric side from a source whose definitions are REAL and load-bearing — Hilbert's
+      Grundlagen or Tarski's axioms, where primitives and defined terms are explicitly separated and
+      definitions are used in proofs. Fine's essentialist criterion then supplies a principled
+      bridge to ontological dependence. NOT cheap: requires real work on both sides.
+    refutation_tier: "ARGUED — documented fact about the Elements plus a standard distinction in the dependence literature"
     notes: >
-      This is the replacement for the RETIRED Unique Grounding Theorem, and it is non-circular where
-      that was circular. The old theorem defined semantic primitives to mirror geometric ones
-      already chosen. Here both sides are fixed independently and in advance: Euclid's definitional
-      dependency graph is a fact about a text written for geometry (point -> line -> angle ->
-      enclosure), and the substance-first orderings of Aristotle and Vaisesika (guna and karma
-      inhere in dravya) are facts about texts written for ontology. Neither was constructed to match
-      the other. Cheap to run and decisive in both directions.
-
-  # ─── Provable geometry (added 2026-08, "prove it don't test it" pass) ───────
+      THREE INDEPENDENT DEFECTS, any one sufficient.
+      (1) "Euclid never refers to the first nine definitions, or to any other descriptive
+      definitions, to justify steps in his proofs." Those nine — point, line, extremities, straight
+      line, surface, plane surface — are exactly the ones this test needs. They are descriptive
+      prefatory material and do no mathematical work, so their ordering is EXPOSITORY, not derived.
+      (2) Definitional and ontological dependence are different relations. Fine's essentialist
+      account bridges them only via REAL definitions ("states what the defined object is") as
+      opposed to NOMINAL ones ("what a competent speaker understands"). Euclid's function as
+      nominal.
+      (3) Aristotle himself distinguishes definitional priority (Categories 12, Metaphysics 5.11)
+      from ontological priority, so collapsing them misreads the source. Vaisesika differs again:
+      samavaya (inherence) is itself a category, with no counterpart in either other system.
+      AND even granting all three, the orders are not isomorphic: Euclid gives a CHAIN of depth >=4,
+      Aristotle and Vaisesika give FANS of depth 2. Shared structure reduces to "has a unique
+      minimal element," which is far too weak to carry anything.
+      See FAILURES.md F-020 — promoted for a dozen turns without one adversarial search, because R1
+      governed inherited claims and not my own proposals.
 
   - id: KAPPA-STRATIFICATION
     statement: >
@@ -1316,6 +1329,13 @@ claims:
       Below the fixed point: many presentations, cardinality varies, no privileged choice
       (PRIMITIVE-SETS-ARE-GENERATING-SETS still holds there).
       At the fixed point: distinction (Jordan separation) and incidence. Small, derived, canonical.
+      CO-PRIMITIVE, NOT A CHAIN — sharpened by note 015. Two independent routes agree that the base
+      is a small co-primitive set rather than a descent from one root. (a) The Erlangen derivation
+      (note 014) gives Point and Enclosure as CO-survivors at the fixed point, neither prior to the
+      other. (b) Modern axiomatizations — Hilbert's Grundlagen, Tarski — take point and line as BOTH
+      primitive and undefined, so there is no "point precedes line" ordering. Euclid's point-first
+      sequence is expository and is not reproduced by axiomatic geometry. The "everything descends
+      from the point" picture is not a mathematical result.
       METHODOLOGICAL CONVERGENCE worth acting on: the symmetry-grid approach to symbol tables and
       the Landau G/H derivation of the order parameter are the same move from two directions. If a
       symmetry group generates the table, the group determines its contents. "Which symbol table"

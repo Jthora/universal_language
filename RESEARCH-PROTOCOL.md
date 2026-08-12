@@ -94,6 +94,11 @@ Full text: `research/method/negative-results.md`. **Normative.**
   meets the same evidentiary bar as one that advances it.
 - **R6 — State the steelman before the kill.** What would have to be true for the positive to
   survive? If you can't articulate it, you don't understand the claim well enough to kill it.
+- **R8 — Adversarially check your own proposals, not only inherited claims.** A test you designed
+  is a claim about what that test would show, and carries the same failure modes. **The
+  Euclid/Aristotle dependency test was promoted for a dozen turns as "cheap and decisive" and was
+  ill-posed; one query showed it.** R1 governed claims from the literature; nothing governed my own.
+  See F-020.
 - **R7 — Apply every new rule retroactively before applying it forward.** A rule that governs only
   new work grandfathers in the foundational decisions — which predate the discipline and carry the
   most downstream leverage. **Zadrozny was the most load-bearing negative in this project and never
@@ -200,6 +205,7 @@ Before recording any finding that closes a line of work:
 - [ ] **R3** Named what failed — the claim, or one formalization of it?
 - [ ] **R4** Wrote a revival condition
 - [ ] **R6** Stated the steelman
+- [ ] **R8** If this is my own proposal — searched against it too
 - [ ] **T5** Checked whether the objects are mathematical
 - [ ] **T6** Gave it the same scrutiny as the last positive finding
 - [ ] **T9** Checked the theorem proves the conclusion, not just something adjacent
@@ -207,7 +213,7 @@ Before recording any finding that closes a line of work:
       objection regardless of direction
 - [ ] **S7** Logged whether counter-evidence was easy or hard to find
 
-Ten boxes. If you can't tick them, you haven't finished the finding.
+Eleven boxes. If you can't tick them, you haven't finished the finding.
 
 ---
 

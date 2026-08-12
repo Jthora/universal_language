@@ -222,8 +222,11 @@ otherwise the privileging is stipulation and the structural claim inherits Newma
    relations as theorems. Closes the primitive question permanently.
 2. **Erlangen survival table** — compute rigorously. Yields the robustness ranking and the anchor.
 3. **Enclosure ≅ Jordan ≅ distinction** — prove it. Links Layer 0 to the geometry formally.
-4. **Dependency-order isomorphism** — Euclid vs Aristotle vs Vaiśeṣika as partial orders. Non-circular,
-   decisive either way, and satisfies S4 (three civilizations, two millennia, no common editor).
+4. ~~**Dependency-order isomorphism** — Euclid vs Aristotle vs Vaiśeṣika.~~ **RETIRED, note `015`** —
+   ill-posed. Euclid's first nine definitions are never used in his proofs, so their ordering is
+   expository rather than derived, and definitional dependence is not ontological dependence.
+   **Live form:** re-run the geometric side from Hilbert or Tarski, where definitions are real and
+   load-bearing. Not cheap.
 
 ### Tier 2 — Architecture forced by the obstructions
 5. **Löb decision** — Cure external to and stronger than what it repairs. Write it down before code.
@@ -244,5 +247,8 @@ otherwise the privileging is stipulation and the structural claim inherits Newma
 - Split the `Modifier` sort so distinct function shapes stop type-checking identically
 - A CI checker for `claims.yaml` — the tiers are still conventions without enforcement
 
-**First move:** #4. Tier-1 evidence, cheap, non-circular, decisive in both directions, and it is the
-replacement for the retired grounding argument.
+**First move:** #1 or #2 — formalize what `014` began. The dependency-order test that previously held
+this slot was retired in `015`; its replacement is real work rather than an afternoon.
+
+**Standing under R7:** every negative currently cited here needs one adversarial search, oldest and
+most load-bearing first. That sweep has already overturned Zadrozny and TopSim.
