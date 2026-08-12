@@ -641,3 +641,23 @@ object does *not* fit **before** sorting anything by it. A framework introduced 
 motion has never been checked against anything — and unlike a claim, a *framing* silently determines
 what every subsequent claim means. Had `037` asked "what would show UWS is not kind A?", the
 answer — eleven notes deriving its structure — was already in the repository.
+
+---
+
+## F-028 — a duplicate YAML key silently discarded a scope review
+**Date:** 2026-08-12
+**What happened:** recording a second `scope_reviewed` on `ROTATION-MINIMIZES-CONVENTION` produced
+**two `scope_reviewed:` keys in one claim block.** YAML keeps the last and **discards the earlier one
+without error.** The registry then reported a dependency as unreviewed while the file visibly
+contained the review.
+**Why it matters beyond the instance:** this is **invisible data loss in the claim registry.** The
+tier checker parses the YAML, so it sees only what survived — it cannot detect what was dropped. Any
+field could vanish this way: an `evidence` path, a `falsified_by`, a `revival_condition`.
+**How it was caught:** `check-propagation.rb` reported a dependency as pending that I had just
+recorded. **The discrepancy between what the file said and what the parser saw is what exposed it** —
+a checker disagreeing with the visible text, rather than any reading of the text.
+**Fix:** `check-claims.rb` now scans each claim block **textually** for repeated keys, because the
+parsed structure cannot show what the parser already threw away. Verified by injection.
+**The generalizable point:** every other check in this repo validates *parsed* content. **This one had
+to work on the raw text**, because the failure happens during parsing. A validator that only sees
+post-parse state is blind to an entire class of corruption.

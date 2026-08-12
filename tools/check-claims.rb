@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# encoding: utf-8
 # check-claims.rb — enforces the claim registry's tier discipline.
 #
 # WHY THIS EXISTS
@@ -44,6 +45,18 @@ warnings = []
 
 doc = YAML.load_file('claims.yaml')
 claims = doc['claims'] or abort 'claims.yaml has no `claims` key'
+
+# Duplicate keys inside a claim block are SILENTLY DISCARDED by the YAML parser — the last wins
+# and the earlier value vanishes without error. That is invisible data loss in the registry, so it
+# is checked textually rather than through the parsed structure.
+File.read('claims.yaml', encoding: 'UTF-8').split(/^  - id: /).drop(1).each do |block|
+  cid = block.lines.first.strip
+  seen = Hash.new(0)
+  block.scan(/^    ([a-z_]+):/) { |k| seen[k.first] += 1 }
+  seen.select { |_, n| n > 1 }.each_key do |k|
+    errors << "#{cid}: duplicate key `#{k}` — YAML keeps only the last, silently discarding the rest"
+  end
+end
 
 ids = claims.map { |c| c['id'] }
 ids.group_by { |i| i }.select { |_, v| v.size > 1 }.each_key { |dup| errors << "duplicate id: #{dup}" }

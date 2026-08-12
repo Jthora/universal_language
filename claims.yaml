@@ -2297,8 +2297,7 @@ claims:
       Not proof, but the cheapest available check ran and did not go our way.
 
   - id: ROTATION-MINIMIZES-CONVENTION
-    scope_reviewed: [IMPL-CONVENTION-COST]   # accounted for — this claim states the behavioural half is untested and names the ablation as outstanding
-    scope_reviewed: [SYMBOLIC-PROTOCOLS-FAIL-CROSSPLAY]   # accounted for — the symbolic-only scope is precisely what makes rotation the contrasting case
+    scope_reviewed: [SYMBOLIC-PROTOCOLS-FAIL-CROSSPLAY, IMPL-CONVENTION-COST]   # symbolic-only scope is what makes rotation the contrasting case; and this claim already states the behavioural half is untested
     statement: >
       A rotation system breaks strictly less arbitrary symmetry than a label alphabet — Z/2
       (orientation) versus S_n — so it minimizes the shared prior two independent parties need to
