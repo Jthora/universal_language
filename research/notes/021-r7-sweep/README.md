@@ -2,7 +2,7 @@
 
 **Type:** cycle
 **Opened:** 2026-08-01
-**Status:** open
+**Status:** closed
 **Thread:** follows `018` (plan, item D1); implements **R7**
 **Question:** every negative this project cites needs one adversarial search. Which are unchecked,
 and do they survive?
@@ -53,8 +53,6 @@ requirement.
 **Standing risk:** these three currently support conclusions I like — Löb lands on the side of the
 theosis framing, Rice justifies a design decision already made. **T6 applies: check them as hard as
 I checked TopSim.**
-
-**Status:** closed
 
 ## 2. Searches run
 

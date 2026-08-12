@@ -2,7 +2,7 @@
 
 **Type:** cycle
 **Opened:** 2026-08-12
-**Status:** open
+**Status:** closed
 **Thread:** tests `ROTATION-MINIMIZES-CONVENTION` (`035`)
 
 ---
@@ -41,8 +41,6 @@ recoverable from structure, so permuting them changes meaning.
 
 **Would falsify:** rotation ambiguity exceeding 2 for some map, or a demonstration that
 reconstruction requires shared vertex naming.
-
-**Status:** closed
 
 ## 3. Results
 

@@ -2,8 +2,9 @@
 
 **Type:** cycle
 **Opened:** 2026-08-12
-**Status:** open
+**Status:** closed
 **Thread:** follows `034`, which found the map is not semantic structure
+**Superseded by:** `038` *(partly — the justification, not the claim)*  ← *the one permitted edit to a closed note (`../README.md`)*
 
 ---
 
@@ -54,8 +55,6 @@ not hold.
 
 **Objects mathematical?** Partly — equivariance and shared-prior cost are formalizable. The empirical
 half is the ablation `019` already identified.
-
-**Status:** closed
 
 ## 2. Searches run
 

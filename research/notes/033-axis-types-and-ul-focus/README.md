@@ -4,6 +4,7 @@
 **Opened:** 2026-08-01
 **Status:** closed
 **Thread:** repairs the curvature gap left open by `032`; audits the project's own attention
+**Superseded by:** `038`  ← *the one permitted edit to a closed note (`../README.md`)*
 **Prompted by:** *"Do these axes have to be binary? can they be float?"* and *"How does any of this
 apply to UL specifically? or are we extra-focusing on UWS?"*
 

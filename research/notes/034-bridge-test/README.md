@@ -2,8 +2,9 @@
 
 **Type:** cycle
 **Opened:** 2026-08-01
-**Status:** open
+**Status:** closed
 **Thread:** follows `033`, which supplied the criterion that reorders everything
+**Superseded by:** `038`  ← *the one permitted edit to a closed note (`../README.md`)*
 
 ---
 
@@ -57,8 +58,6 @@ a research target rather than a suspected impossibility.
 outcome damages the position. If it comes back favourable I should scrutinize it *harder* than if it
 comes back against, because favourable-and-surprising is the combination most likely to be
 motivated reading.
-
-**Status:** closed
 
 ## 2. Searches run
 

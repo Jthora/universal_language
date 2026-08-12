@@ -5,6 +5,7 @@
 **Status:** closed
 **Thread:** corrects `004`, which proposed this test, and every note since that promoted it as
 priority-0 and as "the non-circular replacement for the retired grounding argument."
+**Superseded by:** `016`  ← *the one permitted edit to a closed note (`../README.md`)*
 **Question:** is Euclid's definitional dependency order isomorphic to the ontological dependency
 orders of Aristotle and Vaiśeṣika?
 

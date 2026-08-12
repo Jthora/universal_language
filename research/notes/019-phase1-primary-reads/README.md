@@ -2,7 +2,7 @@
 
 **Type:** cycle
 **Opened:** 2026-08-01
-**Status:** open
+**Status:** closed
 **Thread:** follows `018` (plan); executes Phase 1 item D2
 **Question:** do the two priority-0 claims resting on summaries survive a primary read?
 
@@ -49,8 +49,6 @@ hard as I read TopSim's critics.** If it comes back clean with no caveats found,
 re-examine, not a result.
 
 ---
-
-**Status:** closed
 
 ## 2. Sources read
 

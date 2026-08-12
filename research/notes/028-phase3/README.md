@@ -2,7 +2,7 @@
 
 **Type:** cycle
 **Opened:** 2026-08-01
-**Status:** open
+**Status:** closed
 **Thread:** follows `027`; executes Phase 3 items A4, A1, A2 in order
 
 ---
@@ -30,8 +30,6 @@ object, and `017` recorded retrofitting such matches as the documented failure m
 the expected dismissal in advance so that finding a match would be surprising rather than convenient.
 
 **Objects mathematical?** A1 and A2 yes. A4 is reading.
-
-**Status:** closed
 
 ## 2. A4 — and my apartness prediction was wrong
 

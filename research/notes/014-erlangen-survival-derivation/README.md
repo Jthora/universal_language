@@ -4,6 +4,7 @@
 **Opened:** 2026-08-01
 **Status:** closed
 **Thread:** follows `012` (which raised the burden on Erlangen↔RG and left Newman open)
+**Superseded by:** `024`  ← *the one permitted edit to a closed note (`../README.md`)*
 **Question:** which primitives survive which transformation group — worked case by case, not asserted?
 
 **Why this note exists:** `ERLANGEN-SURVIVAL-RANKING`, `ENCLOSURE-IS-DISTINCTION`,

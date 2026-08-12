@@ -2,7 +2,7 @@
 
 **Type:** cycle
 **Opened:** 2026-08-01
-**Status:** open
+**Status:** closed
 **Thread:** follows `010` (rosters), `011` (Zadrozny scope)
 **Question:** do the load-bearing legs of the current position survive adversarial search?
 
@@ -44,8 +44,6 @@ be willing to raise the same objection had the result gone the other way.
 comfortably, that is itself a signal to re-examine — the point of Roster A is to find damage.
 
 ---
-
-**Status:** closed
 
 ## 2. Searches run
 

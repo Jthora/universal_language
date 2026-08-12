@@ -4,6 +4,7 @@
 **Opened:** 2026-08-01
 **Status:** closed
 **Thread:** follows `023` (which identified the gap); corrects the scope of `014` and `022`
+**Superseded by:** `032`  ← *the one permitted edit to a closed note (`../README.md`)*
 **Question:** derive the fourth axis properly, as `022` did for the first three.
 
 ---

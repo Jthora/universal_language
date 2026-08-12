@@ -4,6 +4,7 @@
 **Opened:** 2026-08-01
 **Status:** closed
 **Thread:** follows 003
+**Superseded by:** `015`  ← *the one permitted edit to a closed note (`../README.md`)*
 
 ## 1. The starting hunch (unsourced, and it held)
 

@@ -11,6 +11,7 @@ checks = [
   ['no retired counts in the tree',  'check-retired-content.rb'],
   ['caveats travel with citations',  'check-caveats.rb'],
   ['scope corrections propagate',    'check-propagation.rb'],
+  ['notes convention holds',         'check-notes.rb'],
 ]
 
 failed = []

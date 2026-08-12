@@ -2,7 +2,7 @@
 
 **Type:** cycle
 **Opened:** 2026-08-01
-**Status:** open
+**Status:** closed
 **Thread:** follows `012` (which removed TopSim as a usable measure)
 **Question:** what does the emergent-communication literature actually establish, once TopSim is off
 the table?
@@ -49,8 +49,6 @@ have its operationalization named before it is treated as decisive, and I must b
 that objection regardless of which way the result cuts.
 
 ---
-
-**Status:** closed
 
 ## 2. Searches run
 

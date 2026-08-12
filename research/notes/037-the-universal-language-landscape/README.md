@@ -4,6 +4,7 @@
 **Opened:** 2026-08-12
 **Status:** closed
 **Thread:** extends `036`, which was too narrow
+**Superseded by:** `038`  ← *the one permitted edit to a closed note (`../README.md`)*
 **Question:** what is the full landscape of universal-language claims, and what does it constrain?
 
 ---

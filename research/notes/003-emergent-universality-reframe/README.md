@@ -4,6 +4,7 @@
 **Opened:** 2026-08-01
 **Status:** closed
 **Thread:** follows 002 · corrected by nothing yet
+**Superseded by:** `011`  ← *the one permitted edit to a closed note (`../README.md`)*
 **Reconstructed** from the session record after the fact — §§1–2 were not preregistered (S2).
 
 ## 1. What was held

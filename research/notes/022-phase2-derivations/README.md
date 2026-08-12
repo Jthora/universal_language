@@ -4,6 +4,7 @@
 **Opened:** 2026-08-01
 **Status:** closed
 **Thread:** follows `018` (plan, items C1 and C2); explains `014`
+**Superseded by:** `024` · `032`  ← *the one permitted edit to a closed note (`../README.md`)*
 **Question:** derive the two claims that have been asserted in prose since `005`.
 
 ---

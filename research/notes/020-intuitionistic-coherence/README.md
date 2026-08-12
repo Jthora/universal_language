@@ -2,7 +2,7 @@
 
 **Type:** cycle
 **Opened:** 2026-08-01
-**Status:** open
+**Status:** closed
 **Thread:** follows `016` (constructive turn), `018` (plan, item A3)
 **Question:** `016` established the notation lives in the **constructive** framework. Constructive
 mathematics uses **intuitionistic** logic. Does anything the notation claims contradict that?
@@ -38,8 +38,6 @@ in which case the coherence check has no teeth and A3 closes as uninformative.
 find the theorem, do not design a study (T5).
 
 ---
-
-**Status:** closed
 
 ## 2. Searches run
 

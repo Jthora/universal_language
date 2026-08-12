@@ -2,7 +2,7 @@
 
 **Type:** decision
 **Opened:** 2026-08-01
-**Status:** open
+**Status:** closed
 **Thread:** follows `028`; executes Phase 4 items B, E2, E1
 
 ---
@@ -31,8 +31,6 @@ survival order from `014`/`022` is already a total-ish ranking of structural rob
 would make entrenchment a consequence of the geometry rather than a free parameter.
 
 **Objects mathematical?** B partly. E1 and E2 are decisions constrained by theorems already in hand.
-
-**Status:** closed
 
 ## 2. B — RCC is not adopted. It is derived, and that buys decidability.
 
