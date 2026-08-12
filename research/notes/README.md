@@ -119,3 +119,4 @@ Course corrections in **bold** — the load-bearing entries.
 | `007` | brainstorm | Is the external reference the mathematics itself? | Geometry as **trust anchor**; drift must be absolute → `framework/external-anchor.md` |
 | `008` | **correction** | **Seven negatives closed lines of work that were still live.** Asymmetric scrutiny producing skeptical-sounding output | R1–R6, S1–S7; `RESEARCH-PROTOCOL.md`; F-017 |
 | `009` | decision | Superseded material kept in-repo was being read as current | Deleted; git history is the archive. 224 → 49 files |
+| `010` | brainstorm | Which literature crawls would most change what we can see? | Eight rosters, falsification-first. **Open** |
