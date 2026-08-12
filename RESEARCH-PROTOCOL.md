@@ -65,7 +65,9 @@ specifies rules rather than lessons.
 | **T5** | file something as needing an experiment | **check whether the objects are mathematical.** If they are, find the theorem instead |
 | **T6** | accept a finding that kills project work | **ask what scrutiny you gave the last finding that advanced it.** Symmetry, or it's bias |
 | **T7** | stop searching because you have a coherent story | **notice that a coherent story arrives early** and is usually your first framing |
-| **T8** | apply an impossibility result | **check that the target is inside its scope.** Rice needs Turing-expressiveness. Zadrozny is microscopic. Convexity is metric-only |
+| **T8** | apply an impossibility result | **check that the target is inside its scope.** Rice needs Turing-expressiveness. Convexity is metric-only |
+| **T9** | cite a theorem for a conclusion | **check the theorem proves the conclusion.** A sound theorem can support an unsound reading — Zadrozny proves an encoding exists, *not* that compositionality is substantively empty. The gap was a condition his construction quietly drops |
+| **T10** | accept a null result | **ask what was measured.** A theorem states its scope; a null result does not — its scope *is* its operationalization |
 
 **The master signature: your output sounds rigorous and it ends the conversation.** That combination
 is the alarm.
@@ -92,6 +94,11 @@ Full text: `research/method/negative-results.md`. **Normative.**
   meets the same evidentiary bar as one that advances it.
 - **R6 — State the steelman before the kill.** What would have to be true for the positive to
   survive? If you can't articulate it, you don't understand the claim well enough to kill it.
+- **R7 — Apply every new rule retroactively before applying it forward.** A rule that governs only
+  new work grandfathers in the foundational decisions — which predate the discipline and carry the
+  most downstream leverage. **Zadrozny was the most load-bearing negative in this project and never
+  received the adversarial search R1 mandates, because R1 was written after it.** One query
+  overturned it. See F-019.
 
 ---
 
@@ -125,7 +132,45 @@ so you never have to settle how bad it is to act on them.
 
 ---
 
-## 5. The anchor principle — why proof is the center of gravity
+## 5. Empirical evidence — the asymmetry, and the guard on it
+
+**A theorem carries its scope in its statement. A null result does not.** *"We looked and did not
+find it"* is only as strong as whether the measurement matched the phenomenon's level — and the
+choice of measurement encodes a theory. Measure at the wrong level and the null is an artifact of
+the instrument, reported as a fact about the world.
+
+**Three of the seven documented errors in §1 are exactly this**, which is why it earns a rule:
+
+| Null result | What it measured | What we needed |
+|---|---|---|
+| Evans & Levinson: few universals | **surface** features across languages | coarse-grained invariants |
+| ISO pictogram comprehension | **referential** iconicity | structural iconicity |
+| Music-notation reform failure | displacing an **entrenched incumbent** | creation in an unserved niche |
+
+So: **for existence claims about structure, proof is decisive and empirical nulls are weak.** For
+**membership** claims — does this real system instantiate the structure — empirical evidence is
+*necessary* and proof cannot reach.
+
+### The guard — read this before using the rule
+
+**This is not a license to discount inconvenient data, and it will be misused that way if the
+asymmetry is stated one-sidedly.** The failure mode on the other side is this project's older and
+better-documented disease: a completeness score driven 32% → 100% by explaining away each
+disconfirmation.
+
+| Kind of evidence | Weight |
+|---|---|
+| Empirical **null** offered against an existence claim | Check the operationalization first (T10) |
+| Empirical **positive** finding | **Full weight.** No operationalization escape |
+| Data disconfirming **our own** stated prediction | **Full weight, no exceptions.** `FAILURES.md` is append-only precisely here |
+
+**Test for honest use:** if the operationalization objection is one you would *not* have raised had
+the result gone your way, you are not applying T10 — you are rationalizing. Every use of T10 must
+name the specific level mismatch, in advance of knowing the result's direction where possible.
+
+---
+
+## 6. The anchor principle — why proof is the center of gravity
 
 Two problems in this project turn out to be one problem:
 
@@ -146,7 +191,7 @@ corruption-immune one.
 
 ---
 
-## 6. Two-minute checklist
+## 7. Two-minute checklist
 
 Before recording any finding that closes a line of work:
 
@@ -157,13 +202,16 @@ Before recording any finding that closes a line of work:
 - [ ] **R6** Stated the steelman
 - [ ] **T5** Checked whether the objects are mathematical
 - [ ] **T6** Gave it the same scrutiny as the last positive finding
+- [ ] **T9** Checked the theorem proves the conclusion, not just something adjacent
+- [ ] **T10** If it's a null result — named the operationalization, and would have raised the
+      objection regardless of direction
 - [ ] **S7** Logged whether counter-evidence was easy or hard to find
 
-Eight boxes. If you can't tick them, you haven't finished the finding.
+Ten boxes. If you can't tick them, you haven't finished the finding.
 
 ---
 
-## 7. What this does not fix
+## 8. What this does not fix
 
 **Honest limits, so you don't over-trust the protocol:**
 
@@ -185,7 +233,7 @@ Eight boxes. If you can't tick them, you haven't finished the finding.
 
 ---
 
-## 8. Enforcement
+## 9. Enforcement
 
 - `claims.yaml` requires `scope`, `formalization`, `revival_condition`, and `refutation_tier` on
   every `RETIRED` entry (R3/R4/R5). CI-checkable.

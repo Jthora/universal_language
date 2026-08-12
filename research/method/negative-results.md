@@ -110,6 +110,27 @@ Instance 4 is the proof of value: AGM revived the repair operator only because I
 into it. With *"a non-metric formalization of minimal change"* written down as the revival condition,
 it would have been a standing open search from the moment of retirement.
 
+### R2a — For an empirical negative, the scope *is* the operationalization
+
+A theorem carries its conditions in its statement. **A null result does not.** *"We looked and did
+not find it"* is only as strong as whether the measurement matched the phenomenon's level, and the
+choice of measurement encodes a theory.
+
+Three of the seven documented errors are this exact shape: Evans & Levinson measured surface
+features when the claim lives at the coarse-grained level; ISO tested referential iconicity when the
+question was structural; music-notation reform tested displacing an entrenched incumbent when the
+target is an unserved niche.
+
+**Before accepting a null as decisive, name the operationalization and state why it matches the
+level of the claim.**
+
+**Guard, and it is not optional:** this rule is misusable as a way to discount inconvenient data,
+which is this project's older disease (a score driven 32%→100% by explaining away
+disconfirmations). Empirical *positives* carry full weight with no operationalization escape, and
+data disconfirming **our own** stated predictions carries full weight with no exceptions. **Test for
+honest use: if you would not have raised the objection had the result gone your way, you are
+rationalizing, not applying R2a.**
+
 ### R5 — Symmetric burden of evidence
 **Refutations get tiered exactly like claims.** `claims.yaml` tiers assertions but lets refutations
 in untiered and unchallenged — the structural hole that permits mechanism D. A finding that kills
@@ -120,6 +141,20 @@ Before recording a negative, write **what would have to be true for the positive
 that can't be articulated, the claim isn't understood well enough to kill.
 
 ---
+
+### R7 — Apply every new rule retroactively before applying it forward
+
+A rule that governs only new work **grandfathers in the foundational decisions** — the ones that
+predate the discipline and carry the most downstream leverage.
+
+**Worked example, and it is the reason this rule exists:** R1 mandates an adversarial search on every
+negative. It was written after Zadrozny (1994) had been load-bearing for the entire project, and
+nothing required auditing negatives that predated it. **The single most consequential negative in the
+repository had never been searched against.** One query found Kazmi & Pelletier, Westerståhl, Dever
+and Janssen, and reopened a route recorded as closed. See F-019 and `claims.yaml#ZADROZNY-SCOPE`.
+
+**Outstanding under this rule:** every negative currently cited anywhere in the repo needs one
+adversarial search, oldest and most load-bearing first.
 
 ## 5. Enforcement
 
