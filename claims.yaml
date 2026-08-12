@@ -1356,3 +1356,80 @@ claims:
       reliably tracked semantic composition. It does not — different derivations can yield identical
       edit-distance profiles, so fixed-order concatenation and free-ordered insertion/deletion score
       the same.
+
+  # ─── Roster G: emergent communication (added 2026-08, note 013) ────────────
+
+  - id: SYMBOLIC-PROTOCOLS-FAIL-CROSSPLAY
+    statement: >
+      Arbitrary symbolic protocols developed by independently trained agent populations are mutually
+      unintelligible, because token permutation invariance leaves many equally valid equilibria.
+    tier: ARGUED
+    evidence: research/notes/013-roster-g-emergent-communication/README.md
+    scope: >
+      MANDATORY BEFORE CITING (R2). Applies to ARBITRARY SYMBOLIC channels only. Does NOT apply to
+      iconic or perceptually anchored channels — see ICONIC-GROUNDING-ENABLES-CROSSPLAY, which is
+      the direct counter-case. Do not cite as "emergent protocols never converge" or as evidence
+      against emergent universality: class membership does not entail mutual intelligibility (water
+      and magnets share critical exponents; you cannot pour a magnet). It IS evidence against any
+      reading of UL as a shared code independent systems would simply arrive at.
+    notes: >
+      "Symbolic channels admit near-permutation invariance over tokens, meaning many equally valid
+      equilibria can emerge that are mutually unintelligible across independently trained
+      populations." Protocols "devolve into idioglossia — co-adapted protocols that are
+      unintelligible to outsiders."
+      THE MECHANISM IS THE USEFUL PART: nothing in an arbitrary channel fixes which token means
+      what, so every permutation is an equally good equilibrium. That is a precise account of why
+      arbitrary symbol systems cannot converge — and it identifies exactly what a notation must
+      supply to escape.
+
+  - id: ICONIC-GROUNDING-ENABLES-CROSSPLAY
+    statement: >
+      Iconic, spatially structured, perceptually anchored notation achieves zero-shot mutual
+      intelligibility between independently trained populations where symbolic protocols fail.
+    tier: CONJECTURED
+    falsified_by: >
+      Primary reading shows the effect is carried by population scaling alone rather than by
+      iconicity, or fails to replicate, or the "disjoint populations" are less independent than the
+      summary implies.
+    evidence: research/notes/013-roster-g-emergent-communication/README.md
+    priority: 0
+    notes: >
+      "Sketches communicate iconically through visual resemblance and spatial structure, thereby
+      anchoring meaning in perceptual reality, enabling independently trained agents sampled from
+      disjoint populations to achieve high mutual intelligibility." (arXiv 2606.10582, "Drawing with
+      Strangers".)
+      This describes UWS's design — iconic mark-features plus spatial placement grammar — and it
+      dissolves the permutation-invariance problem in SYMBOLIC-PROTOCOLS-FAIL-CROSSPLAY, since an
+      iconic mark is not arbitrary with respect to its referent.
+      CONVERGENCE: independently supports UWS-PERCEPTUAL-GROUNDING, which rests on Changizi's
+      finding that 100+ writing systems share contour statistics matching natural-scene structure.
+      Two unrelated lines land on perceptual grounding as what makes a notation work across
+      independently developed systems.
+      DELIBERATELY HELD AT CONJECTURED. Single paper, read via summary — evidence tier S1-5, which
+      by our own rule may not be load-bearing. TOPSIM-INSUFFICIENT was downgraded one note earlier on
+      multiple independent criticisms; banking this at ARGUED would be precisely the asymmetric
+      scrutiny F-017 documents. Also note the finding is population scaling PLUS iconicity, not
+      iconicity alone. Read the primary source at tier S1-2 before it carries weight.
+
+  - id: COMPOSITIONALITY-REQUIRES-PRESSURE
+    statement: >
+      Compositionality does not emerge by default; it requires both compression pressure (a
+      transmission bottleneck) and communication pressure (expressivity).
+    tier: ARGUED
+    evidence: research/notes/013-roster-g-emergent-communication/README.md
+    notes: >
+      Kirby et al. (2015): compression alone produces degenerate results; both pressures are
+      necessary. "Non-compositional languages will not persist over time when the bottleneck on
+      cultural transmission is tight."
+      KILLS any naive "compositionality is inevitable" reading.
+      CANDIDATE READING, flagged as post-hoc and not yet a result: a universality class is defined
+      by which operators are RELEVANT, and this names two. Any system under compression +
+      expressivity should land in the same class regardless of substrate, and neither pressure is
+      human-specific — any finite learner transmitting through a bottleneck faces both. That would
+      be the Christiansen & Chater extension with a concrete mechanism.
+      TESTABLE, which is what separates it from a rescue: if compositionality appears in any system
+      under both pressures across substrates, the universality claim gains a mechanism; if it
+      appears only under substrate-specific conditions, the reading fails.
+      UNCHECKED LEADS: "compositional structure can emerge without generational transmission"
+      (Cognition); compositionality and systematicity emerging in DEEP LINEAR NETWORKS (PNAS) — a
+      substrate-independence datapoint owing nothing to agents playing games.

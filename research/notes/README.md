@@ -123,3 +123,4 @@ Course corrections in **bold** — the load-bearing entries.
 | `011` | **correction** | **Zadrozny had never had an adversarial search run against it.** Sound theorem, over-broad conclusion — its encoding does not preserve synonymy | Necessity route reopened; fixed-point table is canonical; F-019 |
 
 | `012` | cycle | **Roster A — adversarial search against our own load-bearing legs.** TopSim damaged; Newman survives as a constraint; Erlangen↔RG burden raised | `TOPSIM-INSUFFICIENT`, `NEWMAN-OBJECTION`; compositionality claim downgraded ARGUED→CONJECTURED |
+| `013` | cycle | **Roster G — emergent communication.** Symbolic protocols fail cross-play (permutation invariance); **iconic/spatial ones succeed**. Compositionality needs two pressures | `SYMBOLIC-PROTOCOLS-FAIL-CROSSPLAY`, `ICONIC-GROUNDING-ENABLES-CROSSPLAY`, `COMPOSITIONALITY-REQUIRES-PRESSURE` |
