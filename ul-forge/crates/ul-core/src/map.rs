@@ -291,6 +291,56 @@ impl CombinatorialMap {
     }
 }
 
+impl CombinatorialMap {
+    /// The mirror image: every rotation reversed.
+    ///
+    /// Reflection is the *only* arbitrary choice a rotation system leaves open — a receiver who does
+    /// not share the sender's orientation convention sees either this map or its mirror, and nothing
+    /// else. That is the ℤ/2 in `ROTATION-MINIMIZES-CONVENTION`.
+    pub fn mirror(&self) -> CombinatorialMap {
+        // reversing sigma: sigma_rev[sigma[d]] = d
+        let mut sigma = vec![0; self.n_darts];
+        for d in 0..self.n_darts {
+            sigma[self.sigma[d]] = d;
+        }
+        CombinatorialMap { sigma, dart_origin: self.dart_origin.clone(), n_darts: self.n_darts }
+    }
+
+    /// A cheap invariant: the degree sequence together with the sorted multiset of face sizes.
+    ///
+    /// **Not a complete isomorphism invariant.** Two non-isomorphic maps can share a signature, so
+    /// [`Self::convention_ambiguity`] may report `1` (achiral) for a map that is in fact chiral.
+    /// That direction *understates* ambiguity, which is the safe direction for the bound but makes
+    /// the achiral detection approximate. A complete test needs canonical-form computation.
+    fn signature(&self) -> (Vec<usize>, Vec<usize>) {
+        let mut faces: Vec<usize> = self.faces().iter().map(|f| f.len()).collect();
+        faces.sort_unstable();
+        (self.degree_sequence(), faces)
+    }
+
+    /// How many distinct readings a receiver faces who shares **no** orientation convention.
+    ///
+    /// `1` when the map is achiral under [`Self::signature`], otherwise `2`.
+    ///
+    /// **The bound of 2 is structural, not empirical:** a rotation system has exactly two
+    /// orientations — keep σ or reverse it — so reflection is the only free choice. The ℤ/2
+    /// structure is what `mirror_is_an_involution_and_preserves_degree` actually tests; this
+    /// function is a consequence of it rather than independent evidence for it.
+    pub fn convention_ambiguity(&self) -> usize {
+        if self.signature() == self.mirror().signature() { 1 } else { 2 }
+    }
+}
+
+/// Readings a receiver faces for a **label-based** encoding with `k` distinct labels and no shared
+/// alphabet: every permutation of the alphabet is a consistent reading.
+///
+/// This is the Sₙ side of the comparison. It is a function rather than a method because it does not
+/// depend on the map at all — which is itself the point: label cost is set by the alphabet, not by
+/// the structure.
+pub fn label_ambiguity(k: usize) -> u128 {
+    (1..=k as u128).product()
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -473,6 +523,52 @@ mod tests {
         let n = Nesting::all_top_level(vec![1]);
         assert_eq!(hex.faces_planar(&n).len(), hex.faces().len(), "2");
         assert_eq!(hex.euler_characteristic_planar(&n), 2);
+    }
+
+
+    #[test]
+    fn rotation_ambiguity_never_exceeds_two() {
+        // The core of ROTATION-MINIMIZES-CONVENTION: a receiver sharing no orientation convention
+        // faces at most two readings, regardless of how large the structure is.
+        for n in 3..14 {
+            assert!(
+                cycle(n).convention_ambiguity() <= 2,
+                "{n}-cycle: ambiguity must not exceed 2"
+            );
+        }
+        assert!(theta(vec![1, 5, 3]).convention_ambiguity() <= 2);
+        assert!(two_triangles().convention_ambiguity() <= 2);
+    }
+
+    #[test]
+    fn symmetric_maps_are_achiral_and_cost_nothing() {
+        // A cycle is its own mirror, so orientation carries no information at all.
+        for n in 3..10 {
+            assert_eq!(cycle(n).convention_ambiguity(), 1, "{n}-cycle is achiral");
+        }
+    }
+
+    #[test]
+    fn label_cost_grows_factorially_where_rotation_stays_flat() {
+        // The comparison the claim rests on, made concrete.
+        let rotation = cycle(8).convention_ambiguity() as u128; // <= 2
+        for k in [3usize, 4, 6, 8] {
+            let labels = label_ambiguity(k);
+            assert!(
+                labels > rotation,
+                "k={k}: labels {labels} should exceed rotation {rotation}"
+            );
+        }
+        assert_eq!(label_ambiguity(8), 40_320);
+        assert!(rotation <= 2, "rotation cost is flat in structure size");
+    }
+
+    #[test]
+    fn mirror_is_an_involution_and_preserves_degree() {
+        // Reflection is a ℤ/2 action: applying it twice returns the original.
+        let m = theta(vec![1, 5, 3]);
+        assert_eq!(m.mirror().mirror().signature(), m.signature(), "mirror is involutive");
+        assert_eq!(m.mirror().degree_sequence(), m.degree_sequence(), "degree is reflection-invariant");
     }
 
     #[test]

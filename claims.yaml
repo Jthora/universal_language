@@ -2297,6 +2297,7 @@ claims:
       Not proof, but the cheapest available check ran and did not go our way.
 
   - id: ROTATION-MINIMIZES-CONVENTION
+    scope_reviewed: [IMPL-CONVENTION-COST]   # accounted for — this claim states the behavioural half is untested and names the ablation as outstanding
     scope_reviewed: [SYMBOLIC-PROTOCOLS-FAIL-CROSSPLAY]   # accounted for — the symbolic-only scope is precisely what makes rotation the contrasting case
     statement: >
       A rotation system breaks strictly less arbitrary symmetry than a label alphabet — Z/2
@@ -2341,9 +2342,24 @@ claims:
       identification does not — not the group. Do not claim music and rotation systems share a
       structure. The picture in music is also genuinely mixed, with some features biologically
       grounded and others heavily culture-dependent.
-      TIER HONESTY: the symmetry-group comparison is an ARGUMENT. The experiment is the
-      symbolic-versus-rotation ablation at matched population size from note 019, now motivated by
-      two independent routes.
+      INFORMATION-THEORETIC HALF NOW MACHINE-CHECKED (note 041, IMPL-CONVENTION-COST). map.rs
+      implements mirror(), convention_ambiguity() and label_ambiguity(). The substantive test is that
+      mirror is an INVOLUTION — mirror . mirror = id — which establishes the orientation group IS
+      Z/2, the claim's left-hand side. Label cost is k! arithmetic: 40320 at k=8 against a flat 2.
+      THE FAILURE MODE CHECKED FOR AND NOT FOUND: whether reading a rotation system requires vertex
+      correspondence, which would smuggle in a naming convention and falsify the Z/2 claim. It does
+      not — a combinatorial map is determined UP TO ISOMORPHISM by its structure, so the receiver
+      reconstructs without the sender's names. Labels differ in kind: ARG0 versus ARG1 carries
+      content not recoverable from structure, so permuting them changes meaning while permuting
+      vertex names does not. That asymmetry is the substance of the claim.
+      TWO HONEST LIMITS. (1) The "ambiguity <= 2" test is near-tautological — the function returns 1
+      or 2 by construction. The bound is STRUCTURAL, established by the involution, and the ambiguity
+      function is a consequence rather than independent evidence. (2) signature() is not a complete
+      isomorphism invariant, so achiral detection may report 1 for a chiral map. That understates
+      ambiguity, which is safe for the bound but makes the achiral count approximate.
+      STILL OUTSTANDING AND NOT SUBSTITUTED FOR: the symbolic-versus-rotation ablation at matched
+      population size, from note 019. Information and behaviour can differ; the claim that AGENTS
+      LEARN rotation-based codes more compatibly remains untested.
 
   - id: UNIVERSAL-MEANS-CONVENTION-FREE
     statement: >
@@ -2447,3 +2463,23 @@ claims:
       genetic code is the model, then CONSTRAINED BUT CONTINGENT is the best UL could be, and no
       derivation would ever pin it down uniquely. That is compatible with UL-IS-EMERGENT-UNIVERSAL
       and incompatible with any revival of the necessity route that expects a unique answer.
+
+  - id: IMPL-CONVENTION-COST
+    statement: >
+      The convention-cost comparison is implemented and machine-checked: mirror is an involution, so
+      the orientation group is Z/2, while label ambiguity is k! and grows factorially.
+    tier: VERIFIED
+    evidence: ul-forge/crates/ul-core/src/map.rs
+    scope: >
+      Machine-checks the INFORMATION-THEORETIC half of ROTATION-MINIMIZES-CONVENTION only. It does
+      NOT test whether agents learn rotation-based codes more compatibly — that is the behavioural
+      claim and needs the ablation from note 019. Do not cite this as confirming the claim entire.
+    notes: >
+      SUBSTANTIVE TEST: mirror . mirror = id, establishing the orientation group is Z/2. Degree is
+      reflection-invariant. Label ambiguity computed as k!: 6, 24, 720, 40320 against a flat 2.
+      NEAR-TAUTOLOGICAL TEST, flagged rather than counted: "ambiguity <= 2" checks a function that
+      returns 1 or 2 by construction. The bound is structural and follows from the involution.
+      APPROXIMATE COMPONENT: signature() (degree sequence plus face-size multiset) is not a complete
+      isomorphism invariant, so achiral detection can report 1 for a chiral map — understating
+      ambiguity, safe for the bound, imprecise for the achiral count. A complete test needs canonical
+      forms.
