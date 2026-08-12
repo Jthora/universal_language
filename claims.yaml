@@ -2020,10 +2020,16 @@ claims:
       set, hence a finite Boolean algebra, hence computable RCC-8. But the faces do not correspond to
       the actual planar regions, so the RELATIONS COMPUTED OVER THEM ARE WRONG. Decidable and
       incorrect is worse than undecidable, because nothing signals the failure.
-      THE FIX, and it is concrete: the IR must carry the NESTING RELATION between components in
-      addition to the rotation system. That is additional structure beyond the combinatorial map and
-      is exactly what CONNECTIVITY-AXIS-MISSING identifies as absent. This claim holds GIVEN that
-      data and not without it.
+      FIXED 2026-08-12 — the nesting relation is implemented. map.rs now carries a Nesting type: for
+      each component, a dart on its own OUTER face and, unless top-level, a dart on the face of the
+      container it sits in. faces_planar() traces per component and then IDENTIFIES each component's
+      outer face with its container's face; euler_characteristic_planar() reports V - E + F.
+      VERIFIED BY TEST: two disjoint triangles trace 4 faces without nesting and 3 with it, and
+      Euler gives 1 + c = 3 rather than 2c = 4. Nesting is a no-op for connected maps. And crucially,
+      side-by-side versus contained placements yield the SAME face count but DIFFERENT face
+      structure — which is precisely the distinction RCC-8 needs and the rotation system alone loses.
+      SO THIS CLAIM NOW HOLDS for disconnected configurations, given the nesting data. See
+      IMPL-COMBINATORIAL-MAP.
       RCC-8 primitive is a binary C(x,y), "x connects with y", over non-null regions, giving eight
       jointly exhaustive pairwise disjoint relations: DC, EC, PO, EQ, TPP, NTPP, TPPi, NTPPi.
       THE COMPLEXITY IS BAD IN GENERAL: consistency checking NP-complete, entailment co-NP-complete,
@@ -2116,6 +2122,12 @@ claims:
       insertion order, which is ARBITRARY, and any face structure it reports is the face structure
       of that arbitrary choice. from_rotations is the honest constructor. Supplying real angular
       order from geometry is outstanding work.
+      NESTING LAYER ADDED 2026-08-12. A rotation system determines an embedding only for a CONNECTED
+      graph, so for disconnected configurations the relative placement of components is genuinely
+      extra information — choosing an outer face is choosing a point at infinity, and combinatorially
+      no face is distinguished. Nesting supplies it; faces_planar() and
+      euler_characteristic_planar() consume it. This is what makes REGIONS-ARE-FACE-UNIONS correct
+      for real notations, which are disconnected by default.
       A FAILING TEST WAS INSTRUCTIVE RATHER THAN A BUG: the theta-graph test initially asserted
       three faces while supplying a rotation that embeds the graph on a TORUS. The code was right
       and the expectation was wrong. Both embeddings are now tested — same graph, same degree

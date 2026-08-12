@@ -192,6 +192,105 @@ impl CombinatorialMap {
     }
 }
 
+/// Where a component sits, for a **disconnected** configuration.
+///
+/// # Why this exists
+///
+/// A rotation system determines an embedding **only for a connected graph** (Heffter–Edmonds).
+/// For a disconnected configuration it does not, because the *relative placement* of components —
+/// which one lies inside which face of another — is not recoverable from the rotations alone.
+///
+/// Without it, [`CombinatorialMap::faces`] treats each component as embedded on its own sphere:
+/// two disjoint triangles trace **four** faces rather than the **three** they bound in the plane,
+/// and `χ = 2c` rather than the correct `1 + c`. The result is *decidable and wrong*, which is
+/// worse than undecidable because nothing signals it.
+///
+/// # The data
+///
+/// For each component: one of its own darts on its **outer** face, and — unless the component is at
+/// top level — a dart on the face of the container it sits inside. Choosing an outer face is
+/// choosing a point at infinity; combinatorially, no face is distinguished, so this is genuinely
+/// extra information rather than something derivable.
+#[derive(Debug, Clone, Default, PartialEq)]
+pub struct Nesting {
+    /// `(dart on this component's outer face, dart on the containing face)`.
+    /// `None` container means the component sits in the unbounded region.
+    placements: Vec<(Dart, Option<Dart>)>,
+}
+
+impl Nesting {
+    /// All components at top level — the common case of several separate strokes.
+    pub fn all_top_level(outer_darts: Vec<Dart>) -> Self {
+        Nesting { placements: outer_darts.into_iter().map(|d| (d, None)).collect() }
+    }
+
+    /// Place a component (identified by a dart on its outer face) inside a given face.
+    pub fn place(mut self, outer: Dart, inside: Dart) -> Self {
+        self.placements.push((outer, Some(inside)));
+        self
+    }
+}
+
+impl CombinatorialMap {
+    /// Canonical id of the face containing `dart` — the smallest dart in its `φ`-orbit.
+    fn face_id(&self, dart: Dart) -> Dart {
+        let mut min = dart;
+        let mut d = self.phi(dart);
+        while d != dart {
+            min = min.min(d);
+            d = self.phi(d);
+        }
+        min
+    }
+
+    /// Faces of a possibly-disconnected configuration, given its nesting.
+    ///
+    /// Traces faces per component, then **identifies each component's outer face with the face it
+    /// sits in**. Top-level components share the unbounded face. This is the planar face set, and
+    /// it satisfies `V − E + F = 1 + c`.
+    pub fn faces_planar(&self, nesting: &Nesting) -> Vec<Vec<Dart>> {
+        let raw = self.faces();
+        // union-find over face ids
+        let mut parent: std::collections::HashMap<Dart, Dart> =
+            raw.iter().map(|f| { let id = *f.iter().min().unwrap(); (id, id) }).collect();
+        fn find(p: &mut std::collections::HashMap<Dart, Dart>, x: Dart) -> Dart {
+            let mut r = x;
+            while p[&r] != r { r = p[&r]; }
+            let mut c = x;
+            while p[&c] != c { let n = p[&c]; p.insert(c, r); c = n; }
+            r
+        }
+
+        // every top-level component shares one unbounded face
+        let mut unbounded: Option<Dart> = None;
+        for (outer, container) in &nesting.placements {
+            let a = self.face_id(*outer);
+            let target = match container {
+                Some(c) => self.face_id(*c),
+                None => match unbounded { Some(u) => u, None => { unbounded = Some(a); a } },
+            };
+            let (ra, rt) = (find(&mut parent, a), find(&mut parent, target));
+            if ra != rt { parent.insert(ra, rt); }
+        }
+
+        let mut merged: std::collections::HashMap<Dart, Vec<Dart>> = std::collections::HashMap::new();
+        for f in raw {
+            let root = find(&mut parent, *f.iter().min().unwrap());
+            merged.entry(root).or_default().extend(f);
+        }
+        let mut out: Vec<Vec<Dart>> = merged.into_values().collect();
+        out.iter_mut().for_each(|f| f.sort_unstable());
+        out.sort();
+        out
+    }
+
+    /// Euler characteristic using the planar face set: `V − E + F`, which is `1 + c`.
+    pub fn euler_characteristic_planar(&self, nesting: &Nesting) -> i64 {
+        self.vertices().len() as i64 - self.edge_count() as i64
+            + self.faces_planar(nesting).len() as i64
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -332,6 +431,48 @@ mod tests {
         // components is information the map does not carry. See FAILURES.md F-025.
         assert_eq!(hex.genus(), Some(0));
         assert_eq!(tris.genus(), None, "genus formula does not apply to a disconnected map");
+    }
+
+
+    #[test]
+    fn nesting_recovers_the_correct_planar_face_count() {
+        // Two disjoint triangles bound THREE regions in the plane: two insides and one
+        // shared outside. Without nesting the map traces four (notes 032, 039).
+        let m = two_triangles();
+        assert_eq!(m.faces().len(), 4, "without nesting: each component on its own sphere");
+
+        // Outer face of triangle A contains dart 1; of triangle B, dart 7. Both at top level.
+        let n = Nesting::all_top_level(vec![1, 7]);
+        assert_eq!(m.faces_planar(&n).len(), 3, "with nesting: the two outer faces are identified");
+
+        // Euler for a planar graph with c components is 1 + c.
+        assert_eq!(m.euler_characteristic_planar(&n), 3, "V - E + F = 1 + c = 3");
+    }
+
+    #[test]
+    fn nesting_distinguishes_side_by_side_from_contained() {
+        // Same graph, same degree sequence, same face COUNT — different structure.
+        // This difference is exactly what RCC-8 needs and what the rotation system alone loses.
+        let m = two_triangles();
+        let side_by_side = Nesting::all_top_level(vec![1, 7]);
+        let contained = Nesting::all_top_level(vec![1]).place(7, 0); // B inside A's other face
+
+        assert_eq!(m.faces_planar(&side_by_side).len(), 3);
+        assert_eq!(m.faces_planar(&contained).len(), 3, "same count");
+        assert_ne!(
+            m.faces_planar(&side_by_side),
+            m.faces_planar(&contained),
+            "different face STRUCTURE — containment is visible where the count is not"
+        );
+    }
+
+    #[test]
+    fn nesting_is_a_no_op_for_connected_maps() {
+        // A connected map already has its correct planar faces; nesting must not change them.
+        let hex = cycle(6);
+        let n = Nesting::all_top_level(vec![1]);
+        assert_eq!(hex.faces_planar(&n).len(), hex.faces().len(), "2");
+        assert_eq!(hex.euler_characteristic_planar(&n), 2);
     }
 
     #[test]
