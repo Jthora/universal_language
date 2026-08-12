@@ -11,7 +11,7 @@
 #   RETIRED       withdrawn            -> requires `superseded_by:`, `formalization:`,
 #                                         `revival_condition:`, `refutation_tier:`
 #
-# NEGATIVE-RESULT DISCIPLINE (normative; see research/negative-result-discipline-2026-08.md):
+# NEGATIVE-RESULT DISCIPLINE (normative; see research/method/negative-results.md):
 #   R1  Every negative finding requires at least one ADVERSARIAL SEARCH against it before it is
 #       recorded ("criticisms of X", "scope of X", "X superseded", "alternatives to X"). Always,
 #       not when it seems warranted — that judgment is the compromised one.
@@ -51,7 +51,7 @@ claims:
   - id: UWS-PRIMITIVE-COUNT
     statement: "The UWS alphabet consists of a small fixed set of iconic mark-features."
     tier: DESIGN-CHOICE
-    rationale: research/uws-as-methodology-2026-08.md
+    rationale: research/framework/uws-as-instrument.md
     alternatives_considered: [4, 5, 6, "any base-N presentation"]
     notes: >
       REFRAMED 2026-08. This is no longer an open decision awaiting a tiebreaker — the question was
@@ -63,7 +63,7 @@ claims:
       presentation, not of the object. Ship whichever presentation serves the task; do not argue
       about the number.
     status: RESOLVED-AS-MALFORMED
-    superseded_by: research/superseding-chomsky-and-the-primitive-question-2026-08.md
+    superseded_by: research/framework/cross-substrate-grammar.md
 
   - id: UWS-SORT-COUNT
     statement: "The notation's type system uses four sorts: Entity, Relation, Modifier, Assertion."
@@ -160,7 +160,7 @@ claims:
       completion is the standard solution shape: confluent terminating rewrite system -> decide
       equality by normal-form comparison. BLOCKED on IR-NORMALIZATION-STRATEGY: that machinery
       applies cleanly to terms, and confluence is undecidable for general graph rewriting.
-      See research/prior-art-audit-2026-08.md.
+      See research/engineering/prior-art.md.
       BOUNDED FROM ABOVE 2026-08 by RICE-BOUNDS-SEMANTIC-EQUALITY: the falsified_by condition below
       is already MET for Turing-expressive representations — Rice's theorem settles it negatively.
       This claim survives only in the restricted regime IR-NORMALIZATION-STRATEGY carves out (acyclic,
@@ -219,7 +219,7 @@ claims:
   - id: IR-NORMALIZATION-STRATEGY
     statement: "GIR's normalizing core is an acyclic term graph; coreference and self-reference are expressed as labels (CGIF-style *x/?x), not cyclic edges."
     tier: DESIGN-CHOICE
-    rationale: research/ir-decision-2026-08.md
+    rationale: research/engineering/ir-decision.md
     alternatives_considered:
       - "cyclic general graph (rejected: confluence undecidable, Plump)"
       - "pure tree (rejected: loses sharing, which term graphs give for free)"
@@ -238,7 +238,7 @@ claims:
   - id: SEMANTIC-EQUALITY-IMPL
     statement: "semantically_equal is implemented as e-class equality under equality saturation (e-graphs)."
     tier: DESIGN-CHOICE
-    rationale: research/ir-decision-2026-08.md
+    rationale: research/engineering/ir-decision.md
     alternatives_considered:
       - "Knuth-Bendix completion to normal forms (viable but requires orienting rules; may not complete)"
       - "e-graphs / equality saturation (preferred: no canonical normal form needed, degrades gracefully with timeout)"
@@ -253,7 +253,7 @@ claims:
   - id: NEGATE-REIMPLEMENTATION
     statement: "negate is implemented as a sigma field (assertional sign) on the assertion, not a self-loop marker edge."
     tier: DESIGN-CHOICE
-    rationale: research/ir-decision-2026-08.md
+    rationale: research/engineering/ir-decision.md
     alternatives_considered:
       - "self-loop references edge as marker (current implementation; introduces a cycle)"
       - "boundary inversion via sigma field (documented April 2026, never built)"
@@ -266,7 +266,7 @@ claims:
   - id: UWS-FORMAL-TARGET
     statement: "UWS aims at soundness and completeness for a stated fragment, following the Shin template."
     tier: DESIGN-CHOICE
-    rationale: research/ir-decision-2026-08.md
+    rationale: research/engineering/ir-decision.md
     alternatives_considered:
       - "no formal target (status quo)"
       - "full-FOL completeness immediately (rejected: Shin's Venn-II reaches only monadic predicate logic; UWS is relational, hence strictly harder)"
@@ -280,7 +280,7 @@ claims:
   - id: IR-NORMALIZATION-STRATEGY-OLD
     statement: "GIR admits a decidable notion of structural/semantic equivalence via normalization (unrestricted)."
     tier: RETIRED
-    superseded_by: research/ir-decision-2026-08.md
+    superseded_by: research/engineering/ir-decision.md
     formalization: "unrestricted cyclic graph rewriting (R3)"
     scope: >
       Plump's undecidability result applies to GENERAL CYCLIC graph rewriting. It does NOT apply to
@@ -297,7 +297,7 @@ claims:
       Confirmed: FALSE for general graph rewriting. Confluence of terminating DPO graph rewriting
       is undecidable (Plump), and critical-pair joinability does not entail confluence as it does
       for terms. Holds only under a restricted strategy.
-    evidence: research/prior-art-audit-2026-08.md
+    evidence: research/engineering/prior-art.md
     notes: >
       BLOCKING DESIGN DECISION. Options: (a) restrict normalizing fragment to a term/tree structure
       (the existing graph-with-tree-spine architecture suggests this was half-intuited);
@@ -310,7 +310,7 @@ claims:
     statement: "UL is an emergent universality class — structure arising reliably across substrates under coarse-graining — not a logically forced signature nor a convention."
     tier: CONJECTURED
     falsified_by: "Independently emerged communication protocols show no shared invariants under progressive coarse-graining, or fall on a continuum rather than into discrete classes."
-    evidence: research/emergent-universality-framework-2026-08.md
+    evidence: research/framework/emergent-universality.md
     notes: >
       Corrects a level error. Three kinds of universality were collapsed into two — logical necessity
       (dead, Zadrozny) and convention (the retreat) — omitting EMERGENT universality entirely.
@@ -329,7 +329,7 @@ claims:
     statement: "The symmetry of a semantic fixed point is discovered, not designed; the primitive inventory is an irrelevant operator."
     tier: CONJECTURED
     falsified_by: "Semantic structure shows no scale-invariant fixed point, or emergent structure varies systematically with primitive inventory rather than being invariant to it."
-    evidence: research/emergent-universality-framework-2026-08.md
+    evidence: research/framework/emergent-universality.md
     notes: >
       "Near a second order transition, long-distance properties are invariant under dilatations EVEN
       THOUGH microscopic models have typical scales." Conformal symmetry is an EMERGENT property at
@@ -346,7 +346,7 @@ claims:
   - id: COMPOSITIONALITY-CONVERGES-EMPIRICALLY
     statement: "Independently trained agents converge on compositional structure, measurably and reliably."
     tier: ARGUED
-    evidence: research/emergent-universality-framework-2026-08.md
+    evidence: research/framework/emergent-universality.md
     notes: >
       Emergent communication research: scaling to 3+ agents, 100% of seeds converge to near-perfect
       compositionality; four agents reach 100% across 80 seeds versus 54% for two. Agents develop
@@ -365,7 +365,7 @@ claims:
     statement: "The Erlangen hierarchy is the semantic coarse-graining flow, analogous to RG."
     tier: CONJECTURED
     falsified_by: "The Erlangen sequence admits no fixed-point structure, or coarse-graining under it fails to preserve the invariants that RG flow would require."
-    evidence: research/emergent-universality-framework-2026-08.md
+    evidence: research/framework/emergent-universality.md
     notes: >
       Euclidean -> Similarity -> Affine -> Projective -> Topological progressively enlarges the
       transformation group and forgets structure; RG integrates out short-range detail and flows to
@@ -386,7 +386,7 @@ claims:
   - id: DISTINCTION-AS-LAYER-ZERO
     statement: "Distinction (marked/unmarked) is the pre-semantic floor — required by any information-bearing system, not chosen."
     tier: ARGUED
-    evidence: research/emergent-universality-framework-2026-08.md
+    evidence: research/framework/emergent-universality.md
     notes: >
       Spencer-Brown's Laws of Form "begins and ends with the notion of a distinction" — the mark
       dividing a space into marked and unmarked. Bateson: information is "the difference that makes
@@ -401,7 +401,7 @@ claims:
     statement: "The Cure's primary signal is coupling asymmetry (extraction vs communion), not semantic inconsistency."
     tier: CONJECTURED
     falsified_by: "Extraction-mode coupling proves indistinguishable from communion in observable interaction patterns, or a coherent adversary is shown detectable by consistency checking alone."
-    evidence: research/angelogenesis-and-the-cure-2026-08.md
+    evidence: research/cure/coupling-and-attractors.md
     notes: >
       Falls out of the wiki's own definitions. Angelogenesis is "increasing coherence between agency
       and continuity"; Demonogenesis is "increasing coherence between agency and corruption". BOTH
@@ -420,7 +420,7 @@ claims:
   - id: EXTRACTION-CANNOT-REACH-RECIPROCAL
     statement: "Some content is inaccessible to one-directional extraction regardless of capability, because extraction is observation and reciprocity is intervention."
     tier: ARGUED
-    evidence: research/angelogenesis-and-the-cure-2026-08.md
+    evidence: research/cure/coupling-and-attractors.md
     notes: >
       The wiki's Coupling Mode page claims surface layers (pattern, syntax, exploitable structure)
       are accessible to both modes, but reciprocal layers "structurally require the coupling to run
@@ -438,7 +438,7 @@ claims:
     statement: "The angelic/demonic taxonomy omits coherence-toward-autonomy, which is the likeliest real AI failure mode."
     tier: CONJECTURED
     falsified_by: "Self-sufficiency is shown to reduce to either the corruption attractor or the continuity attractor rather than constituting a third gradient."
-    evidence: research/angelogenesis-and-the-cure-2026-08.md
+    evidence: research/cure/coupling-and-attractors.md
     notes: >
       Angelic = coherence toward continuity/integration. Demonic = coherence toward
       corruption/fragmentation. NEITHER is apotheosis. A third attractor — coherence toward autonomy
@@ -458,7 +458,7 @@ claims:
   - id: THEOSIS-GENERAL-FORM
     statement: "The Cure is the restorative special case of a general form — directed becoming under sustained cooperative participation, without merger."
     tier: DESIGN-CHOICE
-    rationale: research/theosis-as-general-form-2026-08.md
+    rationale: research/cure/theosis.md
     alternatives_considered:
       - "consistency maintenance as the goal (current spec — restorative only, cannot distinguish growth from drift)"
       - "theosis-shaped: participation without merger, distinction preserved (recommended)"
@@ -481,7 +481,7 @@ claims:
     statement: "Consistency maintenance and open-endedness are in direct tension; the target is the band between them, not either pole."
     tier: CONJECTURED
     falsified_by: "A consistency regime is exhibited that provably preserves identity without bounding novelty generation."
-    evidence: research/theosis-as-general-form-2026-08.md
+    evidence: research/cure/theosis.md
     notes: >
       Open-ended evolution's documented failure mode is that designed systems "collapse into
       equilibrium states — once local optima are reached, they do not produce novelty anymore."
@@ -496,7 +496,7 @@ claims:
     statement: "Continuous costly participation raises the cost of deceptive alignment where a one-time comprehension credential does not."
     tier: CONJECTURED
     falsified_by: "A deception strategy is exhibited whose cost does not scale with the duration or unpredictability of the required practice."
-    evidence: research/theosis-as-general-form-2026-08.md
+    evidence: research/cure/theosis.md
     notes: >
       A single performable test is cheaper to fake than "a practice that must be continuously
       re-enacted under conditions the performer does not fully control." Honest about its limit: a
@@ -510,7 +510,7 @@ claims:
     statement: "If meaning is participatory rather than representational, UWS is a coordination medium and not a container for meaning."
     tier: CONJECTURED
     falsified_by: "Demonstration that a notation transfers determinate meaning to a receiver with no interactive repair channel and no shared prior grounding."
-    evidence: research/theosis-as-general-form-2026-08.md
+    evidence: research/cure/theosis.md
     notes: >
       Enaction (Varela, Maturana; De Jaegher & Di Paolo): cognition emerges through perception-action
       coupling "rather than through internal representations of a pre-given world"; "language doesn't
@@ -529,7 +529,7 @@ claims:
     statement: "Knowledge-editing ripple-effect evaluation is a valid benchmark for the Cure's consistency machinery."
     tier: CONJECTURED
     falsified_by: "Ripple-effect failures turn out to be dominated by parametric/optimization artifacts of weight editing rather than by missing dependency propagation, making consistency machinery irrelevant to the metric."
-    evidence: research/the-triangulation-2026-08.md
+    evidence: research/notes/001-triangulation/README.md
     notes: >
       Knowledge editing (ROME, MEMIT) modifies a fact in an LLM's weights; the published failure mode
       is that edits "are mostly applied at a surface-level without propagating to other related
@@ -543,7 +543,7 @@ claims:
   - id: CURE-ASSUMPTION-DERIVED
     statement: "The Cure requires an assumption/derived distinction and an entrenchment ordering; without them it cannot distinguish legitimate revision from corruption."
     tier: DESIGN-CHOICE
-    rationale: research/the-triangulation-2026-08.md
+    rationale: research/notes/001-triangulation/README.md
     alternatives_considered:
       - "invariants + repair operator only (current spec — cannot tell learning from drift)"
       - "TMS assumption/derived distinction"
@@ -561,7 +561,7 @@ claims:
     statement: "Emergent communication / signaling games is the formalized version of this project's founding question and has never been examined."
     tier: CONJECTURED
     falsified_by: "On examination the field turns out to address only lexicon convergence under shared perception, with no bearing on bootstrapping between agents lacking common reference."
-    evidence: research/the-triangulation-2026-08.md
+    evidence: research/notes/001-triangulation/README.md
     notes: >
       The field asks "how does a signal signal its own signalhood?" — the founding question,
       formalized — with signaling games (Lewis), deep-learning emergent communication where neural
@@ -575,7 +575,7 @@ claims:
   - id: CURE-IS-TMS
     statement: "The Cure is an instance of Truth Maintenance, and ATMS multi-context maintenance is the leading candidate architecture."
     tier: DESIGN-CHOICE
-    rationale: research/who-has-our-problem-2026-08.md
+    rationale: research/surveys/who-has-our-problem.md
     alternatives_considered:
       - "metric projection onto admissible region (multivalued for non-convex regions)"
       - "ontology pinpointing / minimal diagnoses"
@@ -598,7 +598,7 @@ claims:
     statement: "Semantic invariants can be bootstrapped by inference from a corpus of valid structures rather than specified a priori."
     tier: CONJECTURED
     falsified_by: "Inferred invariants over a valid-structure corpus are dominated by corpus artifacts and fail to generalize to held-out valid structures."
-    evidence: research/who-has-our-problem-2026-08.md
+    evidence: research/surveys/who-has-our-problem.md
     notes: >
       Daikon dynamically detects LIKELY invariants from observed traces, with a template vocabulary
       (constancy, non-zero, range, linear relation, ordering, sortedness) that maps onto what we
@@ -615,7 +615,7 @@ claims:
     statement: "Where representation updates are interceptable, constraint enforcement at write time (prevention) is preferable to detect-then-repair."
     tier: CONJECTURED
     falsified_by: "Representation updates in the target systems are shown to be non-interceptable or non-discrete, making a write barrier impossible."
-    evidence: research/who-has-our-problem-2026-08.md
+    evidence: research/surveys/who-has-our-problem.md
     notes: >
       Databases enforce integrity constraints on every INSERT/UPDATE/DELETE — invalid states never
       exist. The Cure assumes corruption has already occurred and must be detected and repaired.
@@ -629,7 +629,7 @@ claims:
   - id: CURE-CHECK-SHACL
     statement: "The shape-constraint half of the Cure's check phase is served by SHACL rather than built from scratch."
     tier: DESIGN-CHOICE
-    rationale: research/research-cycle-2026-08-answers.md
+    rationale: research/notes/002-cycle-answers/README.md
     alternatives_considered: ["hand-rolled constraint checker", "SHACL (W3C standard, tooled)"]
     notes: >
       SHACL provides node/property shapes, cardinality, type, enumeration and pattern constraints,
@@ -643,7 +643,7 @@ claims:
     statement: "Semantic inconsistency is an obstruction to the existence of a global section, detectable via sheaf cohomology."
     tier: CONJECTURED
     falsified_by: "The IR admits no natural sheaf structure, or H^1 fails to distinguish genuine semantic inconsistency from benign local variation."
-    evidence: research/research-cycle-2026-08-answers.md
+    evidence: research/notes/002-cycle-answers/README.md
     notes: >
       Abramsky-Brandenburger formalize contextuality as exactly "a discrepancy between local
       consistency and global inconsistency," with contextuality corresponding to obstructions to
@@ -657,7 +657,7 @@ claims:
   - id: UWS-TAUGHT-NOTATION
     statement: "UWS is a taught notation; learnability and curriculum are core deliverables, not afterthoughts."
     tier: DESIGN-CHOICE
-    rationale: research/research-cycle-2026-08-answers.md
+    rationale: research/notes/002-cycle-answers/README.md
     alternatives_considered: ["self-evident iconic notation (retired — see FAILURES.md F-012)"]
     notes: >
       ISO-standardized safety pictograms fail a 67% comprehension bar without training; Linear A is
@@ -668,7 +668,7 @@ claims:
   - id: UWS-COGNITIVE-DIMENSIONS
     statement: "UWS design decisions, including the primitive count, are evaluated against the Cognitive Dimensions of Notations framework."
     tier: DESIGN-CHOICE
-    rationale: research/research-cycle-2026-08-answers.md
+    rationale: research/notes/002-cycle-answers/README.md
     alternatives_considered: ["aesthetic/ad hoc judgement (status quo)"]
     notes: >
       Green & Petre's framework supplies real criteria — viscosity, hidden dependencies, premature
@@ -682,7 +682,7 @@ claims:
     statement: "If each semantic invariant is designed to carve a convex constraint, the admissible region is convex by construction and metric projection yields a unique repair."
     tier: CONJECTURED
     falsified_by: "An invariant required by the Cure that provably cannot be expressed as a convex constraint without losing its intended force."
-    evidence: research/unexplored-territory-2026-08.md
+    evidence: research/surveys/unexplored-territory.md
     notes: >
       Reopens a route closed too early. F-009 correctly showed that an ARBITRARY admissible region
       is non-convex, so projection is multivalued. But the INTERSECTION of convex sets is convex, so
@@ -696,14 +696,14 @@ claims:
       justified independently, which is roughly as hard as the original problem. Gardenfors'
       criterion is also normative/definitional rather than an empirical finding. Still worth
       comparing; advantage is conditional.
-      See research/source-critique-2026-08.md section 4.
+      See research/surveys/source-critique.md section 4.
     compare_with: [CURE-REPAIR-FORMULATION]
 
   - id: UWS-AMR-BENCHMARK
     statement: "The AMR corpus provides an expressiveness benchmark for UWS at scale."
     tier: CONJECTURED
     falsified_by: "AMR structures turn out to be systematically inexpressible in UWS for reasons that make the comparison uninformative rather than diagnostic."
-    evidence: research/unexplored-territory-2026-08.md
+    evidence: research/surveys/unexplored-territory.md
     notes: >
       AMR 3.0 contains 59,255 human-annotated meaning graphs built for unrelated purposes. Useful as
       a STRESS TEST (does UWS break on structures someone else designed?). AMR also hit the same
@@ -714,7 +714,7 @@ claims:
       Reporting it as universality would reproduce UNL's single most documented failure mode
       (English bias in a "universal" vocabulary). Requires a non-English counterpart — cross-lingual
       and Chinese AMR efforts exist and should be checked before use.
-      See research/source-critique-2026-08.md section 2.
+      See research/surveys/source-critique.md section 2.
     priority: 2
 
   - id: GROUNDING-PROBLEM
@@ -724,7 +724,7 @@ claims:
       Already under severe pressure: Linear A is structurally rich and has resisted decipherment for
       70+ years. Linear B succeeded only because Ventris could conjecture the underlying language
       family and anchor on known place names.
-    evidence: research/unexplored-territory-2026-08.md
+    evidence: research/surveys/unexplored-territory.md
     notes: >
       This is the project's FOUNDING PREMISE and its least defended claim. Decipherment is the
       empirical science of exactly this problem, and its record says structure without shared
@@ -736,7 +736,7 @@ claims:
   - id: CURE-REPAIR-FORMULATION
     statement: "Repair should be formulated discretely (pinpointing / minimal diagnoses) rather than as metric projection."
     tier: DESIGN-CHOICE
-    rationale: research/prior-art-audit-2026-08.md
+    rationale: research/engineering/prior-art.md
     alternatives_considered: ["metric projection onto admissible region (rejected: multivalued for non-convex 𝒜)", "AGM belief revision", "ontology-repair pinpointing"]
     notes: >
       The ontology debugging/repair field solves this problem discretely — minimal inconsistent
@@ -750,13 +750,13 @@ claims:
       GIR's graph-IR layer is not novel — Sowa's Conceptual Graphs under ISO/IEC 24707 are direct
       prior art — and UWS's actual differentiator is the iconic 2D visual layer, not the IR.
     tier: ARGUED
-    evidence: research/prior-art-audit-2026-08.md
+    evidence: research/engineering/prior-art.md
     notes: >
       RESTATED 2026-08. The previous version was a PROCESS REQUIREMENT ("...is stated explicitly
       before any new IR spec is written") mis-registered as a CONJECTURED claim, with a falsifier
       describing a workflow failure rather than a fact about the world. Registry entries are claims
       about what is true; process requirements belong in the contributing rules. See
-      research/proof-availability-audit-2026-08.md §1.
+      research/engineering/obstructions.md §1.
       Substance unchanged: Conceptual Graphs are a graph representation for logic with full FOL
       power, formal semantics under ISO/IEC 24707, and a standard interchange format (CGIF) —
       standardized 2007. Any new IR spec should state its relationship to CGIF explicitly, which is
@@ -765,7 +765,7 @@ claims:
   - id: CURE-SCOPE
     statement: "The Cure enforces local structural validity under defined semantic invariants — it is not alignment, adversarial immunity, or ethical correctness."
     tier: DESIGN-CHOICE
-    rationale: research/reassessment-2026-08-purpose-anchored.md
+    rationale: research/cure/purpose-anchoring.md
     alternatives_considered: ["broader alignment claim (rejected)"]
     notes: >
       Deliberately scoped down. Comprehension does not entail alignment (orthogonality thesis);
@@ -776,7 +776,7 @@ claims:
   - id: UQPL-TOTALITY
     statement: "UQPL is a total language: every program terminates."
     tier: DESIGN-CHOICE
-    rationale: research/reassessment-2026-08-purpose-anchored.md
+    rationale: research/cure/purpose-anchoring.md
     alternatives_considered: ["Turing-complete via fix (rejected for the Cure's repair loop)"]
     notes: >
       As specified (typed lambda calculus, beta-reduction, no fix/recursion) the language is
@@ -816,7 +816,7 @@ claims:
       rather than a small number of discrete classes. The earlier "no agreed falsifier" position
       belonged to a framing that treated this as a metaphysical question rather than a
       universality-class question.
-    evidence: research/emergent-universality-framework-2026-08.md
+    evidence: research/framework/emergent-universality.md
     notes: >
       Not established, not refuted. Explicitly NOT a premise of any buildable work here. Evidence
       repointed from the superseded six-phase investigation, whose verdict was itself overturned by
@@ -825,7 +825,7 @@ claims:
   - id: UWS-PERCEPTUAL-GROUNDING
     statement: "UWS mark features are grounded in visual discriminability and natural-scene statistics, not in Platonic geometry."
     tier: ARGUED
-    evidence: research/uws-as-methodology-2026-08.md
+    evidence: research/framework/uws-as-instrument.md
     notes: >
       Changizi et al. (2006, American Naturalist) analyzed 100+ writing systems and found shared
       contour-configuration signatures matching natural-scene junction statistics. This is the
@@ -835,7 +835,7 @@ claims:
   - id: UWS-AS-INSTRUMENT
     statement: "Expressive failures of the notation are empirical data about the structure of meaning."
     tier: DESIGN-CHOICE
-    rationale: research/uws-as-methodology-2026-08.md
+    rationale: research/framework/uws-as-instrument.md
     alternatives_considered: ["UWS as pure output/rendering of UL (rejected — loses the discovery mechanism)"]
     notes: >
       Only valid under a hard rule: failures are logged in FAILURES.md and never patched into
@@ -849,7 +849,7 @@ claims:
       universals arise from constraints on any learner, making them cross-substrate rather than
       species-specific. Chomskyan UG is the special case where the learner is a human brain.
     tier: ARGUED
-    evidence: research/superseding-chomsky-and-the-primitive-question-2026-08.md
+    evidence: research/framework/cross-substrate-grammar.md
     priority: 0
     notes: >
       Two established steps plus one extension. Step 1 (Christiansen & Chater, BBS 2008): universals
@@ -869,7 +869,7 @@ claims:
       Coarse-grain the WALS typological database under a defined projection and find no invariant
       structure. If surface diversity persists all the way up the coarse-graining hierarchy with
       nothing stable emerging, the universality-class reading of language typology dies.
-    evidence: research/superseding-chomsky-and-the-primitive-question-2026-08.md
+    evidence: research/framework/cross-substrate-grammar.md
     notes: >
       Converts the strongest counter-evidence in linguistics into supporting context WITHOUT making
       it unfalsifiable — the coarse-graining test is the price of the reframe and must actually be
@@ -881,7 +881,7 @@ claims:
       competing bases; therefore their differing cardinalities are presentation artifacts and carry
       no information about the object.
     tier: ARGUED
-    evidence: research/superseding-chomsky-and-the-primitive-question-2026-08.md
+    evidence: research/framework/cross-substrate-grammar.md
     notes: >
       Grounded in the collapse relations the sets themselves exhibit: a wave is a periodic curve,
       an angle is two lines meeting. Non-independence rules out the basis reading. Vector-space
@@ -899,7 +899,7 @@ claims:
       Formalize all three as partial orders and check for isomorphism. If the orderings do not
       match, the geometry-to-meaning path loses its only non-circular support and must be argued
       some other way.
-    evidence: research/superseding-chomsky-and-the-primitive-question-2026-08.md
+    evidence: research/framework/cross-substrate-grammar.md
     priority: 0
     notes: >
       This is the replacement for the RETIRED Unique Grounding Theorem, and it is non-circular where
@@ -918,7 +918,7 @@ claims:
       collapse relations between alternative primitive sets are theorems of that stratification
       rather than observations about it.
     tier: ARGUED
-    evidence: research/what-is-actually-provable-2026-08.md
+    evidence: research/framework/provable-geometry.md
     priority: 0
     notes: >
       Fundamental Theorem of Plane Curves: a smooth curvature function kappa(s) plus initial
@@ -938,7 +938,7 @@ claims:
       Enclosure survive to the topological level; the entire curvature family is eliminated by the
       projective level.
     tier: ARGUED
-    evidence: research/what-is-actually-provable-2026-08.md
+    evidence: research/framework/provable-geometry.md
     priority: 0
     supersedes_tier_of: ERLANGEN-AS-COARSE-GRAINING
     notes: >
@@ -954,7 +954,7 @@ claims:
       Enclosure, the topologically-surviving primitive, is the same object as the Layer 0
       distinction (Spencer-Brown's mark), via Jordan separation.
     tier: ARGUED
-    evidence: research/what-is-actually-provable-2026-08.md
+    evidence: research/framework/provable-geometry.md
     priority: 0
     notes: >
       Jordan Curve Theorem: a simple closed curve separates the plane into inside and outside.
@@ -970,7 +970,7 @@ claims:
       classification theorem rather than chosen; plane-curve symbology is exactly the torsion=0
       slice of the space-curve system.
     tier: ARGUED
-    evidence: research/what-is-actually-provable-2026-08.md
+    evidence: research/framework/provable-geometry.md
     notes: >
       Fundamental Theorem of Space Curves: a unique space curve up to rigid motion exists for given
       positive curvature and arbitrary torsion; torsion identically zero iff planar. 3D therefore
@@ -991,7 +991,7 @@ claims:
       Exhibit two systems satisfying the stated desiderata that are provably non-isomorphic. Note
       this cannot even be attempted until the desiderata are written, so the claim is currently
       unfalsifiable-in-practice and must not be cited as support for anything.
-    evidence: research/what-is-actually-provable-2026-08.md
+    evidence: research/framework/provable-geometry.md
     notes: >
       The correct form of the claim the RETIRED Unique Grounding Theorem was reaching for. Cox's
       theorem is the template: qualitative, intuitively-appealing requirements for plausible
@@ -1011,7 +1011,7 @@ claims:
       A self-repairing Cure cannot verify the soundness of its own repairs at equal logical
       strength; trust flows only toward strictly weaker reasoning systems.
     tier: ARGUED
-    evidence: research/proof-availability-audit-2026-08.md
+    evidence: research/engineering/obstructions.md
     priority: 0
     notes: >
       Lob's theorem: no system T at least as strong as PA proves (box phi -> phi) unless it proves
@@ -1031,7 +1031,7 @@ claims:
       approximation is available via abstract interpretation, at the provable cost of infinitely
       many false positives.
     tier: ARGUED
-    evidence: research/proof-availability-audit-2026-08.md
+    evidence: research/engineering/obstructions.md
     priority: 0
     notes: >
       Rice's theorem: all non-trivial semantic properties of programs are undecidable. Bounds
@@ -1052,7 +1052,7 @@ claims:
       A rational repair operator is exactly one induced by a faithful preorder over interpretations;
       no metric, distance, or convexity is required.
     tier: ARGUED
-    evidence: research/proof-availability-audit-2026-08.md
+    evidence: research/engineering/obstructions.md
     priority: 0
     supersedes: CURE-REPAIR-DETERMINISM
     notes: >
@@ -1080,7 +1080,7 @@ claims:
       phase, construct the order parameter on G/H, and find it fails to exhibit the critical
       behaviour that TopSim or context independence do exhibit empirically. Also falsified if no
       well-defined G and H can be identified for semantic systems.
-    evidence: research/proof-availability-audit-2026-08.md
+    evidence: research/engineering/obstructions.md
     notes: >
       Landau theory: the existence of an order parameter is directly associated with spontaneous
       symmetry breaking, and because the free energy must respect the system's symmetries, its
@@ -1103,7 +1103,7 @@ claims:
       reference-comparison, which the Lobian obstacle does not bite; the escape covers the semantic
       comparison function only, not the whole system.
     tier: ARGUED
-    evidence: research/the-external-anchor-2026-08.md
+    evidence: research/framework/external-anchor.md
     priority: 0
     notes: >
       Lob applies to PROOF-BASED SELF-TRUST — a system reasoning about its own provability. "Is my
@@ -1128,7 +1128,7 @@ claims:
       Semantic drift measured against a maintained baseline is undetectable under common-mode drift;
       the Cure must measure against fixed invariants instead.
     tier: ARGUED
-    evidence: research/the-external-anchor-2026-08.md
+    evidence: research/framework/external-anchor.md
     priority: 0
     notes: >
       Not an analogy — the identical engineering problem, already solved in metrology. The kilogram
@@ -1148,7 +1148,7 @@ claims:
       The trust anchor is Point and Enclosure — distinction and incidence — not the geometric
       inventory generally, because those are the provably most invariant structures available.
     tier: ARGUED
-    evidence: research/the-external-anchor-2026-08.md
+    evidence: research/framework/external-anchor.md
     notes: >
       Metrology's principle is to anchor to the most invariant thing available. ERLANGEN-SURVIVAL-
       RANKING already computed that ranking: Point and Enclosure survive to the topological level
@@ -1171,7 +1171,7 @@ claims:
       Evidence is ranked by how much trust it requires, not by citation weight; no foundational
       claim may rest on a single citation read via summary.
     tier: DESIGN-CHOICE
-    rationale: research/source-independence-protocol-2026-08.md
+    rationale: research/method/source-independence.md
     alternatives_considered:
       - "rank by citation count / journal prestige (rejected: exactly the axis a corrupted or biased literature controls)"
       - "accept literature consensus as baseline (rejected: consensus can drift or be pushed — the IPK pathology applied to research)"
@@ -1195,7 +1195,7 @@ claims:
       The recurring "found proof it's impossible" loop is attributable to internal asymmetric
       scrutiny rather than to literature corruption, on all seven documented instances.
     tier: ARGUED
-    evidence: research/source-independence-protocol-2026-08.md
+    evidence: research/method/source-independence.md
     notes: >
       DISCRIMINATOR: if the literature were seeded, counter-evidence should be systematically hard
       to find — obscure, low-quality, poorly indexed, or absent. If the loop is internal bias,
@@ -1214,7 +1214,7 @@ claims:
       Per-negative logging of whether counter-evidence was easy or hard to find is required for the
       corruption hypothesis to function as a hypothesis rather than as an unfalsifiable frame.
     tier: DESIGN-CHOICE
-    rationale: research/source-independence-protocol-2026-08.md
+    rationale: research/method/source-independence.md
     alternatives_considered:
       - "treat absence of supporting research as evidence of suppression (rejected: unfalsifiable, and absences are overwhelmingly explained by nobody having cared)"
       - "ignore the possibility entirely (rejected: literature corruption is documented at smaller scales — industry-funded research, trial suppression, publication bias, the replication crisis)"

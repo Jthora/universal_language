@@ -74,7 +74,7 @@ is the alarm.
 
 ## 3. Negative-result discipline (R1–R6)
 
-Full text: `research/negative-result-discipline-2026-08.md`. **Normative.**
+Full text: `research/method/negative-results.md`. **Normative.**
 
 - **R1 — Adversarial search is mandatory on every negative.** Before recording any finding that
   closes a line of work, run **at least one** search in the opposite direction. Not "when warranted"
@@ -97,7 +97,7 @@ Full text: `research/negative-result-discipline-2026-08.md`. **Normative.**
 
 ## 4. Source-independence protocol (S1–S7)
 
-Full text: `research/source-independence-protocol-2026-08.md`. **Normative.**
+Full text: `research/method/source-independence.md`. **Normative.**
 
 **Premise-free framing:** literature corruption is documented at scales nobody disputes — industry
 funding effects, trial suppression, publication bias, citation cartels, the replication crisis.

@@ -90,7 +90,7 @@ by construction rather than by vigilance.**
 ### And the Erlangen computation already told us which anchor to pick
 
 Metrology's principle is *anchor to the most invariant thing available*. §3 of
-`what-is-actually-provable-2026-08.md` computed exactly that ranking: **Point and Enclosure survive
+`research/framework/provable-geometry.md` computed exactly that ranking: **Point and Enclosure survive
 to the topological level; the whole curvature family dies by projective.**
 
 **So the anchor is not "the geometry" generally — it is distinction and incidence specifically,**

@@ -40,14 +40,10 @@ BANNER = /retired|superseded|historical|do not cite|archive|status note/i
 ALLOWLIST = %w[
   FAILURES.md GLOSSARY.md claims.yaml CONTRIBUTING.md
   RESEARCH-PROTOCOL.md
-  research/legacy-findings.md
-  research/what-is-actually-provable-2026-08.md
-  research/superseding-chomsky-and-the-primitive-question-2026-08.md
-  research/postmortem-and-rebuild-2026-08.md
-  research/wiki-comparison-2026-08.md
-  research/reassessment-2026-08-purpose-anchored.md
-  research/deep-critique-2026-08-wiki-and-implementation.md
-  research/emergence-investigation/keep-retire-inventory.md
+  STATE-OF-PLAY.md
+  research/framework/provable-geometry.md
+  research/framework/cross-substrate-grammar.md
+  research/cure/purpose-anchoring.md
 ]
 
 violations = []

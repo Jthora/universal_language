@@ -26,7 +26,7 @@ breaks it is cyclicity (and unrestricted graph structure generally).
 
 ## 2. Where GIR sits, and why — this was a deliberate design choice
 
-From the repo's own architecture note (`ul-forge/docs/v1-reference/architecture/graph-with-tree-spine.md`):
+From the repo's architecture notes (since removed — git history):
 
 > *"**Self-reference:** A glyph can refer to itself (the concept of 'self-awareness' contains
 > itself). **This creates a cycle.** Trees are acyclic by definition."*

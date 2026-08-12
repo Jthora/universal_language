@@ -2,7 +2,7 @@
 
 **Date:** 2026-08-01
 **Method shift:** previous cycles imported answers to *other people's questions* and then had to
-narrow them on transfer (see `source-critique-2026-08.md`). This cycle inverts the search: instead
+narrow them on transfer (see `research/surveys/source-critique.md`). This cycle inverts the search: instead
 of asking "what does field X know," ask **"who has our exact problem — a system maintaining
 consistency in its own representations, with no external oracle and no pre-specified invariants?"**
 

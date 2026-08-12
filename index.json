@@ -11,7 +11,7 @@
     "github": "Jthora",
     "url": "https://jono.archangel.agency"
   },
-  "status_note": "The project's earlier claims of mathematical necessity are retired, along with the fixed inventory counts attached to them. Current framing: UL as an emergent universality class. See research/emergent-universality-framework-2026-08.md and research/what-is-actually-provable-2026-08.md. Superseded material is deleted from the working tree; git history is the archive.",
+  "status_note": "The project's earlier claims of mathematical necessity are retired, along with the fixed inventory counts attached to them. Current framing: UL as an emergent universality class. See research/framework/emergent-universality.md and research/framework/provable-geometry.md. Superseded material is deleted from the working tree; git history is the archive.",
   "entry_points": {
     "human": "README.md",
     "ai_agent": "AGENTS.md",

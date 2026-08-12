@@ -1,7 +1,7 @@
 # Superseding Chomsky, and What the Primitive Sets Actually Are
 
 **Date:** 2026-08-01
-**Continues:** `emergent-universality-framework-2026-08.md`
+**Continues:** `research/framework/emergent-universality.md`
 **Two claims tested:** (a) Chomsky's Universal Grammar is a human-centric shadow of a cross-substrate
 structure, and our version supersedes it as its root cause; (b) primitive *sets* are alternative
 decompositions of something invariant, so the count is genuinely arbitrary while the primitives are

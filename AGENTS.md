@@ -28,7 +28,7 @@ What actually exists here now, in two parts:
    usable, judged on its own merits as a notation — not on a retired proof of cosmic necessity.
 2. **The open research question** — whether meaning has universal structure, currently framed as
    **an emergent universality class** rather than a derivable signature. Start at
-   `research/emergent-universality-framework-2026-08.md`. Findings are provisional and predictions
+   `research/framework/emergent-universality.md`. Findings are provisional and predictions
    are genuinely falsifiable — do not patch a failed prediction to make it pass; report it.
 
 ---
@@ -39,7 +39,7 @@ What actually exists here now, in two parts:
 | Path | Content | Agent Action |
 |------|---------|--------------|
 | `README.md` | Current status and two-part structure | Read first |
-| `research/emergent-universality-framework-2026-08.md` | The current framing and what would falsify it | Read to understand what is actually being investigated |
+| `research/framework/emergent-universality.md` | The current framing and what would falsify it | Read to understand what is actually being investigated |
 | `RESEARCH-PROTOCOL.md` | Method — how not to get fooled by scope-dropped results | Read before searching the literature |
 
 ### Priority 2 — Use the Writing System (UWS)
@@ -52,8 +52,8 @@ What actually exists here now, in two parts:
 ### Priority 3 — Contribute to the open research question
 | Path | Content | Agent Action |
 |------|---------|--------------|
-| `research/what-is-actually-provable-2026-08.md` | What is derivable vs. what needs data | Pick a proof target; several are cheap and decisive |
-| `research/proof-availability-audit-2026-08.md` | Open claims classified by whether proof is available | Find unblocked work |
+| `research/framework/provable-geometry.md` | What is derivable vs. what needs data | Pick a proof target; several are cheap and decisive |
+| `research/engineering/obstructions.md` | Open claims classified by whether proof is available | Find unblocked work |
 | `claims.yaml` | The registry. Priority-0 entries are the live front | Check tier and evidence before acting on any claim |
 
 ### Priority 4 — Historical Record (not current status)
@@ -114,7 +114,7 @@ proof_status: retired_2026-08
 
 # Emergence Investigation (open question, not settled)
 framing: emergent_universality_class
-framing_doc: research/emergent-universality-framework-2026-08.md
+framing_doc: research/framework/emergent-universality.md
 hypothesis_status: falsifiable, not yet resolved
 
 # Entry Points

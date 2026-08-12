@@ -17,7 +17,7 @@ if a claim is not there, it is not a claim of this project.
 
 | Kind | Why it is valuable |
 |---|---|
-| **Proofs** | Several open questions have mathematical objects and are provable rather than empirical. See `research/what-is-actually-provable-2026-08.md` and `research/proof-availability-audit-2026-08.md`. |
+| **Proofs** | Several open questions have mathematical objects and are provable rather than empirical. See `research/framework/provable-geometry.md` and `research/engineering/obstructions.md`. |
 | **Obstruction theorems** | "What theorem says this is impossible?" is a required question here and has been under-asked. Scope conditions matter as much as the result. |
 | **Implementation** | `ul-forge/` is a working Rust workspace. Code is checkable in a way prose is not. |
 | **Falsifications** | A result that fails a prediction is a valid contribution. Report it; do not revise it until it passes. |

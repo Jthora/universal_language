@@ -1,7 +1,7 @@
 # The Emergent-Universality Framework — Full Construct Stack
 
 **Date:** 2026-08-01
-**Supersedes the framing in:** `the-triangulation-2026-08.md` §"UL has to be a bootstrapping
+**Supersedes the framing in:** `research/notes/001-triangulation/README.md` §"UL has to be a bootstrapping
 protocol" (too weak — see §0), and the "primitive count is an arbitrary design choice" conclusion
 in `phase3-formal-necessity-rebuild.md` (wrong level of description — see §2).
 

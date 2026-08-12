@@ -29,7 +29,7 @@ UWS is a constructed geometric visual notation: mark-primitives composed into co
 **Counts are not properties of UWS.** The primitives are strata of plane-curve curvature space, and
 the known sets are **generating sets, not bases** — so cardinality varies by presentation and
 carries no information about the object. "How many primitives" is a malformed question, not an open
-one. See `research/what-is-actually-provable-2026-08.md`.
+one. See `research/framework/provable-geometry.md`.
 
 Likewise, an operation inventory needs a domain before it means anything, and fixing that domain is
 part of the conceptual work still in progress. **Ask "operations *of what*?" before repeating any
@@ -47,7 +47,7 @@ claim that it's the unique or necessary structure of meaning, and no such claim 
 Separately, and honestly still open: is there a real, mind-independent semantic structure — the way
 physical symmetry groups or the natural numbers are real regardless of which notation represents
 them? This repository does not claim to have answered that. It has a six-phase plan
-(`research/emergent-universality-framework-2026-08.md`) with falsification criteria for
+(`research/framework/emergent-universality.md`) with falsification criteria for
 each phase, currently in progress. Some genuinely interesting partial findings so far:
 
 - The specific notation's primitive count (5, or the wiki's related 6-symbol system) is **not**
@@ -93,6 +93,6 @@ question seriously actually requires.
 
 - Want to use the notation? Start at `uws/NAVIGATION.md` and `ul-forge/`.
 - Want to help answer the actual open question? Start at
-  `research/emergent-universality-framework-2026-08.md`.
+  `research/framework/emergent-universality.md`.
 - Want the history of how this repository got here, including the original, more expansive claims?
   Start at git history, then the git history.

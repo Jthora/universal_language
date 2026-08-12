@@ -107,7 +107,7 @@ redirected the work productively rather than ending it.
 candidate inventories are **generating sets, not bases** — so their cardinalities differ by
 presentation and carry no information about the object. *How many primitives* is a malformed
 question rather than an open one, which is a genuine advance over treating it as an unresolved
-dispute. See `research/what-is-actually-provable-2026-08.md`.
+dispute. See `research/framework/provable-geometry.md`.
 
 Also standing: compositional generativity is real and threshold-gated; a convergent operational core
 (predication, negation, quantification) appears independently in Greek and Indian logic; and 100+
@@ -186,14 +186,14 @@ construct that made verification undecidable).
 |---|---|---|
 | 2 min | `README.md` | What the repo is, current status |
 | 15 min | **this file** + `GLOSSARY.md` | The stack, the hazards, how to read claims |
-| 1 hr | `research/reassessment-2026-08-purpose-anchored.md` → `research/prior-art-audit-2026-08.md` → `research/ir-decision-2026-08.md` | Why it was reframed, what's already solved elsewhere, the IR decision |
+| 1 hr | `research/cure/purpose-anchoring.md` → `research/engineering/prior-art.md` → `research/engineering/ir-decision.md` | Why it was reframed, what's already solved elsewhere, the IR decision |
 | To build | `uws/` (notation) · `ul-forge/` (code) · `claims.yaml` (what's actually true) | Enough to contribute |
-| Reference | `research/RESEARCH-REGISTER.md` | Every research thread run, what it returned, its caveat and status — the index, not an argument |
+| Reference | `research/surveys/research-register.md` | Every research thread run, what it returned, its caveat and status — the index, not an argument |
 
 > **Note (2026-08-01):** this primer predates three later findings — that the Cure is a rediscovery
 > of Truth Maintenance Systems (Doyle 1979 / de Kleer 1986), that invariants may be *inferred*
 > rather than specified (Daikon-style), and that prevention-at-write-time is an unexamined
-> alternative to detect-then-repair. See `research/RESEARCH-REGISTER.md` §E and §H.
+> alternative to detect-then-repair. See `research/surveys/research-register.md` §E and §H.
 
 **Companion wiki:** `wiki.fusiongirl.app` holds substantial related material — sometimes ahead of
 this repo (its architecture and AI-safety epistemics are better), sometimes wrong in its own ways

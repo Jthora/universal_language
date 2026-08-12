@@ -104,7 +104,7 @@ that check automatic.
 **To use the notation:** `uws/NAVIGATION.md` → `uws/writing-system/writers-companion.md` →
 `ul-forge/`
 
-**To understand the current state:** `research/reassessment-2026-08-purpose-anchored.md` →
+**To understand the current state:** `research/cure/purpose-anchoring.md` →
 `research/README.md`
 
 **To contribute:** the two open problems that block everything else are both concrete and neither

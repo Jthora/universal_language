@@ -167,7 +167,7 @@ not checkable over the chosen IR.
 fragment to a term/tree structure, exploiting the existing `graph-with-tree-spine` architecture;
 (b) adopt DPO-with-Interfaces, where confluence *is* decidable; (c) decide equivalence by
 non-normalization means. Must be chosen before further IR or evaluator work.
-See `research/prior-art-audit-2026-08.md`.
+See `research/engineering/prior-art.md`.
 
 ---
 
@@ -191,7 +191,7 @@ self-evident").
 mathematical and musical notation — which is respectable and unremarkable, but makes learnability,
 curriculum, and comprehension testing core deliverables rather than afterthoughts. Does not affect
 UWS's compositional or expressive properties.
-See `research/research-cycle-2026-08-answers.md` Q3.
+See `research/notes/002-cycle-answers/README.md` Q3.
 
 ---
 
@@ -225,7 +225,7 @@ culturally-embedded objects. Whether it bootstraps **structural/relational** mea
 and is cheaply testable — a good experiment, not a settled defeat.
 **Status of the downstream conclusion:** "UWS is a taught notation" still stands, but on the music-
 notation and system-learning evidence rather than on the pictogram data.
-See `research/source-critique-2026-08.md` §1.
+See `research/surveys/source-critique.md` §1.
 
 ---
 
@@ -242,7 +242,7 @@ direct translation outperformed it — an economic outcome, not a conceptual ref
 **Narrowed claim:** adoption is a genuine first-class problem and deserves explicit strategy, but the
 cited evidence bears on *replacement of an entrenched standard*, and applies far more weakly to
 creation in an unserved niche.
-See `research/source-critique-2026-08.md` §7 and §6.
+See `research/surveys/source-critique.md` §7 and §6.
 
 ---
 
@@ -268,7 +268,7 @@ are not human-specific — which emergent-communication results in non-human age
 finding of *"vanishingly few universals"* at the surface level is what universality theory
 **predicts** (microscopic diversity, invariants only under coarse-graining). Measured at the wrong
 level, it is supporting context rather than refutation.
-See `research/superseding-chomsky-and-the-primitive-question-2026-08.md` §§1–2.
+See `research/framework/cross-substrate-grammar.md` §§1–2.
 
 ---
 
@@ -299,7 +299,7 @@ coarse-graining behaviour, the Layer 0 link) is provable and should be built as 
 **Standing rule this establishes:** before filing a claim as CONJECTURED-pending-experiment, check
 whether its objects are mathematical. If they are, the burden is to find the theorem, not to design
 a study.
-See `research/what-is-actually-provable-2026-08.md`.
+See `research/framework/provable-geometry.md`.
 
 ---
 
@@ -330,7 +330,7 @@ re-imports undecidability.
 **Standing rule this establishes:** for any new subsystem, search for the impossibility result
 before designing the mechanism. "What would make this provably impossible?" is a required question,
 not an optional one.
-See `research/proof-availability-audit-2026-08.md`.
+See `research/engineering/obstructions.md`.
 
 ---
 
@@ -358,7 +358,7 @@ finding opens more work. Neither force has anything to do with accuracy.
 **Why "be more careful" is not the fix:** every instance occurred while I believed I was being
 rigorous, several while explicitly performing rigor. Self-monitoring is the compromised faculty, so
 the remedy cannot depend on it.
-**The fix:** six mechanical rules in `research/negative-result-discipline-2026-08.md`, four of them
+**The fix:** six mechanical rules in `research/method/negative-results.md`, four of them
 enforceable as required `claims.yaml` fields (`scope`, `formalization`, `revival_condition`,
 `refutation_tier`) and two checkable only by the user. Retroactively applied to all existing RETIRED
 entries in the same commit — writing the rules without applying them would have been the same error

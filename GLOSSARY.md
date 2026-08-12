@@ -11,7 +11,7 @@ they get different names — never the same word twice.
 
 ## The construct stack (revised 2026-08 — emergent universality)
 
-Full stack in `research/emergent-universality-framework-2026-08.md`.
+Full stack in `research/framework/emergent-universality.md`.
 
 | Layer | Term | Definition |
 |---|---|---|
@@ -33,7 +33,7 @@ Full stack in `research/emergent-universality-framework-2026-08.md`.
 | **Semantic Fixed Point** | A structure invariant under repeated coarse-graining. **If UL exists, this is what it is.** |
 | **Relevant / irrelevant operator** | Borrowed from RG. An *irrelevant* feature does not affect behaviour at the fixed point. The primitive count (5 vs 6) is predicted to be irrelevant — not arbitrary, but below the level where universality lives. |
 | **presentation** | A specific choice of primitive set used to describe the structure. Base-6/octahedral, {point, line, angle, curve, enclosure}, and {point, circle, line, wave} are *different presentations of one object* — tools and evidence, not competing truth claims. |
-| **generating set (not basis)** | The primitives **generate** rather than span: a wave is a periodic curve, an angle is two lines meeting, so they are not independent. Unlike a vector-space basis, **generating sets of the same structure may differ in cardinality** — which is exactly why the count varies while the primitives remain. See `research/superseding-chomsky-and-the-primitive-question-2026-08.md` §4. |
+| **generating set (not basis)** | The primitives **generate** rather than span: a wave is a periodic curve, an angle is two lines meeting, so they are not independent. Unlike a vector-space basis, **generating sets of the same structure may differ in cardinality** — which is exactly why the count varies while the primitives remain. See `research/framework/cross-substrate-grammar.md` §4. |
 
 > ⚠ **"Universal Grammar" — always qualify as *cross-substrate*.** Chomsky's UG attributes universals
 > to a *species-specific innate human* faculty. We claim the same phenomenon with a different cause:
@@ -53,7 +53,7 @@ These four are routinely conflated. They are distinct.
 
 | Term | Definition |
 |---|---|
-| **UL** — Universal Language | The hypothesized semantic structure itself. **Not a notation.** Whether it exists in any mind-independent sense is an *open research question*, not an assumption of this repo. See `research/emergent-universality-framework-2026-08.md`. |
+| **UL** — Universal Language | The hypothesized semantic structure itself. **Not a notation.** Whether it exists in any mind-independent sense is an *open research question*, not an assumption of this repo. See `research/framework/emergent-universality.md`. |
 | **UWS** — Universal Writing System | The **written** rendering of meaning as visible marks: an alphabet of iconic features plus a spatial placement grammar. A constructed notation. Real, buildable, exists today. Lives in `uws/`. |
 | **UPL** — Universal Programming Language | A *class* of languages that execute on semantic structure rather than machine state. Design stage. |
 

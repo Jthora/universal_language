@@ -188,8 +188,8 @@ finding the band between them.
 
 ## 9. Method, hard-won
 
-**R1–R6** (`research/negative-result-discipline-2026-08.md`) and **S1–S7**
-(`research/source-independence-protocol-2026-08.md`), summarized in `RESEARCH-PROTOCOL.md`.
+**R1–R6** (`research/method/negative-results.md`) and **S1–S7**
+(`research/method/source-independence.md`), summarized in `RESEARCH-PROTOCOL.md`.
 
 The failure they correct: **scope-dropping on negatives, mistaking a failed formalization for a
 blocked domain, and asymmetric scrutiny** — interrogating claims that advance the work while

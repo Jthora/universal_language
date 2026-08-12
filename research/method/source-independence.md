@@ -3,7 +3,7 @@
 **Date:** 2026-08-01
 **Question:** how do we structure research to arrive at the truth about UL even if the literature is
 systematically corrupted — planted studies, promoted misdirection, real work suppressed?
-**Status:** normative. Companion to `negative-result-discipline-2026-08.md`.
+**Status:** normative. Companion to `research/method/negative-results.md`.
 **Framing:** this document takes no position on whether corruption is occurring. **It does not need
 to.** Every rule below is good practice under an honest literature and load-bearing under a
 corrupted one, so the premise never has to be settled to act on it.
