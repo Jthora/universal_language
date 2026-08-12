@@ -205,7 +205,97 @@ problem identically: **anchor to what you can verify yourself.**
 
 ---
 
-## 10. Reconstruction — what to build, in dependency order
+## 10. What this delivers, per construct
+
+**The structural result first, because it was not planned and it organizes everything else.**
+
+### The convergence
+
+Seven independent lines of work landed on **the same object** — the combinatorial map (a graph plus
+a cyclic ordering of branches at each vertex):
+
+| Arriving from | Claim |
+|---|---|
+| Coarse-graining the primitives | `FIXED-POINT-IS-COMBINATORIAL-MAP` |
+| Line arrangements / the cross-table | `NONSTRETCHABILITY-BOUNDS-DRAWING` |
+| Realization spaces | `MAP-TO-DRAWING-GAP` |
+| Arithmetic geometry | `DESSINS-PRECEDENT` |
+| The expressiveness question | `EXPRESSIVENESS-CHAIN` |
+| Spatial semantics for the IR | `REGIONS-ARE-FACE-UNIONS` |
+| The Cure's repair ordering | `ENTRENCHMENT-IS-SURVIVAL-ORDER` |
+
+**None of these were aimed at it.** Three began as separate phases of a plan, two came from questions
+asked outside the plan, one from an adversarial sweep. **That convergence is the strongest result of
+the rebuild** — and it is the *shape* of finding the project has always claimed to be looking for,
+arrived at for once by derivation rather than assertion.
+
+---
+
+### UL — **4 claims. Still the open question, but the shape is now concrete.**
+
+**Before:** "a hypothesized universal semantic structure," with no agreed falsifier.
+
+**Now:** if UL exists it is an **emergent universality class**, and its coarse-graining fixed point
+is a **combinatorial map**. It has a falsifier (coarse-grain independently emerged protocols; find no
+shared invariants, or a continuum rather than discrete classes). The necessity route, closed since
+`003` on an over-broad reading of Zadrozny, is **open again** — and the requirement is explicit: fix
+lexical semantics, syntax, and composite semantics.
+
+**The gap, stated exactly:** `meaning → map` does not exist. `map → drawing → figure` is characterized
+by theorems. **Everything gained is on the geometry side of a bridge that has not been built.**
+
+### UWS — **27 claims. The largest change: from chosen to derived.**
+
+- Primitives are **cells in a product of four axes** — curvature, singularity, closure, junction
+  degree — not a list someone picked.
+- The count question is **malformed**, and the collapse relations are **theorems**.
+- A **missing axis was found** (junction), and it is the one the project's strongest empirical
+  evidence points at. `Angle` is degree-2 ∧ tangent-discontinuous; **degree-1 has no name.**
+- **Tables are projections** of the axis product; **transformation axes are group elements**, so
+  Erlangen *is* the quotient. This explains both the hyper-dimensional blow-up and its collapse.
+- At the fixed point the **canonical table is indexed by junction degree** — countable, derived, and
+  mostly unoccupied.
+- **2D bounds iconicity, not encoding** (Coxeter diagrams), so higher-dimensional content is
+  expressible but not depictable.
+
+### UQPL — **2 claims. The least served, and appropriately so.**
+
+Its spec was deleted in the prune: design-only, zero code, built on a retired foundation. **What it
+gained is constraints rather than content** — it must be intuitionistic (`020`), total, and built on
+the acyclic term-graph core. `028` adds that constructive geometry is formalized **quantifier-free**,
+which suggests UQPL's shape is a quantifier-free constructive term language. **That is a
+specification sketch, not a language.**
+
+### The Cure — **18 claims. From blocked to specified.**
+
+Every structural blocker moved:
+
+| Was | Now |
+|---|---|
+| Repair operator ill-defined (non-convex projection) | **AGM**: any faithful preorder gives a rational operator |
+| Which preorder? — the last free parameter | **Derived**: the coarse-graining survival order |
+| Self-verification blocked by Löb | **Comparator architecture** — trust from the anchor, not self-proof |
+| Drift measured against a maintained baseline | **Absolute**, anchored to invariants (the IPK fix) |
+| Consistency-checking blind to coherent adversaries | **Coupling asymmetry** as the signal |
+| Spatial reasoning undecidable | **Decidable by construction** — regions are face unions |
+
+**The Cure is no longer blocked on a research question. It is blocked on implementation.**
+
+---
+
+## 11. What is still missing, stated plainly
+
+1. **`meaning → map`.** The central gap. Everything else is downstream of geometry.
+2. **Four VERIFIED claims, all facts about Rust files.** No substantive result is machine-checked.
+3. **No semantic invariant has ever been written as a checkable predicate.** The entrenchment
+   ordering is a specification that has never been executed.
+4. **Zero experiments run**, and the one empirical leg (compositionality convergence) was downgraded
+   when its measure failed.
+
+**The honest summary: the geometry is in far better shape and the semantics is exactly where it
+started — but the gap is now located precisely instead of being diffuse.**
+
+## 12. Reconstruction — what to build, in dependency order
 
 **The honest headline: 2 of 71 claims are `VERIFIED`. Almost everything upstream is provable and
 almost nothing has been proven.** That gap *is* the reconstruction.
