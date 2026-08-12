@@ -9,6 +9,7 @@ pub mod composer;
 pub mod distinguished;
 pub mod error;
 pub mod lexicon;
+pub mod map;
 pub mod modal;
 pub mod parser;
 pub mod performative;

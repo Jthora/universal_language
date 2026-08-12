@@ -2037,3 +2037,32 @@ claims:
       WHAT IT DOES NOT SETTLE: ties within a level need a secondary criterion, and no semantic
       invariant has yet been written as a checkable predicate. This is a specification, not an
       implementation. Phase 5 tests it.
+
+  # ─── Phase 5: the fixed point, in code (added 2026-08, note 030) ───────────
+
+  - id: IMPL-COMBINATORIAL-MAP
+    statement: >
+      The combinatorial map is implemented as a rotation system with face tracing, degree, Euler
+      characteristic and genus, with tests covering Jordan separation and the planar/toroidal
+      distinction.
+    tier: VERIFIED
+    evidence: ul-forge/crates/ul-core/src/map.rs
+    priority: 0
+    notes: >
+      FIRST SUBSTANTIVE VERIFIED CLAIM IN THE PROJECT. The previous four are facts about file
+      contents (enum variants, function counts); this one machine-checks a derived result.
+      Implements (D, sigma, alpha): darts as directed half-edges, sigma the vertex permutation,
+      alpha the edge involution. Vertices are orbits of sigma, edges of alpha, FACES of phi =
+      sigma . alpha. That is face tracing, and it is what REGIONS-ARE-FACE-UNIONS needs.
+      TESTS INCLUDE ENCLOSURE-IS-DISTINCTION AS AN EXECUTABLE CHECK: every simple closed curve
+      yields exactly two faces, verified for n = 3..12. Jordan separation is no longer only argued.
+      HONEST GAP RECORDED IN THE MODULE DOC: Gir stores edges as an unordered Vec, so it does NOT
+      carry a rotation system — a rotation is strictly more information. from_gir uses edge
+      insertion order, which is ARBITRARY, and any face structure it reports is the face structure
+      of that arbitrary choice. from_rotations is the honest constructor. Supplying real angular
+      order from geometry is outstanding work.
+      A FAILING TEST WAS INSTRUCTIVE RATHER THAN A BUG: the theta-graph test initially asserted
+      three faces while supplying a rotation that embeds the graph on a TORUS. The code was right
+      and the expectation was wrong. Both embeddings are now tested — same graph, same degree
+      sequence, different surface — which demonstrates the module's central claim that the rotation
+      IS the embedding.
