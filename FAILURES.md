@@ -480,3 +480,29 @@ versus sketch channel at matched population size — rather than a citation. Tha
 than the claim I started with.
 **Note on process:** the claim was deliberately held at CONJECTURED in note 013 to avoid asymmetric
 treatment against the TopSim downgrade. **That caution is exactly what made this narrowing cheap.**
+
+---
+
+## F-022 — a specification error was filed as an implementation bug
+**Date:** 2026-08-01
+**What F-006 recorded:** that `negate` wraps its argument in a fresh enclosure, so
+`negate(negate(a))` is not structurally identical to `a`, and that this was a **bug** — code failing
+to match the documented law `NEG-INVOLUTION`.
+**What note 020 established:** the notation lives in the **constructive** framework (note 016), and
+constructive mathematics uses intuitionistic logic, where `A → ¬¬A` holds but **`¬¬A → A` does
+not.** *"If the intuitionistic law of negation introduction is replaced by the law of excluded
+middle or double negation elimination, a formal system for **classical** propositional or predicate
+logic results."*
+**So the implementation was behaving correctly and the specification was wrong.** A negation that is
+*not* an involution is what an intuitionistic system should have. **The failing test was testing the
+wrong thing.**
+**Why the escape hatch does not apply:** DNE can be proved case-by-case for decidable propositions,
+but `NEG-INVOLUTION` claimed a universal law. And constructive geometry *"does not adopt decidable
+equality… because they aim to develop systems in which definable terms (constructions) denote
+continuous functions"* — the fragment where the law could hold is deliberately excluded by the
+framework the notation sits in.
+**The generalizable failure:** **when code and specification disagree, the specification is a
+suspect too.** F-006 assumed the documented law was correct and the code wrong, and never asked
+which one the framework supported. That default is wrong roughly half the time by construction.
+**Standing consequence:** any notation law presupposing DNE or excluded middle must be re-derived or
+retired. `NEG-INVOLUTION` was the first found; the rest need an audit.

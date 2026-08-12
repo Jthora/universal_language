@@ -60,7 +60,7 @@ exactly what happened to Σ_UL.
 | Item | Output tier | Cost |
 |---|---|---|
 | ~~**D2** Read *Drawing with Strangers* + SEP on Zadrozny~~ **DONE** — note `019` | ARGUED (narrowed) | 2 fetches |
-| **A3** Intuitionistic-logic coherence check | ARGUED | 1–2 searches |
+| ~~**A3** Intuitionistic-logic coherence check~~ **DONE** — note `020` | DESIGN-CHOICE + a lead | 2 searches |
 | **D1** R7 sweep — adversarial search on every cited negative | varies | ~10–20 searches |
 
 **D2 is a standing S1 violation:** two priority-0 claims rest on summaries. One is our best empirical

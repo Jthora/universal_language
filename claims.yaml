@@ -141,14 +141,78 @@ claims:
 
   - id: NEG-INVOLUTION
     statement: "negate(negate(a)) is semantically equivalent to a."
-    tier: CONJECTURED
-    falsified_by: "A pair (a, negate(negate(a))) that semantically_equal reports as unequal."
-    evidence: null
+    tier: RETIRED
+    superseded_by: NOTATION-LOGIC-IS-INTUITIONISTIC
+    formalization: "double-negation elimination asserted as a universal law over all assertions (R3)"
+    scope: >
+      Retiring this does NOT say double negation is never identity. Intuitionistically, excluded
+      middle and DNE "can still be proved for some propositions on a case by case basis, but do not
+      hold universally." What is retired is the UNIVERSAL LAW. A decidable fragment may support it
+      pointwise.
+    revival_condition: >
+      Either (a) the notation is deliberately made CLASSICAL, in which case this holds by
+      construction and NOTATION-LOGIC-IS-INTUITIONISTIC must be withdrawn; or (b) it is restated as
+      a pointwise property of a decidable fragment rather than a law. Note that constructive geometry
+      deliberately declines decidable equality "because they aim to develop systems in which
+      definable terms (constructions) denote continuous functions," so route (b) is narrower than it
+      sounds.
+    refutation_tier: "ARGUED — standard result: replacing intuitionistic negation-introduction with DNE yields classical logic"
     notes: >
-      Documentation asserted this as proven. The implementation wraps in a new enclosure node, so
-      it is structurally FALSE, and no equivalence procedure exists to evaluate the semantic reading.
-      See FAILURES.md F-006. Blocked on SEMANTIC-EQUALITY.
-    blocks: [CURE-REPAIR-DETERMINISM]
+      Documentation asserted this as proven. Note 020 found it is not merely unproven but
+      INCONSISTENT with the notation's constructive framing: "if the intuitionistic law of negation
+      introduction is replaced by the law of excluded middle or double negation elimination, a
+      formal system for CLASSICAL propositional or predicate logic results." Asserting it as a law
+      does not fail to be constructive — it converts the system to classical logic.
+      See FAILURES.md F-022: F-006 filed the implementation's non-involutive negate as a BUG. Under
+      the constructive reading the implementation was behaving correctly and the specification was
+      wrong. The failing test was testing the wrong thing.
+
+  - id: NOTATION-LOGIC-IS-INTUITIONISTIC
+    statement: >
+      The notation's logic is intuitionistic, not classical: double-negation elimination and excluded
+      middle are not available as universal laws.
+    tier: DESIGN-CHOICE
+    rationale: research/notes/020-intuitionistic-coherence/README.md
+    alternatives_considered:
+      - "classical logic (rejected: inconsistent with the constructive framing established in note 016, and would require withdrawing CONSTRUCTIVE-PRIORITY-OF-POINT)"
+      - "intuitionistic with a decidable fragment admitting DNE pointwise (viable but narrower than it sounds — constructive geometry declines decidable equality on purpose, to keep constructions continuous)"
+    priority: 0
+    notes: >
+      FORCED CHOICE, not a preference. Note 016 placed the notation in the constructive framework;
+      note 020 found that its documented negation law is classical. Both cannot stand. Choosing
+      intuitionistic keeps the constructive framing, which is independently supported by Euclid's
+      postulates being construction rules and by Curry-Howard-Lambek being intuitionistic rather
+      than classical.
+      CONSEQUENCE: any notation law that presupposes DNE or excluded middle must be re-derived or
+      retired. NEG-INVOLUTION was the first found; others may exist and should be audited.
+
+  - id: SEMANTIC-APARTNESS
+    statement: >
+      The constructively correct primitive is semantic APARTNESS — a positive demonstration that two
+      structures differ — rather than semantic equality.
+    tier: CONJECTURED
+    falsified_by: >
+      Specify a semantic apartness relation on the acyclic core and show it is no more decidable
+      than equality there; or show that drift detection genuinely requires establishing equality
+      rather than separation.
+    evidence: research/notes/020-intuitionistic-coherence/README.md
+    priority: 0
+    notes: >
+      "In constructive mathematics, an apartness relation is a constructive form of inequality, and
+      is often taken to be MORE BASIC than equality"; the negation of equality ("denial inequality")
+      is weaker.
+      WHY THIS MATTERS: SEMANTIC-EQUALITY is this project's longest-standing blocker — it exists in
+      no form and RICE-BOUNDS-SEMANTIC-EQUALITY shows it is undecidable in general. Constructively it
+      is the wrong primitive to have reached for. Apartness can be establishable where equality is
+      not decidable.
+      AND IT FITS THE CURE: drift detection does not require proving two states equal, it requires
+      detecting that they have SEPARATED. That is apartness stated positively, and it is a weaker
+      and more attainable demand.
+      SUGGESTIVE ONLY, recorded as such: apartness is formalized distinguishability, which is Layer
+      0's distinction; and Jordan separation, the topological survivor of note 014, is a separation
+      relation. These are resonances, not arguments.
+      CONCRETE NEXT STEP: specify a semantic apartness relation and test decidability on the acyclic
+      core.
 
   - id: SEMANTIC-EQUALITY
     statement: "There exists a decision procedure determining whether two GIR structures mean the same thing."
