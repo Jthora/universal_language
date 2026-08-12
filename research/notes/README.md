@@ -1,79 +1,121 @@
 # research/notes/
 
-**Iterative working notes. One numbered folder per research cycle.**
+**The trajectory.** Research, brainstorms, and course corrections, in the order they happened.
 
-This is where work happens before it is settled. A cycle folder is cheap to create, never edited
-after it closes, and either promotes something into `framework/` `cure/` `engineering/` or records
-why it didn't.
+This is the only place in the repo that records *how thinking changed*. It is deliberately distinct
+from its two neighbours:
+
+| | Records | Shape |
+|---|---|---|
+| `claims.yaml` | **what we hold now** | current state only — no history |
+| `FAILURES.md` | **what went wrong** | append-only, one slice of the trajectory |
+| **`notes/`** | **how we got here** | the full arc, including reversals |
+
+A position that changed is not noise to be tidied away. **The reversal is usually more informative
+than either endpoint**, because it shows what was mistaken for evidence.
+
+---
+
+## How it evolves
+
+**Individual notes are immutable. The collection is what evolves.** A note is a record of what was
+thought at a particular time; editing it destroys the only copy of that. When a note is overtaken,
+you write a new one and link back — supersession is explicit, never silent.
+
+That is exactly how the Σ_UL retirement went wrong: the claim was withdrawn but nothing traced the
+change, so its artifacts survived for months and kept being restated as current.
 
 ```
-research/notes/
-├── 001-triangulation/
-├── 002-cycle-answers/
-└── NNN-short-slug/
-    ├── README.md      the note itself (template below)
-    └── …              data, scripts, derivations as needed
+notes/
+├── README.md
+└── NNN-slug/
+    ├── README.md      the note
+    └── …              data, derivations, scripts
 ```
 
-## Rules
+- **Number sequentially, never renumber.**
+- **Never edit a note after it closes.** Corrections go in a new note that links back.
+- **Supersession is recorded in both directions** — the old note gets a `Superseded by:` line, which
+  is the one permitted edit.
+- **Promotion is explicit.** When a position stabilizes, move it into `framework/`, `cure/`, or
+  `engineering/`. Notes are working material; the themed folders hold what we currently hold.
 
-1. **Number sequentially, never renumber.** `NNN-short-slug`, zero-padded to three digits.
-2. **Fill §1 of the template *before* searching.** That is rule **S2** — literature-pull is only
-   detectable against a recorded prior. A note whose expectations were written afterward is worth
-   much less and should say so.
-3. **A closed cycle is not edited.** Corrections go in a later cycle that links back. Same principle
-   as `FAILURES.md`: the record of what you thought at the time is the data.
-4. **Promotion is explicit.** When a position stabilizes, move it into the appropriate themed folder
-   and record the promotion in §5. Notes are working material; the themed folders hold what we
-   currently hold.
-5. **Register the claims.** Anything asserted lives in `claims.yaml` with a tier, or it is not a
-   claim of this project.
+## Types
+
+| Type | For |
+|---|---|
+| `cycle` | A research push — searches run, literature checked, findings recorded |
+| `brainstorm` | Generative and exploratory. **Not everything needs a citation.** Speculation is permitted here and must be labelled |
+| `correction` | **Something we held turned out wrong.** What was believed, what broke it, what replaced it |
+| `decision` | A fork chosen, with the alternatives and why |
+
+`brainstorm` matters as much as `cycle`. Several of the strongest positions here began as an
+unsourced hunch that survived checking — the primitives-as-generating-sets insight started that way.
+Requiring a citation to open a thought is how you lose those.
 
 ## Template
-
-Copy this into `NNN-slug/README.md`.
 
 ```markdown
 # NNN — <title>
 
+**Type:** cycle | brainstorm | correction | decision
 **Opened:** YYYY-MM-DD
-**Question:** <the one thing this cycle is trying to settle>
+**Status:** open | closed | superseded by NNN
+**Thread:** follows NNN · corrects NNN
+**Question:** <the one thing this is trying to settle>
 
 ## 1. Before searching  ← WRITE THIS FIRST (S2)
-
 **Expected to find:**
 **Would change the plan if:**
-**Objects mathematical?** yes/no — if yes, the burden is to find the theorem, not design a study (T5)
+**Objects mathematical?** yes/no — if yes, find the theorem, don't design a study (T5)
 
 ## 2. Searches run
-
 | Query | Direction | Result |
 |---|---|---|
 | … | supporting / **adversarial (R1)** | … |
 
-**Adversarial search on every negative is mandatory (R1).** If this cycle closes a line of work and
-this table has no adversarial row, the cycle is not finished.
+A cycle that closes a line of work with no adversarial row is **not finished**.
 
 ## 3. Findings
-
 **Counter-evidence: easy or hard to find?** ← log it (S7)
 
 ## 4. Negatives recorded
-
-For each, all of: **scope** (R2) · **what formalization failed, not what claim** (R3) ·
+Each needs: **scope** (R2) · **which formalization failed, not which claim** (R3) ·
 **revival condition** (R4) · **steelman stated before the kill** (R6)
 
 ## 5. What changed
-
-- Claims added/retired in `claims.yaml`:
-- `FAILURES.md` entries:
-- Promoted to a themed folder:
+- `claims.yaml`:
+- `FAILURES.md`:
+- Promoted to:
 - Left open:
 ```
 
-## Index
+For a `correction`, replace §§1–2 with:
 
-| Cycle | Question | Outcome |
-|---|---|---|
-| `001-triangulation` | Where do purpose, notation, and the safety application actually meet? | Cure benchmark, assumption-derivation, emergent-communication gap |
-| `002-cycle-answers` | Open questions from the preceding cycle | SHACL checking, sheaf route, taught-notation, cognitive dimensions |
+```markdown
+## 1. What was held
+## 2. What broke it
+## 3. What replaced it
+## 4. Why it survived as long as it did   ← the generalizable part
+```
+
+§4 is the one that pays. Two corrections of the same shape means the *generator* needs fixing, not
+the instances.
+
+---
+
+## Trajectory
+
+Course corrections in **bold** — the load-bearing entries.
+
+| # | Type | What happened | Outcome |
+|---|---|---|---|
+| `001` | cycle | Where purpose, notation and safety application meet | Cure benchmark; emergent-communication gap identified |
+| `002` | cycle | Open questions from 001 | SHACL checking; sheaf route; taught-notation |
+| `003` | **correction** | **Three kinds of universality collapsed into two.** Zadrozny applied as a global impossibility when it is a microscopic result | UL reframed as an **emergent universality class** → `framework/emergent-universality.md` |
+| `004` | brainstorm | Primitive counts arbitrary; Chomsky too human-centric | Generating sets not bases; curvature stratification → `framework/provable-geometry.md`, `framework/cross-substrate-grammar.md` |
+| `005` | **correction** | **Reached for experiment where proof was available.** Empiricism adopted as the antidote to a disease proof cures better | Proof turn; F-015 |
+| `006` | cycle | Which open claims are provable? | Löb, Rice, AGM, Landau → `engineering/obstructions.md` |
+| `007` | brainstorm | Is the external reference the mathematics itself? | Geometry as **trust anchor**; drift must be absolute → `framework/external-anchor.md` |
+| `008` | **correction** | **Seven negatives closed lines of work that were still live.** Asymmetric scrutiny producing skeptical-sounding output | R1–R6, S1–S7; `RESEARCH-PROTOCOL.md`; F-017 |
+| `009` | decision | Superseded material kept in-repo was being read as current | Deleted; git history is the archive. 224 → 49 files |

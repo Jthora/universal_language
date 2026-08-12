@@ -1,5 +1,10 @@
 # Reading Between the Lines — Three Converging Fields, and a Benchmark Nobody Handed Us
 
+**Type:** cycle
+**Status:** closed
+**Question:** Where do purpose, notation and the safety application actually meet?
+**Note:** predates the notes convention (see `../README.md`); retained as written.
+
 **Date:** 2026-08-01
 **Question:** across ~55 research threads, is there something the pattern indicates that no
 individual source states? Something in the collective peripheral vision?

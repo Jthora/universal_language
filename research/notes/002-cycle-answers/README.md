@@ -1,5 +1,10 @@
 # Research Cycle — Seven Questions, and a Convergence Nobody Was Looking For
 
+**Type:** cycle
+**Status:** closed
+**Question:** Open questions carried forward from 001
+**Note:** predates the notes convention (see `../README.md`); retained as written.
+
 **Date:** 2026-08-01
 **Method:** posed seven decision-relevant questions, then ran literature dives on each.
 **Headline:** five of the seven independently converge on a conclusion this project has never
