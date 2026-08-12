@@ -499,6 +499,58 @@ mod tests {
         assert_eq!(m.euler_characteristic_planar(&n), 3, "V - E + F = 1 + c = 3");
     }
 
+    /// Two triangles joined by one **dummy edge** — the computational-geometry alternative.
+    ///
+    /// Mount, *CMSC 754* Lect. 10: the no-holes assumption "can be always satisfied by introducing
+    /// some number of *dummy edges* joining each hole either to the outer boundary of the face, or
+    /// to some other hole that has been connected to the outer boundary in this way."
+    fn two_triangles_bridged() -> CombinatorialMap {
+        let mut rotations: Vec<(NodeId, Vec<Dart>)> = Vec::new();
+        for (base, off) in [(0usize, 0usize), (3, 3)] {
+            for i in 0..3 {
+                let v = base + i;
+                let outgoing = 2 * (off + i);
+                let incoming = 2 * (off + (i + 2) % 3) + 1;
+                let mut darts = vec![outgoing, incoming];
+                // Edge 6 (darts 12, 13) bridges v0 to v3. WHERE it is inserted in the rotation is
+                // what selects the containing face — the nesting information, carried in sigma.
+                if v == 0 {
+                    darts.push(12);
+                } else if v == 3 {
+                    darts.push(13);
+                }
+                rotations.push((format!("v{v}"), darts));
+            }
+        }
+        CombinatorialMap::from_rotations(rotations, 14)
+    }
+
+    #[test]
+    fn a_dummy_edge_replaces_the_nesting_structure() {
+        let bridged = two_triangles_bridged();
+
+        // The bridge restores CONNECTEDNESS, which is Heffter-Edmonds' precondition (F-025).
+        // So plain face tracing now works with no side structure at all.
+        assert_eq!(
+            bridged.faces().len(),
+            3,
+            "the dummy edge yields the correct planar face count from faces() alone"
+        );
+        assert_eq!(bridged.euler_characteristic(), 2, "connected planar: chi = 2");
+        assert_eq!(bridged.genus(), Some(0), "the genus formula applies again");
+
+        // It agrees with the Nesting route on the same configuration.
+        let plain = two_triangles();
+        let n = Nesting::all_top_level(vec![1, 7]);
+        assert_eq!(bridged.faces().len(), plain.faces_planar(&n).len());
+
+        // The cost, stated exactly: E is inflated by one per bridge (c - 1 in general), so any
+        // edge-counting invariant must exclude dummy edges. V and F are untouched.
+        assert_eq!(plain.edge_count(), 6);
+        assert_eq!(bridged.edge_count(), 7, "one dummy edge for two components");
+        assert_eq!(bridged.vertices().len(), plain.vertices().len(), "V unchanged");
+    }
+
     #[test]
     fn nesting_distinguishes_side_by_side_from_contained() {
         // Same graph, same degree sequence, same face COUNT — different structure.

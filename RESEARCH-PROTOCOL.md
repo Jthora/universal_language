@@ -139,9 +139,15 @@ so you never have to settle how bad it is to act on them.
 - **S8 — Read one primary before registering a priority-0 claim.** Four primary reads in ~40 searches,
   and **all four materially changed a claim.** A summary finds a source; it never carries one.
 - **S9 — Synonym sweep before concluding novelty or absence.** One object, many vocabularies —
-  *rotation system · combinatorial map · ribbon graph · fat graph · dessin d'enfant.* We found the
-  last by accident, thirty notes late. **Search three vocabularies before claiming something is
-  absent or ours.**
+  *rotation system · combinatorial map · ribbon graph · fat graph · dessin d'enfant · **DCEL***. We
+  found the second-to-last by accident thirty notes late, and the last only by running the sweep
+  deliberately. **Search three vocabularies before claiming something is absent or ours.**
+- **S12 — Every technical term you have already written is a search term you owe.** *"half-edge"*
+  sat in our own module doc comment for sixteen notes while the DCEL literature — which had already
+  solved our disconnected-components problem **two different ways** — went unread. **S9 fires when
+  you make a novelty claim; S12 fires the moment a term enters the repo.** Grep your own source for
+  vocabulary before searching the world for it: the cheapest query you will ever run is the one whose
+  keyword you typed yourself.
 - **S10 — Failure-first survey, at the start.** Find who tried and why they stopped, *before*
   building. The Leibniz/Wilkins/Solresol/Blissymbolics survey was the most informative crawl about
   UWS's prospects and it ran at note 37 of 43. **A field's graveyard is better documented than its

@@ -1761,7 +1761,7 @@ claims:
       are metric and die at affine with angle-magnitude.
 
   - id: FIXED-POINT-IS-COMBINATORIAL-MAP
-    scope_reviewed: [SEMANTIC-FORMALISMS-USE-LABELS-NOT-ORDER]   # MATERIAL — see the correction recorded in notes below
+    scope_reviewed: [SEMANTIC-FORMALISMS-USE-LABELS-NOT-ORDER, MAP-IS-A-DCEL-REDUCT]   # hub 1 MATERIAL — see the correction recorded in notes below. hub 2 MATERIAL and accounted for — the object is prior art, so no novelty may be read into this claim (PRIOR ART paragraph added to notes below), and the two DCEL pitfalls carried in that hub's notes — general position, incremental face construction — are inherited here and remain open.
     statement: >
       The fixed point of the coarse-graining is the rotation system — the graph plus a cyclic
       ordering of branches at each vertex — not a small inventory of primitives. Separation and
@@ -1823,6 +1823,116 @@ claims:
       rotation; and it is NOT shown that every notation-relevant feature reduces to the combinatorial
       map — curvature demonstrably does not, it dies earlier. The claim is about the fixed point, not
       about the notation as drawn.
+      PRIOR ART, ADDED 2026-08-12 (note 046): NO NOVELTY IS CLAIMED FOR THIS OBJECT. The same
+      structure is the doubly-connected edge list, standard in computational geometry since the
+      1970s, and is load-bearing in 3D GIS, image segmentation, moduli spaces of Riemann surfaces
+      and QFT. FIVE UNRELATED FIELDS, ONE OBJECT. That convergence supports "the map is the canonical
+      representation of a topological partition of space" and DOES NOT support "the map is where
+      meaning lives" — see MAP-IS-A-DCEL-REDUCT and F-027 for why collapsing the two is the standing
+      error.
+
+  - id: MAP-IS-A-DCEL-REDUCT
+    scope_reviewed: [FIXED-POINT-IS-COMBINATORIAL-MAP]   # no material effect — the hub's scope limits are about WHOSE fixed point the map is (UWS, not UL) and about connected configurations; this claim is a field-by-field correspondence between two data structures and is independent of both. The connectivity limit is carried instead by NESTING-HAS-A-STANDARD-ALTERNATIVE.
+    statement: >
+      The combinatorial map implemented in map.rs is a doubly-connected edge list with the geometric
+      data deleted and the rotation promoted to primitive. The combinatorial content is prior art,
+      not this project's.
+    tier: VERIFIED
+    evidence: research/notes/046-volley2-synonyms/README.md
+    priority: 2
+    scope: >
+      Structural correspondence, checked field by field against a primary source (Mount, CMSC 754
+      Lecture 10, "The Doubly-Connected Edge List", Spring 2020): e.twin is alpha(d) = d^1; e.next is
+      phi(d) = sigma[alpha(d)]; the face record f.inc_edge is what we derive as a phi-orbit. The two
+      structures carry the SAME INFORMATION and disagree only about which half is primitive — DCEL
+      stores next/prev and recovers the rotation, we store the rotation and recover next. They are
+      inter-derivable, so this is not a difference in content.
+      THE ONE REAL DIFFERENCE: DCEL vertices store "coordinates and identity"; ours store neither.
+      The field already treats the records as separable — "in some applications, it is not necessary
+      to know either the face or vertex information (or both) at all, and if so these records may be
+      deleted."
+      TIER: VERIFIED rather than ARGUED because the correspondence is a field-by-field structural
+      identity against a read primary, not an inference.
+    notes: >
+      Registered because sixteen notes and a from-scratch implementation went by while "half-edge"
+      sat in our own doc comments unsearched. See FAILURES.md F-029 and RESEARCH-PROTOCOL.md S12.
+      PITFALLS INHERITED WITH THE PRIOR ART, both currently unaddressed:
+      (a) GENERAL POSITION is an explicit DCEL assumption — "no two vertices share the same location,
+      and no two edges are collinear." We have no degeneracy policy.
+      (b) INCREMENTAL CONSTRUCTION is the hard case — "it is generally not possible to know the face
+      structure at the moment that the sweep is advancing, without looking into the future of the
+      sweep to see whether regions will merge." Our faces are traced from a finished map, so this
+      does not bite yet. It bites the moment anything builds a map incrementally.
+
+  - id: NESTING-HAS-A-STANDARD-ALTERNATIVE
+    statement: >
+      The disconnected-components problem that Nesting solves has two standard solutions in
+      computational geometry, and the one we did not find restores connectivity by construction —
+      adding dummy edges — rather than carrying the nesting in a side structure.
+    tier: VERIFIED
+    evidence: research/notes/046-volley2-synonyms/README.md
+    priority: 2
+    scope: >
+      SOLUTION 1, which Nesting independently reproduces: a face record carries an outer boundary
+      plus zero or more INNER BOUNDARIES (de Berg et al.).
+      SOLUTION 2, not previously found (Mount, verbatim): the no-holes assumption "can be always
+      satisfied by introducing some number of dummy edges joining each hole either to the outer
+      boundary of the face, or to some other hole that has been connected to the outer boundary in
+      this way. With this assumption, we may assume that the edges bounding each face form a single
+      cyclic list."
+      MACHINE-VERIFIED, NOT ASSERTED (F-020): map::tests::a_dummy_edge_replaces_the_nesting_structure
+      — one dummy bridge across two disjoint triangles yields 3 faces from faces() alone with no
+      Nesting argument, chi = 2, genus Some(0), agreeing exactly with faces_planar on the same
+      configuration.
+      COST, MEASURED: E is inflated by one per bridge (c-1 in general); V and F are untouched. Any
+      edge-counting invariant must exclude dummy edges.
+      NOT APPLIED. Nesting is tested and working, and E-inflation touches euler_characteristic. This
+      records the alternative with its cost, and does not migrate to it.
+    notes: >
+      THE POINT THAT MATTERS BEYOND THE ENGINEERING: solution 2 is aimed straight at F-025. The
+      reason Nesting is needed at all is the CONNECTED precondition of Heffter-Edmonds, which F-025
+      recorded dropping while quoting it verbatim. The field's standard move is to RESTORE THE
+      PRECONDITION rather than to work around it.
+      And the load-bearing detail — WHERE the bridge dart is inserted into the rotation is what
+      selects the containing face. The dummy edge puts the nesting information back INTO sigma;
+      Nesting keeps it outside. Both are correct; only one needs a second data structure.
+
+  - id: ORIENTATION-SPLITS-INTO-TWO-CANDIDATES
+    scope_reviewed: [FIXED-POINT-IS-COMBINATORIAL-MAP, SEMANTIC-FORMALISMS-USE-LABELS-NOT-ORDER]   # hub 1 MATERIAL and accounted for — this addresses a stated LIMIT of the hub, at ARGUED strength and without re-deriving the axis; hub 2 no effect — the orientation question is about the formalism's own structure and is independent of whether any semantic formalism uses cyclic order
+    statement: >
+      The "orientation axis" flagged in note 032 and never derived is not one thing. Signed rotation
+      systems separate two candidates that this project has been running together: the GLOBAL
+      reflection ambiguity, and LOCAL per-edge signs. Which one the axis should be is undetermined.
+    tier: ARGUED
+    evidence: research/notes/046-volley2-synonyms/README.md
+    priority: 2
+    scope: >
+      Ribbon graphs are "equivalent in power to signed rotation systems" — a rotation system plus a
+      sign on each edge.
+      THE TWO THINGS, AND THEY ARE NOT THE SAME:
+      (i) GLOBAL REFLECTION. Reversing EVERY rotation gives the mirror map. This is the Z/2 measured
+      by map.rs convention_ambiguity() and the "determined up to REFLECTION" limit recorded on
+      FIXED-POINT-IS-COMBINATORIAL-MAP. It is a choice of which of the plane's two orientations the
+      sender used.
+      (ii) LOCAL EDGE SIGNS. A sign on an edge records whether traversing it REVERSES local
+      orientation. This is what permits embeddings in NON-ORIENTABLE surfaces. Setting every sign to
+      minus is NOT the same operation as reversing every rotation.
+      SO THE CLAIM IS THE SPLIT, NOT AN IDENTIFICATION. The first draft of this entry asserted the
+      reflection ambiguity simply IS the sign in a signed rotation system. That conflates (i) with
+      (ii) and is false. See the near-miss recorded in note 046 section 5a.
+      TIER: ARGUED, not VERIFIED. Stated from search summaries, not from a read primary on signed
+      rotation systems, and the axis has NOT been re-derived in the style of note 022. Volley 5's
+      third open question is better POSED than before and is not answered.
+      NOT ESTABLISHED: that either candidate is notation-relevant. UWS is drawn on a plane, which is
+      orientable, so (ii) may have no content here at all — that is the first thing to check.
+    notes: >
+      Found sideways, by a query aimed at whether rotation systems carry semantic interpretations
+      (they do not — see the scope on SEMANTIC-FORMALISMS-USE-LABELS-NOT-ORDER).
+      HOW THE ERROR WAS CAUGHT: check-propagation.rb required a scope review against
+      FIXED-POINT-IS-COMBINATORIAL-MAP, whose LIMITS paragraph states the reflection ambiguity
+      precisely. Reading the hub scope as the checker demands is what exposed the conflation — the
+      propagation rule caught a defect in the NEW claim rather than a stale scope in an old one,
+      which is not what it was built for.
 
   - id: TABLES-ARE-PROJECTIONS
     scope_reviewed: [FIXED-POINT-IS-COMBINATORIAL-MAP]   # no effect — projections of the axis product are independent of connectivity, and this claim never asserted UL relevance
@@ -2282,6 +2392,18 @@ claims:
       vertices represent concepts and LABELLED arcs are used to represent semantic relationships", with PropBank roles ARG0, ARG1, and — decisively —
       "AMR annotation abstracts away from elements of surface syntactic structure such as WORD
       ORDER." Conceptual Graphs are the same family.
+      UPGRADED FROM UNCHECKED TO CHECKED NEGATIVE, 2026-08-12 (note 046). Note 034 concluded "no
+      formalism uses rotation systems for meaning" WITHOUT SEARCHING the other vocabularies for the
+      object. The synonym sweep has now run across all six — rotation system, combinatorial map,
+      ribbon graph, fat graph, dessin d'enfant, DCEL — and the negative HOLDS. What the cyclic order
+      buys is stated the same way in every field: it "corresponds to the orientation of the plane",
+      and the ribbon construction "associates an oriented surface with boundary". ORIENTATION, NOT
+      SEMANTICS. This does not strengthen the claim's content; it removes the objection that the
+      absence was never looked for.
+      NEAR-MISS RECORDED (S11): the GIS literature returns "feature semantic/spatial aggregation".
+      "Semantic" there means FEATURE ATTRIBUTES AND LEVEL-OF-DETAIL AGGREGATION, not compositional
+      meaning. A word match, not a hit, and it would have been a false positive on the one question
+      the sweep existed to test.
       Where node ordering does matter it is for "legible and informative tree layouts" and "visual
       saliency of clusters" — comprehension criteria, i.e. SECONDARY NOTATION. UWS claims spatial
       arrangement is PRIMARY. No other formalism makes that claim.

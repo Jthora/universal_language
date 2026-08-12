@@ -57,6 +57,12 @@ pitfalls — degenerate cases, unbounded faces, robustness — that we will othe
 **What would surprise me:** if rotation systems in those fields carry *semantic* interpretations. That
 would bear directly on `034`'s failed bridge test, which never searched these vocabularies.
 
+> **CLOSED — `046`.** Prediction confirmed: `map.rs` is a DCEL with the geometry deleted. `Nesting`
+> re-derived one of the field's **two** standard fixes; the other (dummy edges) is now verified as a
+> test. **The surprise did not occur** — `034`'s negative holds across six vocabularies and is
+> upgraded from unchecked to checked. And the framing above was itself wrong: **`half-edge` was
+> already written in our own source** (F-029, S12).
+
 ---
 
 ## Volley 3 — Primary reads on every priority-0 claim (S8)

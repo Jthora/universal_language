@@ -661,3 +661,22 @@ parsed structure cannot show what the parser already threw away. Verified by inj
 **The generalizable point:** every other check in this repo validates *parsed* content. **This one had
 to work on the raw text**, because the failure happens during parsing. A validator that only sees
 post-parse state is blind to an entire class of corruption.
+
+## F-029 — a synonym sat in our own source comments and was never searched
+**Date:** 2026-08-12
+**What happened:** the synonym sweep (`046`) confirmed that `map.rs` **reinvents the doubly-connected
+edge list**, a computational-geometry structure textbook since the 1970s — including a re-derivation,
+across three notes, of a disconnected-components fix **the field has solved two different ways.**
+**Why it matters beyond the instance:** `044` recorded that DCEL *"never appeared in this project at
+all."* **That was wrong, and wrong in the direction that hurts.** `map.rs:9` and `map.rs:37` both
+write **half-edge** in their own doc comments, and `030` writes it too. The vocabulary was not
+missing — **it was already ours, and was never used as a search term.**
+**How it was caught:** running S9 deliberately as a planned volley, then grepping the repo for the
+term afterwards to write the note accurately. **Not by noticing.** Sixteen notes of proximity to the
+word produced no query.
+**Fix:** **S12** — every technical term already written in the repo is a search term owed. S9 fires
+on a novelty claim, which is too late and too narrow; S12 fires when the term enters the source.
+**The generalizable point:** the expensive gap was not a term we lacked. **It was a term we had.**
+Absence of a word is visible and prompts a search; presence of a word feels like knowledge and
+suppresses one. **The words we have already adopted are the least likely to be looked up and,
+because we adopted them for a reason, the most likely to lead somewhere.**
