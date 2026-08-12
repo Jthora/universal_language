@@ -1781,7 +1781,11 @@ claims:
       structure such as word order." Where spatial order appears in semantic diagrams it is
       SECONDARY NOTATION — comprehension aid, not formal content. Calling this UL's fixed point
       requires an argument that is currently unsupported. See SEMANTIC-FORMALISMS-USE-LABELS-NOT-ORDER.
-      (b) Note 032 — CONNECTED CONFIGURATIONS ONLY. Heffter-Edmonds is stated for a
+      (b) Note 032 — CONNECTED CONFIGURATIONS ONLY.
+      (c) Note 035 — the map has a DEFENSIBLE role in UP, the bootstrapping layer, even though its
+      UL role is doubtful: it minimizes the arbitrary convention two independent parties must share.
+      See ROTATION-MINIMIZES-CONVENTION. UWS fixed point: established. UP optimum: argued. UL fixed
+      point: not established, with note 034 as evidence against. Heffter-Edmonds is stated for a
       CONNECTED graph, and this entry quoted that sentence verbatim including the word "connected"
       while stating the result without it. See FAILURES.md F-025.
       FOR DISCONNECTED CONFIGURATIONS THE ROTATION SYSTEM DOES NOT DETERMINE AN EMBEDDING. The
@@ -2252,3 +2256,38 @@ claims:
       content; this shows they carry no SEMANTIC content anyone else found. The EXPRESSIVENESS-CHAIN
       gap is not merely unbuilt — this is the first positive evidence that it may be structural.
       Not proof, but the cheapest available check ran and did not go our way.
+
+  - id: ROTATION-MINIMIZES-CONVENTION
+    statement: >
+      A rotation system breaks strictly less arbitrary symmetry than a label alphabet — Z/2
+      (orientation) versus S_n — so it minimizes the shared prior two independent parties need to
+      interoperate. This places the combinatorial map in UP, the bootstrapping layer, rather than UL.
+    tier: ARGUED
+    evidence: research/notes/035-protocol-not-semantics/README.md
+    priority: 0
+    falsified_by: >
+      Rotation-based encodings fail to reduce the shared prior required for zero-shot interoperation
+      relative to labelled encodings — e.g. if establishing an orientation convention proves as
+      costly as establishing an alphabet, or if the relabelling-invariance does not hold in practice.
+    notes: >
+      THE QUANTIFIED CLAIM: a label alphabet of size n is one choice among n! permutations, all
+      equivalent and mutually incompatible, so labelling breaks S_n. A rotation system is invariant
+      under relabelling and fixes only an orientation, so it breaks Z/2. The gap grows factorially:
+      6, 24, 720, 40320 against 2.
+      FORMAL HOME, and it developed independently of notation: Other-Play is "a method of preventing
+      conventions that rely on arbitrarily breaking the symmetries of the setting", and the named
+      failure mode is agents "arbitrarily converging on one out of many equivalent but mutually
+      incompatible policies" — which is exactly the idioglossia of
+      SYMBOLIC-PROTOCOLS-FAIL-CROSSPLAY, reached from multi-agent RL rather than from notation.
+      CONTRIBUTION RATHER THAN BORROWING: that field states as an open problem that "current
+      symmetry-based methods assume a priori access to these symmetries, but automatically
+      discovering them can be computationally infeasible." A rotation system CARRIES its symmetry
+      group explicitly — the cyclic group at each vertex — so it requires no symmetry discovery.
+      WHY THIS IS NOT A RETREAT FROM NOTE 034, checked against a guard set before searching: the
+      original claim predicted semantic formalisms would converge on rotation, and was falsified. This
+      claim predicts rotation-based encodings coordinate zero-shot better than label-based ones,
+      which is a DIFFERENT and untested prediction. It also has independent support and addresses a
+      stated open problem, rather than relocating to wherever the evidence is absent.
+      TIER HONESTY: the symmetry-group comparison is an ARGUMENT. The experiment is the
+      symbolic-versus-rotation ablation at matched population size from note 019, now motivated by
+      two independent routes.
