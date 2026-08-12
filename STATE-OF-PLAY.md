@@ -14,7 +14,7 @@ lives:
 
 | | Status |
 |---|---|
-| **Logical necessity** — derivable from the constituents | Dead. Zadrozny: bare compositionality fixes nothing. |
+| **Logical necessity** — derivable from the constituents | **Open and hard, not dead.** Zadrozny closes the *unconstrained* route only — see note `011`. |
 | **Emergent universality** — arises across substrates because of the dynamics | **This is the claim.** |
 | **Convention** — we agreed on it | Too weak. The retreat position. |
 
@@ -26,8 +26,11 @@ structure can exist that is not derivable from its constituents.**
 And **symmetry at a fixed point can exceed the symmetry of the model you started from.** You do not
 have to choose the right symmetry — if there is a semantic fixed point, its symmetry is *discovered*.
 
-**Zadrozny is a microscopic-level result.** Applying it as a global impossibility was an error of
-level, not of rigour. This is the single most important correction in the record.
+**Zadrozny is a microscopic-level result**, and applying it as a global impossibility was an error
+of level. It is also **narrower than that** — see note `011`: the theorem is sound, but its encoding
+does not preserve synonymy relations, so it says nothing about compositionality constrained by
+syntax and lexical semantics. **This project supplies both constraints.** The necessity route is
+open, not closed.
 
 ---
 

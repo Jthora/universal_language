@@ -1227,3 +1227,57 @@ claims:
       Corresponding discipline on conspicuous absences (S5): an unrun experiment is a WORK ITEM,
       never evidence. Log it, then run it — which converts speculation into tier-4 evidence
       regardless of why the gap existed.
+
+  # ─── Zadrozny scope correction (added 2026-08, note 011) ───────────────────
+
+  - id: ZADROZNY-SCOPE
+    statement: >
+      Zadrozny's vacuity result applies to UNCONSTRAINED compositionality only; it does not show
+      compositionality vacuous once background constraints on syntax and lexical semantics are
+      imposed, and the constraints that close his escape hatch are ones this project already
+      requires.
+    tier: ARGUED
+    evidence: research/notes/011-zadrozny-scope/README.md
+    priority: 0
+    scope: >
+      MANDATORY BEFORE CITING (R2). Zadrozny (1994) is mathematically sound but achieves
+      compositionality by re-encoding meanings in a way that DOES NOT PRESERVE SYNONYMY RELATIONS.
+      Critical literature: Kazmi & Pelletier (1998) "Is Compositionality Formally Vacuous?"
+      (Linguistics and Philosophy 21:629-633); Westerstahl (1998) "On mathematical proofs of the
+      vacuity of compositionality"; Dever (1999); and Janssen (1983) for the equivalent earlier
+      result. Their position: "the task of semantics is to identify a meaning assignment that
+      respects both what our best syntax tells us about structure and what our best intuitions tell
+      us about synonymy - these results do not show compositionality to be empirically empty," and
+      "for compositionality to be a substantive constraint it must be paired with background
+      constraints on syntax and the semantics of the basic lexical items."
+      DO NOT cite Zadrozny as closing the necessity route. It closes the UNCONSTRAINED route only.
+      This project supplies both missing constraints: a synonymy relation (SEMANTIC-EQUALITY, wanted
+      regardless) and a fixed syntactic structure (the geometric composition rules).
+    notes: >
+      Consequence: the logical-necessity route is OPEN AND HARD, not dead. It had been recorded as
+      dead since note 003 on an over-broad reading of a correctly-proved theorem. This does NOT
+      resurrect the retired Unique Grounding Theorem, which failed for circularity — a separate and
+      still-fatal defect.
+      Found only because the claim was challenged directly. R1 mandates adversarial search on every
+      negative, but was written after Zadrozny was already load-bearing, and nothing required
+      auditing negatives that predated the rule. See FAILURES.md F-019.
+
+  - id: FIXED-POINT-TABLE-IS-CANONICAL
+    statement: >
+      Inventories are presentation-dependent below the coarse-graining fixed point, but the
+      structure surviving at the fixed point is canonical — derived rather than chosen — so a fixed
+      universal symbol table is the table at the fixed point.
+    tier: ARGUED
+    evidence: research/notes/011-zadrozny-scope/README.md
+    priority: 0
+    notes: >
+      CORRECTS an over-general statement. "There is no fixed universal symbol table" and
+      ERLANGEN-SURVIVAL-RANKING ("Point and Enclosure survive to the topological level") cannot both
+      be stated unqualified — the first was applied at a level where it does not hold.
+      Below the fixed point: many presentations, cardinality varies, no privileged choice
+      (PRIMITIVE-SETS-ARE-GENERATING-SETS still holds there).
+      At the fixed point: distinction (Jordan separation) and incidence. Small, derived, canonical.
+      METHODOLOGICAL CONVERGENCE worth acting on: the symmetry-grid approach to symbol tables and
+      the Landau G/H derivation of the order parameter are the same move from two directions. If a
+      symmetry group generates the table, the group determines its contents. "Which symbol table"
+      and "what are G and H" (ORDER-PARAMETER-FROM-SYMMETRY-BREAKING) are one question, not two.

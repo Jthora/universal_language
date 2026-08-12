@@ -13,7 +13,7 @@ Three kinds of universality had been collapsed into two:
 
 | | Claim | Status |
 |---|---|---|
-| **Logical necessity** | True in all possible worlds; derivable from the constituents | **Dead.** Zadrozny: compositionality constrains nothing without external conventions. |
+| **Logical necessity** | True in all possible worlds; derivable from the constituents | **Open and hard** — *not dead.* Zadrozny closes only the **unconstrained** route; see `claims.yaml#ZADROZNY-SCOPE` and `../notes/011-zadrozny-scope/`. |
 | **Emergent universality** | Arises reliably across radically different substrates because of the *dynamics*, invisible in the microscopic description | **Never considered.** This is where the answer is. |
 | **Convention** | We agreed on it | The retreat position. Too weak. |
 

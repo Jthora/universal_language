@@ -398,3 +398,31 @@ Live carriers corrected in `FOR-AI.md` and `CONTRIBUTING.md`.
 retirement that leaves its artifacts, counts, and specs standing has not happened. And a
 DESIGN-CHOICE whose `alternatives_considered` contains bare values or version history is not a
 design choice — it is residue wearing a tier.
+
+---
+
+## F-019 — a rule was never applied retroactively, so the oldest negatives went unchecked
+**Date:** 2026-08-01
+**What happened:** R1 mandates an adversarial search before recording any finding that closes a line
+of work. It was written in F-017, *after* Zadrozny (1994) had been load-bearing for the entire
+project — and nothing required going back to audit negatives that predated the rule. **Zadrozny is
+the single most consequential negative in the repository and no adversarial search had ever been run
+against it.**
+**What one search found:** a substantial critical literature — Kazmi & Pelletier (1998) *"Is
+Compositionality Formally Vacuous?"*, Westerståhl (1998) *"On mathematical proofs of the vacuity of
+compositionality"*, Dever (1999), and Janssen (1983) for an equivalent earlier result. Their finding:
+the theorem is **mathematically sound**, but the encoding it constructs *"does not properly reflect
+the synonymy relations posited for the language,"* so **"these results do not show compositionality
+to be empirically empty."** Substantive content is restored by *"background constraints on syntax
+and the semantics of the basic lexical items"* — constraints this project already requires.
+**Consequence:** the logical-necessity route was recorded as dead since note 003 on an over-broad
+reading. It is **open and hard**. See `claims.yaml#ZADROZNY-SCOPE`.
+**The generalizable failure:** **a rule that governs only new work leaves the load-bearing decisions
+unexamined.** Foundational negatives are precisely the ones with the most downstream leverage and
+precisely the ones grandfathered in when discipline arrives late.
+**Standing rule this establishes:** when a rule is introduced, **apply it retroactively to the
+existing corpus** before applying it going forward. Concretely for R1: every negative currently cited
+anywhere in the repo needs one adversarial search, oldest and most load-bearing first.
+**Second-order, and worth recording honestly:** the protocol worked once pointed at the right target
+— the challenge was raised, the search was a single query, the answer was unambiguous. The mechanism
+functions. It had a blind spot for its own back-catalogue.
