@@ -211,8 +211,17 @@ claims:
       SUGGESTIVE ONLY, recorded as such: apartness is formalized distinguishability, which is Layer
       0's distinction; and Jordan separation, the topological survivor of note 014, is a separation
       relation. These are resonances, not arguments.
-      CONCRETE NEXT STEP: specify a semantic apartness relation and test decidability on the acyclic
-      core.
+      NARROWED BY NOTE 028, on a prediction that failed. I expected constructive geometry to use
+      apartness. It does not: "the law of trichotomy of order is replaced by the STABILITY OF
+      EQUALITY and betweenness. Apartness is not needed in constructive geometry."
+      So the precedent is STABLE EQUALITY — not-not(a=b) implies a=b, i.e. double-negation
+      elimination restricted to EQUALITY — which is far weaker than the general DNE that
+      NOTATION-LOGIC-IS-INTUITIONISTIC rules out.
+      REVISED TARGET: semantic equality plus a stability assumption is likely the right ask, rather
+      than apartness. Probably easier, and it is what the notation's own home framework uses.
+      Apartness is not refuted; it simply has no precedent in constructive geometry.
+      CONCRETE NEXT STEP: specify semantic equality with a stability assumption and test decidability
+      on the acyclic core; keep apartness as the fallback if stability fails.
 
   - id: SEMANTIC-EQUALITY
     statement: "There exists a decision procedure determining whether two GIR structures mean the same thing."
@@ -1915,3 +1924,32 @@ claims:
       WHY IT IS FENCED: this is exactly the finding that would have been patched into a claim under
       the old regime. F-024's standing check applies — adopt the structure, decline the unearned
       interpretation.
+
+  - id: EXPRESSIVENESS-CHAIN
+    statement: >
+      The notation's expressiveness chain is meaning -> combinatorial map -> drawing -> constructible
+      figure. The lower two links are characterized by theorems; the meaning-to-map link does not
+      exist.
+    tier: ARGUED
+    evidence: research/notes/028-phase3/README.md
+    priority: 0
+    notes: >
+      DRAWING TO CONSTRUCTIBLE FIGURE — characterized by Galois theory. Straightedge and compass
+      reaches towers of quadratic extensions; origami reaches cubics and quartics (Beloch fold,
+      1936).
+      MAP TO DRAWING — characterized by MAP-TO-DRAWING-GAP. Not surjective (nonstretchability) and
+      fibres arbitrarily complex (Mnev).
+      MEANING TO MAP — DOES NOT EXIST. This is the gap, and note 018 flagged the risk in advance.
+      CONSEQUENCE: the constructibility ladder bounds the FIGURE layer completely and says nothing
+      about semantic expressiveness. Phase 3's honest output is a LOCATED GAP rather than a bound —
+      which is better than a number that quietly presupposed the bridge.
+      ACTIONABLE, conditional on the unbuilt bridge: a straightedge-and-compass notation reaches only
+      quadratic towers, so expressing content of algebraic degree 3 would require a NEUSIS OR FOLD
+      operation — Huzita-Hatori axiom 6. An operation-level requirement derived from a theorem rather
+      than from taste.
+      HUZITA-HATORI, and the base-6 coincidence DISMISSED on two independent grounds: the seven
+      axioms are "not a minimal set of axioms but rather the complete set of possible single folds",
+      so fold OPERATIONS are not a basis of MARKS; and the number six is a HISTORICAL ARTIFACT —
+      Justin found all seven in 1986, Huzita's 1991 list of six was incomplete, and Hatori recovered
+      the seventh in 2001. Six was an enumeration error, not a structure. Dismissal was predicted in
+      advance (note 028 section 1).
