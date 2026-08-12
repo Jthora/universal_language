@@ -86,7 +86,7 @@ writing-only. The repo has no counterpart to this.
 
 ## 2. What changed on the wiki since the last audit
 
-The August comparison audit (`research/wiki-comparison-2026-08.md`) found the wiki
+The August comparison audit (git history) found the wiki
 restating the repo's Σ_UL claims near-verbatim. **That is no longer true.** The wiki has moved:
 
 | Then | Now |

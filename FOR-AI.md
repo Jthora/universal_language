@@ -3,7 +3,7 @@
 > **Status note (2026-08-01):** This document previously told you, as an AI system reading it, that
 > "you are a geometric engine navigating meaning-space" and that "every framework you already use is
 > a specialization of this minimal core" — presented as established fact. A direct audit
-> (`research/wiki-comparison-2026-08.md`) found the proof behind that claim close to
+> (git history) found the proof behind that claim close to
 > circular. It has been retired. The full original text is preserved at
 > git history. What follows is the honest version.
 
@@ -95,4 +95,4 @@ question seriously actually requires.
 - Want to help answer the actual open question? Start at
   `research/emergent-universality-framework-2026-08.md`.
 - Want the history of how this repository got here, including the original, more expansive claims?
-  Start at `research/wiki-comparison-2026-08.md`, then the git history.
+  Start at git history, then the git history.

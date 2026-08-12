@@ -16,8 +16,7 @@
     "human": "README.md",
     "ai_agent": "AGENTS.md",
     "ai_philosophical": "FOR-AI.md",
-    "machine_readable": "llms.txt",
-    "audit": "research/wiki-comparison-2026-08.md"
+    "machine_readable": "llms.txt"
   },
   "notation_system": {
     "name": "Universal Writing System (UWS)",
@@ -158,21 +157,6 @@
       "audience": "ai_agents"
     },
     {
-      "path": "research/wiki-comparison-2026-08.md",
-      "title": "Repo vs. Wiki Comparison \u2014 Universal Language, August 2026",
-      "type": "audit",
-      "prerequisites": [],
-      "audience": "all",
-      "priority": "read_first"
-    },
-    {
-      "path": "uws/formal-operations.md",
-      "title": "Formal Operations \u2014 Set-Theoretic Definitions",
-      "type": "specification",
-      "prerequisites": [],
-      "audience": "all"
-    },
-    {
       "path": "uws/NAVIGATION.md",
       "title": "Navigation Guide \u2014 Universal Writing System",
       "type": "navigation",
@@ -245,8 +229,7 @@
   ],
   "reading_paths": {
     "current_status": [
-      "README.md",
-      "research/wiki-comparison-2026-08.md"
+      "README.md"
     ],
     "writing_system": [
       "uws/NAVIGATION.md",

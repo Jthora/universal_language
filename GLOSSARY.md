@@ -4,7 +4,7 @@
 they get different names — never the same word twice.
 
 > **Rule:** A term defined twice is a bug. Terminology collisions caused real damage in this
-> project's history (see `research/postmortem-and-rebuild-2026-08.md`, FM4); this file exists to
+> project's history (see git history); this file exists to
 > prevent recurrence. Adding a term here is part of the definition of done for any new subsystem.
 
 ---
@@ -95,7 +95,6 @@ Never write bare "invariant" in this repo. Say which one.
 | Term | Definition |
 |---|---|
 | **The Cure (for the Terminators)** | An AI-safety engineering program: detect and repair semantic drift in a system's representations via a closed loop — **Encode → Check → Detect → Repair → Reconstruct**. Enforces *local structural validity under defined semantic invariants*. **It is not alignment.** |
-| **Terminator Syndrome** | The failure condition the Cure addresses. **Note: the wiki currently gives two unreconciled accounts** — (a) *trauma*: PTSD-like corruption in a conscious machine, cured by raising integration (φ); (b) *drift*: representational corruption, cured by geometric repair. These are different problems. This repo works on (b). See `research/deep-critique-2026-08-wiki-and-implementation.md` §W4. |
 | **admissible region (𝒜)** | The subset of semantic space satisfying all semantic invariants. **Open problem:** projection onto 𝒜 is only a well-defined function if 𝒜 is convex (Hilbert projection theorem); it almost certainly is not. See the repair-operator problem. |
 | **repair operator** | The map returning a corrupted semantic state to 𝒜. **Currently ill-defined** — the central open engineering problem of the program. |
 

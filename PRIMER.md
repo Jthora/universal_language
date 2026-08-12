@@ -187,7 +187,6 @@ construct that made verification undecidable).
 | 2 min | `README.md` | What the repo is, current status |
 | 15 min | **this file** + `GLOSSARY.md` | The stack, the hazards, how to read claims |
 | 1 hr | `research/reassessment-2026-08-purpose-anchored.md` → `research/prior-art-audit-2026-08.md` → `research/ir-decision-2026-08.md` | Why it was reframed, what's already solved elsewhere, the IR decision |
-| Half day | `research/what-is-actually-provable-2026-08.md` + `research/proof-availability-audit-2026-08.md` + `research/postmortem-and-rebuild-2026-08.md` | What is derivable, what needs data, and how the practice was rebuilt |
 | To build | `uws/` (notation) · `ul-forge/` (code) · `claims.yaml` (what's actually true) | Enough to contribute |
 | Reference | `research/RESEARCH-REGISTER.md` | Every research thread run, what it returned, its caveat and status — the index, not an argument |
 

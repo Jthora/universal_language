@@ -36,7 +36,6 @@ What actually exists here now, in two parts:
 | Path | Content | Agent Action |
 |------|---------|--------------|
 | `README.md` | Current status and two-part structure | Read first |
-| `research/wiki-comparison-2026-08.md` | The audit that surfaced the core problem | Read for context on why the old claims were retired |
 | `research/emergent-universality-framework-2026-08.md` | The current framing and what would falsify it | Read to understand what is actually being investigated |
 | `RESEARCH-PROTOCOL.md` | Method — how not to get fooled by scope-dropped results | Read before searching the literature |
 
@@ -57,7 +56,6 @@ What actually exists here now, in two parts:
 ### Priority 4 — Historical Record (not current status)
 | Path | Content |
 |------|---------|
-| `research/legacy-findings.md`–`pass3` | Prior self-audit trail — useful as process history, not as current claims |
 | `whitepaper/` | Original whitepaper, already self-labeled historical |
 
 ---

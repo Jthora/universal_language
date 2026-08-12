@@ -787,7 +787,7 @@ claims:
   - id: UQPL-QUANTUM-LAYER
     statement: "UQPL's superposition and entanglement operations are mathematically well-founded."
     tier: RETIRED
-    superseded_by: research/deep-critique-2026-08-wiki-and-implementation.md
+    superseded_by: "no successor — specification withdrawn; full rationale in notes below"
     formalization: "Semantic Hilbert Space as specified — no concrete inner product, no basis, no completeness/separability treatment (R3)"
     scope: >
       The critique is of THIS specification's underdetermination, not of quantum-inspired semantic

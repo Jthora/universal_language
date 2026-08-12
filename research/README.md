@@ -44,15 +44,12 @@ there with a tier, it is not a claim of this project.
 | `uws-as-methodology-2026-08.md` | UWS as an instrument: expressive failures as data. |
 | `the-triangulation-2026-08.md`, `research-cycle-2026-08-answers.md` | Cycle records. |
 
-## Historical — provenance of the rebuild
-
-These record *why* the earlier direction was retired. They reference material that has since been
-deleted from the working tree; **git history is the archive.**
+## Provenance
 
 | Document | Content |
 |---|---|
-| `wiki-comparison-2026-08.md` | The audit that surfaced the circularity in the original necessity argument. |
-| `postmortem-and-rebuild-2026-08.md` | Diagnosis of the practice failures and the enforcement mechanisms that replaced them. |
-| `reassessment-2026-08-purpose-anchored.md` | Re-anchoring the program on its purpose. |
-| `deep-critique-2026-08-wiki-and-implementation.md` | Implementation and wiki critique. |
-| `legacy-findings.md` | Consolidated findings from the audit-pass era, status re-derived from current code. |
+| `reassessment-2026-08-purpose-anchored.md` | Re-anchoring the program on its purpose. Holds live rationale for `CURE-SCOPE` and `UQPL-TOTALITY`. |
+| `source-critique-2026-08.md` | Where sources were misapplied on transfer, and the narrowed claims that resulted. |
+
+Backward-looking material — the original audit, the practice postmortem, the audit-pass findings —
+has been deleted. **Git history is the archive.**

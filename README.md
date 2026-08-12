@@ -128,7 +128,7 @@ The rebuild replaces conventions with mechanisms:
 - A finding is closed only when the fix is applied, tested, and propagation-scanned — not when it's
   documented.
 
-Full diagnosis and rebuild plan: `research/postmortem-and-rebuild-2026-08.md`.
+Full diagnosis and rebuild plan: git history.
 
 ---
 
