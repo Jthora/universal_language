@@ -2066,3 +2066,37 @@ claims:
       and the expectation was wrong. Both embeddings are now tested — same graph, same degree
       sequence, different surface — which demonstrates the module's central claim that the rotation
       IS the embedding.
+
+  - id: BINARY-AXES-ARE-HYPEROCTAHEDRAL
+    statement: >
+      The four binary shape axes form a hyper-octahedral structure — 16 cells as tesseract vertices,
+      8 poles as 16-cell vertices — but only with the junction axis excluded, because junction degree
+      is unbounded and no finite polytope has an infinite axis.
+    tier: ARGUED
+    evidence: research/notes/031-junctions-and-the-octahedral-question/README.md
+    priority: 0
+    scope: >
+      HOLDS for the binary shape axes only. FAILS once junctions are included. Cite with the
+      exclusion stated — the unconditional form is false.
+    notes: >
+      Curvature is not binary but SPLITS into two binary choices: is kappa constant ({Z,C} vs
+      {P,V}), then is it the degenerate member (Z vs C, P vs V). That gives four binary axes:
+      2 curvature + singularity + closure. 2^4 = 16 cells = tesseract vertices; 4 axes x 2 poles = 8
+      = vertices of the dual 16-cell, which is the 4-dimensional cross-polytope, i.e. the
+      hyper-octahedron.
+      JUNCTION DEGREE IS UNBOUNDED and that obstruction is fatal to any finite polytope over all
+      four axes. It is also explanatory: an unbounded axis cannot fold into a closed symmetric
+      figure, so it generates an unbounded family instead. That is why the cross/X exploration ran
+      into the open pseudoline-arrangement enumeration (NONSTRETCHABILITY-BOUNDS-DRAWING) while the
+      octahedral system closes cleanly. The two are structurally different kinds of object — a finite
+      polytope over binary axes versus an unbounded family over a countable axis.
+      CONCRETE DISCREPANCY, and the first place the derived classification and the existing
+      symmetry-grid work make DIFFERENT predictions: a 3D octahedron has 6 vertices = 3 binary axes;
+      a 4D 16-cell has 8 = 4 binary axes. The derivation gives four. So either the octahedral system
+      is missing an axis, or the curvature split is wrong and should be one atomic axis giving three.
+      Checkable rather than a matter of taste, and it is the same open item note 026 recorded from
+      the waveform table — one of the two decompositions is doing unnecessary work.
+      METHOD: this is a test, not a retrofit. The axes were derived in notes 022 and 024 without
+      reference to any octahedral structure, the polytope question was asked afterwards, and it could
+      have returned negative. The guard against note 017's documented failure mode is that the answer
+      is CONDITIONAL and names its own obstruction rather than being a bare numerical match.
