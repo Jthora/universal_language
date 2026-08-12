@@ -584,3 +584,28 @@ it, and having the correct sentence in the same paragraph provided no protection
 **What worked:** executable checks catch what rereading does not. `ENCLOSURE-IS-DISTINCTION` became a
 test in note 030 and passed; this one became a test in note 032 and failed. **The tests that fail are
 the ones worth writing**, and neither would have been found by further argument.
+
+---
+
+## F-026 — F-013a over-narrowed the adoption evidence
+**Date:** 2026-08-12
+**What F-013a said:** that the adoption evidence was over-stated because the music-notation case
+concerns **displacing an entrenched incumbent** — roughly a thousand years of investment, every
+extant score, all pedagogy — which UWS is not attempting, since no dominant notation occupies its
+niche.
+**Why that narrowing was too generous:** **Blissymbolics and Solresol were not displacing incumbents
+either.** Both targeted open niches. Both failed. Wilkins' Real Character is *"ingenious but
+completely unworkable"*; Leibniz's *characteristica* was never completed at all.
+**So the adoption problem is real without the incumbent confound** — which is precisely what F-013a
+claimed had not been shown. **Four serious attempts across three centuries, none displacing an
+incumbent, none achieving universality.**
+**What survives from F-013a:** the specific point that *music-notation* evidence is confounded by
+entrenchment remains correct. What does not survive is the inference that adoption evidence
+generally is weakened by that confound.
+**The instructive case, worth stating as a realistic best outcome rather than as consolation:**
+Blissymbolics failed at universality and **succeeded in a niche it was not designed for** —
+augmentative communication for people who cannot speak, *"still used by thousands of physically
+disabled individuals."*
+**Pattern to note in the correction itself:** F-013a narrowed a negative on the grounds that its
+evidence was drawn from an extreme case. That was right in method and wrong in extent — **the fix
+for an over-broad negative is a narrower negative, not the absence of one**, and I recorded absence.

@@ -2331,7 +2331,68 @@ claims:
       (its defensible role is protocol), and this note (folk claims name non-representational things,
       with music data supporting the convention-minimizing reading). Mild corroboration, not
       evidence.
+      HISTORICAL EVIDENCE (note 037): SOLRESOL is the natural experiment. It built a language out of
+      music — words from the seven note-names — and failed. Note 036 found music's RELATIONAL
+      structure travels while its CONVENTIONAL identifications do not; Solresol took the part that
+      travels and converted it into a label alphabet, and it stopped travelling. The one attempt to
+      build a universal language out of music failed by turning relations into vocabulary.
       WARNING ATTACHED DELIBERATELY: this is the most agreeable result in many notes — folk
       intuition, empirical data and our own derivation all pointing one way is exactly when motivated
       reading is easiest. The temptation is to conclude "UL is music-like" or "UL is love". NEITHER
       FOLLOWS. What follows is narrow: convention-minimizing structure travels better.
+
+  - id: THREE-KINDS-OF-UNIVERSAL-CLAIM
+    statement: >
+      "Universal language" names three incompatible claims — an invented notation, a discovered
+      structure, and a mode of engagement — with different track records and success criteria. UWS
+      is the first kind; the UL question became the second at note 003.
+    tier: ARGUED
+    evidence: research/notes/037-the-universal-language-landscape/README.md
+    priority: 0
+    notes: >
+      KIND A, INVENTED NOTATION — build a system everyone could learn. Leibniz's characteristica
+      universalis, Wilkins' Real Character, Dalgarno, Blissymbolics, Solresol, Esperanto, Lojban.
+      TRACK RECORD UNIFORMLY NEGATIVE across three centuries: Leibniz's "has never been published; it
+      is unknown whether Leibniz ever worked it out in detail"; Wilkins' is "ingenious but completely
+      unworkable"; Solresol "didn't inspire many to actually learn the language"; Blissymbolics "was
+      not widely embraced" internationally.
+      KIND B, DISCOVERED STRUCTURE — there is already an ordering principle and it is language-like.
+      Logos, mathematics as the book of nature, Pythagorean number, Sanskrit and Hebrew as divine
+      language, and the universality class. This is the ordinary claim of mathematics and physics.
+      KIND C, MODE OF ENGAGEMENT — the universal is relation, not content. Love, presence,
+      participatory sense-making. Kinds B and C agree that A looks in the wrong place and disagree
+      about where to look instead: structure versus relation.
+      THE CONSTRAINT THIS PLACES ON US: UWS is a kind-A project. The UL question became kind-B at
+      note 003, without the lineage being noticed. THIS IS THE CLEANEST EXPLANATION OF WHY NOTE 034
+      FAILED — it tested a kind-B claim (does the structure appear independently?) against an
+      artefact of kind-A work (the notation's fixed point). Kind-A artefacts are INVENTED; there is
+      no reason for them to appear independently.
+      AND IT IS WHY NOTE 035 IS THE RIGHT RELOCATION: UP is neither A nor B. It asks how much shared
+      convention two parties need, which is answerable without either building a universal notation
+      or discovering a universal structure.
+      KIND C PREDICTS ASYMMETRY: a content-based universal is symmetric, the same message working for
+      anyone; a coupling-based one requires both parties to participate and cannot be broadcast. Same
+      asymmetry as Pearl's hierarchy in CURE-MONITORS-COUPLING-NOT-CONSISTENCY.
+
+  - id: GENETIC-CODE-IS-CONSTRAINED-NOT-DETERMINED
+    statement: >
+      The genetic code — the only empirically existing near-universal code — is strongly constrained
+      by selection yet not uniquely determined, which is the emergent-universality position
+      instantiated and a caution about how much any derivation could ever pin down.
+    tier: ARGUED
+    evidence: research/notes/037-the-universal-language-landscape/README.md
+    priority: 0
+    notes: >
+      CONSTRAINED: "the probability to reach the same level of error minimization as in the standard
+      genetic code by random permutation of codons is below 10^-6" — the one-in-a-million result. It
+      "appears at or very close to a global optimum for error minimization."
+      NOT DETERMINED: "the standard genetic code is far from being optimal because, given the
+      enormous overall number of possible codes (>10^84), billions of variants are even more robust
+      to error."
+      SO THE ONE REAL UNIVERSAL CODE IS A FROZEN ACCIDENT THAT SELECTION IMPROVED — historically
+      locked in, not derived. Selection constrains without determining; a good solution is reached
+      without being THE solution.
+      CONSEQUENCE, and it should be adopted as a position rather than discovered later: if the
+      genetic code is the model, then CONSTRAINED BUT CONTINGENT is the best UL could be, and no
+      derivation would ever pin it down uniquely. That is compatible with UL-IS-EMERGENT-UNIVERSAL
+      and incompatible with any revival of the necessity route that expects a unique answer.
