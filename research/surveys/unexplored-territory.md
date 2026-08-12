@@ -11,6 +11,16 @@ decision, which is itself evidence the sampling rate is still far too low.
 
 ---
 
+> **Caveat notice (added 2026-08-12).** Several sources named below carry **recorded caveats** in
+> `research-register.md`, and this document predates their enforcement. The register is authoritative:
+>
+> - **AMR** (`D2-c`) — an **English-only corpus** with English predicate lexicon and English
+>   annotators. A stress test, **never universality evidence**.
+> - **UNL** (`D3-c`) — its failure is **confounded**: interlingua inadequacy versus being outcompeted
+>   by statistical and neural MT, versus governance.
+> - **Decipherment** (`F6-c`) — recovery with **no spec, no teacher, no bilingual anchor**.
+> - **Cognitive Dimensions** (`F5-c`) — a **discussion vocabulary, not a measurement instrument**.
+
 ## PART I — Four probes just run, and what they returned
 
 ### 1. Abstract Meaning Representation (AMR) — major prior art, and a free benchmark
@@ -125,7 +135,7 @@ Ordered by expected value. None of these have been researched at all.
 | Area | Why it matters |
 |---|---|
 | **UNL post-mortem (deep)** | Nearest precedent; documented failure modes; see above |
-| **Cognitive Dimensions of Notations** (Green & Petre) | An actual HCI framework for *evaluating notation designs* — viscosity, hidden dependencies, premature commitment, secondary notation. Directly applicable to UWS, and would give the 5-vs-6 decision real criteria |
+| **Cognitive Dimensions of Notations** (Green & Petre) | A **discussion vocabulary, not a measurement instrument** (`F5-c`) for *talking about notation designs* — viscosity, hidden dependencies, premature commitment, secondary notation. Directly applicable to UWS, and would give the 5-vs-6 decision real criteria |
 | **Semantic Web / knowledge graphs in practice** | RDF, OWL, JSON-LD, schema.org, SHACL. Decades of industrial experience with exactly "typed graph + constraints + validation." SHACL in particular is a shipped constraint language for graph validity — arguably the Cure's check phase, already standardized |
 | **Linguistic typology (WALS, Greenberg universals)** | Empirical cross-linguistic universals from ~2,600 languages. The actual evidence base for what is universal in human language, which the project has been theorizing about without consulting |
 | **Mechanistic interpretability / representation engineering** | The Cure's nearest neighbors in current AI safety: probing, sparse autoencoders, activation steering, concept erasure. Needed both to position the work and to avoid duplicating solved problems |
@@ -168,7 +178,11 @@ are unsolved problems.
 
 ### 1. The grounding problem — now the deepest one
 
-Decipherment says it plainly: **structure without shared reference is unreadable.** Linear A is
+Decipherment appears to say plainly that **structure without shared reference is unreadable** —
+**but this is exactly where `F6-c` bites.** Decipherment is recovery with *no spec, no teacher and no
+bilingual anchor*; UWS ships with a specification and a teacher. **The strong reading is not
+available**, and what survives is far weaker: shared reference helps a great deal when there is
+nothing else. Linear A is
 structurally rich and permanently opaque. If UWS is to be readable by a mind that shares no biology,
 culture, or referential world with us, compositional regularity is not enough — and we have no
 account of what supplies the grounding. Changizi grounds the *marks* perceptually (in human visual

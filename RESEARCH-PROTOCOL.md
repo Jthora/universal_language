@@ -96,6 +96,10 @@ Full text: `research/method/negative-results.md`. **Normative.**
   meets the same evidentiary bar as one that advances it.
 - **R6 — State the steelman before the kill.** What would have to be true for the positive to
   survive? If you can't articulate it, you don't understand the claim well enough to kill it.
+- **R9 — A framing is a claim. Register it as one.** Load-bearing assertions buried in a
+  `notes:` field get no tier, no evidence check and no falsifier — and a *framing* silently
+  determines what every claim under it means. **"UWS is kind A" sat in a notes field and
+  contradicted eleven notes of derivation.** See F-027.
 - **R8 — Adversarially check your own proposals, not only inherited claims.** A test you designed
   is a claim about what that test would show, and carries the same failure modes. **The
   Euclid/Aristotle dependency test was promoted for a dozen turns as "cheap and decisive" and was
@@ -210,6 +214,8 @@ Before recording any finding that closes a line of work:
 - [ ] **R8** If this is my own proposal — searched against it too
 - [ ] **T11** If contrasting two results — did one study actually compare them?
 - [ ] **T12** If classifying — stated what would show the object doesn't fit?
+- [ ] **R9** If this is a framing — registered as a claim, not left in a notes field?
+- [ ] Ran `ruby tools/check.rb --strict`
 - [ ] **T5** Checked whether the objects are mathematical
 - [ ] **T6** Gave it the same scrutiny as the last positive finding
 - [ ] **T9** Checked the theorem proves the conclusion, not just something adjacent
@@ -217,7 +223,7 @@ Before recording any finding that closes a line of work:
       objection regardless of direction
 - [ ] **S7** Logged whether counter-evidence was easy or hard to find
 
-Thirteen boxes. If you can't tick them, you haven't finished the finding.
+Fifteen boxes. If you can't tick them, you haven't finished the finding.
 
 ---
 

@@ -33,7 +33,7 @@ its objects are mathematical.*
 | `UL-IS-EMERGENT-UNIVERSAL` | Mixed | Class structure provable; membership not |
 | `UL-EXISTS` | **No** | Membership question about contingent objects |
 | `SURFACE-DIVERSITY-IS-PREDICTED` | **No** | WALS is data |
-| `UWS-AMR-BENCHMARK`, `CURE-BENCHMARK-RIPPLE` | **No** | Benchmarks by construction |
+| `UWS-AMR-BENCHMARK`, `CURE-BENCHMARK-RIPPLE` | **No** | Benchmarks by construction. *AMR is an **English-only corpus** with English predicate lexicon and English annotators — usable as a stress test, never as universality evidence (`../surveys/research-register.md#D2-c`).* |
 | `APOTHEOTIC-ATTRACTOR-GAP` | **No** | Taxonomic proposal |
 | `ENACTION-CRITIQUE` | **No** | Philosophical position |
 | `CURE-PREVENTION-VS-REPAIR` | **No** | Engineering design choice |

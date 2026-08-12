@@ -142,6 +142,16 @@ that can't be articulated, the claim isn't understood well enough to kill.
 
 ---
 
+### R9 — A framing is a claim. Register it as one.
+
+Load-bearing assertions buried in a `notes:` field receive **no tier, no evidence check and no
+falsifier** — while a framing silently determines what every claim beneath it means.
+
+**Worked example:** *"UWS is kind A — an invented notation"* sat inside another claim's `notes`
+field. It contradicted eleven consecutive notes that *derive* UWS structure, and nothing checked
+it because notes fields are not checked. See F-027.
+
+
 ### R8 — Adversarially check your own proposals, not only inherited claims
 
 R1 covers findings you encounter. **It does not cover tests and methods you invent**, and those carry

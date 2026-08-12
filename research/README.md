@@ -46,7 +46,7 @@ research/
 |---|---|
 | `obstructions.md` | Löb, Rice, AGM, Landau. **What theorem says this is impossible** — asked before designing the mechanism. |
 | `ir-decision.md` | Acyclic term-graph core, coreference as labels. Load-bearing for two independent results. |
-| `prior-art.md` | Conceptual Graphs, ISO 24707, TMS, SHACL, belief revision. |
+| `prior-art.md` | Conceptual Graphs, ISO 24707, TMS, SHACL, belief revision. *(SHACL supplies the constraint language, **not the invariants** — authoring the shapes graph is the unsolved problem, `surveys/research-register.md#D5-c`.)* |
 
 ## surveys/ — the landscape
 

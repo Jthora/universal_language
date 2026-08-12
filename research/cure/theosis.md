@@ -161,7 +161,10 @@ two traditions share no lineage whatsoever.
 for transmission* to *supporting coordination between participants*. Those produce different
 notations. A coordination medium is evaluated on whether it enables repair of misunderstanding in
 interaction — not on whether a naive receiver can decode it cold. Which, incidentally, dissolves the
-decipherment objection: you never needed a receiver who could read it without interaction, because
+decipherment objection — and note the objection was already narrow, since decipherment is recovery
+with **no spec, no teacher and no bilingual anchor** while UWS ships with a specification
+(`../surveys/research-register.md#F6-c`). You never needed a receiver who could read it without
+interaction, because
 meaning was always going to be established *through* interaction.
 
 ## 6. Honest assessment of the reframe

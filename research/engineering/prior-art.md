@@ -86,6 +86,11 @@ arise:
 The multivalued-projection problem becomes "choose among minimal diagnoses" — a known problem with
 known strategies, not a geometric impossibility.
 
+> **Naming note:** Gärdenfors appears here only as an author of AGM. His *conceptual spaces* work is a
+> separate matter and carries a caveat — **convexity is relative to a choice of quality dimensions and
+> metric**, so given freedom over the embedding many semantic regions can be made convex
+> (`../surveys/research-register.md#E9-c`). Do not read one as support for the other.
+
 **Companion field:** AGM belief revision (Alchourrón, Gärdenfors, Makinson) supplies the rationality
 postulates for minimal change — contraction, expansion, revision — and has already been extended to
 description logics and ontology evolution, including weakening-based revision operators that satisfy

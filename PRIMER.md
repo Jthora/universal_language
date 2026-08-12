@@ -192,7 +192,9 @@ construct that made verification undecidable).
 
 > **Note (2026-08-01):** this primer predates three later findings — that the Cure is a rediscovery
 > of Truth Maintenance Systems (Doyle 1979 / de Kleer 1986), that invariants may be *inferred*
-> rather than specified (Daikon-style), and that prevention-at-write-time is an unexamined
+> rather than specified (Daikon-style — a **candidate generator, not an oracle**; it reports *likely*
+invariants that may be corpus artifacts, `research-register.md#E6-c`), and that
+prevention-at-write-time is an unexamined
 > alternative to detect-then-repair. See `research/surveys/research-register.md` §E and §H.
 
 **Companion wiki:** `wiki.fusiongirl.app` holds substantial related material — sometimes ahead of
