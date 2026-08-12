@@ -133,6 +133,31 @@ tier-1 evidence that no literature can retract. This is the strongest available 
 problem: **if we build a functioning UL and it works, the state of the literature becomes
 irrelevant.**
 
+### S8 — Read one primary before registering a priority-0 claim
+
+**Four primary reads in roughly forty searches; all four materially changed a claim.** A search
+summary is sufficient to *find* a source and never sufficient to *rest* on one.
+
+### S9 — Synonym sweep before concluding novelty or absence
+
+The same structure carries different names in different fields — *rotation system*, *combinatorial
+map*, *ribbon graph*, *fat graph*, *dessin d'enfant*. **Before claiming something is unprecedented,
+absent, or original, search at least three vocabularies.** Note 034 concluded "no formalism uses
+rotation systems" without searching *ribbon graph*.
+
+### S10 — Failure-first survey, at the start
+
+**Before building, find who tried and why they stopped.** The historical survey of universal-language
+attempts was the single most informative crawl about this project's prospects and ran at note 37 of
+43. Solresol alone — a universal language built from music, which failed by turning relations into
+vocabulary — outweighs most of the first thirty notes.
+
+### S11 — Scope-before-cite
+
+**One query on a source's stated limitations before using it as evidence:** what corpus, what
+population, what the authors say it does not show. `check-caveats.rb` enforces a caveat once known;
+this is how it becomes known.
+
 ### S7 — Keep the corruption hypothesis falsifiable, and instrument it
 
 **Track, per load-bearing negative, whether counter-evidence was easy or hard to find.** Record it.
