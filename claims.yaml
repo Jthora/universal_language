@@ -1953,3 +1953,87 @@ claims:
       Justin found all seven in 1986, Huzita's 1991 list of six was incomplete, and Hatori recovered
       the seventh in 2001. Six was an enumeration error, not a structure. Dismissal was predicted in
       advance (note 028 section 1).
+
+  # ─── Phase 4 decisions (added 2026-08, note 029) ───────────────────────────
+
+  - id: REGIONS-ARE-FACE-UNIONS
+    statement: >
+      Spatial regions are unions of faces of the combinatorial map. RCC-8 is the relation vocabulary
+      and is decidable by construction, because the region domain is a finite Boolean algebra.
+    tier: DESIGN-CHOICE
+    rationale: research/notes/029-phase4/README.md
+    alternatives_considered:
+      - "adopt RCC as an independent spatial semantics layer (rejected: unnecessary — the map already determines its faces by face tracing, and adopting it as a separate layer would import undecidability rather than avoid it)"
+      - "point-free regions in continuous space, Whitehead/Tarski style (rejected: the full RCC framework is undecidable over arbitrary regions, and it would reverse the vertex-primitivity of FIXED-POINT-IS-COMBINATORIAL-MAP)"
+      - "hand-rolled spatial predicates (rejected: RCC-8 is a standard vocabulary with known semantics; no reason to invent one)"
+    priority: 0
+    notes: >
+      RCC-8 primitive is a binary C(x,y), "x connects with y", over non-null regions, giving eight
+      jointly exhaustive pairwise disjoint relations: DC, EC, PO, EQ, TPP, NTPP, TPPi, NTPPi.
+      THE COMPLEXITY IS BAD IN GENERAL: consistency checking NP-complete, entailment co-NP-complete,
+      and "while the entire RCC framework is undecidable, subsets can be defined that are decidable."
+      THE FIX IS ALREADY IN THE IR. Faces of a plane graph are the connected components of the
+      complement — open, disjoint, exhaustive — and are recoverable from the rotation system by face
+      tracing. Taking regions as unions of faces makes the region domain the finite Boolean algebra
+      2^F over the face set, so every RCC-8 relation is a finite check. Undecidability and
+      NP-completeness both come from arbitrary regions in continuous space; a finite domain has
+      neither.
+      AND IT DISSOLVES THE POINT-FREE TENSION: RCC is point-free (Whitehead lineage) while the map
+      has vertices as primitive. They are complementary rather than competing — vertices give
+      incidence, faces give regions, one object supplies both. The two traditions of note 016 are
+      unified by the same object that unified separation and incidence in note 024.
+
+  - id: CURE-IS-COMPARATOR
+    statement: >
+      The Cure derives its trust from the external anchor rather than from self-proof: it checks
+      representations against a fixed mathematical structure it did not author. It is a comparator,
+      not a self-prover.
+    tier: DESIGN-CHOICE
+    rationale: research/notes/029-phase4/README.md
+    alternatives_considered:
+      - "Cure external to and stronger than what it repairs (viable but does not say where the stronger system's own trust comes from — defers the problem one level)"
+      - "accept a descending strength chain of successors (rejected: pays in monotonically weakening successors, and gives no account of the first link)"
+      - "prove the repair policy sound from within (rejected: Lob forecloses it — LOBIAN-OBSTACLE)"
+    priority: 0
+    notes: >
+      Rests on the split in GEOMETRIC-ANCHOR-ESCAPES-LOB: "is my representation self-consistent?" is
+      self-referential and Lob bites; "does my representation match the fixed structure?" is a
+      comparison and Lob never fires.
+      Independently supported by the reading found in the R7 sweep (note 021): "a logical agent
+      cannot make a priori claims about the soundness of its own reasoning because soundness involves
+      semantic maps beyond the logic's a priori control."
+      BINDING CONSEQUENCES. (1) The Cure must NOT be given the job of proving its own repair policy
+      sound in general — that is self-referential and blocked. It verifies INDIVIDUAL REPAIRS against
+      the anchor. (2) Policy-level soundness is EXTERNAL BY CONSTRUCTION — human review or a separate
+      stronger system. This is the architecture, not a gap to close later. (3) This is why the anchor
+      work is load-bearing rather than philosophical: without a fixed external structure there is no
+      comparator, and without a comparator the only option left is self-proof, which Lob forecloses.
+
+  - id: ENTRENCHMENT-IS-SURVIVAL-ORDER
+    statement: >
+      The Cure's entrenchment ordering is the coarse-graining survival order: topological invariants
+      most entrenched, metric detail least. It is derived from the geometry rather than stipulated.
+    tier: DESIGN-CHOICE
+    rationale: research/notes/029-phase4/README.md
+    alternatives_considered:
+      - "stipulate an ordering by hand (rejected: leaves the Cure's last parameter free, and an arbitrary preorder gives a rational-but-unmotivated operator)"
+      - "order by frequency or usage statistics (rejected: makes entrenchment contingent on a corpus, and drifts as the corpus drifts — the IPK pathology of DRIFT-MUST-BE-ABSOLUTE-NOT-RELATIVE)"
+      - "order by syntactic complexity (rejected: no connection to what the structure preserves)"
+    priority: 0
+    notes: >
+      AGM-PREORDER-REPAIR guarantees a rational operator GIVEN a faithful preorder. Which preorder
+      has been the Cure's remaining blocker; this closes it as a research question.
+      ORDERING, most to least entrenched: topological (the combinatorial map — incidence, separation,
+      junction degree); projective (incidence, cross-ratio); affine (parallelism, midpoints); metric
+      (lengths, angles, curvature). When the Cure must give something up it surrenders metric detail
+      first and topological structure last.
+      WHY IT IS A DERIVATION. (1) The ordering is computed, not chosen — notes 014 and 022 derived
+      it, and 022 explained why the axes die in that order, metric then differential then
+      topological. (2) It COINCIDES WITH THE ANCHOR: note 007 says anchor to the most invariant
+      available, so the most entrenched thing is the anchor. Two independently derived orderings
+      agree, which is the check that matters. (3) It is a TOTAL preorder as AGM requires, since
+      Erlangen levels are totally ordered and each invariant has a coarsest level at which it
+      survives.
+      WHAT IT DOES NOT SETTLE: ties within a level need a secondary criterion, and no semantic
+      invariant has yet been written as a checkable predicate. This is a specification, not an
+      implementation. Phase 5 tests it.

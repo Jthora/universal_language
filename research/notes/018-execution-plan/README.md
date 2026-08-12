@@ -120,6 +120,8 @@ If it does not hold, say so in the note. Retrofitting it is the exact failure th
 
 ## Phase 4 — Formal semantics and forced decisions
 
+**STATUS: CLOSED 2026-08-01** — note `029`. All three derived rather than stipulated.
+
 | Item | Output tier | Notes |
 |---|---|---|
 | **B** Mereotopology / RCC as spatial semantics for the IR | DESIGN-CHOICE | Existing decidability results |
