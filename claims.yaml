@@ -1768,3 +1768,45 @@ claims:
       rotation; and it is NOT shown that every notation-relevant feature reduces to the combinatorial
       map — curvature demonstrably does not, it dies earlier. The claim is about the fixed point, not
       about the notation as drawn.
+
+  - id: TABLES-ARE-PROJECTIONS
+    statement: >
+      A symbol table is a projection of the axis product onto a subset of axes. Symbols recur across
+      tables because a cell projects into every table; n axes yield C(n,2) two-dimensional tables;
+      and the number of live tables falls under coarse-graining to a single indexed family.
+    tier: ARGUED
+    evidence: research/notes/025-many-tables/README.md
+    priority: 0
+    notes: >
+      DERIVED, not observed. The classification of notes 022 and 024 is a product of four axes —
+      curvature, singularity, closure, junction degree — so a primitive is a CELL in a
+      4-dimensional space. That space is the "super matrix"; a table is a projection of it.
+      TWO CONSEQUENCES FOLLOW IMMEDIATELY. (a) The number of 2D tables is C(n,2): six for four axes.
+      (b) EVERY symbol appears in EVERY table, since a cell has a coordinate on each axis and
+      projects into all of them at different positions with different neighbours. Recurrence across
+      tables is forced, not designed. A symbol's identity is its coordinate vector; a table shows two
+      components of it, so adjacency is per-projection — symbols adjacent in one table can be distant
+      in another.
+      WHY THE TABLES ARE NOT REDUNDANT: projections lose information and different projections lose
+      different information. Two cells differing only on the closure axis are identical in the
+      (curvature, singularity) table and distinct in any table including closure. No single 2D table
+      separates all symbols; the set does, and only jointly. A concrete instance of
+      PRIMITIVE-SETS-ARE-GENERATING-SETS.
+      SCALE DEPENDENCE: the table count is not fixed. Euclidean has 4 live axes and 6 tables; affine
+      fewer; at the topological fixed point only the junction axis survives with closure recoverable
+      by face tracing, giving ZERO 2D tables and a single indexed family
+      (FIXED-POINT-IS-COMBINATORIAL-MAP). The "super matrix" and the "single canonical table" are one
+      object at two scales.
+      THE TEST, and it runs opposite to everything else here: n axes give exactly C(n,2) 2D tables,
+      so COUNTING THE DISTINCT TABLES ACTUALLY DRAWN GIVES A LOWER BOUND ON THE NUMBER OF AXES —
+      including axes never named, only used. 3 axes/3 tables, 4/6, 5/10, 6/15, 7/21. Note 023 found
+      the formalism missing an axis the practice had; this lets the practice be read as data about
+      the formalism.
+      PREDICTION, recorded before the count is known: it exceeds six, because all four derived axes
+      are GEOMETRIC and a working notation almost certainly encodes at least one non-geometric axis
+      such as orientation, ordering, or a role marker.
+      COINCIDENCE RECORDED AS A COINCIDENCE: C(4,2) = 6 and the six-primitive system carried
+      "6 = C(4,2) via tetrahedral rectification." Six TABLES is not six PRIMITIVES; matching numbers
+      is not matching structure. Interesting only if an independent reason emerges why primitives
+      should correspond to pairwise projections, and there is none. Note 017 recorded retrofitting
+      such correspondences as this project's documented failure mode.
