@@ -73,7 +73,7 @@ is patching evidence to fit an assertion, and **a theorem cannot be patched into
 | Result | What it gives |
 |---|---|
 | **κ-stratification** | "Which primitives" becomes "which partition" — well-posed, enumerable |
-| **Erlangen survival** | Affine kills circle/ellipse; projective merges all conics; **only Point and Enclosure reach topological**. The curvature family is *provably* microscopic detail |
+| **Erlangen survival** | Derived case by case in note `014`. Wave dies at affine; circle merges in two stages; Line survives projective and dies at topological; **Point and Enclosure are the only unconditional survivors at topological** |
 | **Jordan ≅ Spencer-Brown** | The topologically-surviving primitive **is** the Layer 0 distinction. First formal link between the philosophical floor and the geometry |
 | **Space-curve theorem** | Plane symbology is exactly the **τ = 0 slice**. 3D adds torsion → helix, knotting, and **chirality provably unavailable in the plane** |
 | **Theorema Egregium** | Gaussian curvature is *intrinsic* — marks readable from inside the system, no external viewpoint |

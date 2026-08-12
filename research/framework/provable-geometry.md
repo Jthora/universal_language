@@ -134,10 +134,11 @@ That is a theorem about which distinctions survive which level. Applied to our p
 
 **The primitives are provably ranked by robustness, and there is a clear survivor.**
 
-**Point and Enclosure survive to the topological level. The entire curvature family — line, circle,
-wave, curve, angle — dies by the projective level.** So the claim "the primitives are microscopic
-detail" is not a conjecture awaiting an experiment. **It is a computation, and it is already done.**
-What it identifies as the surviving structure is the interesting part:
+**Point and Enclosure are the only unconditional survivors at the topological level.**
+The full case-by-case derivation is in `../notes/014-erlangen-survival-derivation/`, which
+corrects four points in the version originally asserted here — notably that **Line survives
+projective** (collinearity is *the* projective invariant) and dies only at topological, and that
+**Wave dies at affine**, one level earlier than claimed.
 
 ### The survivor is Layer 0, and this is not an analogy
 

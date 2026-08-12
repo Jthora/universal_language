@@ -91,7 +91,9 @@ by construction rather than by vigilance.**
 
 Metrology's principle is *anchor to the most invariant thing available*. §3 of
 `research/framework/provable-geometry.md` computed exactly that ranking: **Point and Enclosure survive
-to the topological level; the whole curvature family dies by projective.**
+to the topological level as the only *unconditional* survivors — see the derivation in
+`../notes/014-erlangen-survival-derivation/`, which corrects the earlier claim that the curvature
+family dies by projective (Line survives projective; it dies at topological).**
 
 **So the anchor is not "the geometry" generally — it is distinction and incidence specifically,**
 because those are provably the most stable structures in the inventory. The choice of anchor is

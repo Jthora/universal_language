@@ -965,12 +965,25 @@ claims:
     priority: 0
     supersedes_tier_of: ERLANGEN-AS-COARSE-GRAINING
     notes: >
-      Derivable, not experimental — this was previously filed as awaiting an experiment. The
-      subgroup relation does the work: any notion invariant in projective geometry is a priori
-      meaningful in affine geometry, but not conversely. Affine kills circle/ellipse and
-      angle-as-magnitude; projective merges all conics and eliminates curvature distinctions;
-      topological retains only connectivity and separation. This settles by computation the claim
-      that primitive count is an irrelevant operator.
+      DERIVED case by case in note 014, having previously been asserted in prose. Survival is
+      defined there as closure (the defining property is G-invariant) plus distinguishability (not
+      merged with another primitive), which separates two failure modes the prose conflated —
+      MERGE (class survives, distinction lost) and DISSOLVE (defining property not G-invariant).
+      FOUR CORRECTIONS the derivation forced against the asserted version:
+      (1) "The curvature family dies by projective" was WRONG. Line is kappa=0, part of that family,
+      and survives projective — collinearity IS the projective invariant. Line dies at TOPOLOGICAL.
+      (2) Wave dies at AFFINE, not projective. Concrete counterexample: shear (x,y) -> (x, y+cx)
+      sends y = sin x to y = sin x + cx, which is not periodic.
+      (3) Circle merges in TWO stages: into conics at affine, then all conics unify at projective.
+      (4) Angle survives PARTIALLY — the corner persists to projective while angle magnitude is lost
+      at affine. A binary table could not express this.
+      SUBTLETY the prose could not see: enclosure at the projective level holds on RP2 but can fail
+      on R2, since a projective map may send part of a closed curve to infinity (a circle can map to
+      a hyperbola, bounding no compact region). The anchor is unconditional only at the topological
+      level, which strengthens the case for anchoring there.
+      TIER HONESTY: remains ARGUED, not VERIFIED. What changed is not the tier but whether the tier
+      was warranted — asserted before, derived now. VERIFIED would require a machine-checked
+      artifact.
 
   - id: ENCLOSURE-IS-DISTINCTION
     statement: >
@@ -1174,9 +1187,12 @@ claims:
     evidence: research/framework/external-anchor.md
     notes: >
       Metrology's principle is to anchor to the most invariant thing available. ERLANGEN-SURVIVAL-
-      RANKING already computed that ranking: Point and Enclosure survive to the topological level
-      while the entire curvature family is eliminated by projective. So the anchor is DERIVED rather
-      than chosen. Connects to ENCLOSURE-IS-DISTINCTION: the surviving primitive is the Layer 0 mark
+      RANKING derives that ranking (note 014): Point and Enclosure are the only unconditional
+      survivors at the topological level. So the anchor is DERIVED rather than chosen.
+      IMPORTANT CONDITION from the derivation: enclosure survives the PROJECTIVE level only on RP2,
+      not on R2 — a projective map can send part of a closed curve to infinity. The anchor is
+      unconditional ONLY at the topological level, which is a reason to anchor there specifically
+      rather than at any earlier level. Connects to ENCLOSURE-IS-DISTINCTION: the surviving primitive is the Layer 0 mark
       via Jordan separation.
       ANCHOR TO THE MATHEMATICS, NOT TO "THE UNIVERSE." Physical space is not Euclidean; it is curved
       and locally variable, so a physical-geometry anchor reinherits the IPK pathology in new
@@ -1332,8 +1348,19 @@ claims:
       OUR POSITION IS STRONGER THAN THE STANDARD RESPONSE: Erlangen privileges relations by
       transformation group, and ERLANGEN-SURVIVAL-RANKING is a computation rather than an appeal to
       experience. It is not free, however.
-      THE OPEN OBLIGATION, and currently the sharpest philosophical one on the framework: say why
-      the group tower is not itself arbitrary.
+      ANSWER DEVELOPED in note 014, and it is better than the standard response without being
+      complete. Klein: a geometry IS a group — you do not select a group to study a pre-existing
+      geometry, the group constitutes what the geometry is, so "which group" and "which geometry"
+      are one question. Stronger point falling out of the derivation: the tower is NOT unique (one
+      may insert conformal, equiaffine, Mobius groups) but THE SURVIVORS ARE DETERMINED BY THE
+      TERMINAL GROUP, NOT THE PATH. Any chain ending at Homeo yields the same fixed point, because
+      survival at the top depends only on invariance under the largest group. The privileging is by
+      the automorphism group of the underlying structure, which is not a choice.
+      RESIDUAL LIMIT, stated rather than hidden: this relocates the question to "why is topology the
+      minimal structure?" The available answer — that below topology there is no notion of "nearby,"
+      hence no notion of a mark being anywhere — connects to Layer 0 and the Jordan result but is an
+      argument about what makes space meaningful, not a theorem. Newman is answered better than by
+      stipulating natural relations, and not yet fully.
 
   - id: TOPSIM-INSUFFICIENT
     statement: >
