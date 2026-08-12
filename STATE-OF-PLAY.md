@@ -74,7 +74,8 @@ is patching evidence to fit an assertion, and **a theorem cannot be patched into
 |---|---|
 | **κ-classification** | A *product* of three axes — metric, differential, topological (note `022`). Explains *why* Point and Enclosure survive: they are the primitives not defined by curvature |
 | **Erlangen survival** | Derived case by case in note `014`. Wave dies at affine; circle merges in two stages; Line survives projective and dies at topological; **Point and Enclosure are the only unconditional survivors at topological** |
-| **Jordan ≅ Spencer-Brown** | The topologically-surviving primitive **is** the Layer 0 distinction. First formal link between the philosophical floor and the geometry |
+| **Jordan separation** | Enclosure yields a binary distinction with a boundary. The Spencer-Brown *calculus* identification was withdrawn in `022` — it is Boolean, and the notation is intuitionistic |
+| **Fixed point = rotation system** | Note `024`: for *configurations* (which is what a notation is), the complete topological invariant is the combinatorial map. Separation and incidence are one object, and the canonical symbol table is **indexed by junction degree** |
 | **Space-curve theorem** | Plane symbology is exactly the **τ = 0 slice**. 3D adds torsion → helix, knotting, and **chirality provably unavailable in the plane** |
 | **Theorema Egregium** | Gaussian curvature is *intrinsic* — marks readable from inside the system, no external viewpoint |
 

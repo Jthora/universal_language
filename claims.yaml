@@ -1701,14 +1701,11 @@ claims:
 
   - id: JUNCTION-AXIS-MISSING
     statement: >
-      The three-axis classification omits junction topology — a property of configurations of marks
-      rather than of single curves — and Angle is the degree-2 case of that missing axis.
-    tier: CONJECTURED
-    falsified_by: >
-      Derive the junction axis properly and find either that it reduces to the singularity axis
-      (corners on a single curve), or that junction degree is not preserved under coarse-graining
-      and therefore cannot be a fixed-point feature.
-    evidence: research/notes/023-dimension-and-missing-primitives/README.md
+      Junction topology is a fourth classification axis, invisible to the single-curve axes. Local
+      degree is topological and survives to the fixed point; Angle is the degree-2 AND
+      tangent-discontinuous cell, an intersection of two axes rather than a primitive of either.
+    tier: ARGUED
+    evidence: research/notes/024-junction-axis/README.md
     priority: 0
     notes: >
       The three axes of KAPPA-STRATIFICATION — curvature, singularity, closure — are all properties
@@ -1724,4 +1721,50 @@ claims:
       PREDICTIONS TO CHECK RATHER THAN ASSUME: junction DEGREE is topological and should survive to
       the fixed point; junction ANGLES are metric and should die early, as angle-magnitude did at
       affine.
-      STATUS: identified, not derived. Needs the treatment note 022 gave the other three axes.
+      DERIVED in note 024. deg(p) = number of connected components of (N(p) intersect K) \ {p} for
+      small N(p) — manifestly topological, since a homeomorphism preserves both neighbourhoods and
+      components.
+      CELLS: deg 0 isolated point; deg 1 free end; deg 2 pass-through (tangent continuous) or ANGLE
+      (tangent discontinuous); deg 3 T/Y; deg 4 X; deg n general.
+      ANGLE IS REFINED, NOT RELOCATED: it is degree-2 AND tangent-discontinuous — the intersection of
+      the junction axis with the singularity axis, not a cell of either alone.
+      DEGREE 1 IS UNNAMED in the current inventory. A stroke's free end is a distinct local type the
+      notation has never registered. Cheap to add and it falls out of the same derivation.
+      SUB-STRUCTURE, and the middle row was NOT predicted: degree is topological and survives;
+      CYCLIC ORDER of branches is topological up to reflection and survives; angles between branches
+      are metric and die at affine with angle-magnitude.
+
+  - id: FIXED-POINT-IS-COMBINATORIAL-MAP
+    statement: >
+      The fixed point of the coarse-graining is the rotation system — the graph plus a cyclic
+      ordering of branches at each vertex — not a small inventory of primitives. Separation and
+      incidence are aspects of that one object rather than two independent survivors.
+    tier: ARGUED
+    evidence: research/notes/024-junction-axis/README.md
+    priority: 0
+    scope: >
+      ERLANGEN-SURVIVAL-RANKING and note 014 asked which SINGLE-CURVE primitives survive, and that
+      computation stands for single curves. This claim concerns CONFIGURATIONS, which is what a
+      notation actually is. Do not read the two as competing.
+    notes: >
+      Heffter-Edmonds principle: "every embedding of a connected graph on an orientable surface is
+      uniquely determined up to equivalence by its rotation system", and that cyclic order
+      "determines the embedding up to homeomorphism." A complete invariant, and a named object.
+      UNIFIES THE TWO SURVIVORS: by Jordan-Brouwer the complement of the configuration has connected
+      components (faces), and faces are RECOVERABLE from the rotation system by face tracing, with
+      Euler V - E + F = 2 tying them together. So Enclosure is derived from the combinatorial map and
+      incidence IS the combinatorial map.
+      DERIVES WHAT WAS ASSERTED: ANCHOR-IS-DISTINCTION-AND-INCIDENCE claimed distinction AND
+      incidence. Note 014 derived distinction (Jordan) and point; incidence was asserted. This
+      derives it, and shows the two are one structure.
+      THE CANONICAL SYMBOL TABLE AT THE FIXED POINT: a local vertex type is determined by its
+      rotation, and for UNLABELLED branches all cyclic orders of n identical things coincide — so
+      each degree yields exactly ONE local type. The canonical table is indexed by junction degree
+      0, 1, 2, 3, 4, ... Countable, canonical, DERIVED rather than chosen. It is not a 4/5/6-element
+      inventory but an infinite family with one entry per degree, of which the current primitives
+      occupy degrees 0 and 2. See FIXED-POINT-TABLE-IS-CANONICAL.
+      LIMITS: assumes finitely many junctions (reasonable for a notation, not proved necessary);
+      determined up to REFLECTION unless orientation is fixed, since reflection reverses every
+      rotation; and it is NOT shown that every notation-relevant feature reduces to the combinatorial
+      map — curvature demonstrably does not, it dies earlier. The claim is about the fixed point, not
+      about the notation as drawn.
