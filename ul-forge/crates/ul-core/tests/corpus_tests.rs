@@ -166,3 +166,42 @@ fn every_corpus_entry_verifies_against_the_implementation() {
         );
     }
 }
+
+/// Every corpus entry is also reading-invariant over the 𝔽₀ generators: mirror, relabeling,
+/// subdivision (spec/reading-invariance-v1.md). The lexicon's ground truth does not depend on
+/// how the reader numbers, orients, or samples the drawing.
+#[test]
+fn every_corpus_entry_is_reading_invariant() {
+    let dir = corpus_dir();
+    let mut entries: Vec<_> = fs::read_dir(&dir)
+        .expect("corpus dir")
+        .map(|e| e.expect("dir entry").path())
+        .filter(|p| p.extension().is_some_and(|x| x == "json"))
+        .collect();
+    entries.sort();
+
+    for path in entries {
+        let entry: Value =
+            serde_json::from_str(&fs::read_to_string(&path).expect("read")).expect("json");
+        let id = entry["id"].as_str().expect("id");
+        let map = load_map(&entry);
+        let base = map.essential_invariants();
+
+        // mirror
+        assert_eq!(map.mirror().essential_invariants(), base, "{id}: mirror");
+
+        // an edge-reversing relabeling
+        let e = map.edge_count();
+        let perm: Vec<usize> = (0..e).rev().collect();
+        let flip: Vec<bool> = (0..e).map(|i| i % 2 == 0).collect();
+        assert_eq!(
+            map.relabel(&perm, &flip).essential_invariants(),
+            base,
+            "{id}: relabel"
+        );
+
+        // a double subdivision
+        let sub = map.subdivide(0).subdivide(1);
+        assert_eq!(sub.essential_invariants(), base, "{id}: subdivision");
+    }
+}

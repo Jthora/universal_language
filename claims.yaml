@@ -2764,7 +2764,7 @@ claims:
       - "universality relative to human cultures only (rejected: weaker than the owner's requirement, and the METI record shows even that bar defeats visual designs — F-012)"
 
   - id: READING-INVARIANCE-TARGET
-    scope_reviewed: [ERLANGEN-ANSWERS-GOODMAN-SELECTION]   # accounted for — the dependency runs the other way (that claim falls with this one); its S8/S9 debts affect M1's application of this target, not the target itself
+    scope_reviewed: [ERLANGEN-ANSWERS-GOODMAN-SELECTION, READING-INVARIANCE-F0]   # hub 1 accounted for — the dependency runs the other way (that claim falls with this one). hub 2 accounted for — F0 is this target's own floor, and its scope states explicitly that the floor does not discharge the quantifier or touch the deep failure mode
     statement: >
       The theorem target that would make syntax-layer universality literal: for every reasonable
       forgetful reading F of a configuration, the invariants recoverable through F contain the
@@ -2788,6 +2788,9 @@ claims:
       is proof-shaped (T5).
       WHAT EXISTS: notes 014/022/024 prove the survival direction for specific transformation
       towers. The quantification over readings F is the open mathematics.
+      PROGRESS 2026-08-12 (note 058): the F0 floor is machine-checked — see READING-INVARIANCE-F0.
+      Presentation-class invariance (relabeling, mirror, subdivision) holds across the full corpus
+      on every CI run. The floor does not touch this claim's deep failure mode, which stands.
       FORMAL SHAPE, from institution theory (Goguen-Burstall, note 051): an institution's "single
       defining axiom is the satisfaction condition — truth is invariant under change of notation":
       Mod(sigma)(M') satisfies rho iff M' satisfies Sen(sigma)(rho). The framework is DEFINITIONAL —
@@ -3266,6 +3269,28 @@ claims:
       structure of agents (INTERACTION-NETS-CARRY-ROTATION) and the structural resource discipline
       (QUANTUM-IS-LINEAR-DISCIPLINE). Priority 0 with S8 satisfied structurally: rank (1)/(4)
       evidence, our own code and tests.
+
+  - id: READING-INVARIANCE-F0
+    scope_reviewed: [READING-INVARIANCE-TARGET]   # MATERIAL and accounted for — this claim is the hub's machine-checked floor and explicitly NOT its discharge; the hub's deep failure mode (characterizing "reasonable" without circularity) is untouched by F0, whose generators are readings we defined
+    statement: >
+      Reading invariance holds, machine-checked, for the generated class F0 = relabeling x mirror x
+      subdivision: the essential invariants (components, face count, genus, degrees != 2) are
+      identical across every reading in the class, for five subject configurations and for EVERY
+      corpus entry. The lexicon's ground truth does not depend on how a reader numbers, orients, or
+      samples the drawing.
+    tier: VERIFIED
+    evidence: spec/reading-invariance-v1.md
+    priority: 1
+    scope: >
+      F0 IS THE FLOOR, NOT THE THEOREM. Its generators are presentation changes WE defined, each
+      with designed-in invariance (isomorphism; orbit reversal; degree-2 inertness per
+      SUBDIVISION-IS-INERT). The target quantifies over ALL reasonable readings and its hard part
+      is exactly what F0 dodges. Tests: reading_invariance_holds_for_the_presentation_class
+      (map.rs), every_corpus_entry_is_reading_invariant (corpus harness) — both on every CI run.
+    notes: >
+      The proof SHAPE scales: invariance argued generator-by-generator, then inherited by the
+      generated class. Extending F0 with new generators (each with its stated reason) is the
+      incremental path; characterizing the full class via institutions is the theorem path.
 
   - id: UNIVERSAL-MEANS-CONVENTION-FREE
     statement: >
