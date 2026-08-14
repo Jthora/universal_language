@@ -95,6 +95,13 @@ pay is itself a gap, and three of the four are cheap.
 
 ## Volley 5 — The open questions proper
 
+> **CLOSED — absorbed into `050`, the foundational program.** The four items below are now owned
+> there: G/H became the SOC-amended falsifier on `UL-IS-EMERGENT-UNIVERSAL` (`048`); the axes and
+> orientation questions ride on `TWO-DISTINCT-FIXED-POINTS` and `ORIENTATION-SPLITS-INTO-TWO-CANDIDATES`;
+> and **`meaning → map` is no longer one gap but a three-route semantic stack** (`051`), with the
+> operational route already holding a Turing-universal substrate that is our fixed-point object.
+> Volley 4 (the four unused modes) remains available and unabsorbed.
+
 **Only after 1–3.** These are the actual research questions, and they are the most expensive and
 least likely to resolve in one pass.
 

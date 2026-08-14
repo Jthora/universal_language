@@ -1,134 +1,104 @@
 # STATE-OF-PLAY
 
-**Written fresh 2026-08-12, replacing a patched version.** The previous one had been amended nine
-times against thirty-eight notes — a delta applied to a partial picture, which is how a framing error
-survived four notes (`FAILURES.md` F-027). This is a full restatement, not an amendment.
+**Written fresh 2026-08-12 (second full restatement), replacing the version that predated notes
+`043`–`051`.** Since then: a search retrospective, three research volleys, a 34-rule protocol audit
+of those volleys, the survivor survey, and the foundational program. **Rewritten, not patched** —
+see §7.
 
 ---
 
-## 1. What we hold
+## 1. The contract (new since last restatement)
 
-### The one structural result
+Owner-set, registered as claims, binding on every future cycle:
 
-**Seven independent lines of work converged on the combinatorial map** — a graph plus a cyclic
-ordering of branches at each vertex. Coarse-graining the primitives, line arrangements, realization
-spaces, arithmetic geometry, the expressiveness question, spatial semantics, and the Cure's repair
-ordering all arrived at the same object. **None were aimed at it.**
+- **REQ-1** — UL **must be a language**: syntax, compositional semantics, expressive adequacy,
+  transmissibility. No retreat to notation-only, protocol-only, or class-only.
+- **REQ-2** — universality must be **literal and quantified**: the **convention ledger**. Allowed
+  prior: geometry, causality, computation. Everything else is measured residue.
+- **REQ-3** — **no-retreat falsifiability**, symmetric: neither "can't be done" nor
+  rename-to-win gets a free verdict.
+- **REQ-4** — **baseline before UQPL**: UWS (syntax) → semantics → UL → UQPL. Work lands on the
+  earliest unfinished link. The UQPL wiki spec's sort table *is* `meaning → map` asserted by fiat —
+  the baseline replaces fiat with derivation underneath it.
 
-**That convergence is the strongest thing here.** What it *means* is scoped in §3.
+**The ledger today:** marks→map **ℤ/2, proved and machine-checked** · map→meaning **unbounded (the
+gap, made quantitative)** · symbol alphabets **n!, permitted only as derived** · physical anchors
+allowed under REQ-2.
 
-### Geometry — derived, not chosen
+## 2. What we hold
 
-- The primitives are **cells in a product of four axes**: curvature, singularity, closure, junction
-  degree. Not a list anyone picked.
-- **"How many primitives" is malformed**, not open. The collapse relations are theorems.
-- **Junction degree was a missing axis**, and it is the one the project's strongest empirical
-  evidence (Changizi — legibility, not semantic transparency) points at. `Angle` is degree-2 ∧
-  tangent-discontinuous; **degree-1 has no name.**
-- Axes are of **different types** — binary, discrete-unbounded, continuous. Only closure is binary.
-  Curvature is a *function space* with canonical integer invariants (Whitney–Graustein).
-- **Tables are projections** of the axis product; **transformation axes are group elements**, so
-  Erlangen *is* the quotient. That explains both the hyper-dimensional blow-up and its collapse.
-- **2D bounds iconicity, not encoding** — Coxeter diagrams determine arbitrary-dimensional polytopes
-  from a flat graph.
+- **The combinatorial map as UWS's fixed point** — seven independent lines converged on it, none
+  aimed at it. Now known to be a **DCEL reduct** (prior art, 1970s; `046`): we lost originality and
+  gained a forty-year literature, known pitfalls included.
+- **The Erlangen derivations stand on theorems and need no physics.** `TWO-DISTINCT-FIXED-POINTS`
+  (`048`): the Erlangen fixed point and the RG fixed point are different objects. The universality
+  *framing* lost a leg; the geometry lost nothing.
+- **UP has a quantified mechanism from an unrelated field** (`047`): Other-Play's lever game —
+  symmetric choice pays 0.11, worse-but-identifiable pays 0.9. The paper grounds its symmetry group
+  in the *absence of labels* — their basis, not our analogy.
+- **`map.rs`: 354 workspace tests**, Jordan separation executable, nesting fixed (the previous
+  restatement's §4 error), dummy-edge alternative verified with measured cost.
+- **History's verdict reframed** (`049`): **no notation is universal; every cap is specific and
+  diagnosable.** The recurring cap — hard-coding a discretization of a continuum (staff notation's
+  equal temperament) — is an error `033` already caught here, and one the rotation system
+  **structurally lacks**. *(Caveat `research-register.md#F7-c` carried: the music-notation
+  adoption-failure evidence concerns displacing a near-maximal incumbent and does not transfer to
+  UWS; the cap cited here is representational — what the grid cannot write — not adoptional.)*
 
-### Obstructions, and why none are fatal
+## 3. The semantic stack — the gap, decomposed (new; `050`/`051`)
 
-| Theorem | What it forces |
-|---|---|
-| **Löb** | The Cure cannot verify its own repairs at equal strength → **comparator architecture** |
-| **Rice** | Does **not** apply to GIR — it concerns programs, not data structures. An unchecked import, corrected |
-| **Plump** | Confluence undecidable for cyclic rewriting → the acyclic term-graph core |
-| **AGM** | Rational repair needs a **preorder**, not a metric → the convexity blocker was a formalism artifact |
+`meaning → map` is no longer one wall. Three convention-minimal routes, icon/index first, symbols
+derived-only:
 
-### The Cure — specified, not blocked
+| Route | Status | Named objection |
+|---|---|---|
+| **M1 exemplification** — the mark *instantiates* what it denotes (a closed curve doesn't depict enclosure; it **encloses** — Jordan certifies it) | candidate answer to the objection registered | Goodman's selection problem — answered *iff* reading-invariance holds |
+| **M2 operational** — meaning as behavior under rewriting | **substrate exists: interaction nets.** Turing-universal, strongly confluent, agents = **rotation + marked dart** (primary-verified), labels compress to **3 symbols** | closed until M3 links world-reference; rules on ledger |
+| **M3 indexical** — reference via shared physics | allowed prior under REQ-2 | pointing relation must be physics-bound, not culture-bound |
 
-Every structural blocker moved. Architecture: **comparator, trust from the anchor, not self-proof.**
-Entrenchment ordering: **derived from the coarse-graining survival order**, not stipulated. Drift:
-**absolute, anchored to invariants** — the IPK fix. Signal: **coupling asymmetry**, not consistency.
+**The `034` bridge failure was denotational. The operational direction was never tried, and it is
+paved** — including for UQPL's own open problems (Turing-completeness, optimal reduction).
+Convergent support from the adversary's side: **Harnad's solution to symbol grounding is
+icon-first, symbol-derived** — our stack's shape, from cognitive science.
 
-**It is now blocked on implementation, and on one live error — see §4.**
+## 4. The theorem that would settle the syntax layer
 
-### Method
+> **READING-INVARIANCE (target):** for every reasonable forgetful reading F, the recoverable
+> invariants contain the Erlangen fixed point; over all such F, equal it.
 
-Twenty-nine recorded failures, twelve trap signatures, nine rules, **five machine checks**. Four of
-the last five protocol additions exist because *a correction was written down and had no force*.
-**Prose is not enforcement** is the most repeated lesson here.
+This names the project's hard core precisely: **every grounding scheme presupposes a reading
+procedure; the procedure is convention unless forced.** The exit is reading-procedure-independence,
+which is proof-shaped. Institution theory (Goguen–Burstall's satisfaction condition — *"truth is
+invariant under change of notation"*) supplies the formal shape of the obligation. `014`/`022`/`024`
+prove the survival direction for specific towers; **the quantification over readings is the open
+mathematics and the mathematical center of the project.**
 
----
+Its named deep failure mode: "reasonable F" proving unformalizable without smuggling the convention
+back in. Written in advance (REQ-3).
 
-## 2. The one number that matters
+## 5. Standing corrections that gate everything
 
-**5 VERIFIED claims of 99. Four are facts about Rust files.**
+- **`UL-IS-EMERGENT-UNIVERSAL`**: precondition unmet — but the "no tuning parameter" objection was
+  **withdrawn** (SOC, `048`). Falsifier is now empirical and cheap: power-law behaviour in emergent-
+  communication populations.
+- **`CURE-MUST-BE-AUTOMATIC`**: demoted to DESIGN-CHOICE — the Gene Ontology (60 releases, manual,
+  no decay) falsified the derivation one day after registration.
+- **Method** (`048`): 34 rules audited, 9 passed. **Rules fire when they are the subject and fail
+  when they are the background; prose does not execute.** Six checkers + the 18-box checklist run
+  as a step are the enforcement. Every future rule must answer *"what executes it?"*
 
-The fifth — `IMPL-COMBINATORIAL-MAP` — is the only substantive machine-checked result, and it made
-Jordan separation an executable test rather than an argued claim.
+## 6. Next, in order
 
-**Everything else is ARGUED or DESIGN-CHOICE: good arguments, unverified.**
-
----
-
-## 3. What is genuinely open
-
-**`meaning → map` does not exist.** `map → drawing → figure` is characterized by theorems (Mnëv,
-nonstretchability, Galois). **The top link is unbuilt**, and the bridge test (`034`) failed — no
-other semantic formalism converged on rotation systems.
-
-**That failure is weaker than first recorded.** Its evidence was narrowed to a single formalism after
-AMR was found inadmissible (English-only corpus, `research-register.md#D2-c`). *Not established as
-UL's fixed point* stands; *positive evidence the gap is structural* does not.
-
-**Where the map does have a defensible role: UP, the bootstrapping layer.** Rotation breaks **ℤ/2**
-of arbitrary convention where labels break **Sₙ** — minimal shared prior. Supported cross-domain by
-music, where the relational part travels cross-culturally and the conventional part (octave
-equivalence) does not.
-
-**Still open:** the order parameter (identify G and H), whether emergent protocols share invariants
-under coarse-graining, and the axis derivation from invariant theory rather than by inspection.
-
----
-
-## 4. What is wrong right now
-
-**`REGIONS-ARE-FACE-UNIONS` is materially incorrect for real notations**, found by this review.
-
-The Phase 4 decidability argument assumed regions are unions of the map's faces. But the map is
-scoped to **connected** configurations, and **a notation with more than one stroke is disconnected by
-default.** Face tracing then returns the wrong faces — four for two disjoint triangles, not three.
-
-> **It stays decidable and becomes wrong.** Confident incorrect answers, which is worse than
-> undecidability because nothing signals the failure.
-
-**The fix is concrete:** the IR must carry the **nesting relation** between components, which is
-additional structure beyond the rotation system, and is exactly what `CONNECTIVITY-AXIS-MISSING`
-identifies as absent.
-
----
-
-## 5. Per construct, plainly
-
-| | Status |
-|---|---|
-| **UL** | The open question. Shape is concrete — a universality class whose candidate fixed point is a combinatorial map — and it has a falsifier. The bridge to meaning is unbuilt. |
-| **UWS** | A **derived** notation, not an invented one. Its structure is the most developed thing here. It is *notation × derived*, a category with no historical precedent, because nobody has derived one. |
-| **UP** | Was empty. Now has a candidate answer — the map as convention-minimizing — and it is testable. |
-| **UQPL** | Least served. Constrained (intuitionistic, total, acyclic core, likely quantifier-free) but unspecified. |
-| **The Cure** | Specified end to end. Blocked on implementation and on §4. |
-
----
-
-## 6. Next
-
-1. **Fix §4** — add the nesting relation to the IR. A Phase 4 conclusion is invalid until done.
-2. **Run the ablation** — symbolic versus rotation encoding at matched population size. Two
-   independent routes now point at it; it is the only forward-facing empirical test in the project.
-3. **Derive the axes from invariant theory** rather than extending a list built by inspection.
-4. **Move the VERIFIED count** — the only measure that has barely moved.
-
----
+1. **`052` — the adversary front**: Quine, Kripke–Wittgenstein, scope-checked on contact (T8),
+   plus the S8 debts (Lafont 1997 universality; Goodman primary) and the S9 debt (Grice).
+2. **Formalize the reading class 𝔽** — begin READING-INVARIANCE properly; institutions give the
+   category.
+3. **M2 prototype**: interaction rules over `map.rs` — the operational route is buildable *now*
+   (S6: build over cite).
+4. **The power-law test** on emergent-communication corpora (doubles as Volley 4's corpora mode).
+5. **Move VERIFIED** — 8 of ~111; still the slowest number.
 
 ## 7. How this document is maintained
 
-**Rewritten, not patched.** Nine patches against thirty-eight notes is what produced the failure this
-review corrected. When it next drifts far enough that amendment is tempting, **that is the signal to
-rewrite it again.**
+**Rewritten, not patched.** The previous version drifted for nine notes before this restatement.
+When amendment next feels tempting, **that is the signal to rewrite.**

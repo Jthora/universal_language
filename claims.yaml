@@ -2502,7 +2502,7 @@ claims:
       from note 010, still unrun.
 
   - id: SEMANTIC-FORMALISMS-USE-LABELS-NOT-ORDER
-    scope_reviewed: [DESSINS-PRECEDENT]   # no effect — dessins concern mathematical content, this claim concerns semantic content; the scopes are complementary
+    scope_reviewed: [DESSINS-PRECEDENT, INTERACTION-NETS-CARRY-ROTATION]   # dessins: no effect — mathematical vs semantic content, complementary scopes. interaction-nets: MATERIAL and mutual — that claim's S8 debt (universality from summaries) is inherited by this hub's register-split amendment, which states the flip as definition-verified and universality-reported
     statement: >
       Conceptual Graphs distinguish a vertex's edges by label rather than by cyclic position, and
       spatial arrangement in semantic diagrams is secondary notation. NARROWED from a claim about
@@ -2539,6 +2539,18 @@ claims:
       "Semantic" there means FEATURE ATTRIBUTES AND LEVEL-OF-DETAIL AGGREGATION, not compositional
       meaning. A word match, not a hit, and it would have been a false positive on the one question
       the sweep existed to test.
+      MATERIAL SCOPE AMENDMENT 2026-08-12 (note 051): THE NEGATIVE IS NOW REGISTER-SPLIT. The 046
+      sweep's six vocabularies were all geometry/topology and NL semantics — PL THEORY WAS A SEVENTH
+      VOCABULARY NOBODY NAMED, and Girard's term for the relevant structure is literally "geometry
+      of interaction". In the OPERATIONAL register the negative FLIPS: interaction nets are a
+      Turing-universal formalism whose agents carry a rotation with a marked dart (principal port +
+      anticlockwise-ordered auxiliary ports, primary-verified in note 051), and the order is
+      load-bearing — alongside a label residue compressible to three symbols. See
+      INTERACTION-NETS-CARRY-ROTATION. The DENOTATIONAL negative stands as checked: no formalism
+      uses rotation for world-directed meaning. The flip is in the direction that HELPS the bridge
+      (034 failed in the denotational direction; the operational direction was never tried).
+      DEPENDENT REVIEWS: existing scope_reviewed entries predate this amendment; the amendment
+      narrows the negative's register and removes nothing any dependent relied on.
       Where node ordering does matter it is for "legible and informative tree layouts" and "visual
       saliency of clusters" — comprehension criteria, i.e. SECONDARY NOTATION. UWS claims spatial
       arrangement is PRIMARY. No other formalism makes that claim.
@@ -2705,6 +2717,192 @@ claims:
       show the illegibility mechanism is not the discriminator either.
       THE OPEN QUESTION THIS REFRAMES: not whether UWS has a cap — everything does — but WHAT IT IS.
       Note 033's curvature axis is the candidate already on the table.
+
+  - id: UL-MUST-BE-A-LANGUAGE
+    scope_reviewed: [UL-IS-EMERGENT-UNIVERSAL]   # accounted for — the rejection of UL-as-class in alternatives_considered cites exactly that hub's unmet precondition; nothing here relies on the class claim being true
+    statement: >
+      UL must be a language: syntax, compositional semantics, expressive adequacy, and
+      transmissibility. A notation alone, a protocol alone, or a universality class alone does not
+      discharge this, and retreating to any one of them and declaring victory is excluded.
+    tier: DESIGN-CHOICE
+    evidence: research/notes/050-foundational-program/README.md
+    priority: 0
+    rationale: >
+      Owner-set requirement, 2026-08-12, verbatim intent: "It must be a language, and it has to
+      authentically be universal in a meaningful and literal way. We cannot settle for 'it can't be
+      done', and we cannot settle for 'lets just reclassify it or rename it so we win'." This
+      registers the requirement so it binds future agents through the checkers, not through memory —
+      the repo's documented failure mode is that prose rules fire only when they are the subject
+      (F-031).
+    alternatives_considered:
+      - "settle for UWS-as-notation (rejected: a notation without semantics is not a language — this is the rename-to-win move in its most tempting form, because the notation work is the strongest work)"
+      - "settle for UP-as-protocol (rejected: bootstrapping is a layer of the language, not a substitute for it — note 035's relocation was scoping, and must not quietly become the goal)"
+      - "settle for UL-as-universality-class (rejected: a class is a claim about structure, not a medium anyone can express anything in; and its own precondition is unmet — see UL-IS-EMERGENT-UNIVERSAL)"
+      - "declare failure (rejected symmetrically: 'it cannot be done' is a claim and gets the full negative-result discipline R1-R6; no free verdict in either direction)"
+
+  - id: UNIVERSALITY-IS-A-LEDGER
+    statement: >
+      "Authentically universal in a meaningful and literal way" means the convention ledger closes:
+      every conventional residue on the load-bearing path is either eliminated, derived, or a proven
+      minimum with a bootstrap route. A residue that can be none of these is recorded as failure of
+      literal universality — not re-scoped, not renamed.
+    tier: DESIGN-CHOICE
+    evidence: research/notes/050-foundational-program/README.md
+    priority: 0
+    rationale: >
+      Owner-set requirement made operational. The allowed shared prior is what any embodied
+      computational agent in this universe has — geometry, causality, computation. Cultural priors on
+      the load-bearing path are failure. This turns "literal universality" into arithmetic: the
+      ledger currently reads Z/2 for marks-to-map (proved, machine-checked), UNBOUNDED for
+      map-to-meaning (the gap, made quantitative), n! for any symbol alphabet (permitted only as
+      derived, cost recorded). Note 049 established the instrument's necessity from history: no
+      notation is universal, and every cap is specific — so universality claims must be measured, not
+      binary.
+    alternatives_considered:
+      - "binary universal-or-not judgment (rejected: note 049 showed it sorts every case into one bin and destroys the information — 037's uniform negative was manufactured exactly this way)"
+      - "aspirational universality without a falsifier (rejected: unfalsifiable, and REQ-3 exists precisely because a program that cannot fail cannot succeed either)"
+      - "universality relative to human cultures only (rejected: weaker than the owner's requirement, and the METI record shows even that bar defeats visual designs — F-012)"
+
+  - id: READING-INVARIANCE-TARGET
+    scope_reviewed: [ERLANGEN-ANSWERS-GOODMAN-SELECTION]   # accounted for — the dependency runs the other way (that claim falls with this one); its S8/S9 debts affect M1's application of this target, not the target itself
+    statement: >
+      The theorem target that would make syntax-layer universality literal: for every reasonable
+      forgetful reading F of a configuration, the invariants recoverable through F contain the
+      Erlangen fixed point — and over the class of all such F, equal it. Meaning recovery must not
+      presuppose the receiver applies OUR reading procedure.
+    tier: CONJECTURED
+    evidence: research/notes/050-foundational-program/README.md
+    priority: 0
+    falsified_by: >
+      Exhibit a reasonable reading — a forgetful map a physically realizable receiver could
+      instantiate — through which the Erlangen fixed point is NOT recoverable; or show the
+      quantification over readings cannot be closed (the class of "reasonable" F is not
+      formalizable without smuggling the convention back in as the definition of "reasonable").
+      The second failure mode is the deep one and is named now, in advance.
+    scope: >
+      WHY THIS IS THE CENTER: every grounding scheme presupposes the receiver applies the right
+      reading procedure, and the procedure is itself a convention unless forced. Icons need the
+      receiver to know which resemblance counts (F-012); indices need the pointing relation
+      recognized; symbols are convention outright. Every prior UL failure in the record bottoms out
+      here. The only exit that does not smuggle convention is reading-procedure-INDEPENDENCE, which
+      is proof-shaped (T5).
+      WHAT EXISTS: notes 014/022/024 prove the survival direction for specific transformation
+      towers. The quantification over readings F is the open mathematics.
+      FORMAL SHAPE, from institution theory (Goguen-Burstall, note 051): an institution's "single
+      defining axiom is the satisfaction condition — truth is invariant under change of notation":
+      Mod(sigma)(M') satisfies rho iff M' satisfies Sen(sigma)(rho). The framework is DEFINITIONAL —
+      it names the obligation, it does not discharge it for any given language. The target becomes:
+      formalize the reading class as a category of signature morphisms and prove the fixed-point
+      semantics satisfies the satisfaction condition over all of it.
+    notes: >
+      Registered under the 050 program as REQ-2's theorem. ERLANGEN-ANSWERS-GOODMAN-SELECTION
+      depends on this claim explicitly: canonical selection only forces reference if survival is
+      reading-independent.
+
+  - id: SEMANTIC-STACK-M1-M2-M3
+    scope_reviewed: [ERLANGEN-ANSWERS-GOODMAN-SELECTION]   # MATERIAL and accounted for — M1's named objection is answered only if that CONJECTURED claim holds; this stack claim therefore lists M1's collapse in its own falsified_by rather than treating the answer as settled
+    statement: >
+      The map-to-meaning gap decomposes into three convention-minimal routes, ordered
+      icon-and-index-first, symbol-last: M1 exemplification (the mark instantiates the property it
+      denotes), M2 operational (meaning as behavior under rewriting), M3 indexical (reference into
+      the shared world via physical connection). Arbitrary symbols enter only on top, derived, with
+      their n! cost on the ledger.
+    tier: CONJECTURED
+    evidence: research/notes/051-semantic-stack-cycle1/README.md
+    priority: 1
+    falsified_by: >
+      A load-bearing semantic element that fits none of the three routes and cannot be carried as a
+      derived symbol; or collapse of a route under its named objection — M1 under Goodman's
+      selection problem if ERLANGEN-ANSWERS-GOODMAN-SELECTION fails, M2 if operational meaning
+      cannot be connected to world-reference through M3, M3 if the pointing relation itself proves
+      culture-bound rather than physics-bound.
+    scope: >
+      A FRAMING REGISTERED AS A CLAIM (R9, T12) — introduced in note 050 and NOT applied in the same
+      motion without a falsifier; the falsifier above was written before the first cycle ran.
+      EACH ROUTE'S NAMED OBJECTION, stated before evidence gathering: M1 — Goodman's selection
+      problem (a sample exemplifies "only those [features] for which it is a symbol ... color and
+      texture, and not ... size or shape"); M2 — operational meaning is closed until M3 connects it
+      to the world, and rule transmission goes on the ledger; M3 — the receiver must recognize the
+      pointing relation (F-012's cousin), bounded by shared physics, which is exactly the prior
+      UNIVERSALITY-IS-A-LEDGER allows.
+      CONVERGENT SUPPORT FROM THE ADVERSARY'S SIDE (note 051, S1 rank 3): Harnad's canonical
+      statement of the symbol grounding problem proposes, as its own solution, symbols "grounded
+      bottom-up in nonsymbolic representations of two kinds: (1) iconic representations, which are
+      analogs of the proximal sensory projections ... and (2) categorical representations" —
+      icon-first, symbol-derived, from cognitive science, no contact with notation theory.
+      STANDING ADVERSARY FRONT, preregistered for note 052: Quine (inscrutability of reference),
+      Kripke-Wittgenstein (rule-following). Each gets Zadrozny treatment on first contact: scope
+      checked before import (T8), adversarially searched (R1), not allowed to end the conversation
+      (T4). S8 DEBT: Goodman and Harnad are cited from search summaries; a primary each before this
+      claim rises above priority 1.
+
+  - id: INTERACTION-NETS-CARRY-ROTATION
+    scope_reviewed: [SEMANTIC-FORMALISMS-USE-LABELS-NOT-ORDER]   # MATERIAL and mutual — this claim is the CAUSE of that hub's register-split amendment; the hub's surviving denotational negative is honoured here by the steelman residue (labels still work) and by never claiming rotation carries world-directed meaning
+    statement: >
+      Interaction nets — a Turing-universal, strongly confluent, local graph-rewriting formalism
+      from PL theory — carry a rotation with a marked dart at every agent: a distinguished principal
+      port plus auxiliary ports in anticlockwise cyclic order, and the order is load-bearing. The
+      operational substrate the semantic stack's M2 needs already exists, and its programs are our
+      fixed-point object plus labels compressible to a three-symbol alphabet.
+    tier: ARGUED
+    evidence: research/notes/051-semantic-stack-cycle1/README.md
+    priority: 1
+    scope: >
+      DEFINITION FROM A PRIMARY (S8): Lafont 1990 is paywalled (HTTP 403); read Gay 1991 ("Interaction
+      Nets", Diploma thesis, "essentially the same as the notation described by Lafont"), section 1
+      in full. Verbatim: "One port of each agent is identified as the principal port, and two agents
+      can only interact if they are connected by their principal ports"; "In a symbol definition,
+      the first port listed is the principal port ... By convention, the rest of the ports are
+      listed in the order obtained by moving anticlockwise round the agent." The textual syntax
+      SERIALIZES a geometric arrangement around the vertex — a rotation with one marked dart. The
+      order is load-bearing: Add(u,y,x) and Add(u,x,y) are different programs.
+      HONEST RESIDUE (R6 steelman of the old negative, kept): agents also carry symbol labels and
+      typed, directed ports — labels still do real work. The precise statement is order AND labels,
+      with the label alphabet compressible to THREE symbols (interaction combinators) while the
+      rotation stays. Ledger entry: 3 symbols + rotation + one marked dart per vertex =
+      Turing-universal.
+      S8 DEBT, EXPLICIT: Turing-universality and combinator completeness are reported from summaries
+      (Lafont 1997; Salikhmetov 2017) — the combinators paper has not been fetched. The DEFINITION
+      is primary-verified; the UNIVERSALITY is not yet.
+      T11: the relevance to UQPL's open problems (Turing-completeness, optimal reduction via
+      Lamping/Asperti-Guerrini) is OUR INFERENCE connecting separate literatures, marked as such.
+    notes: >
+      WHY THIS MATTERS BEYOND M2: this is the largest single convergence since the seven-line
+      convergence on the combinatorial map — an unrelated field, solving computation rather than
+      notation, arrived at rotation-structured graphs as its minimal universal substrate, with the
+      label residue compressed to a constant. That is ROTATION-MINIMIZES-CONVENTION's trade
+      instantiated as a working instruction set. Girard's own term for the surrounding structure is
+      "geometry of interaction".
+      VOCABULARY MISS, recorded: the 046 sweep checked six vocabularies, all geometry/topology and
+      NL semantics. PL theory was a seventh nobody named. See the scope amendment on
+      SEMANTIC-FORMALISMS-USE-LABELS-NOT-ORDER.
+
+  - id: ERLANGEN-ANSWERS-GOODMAN-SELECTION
+    scope_reviewed: [READING-INVARIANCE-TARGET, SEMANTIC-STACK-M1-M2-M3]   # hub 1 MATERIAL and explicit — this claim declares in its own falsified_by that it falls with that target, including the deep failure mode (the reading class proving unformalizable). hub 2 accounted for — the shared S8 debt on Goodman/Harnad summaries is carried in both claims and caps this one at priority 1
+    statement: >
+      Candidate resolution of Goodman's selection problem for M1: the Erlangen filtration selects
+      canonically which possessed properties a geometric mark exemplifies — what survives
+      coarse-graining IS what is referred to. The selection is derived, not chosen, so the
+      convention Goodman's problem re-introduces is eliminated for the surviving invariants.
+    tier: CONJECTURED
+    evidence: research/notes/051-semantic-stack-cycle1/README.md
+    priority: 1
+    falsified_by: >
+      READING-INVARIANCE-TARGET failing — canonical selection only forces reference if survival is
+      reading-independent, so this claim falls with that one; or a published solution or refutation
+      of filtration-based selection found in the remaining unswept vocabulary (Grice's natural
+      meaning — S9 debt, one vocabulary open before the "no published solution" cell may be called
+      empty).
+    scope: >
+      THE PROBLEM, from the literature (summaries — S8 debt shared with SEMANTIC-STACK-M1-M2-M3): a
+      sample exemplifies "only those [features] for which it is a symbol — such as predicates
+      denoting color and texture, and not predicates denoting size or shape". Which properties is
+      where convention re-enters exemplification.
+      THE CANDIDATE ANSWER, ours: for a geometric mark read at the fixed point, the referred
+      properties are the Erlangen survivors — closure, junction degree, incidence, the map. A closed
+      curve does not depict enclosure; it ENCLOSES, and Jordan certifies the possessed property as a
+      theorem about the mark itself. This dodges F-012, which is about depiction, not instantiation.
+      DEPENDENCY, explicit: rests on READING-INVARIANCE-TARGET.
 
   - id: UNIVERSAL-MEANS-CONVENTION-FREE
     statement: >
