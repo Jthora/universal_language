@@ -1,0 +1,18 @@
+# Runs the repository's own audit — the seven checkers over the claim registry,
+# cross-references, caveats, scope propagation, notes conventions, and the seed index.
+# No path filter: the registry and docs change outside ul-forge/, and the whole point
+# is that the audit runs when nobody remembers to run it (FAILURES.md F-032).
+name: Repository Checks
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  audit:
+    name: tools/check.rb --strict
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run all checkers
+        run: ruby tools/check.rb --strict

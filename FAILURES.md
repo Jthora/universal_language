@@ -737,3 +737,23 @@ at the same job. **Prose that must be remembered** fires when it is the subject 
 **Eighteen checklist boxes are prose. One of them is a command, and it is the only box that was
 ticked.** Adding rules to the prose column has a measured hit rate near zero; the question worth
 asking about any future rule is *what executes it?*
+
+## F-032 — the enforcement layer's own enforcement claim was unenforced prose
+**Date:** 2026-08-12
+**What happened:** while wiring the seventh checker into CI (`054`), a read of the actual workflow
+found that **CI has never run any of the checkers.** `.github/workflows/ci.yml` triggers only on
+`ul-forge/**` paths and runs only cargo. `tools/check.rb`'s own header — *"This is what CI
+invokes"* — has been false since the file was written, and every "enforced by CI" statement in the
+docs was true only because a session happened to run the audit by hand.
+**Why it matters beyond the instance:** this is **F-031's finding recursing into the enforcement
+layer itself.** The repo's thesis is that prose does not execute and checkers do — and the
+statement "the checkers run in CI" was itself prose that nothing executed. The checkers fired every
+time this session because they were the *subject*; on any push where nobody ran them, nothing
+would have.
+**How it was caught:** not by any rule. By reading the workflow file while adding to it — proximity,
+not process. A claims-grade audit of "what does CI actually run" was never on any checklist.
+**Fix:** `.github/workflows/checks.yml` — all seven checkers, every push and PR, no path filter.
+**The generalizable point:** *"X is enforced"* is a claim about a mechanism, and it is exactly as
+checkable as any other claim — `gh run list`, or read the workflow. **An enforcement claim that has
+never been observed firing is tier-CONJECTURED at best**, and this repo had been treating one as
+VERIFIED in spirit for its entire rebuilt life.

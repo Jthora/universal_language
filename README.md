@@ -130,7 +130,7 @@ receiver shares our reading procedure. Every load-bearing edge of the program ro
 This repo's historical failure mode was **conventions without enforcement**. The rebuild replaces
 conventions with mechanisms:
 
-- Every substantive claim is registered in `claims.yaml` with a tier and evidence; six CI checkers
+- Every substantive claim is registered in `claims.yaml` with a tier and evidence; seven checkers — run on every push by CI (`.github/workflows/checks.yml`) —
   enforce tier contracts, link integrity, retired-content absence, caveat propagation, scope
   propagation, and notes conventions.
 - `VERIFIED` requires a test that exists and passes. `CONJECTURED` requires a stated falsifier.
