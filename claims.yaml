@@ -2877,9 +2877,15 @@ claims:
       with the label alphabet compressible to THREE symbols (interaction combinators) while the
       rotation stays. Ledger entry: 3 symbols + rotation + one marked dart per vertex =
       Turing-universal.
-      S8 DEBT, EXPLICIT: Turing-universality and combinator completeness are reported from summaries
-      (Lafont 1997; Salikhmetov 2017) — the combinators paper has not been fetched. The DEFINITION
-      is primary-verified; the UNIVERSALITY is not yet.
+      S8 DEBT CLEARED 2026-08-12 (note 061) — Lafont 1997 read in the original, and the claim came
+      back STRONGER: "a very simple system of interaction combinators, with only three symbols and
+      six rules, is a universal model of distributed computation", where universal means "any other
+      interaction system can be translated into it" preserving "the complexity and the degree of
+      parallelism" — and "Turing machines ... are intrinsically sequential and cannot be universal
+      in the above sense". Port order inventor-confirmed: auxiliary ports "are not interchangeable
+      ... implicitly numbered in clockwise order" — CLOCKWISE where Gay 1991 wrote ANTICLOCKWISE:
+      the two primary sources use opposite chiralities, the mirror-convention Z/2 live in the
+      literature's own bookkeeping.
       T11: the relevance to UQPL's open problems (Turing-completeness, optimal reduction via
       Lamping/Asperti-Guerrini) is OUR INFERENCE connecting separate literatures, marked as such.
       MACHINE-CHECKED LEG, ADDED 2026-08-12 (note 057): our own engine's agents ARE rotations with
@@ -2927,6 +2933,13 @@ claims:
       reader, not merely available — the same regress the IEP records against
       simplicity/naturalness answers to Kripkenstein. Availability of the invariant reading is
       proved territory; its bindingness is exactly the eligibility-from-invariance question.
+      GOODMAN PRIMARY READ, S8 CLEARED (note 061, SEP): exemplification is "possession plus
+      reference", and the selector is explicit — "which of its properties does a sample exemplify
+      depends on the SYSTEM within which the sample is being used". The objection at its sharpest:
+      the selector is a USE-SYSTEM. Our move, restated: make the use-system itself the derivable
+      one. S9 SWEEP CLOSED: exemplification, symbol grounding, and natural-meaning vocabularies all
+      searched — no prior filtration-based solution to the selection problem found; the
+      novelty-of-approach cell is called as swept, at summary rank for the third vocabulary.
 
   - id: UL-IS-TWO-TIER
     scope_reviewed: [READING-INVARIANCE-TARGET]   # MATERIAL and accounted for — the natural tier's 'no core explanation' property is exactly what that target must prove for the surviving invariants; this claim's notes route the encirclement prediction to that theorem's jurisdiction rather than asserting it
@@ -2995,12 +3008,19 @@ claims:
       invariants shares elements with every domain BY CONSTRUCTION; by the very theory that killed
       formal discipline, a language of universal elements is the unique best case for broad
       transfer. That is the PREDICTION this thesis makes, not a finding.
-      CONVERGENT SHADOW IN ARTIFICIAL MINDS (abstract read directly): "this convergence is driving
-      toward a shared statistical model of reality" (Platonic Representation Hypothesis, Huh et al.
-      2024) — implicit convergence with scale. UL would be the EXPLICIT, derivation-checked form of
-      the convergence target. Adjacent evidence-direction for UL-IS-EMERGENT-UNIVERSAL, not
-      identical (representational similarity is not a protocol invariant — T11). Authors acknowledge
-      counterexamples; full read owed (S8).
+      CONVERGENT SHADOW IN ARTIFICIAL MINDS — DOWNGRADED 2026-08-12 (note 061) after reading the
+      PRH authors' own limitations: the convergence argument "only strictly holds for bijective
+      projections" (lossy/stochastic observation breaks it); measured vision-language alignment
+      "only reaches a score of 0.16" with the authors themselves unsure whether that is strong or
+      poor; special-purpose systems may not converge; and a SOCIOLOGICAL-BIAS ALTERNATIVE stands —
+      convergence toward human-like representations because the field aims at them. PRH is a
+      hypothesis with acknowledged counterexamples, cited here as direction only, not support.
+      MECHANISM CONTESTED AT PRIMARY LEVEL, recorded 2026-08-12 (note 061): Li & Gleitman 2002
+      (read) reproduce the frame-choice strategies WITHIN English "by manipulating landmark cues,
+      suggesting that language itself may not be the key causal factor"; Levinson, Kita, Haun &
+      Rasch replied the same year ("Returning the tables" — UNREAD, new S8 debt). The named
+      falsifier of this claim is therefore PARTIALLY LIVE, and the format-acquisition experiment
+      carries correspondingly more of the thesis's weight.
       TESTABLE NOW, and nobody has run it: format-acquisition effects from learning a
       geometric/topological notation — measurable on humans and on models.
     notes: >
@@ -3277,9 +3297,11 @@ claims:
       Six tests (engine.rs), spec at spec/engine-core.md. LIMITS, exactly: v1 EXECUTES, IT DOES NOT
       YET MEAN — world-reference is M3 and is not code; no optimal reduction, no lambda encoding,
       no type layer (UQPL's typed calculus sits above this and does not exist); strong confluence
-      is Lafont's theorem inherited and smoke-tested, not formally verified here; the S8 DEBT on
-      substrate universality stands (Lafont 1997 unread) — v1 demonstrates arithmetic, not
-      universality. The demo system is the Add/S/Z arithmetic from the primary source (Gay 1991).
+      is Lafont's theorem inherited and smoke-tested, not formally verified here. S8 DEBT CLEARED
+      (note 061): Lafont 1997 read — the substrate's universality is the strong translation sense,
+      stricter than Turing-equivalence. v1 still demonstrates arithmetic only; the ENGINE's own
+      universality (that our implementation realizes the combinators) remains undemonstrated. The
+      demo system is the Add/S/Z arithmetic from the primary source (Gay 1991).
     notes: >
       The bridge test (every_net_state_is_a_valid_map_with_principal_first_rotations) upgrades two
       claims from literature-supported to machine-checked-in-our-code: the rotation-with-marked-dart
