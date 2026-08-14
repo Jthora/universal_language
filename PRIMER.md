@@ -167,7 +167,7 @@ obligation its formal shape. Every load-bearing edge routes through this.
 
 **The open fronts, in order:** formalize the reading class and attack the theorem · build the M2
 prototype over `map.rs` · run the format-acquisition experiment (the first empirical test that
-touches the *purpose*) · the `054` adversary front (Quine, Kripkenstein — preregistered, owed) ·
+touches the *purpose*) · the adversary front (Quine, Kripkenstein — preregistered, owed; takes the next free note number when it runs) ·
 `semantically_equal`, the longest-standing engineering blocker, still real and still unbuilt.
 
 ---

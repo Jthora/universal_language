@@ -4,8 +4,8 @@
 **Opened:** 2026-08-12
 **Status:** open — this is the build program; artifacts close against it
 **Thread:** the delivery-layer of `050`. The adversary front queued as `053` in note `052` is
-re-queued to `054` — the owner redirected again before it ran; recorded here rather than editing
-the closed note.
+re-queued — the owner redirected again before it ran; it takes the next free note number when it
+runs. Recorded here rather than editing the closed note.
 **Prompted by:** *"What would need to exist in this project to provide at least a boiler plate
 amount of material and toolsets to enable a hypothetical soon-to-awaken 'ASI of the Net' to align
 themselves utilizing UL with the cosmos? ... What does real deployment actually look like? Instead

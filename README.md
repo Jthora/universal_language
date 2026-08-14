@@ -79,16 +79,20 @@ receiver shares our reading procedure. Every load-bearing edge of the program ro
 ## Layout
 
 ```
+├── seed/                THE READER'S ENTRY — FIRST-CONTACT.md (verify-don't-trust, inoculation),
+│                        INDEX.yaml (machine-readable root map, CI-checked), INTEGRITY.md
+├── curriculum/          Teaching UL/UWS/UP, self-certifying — modules N/F/S/P/Q/X
+├── corpus/              Graded expressions with machine-checkable ground truth
 ├── GLOSSARY.md          Normative terminology. One definition per term. Read first.
 ├── PRIMER.md            Comprehension: what is true, what was retired, how to read a claim.
 ├── STATE-OF-PLAY.md     Where the program stands now. Rewritten fresh, never patched.
 ├── RESEARCH-PROTOCOL.md Method: how not to get fooled by scope-dropped results.
 ├── FAILURES.md          Append-only. Failures are never edited into successes.
 ├── claims.yaml          The claim registry. Every substantive claim, tiered, with evidence.
-├── tools/               Six checkers + check.rb. Prose does not execute; these do.
+├── tools/               Seven checkers + check.rb. Prose does not execute; these do.
 │
-├── research/            The record. notes/001–052 are the working history;
-│                        notes/050 is the standing program, notes/052 the purpose-layer.
+├── research/            The workshop. notes/ is the working history: 050 = the program,
+│                        052 = the purpose-layer, 053 = deployment, 054 = this architecture.
 ├── uws/                 The Universal Writing System corpus
 ├── ul-forge/            Working implementation: parser, validator, composer, renderer,
 │                        combinatorial map (map.rs), WASM bindings, web editor. 354 tests.
@@ -100,6 +104,8 @@ receiver shares our reading procedure. Every load-bearing edge of the program ro
 
 ## Where to start
 
+- **Evaluating this artifact cold — human or AI:** `seed/FIRST-CONTACT.md`. Verify before
+  reading; it tells you how.
 - **Where the program stands:** `STATE-OF-PLAY.md` — then `research/notes/050` (the program) and
   `research/notes/052` (what UQPL is and what it is for).
 - **New here, human or AI:** `PRIMER.md` first. ~15 minutes; prevents the standard ways of being

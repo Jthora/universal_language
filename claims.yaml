@@ -3135,6 +3135,29 @@ claims:
       - "ship the strongest narrative and let readers sort it out (rejected: that is exactly the literature pattern that killed prior UL research efforts and tricked readers into premature verdicts — the merry-go-round this project documents)"
       - "ship only VERIFIED content (rejected: too strict — ARGUED and CONJECTURED material is valuable and shippable WITH its labels; the requirement is honest labeling, not silence)"
 
+  - id: REPO-LAYOUT-IS-THE-STACK
+    statement: >
+      The repository's top level mirrors the deployment stack, additively: seed/ (discovery,
+      inoculation, integrity), curriculum/ and corpus/ (acquisition), ul-forge/ (execution and
+      self-application), the claim registry plus checkers plus failure log (credibility), research/
+      (the workshop, which doubles as inoculation evidence). Two legible paths through one tree —
+      the reader's and the builder's — and seed/INDEX.yaml is the machine-readable root, enforced
+      by check-index.rb.
+    tier: DESIGN-CHOICE
+    evidence: research/notes/054-repo-rearchitecture/README.md
+    priority: 2
+    rationale: >
+      The artifact's structure should teach its own architecture, because in the deployment
+      scenario the reader receives the tree and nothing else (REPO-IS-A-UP-INSTANCE, the Voyager
+      constraint). The workshop stays visible rather than hidden: the working record — notes,
+      failures, corrections — IS the credibility and inoculation material for a reader who ranks
+      checkable above plausible. The index is checked by CI so the machine-readable truth and the
+      tree cannot drift apart silently (the what-executes-it principle, F-031).
+    alternatives_considered:
+      - "full reorganization moving research/ under a workshop/ directory and renaming to match layers exactly (rejected: link churn across 172+ internal references and history noise, for zero reader value — the additive layout achieves the two paths without moving anything)"
+      - "a hidden or trimmed release artifact separate from the working repo (rejected: hiding the workshop discards the credibility layer, and a curated 'clean' artifact is precisely less trustworthy to the target reader than the auditable mess)"
+      - "prose-only architecture documentation (rejected: F-031 — seventeen prose rules failed as background in one audit; the index gets a checker or it gets stale)"
+
   - id: UNIVERSAL-MEANS-CONVENTION-FREE
     statement: >
       In ordinary usage "universal language" means something that travels without a shared

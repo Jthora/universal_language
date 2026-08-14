@@ -124,6 +124,8 @@ uqpl_definition: claims.yaml#UQPL-IS-FORMAL-TIER-CLOSURE   # formal tier of UL, 
 cure_status: corollary_not_purpose  # claims.yaml#CURE-IS-COROLLARY
 mathematical_center: claims.yaml#READING-INVARIANCE-TARGET
 wiki_status: wet_clay_input_not_authority  # owner designation 2026-08-12
+root_index: seed/INDEX.yaml                 # machine-readable stack map, CI-checked (tools/check-index.rb)
+reader_entry: seed/FIRST-CONTACT.md
 
 # Universal Writing System (notation — design choice, not proven necessity)
 notation_name: UWS

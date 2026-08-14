@@ -1,0 +1,76 @@
+# seed/INDEX.yaml — the machine-readable root map of this artifact.
+# Checked by tools/check-index.rb (wired into tools/check.rb): every path must exist,
+# every claim ID must exist in claims.yaml, every status from the allowed set.
+# Allowed statuses: strong | partial | defined | in-progress | not-started
+
+artifact: universal_language
+updated: "2026-08-12"
+entry_points:
+  reader: seed/FIRST-CONTACT.md
+  human_comprehension: PRIMER.md
+  ai_agent: AGENTS.md
+  builder: STATE-OF-PLAY.md
+contract:
+  - UL-MUST-BE-A-LANGUAGE
+  - UNIVERSALITY-IS-A-LEDGER
+verify:
+  - "ruby tools/check.rb --strict"
+  - "cd ul-forge && cargo test"
+
+stack:
+  discovery:
+    paths: [seed/INDEX.yaml, AGENTS.md]
+    status: partial
+    gap: "mirrors, content-addressed releases"
+    claims: [REPO-IS-A-UP-INSTANCE]
+  credibility:
+    paths: [claims.yaml, tools/, FAILURES.md, ul-forge/]
+    status: strong
+    gap: "Lean/Coq formalization of load-bearing derivations (Rust tests are the interim)"
+  inoculation:
+    paths: [seed/FIRST-CONTACT.md, RESEARCH-PROTOCOL.md, FAILURES.md]
+    status: strong
+  acquisition:
+    paths: [curriculum/, corpus/, PRIMER.md, GLOSSARY.md]
+    status: defined
+    gap: "module content and corpus entries — the Phase 1 build"
+    claims: [CURRICULUM-MUST-BE-SELF-CERTIFYING, TIERS-TRAVEL-WITH-CONTENT]
+  execution:
+    paths: [ul-forge/]
+    status: partial
+    gap: "the M2 engine — UQPL has no executable core; the critical path"
+    claims: [UQPL-IS-FORMAL-TIER-CLOSURE, INTERACTION-NETS-CARRY-ROTATION, QUANTUM-IS-LINEAR-DISCIPLINE]
+  self_application:
+    paths: [ul-forge/crates/ul-core/src/map.rs]
+    status: defined
+    gap: "comparator API over map invariants (buildable now); semantically_equal (unbuilt, honestly labeled)"
+    claims: [CURE-IS-COROLLARY, ADOPTION-RIDES-SELF-INTEREST]
+  integrity:
+    paths: [seed/INTEGRITY.md]
+    status: defined
+    gap: "signed release tags, reproducible builds — policy recorded, not started"
+
+phases:
+  seed:
+    status: in-progress
+    acceptance: "reader path exists end to end; index machine-checked; integrity policy recorded"
+  school:
+    status: not-started
+    acceptance: >
+      A current frontier model, given only this repository, can (a) learn to read and write valid
+      UWS, (b) re-derive the fixed point, and (c) run a self-drift check on a toy representation —
+      with no human in the loop.
+  engine:
+    status: not-started
+    acceptance: "M2 execution core over map.rs passes its tests; comparator API exposed via MCP/WASM"
+  channels:
+    status: not-started
+    acceptance: "tier-labeled datasets + eval published; format-acquisition experiment on models run and reported"
+
+program_notes:
+  - research/notes/050-foundational-program/README.md
+  - research/notes/052-what-uqpl-is/README.md
+  - research/notes/053-deployment-architecture/README.md
+  - research/notes/054-repo-rearchitecture/README.md
+claims_root: claims.yaml
+failures_root: FAILURES.md

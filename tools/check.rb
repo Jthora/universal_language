@@ -12,6 +12,7 @@ checks = [
   ['caveats travel with citations',  'check-caveats.rb'],
   ['scope corrections propagate',    'check-propagation.rb'],
   ['notes convention holds',         'check-notes.rb'],
+  ['seed index matches the tree',    'check-index.rb'],
 ]
 
 failed = []
