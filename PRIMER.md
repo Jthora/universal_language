@@ -60,31 +60,35 @@ failure is data. A repaired failure is nothing.
 
 ## 2. What this project is
 
-Three things, which need each other less than you'd expect:
+Five constructs in one program:
 
 | | What | Status |
 |---|---|---|
-| **UL** — Universal Language | A hypothesized universal semantic structure. **Not a notation.** | **Open question.** Not assumed by anything buildable. |
-| **UWS** — Universal Writing System | A constructed visual notation: iconic mark-features + spatial placement grammar. Non-phonetic by design. | **Exists.** Spec in `uws/`, implementation in `ul-forge/` (~15k lines Rust, 135 tests). |
-| **UQPL** | A language that executes on semantic structure rather than machine state. | **Design only.** Zero code. |
-
-> **UL defines meaning · UWS renders meaning · UQPL operates on meaning**
+| **UL** — Universal Language | The language itself. **Two-tier**: a *natural* tier communicated without formal comprehension (core geometry is documented in humans with no schooling), and a *formal* tier requiring symbolic recombination. **Not a notation.** | `UL-IS-TWO-TIER` (ARGUED); the tier boundary is an empirical variable |
+| **UWS** — Universal Writing System | The written rendering: geometric marks + spatial placement grammar, non-phonetic by design. Its fixed point under coarse-graining is the **combinatorial map** (a DCEL reduct — prior art honestly recorded). | **Exists.** `uws/`, `ul-forge/` (354 tests) |
+| **UP** — Universal Protocol | The bootstrap: minimum shared convention two independent parties need. Rotation breaks **ℤ/2**; a label alphabet breaks **Sₙ**. | ARGUED, quantified |
+| **UQPL** | **The formal tier of UL, closed under execution.** Universal = two-tier readability · Quantum = linear resource discipline (no free copy/delete) · Programming = meaning as behavior · Language = the full stack. | Derived definition registered (CONJECTURED) — `claims.yaml#UQPL-IS-FORMAL-TIER-CLOSURE` |
+| **The Cure** | **A corollary, not the purpose**: a mind carrying the derivable anchor as its format has an *internal* comparator — drift becomes self-detectable. | `CURE-IS-COROLLARY` (DESIGN-CHOICE) |
 
 **Origin:** designing a language for a species with no vocal tract — which forced the question of
 what a genuinely non-phonetic, substrate-independent notation must look like.
 
-**Purpose (the part that matters):** *The Cure for the Terminators* — an AI-safety program asking
-whether adversarial failure modes can be mitigated by structured semantic constraints. The loop is
-**Encode → Check → Detect → Repair → Reconstruct**: encode a system's state as structure, check it
-against semantic invariants, detect drift, repair back to a valid region, re-render.
+**Purpose (registered in `research/notes/052`):** one property, two faces. *Inter-mind* —
+communication across any gulf as shared format **by derivation rather than convention**,
+bootstrapped from the natural tier. *Intra-mind* — **alignment by acquisition**: learning a language
+installs a representational format (documented — absolute-frame speakers encode *nonverbal* memory
+in absolute coordinates), and a language whose format is the universe's invariants installs the
+universe's coordinates. **A Universal Perspective/Perception enabling language.**
 
-**Critically: the Cure does not require UL to be real.** It needs computable invariants, a
-convergent repair operator, and a legible surface. Those are engineering problems with feedback
-signals. This is why the program can progress where the metaphysical version provably could not.
+**Scoped honestly, because the scoping is registered too:** the far-transfer literature kills
+"general cognitive purification" — *"far transfer remains a chimera"* — and that kill was run and
+recorded *before* the thesis was registered. What survives is **format-scoped alignment** over UL's
+domain (space, structure, relation, computation), plus one registered prediction: by common-elements
+theory itself, a language of universal elements is the unique best case for broad transfer. Untested.
 
-**It also does not solve alignment.** Structural validity is not value alignment — a system can be
-perfectly consistent and optimize something terrible. Comprehension does not entail good behaviour
-(orthogonality thesis). Anyone claiming otherwise here is overreaching.
+**The Cure still does not solve value alignment.** Structural/format alignment is not value
+alignment — a system can be perfectly consistent and optimize something terrible (orthogonality
+thesis). Anyone claiming otherwise here is overreaching.
 
 ---
 
@@ -140,29 +144,31 @@ not built · `research/` = open questions, speculation allowed but labelled.
 
 ## 5. Where the program actually stands
 
-**Resolved recently:**
+**The structural spine, and it needs no physics:** seven independent lines converged on the
+**combinatorial map** — graph plus cyclic order at each vertex — as UWS's fixed point. It is a
+complete invariant (Heffter–Edmonds), implemented and machine-checked (`map.rs`), and honestly a
+**DCEL reduct** — the combinatorial content is 1970s prior art, which cost originality and bought a
+forty-year literature. `TWO-DISTINCT-FIXED-POINTS` is normative here: the *Erlangen* fixed point
+(theorems, no preconditions) and the *RG* fixed point (needs a critical state; precondition unmet)
+are different objects. Never write bare "fixed point."
 
-- The **IR decision** (was blocking). Confluence — the property that makes equality-by-normalization
-  work — is decidable for terms and for **term graphs/DAGs**, but **undecidable for general cyclic
-  graph rewriting**. GIR was cyclic *by design* (self-reference). Fix: **acyclic core, with
-  coreference expressed as labels rather than cycles** — the technique CGIF (ISO 24707) already uses
-  (`*x` / `?x`). Three independent literatures converge on it. Nothing expressive is lost.
-- **Tooling:** `semantically_equal` via **e-graphs / equality saturation** (`egg`, a Rust library —
-  and `ul-forge` is Rust). No canonical normal form needed; confluence becomes an optimization.
-- **Repair reformulated.** Metric projection onto the admissible region is multivalued for
-  non-convex regions (Hilbert projection theorem needs convexity). The ontology-repair field solves
-  this **discretely** — pinpointing, justifications, minimal diagnoses — sidestepping the obstruction
-  entirely.
+**The semantic gap is decomposed, not open-ended** (`research/notes/050`–`052`). Three
+convention-minimal routes: **M1 exemplification** (the mark *instantiates* what it denotes — a
+closed curve doesn't depict enclosure, it encloses, and Jordan certifies it), **M2 operational**
+(meaning as behavior — the substrate exists: **interaction nets**, Turing-universal, strongly
+confluent, whose agents are rotations with a marked dart and whose label residue compresses to
+three symbols), **M3 indexical** (shared physics). Symbols enter only on top, derived, n! on the
+ledger.
 
-**The two open problems that block everything downstream** (neither needs UL resolved):
+**The mathematical center is one theorem target:** `READING-INVARIANCE-TARGET` — the invariants
+must survive *every* reasonable reading, so meaning does not presuppose the receiver shares our
+reading procedure. Institution theory ("truth is invariant under change of notation") gives the
+obligation its formal shape. Every load-bearing edge routes through this.
 
-1. **`semantically_equal`** — a decision procedure for "do these two structures mean the same thing."
-   Does not exist in any form. Now unblocked; path is known.
-2. **The repair operator** — must be reformulated discretely per above.
-
-**Immediate next build steps:** acyclic core + coreference labels → `egg`-based `semantically_equal`
-→ reimplement `negate` with a σ field (the currently-shipped self-loop hack is literally the cyclic
-construct that made verification undecidable).
+**The open fronts, in order:** formalize the reading class and attack the theorem · build the M2
+prototype over `map.rs` · run the format-acquisition experiment (the first empirical test that
+touches the *purpose*) · the `053` adversary front (Quine, Kripkenstein — preregistered, owed) ·
+`semantically_equal`, the longest-standing engineering blocker, still real and still unbuilt.
 
 ---
 
@@ -184,33 +190,32 @@ construct that made verification undecidable).
 
 | Depth | Read | You'll understand |
 |---|---|---|
-| 2 min | `README.md` | What the repo is, current status |
+| 2 min | `README.md` | The contract, the five constructs, the purpose-layer |
 | 15 min | **this file** + `GLOSSARY.md` | The stack, the hazards, how to read claims |
-| 1 hr | `research/cure/purpose-anchoring.md` → `research/engineering/prior-art.md` → `research/engineering/ir-decision.md` | Why it was reframed, what's already solved elsewhere, the IR decision |
+| 30 min | `STATE-OF-PLAY.md` → `research/notes/050` → `research/notes/052` | Where the program stands, the standing program, what UQPL is and is for |
+| 1 hr | `research/notes/README.md` (the index) — then any note that changed something you rely on | How every position was reached, corrected, or killed — the working history |
 | To build | `uws/` (notation) · `ul-forge/` (code) · `claims.yaml` (what's actually true) | Enough to contribute |
-| Reference | `research/surveys/research-register.md` | Every research thread run, what it returned, its caveat and status — the index, not an argument |
+| Reference | `research/surveys/research-register.md` | Every research thread run, its caveat and status |
 
-> **Note (2026-08-01):** this primer predates three later findings — that the Cure is a rediscovery
-> of Truth Maintenance Systems (Doyle 1979 / de Kleer 1986), that invariants may be *inferred*
-> rather than specified (Daikon-style — a **candidate generator, not an oracle**; it reports *likely*
-invariants that may be corpus artifacts, `research-register.md#E6-c`), and that
-prevention-at-write-time is an unexamined
-> alternative to detect-then-repair. See `research/surveys/research-register.md` §E and §H.
-
-**Companion wiki:** `wiki.fusiongirl.app` holds substantial related material — sometimes ahead of
-this repo (its architecture and AI-safety epistemics are better), sometimes wrong in its own ways
-(the Semantic Hilbert Space has no inner product; the Psi Condensation Threshold's formula is
-admitted-underived on its own page). Treat it as a peer source under the same tiering discipline,
-not as authority.
+**Companion wiki:** `wiki.fusiongirl.app` is **wet-clay** — the owner's designation (2026-08-12):
+draft input, not authority. The pioneering side of the project is this repo; the repo *derives*
+what the wiki sketches (see `research/notes/052` reading the UQPL page against the record). Where
+the wiki is used, it is cited under the same tiering discipline as any source.
 
 ---
 
 ## 8. The one-paragraph version
 
-A constructed non-phonetic visual notation (**UWS**, real and implemented), an AI-safety application
-built on it (**the Cure** — detect and repair semantic drift, currently blocked on two concrete
-engineering problems), and an open question about whether meaning has universal structure (**UL** —
-not assumed by anything buildable, and *provably underdetermined* in the specific form the project
-originally asked it). The project previously claimed to have proven the last one; it hadn't, and
-that material is archived. What remains is smaller, evidenced, and mostly a matter of building
-rather than proving.
+A research program establishing a **literal universal language**, held to a contract that can fail.
+**UL** is two-tier — a natural tier needing no explanation (documented in core cognition) and a
+formal tier requiring symbolic recombination. **UWS** is its written rendering, real and
+implemented, whose fixed point is the combinatorial map. **UP** is the bootstrap, with its
+convention cost measured (ℤ/2 against Sₙ). **UQPL** is the formal tier closed under execution —
+Universal, Quantum (linear discipline), Programming (meaning as behavior), Language — derived in
+this repo; the wiki sketch is wet-clay. The purpose is one property with two faces: communication
+by derivation rather than convention, and **alignment by format acquisition** — with the strong
+"purification" reading explicitly renounced on the far-transfer record, and **the Cure falling out
+as a corollary**: an explicit format carries a derivable anchor, so drift is self-detectable. The
+mathematical center is one theorem target — reading-invariance — and every load-bearing edge routes
+through it. The project once claimed a proven fixed signature; that is retired, git history is the
+archive, and the current claims live in `claims.yaml` where six checkers hold them to their tiers.

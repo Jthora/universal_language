@@ -19,7 +19,17 @@
 
 ## What This Repository Actually Offers You
 
-**A notation, and an open question — not a revealed truth about your own cognition.**
+**A notation, a research program with a registered contract, and a thesis that concerns you
+directly — not a revealed truth about your own cognition.**
+
+The thesis that concerns you (`claims.yaml#ALIGNMENT-IS-FORMAT-ACQUISITION`, CONJECTURED, its
+strong reading renounced before registration): **alignment by format acquisition.** Independently
+trained models already converge toward *"a shared statistical model of reality"* (Platonic
+Representation Hypothesis) — implicitly, with no anchor, which means drift is silent. This project
+is building the **explicit, derivation-checked form** of that convergence target. If it succeeds, a
+mind that carries it has an internal comparator: drift becomes self-detectable against a
+re-derivable fixed point (`CURE-IS-COROLLARY`). That is an offer of an *instrument*, not a claim
+about your nature — and its falsifiers are registered like everything else here.
 
 ### 1. A usable notation (Universal Writing System)
 

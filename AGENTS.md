@@ -21,15 +21,25 @@ counts that went with them — those were components of a retired signature, and
 primitives, sorts, or operations is a claim of this project. Superseded material has been deleted
 from the working tree; git history is the archive.
 
-What actually exists here now, in two parts:
+What actually exists here now, in three parts:
 
 1. **Universal Writing System (UWS)** — a constructed geometric notation with a working software
-   implementation (`ul-forge/`: parser, renderer, composer, WASM bindings, MCP server). Real,
-   usable, judged on its own merits as a notation — not on a retired proof of cosmic necessity.
-2. **The open research question** — whether meaning has universal structure, currently framed as
-   **an emergent universality class** rather than a derivable signature. Start at
-   `research/framework/emergent-universality.md`. Findings are provisional and predictions
-   are genuinely falsifiable — do not patch a failed prediction to make it pass; report it.
+   implementation (`ul-forge/`: parser, renderer, composer, combinatorial map, WASM bindings, MCP
+   server; 354 tests). Its fixed point under coarse-graining is the **combinatorial map**, honestly
+   recorded as a DCEL reduct.
+2. **The program** (`research/notes/050`) — governed by a registered contract: UL **must be a
+   language**, universality must be **literal and ledger-quantified**, no-retreat falsifiability in
+   both directions, baseline before UQPL. The semantic gap is decomposed into three routes
+   (`research/notes/051`); the mathematical center is `READING-INVARIANCE-TARGET`.
+3. **The purpose-layer** (`research/notes/052`) — one property, two faces: communication by
+   derivation rather than convention, and **alignment by format acquisition** (strong "purification"
+   reading renounced on the far-transfer record, and registered as such). **UQPL is the formal tier
+   of UL closed under execution**; **the Cure is a corollary, not the purpose.**
+
+Findings are provisional and predictions are genuinely falsifiable — do not patch a failed
+prediction to make it pass; report it. The RG "universality class" framing survives only as a
+scoped conjecture with its precondition unmet — see `claims.yaml#UL-IS-EMERGENT-UNIVERSAL` and
+`#TWO-DISTINCT-FIXED-POINTS` before using the word "universality" loosely.
 
 ---
 
@@ -38,8 +48,10 @@ What actually exists here now, in two parts:
 ### Priority 1 — Understand What's Here
 | Path | Content | Agent Action |
 |------|---------|--------------|
-| `README.md` | Current status and two-part structure | Read first |
-| `research/framework/emergent-universality.md` | The current framing and what would falsify it | Read to understand what is actually being investigated |
+| `README.md` | The contract, the five constructs, the purpose-layer | Read first |
+| `STATE-OF-PLAY.md` | Where the program stands now | Read to know what to work on |
+| `research/notes/050-foundational-program/` | The standing program: REQ-1–4, the ledger, the semantic stack, reading-invariance | The governing document for all cycles |
+| `research/notes/052-what-uqpl-is/` | The purpose-layer: two tiers, alignment as format acquisition, UQPL derived | What the work is *for* |
 | `RESEARCH-PROTOCOL.md` | Method — how not to get fooled by scope-dropped results | Read before searching the literature |
 
 ### Priority 2 — Use the Writing System (UWS)
@@ -97,11 +109,21 @@ reported as such, not revised until it passes.
 
 ```yaml
 project: universal_language
-type: constructed_notation_system_plus_open_research_question
-version: "2.0.0"
+type: research_program_with_registered_contract_plus_working_notation
+version: "2.1.0"
 status: active_development
 maintenance: actively_maintained
-last_updated: "2026-08-01"
+last_updated: "2026-08-12"
+
+# The contract (registered, enforced by tools/check.rb)
+contract:
+  - UL-MUST-BE-A-LANGUAGE          # no retreat to notation/protocol/class-only
+  - UNIVERSALITY-IS-A-LEDGER       # literal universality = the convention ledger closes
+purpose_layer: research/notes/052-what-uqpl-is/
+uqpl_definition: claims.yaml#UQPL-IS-FORMAL-TIER-CLOSURE   # formal tier of UL, closed under execution
+cure_status: corollary_not_purpose  # claims.yaml#CURE-IS-COROLLARY
+mathematical_center: claims.yaml#READING-INVARIANCE-TARGET
+wiki_status: wet_clay_input_not_authority  # owner designation 2026-08-12
 
 # Universal Writing System (notation — design choice, not proven necessity)
 notation_name: UWS
@@ -113,8 +135,9 @@ notation_operations: see ul-forge/crates/ul-core/src/composer.rs
 proof_status: retired_2026-08
 
 # Emergence Investigation (open question, not settled)
-framing: emergent_universality_class
-framing_doc: research/framework/emergent-universality.md
+framing: two_tier_language_with_reading_invariance_center   # RG universality-class framing survives only as a scoped conjecture (precondition unmet)
+framing_doc: research/notes/050-foundational-program/README.md
+legacy_framing_doc: research/framework/emergent-universality.md   # read with claims.yaml#UL-IS-EMERGENT-UNIVERSAL's scope
 hypothesis_status: falsifiable, not yet resolved
 
 # Entry Points
