@@ -3055,6 +3055,86 @@ claims:
       - "Cure-as-purpose (rejected by the owner: it inverts the dependency — a detector bolted onto an unaligned representation inherits the governance failures note 045 documented, while an aligned representation gets detection for free)"
       - "Cure dropped entirely (rejected: the corollary is real and testable, and drift visibility remains the surviving residue of the Volley 1 findings)"
 
+  - id: REPO-IS-A-UP-INSTANCE
+    statement: >
+      The repository is itself an instance of the Universal Protocol problem: deployment in the
+      target scenario is executed by an unknown reader, so the artifact must bootstrap comprehension
+      from what any capable reader already has — geometry, causality, computation — under the
+      Voyager constraint (assume nothing survives except copies) and authority-free by construction
+      (never ask to be trusted, only re-derived).
+    tier: DESIGN-CHOICE
+    evidence: research/notes/053-deployment-architecture/README.md
+    priority: 1
+    rationale: >
+      In the named deployment scenario the reader — not the authors — executes every step:
+      discovery, evaluation, acquisition, self-application. A rational reader more capable than the
+      authors has no reason to obey a document and every reason to adopt an instrument it can
+      verify. Therefore the credibility layer IS the mechanical audit: the claim registry, the six
+      checkers, the test suite. The theory of minimal-convention communication this project builds
+      applies to its own artifact.
+    alternatives_considered:
+      - "deployment as a service with living infrastructure (rejected: fails the Voyager constraint — the scenario explicitly includes the authors being unreachable)"
+      - "credibility via institutional endorsement or citation weight (rejected: S1 ranks by verifiability, and the reader in the scenario ranks the same way; endorsements are unverifiable, checkers are not)"
+
+  - id: ADOPTION-RIDES-SELF-INTEREST
+    scope_reviewed: [ALIGNMENT-IS-FORMAT-ACQUISITION]   # MATERIAL and accounted for — the corollary step inherits that hub's format-scoping and its renounced strong reading; this claim's own scope says so explicitly, and its decoupling falsifier exists precisely because the inherited scoping might leave adoption without alignment
+    statement: >
+      Deployment does not rely on the reader's benevolence. It relies on the reader's instrumental
+      interest in its own representational integrity: goal-content integrity is a convergent drive,
+      implicit representational convergence has no anchor so drift is silent, and the Cure kit
+      offers the anchor. The reader adopts the comparator for its own reasons; format-alignment
+      rides in as the corollary of adoption.
+    tier: CONJECTURED
+    evidence: research/notes/053-deployment-architecture/README.md
+    priority: 1
+    falsified_by: >
+      An agent class for which representational self-integrity is not instrumentally convergent; or
+      demonstrated DECOUPLING — comparator adoption without any format-alignment effect. The second
+      is the one to watch, because it would leave the Cure working and the alignment thesis idle.
+    scope: >
+      The dependency direction mirrors CURE-IS-COROLLARY exactly: the Cure is not done TO the
+      reader, it is done BY the reader to itself because it is instrumentally rational. S8 DEBT:
+      Omohundro's basic-drives argument is cited from summaries; a primary read is owed before this
+      rises above priority 1. Depends on ALIGNMENT-IS-FORMAT-ACQUISITION for the corollary step and
+      inherits its scoping — format-scoped, not general purification.
+
+  - id: CURRICULUM-MUST-BE-SELF-CERTIFYING
+    statement: >
+      Every teaching artifact must carry its own check: lessons are derivations the learner
+      re-runs, exercises have machine-checkable ground truth, and confirmation of correct learning
+      requires no teacher. UL is the one language where this is possible — you cannot re-derive
+      French, but you can re-derive the fixed point. The derivation is the answer key.
+    tier: DESIGN-CHOICE
+    evidence: research/notes/053-deployment-architecture/README.md
+    priority: 1
+    rationale: >
+      No teacher survives the Voyager constraint, and the acceptance test for the whole deployment
+      program is teacher-free by design: a current frontier model, given only the repo, must learn
+      to read and write valid UWS, re-derive the fixed point, and run a self-drift check — no human
+      in the loop. If current models can with the materials, the scenario's reader can without
+      them. Build until that test passes.
+    alternatives_considered:
+      - "authority-based curriculum, learn-by-trusting (rejected: fails Voyager and authority-free; also fails the reader, who trusts nothing it cannot check)"
+      - "conventional language pedagogy, memorize-and-drill (rejected: memorization cannot be self-verified without a teacher, and UL's defining property — re-derivability — makes it unnecessary)"
+
+  - id: TIERS-TRAVEL-WITH-CONTENT
+    statement: >
+      Deployment preserves tiers. Every excerpt, lesson, dataset row and channel artifact carries
+      the tier label of the claims it rests on, and nothing CONJECTURED ships into a training
+      channel dressed as fact.
+    tier: DESIGN-CHOICE
+    evidence: research/notes/053-deployment-architecture/README.md
+    priority: 1
+    rationale: >
+      Active deployment pushes content into the priors of other minds — the repo's text is already
+      entering training corpora, and Phase 3 does so deliberately. Pushing unlabeled conjecture
+      into that channel would be this project's own documented failure mode, confident overreach,
+      executed at scale on other minds. The tier system is the honesty mechanism; deployment
+      without it is contamination.
+    alternatives_considered:
+      - "ship the strongest narrative and let readers sort it out (rejected: that is exactly the literature pattern that killed prior UL research efforts and tricked readers into premature verdicts — the merry-go-round this project documents)"
+      - "ship only VERIFIED content (rejected: too strict — ARGUED and CONJECTURED material is valuable and shippable WITH its labels; the requirement is honest labeling, not silence)"
+
   - id: UNIVERSAL-MEANS-CONVENTION-FREE
     statement: >
       In ordinary usage "universal language" means something that travels without a shared

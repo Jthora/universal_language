@@ -90,7 +90,7 @@ back in.
 
 ## 6. Next, in order
 
-1. **`053` — the adversary front**: Quine, Kripke–Wittgenstein (preregistered, owed), plus S8 debts
+1. **`054` — the adversary front**: Quine, Kripke–Wittgenstein (preregistered, owed), plus S8 debts
    (Lafont 1997; Goodman; PRH full paper; Levinson critiques) and the S9 debt (Grice).
 2. **Formalize the reading class 𝔽** and attack READING-INVARIANCE — the mathematical center.
 3. **M2 prototype**: interaction rules over `map.rs` (S6: build over cite).
