@@ -31,7 +31,7 @@ stack:
     paths: [seed/FIRST-CONTACT.md, RESEARCH-PROTOCOL.md, FAILURES.md]
     status: strong
   acquisition:
-    paths: [curriculum/, curriculum/x-inoculation/, corpus/, corpus/entries/, PRIMER.md, GLOSSARY.md]
+    paths: [curriculum/, curriculum/x-inoculation/, corpus/, corpus/entries/, spec/grammar-core.md, PRIMER.md, GLOSSARY.md]
     status: in-progress
     gap: "modules N/F/S/P authored; Q gated on the engine; corpus grows with the derivation ladder"
     claims: [CURRICULUM-MUST-BE-SELF-CERTIFYING, TIERS-TRAVEL-WITH-CONTENT]

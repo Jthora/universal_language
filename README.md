@@ -97,7 +97,7 @@ receiver shares our reading procedure. Every load-bearing edge of the program ro
 ├── ul-forge/            Working implementation: parser, validator, composer, renderer,
 │                        combinatorial map (map.rs), WASM bindings, web editor. 354 tests.
 ├── design/              What is INTENDED. Every doc marked "not yet built."
-└── spec/                What EXISTS. Present tense. (Empty — deliberately.)
+└── spec/                What EXISTS. Present tense. First entry: grammar-core.md — the derived grammar.
 ```
 
 ---

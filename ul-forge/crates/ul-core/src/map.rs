@@ -341,6 +341,174 @@ pub fn label_ambiguity(k: usize) -> u128 {
     (1..=k as u128).product()
 }
 
+// ---------------------------------------------------------------------------------------------
+// The grammar core (spec/grammar-core.md; research/notes/056).
+//
+// Well-formedness and composition DERIVED from the substrate rather than designed:
+//   W1/W2 — what it takes to BE a combinatorial map at all (`validate`)
+//   O1 place    — disjoint union + a Nesting placement; the chosen face is CONTENT
+//   O2 connect  — add an edge; the insertion points in each rotation are CONTENT (they select
+//                 faces — the load-bearing detail of notes/046)
+//   O3 subdivide — insert a degree-2 vertex; SEMANTICALLY INERT at the fixed point, which is
+//                 the machine-checked form of "metric detail dies before the fixed point"
+//
+// The only convention residue at this layer is the global orientation Z/2 already measured by
+// `convention_ambiguity`. Every other choice an operation takes is meaning, not convention.
+// ---------------------------------------------------------------------------------------------
+impl CombinatorialMap {
+    /// W1/W2 — structural well-formedness: σ is a vertex-preserving permutation over an even
+    /// number of darts. These are not design choices; they are what it takes to be a map.
+    pub fn validate(&self) -> Result<(), Vec<String>> {
+        let mut errors = Vec::new();
+        if self.n_darts % 2 != 0 {
+            errors.push(format!("W2: {} darts — α needs an even count", self.n_darts));
+        }
+        if self.sigma.len() != self.n_darts || self.dart_origin.len() != self.n_darts {
+            errors.push("W1: sigma/origin tables do not cover the dart set".into());
+        }
+        let mut hit = vec![false; self.n_darts];
+        for d in 0..self.n_darts {
+            let s = self.sigma[d];
+            if s >= self.n_darts {
+                errors.push(format!("W1: sigma[{d}] = {s} out of range"));
+                continue;
+            }
+            if hit[s] {
+                errors.push(format!("W1: sigma not injective at image {s}"));
+            }
+            hit[s] = true;
+            if self.dart_origin[d] != self.dart_origin[s] {
+                errors.push(format!("W1: sigma moves dart {d} across vertices"));
+            }
+        }
+        if errors.is_empty() { Ok(()) } else { Err(errors) }
+    }
+
+    /// Number of connected components (darts under σ and α). `0` for the empty map.
+    pub fn components(&self) -> usize {
+        let mut parent: Vec<usize> = (0..self.n_darts).collect();
+        fn find(p: &mut Vec<usize>, mut x: usize) -> usize {
+            while p[x] != x {
+                p[x] = p[p[x]];
+                x = p[x];
+            }
+            x
+        }
+        for d in 0..self.n_darts {
+            let (a, b) = (find(&mut parent, d), find(&mut parent, self.sigma[d]));
+            if a != b { parent[a] = b; }
+            let (a, b) = (find(&mut parent, d), find(&mut parent, Self::alpha(d)));
+            if a != b { parent[a] = b; }
+        }
+        (0..self.n_darts).filter(|&d| find(&mut parent, d) == d).count()
+    }
+
+    /// A cycle on `n` vertices — the closed curve. Promoted from the test helper because the
+    /// grammar composes with it (`O1` + a bounded-face placement is "enclosure").
+    pub fn cycle(n: usize) -> CombinatorialMap {
+        let mut rotations: Vec<(NodeId, Vec<Dart>)> = Vec::new();
+        for v in 0..n {
+            let incoming = 2 * ((v + n - 1) % n) + 1;
+            let outgoing = 2 * v;
+            rotations.push((format!("v{v}"), vec![outgoing, incoming]));
+        }
+        CombinatorialMap::from_rotations(rotations, 2 * n)
+    }
+
+    /// A path of `n` edges — the open stroke. Its endpoints are the **degree-1 free ends** that
+    /// note 024 derived and the legacy inventory never named.
+    pub fn path(n: usize) -> CombinatorialMap {
+        assert!(n >= 1, "a path needs at least one edge");
+        let mut rotations: Vec<(NodeId, Vec<Dart>)> = Vec::new();
+        rotations.push(("v0".into(), vec![0]));
+        for v in 1..n {
+            rotations.push((format!("v{v}"), vec![2 * v - 1, 2 * v]));
+        }
+        rotations.push((format!("v{n}"), vec![2 * n - 1]));
+        CombinatorialMap::from_rotations(rotations, 2 * n)
+    }
+
+    /// O1 — juxtaposition. The categorical coproduct: `other`'s darts are offset by
+    /// `self.n_darts`. *Where* the new component sits — which face of which component — is not
+    /// part of this operation: it is carried by [`Nesting`], because placement is content.
+    pub fn disjoint_union(&self, other: &CombinatorialMap) -> CombinatorialMap {
+        let off = self.n_darts;
+        let mut sigma = self.sigma.clone();
+        sigma.extend(other.sigma.iter().map(|&d| d + off));
+        let mut dart_origin = self.dart_origin.clone();
+        dart_origin.extend(other.dart_origin.iter().map(|o| format!("{o}+{off}")));
+        CombinatorialMap { sigma, dart_origin, n_darts: self.n_darts + other.n_darts }
+    }
+
+    /// O2 — connection. Adds one edge between the vertex of `da` and the vertex of `db`,
+    /// inserting the new darts immediately after `da` and `db` in their rotations.
+    ///
+    /// The insertion points are **content**: they select which faces the new edge splits —
+    /// exactly the mechanism by which a dummy edge carries nesting information back into σ
+    /// (notes/046, `a_dummy_edge_replaces_the_nesting_structure`).
+    pub fn connect(&self, da: Dart, db: Dart) -> CombinatorialMap {
+        assert!(da < self.n_darts && db < self.n_darts, "darts out of range");
+        assert_ne!(da, db, "self-insertion at one dart is not defined in the core grammar");
+        let n = self.n_darts;
+        let mut sigma = self.sigma.clone();
+        sigma.push(0);
+        sigma.push(0);
+        sigma[n] = sigma[da];
+        sigma[da] = n;
+        sigma[n + 1] = sigma[db];
+        sigma[db] = n + 1;
+        let mut dart_origin = self.dart_origin.clone();
+        dart_origin.push(self.dart_origin[da].clone());
+        dart_origin.push(self.dart_origin[db].clone());
+        CombinatorialMap { sigma, dart_origin, n_darts: n + 2 }
+    }
+
+    /// O3 — subdivision. Splits the edge of `d` with a fresh degree-2 vertex.
+    ///
+    /// **Semantically inert at the fixed point**: faces, genus and connectivity are unchanged —
+    /// the machine-checked form of "a triangle and a square are the same object" (notes/022:
+    /// metric detail dies before the fixed point). Verified by `subdividing_a_triangle_gives_a_square`.
+    pub fn subdivide(&self, d: Dart) -> CombinatorialMap {
+        assert!(d < self.n_darts, "dart out of range");
+        let db = Self::alpha(d); // the far half of the edge being split
+        let n = self.n_darts;
+        // Rebuild rotations: db moves to the fresh vertex; a fresh dart n+1 replaces db at its
+        // old vertex; fresh dart n sits at the new vertex paired with n+1... α is positional,
+        // so the pairing works out as: edge {d, db} becomes u—w, edge {n, n+1} becomes w—v.
+        let mut rotations: Vec<(NodeId, Vec<Dart>)> = self
+            .vertices()
+            .into_iter()
+            .map(|orbit| {
+                let name = self.dart_origin[orbit[0]].clone();
+                let darts = orbit
+                    .into_iter()
+                    .map(|x| if x == db { n + 1 } else { x })
+                    .collect();
+                (name, darts)
+            })
+            .collect();
+        rotations.push((format!("s{n}"), vec![db, n]));
+        CombinatorialMap::from_rotations(rotations, n + 2)
+    }
+
+    /// Enclosure, as a derived composite: an `n`-cycle around `inner` = O1 + a placement into
+    /// the cycle's bounded face. "Circling something" is not a new primitive — it is
+    /// juxtaposition plus the content-bearing choice of *which* face.
+    ///
+    /// Returns the composed map and the nesting that reads it in the plane: the cycle at top
+    /// level with its odd-orbit face outward, `inner` placed inside the even-orbit face.
+    /// (Which orbit is "outer" is the point-at-infinity datum of the planar reading — carried
+    /// explicitly, per notes/032.)
+    pub fn enclose(inner: &CombinatorialMap, inner_outer_dart: Dart, n: usize) -> (CombinatorialMap, Nesting) {
+        let ring = CombinatorialMap::cycle(n);
+        let off = ring.n_darts;
+        let composed = ring.disjoint_union(inner);
+        let nesting = Nesting::all_top_level(vec![1]) // odd orbit outward
+            .place(inner_outer_dart + off, 0); // inner sits in the even-orbit (bounded) face
+        (composed, nesting)
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -523,6 +691,87 @@ mod tests {
             }
         }
         CombinatorialMap::from_rotations(rotations, 14)
+    }
+
+    // --- the grammar core (spec/grammar-core.md) ---
+
+    #[test]
+    fn w1_w2_validity_holds_for_construction_and_catches_corruption() {
+        assert!(cycle(3).validate().is_ok(), "a well-built map validates");
+        assert!(two_triangles().validate().is_ok());
+
+        // A dart listed nowhere: sigma defaults collide, injectivity fails.
+        let broken = CombinatorialMap::from_rotations(vec![("v0".into(), vec![0, 2])], 4);
+        let errs = broken.validate().expect_err("missing darts must not validate");
+        assert!(errs.iter().any(|e| e.contains("W1")), "the failure names the rule");
+    }
+
+    #[test]
+    fn components_sees_what_degree_sequence_cannot() {
+        assert_eq!(cycle(6).components(), 1);
+        assert_eq!(two_triangles().components(), 2, "same degree sequence, different count");
+        assert_eq!(CombinatorialMap::path(1).components(), 1);
+    }
+
+    #[test]
+    fn o1_juxtaposition_is_additive_and_content_free() {
+        let u = cycle(3).disjoint_union(&cycle(3));
+        assert!(u.validate().is_ok());
+        assert_eq!(u.components(), 2);
+        assert_eq!(u.vertices().len(), 6, "V adds");
+        assert_eq!(u.edge_count(), 6, "E adds");
+        assert_eq!(u.faces().len(), 4, "raw faces add — the planar reading needs Nesting");
+    }
+
+    #[test]
+    fn o2_connection_restores_the_heffter_edmonds_precondition() {
+        // Build two disjoint triangles BY the grammar, then connect them BY the grammar —
+        // reproducing the dummy-edge result through the public operations alone.
+        let joined = cycle(3).disjoint_union(&cycle(3)).connect(0, 6);
+        assert!(joined.validate().is_ok());
+        assert_eq!(joined.components(), 1, "connection makes it one configuration");
+        assert_eq!(joined.faces().len(), 3, "three planar regions, no Nesting needed");
+        assert_eq!(joined.genus(), Some(0), "the genus formula applies again");
+    }
+
+    #[test]
+    fn o3_subdividing_a_triangle_gives_a_square() {
+        // "Metric detail dies before the fixed point," machine-checked: a triangle with one
+        // subdivided edge carries exactly a square's invariants.
+        let sub = cycle(3).subdivide(0);
+        let square = cycle(4);
+        assert!(sub.validate().is_ok());
+        assert_eq!(sub.vertices().len(), square.vertices().len());
+        assert_eq!(sub.edge_count(), square.edge_count());
+        assert_eq!(sub.faces().len(), square.faces().len());
+        assert_eq!(sub.genus(), square.genus());
+        assert_eq!(sub.degree_sequence(), square.degree_sequence());
+        assert_eq!(sub.components(), 1);
+    }
+
+    #[test]
+    fn o3_subdivision_is_inert_for_open_strokes_too() {
+        let sub = CombinatorialMap::path(1).subdivide(0);
+        let two = CombinatorialMap::path(2);
+        assert_eq!(sub.degree_sequence(), two.degree_sequence(), "free ends stay free");
+        assert_eq!(sub.faces().len(), two.faces().len());
+        assert_eq!(sub.components(), 1);
+    }
+
+    #[test]
+    fn enclosure_is_a_derived_composite_not_a_primitive() {
+        // Circle a segment: the composite's planar reading has the segment co-facial with the
+        // ring's bounded region — containment as a theorem, not a stipulation.
+        let seg = CombinatorialMap::path(1);
+        let (map, nesting) = CombinatorialMap::enclose(&seg, 0, 3);
+        assert!(map.validate().is_ok());
+        assert_eq!(map.components(), 2);
+        let faces = map.faces_planar(&nesting);
+        assert_eq!(faces.len(), 2, "inside-with-segment and outside");
+        assert_eq!(map.euler_characteristic_planar(&nesting), 3, "1 + c");
+        let holds = |a: Dart, b: Dart| faces.iter().any(|f| f.contains(&a) && f.contains(&b));
+        assert!(holds(0, 6), "the ring's bounded orbit and the segment share a region");
+        assert!(!holds(1, 6), "the unbounded region does not contain the segment");
     }
 
     #[test]

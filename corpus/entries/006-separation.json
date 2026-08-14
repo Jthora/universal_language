@@ -1,0 +1,17 @@
+{
+  "id": "006-separation",
+  "tier": "VERIFIED",
+  "lexicon": "SEPARATION — X is outside C",
+  "description": "The same segment and the same triangle, with one difference: the segment sits in the unbounded region. Identical components, identical degree sequence, identical face count — the ENTIRE meaning difference from 005 is which region the segment shares. Containment versus separation is regional structure, not shape.",
+  "n_darts": 8,
+  "rotations": { "v0": [0, 5], "v1": [2, 1], "v2": [4, 3], "s0": [6], "s1": [7] },
+  "nesting": { "top_level_outer_darts": [1, 6] },
+  "expected": {
+    "vertices": 5, "edges": 4, "components": 2,
+    "planar_faces": 2, "euler_planar": 3,
+    "degree_sequence": [1, 1, 2, 2, 2],
+    "same_face": [[1, 6]], "different_face": [[0, 6]]
+  },
+  "provenance": "map.rs::tests::nesting_distinguishes_side_by_side_from_contained",
+  "teaches": "Module N/F: the minimal pair — 005 and 006 differ only in the nesting relation, which is why nesting is content."
+}

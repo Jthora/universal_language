@@ -77,20 +77,53 @@ fn every_corpus_entry_verifies_against_the_implementation() {
             assert_eq!(map.degree_sequence(), want, "{id}: degree sequence");
         }
 
-        // planar assertions require the entry to carry its nesting — extra structure, by design
-        if let Some(nest) = entry.get("nesting") {
+        if let Some(c) = exp["components"].as_u64() {
+            assert_eq!(map.components() as u64, c, "{id}: components");
+        }
+
+        // The face set used for regional (lexicon) assertions: the planar reading when the entry
+        // carries its nesting, the raw orbit faces otherwise (sufficient for connected entries).
+        let region_faces: Vec<Vec<usize>> = if let Some(nest) = entry.get("nesting") {
             let outer: Vec<usize> = nest["top_level_outer_darts"]
                 .as_array()
                 .expect("top_level_outer_darts")
                 .iter()
                 .map(|d| d.as_u64().expect("dart") as usize)
                 .collect();
-            let nesting = Nesting::all_top_level(outer);
+            let mut nesting = Nesting::all_top_level(outer);
+            if let Some(places) = nest["placements"].as_array() {
+                for p in places {
+                    let pair = p.as_array().expect("placement pair");
+                    nesting = nesting.place(
+                        pair[0].as_u64().expect("outer dart") as usize,
+                        pair[1].as_u64().expect("container dart") as usize,
+                    );
+                }
+            }
             if let Some(pf) = exp["planar_faces"].as_u64() {
                 assert_eq!(map.faces_planar(&nesting).len() as u64, pf, "{id}: planar faces");
             }
             if let Some(chi) = exp["euler_planar"].as_i64() {
                 assert_eq!(map.euler_characteristic_planar(&nesting), chi, "{id}: planar Euler");
+            }
+            map.faces_planar(&nesting)
+        } else {
+            map.faces()
+        };
+
+        // Lexicon-grade regional semantics: co-facality is the machine-checkable form of
+        // containment/separation/adjacency (spec/grammar-core.md).
+        let cofacial = |a: usize, b: usize| region_faces.iter().any(|f| f.contains(&a) && f.contains(&b));
+        if let Some(pairs) = exp["same_face"].as_array() {
+            for p in pairs {
+                let (a, b) = (p[0].as_u64().unwrap() as usize, p[1].as_u64().unwrap() as usize);
+                assert!(cofacial(a, b), "{id}: darts {a},{b} must share a region");
+            }
+        }
+        if let Some(pairs) = exp["different_face"].as_array() {
+            for p in pairs {
+                let (a, b) = (p[0].as_u64().unwrap() as usize, p[1].as_u64().unwrap() as usize);
+                assert!(!cofacial(a, b), "{id}: darts {a},{b} must lie in different regions");
             }
         }
 

@@ -3158,6 +3158,80 @@ claims:
       - "a hidden or trimmed release artifact separate from the working repo (rejected: hiding the workshop discards the credibility layer, and a curated 'clean' artifact is precisely less trustworthy to the target reader than the auditable mess)"
       - "prose-only architecture documentation (rejected: F-031 — seventeen prose rules failed as background in one audit; the index gets a checker or it gets stale)"
 
+  - id: GRAMMAR-CORE-IS-DERIVED
+    scope_reviewed: [FIXED-POINT-IS-COMBINATORIAL-MAP]   # MATERIAL and accounted for — the hub's connected-configurations limit is exactly why W3 exists: disconnected planar readings require Nesting, and the grammar makes that a well-formedness rule rather than a scar
+    statement: >
+      The core grammar of UWS is derived from the substrate, not designed. Well-formedness is map
+      validity (W1/W2, definitional) plus the nesting requirement for disconnected planar readings
+      (W3, from the Heffter-Edmonds connected precondition). Composition is three operations —
+      place, connect, subdivide — and every choice an operation takes is semantic content, not
+      convention: which face (containment versus separation), where in the rotation (which regions
+      the edge splits). The layer's entire convention residue is the already-proved global Z/2.
+    tier: ARGUED
+    evidence: spec/grammar-core.md
+    priority: 0
+    scope: >
+      MACHINE-CHECKED COMPONENTS: validate(), components(), disjoint_union(), connect(),
+      subdivide(), enclose() with seven passing tests (map.rs); the corpus harness exercises the
+      regional semantics on every CI run. WHAT ARGUED COVERS: that these three operations and two
+      validity rules constitute THE core — i.e. completeness of the inventory over the substrate —
+      is argued from the substrate's structure (what else could an operation on a rotation system
+      be?), not proved by enumeration. The origami lesson applies (notes/047): a derived inventory
+      is an enumeration theorem over a stated domain, and that enumeration has not been performed.
+      HONEST LIMITS (spec section 5): smooth (E1's inverse) unimplemented; equivalence generated in
+      the subdivision direction only; isomorphism checked by invariants, not canonically; ISOLATED
+      POINTS UNREPRESENTABLE — a degree-0 vertex has no darts, so the legacy Point primitive at
+      degree 0 has no fixed-point form in the current object. Enclosure is a derived composite, not
+      a primitive.
+      RE-DERIVES THE LEGACY: uws/'s spatial placement grammar is O1's content-bearing argument (the
+      Nesting relation) — what the designed notation asserted, the substrate produces.
+    notes: >
+      Priority 0 with S8 satisfied structurally: the claim rests on our own code and tests, not on
+      external sources — rank (1)/(4) evidence, checkable here.
+
+  - id: SUBDIVISION-IS-INERT
+    statement: >
+      Subdivision — inserting a degree-2 vertex on an edge — is semantically inert at the fixed
+      point: faces, genus, components, degree profile of free ends all unchanged. A triangle with a
+      subdivided edge carries exactly a square's invariants. This is the machine-checked form of
+      "metric detail dies before the fixed point."
+    tier: VERIFIED
+    evidence: ul-forge/crates/ul-core/src/map.rs
+    priority: 1
+    notes: >
+      Tests: o3_subdividing_a_triangle_gives_a_square, o3_subdivision_is_inert_for_open_strokes_too.
+      Grounds equivalence E1 of the grammar (spec/grammar-core.md): expressions related by
+      subdivision denote the same configuration. E1 is generated in the subdivision direction only
+      until smooth() exists — labeled there and here.
+
+  - id: LEXICON-V1-FIVE-MEANINGS
+    scope_reviewed: [SEMANTIC-STACK-M1-M2-M3, READING-INVARIANCE-TARGET, GRAMMAR-CORE-IS-DERIVED]   # hubs 1-2 MATERIAL, accounted for by the tier split in scope below — VERIFIED covers the structural side only; the reader-facing meaning claim is delegated to M1 (CONJECTURED) and inherits reading-invariance's status. hub 3 MATERIAL and accounted for — the lexicon's degree-0 gap and the inventory-completeness caveat are that hub's own stated limits, restated in this claim's coverage paragraph
+    statement: >
+      Five natural-tier lexicon entries exist whose structural facts are machine-verified on every
+      CI run: CONTAINMENT, SEPARATION, ADJACENCY, JUNCTION-WITH-FREE-ENDS, MULTIPLICITY (corpus
+      entries 005-009). Containment and separation form a minimal pair — identical components,
+      degree sequence and face count, with the entire meaning difference carried by which region is
+      shared. These are the first UL expressions whose semantic contrasts are checked rather than
+      stipulated.
+    tier: VERIFIED
+    evidence: ul-forge/crates/ul-core/tests/corpus_tests.rs
+    priority: 0
+    scope: >
+      THE TIER SPLIT, stated exactly: VERIFIED covers the STRUCTURAL side — the co-facality,
+      degree, and component facts asserted in each entry's expected block and checked by the
+      harness against the real implementation. That these structures MEAN containment, adjacency,
+      count TO A READER is the M1 exemplification route (SEMANTIC-STACK-M1-M2-M3, CONJECTURED),
+      whose keystone is READING-INVARIANCE-TARGET. The lexicon is built so that IF M1 holds, the
+      meanings are theorems; the structural half is banked either way.
+      COVERAGE, honestly: five meanings is a start, not a vocabulary. No assertion layer, no
+      quantification, no relations beyond the regional ones, no degree-0 Point (unrepresentable in
+      the current object — see GRAMMAR-CORE-IS-DERIVED).
+    notes: >
+      Priority 0 with S8 satisfied structurally: rank (1)/(4) evidence — our own machine-checked
+      artifacts. The minimal pair 005/006 is the exhibit: a linguist's minimal pair where the
+      contrast dimension is the nesting relation, which is exactly why W3 makes nesting
+      well-formedness-relevant content.
+
   - id: UNIVERSAL-MEANS-CONVENTION-FREE
     statement: >
       In ordinary usage "universal language" means something that travels without a shared

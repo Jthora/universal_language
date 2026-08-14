@@ -137,8 +137,9 @@ Every substantive claim is registered in **`claims.yaml`** with a tier. Trust th
 discoveries. Very little is `VERIFIED` — that is the accurate picture of a project at this stage,
 not a gap in the bookkeeping.
 
-**Directory tiers:** `spec/` = what exists (currently empty, deliberately) · `design/` = intended,
-not built · `research/` = open questions, speculation allowed but labelled.
+**Directory tiers:** `spec/` = what exists — first entry `grammar-core.md`, the derived grammar,
+every rule test-backed · `design/` = intended, not built · `research/` = open questions,
+speculation allowed but labelled.
 
 ---
 

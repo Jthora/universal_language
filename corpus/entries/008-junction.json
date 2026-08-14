@@ -1,0 +1,14 @@
+{
+  "id": "008-junction",
+  "tier": "VERIFIED",
+  "lexicon": "JUNCTION + FREE END — a 3-fold meeting with three termini",
+  "description": "A Y: three strokes meeting at one vertex. Degree is the topological invariant the junction axis carries (notes/024); the three degree-1 free ends are the local type the legacy inventory never named. One face: a tree encloses nothing.",
+  "n_darts": 6,
+  "rotations": { "v0": [0, 2, 4], "v1": [1], "v2": [3], "v3": [5] },
+  "expected": {
+    "vertices": 4, "edges": 3, "faces": 1, "genus": 0, "components": 1,
+    "degree_sequence": [1, 1, 1, 3]
+  },
+  "provenance": "notes/024 (junction axis, derived); verified by this harness",
+  "teaches": "Module N/S: the canonical symbol inventory is indexed by junction degree — this is degree 3, with degree 1 at each terminus."
+}
