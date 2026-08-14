@@ -82,7 +82,11 @@ fn infer_si1(surface: &Gir) -> Option<PragmaticInference> {
     // For now, create a simple annotation rather than a full GIR transform
     let mut intended = surface.clone();
     // Mark the intended as having the negated universal reading
-    if let Some(node) = intended.nodes.iter_mut().find(|n| n.id == quantifier_node.id) {
+    if let Some(node) = intended
+        .nodes
+        .iter_mut()
+        .find(|n| n.id == quantifier_node.id)
+    {
         node.label = Some(format!("¬∀ (from ∃ p={})", measure));
     }
 
@@ -125,9 +129,10 @@ fn infer_ci3(surface: &Gir) -> Option<PragmaticInference> {
     use crate::types::node::PerformativeForce;
 
     // Find a node with Query force
-    let query_node = surface.nodes.iter().find(|n| {
-        n.force == Some(PerformativeForce::Query)
-    })?;
+    let query_node = surface
+        .nodes
+        .iter()
+        .find(|n| n.force == Some(PerformativeForce::Query))?;
 
     // Check if any child has a label suggesting ability ("can", "able", "ability")
     let children = surface.children_of(&query_node.id);
@@ -173,17 +178,13 @@ mod tests {
     #[test]
     fn si1_detects_partial_quantifier() {
         // Build a GIR with a partial quantifier (measure = 0.5 → "some")
-        let root = Node::enclosure("q1", EnclosureShape::Circle)
-            .with_label("quantify");
+        let root = Node::enclosure("q1", EnclosureShape::Circle).with_label("quantify");
         let angle = Node::angle("a1", 0.5); // measure < 1.0
         let entity = Node::point("e1").with_label("things");
         let gir = Gir::new(
             "q1",
             vec![root, angle, entity],
-            vec![
-                Edge::contains("q1", "a1"),
-                Edge::contains("q1", "e1"),
-            ],
+            vec![Edge::contains("q1", "a1"), Edge::contains("q1", "e1")],
         );
 
         let inferences = infer(&gir);
@@ -202,11 +203,7 @@ mod tests {
             a.sort = Sort::Modifier;
             a
         };
-        let gir = Gir::new(
-            "q1",
-            vec![root, angle],
-            vec![Edge::contains("q1", "a1")],
-        );
+        let gir = Gir::new("q1", vec![root, angle], vec![Edge::contains("q1", "a1")]);
 
         let inferences = infer(&gir);
         assert!(
@@ -217,17 +214,13 @@ mod tests {
 
     #[test]
     fn si3_detects_disjoin() {
-        let root = Node::enclosure("d1", EnclosureShape::Circle)
-            .with_label("disjoin");
+        let root = Node::enclosure("d1", EnclosureShape::Circle).with_label("disjoin");
         let a = Node::point("a1");
         let b = Node::point("b1");
         let gir = Gir::new(
             "d1",
             vec![root, a, b],
-            vec![
-                Edge::contains("d1", "a1"),
-                Edge::contains("d1", "b1"),
-            ],
+            vec![Edge::contains("d1", "a1"), Edge::contains("d1", "b1")],
         );
 
         let inferences = infer(&gir);
@@ -239,17 +232,14 @@ mod tests {
 
     #[test]
     fn ci3_detects_indirect_request() {
-        let root = Node::enclosure("q1", EnclosureShape::Circle)
-            .with_force(PerformativeForce::Query);
+        let root =
+            Node::enclosure("q1", EnclosureShape::Circle).with_force(PerformativeForce::Query);
         let ability = Node::point("a1").with_label("can");
         let action = Node::point("e1").with_label("pass the salt");
         let gir = Gir::new(
             "q1",
             vec![root, ability, action],
-            vec![
-                Edge::contains("q1", "a1"),
-                Edge::contains("q1", "e1"),
-            ],
+            vec![Edge::contains("q1", "a1"), Edge::contains("q1", "e1")],
         );
 
         let inferences = infer(&gir);
@@ -258,21 +248,20 @@ mod tests {
             "Expected CI-3 inference from query+ability"
         );
         // Verify the intended has Direct force
-        let ci3 = inferences.iter().find(|i| i.rule == InferenceRule::CI3).unwrap();
+        let ci3 = inferences
+            .iter()
+            .find(|i| i.rule == InferenceRule::CI3)
+            .unwrap();
         let intended_root = ci3.intended.node(&ci3.intended.root).unwrap();
         assert_eq!(intended_root.force, Some(PerformativeForce::Direct));
     }
 
     #[test]
     fn ci3_does_not_trigger_without_ability() {
-        let root = Node::enclosure("q1", EnclosureShape::Circle)
-            .with_force(PerformativeForce::Query);
+        let root =
+            Node::enclosure("q1", EnclosureShape::Circle).with_force(PerformativeForce::Query);
         let entity = Node::point("e1").with_label("something");
-        let gir = Gir::new(
-            "q1",
-            vec![root, entity],
-            vec![Edge::contains("q1", "e1")],
-        );
+        let gir = Gir::new("q1", vec![root, entity], vec![Edge::contains("q1", "e1")]);
 
         let inferences = infer(&gir);
         assert!(

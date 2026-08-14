@@ -1,0 +1,15 @@
+{
+  "id": "007-adjacency",
+  "tier": "VERIFIED",
+  "lexicon": "ADJACENCY — regions R1 and R2 share a boundary",
+  "description": "Two triangles sharing edge AB. The shared edge's two darts lie in two DIFFERENT bounded regions — that is what 'adjacent regions' is, structurally: co-boundary. Connected, so no nesting is needed and the genus formula applies.",
+  "n_darts": 10,
+  "rotations": { "v0": [0, 9, 5], "v1": [1, 2, 6], "v2": [3, 4], "v3": [7, 8] },
+  "expected": {
+    "vertices": 4, "edges": 5, "faces": 3, "genus": 0, "components": 1,
+    "degree_sequence": [2, 2, 3, 3],
+    "same_face": [[0, 2]], "different_face": [[0, 1], [1, 3]]
+  },
+  "provenance": "derived in research/notes/056; verified by this harness",
+  "teaches": "Module S: RCC-8's EC (externally connected) as a fact about face orbits."
+}

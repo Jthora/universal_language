@@ -103,31 +103,65 @@ fn deparse(gir: &Bound<'_, PyAny>) -> PyResult<String> {
 fn compose(operation: &str, operands: Vec<String>) -> PyResult<PyObject> {
     let girs: Vec<ul_core::Gir> = operands
         .iter()
-        .map(|s| ul_core::parser::parse(s)
-            .map_err(|e| PyValueError::new_err(format!("Parse error on '{s}': {e}"))))
+        .map(|s| {
+            ul_core::parser::parse(s)
+                .map_err(|e| PyValueError::new_err(format!("Parse error on '{s}': {e}")))
+        })
         .collect::<Result<Vec<_>, _>>()?;
 
     let result = match operation {
         "negate" => ul_core::composer::negate(girs.first().ok_or_else(|| arity_err("negate", 1))?),
         "embed" => ul_core::composer::embed(girs.first().ok_or_else(|| arity_err("embed", 1))?),
-        "abstract" => ul_core::composer::abstract_op(girs.first().ok_or_else(|| arity_err("abstract", 1))?),
+        "abstract" => {
+            ul_core::composer::abstract_op(girs.first().ok_or_else(|| arity_err("abstract", 1))?)
+        }
         "invert" => ul_core::composer::invert(girs.first().ok_or_else(|| arity_err("invert", 1))?),
         "predicate" => {
             let (a, b, c) = get_3(&girs, "predicate")?;
             ul_core::composer::predicate(a, b, c)
         }
-        "modify_entity" => { let (a, b) = get_2(&girs, "modify_entity")?; ul_core::composer::modify_entity(a, b) }
-        "modify_relation" => { let (a, b) = get_2(&girs, "modify_relation")?; ul_core::composer::modify_relation(a, b) }
-        "conjoin" => { let (a, b) = get_2(&girs, "conjoin")?; ul_core::composer::conjoin(a, b) }
-        "disjoin" => { let (a, b) = get_2(&girs, "disjoin")?; ul_core::composer::disjoin(a, b) }
-        "compose" => { let (a, b) = get_2(&girs, "compose")?; ul_core::composer::compose(a, b) }
-        "quantify" => { let (a, b) = get_2(&girs, "quantify")?; ul_core::composer::quantify(a, b) }
-        "bind" => { let (a, b) = get_2(&girs, "bind")?; ul_core::composer::bind(a, b) }
-        "modify_assertion" => { let (a, b) = get_2(&girs, "modify_assertion")?; ul_core::composer::modify_assertion(a, b) }
-        _ => return Err(PyValueError::new_err(format!("Unknown operation: {operation}"))),
-    }.map_err(|e| PyValueError::new_err(format!("Compose error: {e}")))?;
+        "modify_entity" => {
+            let (a, b) = get_2(&girs, "modify_entity")?;
+            ul_core::composer::modify_entity(a, b)
+        }
+        "modify_relation" => {
+            let (a, b) = get_2(&girs, "modify_relation")?;
+            ul_core::composer::modify_relation(a, b)
+        }
+        "conjoin" => {
+            let (a, b) = get_2(&girs, "conjoin")?;
+            ul_core::composer::conjoin(a, b)
+        }
+        "disjoin" => {
+            let (a, b) = get_2(&girs, "disjoin")?;
+            ul_core::composer::disjoin(a, b)
+        }
+        "compose" => {
+            let (a, b) = get_2(&girs, "compose")?;
+            ul_core::composer::compose(a, b)
+        }
+        "quantify" => {
+            let (a, b) = get_2(&girs, "quantify")?;
+            ul_core::composer::quantify(a, b)
+        }
+        "bind" => {
+            let (a, b) = get_2(&girs, "bind")?;
+            ul_core::composer::bind(a, b)
+        }
+        "modify_assertion" => {
+            let (a, b) = get_2(&girs, "modify_assertion")?;
+            ul_core::composer::modify_assertion(a, b)
+        }
+        _ => {
+            return Err(PyValueError::new_err(format!(
+                "Unknown operation: {operation}"
+            )))
+        }
+    }
+    .map_err(|e| PyValueError::new_err(format!("Compose error: {e}")))?;
 
-    let gir_json = result.to_json()
+    let gir_json = result
+        .to_json()
         .map_err(|e| PyValueError::new_err(format!("Serialization error: {e}")))?;
     let ul_script = ul_core::parser::deparse(&result).unwrap_or_default();
 
@@ -173,7 +207,10 @@ fn get_2<'a>(girs: &'a [ul_core::Gir], op: &str) -> PyResult<(&'a ul_core::Gir, 
     Ok((&girs[0], &girs[1]))
 }
 
-fn get_3<'a>(girs: &'a [ul_core::Gir], op: &str) -> PyResult<(&'a ul_core::Gir, &'a ul_core::Gir, &'a ul_core::Gir)> {
+fn get_3<'a>(
+    girs: &'a [ul_core::Gir],
+    op: &str,
+) -> PyResult<(&'a ul_core::Gir, &'a ul_core::Gir, &'a ul_core::Gir)> {
     if girs.len() < 3 {
         return Err(arity_err(op, 3));
     }
@@ -211,7 +248,8 @@ fn set_force(gir: &Bound<'_, PyAny>, force: &str) -> PyResult<PyObject> {
     };
     let result = ul_core::performative::with_force(&gir_obj, perf_force)
         .map_err(|e| PyValueError::new_err(format!("Force error: {e}")))?;
-    let json_str = result.to_json()
+    let json_str = result
+        .to_json()
         .map_err(|e| PyValueError::new_err(format!("Serialization error: {e}")))?;
     Python::with_gil(|py| {
         let json_mod = py.import("json")?;
@@ -239,7 +277,10 @@ fn infer_pragmatics(gir: &Bound<'_, PyAny>) -> PyResult<PyObject> {
             dict.set_item("surface", json_mod.call_method1("loads", (surface_json,))?)?;
             let intended_json = serde_json::to_string(&inf.intended)
                 .map_err(|e| PyValueError::new_err(format!("JSON error: {e}")))?;
-            dict.set_item("intended", json_mod.call_method1("loads", (intended_json,))?)?;
+            dict.set_item(
+                "intended",
+                json_mod.call_method1("loads", (intended_json,))?,
+            )?;
             results.append(dict)?;
         }
         let out = pyo3::types::PyDict::new(py);

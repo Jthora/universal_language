@@ -1,12 +1,14 @@
 //! Route handlers for all API endpoints.
 
 use axum::{
-    Router,
-    extract::{State, ws::{Message, WebSocket, WebSocketUpgrade}},
+    extract::{
+        ws::{Message, WebSocket, WebSocketUpgrade},
+        State,
+    },
     http::StatusCode,
     response::{IntoResponse, Response},
     routing::{get, post},
-    Json,
+    Json, Router,
 };
 use serde::{Deserialize, Serialize};
 use std::time::Duration;
@@ -203,7 +205,10 @@ async fn health(State(state): State<AppState>) -> Json<HealthResponse> {
 async fn parse(body: String) -> Result<Json<ParseResponse>, (StatusCode, Json<ApiError>)> {
     const MAX_LEN: usize = 100_000;
     if body.len() > MAX_LEN {
-        return Err(ApiError::new("PAYLOAD_TOO_LARGE", "Input exceeds 100KB limit"));
+        return Err(ApiError::new(
+            "PAYLOAD_TOO_LARGE",
+            "Input exceeds 100KB limit",
+        ));
     }
 
     let result = ul_core::parser::parse_with_diagnostics(&body);
@@ -285,11 +290,14 @@ async fn validate(
 ) -> Result<Json<ValidationResponse>, (StatusCode, Json<ApiError>)> {
     const MAX_LEN: usize = 100_000;
     if body.len() > MAX_LEN {
-        return Err(ApiError::new("PAYLOAD_TOO_LARGE", "Input exceeds 100KB limit"));
+        return Err(ApiError::new(
+            "PAYLOAD_TOO_LARGE",
+            "Input exceeds 100KB limit",
+        ));
     }
 
-    let req: ValidateRequest = serde_json::from_slice(&body)
-        .map_err(|e| ApiError::new("INVALID_JSON", e.to_string()))?;
+    let req: ValidateRequest =
+        serde_json::from_slice(&body).map_err(|e| ApiError::new("INVALID_JSON", e.to_string()))?;
 
     let gir_str = req.gir.to_string();
     let gir = ul_core::Gir::from_json(&gir_str)
@@ -350,9 +358,11 @@ async fn convert(Json(req): Json<ConvertRequest>) -> Response {
             }
         },
         "gir-json" => match gir.to_json() {
-            Ok(json) => {
-                ([(axum::http::header::CONTENT_TYPE, "application/json")], json).into_response()
-            }
+            Ok(json) => (
+                [(axum::http::header::CONTENT_TYPE, "application/json")],
+                json,
+            )
+                .into_response(),
             Err(e) => {
                 let (status, json) = ApiError::new("INTERNAL_ERROR", e.to_string());
                 (status, json).into_response()
@@ -401,39 +411,91 @@ async fn compose(
     Json(req): Json<ComposeRequest>,
 ) -> Result<Json<ComposeResponse>, (StatusCode, Json<ApiError>)> {
     if req.operands.iter().any(|s| s.len() > 100_000) {
-        return Err(ApiError::new("PAYLOAD_TOO_LARGE", "Operand exceeds 100KB limit"));
+        return Err(ApiError::new(
+            "PAYLOAD_TOO_LARGE",
+            "Operand exceeds 100KB limit",
+        ));
     }
 
     let girs: Vec<ul_core::Gir> = req
         .operands
         .iter()
-        .map(|s| ul_core::parser::parse(s).map_err(|e| {
-            ApiError::new("PARSE_ERROR", format!("Parse error on '{}': {e}", s))
-        }))
+        .map(|s| {
+            ul_core::parser::parse(s)
+                .map_err(|e| ApiError::new("PARSE_ERROR", format!("Parse error on '{}': {e}", s)))
+        })
         .collect::<Result<Vec<_>, _>>()?;
 
     let result = match req.operation.as_str() {
-        "negate" => { check_arity(&girs, 1, "negate")?; ul_core::composer::negate(&girs[0]) }
-        "embed" => { check_arity(&girs, 1, "embed")?; ul_core::composer::embed(&girs[0]) }
-        "abstract" => { check_arity(&girs, 1, "abstract")?; ul_core::composer::abstract_op(&girs[0]) }
-        "invert" => { check_arity(&girs, 1, "invert")?; ul_core::composer::invert(&girs[0]) }
-        "predicate" => { check_arity(&girs, 3, "predicate")?; ul_core::composer::predicate(&girs[0], &girs[1], &girs[2]) }
-        "modify_entity" => { check_arity(&girs, 2, "modify_entity")?; ul_core::composer::modify_entity(&girs[0], &girs[1]) }
-        "modify_relation" => { check_arity(&girs, 2, "modify_relation")?; ul_core::composer::modify_relation(&girs[0], &girs[1]) }
-        "conjoin" => { check_arity(&girs, 2, "conjoin")?; ul_core::composer::conjoin(&girs[0], &girs[1]) }
-        "disjoin" => { check_arity(&girs, 2, "disjoin")?; ul_core::composer::disjoin(&girs[0], &girs[1]) }
-        "compose" => { check_arity(&girs, 2, "compose")?; ul_core::composer::compose(&girs[0], &girs[1]) }
-        "quantify" => { check_arity(&girs, 2, "quantify")?; ul_core::composer::quantify(&girs[0], &girs[1]) }
-        "bind" => { check_arity(&girs, 2, "bind")?; ul_core::composer::bind(&girs[0], &girs[1]) }
-        "modify_assertion" => { check_arity(&girs, 2, "modify_assertion")?; ul_core::composer::modify_assertion(&girs[0], &girs[1]) }
-        other => return Err(ApiError::new("UNKNOWN_OPERATION", format!("Unknown operation: {other}"))),
-    }.map_err(|e| ApiError::new("COMPOSE_ERROR", e.to_string()))?;
+        "negate" => {
+            check_arity(&girs, 1, "negate")?;
+            ul_core::composer::negate(&girs[0])
+        }
+        "embed" => {
+            check_arity(&girs, 1, "embed")?;
+            ul_core::composer::embed(&girs[0])
+        }
+        "abstract" => {
+            check_arity(&girs, 1, "abstract")?;
+            ul_core::composer::abstract_op(&girs[0])
+        }
+        "invert" => {
+            check_arity(&girs, 1, "invert")?;
+            ul_core::composer::invert(&girs[0])
+        }
+        "predicate" => {
+            check_arity(&girs, 3, "predicate")?;
+            ul_core::composer::predicate(&girs[0], &girs[1], &girs[2])
+        }
+        "modify_entity" => {
+            check_arity(&girs, 2, "modify_entity")?;
+            ul_core::composer::modify_entity(&girs[0], &girs[1])
+        }
+        "modify_relation" => {
+            check_arity(&girs, 2, "modify_relation")?;
+            ul_core::composer::modify_relation(&girs[0], &girs[1])
+        }
+        "conjoin" => {
+            check_arity(&girs, 2, "conjoin")?;
+            ul_core::composer::conjoin(&girs[0], &girs[1])
+        }
+        "disjoin" => {
+            check_arity(&girs, 2, "disjoin")?;
+            ul_core::composer::disjoin(&girs[0], &girs[1])
+        }
+        "compose" => {
+            check_arity(&girs, 2, "compose")?;
+            ul_core::composer::compose(&girs[0], &girs[1])
+        }
+        "quantify" => {
+            check_arity(&girs, 2, "quantify")?;
+            ul_core::composer::quantify(&girs[0], &girs[1])
+        }
+        "bind" => {
+            check_arity(&girs, 2, "bind")?;
+            ul_core::composer::bind(&girs[0], &girs[1])
+        }
+        "modify_assertion" => {
+            check_arity(&girs, 2, "modify_assertion")?;
+            ul_core::composer::modify_assertion(&girs[0], &girs[1])
+        }
+        other => {
+            return Err(ApiError::new(
+                "UNKNOWN_OPERATION",
+                format!("Unknown operation: {other}"),
+            ))
+        }
+    }
+    .map_err(|e| ApiError::new("COMPOSE_ERROR", e.to_string()))?;
 
     let gir_json = serde_json::to_value(&result)
         .map_err(|e| ApiError::new("INTERNAL_ERROR", e.to_string()))?;
     let ul_script = ul_core::parser::deparse(&result).unwrap_or_default();
 
-    Ok(Json(ComposeResponse { gir: gir_json, ul_script }))
+    Ok(Json(ComposeResponse {
+        gir: gir_json,
+        ul_script,
+    }))
 }
 
 fn check_arity(
@@ -490,7 +552,12 @@ async fn set_force(
         "commit" => ul_core::PerformativeForce::Commit,
         "express" => ul_core::PerformativeForce::Express,
         "declare" => ul_core::PerformativeForce::Declare,
-        other => return Err(ApiError::new("UNKNOWN_FORCE", format!("Unknown force: {other}"))),
+        other => {
+            return Err(ApiError::new(
+                "UNKNOWN_FORCE",
+                format!("Unknown force: {other}"),
+            ))
+        }
     };
 
     let result = ul_core::performative::with_force(&gir, force)
@@ -560,11 +627,9 @@ async fn handle_ws(mut socket: WebSocket) {
             Ok(Some(Ok(Message::Text(text)))) => {
                 // Try to parse as JSON
                 if let Ok(msg) = serde_json::from_str::<WsClientMessage>(&text) {
-                    match msg.msg_type.as_str() {
-                        "edit" => {
-                            pending = msg.payload.and_then(|p| p.text);
-                        }
-                        _ => {} // Ignore unknown message types
+                    // Ignore unknown message types
+                    if msg.msg_type.as_str() == "edit" {
+                        pending = msg.payload.and_then(|p| p.text);
                     }
                 }
             }
@@ -572,11 +637,7 @@ async fn handle_ws(mut socket: WebSocket) {
             Err(_) => {
                 if let Some(ref source) = pending {
                     let response = process_live_edit(source);
-                    if socket
-                        .send(Message::Text(response.into()))
-                        .await
-                        .is_err()
-                    {
+                    if socket.send(Message::Text(response.into())).await.is_err() {
                         break; // Client disconnected
                     }
                     pending = None;

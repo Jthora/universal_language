@@ -16,11 +16,11 @@ use serde::{Deserialize, Serialize};
 use serde_json::{json, Value};
 use std::io::{self, BufRead, Write};
 
+use ul_core::composer;
 use ul_core::parser;
 use ul_core::renderer::{self, OutputFormat, RenderOptions};
 use ul_core::types::gir::Gir;
 use ul_core::validator;
-use ul_core::composer;
 
 // ── JSON-RPC 2.0 types ──
 
@@ -280,9 +280,11 @@ fn handle_ul_parse(params: &Value) -> Result<Value, String> {
         .ok_or("Missing required parameter: ul_script")?;
 
     let gir = parser::parse(ul_script).map_err(|e| format!("Parse error: {e}"))?;
-    let gir_json: Value =
-        serde_json::from_str(&gir.to_json_pretty().map_err(|e| format!("Serialize error: {e}"))?)
-            .map_err(|e| format!("JSON error: {e}"))?;
+    let gir_json: Value = serde_json::from_str(
+        &gir.to_json_pretty()
+            .map_err(|e| format!("Serialize error: {e}"))?,
+    )
+    .map_err(|e| format!("JSON error: {e}"))?;
 
     Ok(json!({ "gir": gir_json }))
 }
@@ -369,7 +371,8 @@ fn handle_ul_parse_and_render(params: &Value) -> Result<Value, String> {
 
     let gir = parser::parse(ul_script).map_err(|e| format!("Parse error: {e}"))?;
     let gir_json: Value = serde_json::from_str(
-        &gir.to_json_pretty().map_err(|e| format!("Serialize error: {e}"))?,
+        &gir.to_json_pretty()
+            .map_err(|e| format!("Serialize error: {e}"))?,
     )
     .map_err(|e| format!("JSON error: {e}"))?;
 
@@ -400,15 +403,15 @@ fn handle_ul_parse_and_render(params: &Value) -> Result<Value, String> {
 }
 
 fn handle_ul_lexicon(params: &Value) -> Result<Value, String> {
-    let query = params
-        .get("query")
-        .and_then(|v| v.as_str())
-        .unwrap_or("");
+    let query = params.get("query").and_then(|v| v.as_str()).unwrap_or("");
 
     let entries = if query.is_empty() {
         ul_core::lexicon::all_entries().to_vec()
     } else {
-        ul_core::lexicon::search(query).into_iter().cloned().collect()
+        ul_core::lexicon::search(query)
+            .into_iter()
+            .cloned()
+            .collect()
     };
 
     let entries_json: Vec<Value> = entries
@@ -471,13 +474,11 @@ fn handle_ul_compose(params: &Value) -> Result<Value, String> {
         }
         "modify_entity" => {
             ensure_operands(&girs, 2, "modify_entity")?;
-            composer::modify_entity(&girs[0], &girs[1])
-                .map_err(|e| format!("Compose error: {e}"))
+            composer::modify_entity(&girs[0], &girs[1]).map_err(|e| format!("Compose error: {e}"))
         }
         "modify_relation" => {
             ensure_operands(&girs, 2, "modify_relation")?;
-            composer::modify_relation(&girs[0], &girs[1])
-                .map_err(|e| format!("Compose error: {e}"))
+            composer::modify_relation(&girs[0], &girs[1]).map_err(|e| format!("Compose error: {e}"))
         }
         "conjoin" => {
             ensure_operands(&girs, 2, "conjoin")?;
@@ -507,9 +508,12 @@ fn handle_ul_compose(params: &Value) -> Result<Value, String> {
         _ => Err(format!("Unknown operation: {operation}")),
     }?;
 
-    let gir_json: Value =
-        serde_json::from_str(&result.to_json_pretty().map_err(|e| format!("Serialize error: {e}"))?)
-            .map_err(|e| format!("JSON error: {e}"))?;
+    let gir_json: Value = serde_json::from_str(
+        &result
+            .to_json_pretty()
+            .map_err(|e| format!("Serialize error: {e}"))?,
+    )
+    .map_err(|e| format!("JSON error: {e}"))?;
     let ul_script = parser::deparse(&result).unwrap_or_default();
 
     Ok(json!({
@@ -520,7 +524,10 @@ fn handle_ul_compose(params: &Value) -> Result<Value, String> {
 
 fn ensure_operands(girs: &[Gir], expected: usize, op: &str) -> Result<(), String> {
     if girs.len() < expected {
-        Err(format!("{op} requires {expected} operand(s), got {}", girs.len()))
+        Err(format!(
+            "{op} requires {expected} operand(s), got {}",
+            girs.len()
+        ))
     } else {
         Ok(())
     }
@@ -562,12 +569,15 @@ fn handle_ul_set_force(params: &Value) -> Result<Value, String> {
         other => return Err(format!("Unknown force: {other}")),
     };
 
-    let result = ul_core::performative::with_force(&gir, force)
-        .map_err(|e| format!("Force error: {e}"))?;
+    let result =
+        ul_core::performative::with_force(&gir, force).map_err(|e| format!("Force error: {e}"))?;
 
-    let result_json: Value =
-        serde_json::from_str(&result.to_json_pretty().map_err(|e| format!("Serialize error: {e}"))?)
-            .map_err(|e| format!("JSON error: {e}"))?;
+    let result_json: Value = serde_json::from_str(
+        &result
+            .to_json_pretty()
+            .map_err(|e| format!("Serialize error: {e}"))?,
+    )
+    .map_err(|e| format!("JSON error: {e}"))?;
     let ul_script = parser::deparse(&result).unwrap_or_default();
 
     Ok(json!({
@@ -624,14 +634,11 @@ fn handle_request(req: &JsonRpcRequest) -> JsonRpcResponse {
 
         "notifications/initialized" => {
             // Acknowledgment — no response needed for notifications
-            return JsonRpcResponse::success(id, json!(null));
+            JsonRpcResponse::success(id, json!(null))
         }
 
         // Tool discovery
-        "tools/list" => JsonRpcResponse::success(
-            id,
-            json!({ "tools": tool_definitions() }),
-        ),
+        "tools/list" => JsonRpcResponse::success(id, json!({ "tools": tool_definitions() })),
 
         // Tool execution
         "tools/call" => {
@@ -640,11 +647,7 @@ fn handle_request(req: &JsonRpcRequest) -> JsonRpcResponse {
                 .get("name")
                 .and_then(|v| v.as_str())
                 .unwrap_or("");
-            let arguments = req
-                .params
-                .get("arguments")
-                .cloned()
-                .unwrap_or(json!({}));
+            let arguments = req.params.get("arguments").cloned().unwrap_or(json!({}));
 
             let result = match tool_name {
                 "ul_parse" => handle_ul_parse(&arguments),
@@ -717,12 +720,13 @@ async fn main() {
         let request: JsonRpcRequest = match serde_json::from_str(trimmed) {
             Ok(r) => r,
             Err(e) => {
-                let err_resp = JsonRpcResponse::error(
-                    Value::Null,
-                    -32700,
-                    format!("Parse error: {e}"),
+                let err_resp =
+                    JsonRpcResponse::error(Value::Null, -32700, format!("Parse error: {e}"));
+                let _ = writeln!(
+                    stdout.lock(),
+                    "{}",
+                    serde_json::to_string(&err_resp).unwrap()
                 );
-                let _ = writeln!(stdout.lock(), "{}", serde_json::to_string(&err_resp).unwrap());
                 continue;
             }
         };
@@ -754,7 +758,7 @@ mod tests {
         let result = handle_ul_parse(&params).unwrap();
         assert!(result.get("gir").is_some());
         let gir = result.get("gir").unwrap();
-        assert!(gir.get("nodes").unwrap().as_array().unwrap().len() > 0);
+        assert!(!gir.get("nodes").unwrap().as_array().unwrap().is_empty());
     }
 
     #[test]
@@ -780,7 +784,7 @@ mod tests {
         let gir = parse_result.get("gir").unwrap();
         let params = json!({ "gir": gir });
         let result = handle_ul_validate(&params).unwrap();
-        assert_eq!(result.get("valid").unwrap().as_bool().unwrap(), true);
+        assert!(result.get("valid").unwrap().as_bool().unwrap());
     }
 
     #[test]
@@ -829,7 +833,12 @@ mod tests {
         let gir = parse_result.get("gir").unwrap();
         let params = json!({ "gir": gir });
         let result = handle_ul_deparse(&params).unwrap();
-        assert!(result.get("ul_script").unwrap().as_str().unwrap().len() > 0);
+        assert!(!result
+            .get("ul_script")
+            .unwrap()
+            .as_str()
+            .unwrap()
+            .is_empty());
     }
 
     // ── ul_parse_and_render ──
@@ -839,17 +848,19 @@ mod tests {
         let params = json!({ "ul_script": "●", "width": 200, "height": 200 });
         let result = handle_ul_parse_and_render(&params).unwrap();
         assert!(result.get("gir").is_some());
-        assert_eq!(
-            result
-                .get("validation")
-                .unwrap()
-                .get("valid")
-                .unwrap()
-                .as_bool()
-                .unwrap(),
-            true
-        );
-        assert!(result.get("svg").unwrap().as_str().unwrap().contains("<svg"));
+        assert!(result
+            .get("validation")
+            .unwrap()
+            .get("valid")
+            .unwrap()
+            .as_bool()
+            .unwrap());
+        assert!(result
+            .get("svg")
+            .unwrap()
+            .as_str()
+            .unwrap()
+            .contains("<svg"));
     }
 
     #[test]
@@ -901,7 +912,10 @@ mod tests {
         };
         let resp = handle_request(&req);
         let result = resp.result.unwrap();
-        assert_eq!(result.get("protocolVersion").unwrap().as_str().unwrap(), MCP_VERSION);
+        assert_eq!(
+            result.get("protocolVersion").unwrap().as_str().unwrap(),
+            MCP_VERSION
+        );
     }
 
     #[test]
@@ -961,7 +975,7 @@ mod tests {
         let resp = handle_request(&req);
         // Unknown tools return a success with isError: true (MCP convention)
         let result = resp.result.unwrap();
-        assert_eq!(result.get("isError").unwrap().as_bool().unwrap(), true);
+        assert!(result.get("isError").unwrap().as_bool().unwrap());
     }
 
     #[test]

@@ -36,9 +36,10 @@ pub fn get_next_puzzle(proficiency: &std::collections::HashMap<String, f64>) -> 
             // Introductory puzzle (no ops required): mastered if student has any proficiency at all
             !proficiency.is_empty()
         } else {
-            puzzle.required_operations.iter().all(|op| {
-                proficiency.get(op).copied().unwrap_or(0.0) >= 0.8
-            })
+            puzzle
+                .required_operations
+                .iter()
+                .all(|op| proficiency.get(op).copied().unwrap_or(0.0) >= 0.8)
         };
         if !mastered {
             return puzzle.clone();
@@ -179,9 +180,19 @@ mod tests {
     #[test]
     fn fully_mastered_gets_hardest() {
         let mut proficiency = HashMap::new();
-        for op in &["predicate", "modify_entity", "modify_relation", "negate",
-                     "conjoin", "disjoin", "embed", "abstract", "compose",
-                     "invert", "quantify"] {
+        for op in &[
+            "predicate",
+            "modify_entity",
+            "modify_relation",
+            "negate",
+            "conjoin",
+            "disjoin",
+            "embed",
+            "abstract",
+            "compose",
+            "invert",
+            "quantify",
+        ] {
             proficiency.insert((*op).to_string(), 1.0);
         }
         let puzzle = get_next_puzzle(&proficiency);

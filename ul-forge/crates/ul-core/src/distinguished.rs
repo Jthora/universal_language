@@ -33,33 +33,60 @@ impl DistinguishedRegistry {
 
         // ── Modal distinguished elements (formal-foundations.md §7) ──
 
-        let w_current = make_entity("w_current", "The actual world — where assertions are evaluated by default");
+        let w_current = make_entity(
+            "w_current",
+            "The actual world — where assertions are evaluated by default",
+        );
         elements.insert("w_current", w_current);
 
-        let r_satisfies = make_relation("r_satisfies", "The satisfaction relation — world makes assertion true (w ⊨ a)");
+        let r_satisfies = make_relation(
+            "r_satisfies",
+            "The satisfaction relation — world makes assertion true (w ⊨ a)",
+        );
         elements.insert("r_satisfies", r_satisfies);
 
-        let r_alethic = make_relation("r_alethic", "Alethic accessibility — logically/metaphysically possible worlds");
+        let r_alethic = make_relation(
+            "r_alethic",
+            "Alethic accessibility — logically/metaphysically possible worlds",
+        );
         elements.insert("r_alethic", r_alethic);
 
-        let r_k_agent = make_relation("r_K_agent", "Epistemic accessibility — worlds consistent with what agent knows");
+        let r_k_agent = make_relation(
+            "r_K_agent",
+            "Epistemic accessibility — worlds consistent with what agent knows",
+        );
         elements.insert("r_K_agent", r_k_agent);
 
-        let r_o = make_relation("r_O", "Deontic accessibility — worlds consistent with obligations");
+        let r_o = make_relation(
+            "r_O",
+            "Deontic accessibility — worlds consistent with obligations",
+        );
         elements.insert("r_O", r_o);
 
-        let r_ability = make_relation("r_ability_agent", "Ability accessibility — worlds the agent can bring about");
+        let r_ability = make_relation(
+            "r_ability_agent",
+            "Ability accessibility — worlds the agent can bring about",
+        );
         elements.insert("r_ability_agent", r_ability);
 
-        let r_closeness = make_relation("r_closeness", "Lewis closeness ordering — ranks world similarity for counterfactuals");
+        let r_closeness = make_relation(
+            "r_closeness",
+            "Lewis closeness ordering — ranks world similarity for counterfactuals",
+        );
         elements.insert("r_closeness", r_closeness);
 
         // ── Performative distinguished elements (formal-foundations.md §8) ──
 
-        let e_speaker = make_entity("e_speaker", "The speaker — discourse participant producing the utterance");
+        let e_speaker = make_entity(
+            "e_speaker",
+            "The speaker — discourse participant producing the utterance",
+        );
         elements.insert("e_speaker", e_speaker);
 
-        let e_hearer = make_entity("e_hearer", "The hearer — discourse participant receiving the utterance");
+        let e_hearer = make_entity(
+            "e_hearer",
+            "The hearer — discourse participant receiving the utterance",
+        );
         elements.insert("e_hearer", e_hearer);
 
         DistinguishedRegistry { elements }
@@ -106,13 +133,23 @@ pub fn default_registry() -> DistinguishedRegistry {
 fn make_entity(name: &'static str, description: &'static str) -> DistinguishedElement {
     let node = Node::point(name).with_label(name).with_sort(Sort::Entity);
     let gir = Gir::new(name, vec![node], vec![]);
-    DistinguishedElement { name, description, gir }
+    DistinguishedElement {
+        name,
+        description,
+        gir,
+    }
 }
 
 fn make_relation(name: &'static str, description: &'static str) -> DistinguishedElement {
-    let node = Node::line(name, true).with_label(name).with_sort(Sort::Relation);
+    let node = Node::line(name, true)
+        .with_label(name)
+        .with_sort(Sort::Relation);
     let gir = Gir::new(name, vec![node], vec![]);
-    DistinguishedElement { name, description, gir }
+    DistinguishedElement {
+        name,
+        description,
+        gir,
+    }
 }
 
 // ── Tests ──
@@ -170,8 +207,16 @@ mod tests {
     fn all_elements_valid() {
         let reg = default_registry();
         for elem in reg.all() {
-            assert!(!elem.gir.nodes.is_empty(), "Element {} has no nodes", elem.name);
-            assert_eq!(elem.gir.root, elem.name, "Root ID mismatch for {}", elem.name);
+            assert!(
+                !elem.gir.nodes.is_empty(),
+                "Element {} has no nodes",
+                elem.name
+            );
+            assert_eq!(
+                elem.gir.root, elem.name,
+                "Root ID mismatch for {}",
+                elem.name
+            );
         }
     }
 }

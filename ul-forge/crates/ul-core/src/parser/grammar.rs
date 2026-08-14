@@ -263,11 +263,14 @@ fn parse_primitive(pair: pest::iterators::Pair<Rule>) -> Result<AstPrimitive, Ul
         Rule::Curve => Ok(AstPrimitive::Curve),
         Rule::AngleMod => {
             let num_pair = expect_inner(inner, "angle value")?;
-            let num = num_pair.as_str().parse::<f64>().map_err(|e| UlError::Parse {
-                line: 0,
-                column: 0,
-                message: format!("invalid angle number: {e}"),
-            })?;
+            let num = num_pair
+                .as_str()
+                .parse::<f64>()
+                .map_err(|e| UlError::Parse {
+                    line: 0,
+                    column: 0,
+                    message: format!("invalid angle number: {e}"),
+                })?;
             Ok(AstPrimitive::Angle(num))
         }
         rule => Err(UlError::Parse {
@@ -314,11 +317,14 @@ fn parse_operator(pair: pest::iterators::Pair<Rule>) -> Result<AstOperator, UlEr
 
             let angle = if let Some(angle_pair) = conn_inner.next() {
                 let num_pair = expect_inner(angle_pair, "angle modifier value")?;
-                let num = num_pair.as_str().parse::<f64>().map_err(|e| UlError::Parse {
-                    line: 0,
-                    column: 0,
-                    message: format!("invalid angle number: {e}"),
-                })?;
+                let num = num_pair
+                    .as_str()
+                    .parse::<f64>()
+                    .map_err(|e| UlError::Parse {
+                        line: 0,
+                        column: 0,
+                        message: format!("invalid angle number: {e}"),
+                    })?;
                 Some(num)
             } else {
                 None

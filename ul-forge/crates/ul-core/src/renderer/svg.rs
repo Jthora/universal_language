@@ -16,9 +16,15 @@ fn regular_polygon_points(cx: f64, cy: f64, size: f64, n: usize) -> String {
             points.push(' ');
         }
         // Start from top (−π/2) and go clockwise
-        let angle = -std::f64::consts::FRAC_PI_2 + 2.0 * std::f64::consts::PI * (i as f64) / (n as f64);
-        write!(points, "{:.1},{:.1}", cx + r * angle.cos(), cy + r * angle.sin())
-            .expect("String write is infallible");
+        let angle =
+            -std::f64::consts::FRAC_PI_2 + 2.0 * std::f64::consts::PI * (i as f64) / (n as f64);
+        write!(
+            points,
+            "{:.1},{:.1}",
+            cx + r * angle.cos(),
+            cy + r * angle.sin()
+        )
+        .expect("String write is infallible");
     }
     points
 }
@@ -51,8 +57,7 @@ pub fn generate_svg(
 
     // Header
     // Note: all write!/writeln! calls target a String buffer, which is infallible.
-    writeln!(svg, r#"<?xml version="1.0" encoding="UTF-8"?>"#)
-        .expect("String write is infallible");
+    writeln!(svg, r#"<?xml version="1.0" encoding="UTF-8"?>"#).expect("String write is infallible");
     writeln!(
         svg,
         r#"<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="{w}" height="{h}">"#
@@ -285,17 +290,21 @@ fn render_element(svg: &mut String, elem: &PositionedElement) {
                     let total_dx = x2 - x1;
                     let total_dy = y2 - y1;
                     let seg_len = 1.0 / n as f64;
-                    for i in 0..n {
+                    for (i, &amp_frac) in profile.iter().enumerate() {
                         let t0 = i as f64 * seg_len;
                         let t1 = (i + 1) as f64 * seg_len;
                         let t_mid = (t0 + t1) / 2.0;
                         let end_x = x1 + total_dx * t1;
                         let end_y = y1 + total_dy * t1;
                         let ctrl_x = x1 + total_dx * t_mid;
-                        let amplitude = (x2 - x1).abs() * profile[i] * 0.3;
+                        let amplitude = (x2 - x1).abs() * amp_frac * 0.3;
                         let ctrl_y = y1 + total_dy * t_mid - amplitude;
-                        write!(d, " Q {:.1},{:.1} {:.1},{:.1}", ctrl_x, ctrl_y, end_x, end_y)
-                            .expect("String write is infallible");
+                        write!(
+                            d,
+                            " Q {:.1},{:.1} {:.1},{:.1}",
+                            ctrl_x, ctrl_y, end_x, end_y
+                        )
+                        .expect("String write is infallible");
                     }
                     writeln!(
                         svg,
@@ -501,8 +510,8 @@ pub fn generate_tikz(glyph: &PositionedGlyph, _gir: &Gir) -> String {
 fn render_tikz_polygon(out: &mut String, cx: f64, cy: f64, r: f64, n: usize) {
     write!(out, "  \\draw ").expect("String write is infallible");
     for i in 0..n {
-        let angle = -std::f64::consts::FRAC_PI_2
-            + 2.0 * std::f64::consts::PI * (i as f64) / (n as f64);
+        let angle =
+            -std::f64::consts::FRAC_PI_2 + 2.0 * std::f64::consts::PI * (i as f64) / (n as f64);
         let px = cx + r * angle.cos();
         let py = cy + r * angle.sin();
         if i > 0 {

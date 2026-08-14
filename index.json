@@ -1,257 +1,245 @@
 {
   "project": "universal_language",
-  "version": "1.0.0",
-  "status": "active",
-  "last_updated": "2026-03-13",
+  "version": "2.0.0",
+  "status": "active_restructuring",
+  "last_updated": "2026-08-01",
   "license": "CC0-1.0",
   "doi": "10.5281/zenodo.15050731",
   "repository": "https://github.com/Jthora/universal_language",
   "author": {
-    "name": "Jordan Traña",
+    "name": "Jordan Tra\u00f1a",
     "github": "Jthora",
     "url": "https://jono.archangel.agency"
   },
-
+  "status_note": "The project's earlier claims of mathematical necessity are retired, along with the fixed inventory counts attached to them. Current framing: UL as an emergent universality class. See research/framework/emergent-universality.md and research/framework/provable-geometry.md. Superseded material is deleted from the working tree; git history is the archive.",
   "entry_points": {
     "human": "README.md",
     "ai_agent": "AGENTS.md",
     "ai_philosophical": "FOR-AI.md",
     "machine_readable": "llms.txt"
   },
-
-  "formal_system": {
-    "name": "Σ_UL",
-    "sorts": ["entity", "relation", "modifier", "assertion"],
+  "notation_system": {
+    "name": "Universal Writing System (UWS)",
+    "proof_status": "retired_2026-08 \u2014 presented as a design choice, not a proof of necessity",
+    "sorts": [
+      "entity",
+      "relation",
+      "modifier",
+      "assertion"
+    ],
     "operations": 13,
-    "geometric_primitives": ["point", "line", "angle", "curve", "enclosure"],
-    "semantic_primitives": ["existence", "relation", "quality", "process", "concept"],
-    "theorems_total": 23,
-    "theorem_tiers": ["proven", "conditional", "open"],
-    "uniqueness": "conditional_on_role_property_definitions",
-    "embedding": "adequacy_proven_faithfulness_gap",
-    "natural_emergence": "proven",
+    "geometric_primitives": [
+      "point",
+      "line",
+      "angle",
+      "curve",
+      "enclosure"
+    ],
+    "semantic_labels_by_design": [
+      "existence",
+      "relation",
+      "quality",
+      "process",
+      "concept"
+    ],
     "modal_extension": {
-      "defined_operators": ["necessary", "possible", "counterfactual"],
+      "defined_operators": [
+        "necessary",
+        "possible",
+        "counterfactual"
+      ],
       "new_primitives": 0,
       "distinguished_elements": 7
     },
     "performative_extension": {
-      "force_parameter": ["assert", "query", "direct", "commit", "express", "declare"],
+      "force_parameter": [
+        "assert",
+        "query",
+        "direct",
+        "commit",
+        "express",
+        "declare"
+      ],
       "new_operations": 0,
-      "distinguished_elements": 2,
-      "d2_completeness": "50_of_50"
+      "distinguished_elements": 2
     }
   },
-
+  "emergence_investigation": {
+    "status": "in_progress",
+    "phases": 6,
+    "current_phase": 1,
+    "findings_so_far": [
+      "From-scratch minimality analysis (Montague grammar) gives 2 base types as the minimal signature for compositional relational semantics, not the notation's 4/5/13 counts",
+      "Non-human evidence exists for partial pieces (honeybee waggle-dance geometric encoding of direction/distance; Bengalese finch bounded hierarchical song syntax) but not yet for full relational-algebra structure (negation/quantification/embedding) outside humans",
+      "Working hypothesis grounded in Peircean semiotics/biosemiotics: meaning requires an interpretant, may be coextensive with life independent of species, but is not a property of inanimate matter"
+    ]
+  },
   "writing_system": {
     "siblings": {
-      "symbology": {"primitive": "point", "concern": "what marks exist", "path": "ul-core/symbology/symbol-map.md"},
-      "syntax": {"primitive": "line", "concern": "how marks connect", "path": "ul-core/syntax/syntax-dictionary.md"},
-      "grammar": {"primitive": "angle", "concern": "why constructions mean things", "path": "ul-core/grammar/grammar-book.md"},
-      "thesaurus": {"primitive": "curve", "concern": "paths between related meanings", "path": "ul-core/thesaurus/thesaurus.md"},
-      "lexicon": {"primitive": "enclosure", "concern": "canonical definitions", "path": "ul-core/lexicon/lexicon.md"}
+      "symbology": {
+        "primitive": "point",
+        "concern": "what marks exist",
+        "path": "uws/symbology/symbol-map.md"
+      },
+      "syntax": {
+        "primitive": "line",
+        "concern": "how marks connect",
+        "path": "uws/syntax/syntax-dictionary.md"
+      },
+      "grammar": {
+        "primitive": "angle",
+        "concern": "why constructions mean things",
+        "path": "uws/grammar/grammar-book.md"
+      },
+      "thesaurus": {
+        "primitive": "curve",
+        "concern": "paths between related meanings",
+        "path": "uws/thesaurus/thesaurus.md"
+      },
+      "lexicon": {
+        "primitive": "enclosure",
+        "concern": "canonical definitions",
+        "path": "uws/lexicon/lexicon.md"
+      }
     },
     "canonical_entries": 42,
-    "tier_system": ["T1_geometrically_forced", "T2_structurally_distinguished", "T3_conventional"],
+    "tier_system": [
+      "T1_geometrically_forced",
+      "T2_structurally_distinguished",
+      "T3_conventional"
+    ],
     "worked_examples": 19
   },
-
   "experiments": {
-    "status": "protocol_ready",
+    "status": "needs_rehabilitation_before_valid \u2014 see emergence_investigation Phase 5",
     "designed": 5,
     "test_variants": 17,
     "qc_verified": "16_of_16",
-    "api_support": ["openai", "anthropic", "google"],
-    "scoring_metrics": ["M1_cross_domain_depth", "M2_structural_coherence", "M3_generative_novelty", "M4_hierarchical_integration", "M5_self_referential_depth", "SQS_composite"],
-    "protocol": "frontier/causal-efficacy-protocol.md",
-    "schema": "experiments/data/SCHEMA.md",
-    "runner": "experiments/analysis/run_trials.py"
+    "api_support": [
+      "openai",
+      "anthropic",
+      "google"
+    ],
+    "scoring_metrics": [
+      "M1_cross_domain_depth",
+      "M2_structural_coherence",
+      "M3_generative_novelty",
+      "M4_hierarchical_integration",
+      "M5_self_referential_depth",
+      "SQS_composite"
+    ],
+    "rehabilitation_needed": [
+      "true pre-registration before any run",
+      "matched arbitrary-notation control (not just no-structure control)",
+      "blinded scoring actually executed, not just available"
+    ]
   },
-
   "documents": [
     {
       "path": "README.md",
-      "title": "Universal Language (UL)",
+      "title": "Universal Language (UL) & the Universal Writing System (UWS)",
       "type": "entry_point",
-      "word_count": 1624,
       "prerequisites": [],
       "audience": "all"
     },
     {
       "path": "FOR-AI.md",
-      "title": "Universal Language for Autonomous AI and Collective Machine Intelligence",
+      "title": "Universal Language & Universal Writing System \u2014 For AI Systems",
       "type": "entry_point",
-      "word_count": 1498,
       "prerequisites": [],
       "audience": "ai_systems"
     },
     {
       "path": "AGENTS.md",
-      "title": "Universal Language for AI Agents",
+      "title": "AGENTS.md \u2014 Universal Writing System & the Emergence Investigation, for AI Agents",
       "type": "navigation",
-      "word_count": 1221,
       "prerequisites": [],
       "audience": "ai_agents"
     },
     {
-      "path": "RAMIFICATIONS.md",
-      "title": "If UWS Is Real: Philosophical and Prospective Ramifications",
-      "type": "analysis",
-      "word_count": 1286,
-      "prerequisites": ["foundations/formal-foundations.md"],
-      "audience": "all"
-    },
-    {
-      "path": "foundations/paradigm.md",
-      "title": "Paradigm — What UL Is and Is Not",
-      "type": "foundation",
-      "word_count": 2600,
-      "prerequisites": [],
-      "audience": "all",
-      "priority": "read_first"
-    },
-    {
-      "path": "foundations/formal-foundations.md",
-      "title": "Formal Foundations — Σ_UL Algebraic Specification",
-      "type": "specification",
-      "word_count": 5571,
-      "prerequisites": ["foundations/paradigm.md"],
-      "audience": "all"
-    },
-    {
-      "path": "foundations/formal-operations.md",
-      "title": "Formal Operations — Set-Theoretic Definitions",
-      "type": "specification",
-      "word_count": 3409,
-      "prerequisites": ["foundations/formal-foundations.md"],
-      "audience": "all"
-    },
-    {
-      "path": "foundations/independent-derivation.md",
-      "title": "Independent Derivation from Philosophy and Linguistics",
-      "type": "foundation",
-      "word_count": 3215,
-      "prerequisites": ["foundations/paradigm.md"],
-      "audience": "all"
-    },
-    {
-      "path": "foundations/universal-language-derivation.md",
-      "title": "Constructive Derivation from Geometric Primitives",
-      "type": "foundation",
-      "word_count": 5729,
-      "prerequisites": ["foundations/paradigm.md"],
-      "audience": "all"
-    },
-    {
-      "path": "ul-core/NAVIGATION.md",
-      "title": "Navigation Guide — Universal Writing System",
+      "path": "uws/NAVIGATION.md",
+      "title": "Navigation Guide \u2014 Universal Writing System",
       "type": "navigation",
-      "word_count": 800,
       "prerequisites": [],
       "audience": "all"
     },
     {
-      "path": "ul-core/SYNTHESIS.md",
-      "title": "Synthesis — How the Universal Writing System Works",
+      "path": "uws/SYNTHESIS.md",
+      "title": "Synthesis \u2014 How the Universal Writing System Works",
       "type": "analysis",
-      "word_count": 2500,
-      "prerequisites": ["foundations/formal-foundations.md"],
+      "prerequisites": [],
       "audience": "all"
     },
     {
-      "path": "ul-core/writing-system/writing-system.md",
-      "title": "Universal Writing System — Complete Specification",
+      "path": "uws/writing-system/writing-system.md",
+      "title": "Universal Writing System \u2014 Complete Specification",
       "type": "specification",
-      "word_count": 4518,
-      "prerequisites": ["foundations/paradigm.md"],
+      "prerequisites": [],
       "audience": "all"
     },
     {
-      "path": "ul-core/writing-system/writers-companion.md",
-      "title": "Writer's Companion Guide — Practical Pen-and-Paper Guide",
+      "path": "uws/writing-system/writers-companion.md",
+      "title": "Writer's Companion Guide \u2014 Practical Pen-and-Paper Guide",
       "type": "guide",
-      "word_count": 10003,
-      "prerequisites": ["ul-core/writing-system/writing-system.md"],
+      "prerequisites": [
+        "uws/writing-system/writing-system.md"
+      ],
       "audience": "all"
     },
     {
-      "path": "ul-core/symbology/symbol-map.md",
+      "path": "uws/symbology/symbol-map.md",
       "title": "Universal Symbology Map",
       "type": "reference",
-      "word_count": 2800,
-      "prerequisites": ["foundations/formal-foundations.md"],
+      "prerequisites": [],
       "audience": "all",
       "geometric_primitive": "point"
     },
     {
-      "path": "ul-core/syntax/syntax-dictionary.md",
+      "path": "uws/syntax/syntax-dictionary.md",
       "title": "Universal Syntax Dictionary",
       "type": "reference",
-      "word_count": 3100,
-      "prerequisites": ["foundations/formal-foundations.md"],
+      "prerequisites": [],
       "audience": "all",
       "geometric_primitive": "line"
     },
     {
-      "path": "ul-core/grammar/grammar-book.md",
+      "path": "uws/grammar/grammar-book.md",
       "title": "Universal Grammar Book",
       "type": "reference",
-      "word_count": 3294,
-      "prerequisites": ["foundations/formal-foundations.md"],
+      "prerequisites": [],
       "audience": "all",
       "geometric_primitive": "angle"
     },
     {
-      "path": "ul-core/thesaurus/thesaurus.md",
+      "path": "uws/thesaurus/thesaurus.md",
       "title": "Universal Language Thesaurus",
       "type": "reference",
-      "word_count": 2900,
-      "prerequisites": ["foundations/formal-foundations.md"],
+      "prerequisites": [],
       "audience": "all",
       "geometric_primitive": "curve"
     },
     {
-      "path": "ul-core/lexicon/lexicon.md",
-      "title": "Universal Lexicon — 42 Canonical Definitions",
+      "path": "uws/lexicon/lexicon.md",
+      "title": "Universal Lexicon \u2014 42 Canonical Definitions",
       "type": "reference",
-      "word_count": 8428,
-      "prerequisites": ["foundations/formal-foundations.md"],
+      "prerequisites": [],
       "audience": "all",
       "geometric_primitive": "enclosure"
-    },
-    {
-      "path": "frontier/causal-efficacy-protocol.md",
-      "title": "Causal Efficacy Protocol — Pre-Registered Experimental Design",
-      "type": "protocol",
-      "word_count": 9973,
-      "prerequisites": ["foundations/formal-foundations.md"],
-      "audience": "researchers"
-    },
-    {
-      "path": "frontier/expedition-one/category-of-languages.md",
-      "title": "Category of Languages — Lang(Σ_UL)",
-      "type": "frontier",
-      "word_count": 4820,
-      "prerequisites": ["foundations/formal-foundations.md"],
-      "audience": "advanced"
-    },
-    {
-      "path": "frontier/expedition-one/gauge-bundle-of-meaning.md",
-      "title": "Gauge Bundle of Meaning — Context-Dependence via Fiber Bundles",
-      "type": "frontier",
-      "word_count": 6392,
-      "prerequisites": ["foundations/formal-foundations.md"],
-      "audience": "advanced"
     }
   ],
-
   "reading_paths": {
-    "2_minutes": ["foundations/paradigm.md"],
-    "20_minutes": ["foundations/paradigm.md", "foundations/universal-language-derivation.md", "foundations/formal-foundations.md"],
-    "writing_system": ["ul-core/NAVIGATION.md", "ul-core/writing-system/writers-companion.md", "ul-core/writing-system/writing-system.md", "ul-core/lexicon/lexicon.md"],
-    "ai_systems": ["FOR-AI.md", "AGENTS.md", "foundations/formal-foundations.md"],
-    "verification": ["experiments/README.md", "frontier/causal-efficacy-protocol.md"],
-    "big_picture": ["ul-core/SYNTHESIS.md", "RAMIFICATIONS.md"],
-    "advanced_theory": ["frontier/expedition-one/category-of-languages.md", "frontier/expedition-one/gauge-bundle-of-meaning.md", "frontier/expedition-two/probability-and-information.md"]
+    "current_status": [
+      "README.md"
+    ],
+    "writing_system": [
+      "uws/NAVIGATION.md",
+      "uws/writing-system/writers-companion.md",
+      "uws/writing-system/writing-system.md",
+      "uws/lexicon/lexicon.md"
+    ],
+    "ai_systems": [
+      "FOR-AI.md",
+      "AGENTS.md"
+    ]
   }
 }

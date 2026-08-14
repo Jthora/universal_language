@@ -1,0 +1,17 @@
+{
+  "id": "009-multiplicity",
+  "tier": "VERIFIED",
+  "lexicon": "MULTIPLICITY — there are three",
+  "description": "Three disjoint strokes, all top-level. Count is the component invariant — the thing degree sequences cannot see (map.rs::degree_sequence_cannot_see_connectivity). Euler for the planar reading: V - E + F = 1 + c = 4.",
+  "n_darts": 6,
+  "rotations": { "s0": [0], "s1": [1], "s2": [2], "s3": [3], "s4": [4], "s5": [5] },
+  "nesting": { "top_level_outer_darts": [0, 2, 4] },
+  "expected": {
+    "vertices": 6, "edges": 3, "components": 3,
+    "planar_faces": 1, "euler_planar": 4,
+    "degree_sequence": [1, 1, 1, 1, 1, 1],
+    "same_face": [[0, 2], [2, 4]]
+  },
+  "provenance": "map.rs::tests::components_sees_what_degree_sequence_cannot",
+  "teaches": "Module N: number as configuration count — the natural-tier form of counting."
+}

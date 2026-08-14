@@ -36,11 +36,7 @@ fn id_gen_for(gir: &Gir) -> IdGen {
     let max = gir
         .nodes
         .iter()
-        .filter_map(|n| {
-            n.id.rsplit('_')
-                .next()
-                .and_then(|s| s.parse::<u32>().ok())
-        })
+        .filter_map(|n| n.id.rsplit('_').next().and_then(|s| s.parse::<u32>().ok()))
         .max()
         .unwrap_or(0);
     let mut gen = IdGen::new("c");
@@ -379,12 +375,10 @@ pub fn invert(relation: &Gir) -> UlResult<Gir> {
     // Reverse all connects edges that touch the root
     let root_id = gir.root.clone();
     for edge in &mut gir.edges {
-        if edge.edge_type == EdgeType::Connects {
-            if edge.source == root_id {
-                std::mem::swap(&mut edge.source, &mut edge.target);
-            } else if edge.target == root_id {
-                std::mem::swap(&mut edge.source, &mut edge.target);
-            }
+        if edge.edge_type == EdgeType::Connects
+            && (edge.source == root_id || edge.target == root_id)
+        {
+            std::mem::swap(&mut edge.source, &mut edge.target);
         }
     }
 
@@ -732,11 +726,9 @@ pub fn detect_operations(gir: &Gir) -> Vec<DetectedOperation> {
 // ── Helper functions ──
 
 fn validate_root_sort(gir: &Gir, expected: Sort, context: &str) -> UlResult<()> {
-    let root_node = gir
-        .node(&gir.root)
-        .ok_or_else(|| UlError::Render {
-            message: format!("{}: root node '{}' not found", context, gir.root),
-        })?;
+    let root_node = gir.node(&gir.root).ok_or_else(|| UlError::Render {
+        message: format!("{}: root node '{}' not found", context, gir.root),
+    })?;
     if root_node.sort != expected {
         return Err(UlError::Render {
             message: format!(
@@ -958,10 +950,7 @@ mod tests {
             .iter()
             .any(|n| n.node_type == NodeType::VariableSlot));
         // Should have a Binds edge
-        assert!(result
-            .edges
-            .iter()
-            .any(|e| e.edge_type == EdgeType::Binds));
+        assert!(result.edges.iter().any(|e| e.edge_type == EdgeType::Binds));
         // Should have binding_scope set
         assert!(result.binding_scope.is_some());
     }
@@ -974,8 +963,7 @@ mod tests {
 
     #[test]
     fn modify_assertion_produces_assertion() {
-        let result =
-            modify_assertion(&modifier_gir("m"), &assertion_gir("a")).unwrap();
+        let result = modify_assertion(&modifier_gir("m"), &assertion_gir("a")).unwrap();
         let root = result.node(&result.root).unwrap();
         assert_eq!(root.sort, Sort::Assertion);
         assert_eq!(root.label.as_deref(), Some("modified_assertion"));
@@ -1001,8 +989,7 @@ mod tests {
 
     #[test]
     fn detect_operations_finds_modify_assertion() {
-        let gir =
-            modify_assertion(&modifier_gir("m"), &assertion_gir("a")).unwrap();
+        let gir = modify_assertion(&modifier_gir("m"), &assertion_gir("a")).unwrap();
         let ops = detect_operations(&gir);
         assert!(ops.iter().any(|o| o.operation == "modify_assertion"));
     }

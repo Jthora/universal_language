@@ -26,9 +26,9 @@ pub fn necessity(
     assertion: &Gir,
     relation: &str,
 ) -> UlResult<Gir> {
-    let _ = registry
-        .gir(relation)
-        .ok_or_else(|| UlError::Render { message: format!("Unknown accessibility relation: {relation}") })?;
+    let _ = registry.gir(relation).ok_or_else(|| UlError::Render {
+        message: format!("Unknown accessibility relation: {relation}"),
+    })?;
 
     // Build world entities
     let w_current = Node::point("w_current")
@@ -52,11 +52,13 @@ pub fn necessity(
     let inner_edges: Vec<Edge> = assertion
         .edges
         .iter()
-        .map(|e| Edge::new(
-            format!("{remap_prefix}{}", e.source),
-            format!("{remap_prefix}{}", e.target),
-            e.edge_type,
-        ))
+        .map(|e| {
+            Edge::new(
+                format!("{remap_prefix}{}", e.source),
+                format!("{remap_prefix}{}", e.target),
+                e.edge_type,
+            )
+        })
         .collect();
     let inner_root = format!("{remap_prefix}{}", assertion.root);
 
@@ -85,11 +87,10 @@ pub fn necessity(
 
     let access_idx = 3; // index of access_edge in all_edges
 
-    let gir = Gir::new("nec_root", all_nodes, all_edges)
-        .with_modal_context(ModalContext {
-            world_nodes: vec!["w_current".into(), "w_prime".into()],
-            accessibility_edges: vec![access_idx],
-        });
+    let gir = Gir::new("nec_root", all_nodes, all_edges).with_modal_context(ModalContext {
+        world_nodes: vec!["w_current".into(), "w_prime".into()],
+        accessibility_edges: vec![access_idx],
+    });
 
     Ok(gir)
 }
@@ -102,9 +103,9 @@ pub fn possibility(
     assertion: &Gir,
     relation: &str,
 ) -> UlResult<Gir> {
-    let _ = registry
-        .gir(relation)
-        .ok_or_else(|| UlError::Render { message: format!("Unknown accessibility relation: {relation}") })?;
+    let _ = registry.gir(relation).ok_or_else(|| UlError::Render {
+        message: format!("Unknown accessibility relation: {relation}"),
+    })?;
 
     let w_current = Node::point("w_current")
         .with_label("w_current")
@@ -126,11 +127,13 @@ pub fn possibility(
     let inner_edges: Vec<Edge> = assertion
         .edges
         .iter()
-        .map(|e| Edge::new(
-            format!("{remap_prefix}{}", e.source),
-            format!("{remap_prefix}{}", e.target),
-            e.edge_type,
-        ))
+        .map(|e| {
+            Edge::new(
+                format!("{remap_prefix}{}", e.source),
+                format!("{remap_prefix}{}", e.target),
+                e.edge_type,
+            )
+        })
         .collect();
     let inner_root = format!("{remap_prefix}{}", assertion.root);
 
@@ -155,11 +158,10 @@ pub fn possibility(
 
     let access_idx = 3;
 
-    let gir = Gir::new("pos_root", all_nodes, all_edges)
-        .with_modal_context(ModalContext {
-            world_nodes: vec!["w_current".into(), "w_prime".into()],
-            accessibility_edges: vec![access_idx],
-        });
+    let gir = Gir::new("pos_root", all_nodes, all_edges).with_modal_context(ModalContext {
+        world_nodes: vec!["w_current".into(), "w_prime".into()],
+        accessibility_edges: vec![access_idx],
+    });
 
     Ok(gir)
 }
@@ -173,9 +175,9 @@ pub fn counterfactual(
     antecedent: &Gir,
     consequent: &Gir,
 ) -> UlResult<Gir> {
-    let _ = registry
-        .gir("r_closeness")
-        .ok_or_else(|| UlError::Render { message: "Missing r_closeness in registry".into() })?;
+    let _ = registry.gir("r_closeness").ok_or_else(|| UlError::Render {
+        message: "Missing r_closeness in registry".into(),
+    })?;
 
     let w_current = Node::point("w_current")
         .with_label("w_current")
@@ -198,11 +200,13 @@ pub fn counterfactual(
     let ante_edges: Vec<Edge> = antecedent
         .edges
         .iter()
-        .map(|e| Edge::new(
-            format!("{ante_prefix}{}", e.source),
-            format!("{ante_prefix}{}", e.target),
-            e.edge_type,
-        ))
+        .map(|e| {
+            Edge::new(
+                format!("{ante_prefix}{}", e.source),
+                format!("{ante_prefix}{}", e.target),
+                e.edge_type,
+            )
+        })
         .collect();
     let ante_root = format!("{ante_prefix}{}", antecedent.root);
 
@@ -220,11 +224,13 @@ pub fn counterfactual(
     let cons_edges: Vec<Edge> = consequent
         .edges
         .iter()
-        .map(|e| Edge::new(
-            format!("{cons_prefix}{}", e.source),
-            format!("{cons_prefix}{}", e.target),
-            e.edge_type,
-        ))
+        .map(|e| {
+            Edge::new(
+                format!("{cons_prefix}{}", e.source),
+                format!("{cons_prefix}{}", e.target),
+                e.edge_type,
+            )
+        })
         .collect();
     let cons_root = format!("{cons_prefix}{}", consequent.root);
 
@@ -257,11 +263,10 @@ pub fn counterfactual(
 
     let closeness_idx = 4; // index of closeness_edge in all_edges
 
-    let gir = Gir::new("cf_root", all_nodes, all_edges)
-        .with_modal_context(ModalContext {
-            world_nodes: vec!["w_current".into(), "w_closest".into()],
-            accessibility_edges: vec![closeness_idx],
-        });
+    let gir = Gir::new("cf_root", all_nodes, all_edges).with_modal_context(ModalContext {
+        world_nodes: vec!["w_current".into(), "w_closest".into()],
+        accessibility_edges: vec![closeness_idx],
+    });
 
     Ok(gir)
 }
@@ -291,7 +296,10 @@ mod tests {
         assert!(!mc.accessibility_edges.is_empty());
 
         // Has AccessibleFrom edge
-        assert!(result.edges.iter().any(|e| e.edge_type == EdgeType::AccessibleFrom));
+        assert!(result
+            .edges
+            .iter()
+            .any(|e| e.edge_type == EdgeType::AccessibleFrom));
     }
 
     #[test]
@@ -302,7 +310,10 @@ mod tests {
 
         assert_eq!(result.root, "pos_root");
         assert!(result.modal_context.is_some());
-        assert!(result.edges.iter().any(|e| e.edge_type == EdgeType::AccessibleFrom));
+        assert!(result
+            .edges
+            .iter()
+            .any(|e| e.edge_type == EdgeType::AccessibleFrom));
     }
 
     #[test]
@@ -316,7 +327,10 @@ mod tests {
         assert!(result.modal_context.is_some());
         let mc = result.modal_context.unwrap();
         assert_eq!(mc.world_nodes.len(), 2);
-        assert!(result.edges.iter().any(|e| e.edge_type == EdgeType::AccessibleFrom));
+        assert!(result
+            .edges
+            .iter()
+            .any(|e| e.edge_type == EdgeType::AccessibleFrom));
     }
 
     #[test]

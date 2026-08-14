@@ -1,0 +1,17 @@
+{
+  "id": "005-containment",
+  "tier": "VERIFIED",
+  "lexicon": "CONTAINMENT — X is inside C",
+  "description": "A segment enclosed by a triangle. The meaning is Jordan's theorem about the mark: the ring separates the plane, and the segment lies in the bounded region. Machine-checked as co-facality: the segment's darts share a planar region with the ring's bounded orbit and not with the unbounded one. Under the M1 exemplification reading (CONJECTURED route), this is 'encapsulation' — the mark does not depict containment, it instantiates it.",
+  "n_darts": 8,
+  "rotations": { "v0": [0, 5], "v1": [2, 1], "v2": [4, 3], "s0": [6], "s1": [7] },
+  "nesting": { "top_level_outer_darts": [1], "placements": [[6, 0]] },
+  "expected": {
+    "vertices": 5, "edges": 4, "components": 2,
+    "planar_faces": 2, "euler_planar": 3,
+    "degree_sequence": [1, 1, 2, 2, 2],
+    "same_face": [[0, 6]], "different_face": [[1, 6]]
+  },
+  "provenance": "map.rs::tests::enclosure_is_a_derived_composite_not_a_primitive",
+  "teaches": "Module N: circling something means encapsulation — and here that meaning is a theorem."
+}

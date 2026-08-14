@@ -244,12 +244,10 @@ fn allocate_tree(
 
     if !is_implicit {
         let shape = node_to_shape(node, bbox);
-        let css_class = node.assertion_modifier.as_ref().map(|m| {
-            match m {
-                crate::types::node::AssertionModifierKind::Evidential => "ul-evidential".to_string(),
-                crate::types::node::AssertionModifierKind::Emphatic => "ul-emphatic".to_string(),
-                crate::types::node::AssertionModifierKind::Hedged => "ul-hedged".to_string(),
-            }
+        let css_class = node.assertion_modifier.as_ref().map(|m| match m {
+            crate::types::node::AssertionModifierKind::Evidential => "ul-evidential".to_string(),
+            crate::types::node::AssertionModifierKind::Emphatic => "ul-emphatic".to_string(),
+            crate::types::node::AssertionModifierKind::Hedged => "ul-hedged".to_string(),
         });
         elements.push(PositionedElement {
             node_id: node_id.to_string(),
@@ -383,7 +381,7 @@ fn allocate_tree(
         } else {
             // 7+ children: grid layout
             let cols = ((n as f64).sqrt().ceil()) as usize;
-            let rows = (n + cols - 1) / cols;
+            let rows = n.div_ceil(cols);
             let cell_w = inner.w / cols as f64;
             let cell_h = inner.h / rows as f64;
             for (i, child_id) in spatial_children.iter().enumerate() {
@@ -407,8 +405,7 @@ fn allocate_tree(
             .edges
             .iter()
             .filter(|e| {
-                e.edge_type == EdgeType::Connects
-                    && (e.source == line_id || e.target == line_id)
+                e.edge_type == EdgeType::Connects && (e.source == line_id || e.target == line_id)
             })
             .map(|e| {
                 if e.source == line_id {
@@ -434,9 +431,10 @@ fn allocate_tree(
     // Position angle children near their modified line or at parent center
     for angle_id in angle_children {
         // Find if this angle modifies a line (via modified_by edge)
-        let mod_target = gir.edges.iter().find(|e| {
-            e.edge_type == EdgeType::ModifiedBy && e.target == angle_id
-        });
+        let mod_target = gir
+            .edges
+            .iter()
+            .find(|e| e.edge_type == EdgeType::ModifiedBy && e.target == angle_id);
         let (ax, ay) = if let Some(me) = mod_target {
             positions.get(&me.source).copied().unwrap_or((cx, cy))
         } else {
@@ -518,7 +516,9 @@ fn node_to_shape(node: &crate::types::node::Node, bbox: &BBox) -> Shape {
         }
         NodeType::VariableSlot => {
             // Variable slot renders as a dashed circle (visually distinct from filled Point)
-            Shape::VariableSlot { radius: size * 0.08 }
+            Shape::VariableSlot {
+                radius: size * 0.08,
+            }
         }
     }
 }

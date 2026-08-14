@@ -153,7 +153,9 @@ fn match_single_node(gir: &Gir, cx: f64, cy: f64, scale: f64) -> Option<Position
             node_id: node.id.clone(),
             x: cx,
             y: cy,
-            shape: Shape::VariableSlot { radius: scale * 0.15 },
+            shape: Shape::VariableSlot {
+                radius: scale * 0.15,
+            },
             css_class: None,
         },
     };
@@ -171,10 +173,7 @@ fn existence_template(gir: &Gir, cx: f64, cy: f64, scale: f64) -> PositionedGlyp
         .nodes
         .iter()
         .find(|n| n.node_type == NodeType::Enclosure);
-    let point = gir
-        .nodes
-        .iter()
-        .find(|n| n.node_type == NodeType::Point);
+    let point = gir.nodes.iter().find(|n| n.node_type == NodeType::Point);
     let r = scale * 0.6;
     PositionedGlyph {
         elements: vec![
@@ -205,10 +204,7 @@ fn connection_template(gir: &Gir, cx: f64, cy: f64, scale: f64) -> PositionedGly
         .iter()
         .filter(|n| n.node_type == NodeType::Point)
         .collect();
-    let line = gir
-        .nodes
-        .iter()
-        .find(|n| n.node_type == NodeType::Line);
+    let line = gir.nodes.iter().find(|n| n.node_type == NodeType::Line);
     let half = scale * 0.7;
     let mut elems = Vec::new();
 

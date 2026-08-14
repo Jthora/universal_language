@@ -71,11 +71,7 @@ mod tests {
     fn make_assertion_gir() -> Gir {
         let root = Node::enclosure("a1", EnclosureShape::Circle).with_sort(Sort::Assertion);
         let inner = Node::point("p1");
-        Gir::new(
-            "a1",
-            vec![root, inner],
-            vec![Edge::contains("a1", "p1")],
-        )
+        Gir::new("a1", vec![root, inner], vec![Edge::contains("a1", "p1")])
     }
 
     #[test]
@@ -125,17 +121,26 @@ mod tests {
     fn conjunction_force_resolution() {
         // Same force → that force
         assert_eq!(
-            resolve_conjunction_force(Some(PerformativeForce::Query), Some(PerformativeForce::Query)),
+            resolve_conjunction_force(
+                Some(PerformativeForce::Query),
+                Some(PerformativeForce::Query)
+            ),
             Some(PerformativeForce::Query)
         );
         // Assert + X → X
         assert_eq!(
-            resolve_conjunction_force(Some(PerformativeForce::Assert), Some(PerformativeForce::Direct)),
+            resolve_conjunction_force(
+                Some(PerformativeForce::Assert),
+                Some(PerformativeForce::Direct)
+            ),
             Some(PerformativeForce::Direct)
         );
         // Different non-Assert → None (incompatible)
         assert_eq!(
-            resolve_conjunction_force(Some(PerformativeForce::Query), Some(PerformativeForce::Direct)),
+            resolve_conjunction_force(
+                Some(PerformativeForce::Query),
+                Some(PerformativeForce::Direct)
+            ),
             None
         );
         // None + Some → Some
@@ -147,8 +152,17 @@ mod tests {
 
     #[test]
     fn forces_compatible_checks() {
-        assert!(forces_compatible(PerformativeForce::Assert, PerformativeForce::Query));
-        assert!(forces_compatible(PerformativeForce::Query, PerformativeForce::Query));
-        assert!(!forces_compatible(PerformativeForce::Query, PerformativeForce::Direct));
+        assert!(forces_compatible(
+            PerformativeForce::Assert,
+            PerformativeForce::Query
+        ));
+        assert!(forces_compatible(
+            PerformativeForce::Query,
+            PerformativeForce::Query
+        ));
+        assert!(!forces_compatible(
+            PerformativeForce::Query,
+            PerformativeForce::Direct
+        ));
     }
 }
