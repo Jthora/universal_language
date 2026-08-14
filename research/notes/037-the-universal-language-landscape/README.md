@@ -4,7 +4,7 @@
 **Opened:** 2026-08-12
 **Status:** closed
 **Thread:** extends `036`, which was too narrow
-**Superseded by:** `038`  ← *the one permitted edit to a closed note (`../README.md`)*
+**Superseded by:** `038`, then `049`  ← *the one permitted edit to a closed note (`../README.md`)*
 **Question:** what is the full landscape of universal-language claims, and what does it constrain?
 
 ---
@@ -33,6 +33,14 @@ Treating them as one question is most of why the phrase is useless.**
 | **Blissymbolics** | *"The system wasn't widely embraced"* as international communication — **but is still used by thousands of physically disabled individuals.** |
 
 **Four serious attempts across three centuries. None achieved universality.**
+
+> **CORRECTED BY `049`.** That sentence is a **uniform negative manufactured from heterogeneous
+> failures.** Each of the four has a *different, specific, diagnosable* cap — Solresol turned
+> relations into vocabulary, Wilkins required a complete prior taxonomy of the world, Leibniz never
+> finished, Blissymbolics succeeded in its domain. **And the notations that did succeed are capped
+> too**: staff notation hard-coded equal temperament and fails on maqam and microtones.
+> **No notation is universal, so "none achieved universality" sorts every case into one bin and
+> destroys the information.** See `NOTATIONS-ARE-CAPPED-NOT-FAILED`.
 
 ### 2a. And this corrects `F-013a`
 

@@ -2645,6 +2645,67 @@ claims:
       population size, from note 019. Information and behaviour can differ; the claim that AGENTS
       LEARN rotation-based codes more compatibly remains untested.
 
+  - id: NOTATIONS-ARE-CAPPED-NOT-FAILED
+    statement: >
+      No notation is universal, including the successful ones. Every notation that fell short has a
+      SPECIFIC, DIFFERENT, DIAGNOSABLE cap — so "did it achieve universality?" destroys the
+      information that matters. The question that preserves it is: what is its domain of validity,
+      and what capped it?
+    tier: ARGUED
+    evidence: research/notes/049-survivor-survey/README.md
+    priority: 1
+    scope: >
+      THE CAPS, and none of them is "universality is impossible":
+      STAFF NOTATION — hard-coded 12-tone equal temperament and metrical division, so it "struggles
+      to represent microtones and complex rhythms ... Arabic maqam and Balkan odd meters". Its reach
+      is "not a given, but is contingent on processes of transformation, mobilization, dissemination
+      and stabilization" — "socially constructed rather than objectively superior".
+      SOLRESOL — turned relations into vocabulary, destroying the part that travelled (note 037).
+      WILKINS' REAL CHARACTER — required a complete prior taxonomy of the world before use.
+      BLISSYMBOLICS — succeeded in its domain; it "failed" only against a bar applied afterwards.
+      MATHEMATICAL NOTATION — contested by ethnomathematics, and note where the PRO-universality camp
+      concedes: the Culturally Independence Thesis holds mathematics universal "independent from its
+      symbolizations", granting the notation is contingent.
+      CORRECTS NOTE 037 AT SOURCE: that note wrote "four serious attempts across three centuries.
+      None achieved universality" — A UNIFORM NEGATIVE MANUFACTURED FROM HETEROGENEOUS FAILURES. Each
+      cap is a different mechanism and each is individually informative.
+      EVIDENCE RANK (S1): the caps above are read from search summaries, rank (5). The staff-notation
+      cap needs the Notation Cultures paper (Journal of the Royal Musical Association, 2019) read
+      directly before it carries design weight, and 037's Solresol and Wilkins diagnoses have never
+      had a primary read either.
+      T11: "adoption is a network effect" — read across ethnomusicology, history of mathematics and
+      dance-notation history, with NO STUDY COMPARING THEM. That is our inference, not a finding.
+    notes: >
+      THE RECURRING CAP IS THE ERROR THIS PROJECT ALREADY CAUGHT ITSELF MAKING. Staff notation fails
+      on microtones because microtones are the notes between the lines: it hard-coded a discretization
+      of a CONTINUOUS quantity and inherited that grid's blind spots permanently. Note 033 found
+      exactly this in our own work — {Z, C, P, V} was "a discretization I imposed on a function
+      space", and "there is no canonical finite partition of a function space".
+      AND IT IS AN ARGUMENT FOR THE FIXED POINT: a rotation system carries NO metric discretization
+      at all. Nothing in it plays the role of equal temperament. The property that capped the most
+      successful constructed notation in history is one the combinatorial map structurally lacks.
+      That is not evidence UWS will work — it is a named failure mode, historically demonstrated at
+      scale, that the current design does not have.
+      PREREGISTERED HYPOTHESIS, FALSIFIED AS STATED AND RECORDED RATHER THAN DROPPED: note 049
+      preregistered NOTATIONS-SUCCEED-DOMAIN-FIRST — "notations built for a domain became universal;
+      notations that announced universality failed unless institutional compulsion carried them".
+      THE UNIVERSAL QUANTIFIER IS FALSE. Labanotation is domain-first and its "adoption was
+      significantly advanced through institutional support" — Dance Notation Bureau (1940),
+      International Council of Kinetography Laban (1959), a journal 1957-1994. The falsifier was
+      written in advance and met exactly.
+      BUT THE STEELMAN (R6) SURVIVES AND CHANGES THE VERDICT. Mathematical notation had NO
+      institutional vehicle: Euler "released constantly, shared everything, and corresponded
+      prodigiously", and the Analytical Society was a STUDENT SOCIETY, not a body owning a standard.
+      Adoption there really was practitioner-driven. So the mechanism is REAL BUT CONDITIONAL, and
+      the missing variable appears to be WHETHER NON-ADOPTERS ARE PUNISHED BY ILLEGIBILITY: England
+      could not read European mathematics, whereas a choreographer who cannot read Labanotation loses
+      nothing, since dance transmits body to body regardless.
+      REVIVAL CONDITION FOR THE STRONG FORM (R4): a domain-first notation that achieved broad
+      cross-field adoption with NO institutional vehicle AND no illegibility penalty — which would
+      show the illegibility mechanism is not the discriminator either.
+      THE OPEN QUESTION THIS REFRAMES: not whether UWS has a cap — everything does — but WHAT IT IS.
+      Note 033's curvature axis is the candidate already on the table.
+
   - id: UNIVERSAL-MEANS-CONVENTION-FREE
     statement: >
       In ordinary usage "universal language" means something that travels without a shared
