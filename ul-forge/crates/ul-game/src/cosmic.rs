@@ -202,7 +202,7 @@ fn edges_match(
         let found = gir.edges.iter().any(|e| {
             e.source == *source_gir
                 && e.target == *target_gir
-                && pe.edge_type.as_ref().map_or(true, |required| {
+                && pe.edge_type.as_ref().is_none_or(|required| {
                     let actual = format!("{:?}", e.edge_type).to_lowercase();
                     actual == required.to_lowercase()
                 })

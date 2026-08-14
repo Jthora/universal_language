@@ -47,7 +47,6 @@ pub enum Operation {
     ModifyAssertion,
 
     // ── Modal extension (§7 of formal-foundations.md) ──────────
-
     /// □a: necessarily a — world-frame quantification over accessible worlds.
     Necessity,
     /// ◇a: possibly a — existential quantification over accessible worlds.
@@ -56,12 +55,10 @@ pub enum Operation {
     Counterfactual,
 
     // ── Performative extension (§8 of formal-foundations.md) ───
-
     /// Set illocutionary force on an assertion frame.
     SetForce,
 
     // ── Pragmatic extension (§9 of formal-foundations.md) ──────
-
     /// Surface→intended inference (scalar, conventional, forceful).
     InferPragmatic,
 }

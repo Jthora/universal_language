@@ -27,7 +27,11 @@ pub fn generate_hints(attempt: &Gir, target: &Gir) -> Vec<Hint> {
 
     // Check missing primitives
     for (prim, &count) in &target_report.primitive_counts {
-        let attempt_count = attempt_report.primitive_counts.get(prim).copied().unwrap_or(0);
+        let attempt_count = attempt_report
+            .primitive_counts
+            .get(prim)
+            .copied()
+            .unwrap_or(0);
         if attempt_count == 0 && count > 0 {
             hints.push(Hint {
                 severity: "suggestion".into(),
@@ -45,12 +49,18 @@ pub fn generate_hints(attempt: &Gir, target: &Gir) -> Vec<Hint> {
 
     // Check missing sorts
     for (sort, &count) in &target_report.sort_distribution {
-        let attempt_count = attempt_report.sort_distribution.get(sort).copied().unwrap_or(0);
+        let attempt_count = attempt_report
+            .sort_distribution
+            .get(sort)
+            .copied()
+            .unwrap_or(0);
         if attempt_count == 0 && count > 0 {
             hints.push(Hint {
                 severity: "suggestion".into(),
                 category: "sort".into(),
-                message: format!("Your composition is missing the {sort} sort. Consider adding one."),
+                message: format!(
+                    "Your composition is missing the {sort} sort. Consider adding one."
+                ),
             });
         }
     }
@@ -82,7 +92,8 @@ pub fn generate_hints(attempt: &Gir, target: &Gir) -> Vec<Hint> {
         hints.push(Hint {
             severity: "warning".into(),
             category: "structure".into(),
-            message: "Your composition seems significantly smaller than the target. Keep building!".into(),
+            message: "Your composition seems significantly smaller than the target. Keep building!"
+                .into(),
         });
     }
 
@@ -144,7 +155,9 @@ pub fn analyze_hints(gir: &Gir) -> Vec<Hint> {
         hints.push(Hint {
             severity: "info".into(),
             category: "general".into(),
-            message: "You have a single primitive. Add more nodes and connect them to build meaning.".into(),
+            message:
+                "You have a single primitive. Add more nodes and connect them to build meaning."
+                    .into(),
         });
     }
 
@@ -167,15 +180,14 @@ mod tests {
                 Node::point("p1"),
                 Node::line("l1", true),
             ],
-            vec![
-                Edge::contains("root", "p1"),
-                Edge::contains("root", "l1"),
-            ],
+            vec![Edge::contains("root", "p1"), Edge::contains("root", "l1")],
         );
         let hints = generate_hints(&attempt, &target);
         assert!(!hints.is_empty());
         // Should mention missing primitives or structure
-        assert!(hints.iter().any(|h| h.category == "primitive" || h.category == "structure"));
+        assert!(hints
+            .iter()
+            .any(|h| h.category == "primitive" || h.category == "structure"));
     }
 
     #[test]

@@ -2837,7 +2837,7 @@ claims:
       claim rises above priority 1.
 
   - id: INTERACTION-NETS-CARRY-ROTATION
-    scope_reviewed: [SEMANTIC-FORMALISMS-USE-LABELS-NOT-ORDER]   # MATERIAL and mutual — this claim is the CAUSE of that hub's register-split amendment; the hub's surviving denotational negative is honoured here by the steelman residue (labels still work) and by never claiming rotation carries world-directed meaning
+    scope_reviewed: [SEMANTIC-FORMALISMS-USE-LABELS-NOT-ORDER, M2-ENGINE-V1-EXISTS]   # hub 1 MATERIAL and mutual — this claim is the CAUSE of that hub's register-split amendment; the surviving denotational negative is honoured by the steelman residue. hub 2 MATERIAL and accounted for — it supplies this claim's machine-checked leg, and its executes-does-not-yet-mean limit keeps the denotational boundary intact
     statement: >
       Interaction nets — a Turing-universal, strongly confluent, local graph-rewriting formalism
       from PL theory — carry a rotation with a marked dart at every agent: a distinguished principal
@@ -2866,6 +2866,10 @@ claims:
       is primary-verified; the UNIVERSALITY is not yet.
       T11: the relevance to UQPL's open problems (Turing-completeness, optimal reduction via
       Lamping/Asperti-Guerrini) is OUR INFERENCE connecting separate literatures, marked as such.
+      MACHINE-CHECKED LEG, ADDED 2026-08-12 (note 057): our own engine's agents ARE rotations with
+      a marked dart — Net::to_map exports every state with principal-first rotations and every
+      intermediate reduction state passes the grammar's validate() (engine.rs bridge test). The
+      structural correspondence no longer rests on the literature alone. See M2-ENGINE-V1-EXISTS.
     notes: >
       WHY THIS MATTERS BEYOND M2: this is the largest single convergence since the seven-line
       convergence on the combinatorial map — an unrelated field, solving computation rather than
@@ -2985,6 +2989,7 @@ claims:
       the universe's coordinates. Every load-bearing edge of this claim routes through that theorem.
 
   - id: QUANTUM-IS-LINEAR-DISCIPLINE
+    scope_reviewed: [M2-ENGINE-V1-EXISTS]   # MATERIAL and accounted for — supplies the machine-checked leg recorded in this claim's scope; its limits (no type layer, universality S8 debt) do not weaken the discipline claim, which is about the resource rules, not expressiveness
     statement: >
       The honest baseline meaning of the Q in UQPL: the operational layer's resource discipline is
       the universe's own — no free copy (no-cloning) and no free delete (no-deleting), enforced
@@ -3001,7 +3006,11 @@ claims:
       proof nets, and the discipline is visible in the formalism — discarding "must be made explicit
       by means of an agent Erase", and copying is an explicit duplicator agent, never free.
       SO: the operational substrate M2 converged on independently is the one whose resource
-      discipline is quantum-compatible BY CONSTRUCTION. This is what keeps the language executable
+      discipline is quantum-compatible BY CONSTRUCTION.
+      MACHINE-CHECKED LEG, ADDED 2026-08-12 (note 057): the discipline is now ENFORCED in our own
+      engine — rule registration refuses free delete and free copy (engine.rs,
+      linearity_is_enforced_at_registration), and Erase/Dup exist only as explicit agents. See
+      M2-ENGINE-V1-EXISTS. This is what keeps the language executable
       by physics rather than only by abstraction.
       NOT CLAIMED: that UQPL programs are literally quantum computations. The wiki's own honesty on
       this ("whether these are literal or borrowed depends on what's executing the program") is
@@ -3231,6 +3240,32 @@ claims:
       artifacts. The minimal pair 005/006 is the exhibit: a linguist's minimal pair where the
       contrast dimension is the nesting relation, which is exactly why W3 makes nesting
       well-formedness-relevant content.
+
+  - id: M2-ENGINE-V1-EXISTS
+    scope_reviewed: [QUANTUM-IS-LINEAR-DISCIPLINE, INTERACTION-NETS-CARRY-ROTATION, SEMANTIC-STACK-M1-M2-M3]   # hubs 1-2 MATERIAL and accounted for — this claim supplies the machine-checked leg their scopes now record, and inherits hub 2's S8 debt on universality, restated in its own scope. hub 3 accounted for — v1 is M2's substrate running; the stack's named objection (operational meaning is closed until M3) is restated here as "executes, does not yet mean"
+    statement: >
+      The M2 execution layer exists in v1: interaction-net reduction over port-graphs whose agents
+      are rotations with a marked dart. 2+2 reduces to 4 by local rewriting alone; the linear
+      discipline is enforced at rule registration (no free delete, no free copy — refused, not
+      discouraged); deletion and copying exist only as explicit agents; reduction order does not
+      change the normal form (smoke-tested); and every intermediate engine state exports to a
+      combinatorial map that passes the grammar's validate().
+    tier: VERIFIED
+    evidence: ul-forge/crates/ul-core/src/engine.rs
+    priority: 0
+    scope: >
+      Six tests (engine.rs), spec at spec/engine-core.md. LIMITS, exactly: v1 EXECUTES, IT DOES NOT
+      YET MEAN — world-reference is M3 and is not code; no optimal reduction, no lambda encoding,
+      no type layer (UQPL's typed calculus sits above this and does not exist); strong confluence
+      is Lafont's theorem inherited and smoke-tested, not formally verified here; the S8 DEBT on
+      substrate universality stands (Lafont 1997 unread) — v1 demonstrates arithmetic, not
+      universality. The demo system is the Add/S/Z arithmetic from the primary source (Gay 1991).
+    notes: >
+      The bridge test (every_net_state_is_a_valid_map_with_principal_first_rotations) upgrades two
+      claims from literature-supported to machine-checked-in-our-code: the rotation-with-marked-dart
+      structure of agents (INTERACTION-NETS-CARRY-ROTATION) and the structural resource discipline
+      (QUANTUM-IS-LINEAR-DISCIPLINE). Priority 0 with S8 satisfied structurally: rank (1)/(4)
+      evidence, our own code and tests.
 
   - id: UNIVERSAL-MEANS-CONVENTION-FREE
     statement: >

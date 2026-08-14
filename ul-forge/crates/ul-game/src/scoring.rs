@@ -48,7 +48,8 @@ pub fn score_composition(ctx: &GameContext, gir: &Gir, target: &PuzzleTarget) ->
         feedback.push("Structure differs significantly from target.".into());
     }
     if sort < 0.5 {
-        feedback.push("Sort assignments need correction (entity/relation/modifier/assertion).".into());
+        feedback
+            .push("Sort assignments need correction (entity/relation/modifier/assertion).".into());
     }
     if operation < 0.5 {
         feedback.push("Composition rules are not satisfied.".into());
@@ -69,11 +70,7 @@ pub fn score_composition(ctx: &GameContext, gir: &Gir, target: &PuzzleTarget) ->
 }
 
 /// Evaluate Jane's learning attempt: score + proficiency delta.
-pub fn evaluate_jane_attempt(
-    ctx: &mut GameContext,
-    attempt: &Gir,
-    expected: &Gir,
-) -> JaneResult {
+pub fn evaluate_jane_attempt(ctx: &mut GameContext, attempt: &Gir, expected: &Gir) -> JaneResult {
     let structural = structural_similarity(attempt, expected);
     let sort = sort_similarity(attempt, expected);
     let operation = ctx.rule_index.correctness_score(attempt);
@@ -100,7 +97,10 @@ pub fn evaluate_jane_attempt(
         improvements.push("Try matching the geometric structure more closely.".into());
     }
     if sort < 0.8 {
-        improvements.push("Check that each node has the correct sort (entity/relation/modifier/assertion).".into());
+        improvements.push(
+            "Check that each node has the correct sort (entity/relation/modifier/assertion)."
+                .into(),
+        );
     }
 
     JaneResult {

@@ -238,12 +238,14 @@ fn validate_sorts(gir: &Gir, result: &mut ValidationResult) {
             EdgeType::References => {
                 // References are semantic cross-references — no sort restriction,
                 // but warn if referencing across containment boundaries (heuristic).
-                let source_parent = gir.edges.iter().find(|e| {
-                    e.edge_type == EdgeType::Contains && e.target == edge.source
-                });
-                let target_parent = gir.edges.iter().find(|e| {
-                    e.edge_type == EdgeType::Contains && e.target == edge.target
-                });
+                let source_parent = gir
+                    .edges
+                    .iter()
+                    .find(|e| e.edge_type == EdgeType::Contains && e.target == edge.source);
+                let target_parent = gir
+                    .edges
+                    .iter()
+                    .find(|e| e.edge_type == EdgeType::Contains && e.target == edge.target);
                 if let (Some(sp), Some(tp)) = (source_parent, target_parent) {
                     if sp.source != tp.source {
                         result.add_warning(format!(
@@ -506,7 +508,7 @@ fn validate_geometry(gir: &Gir, result: &mut ValidationResult) {
             crate::types::node::NodeType::Angle => {
                 // Angle measure must be in [0, 360)
                 if let Some(measure) = node.measure {
-                    if !measure.is_finite() || measure < 0.0 || measure >= 360.0 {
+                    if !measure.is_finite() || !(0.0..360.0).contains(&measure) {
                         result.add_error(UlError::Render {
                             message: format!(
                                 "angle node '{}' has invalid measure {} (must be in [0, 360))",

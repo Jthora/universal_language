@@ -201,10 +201,7 @@ mod tests {
         let decoded = Codec::Json.decode_str(&json).unwrap();
 
         assert_eq!(decoded.message.sender.capabilities.len(), 3);
-        assert_eq!(
-            decoded.message.intent,
-            Intent::CapabilityAdvertisement
-        );
+        assert_eq!(decoded.message.intent, Intent::CapabilityAdvertisement);
     }
 
     #[test]

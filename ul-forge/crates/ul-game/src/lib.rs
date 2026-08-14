@@ -126,8 +126,7 @@ pub fn create_context(config_json: &str) -> Result<u32, JsError> {
 pub fn evaluate(ctx_id: u32, gir_json: &str) -> Result<JsValue, JsError> {
     let gir_json = gir_json.to_owned();
     catch_unwind(AssertUnwindSafe(move || {
-        let gir =
-            ul_core::Gir::from_json(&gir_json).map_err(|e| JsError::new(&e.to_string()))?;
+        let gir = ul_core::Gir::from_json(&gir_json).map_err(|e| JsError::new(&e.to_string()))?;
         let result = with_context(ctx_id, |ctx| evaluation::evaluate(ctx, &gir))?;
         Ok(serde_wasm_bindgen::to_value(&result)?)
     }))
@@ -146,8 +145,7 @@ pub fn score_composition(
     let gir_json = gir_json.to_owned();
     let target_json = target_json.to_owned();
     catch_unwind(AssertUnwindSafe(move || {
-        let gir =
-            ul_core::Gir::from_json(&gir_json).map_err(|e| JsError::new(&e.to_string()))?;
+        let gir = ul_core::Gir::from_json(&gir_json).map_err(|e| JsError::new(&e.to_string()))?;
         let target: types::PuzzleTarget =
             serde_json::from_str(&target_json).map_err(|e| JsError::new(&e.to_string()))?;
         let result = with_context(ctx_id, |ctx| scoring::score_composition(ctx, &gir, &target))?;
@@ -205,15 +203,10 @@ pub fn validate_sequence(ctx_id: u32, glyphs_json: &str) -> Result<JsValue, JsEr
 ///
 /// Returns a JSON-serialized `AnimationSequence`.
 #[wasm_bindgen(js_name = "getAnimationSequence")]
-pub fn get_animation_sequence(
-    gir_json: &str,
-    width: f64,
-    height: f64,
-) -> Result<JsValue, JsError> {
+pub fn get_animation_sequence(gir_json: &str, width: f64, height: f64) -> Result<JsValue, JsError> {
     let gir_json = gir_json.to_owned();
     catch_unwind(AssertUnwindSafe(move || {
-        let gir =
-            ul_core::Gir::from_json(&gir_json).map_err(|e| JsError::new(&e.to_string()))?;
+        let gir = ul_core::Gir::from_json(&gir_json).map_err(|e| JsError::new(&e.to_string()))?;
         let seq = animation::get_animation_sequence(&gir, width, height);
         Ok(serde_wasm_bindgen::to_value(&seq)?)
     }))
@@ -227,8 +220,7 @@ pub fn get_animation_sequence(
 pub fn layout(gir_json: &str, width: f64, height: f64) -> Result<JsValue, JsError> {
     let gir_json = gir_json.to_owned();
     catch_unwind(AssertUnwindSafe(move || {
-        let gir =
-            ul_core::Gir::from_json(&gir_json).map_err(|e| JsError::new(&e.to_string()))?;
+        let gir = ul_core::Gir::from_json(&gir_json).map_err(|e| JsError::new(&e.to_string()))?;
         let positioned = ul_core::compute_layout(&gir, width, height);
         Ok(serde_wasm_bindgen::to_value(&positioned)?)
     }))
@@ -242,8 +234,9 @@ pub fn layout(gir_json: &str, width: f64, height: f64) -> Result<JsValue, JsErro
 pub fn load_custom_definitions(ctx_id: u32, rules_json: &str) -> Result<JsValue, JsError> {
     let rules_json = rules_json.to_owned();
     catch_unwind(AssertUnwindSafe(move || {
-        let result =
-            with_context_mut(ctx_id, |ctx| modding::load_custom_definitions(ctx, &rules_json))?;
+        let result = with_context_mut(ctx_id, |ctx| {
+            modding::load_custom_definitions(ctx, &rules_json)
+        })?;
         Ok(serde_wasm_bindgen::to_value(&result)?)
     }))
     .unwrap_or_else(|_| Err(JsError::new("internal panic in loadCustomDefinitions")))
@@ -276,10 +269,8 @@ pub fn parse_ul_script(input: &str) -> Result<JsValue, JsError> {
 pub fn deparse_gir(gir_json: &str) -> Result<JsValue, JsError> {
     let gir_json = gir_json.to_owned();
     catch_unwind(AssertUnwindSafe(move || {
-        let gir =
-            ul_core::Gir::from_json(&gir_json).map_err(|e| JsError::new(&e.to_string()))?;
-        let text =
-            ul_core::parser::deparse(&gir).map_err(|e| JsError::new(&e.to_string()))?;
+        let gir = ul_core::Gir::from_json(&gir_json).map_err(|e| JsError::new(&e.to_string()))?;
+        let text = ul_core::parser::deparse(&gir).map_err(|e| JsError::new(&e.to_string()))?;
         Ok(JsValue::from_str(&text))
     }))
     .unwrap_or_else(|_| Err(JsError::new("internal panic in deparseGir")))
@@ -294,8 +285,7 @@ pub fn deparse_gir(gir_json: &str) -> Result<JsValue, JsError> {
 pub fn validate_gir(gir_json: &str, check_geometry: bool) -> Result<JsValue, JsError> {
     let gir_json = gir_json.to_owned();
     catch_unwind(AssertUnwindSafe(move || {
-        let gir =
-            ul_core::Gir::from_json(&gir_json).map_err(|e| JsError::new(&e.to_string()))?;
+        let gir = ul_core::Gir::from_json(&gir_json).map_err(|e| JsError::new(&e.to_string()))?;
         let result = ul_core::validator::validate(&gir, check_geometry);
         // Classify errors by validation layer
         let mut layers = types::ValidationLayers::default();
@@ -362,19 +352,25 @@ pub fn apply_operation(operation: &str, operands_json: &str) -> Result<JsValue, 
         let result = match operation.as_str() {
             "predicate" => {
                 if girs.len() != 3 {
-                    return Err(JsError::new("predicate requires 3 operands (subject, relation, object)"));
+                    return Err(JsError::new(
+                        "predicate requires 3 operands (subject, relation, object)",
+                    ));
                 }
                 ul_core::composer::predicate(&girs[0], &girs[1], &girs[2])
             }
             "modify_entity" => {
                 if girs.len() != 2 {
-                    return Err(JsError::new("modify_entity requires 2 operands (modifier, entity)"));
+                    return Err(JsError::new(
+                        "modify_entity requires 2 operands (modifier, entity)",
+                    ));
                 }
                 ul_core::composer::modify_entity(&girs[0], &girs[1])
             }
             "modify_relation" => {
                 if girs.len() != 2 {
-                    return Err(JsError::new("modify_relation requires 2 operands (modifier, relation)"));
+                    return Err(JsError::new(
+                        "modify_relation requires 2 operands (modifier, relation)",
+                    ));
                 }
                 ul_core::composer::modify_relation(&girs[0], &girs[1])
             }
@@ -386,13 +382,17 @@ pub fn apply_operation(operation: &str, operands_json: &str) -> Result<JsValue, 
             }
             "conjoin" => {
                 if girs.len() != 2 {
-                    return Err(JsError::new("conjoin requires 2 operands (assertion, assertion)"));
+                    return Err(JsError::new(
+                        "conjoin requires 2 operands (assertion, assertion)",
+                    ));
                 }
                 ul_core::composer::conjoin(&girs[0], &girs[1])
             }
             "disjoin" => {
                 if girs.len() != 2 {
-                    return Err(JsError::new("disjoin requires 2 operands (assertion, assertion)"));
+                    return Err(JsError::new(
+                        "disjoin requires 2 operands (assertion, assertion)",
+                    ));
                 }
                 ul_core::composer::disjoin(&girs[0], &girs[1])
             }
@@ -410,7 +410,9 @@ pub fn apply_operation(operation: &str, operands_json: &str) -> Result<JsValue, 
             }
             "compose" => {
                 if girs.len() != 2 {
-                    return Err(JsError::new("compose requires 2 operands (relation, relation)"));
+                    return Err(JsError::new(
+                        "compose requires 2 operands (relation, relation)",
+                    ));
                 }
                 ul_core::composer::compose(&girs[0], &girs[1])
             }
@@ -422,7 +424,9 @@ pub fn apply_operation(operation: &str, operands_json: &str) -> Result<JsValue, 
             }
             "quantify" => {
                 if girs.len() != 2 {
-                    return Err(JsError::new("quantify requires 2 operands (quantifier, entity)"));
+                    return Err(JsError::new(
+                        "quantify requires 2 operands (quantifier, entity)",
+                    ));
                 }
                 ul_core::composer::quantify(&girs[0], &girs[1])
             }
@@ -434,7 +438,9 @@ pub fn apply_operation(operation: &str, operands_json: &str) -> Result<JsValue, 
             }
             "modify_assertion" => {
                 if girs.len() != 2 {
-                    return Err(JsError::new("modify_assertion requires 2 operands (modifier, assertion)"));
+                    return Err(JsError::new(
+                        "modify_assertion requires 2 operands (modifier, assertion)",
+                    ));
                 }
                 ul_core::composer::modify_assertion(&girs[0], &girs[1])
             }
@@ -454,13 +460,17 @@ pub fn apply_operation(operation: &str, operands_json: &str) -> Result<JsValue, 
             }
             "counterfactual" => {
                 if girs.len() != 2 {
-                    return Err(JsError::new("counterfactual requires 2 operands (antecedent, consequent)"));
+                    return Err(JsError::new(
+                        "counterfactual requires 2 operands (antecedent, consequent)",
+                    ));
                 }
                 let registry = ul_core::distinguished::default_registry();
                 ul_core::modal::counterfactual(&registry, &girs[0], &girs[1])
             }
             "set_force" => {
-                return Err(JsError::new("set_force requires a force name, not GIR operands — use setForce() instead"));
+                return Err(JsError::new(
+                    "set_force requires a force name, not GIR operands — use setForce() instead",
+                ));
             }
             _ => return Err(JsError::new(&format!("unknown operation: {operation}"))),
         };
@@ -476,7 +486,11 @@ pub fn apply_operation(operation: &str, operands_json: &str) -> Result<JsValue, 
 ///
 /// Shortcut for `applyOperation` with exactly 2 operands.
 #[wasm_bindgen(js_name = "composeGir")]
-pub fn compose_gir(gir_a_json: &str, gir_b_json: &str, operation: &str) -> Result<JsValue, JsError> {
+pub fn compose_gir(
+    gir_a_json: &str,
+    gir_b_json: &str,
+    operation: &str,
+) -> Result<JsValue, JsError> {
     let gir_a_json = gir_a_json.to_owned();
     let gir_b_json = gir_b_json.to_owned();
     let operation = operation.to_owned();
@@ -497,7 +511,11 @@ pub fn compose_gir(gir_a_json: &str, gir_b_json: &str, operation: &str) -> Resul
                 let registry = ul_core::distinguished::default_registry();
                 ul_core::modal::counterfactual(&registry, &a, &b)
             }
-            _ => return Err(JsError::new(&format!("not a binary operation or unknown: {operation}"))),
+            _ => {
+                return Err(JsError::new(&format!(
+                    "not a binary operation or unknown: {operation}"
+                )))
+            }
         };
 
         let gir = result.map_err(|e| JsError::new(&e.to_string()))?;
@@ -579,7 +597,8 @@ pub fn render_svg(gir_json: &str, width: f64, height: f64) -> Result<JsValue, Js
             height,
             embed_gir: true,
         };
-        let svg = ul_core::renderer::render(&gir, &opts).map_err(|e| JsError::new(&e.to_string()))?;
+        let svg =
+            ul_core::renderer::render(&gir, &opts).map_err(|e| JsError::new(&e.to_string()))?;
         Ok(JsValue::from_str(&svg))
     }))
     .unwrap_or_else(|_| Err(JsError::new("internal panic in renderSvg")))
@@ -598,7 +617,8 @@ pub fn render_glyph_preview(gir_json: &str) -> Result<JsValue, JsError> {
             height: 64.0,
             embed_gir: true,
         };
-        let svg = ul_core::renderer::render(&gir, &opts).map_err(|e| JsError::new(&e.to_string()))?;
+        let svg =
+            ul_core::renderer::render(&gir, &opts).map_err(|e| JsError::new(&e.to_string()))?;
         Ok(JsValue::from_str(&svg))
     }))
     .unwrap_or_else(|_| Err(JsError::new("internal panic in renderGlyphPreview")))
@@ -614,8 +634,10 @@ pub fn get_hints(attempt_json: &str, target_json: &str) -> Result<JsValue, JsErr
     let attempt_json = attempt_json.to_owned();
     let target_json = target_json.to_owned();
     catch_unwind(AssertUnwindSafe(move || {
-        let attempt = ul_core::Gir::from_json(&attempt_json).map_err(|e| JsError::new(&e.to_string()))?;
-        let target = ul_core::Gir::from_json(&target_json).map_err(|e| JsError::new(&e.to_string()))?;
+        let attempt =
+            ul_core::Gir::from_json(&attempt_json).map_err(|e| JsError::new(&e.to_string()))?;
+        let target =
+            ul_core::Gir::from_json(&target_json).map_err(|e| JsError::new(&e.to_string()))?;
         let result = hints::generate_hints(&attempt, &target);
         Ok(serde_wasm_bindgen::to_value(&result)?)
     }))

@@ -10,7 +10,9 @@
 use crate::error::UlResult;
 use crate::types::edge::{Edge, EdgeType};
 use crate::types::gir::Gir;
-use crate::types::node::{AssertionModifierKind, EnclosureShape, Node, NodeType, PerformativeForce};
+use crate::types::node::{
+    AssertionModifierKind, EnclosureShape, Node, NodeType, PerformativeForce,
+};
 use crate::types::sort::Sort;
 
 use super::ast::*;
@@ -499,8 +501,7 @@ fn transform_force_annotation(
         AstForceKind::Declare => PerformativeForce::Declare,
     };
 
-    let root = Node::enclosure(&root_id, EnclosureShape::Circle)
-        .with_force(perf_force);
+    let root = Node::enclosure(&root_id, EnclosureShape::Circle).with_force(perf_force);
     nodes.push(root);
 
     // Transform content as children

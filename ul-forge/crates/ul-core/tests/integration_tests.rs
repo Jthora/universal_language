@@ -205,11 +205,15 @@ fn e2e_variable_slot() {
     let result = validate(&gir, false);
     assert!(result.valid, "errors: {:?}", result.errors);
     assert!(
-        gir.nodes.iter().any(|n| n.node_type == ul_core::NodeType::VariableSlot),
+        gir.nodes
+            .iter()
+            .any(|n| n.node_type == ul_core::NodeType::VariableSlot),
         "Expected a VariableSlot node"
     );
     assert!(
-        gir.nodes.iter().any(|n| n.variable_id.as_deref() == Some("x")),
+        gir.nodes
+            .iter()
+            .any(|n| n.variable_id.as_deref() == Some("x")),
         "Expected variable_id = 'x'"
     );
 }
@@ -220,7 +224,10 @@ fn e2e_bound_reference() {
     let result = validate(&gir, false);
     assert!(result.valid, "errors: {:?}", result.errors);
     assert!(
-        gir.nodes.iter().any(|n| n.node_type == ul_core::NodeType::Point && n.variable_id.as_deref() == Some("x")),
+        gir.nodes
+            .iter()
+            .any(|n| n.node_type == ul_core::NodeType::Point
+                && n.variable_id.as_deref() == Some("x")),
         "Expected a Point node with variable_id = 'x'"
     );
 }
@@ -232,11 +239,17 @@ fn e2e_binding_pair() {
     let result = validate(&gir, false);
     assert!(result.valid, "errors: {:?}", result.errors);
     assert!(
-        gir.nodes.iter().any(|n| n.node_type == ul_core::NodeType::VariableSlot && n.variable_id.as_deref() == Some("y")),
+        gir.nodes
+            .iter()
+            .any(|n| n.node_type == ul_core::NodeType::VariableSlot
+                && n.variable_id.as_deref() == Some("y")),
         "Expected VariableSlot with variable_id = 'y'"
     );
     assert!(
-        gir.nodes.iter().any(|n| n.node_type == ul_core::NodeType::Point && n.variable_id.as_deref() == Some("y")),
+        gir.nodes
+            .iter()
+            .any(|n| n.node_type == ul_core::NodeType::Point
+                && n.variable_id.as_deref() == Some("y")),
         "Expected Point with variable_id = 'y'"
     );
 }
@@ -262,7 +275,9 @@ fn e2e_variable_slot_ascii() {
     let result = validate(&gir, false);
     assert!(result.valid, "errors: {:?}", result.errors);
     assert!(
-        gir.nodes.iter().any(|n| n.node_type == ul_core::NodeType::VariableSlot),
+        gir.nodes
+            .iter()
+            .any(|n| n.node_type == ul_core::NodeType::VariableSlot),
         "Expected a VariableSlot node from ASCII syntax"
     );
 }
@@ -274,7 +289,10 @@ fn e2e_bound_ref_ascii() {
     let result = validate(&gir, false);
     assert!(result.valid, "errors: {:?}", result.errors);
     assert!(
-        gir.nodes.iter().any(|n| n.node_type == ul_core::NodeType::Point && n.variable_id.as_deref() == Some("x")),
+        gir.nodes
+            .iter()
+            .any(|n| n.node_type == ul_core::NodeType::Point
+                && n.variable_id.as_deref() == Some("x")),
         "Expected a Point with variable_id from ASCII syntax"
     );
 }
@@ -287,7 +305,9 @@ fn e2e_evidential_modifier() {
     let result = validate(&gir, false);
     assert!(result.valid, "errors: {:?}", result.errors);
     assert!(
-        gir.nodes.iter().any(|n| n.assertion_modifier == Some(ul_core::AssertionModifierKind::Evidential)),
+        gir.nodes
+            .iter()
+            .any(|n| n.assertion_modifier == Some(ul_core::AssertionModifierKind::Evidential)),
         "Expected an Evidential assertion modifier node"
     );
 }
@@ -298,7 +318,9 @@ fn e2e_emphatic_modifier() {
     let result = validate(&gir, false);
     assert!(result.valid, "errors: {:?}", result.errors);
     assert!(
-        gir.nodes.iter().any(|n| n.assertion_modifier == Some(ul_core::AssertionModifierKind::Emphatic)),
+        gir.nodes
+            .iter()
+            .any(|n| n.assertion_modifier == Some(ul_core::AssertionModifierKind::Emphatic)),
         "Expected an Emphatic assertion modifier node"
     );
 }
@@ -309,7 +331,9 @@ fn e2e_hedged_modifier() {
     let result = validate(&gir, false);
     assert!(result.valid, "errors: {:?}", result.errors);
     assert!(
-        gir.nodes.iter().any(|n| n.assertion_modifier == Some(ul_core::AssertionModifierKind::Hedged)),
+        gir.nodes
+            .iter()
+            .any(|n| n.assertion_modifier == Some(ul_core::AssertionModifierKind::Hedged)),
         "Expected a Hedged assertion modifier node"
     );
 }
@@ -340,7 +364,10 @@ fn e2e_assertion_modifier_renders_svg() {
     let gir = parse("?{●}").unwrap();
     let svg = render(&gir, &opts()).unwrap();
     assert!(svg.contains("<svg"));
-    assert!(svg.contains("ul-evidential"), "Expected ul-evidential class in SVG: {svg}");
+    assert!(
+        svg.contains("ul-evidential"),
+        "Expected ul-evidential class in SVG: {svg}"
+    );
 }
 
 // ── Modal operator tests ──
@@ -353,7 +380,9 @@ fn e2e_parse_necessity() {
     assert_eq!(root.label.as_deref(), Some("□"));
     // Should have AccessibleFrom edge
     assert!(
-        gir.edges.iter().any(|e| e.edge_type == ul_core::types::edge::EdgeType::AccessibleFrom),
+        gir.edges
+            .iter()
+            .any(|e| e.edge_type == ul_core::types::edge::EdgeType::AccessibleFrom),
         "Expected AccessibleFrom edge"
     );
 }
@@ -364,7 +393,9 @@ fn e2e_parse_possibility() {
     let root = gir.node(&gir.root).unwrap();
     assert_eq!(root.label.as_deref(), Some("◇"));
     assert!(
-        gir.edges.iter().any(|e| e.edge_type == ul_core::types::edge::EdgeType::AccessibleFrom),
+        gir.edges
+            .iter()
+            .any(|e| e.edge_type == ul_core::types::edge::EdgeType::AccessibleFrom),
         "Expected AccessibleFrom edge"
     );
 }
@@ -375,7 +406,9 @@ fn e2e_parse_counterfactual() {
     let root = gir.node(&gir.root).unwrap();
     assert_eq!(root.label.as_deref(), Some("□→"));
     assert!(
-        gir.edges.iter().any(|e| e.edge_type == ul_core::types::edge::EdgeType::AccessibleFrom),
+        gir.edges
+            .iter()
+            .any(|e| e.edge_type == ul_core::types::edge::EdgeType::AccessibleFrom),
         "Expected AccessibleFrom edge"
     );
 }

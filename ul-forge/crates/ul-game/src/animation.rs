@@ -26,10 +26,7 @@ pub fn get_animation_sequence(gir: &Gir, width: f64, height: f64) -> AnimationSe
 
     for node_id in &bfs_order {
         // Find this node's position in the layout
-        let elem = positioned
-            .elements
-            .iter()
-            .find(|e| e.node_id == *node_id);
+        let elem = positioned.elements.iter().find(|e| e.node_id == *node_id);
 
         let (x, y) = match elem {
             Some(e) => (e.x, e.y),

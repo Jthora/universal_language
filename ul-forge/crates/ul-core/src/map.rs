@@ -73,7 +73,11 @@ impl CombinatorialMap {
                 dart_origin[d] = vertex.clone();
             }
         }
-        CombinatorialMap { sigma, dart_origin, n_darts }
+        CombinatorialMap {
+            sigma,
+            dart_origin,
+            n_darts,
+        }
     }
 
     /// Build from a [`Gir`], using **edge insertion order** as the rotation.
@@ -165,8 +169,7 @@ impl CombinatorialMap {
 
     /// The degree sequence, sorted ascending. A rotation-independent invariant.
     pub fn degree_sequence(&self) -> Vec<usize> {
-        let mut degrees: Vec<usize> =
-            self.vertices().iter().map(|orbit| orbit.len()).collect();
+        let mut degrees: Vec<usize> = self.vertices().iter().map(|orbit| orbit.len()).collect();
         degrees.sort_unstable();
         degrees
     }
@@ -221,7 +224,9 @@ pub struct Nesting {
 impl Nesting {
     /// All components at top level — the common case of several separate strokes.
     pub fn all_top_level(outer_darts: Vec<Dart>) -> Self {
-        Nesting { placements: outer_darts.into_iter().map(|d| (d, None)).collect() }
+        Nesting {
+            placements: outer_darts.into_iter().map(|d| (d, None)).collect(),
+        }
     }
 
     /// Place a component (identified by a dart on its outer face) inside a given face.
@@ -251,13 +256,24 @@ impl CombinatorialMap {
     pub fn faces_planar(&self, nesting: &Nesting) -> Vec<Vec<Dart>> {
         let raw = self.faces();
         // union-find over face ids
-        let mut parent: std::collections::HashMap<Dart, Dart> =
-            raw.iter().map(|f| { let id = *f.iter().min().unwrap(); (id, id) }).collect();
+        let mut parent: std::collections::HashMap<Dart, Dart> = raw
+            .iter()
+            .map(|f| {
+                let id = *f.iter().min().unwrap();
+                (id, id)
+            })
+            .collect();
         fn find(p: &mut std::collections::HashMap<Dart, Dart>, x: Dart) -> Dart {
             let mut r = x;
-            while p[&r] != r { r = p[&r]; }
+            while p[&r] != r {
+                r = p[&r];
+            }
             let mut c = x;
-            while p[&c] != c { let n = p[&c]; p.insert(c, r); c = n; }
+            while p[&c] != c {
+                let n = p[&c];
+                p.insert(c, r);
+                c = n;
+            }
             r
         }
 
@@ -267,13 +283,22 @@ impl CombinatorialMap {
             let a = self.face_id(*outer);
             let target = match container {
                 Some(c) => self.face_id(*c),
-                None => match unbounded { Some(u) => u, None => { unbounded = Some(a); a } },
+                None => match unbounded {
+                    Some(u) => u,
+                    None => {
+                        unbounded = Some(a);
+                        a
+                    }
+                },
             };
             let (ra, rt) = (find(&mut parent, a), find(&mut parent, target));
-            if ra != rt { parent.insert(ra, rt); }
+            if ra != rt {
+                parent.insert(ra, rt);
+            }
         }
 
-        let mut merged: std::collections::HashMap<Dart, Vec<Dart>> = std::collections::HashMap::new();
+        let mut merged: std::collections::HashMap<Dart, Vec<Dart>> =
+            std::collections::HashMap::new();
         for f in raw {
             let root = find(&mut parent, *f.iter().min().unwrap());
             merged.entry(root).or_default().extend(f);
@@ -303,7 +328,11 @@ impl CombinatorialMap {
         for d in 0..self.n_darts {
             sigma[self.sigma[d]] = d;
         }
-        CombinatorialMap { sigma, dart_origin: self.dart_origin.clone(), n_darts: self.n_darts }
+        CombinatorialMap {
+            sigma,
+            dart_origin: self.dart_origin.clone(),
+            n_darts: self.n_darts,
+        }
     }
 
     /// A cheap invariant: the degree sequence together with the sorted multiset of face sizes.
@@ -327,7 +356,11 @@ impl CombinatorialMap {
     /// structure is what `mirror_is_an_involution_and_preserves_degree` actually tests; this
     /// function is a consequence of it rather than independent evidence for it.
     pub fn convention_ambiguity(&self) -> usize {
-        if self.signature() == self.mirror().signature() { 1 } else { 2 }
+        if self.signature() == self.mirror().signature() {
+            1
+        } else {
+            2
+        }
     }
 }
 
@@ -360,8 +393,11 @@ impl CombinatorialMap {
     /// number of darts. These are not design choices; they are what it takes to be a map.
     pub fn validate(&self) -> Result<(), Vec<String>> {
         let mut errors = Vec::new();
-        if self.n_darts % 2 != 0 {
-            errors.push(format!("W2: {} darts — α needs an even count", self.n_darts));
+        if !self.n_darts.is_multiple_of(2) {
+            errors.push(format!(
+                "W2: {} darts — α needs an even count",
+                self.n_darts
+            ));
         }
         if self.sigma.len() != self.n_darts || self.dart_origin.len() != self.n_darts {
             errors.push("W1: sigma/origin tables do not cover the dart set".into());
@@ -381,13 +417,17 @@ impl CombinatorialMap {
                 errors.push(format!("W1: sigma moves dart {d} across vertices"));
             }
         }
-        if errors.is_empty() { Ok(()) } else { Err(errors) }
+        if errors.is_empty() {
+            Ok(())
+        } else {
+            Err(errors)
+        }
     }
 
     /// Number of connected components (darts under σ and α). `0` for the empty map.
     pub fn components(&self) -> usize {
         let mut parent: Vec<usize> = (0..self.n_darts).collect();
-        fn find(p: &mut Vec<usize>, mut x: usize) -> usize {
+        fn find(p: &mut [usize], mut x: usize) -> usize {
             while p[x] != x {
                 p[x] = p[p[x]];
                 x = p[x];
@@ -396,11 +436,17 @@ impl CombinatorialMap {
         }
         for d in 0..self.n_darts {
             let (a, b) = (find(&mut parent, d), find(&mut parent, self.sigma[d]));
-            if a != b { parent[a] = b; }
+            if a != b {
+                parent[a] = b;
+            }
             let (a, b) = (find(&mut parent, d), find(&mut parent, Self::alpha(d)));
-            if a != b { parent[a] = b; }
+            if a != b {
+                parent[a] = b;
+            }
         }
-        (0..self.n_darts).filter(|&d| find(&mut parent, d) == d).count()
+        (0..self.n_darts)
+            .filter(|&d| find(&mut parent, d) == d)
+            .count()
     }
 
     /// A cycle on `n` vertices — the closed curve. Promoted from the test helper because the
@@ -437,7 +483,11 @@ impl CombinatorialMap {
         sigma.extend(other.sigma.iter().map(|&d| d + off));
         let mut dart_origin = self.dart_origin.clone();
         dart_origin.extend(other.dart_origin.iter().map(|o| format!("{o}+{off}")));
-        CombinatorialMap { sigma, dart_origin, n_darts: self.n_darts + other.n_darts }
+        CombinatorialMap {
+            sigma,
+            dart_origin,
+            n_darts: self.n_darts + other.n_darts,
+        }
     }
 
     /// O2 — connection. Adds one edge between the vertex of `da` and the vertex of `db`,
@@ -448,7 +498,10 @@ impl CombinatorialMap {
     /// (notes/046, `a_dummy_edge_replaces_the_nesting_structure`).
     pub fn connect(&self, da: Dart, db: Dart) -> CombinatorialMap {
         assert!(da < self.n_darts && db < self.n_darts, "darts out of range");
-        assert_ne!(da, db, "self-insertion at one dart is not defined in the core grammar");
+        assert_ne!(
+            da, db,
+            "self-insertion at one dart is not defined in the core grammar"
+        );
         let n = self.n_darts;
         let mut sigma = self.sigma.clone();
         sigma.push(0);
@@ -460,7 +513,11 @@ impl CombinatorialMap {
         let mut dart_origin = self.dart_origin.clone();
         dart_origin.push(self.dart_origin[da].clone());
         dart_origin.push(self.dart_origin[db].clone());
-        CombinatorialMap { sigma, dart_origin, n_darts: n + 2 }
+        CombinatorialMap {
+            sigma,
+            dart_origin,
+            n_darts: n + 2,
+        }
     }
 
     /// O3 — subdivision. Splits the edge of `d` with a fresh degree-2 vertex.
@@ -499,7 +556,11 @@ impl CombinatorialMap {
     /// level with its odd-orbit face outward, `inner` placed inside the even-orbit face.
     /// (Which orbit is "outer" is the point-at-infinity datum of the planar reading — carried
     /// explicitly, per notes/032.)
-    pub fn enclose(inner: &CombinatorialMap, inner_outer_dart: Dart, n: usize) -> (CombinatorialMap, Nesting) {
+    pub fn enclose(
+        inner: &CombinatorialMap,
+        inner_outer_dart: Dart,
+        n: usize,
+    ) -> (CombinatorialMap, Nesting) {
         let ring = CombinatorialMap::cycle(n);
         let off = ring.n_darts;
         let composed = ring.disjoint_union(inner);
@@ -580,7 +641,11 @@ mod tests {
         assert_eq!(m.degree_sequence(), vec![3, 3], "two degree-3 junctions");
         assert_eq!(m.vertices().len(), 2);
         assert_eq!(m.edge_count(), 3);
-        assert_eq!(m.faces().len(), 3, "theta graph bounds three faces in the plane");
+        assert_eq!(
+            m.faces().len(),
+            3,
+            "theta graph bounds three faces in the plane"
+        );
         assert_eq!(m.euler_characteristic(), 2);
         assert_eq!(m.genus(), Some(0));
     }
@@ -594,7 +659,11 @@ mod tests {
         // This test exists because the planar test above was originally written with this
         // rotation and failed. The code was right; the expectation was wrong.
         let m = theta(vec![1, 3, 5]); // same orientation at b
-        assert_eq!(m.degree_sequence(), vec![3, 3], "degree is rotation-independent");
+        assert_eq!(
+            m.degree_sequence(),
+            vec![3, 3],
+            "degree is rotation-independent"
+        );
         assert_eq!(m.faces().len(), 1);
         assert_eq!(m.euler_characteristic(), 0);
         assert_eq!(m.genus(), Some(1), "genus 1 — the torus");
@@ -648,23 +717,38 @@ mod tests {
         // rotation system does not determine a single-surface embedding: the relative nesting of
         // components is information the map does not carry. See FAILURES.md F-025.
         assert_eq!(hex.genus(), Some(0));
-        assert_eq!(tris.genus(), None, "genus formula does not apply to a disconnected map");
+        assert_eq!(
+            tris.genus(),
+            None,
+            "genus formula does not apply to a disconnected map"
+        );
     }
-
 
     #[test]
     fn nesting_recovers_the_correct_planar_face_count() {
         // Two disjoint triangles bound THREE regions in the plane: two insides and one
         // shared outside. Without nesting the map traces four (notes 032, 039).
         let m = two_triangles();
-        assert_eq!(m.faces().len(), 4, "without nesting: each component on its own sphere");
+        assert_eq!(
+            m.faces().len(),
+            4,
+            "without nesting: each component on its own sphere"
+        );
 
         // Outer face of triangle A contains dart 1; of triangle B, dart 7. Both at top level.
         let n = Nesting::all_top_level(vec![1, 7]);
-        assert_eq!(m.faces_planar(&n).len(), 3, "with nesting: the two outer faces are identified");
+        assert_eq!(
+            m.faces_planar(&n).len(),
+            3,
+            "with nesting: the two outer faces are identified"
+        );
 
         // Euler for a planar graph with c components is 1 + c.
-        assert_eq!(m.euler_characteristic_planar(&n), 3, "V - E + F = 1 + c = 3");
+        assert_eq!(
+            m.euler_characteristic_planar(&n),
+            3,
+            "V - E + F = 1 + c = 3"
+        );
     }
 
     /// Two triangles joined by one **dummy edge** — the computational-geometry alternative.
@@ -702,14 +786,23 @@ mod tests {
 
         // A dart listed nowhere: sigma defaults collide, injectivity fails.
         let broken = CombinatorialMap::from_rotations(vec![("v0".into(), vec![0, 2])], 4);
-        let errs = broken.validate().expect_err("missing darts must not validate");
-        assert!(errs.iter().any(|e| e.contains("W1")), "the failure names the rule");
+        let errs = broken
+            .validate()
+            .expect_err("missing darts must not validate");
+        assert!(
+            errs.iter().any(|e| e.contains("W1")),
+            "the failure names the rule"
+        );
     }
 
     #[test]
     fn components_sees_what_degree_sequence_cannot() {
         assert_eq!(cycle(6).components(), 1);
-        assert_eq!(two_triangles().components(), 2, "same degree sequence, different count");
+        assert_eq!(
+            two_triangles().components(),
+            2,
+            "same degree sequence, different count"
+        );
         assert_eq!(CombinatorialMap::path(1).components(), 1);
     }
 
@@ -720,7 +813,11 @@ mod tests {
         assert_eq!(u.components(), 2);
         assert_eq!(u.vertices().len(), 6, "V adds");
         assert_eq!(u.edge_count(), 6, "E adds");
-        assert_eq!(u.faces().len(), 4, "raw faces add — the planar reading needs Nesting");
+        assert_eq!(
+            u.faces().len(),
+            4,
+            "raw faces add — the planar reading needs Nesting"
+        );
     }
 
     #[test]
@@ -729,8 +826,16 @@ mod tests {
         // reproducing the dummy-edge result through the public operations alone.
         let joined = cycle(3).disjoint_union(&cycle(3)).connect(0, 6);
         assert!(joined.validate().is_ok());
-        assert_eq!(joined.components(), 1, "connection makes it one configuration");
-        assert_eq!(joined.faces().len(), 3, "three planar regions, no Nesting needed");
+        assert_eq!(
+            joined.components(),
+            1,
+            "connection makes it one configuration"
+        );
+        assert_eq!(
+            joined.faces().len(),
+            3,
+            "three planar regions, no Nesting needed"
+        );
         assert_eq!(joined.genus(), Some(0), "the genus formula applies again");
     }
 
@@ -753,7 +858,11 @@ mod tests {
     fn o3_subdivision_is_inert_for_open_strokes_too() {
         let sub = CombinatorialMap::path(1).subdivide(0);
         let two = CombinatorialMap::path(2);
-        assert_eq!(sub.degree_sequence(), two.degree_sequence(), "free ends stay free");
+        assert_eq!(
+            sub.degree_sequence(),
+            two.degree_sequence(),
+            "free ends stay free"
+        );
         assert_eq!(sub.faces().len(), two.faces().len());
         assert_eq!(sub.components(), 1);
     }
@@ -770,8 +879,14 @@ mod tests {
         assert_eq!(faces.len(), 2, "inside-with-segment and outside");
         assert_eq!(map.euler_characteristic_planar(&nesting), 3, "1 + c");
         let holds = |a: Dart, b: Dart| faces.iter().any(|f| f.contains(&a) && f.contains(&b));
-        assert!(holds(0, 6), "the ring's bounded orbit and the segment share a region");
-        assert!(!holds(1, 6), "the unbounded region does not contain the segment");
+        assert!(
+            holds(0, 6),
+            "the ring's bounded orbit and the segment share a region"
+        );
+        assert!(
+            !holds(1, 6),
+            "the unbounded region does not contain the segment"
+        );
     }
 
     #[test]
@@ -785,7 +900,11 @@ mod tests {
             3,
             "the dummy edge yields the correct planar face count from faces() alone"
         );
-        assert_eq!(bridged.euler_characteristic(), 2, "connected planar: chi = 2");
+        assert_eq!(
+            bridged.euler_characteristic(),
+            2,
+            "connected planar: chi = 2"
+        );
         assert_eq!(bridged.genus(), Some(0), "the genus formula applies again");
 
         // It agrees with the Nesting route on the same configuration.
@@ -797,7 +916,11 @@ mod tests {
         // edge-counting invariant must exclude dummy edges. V and F are untouched.
         assert_eq!(plain.edge_count(), 6);
         assert_eq!(bridged.edge_count(), 7, "one dummy edge for two components");
-        assert_eq!(bridged.vertices().len(), plain.vertices().len(), "V unchanged");
+        assert_eq!(
+            bridged.vertices().len(),
+            plain.vertices().len(),
+            "V unchanged"
+        );
     }
 
     #[test]
@@ -825,7 +948,6 @@ mod tests {
         assert_eq!(hex.faces_planar(&n).len(), hex.faces().len(), "2");
         assert_eq!(hex.euler_characteristic_planar(&n), 2);
     }
-
 
     #[test]
     fn rotation_ambiguity_never_exceeds_two() {
@@ -868,8 +990,16 @@ mod tests {
     fn mirror_is_an_involution_and_preserves_degree() {
         // Reflection is a ℤ/2 action: applying it twice returns the original.
         let m = theta(vec![1, 5, 3]);
-        assert_eq!(m.mirror().mirror().signature(), m.signature(), "mirror is involutive");
-        assert_eq!(m.mirror().degree_sequence(), m.degree_sequence(), "degree is reflection-invariant");
+        assert_eq!(
+            m.mirror().mirror().signature(),
+            m.signature(),
+            "mirror is involutive"
+        );
+        assert_eq!(
+            m.mirror().degree_sequence(),
+            m.degree_sequence(),
+            "degree is reflection-invariant"
+        );
     }
 
     #[test]
@@ -890,7 +1020,11 @@ mod tests {
             vec![("a".into(), vec![0, 4, 2]), ("b".into(), vec![1, 3, 5])],
             6,
         );
-        assert_eq!(a.degree_sequence(), b.degree_sequence(), "degree is topological");
+        assert_eq!(
+            a.degree_sequence(),
+            b.degree_sequence(),
+            "degree is topological"
+        );
         assert_ne!(
             a.faces().len(),
             b.faces().len(),

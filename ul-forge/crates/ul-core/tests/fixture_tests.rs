@@ -28,15 +28,17 @@ fn canonical_fixtures_parse_validate_render() {
             let input = input.trim();
             let name = path.file_stem().unwrap().to_string_lossy();
 
-            let gir = parser::parse(input)
-                .unwrap_or_else(|e| panic!("[{name}] parse failed: {e}"));
+            let gir = parser::parse(input).unwrap_or_else(|e| panic!("[{name}] parse failed: {e}"));
 
             let result = validator::validate(&gir, false);
-            assert!(result.valid, "[{name}] validation failed: {:?}", result.errors);
+            assert!(
+                result.valid,
+                "[{name}] validation failed: {:?}",
+                result.errors
+            );
 
             let opts = RenderOptions::default();
-            renderer::render(&gir, &opts)
-                .unwrap_or_else(|e| panic!("[{name}] render failed: {e}"));
+            renderer::render(&gir, &opts).unwrap_or_else(|e| panic!("[{name}] render failed: {e}"));
 
             count += 1;
         }
@@ -60,7 +62,10 @@ fn edge_case_fixtures_do_not_panic() {
             count += 1;
         }
     }
-    assert!(count >= 4, "Expected at least 4 edge-case fixtures, found {count}");
+    assert!(
+        count >= 4,
+        "Expected at least 4 edge-case fixtures, found {count}"
+    );
 }
 
 #[test]
@@ -80,7 +85,10 @@ fn invalid_ul_fixtures_fail_to_parse() {
             count += 1;
         }
     }
-    assert!(count >= 3, "Expected at least 3 invalid .ul fixtures, found {count}");
+    assert!(
+        count >= 3,
+        "Expected at least 3 invalid .ul fixtures, found {count}"
+    );
 }
 
 #[test]
@@ -96,11 +104,17 @@ fn invalid_gir_fixtures_fail_validation() {
 
             if let Ok(gir) = serde_json::from_str::<ul_core::Gir>(&json) {
                 let result = validator::validate(&gir, true);
-                assert!(!result.valid, "[{name}] expected validation failure but got valid");
+                assert!(
+                    !result.valid,
+                    "[{name}] expected validation failure but got valid"
+                );
             }
             // If deserialization fails, that's also a valid "rejection"
             count += 1;
         }
     }
-    assert!(count >= 2, "Expected at least 2 invalid .gir.json fixtures, found {count}");
+    assert!(
+        count >= 2,
+        "Expected at least 2 invalid .gir.json fixtures, found {count}"
+    );
 }

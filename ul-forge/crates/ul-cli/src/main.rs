@@ -345,11 +345,7 @@ fn cmd_analyze(input: Option<String>) -> Result<(), Box<dyn std::error::Error>> 
     Ok(())
 }
 
-fn cmd_force(
-    force_str: &str,
-    input: &str,
-    is_gir: bool,
-) -> Result<(), Box<dyn std::error::Error>> {
+fn cmd_force(force_str: &str, input: &str, is_gir: bool) -> Result<(), Box<dyn std::error::Error>> {
     let gir = if is_gir {
         let json_str = std::fs::read_to_string(input)?;
         ul_core::Gir::from_json(&json_str)?
@@ -419,7 +415,10 @@ fn cmd_evaluate(
     let result = ul_game::evaluation::evaluate(&ctx, &gir);
 
     if json_output {
-        println!("{}", serde_json::to_string_pretty(&serde_json::to_value(&result)?)?);
+        println!(
+            "{}",
+            serde_json::to_string_pretty(&serde_json::to_value(&result)?)?
+        );
     } else {
         println!("Score:    {:.2}", result.score);
         println!("Grade:    {:?}", result.grade);
@@ -445,7 +444,11 @@ fn cmd_check(input: &str, expect: Option<String>) -> Result<(), Box<dyn std::err
             std::process::exit(1);
         }
     };
-    println!("✓ Parsed ({} nodes, {} edges)", gir.nodes.len(), gir.edges.len());
+    println!(
+        "✓ Parsed ({} nodes, {} edges)",
+        gir.nodes.len(),
+        gir.edges.len()
+    );
 
     // Step 2: Validate
     let vr = ul_core::validator::validate(&gir, false);
@@ -462,7 +465,14 @@ fn cmd_check(input: &str, expect: Option<String>) -> Result<(), Box<dyn std::err
     // Step 3: Detect operations
     let ops = ul_core::composer::detect_operations(&gir);
     let op_names: Vec<&str> = ops.iter().map(|o| o.operation).collect();
-    println!("  Operations: {}", if op_names.is_empty() { "(none)".to_string() } else { op_names.join(", ") });
+    println!(
+        "  Operations: {}",
+        if op_names.is_empty() {
+            "(none)".to_string()
+        } else {
+            op_names.join(", ")
+        }
+    );
 
     // Step 4: Compare to expected (if given)
     if let Some(expected) = expect {

@@ -27,7 +27,8 @@ pub fn analyze_structure(gir: &Gir) -> StructureReport {
     }
 
     let detected = composer::detect_operations(gir);
-    let detected_operations: Vec<String> = detected.iter().map(|d| d.operation.to_string()).collect();
+    let detected_operations: Vec<String> =
+        detected.iter().map(|d| d.operation.to_string()).collect();
 
     let depth = compute_depth(gir);
     let breadth = compute_breadth(gir);
@@ -38,7 +39,7 @@ pub fn analyze_structure(gir: &Gir) -> StructureReport {
         .nodes
         .iter()
         .find(|n| n.id == gir.root)
-        .map(|n| classify_symmetry(n))
+        .map(classify_symmetry)
         .unwrap_or(SymmetryGroup::None);
 
     StructureReport {
@@ -264,31 +265,15 @@ fn compare_shapes(a: &Gir, b: &Gir) -> f64 {
 
 /// Compare metric properties (angles, curvatures).
 fn compare_metrics(a: &Gir, b: &Gir) -> f64 {
-    let mut angles_a: Vec<f64> = a
-        .nodes
-        .iter()
-        .filter_map(|n| n.measure)
-        .collect();
-    let mut angles_b: Vec<f64> = b
-        .nodes
-        .iter()
-        .filter_map(|n| n.measure)
-        .collect();
+    let mut angles_a: Vec<f64> = a.nodes.iter().filter_map(|n| n.measure).collect();
+    let mut angles_b: Vec<f64> = b.nodes.iter().filter_map(|n| n.measure).collect();
     angles_a.sort_by(|x, y| x.partial_cmp(y).unwrap_or(std::cmp::Ordering::Equal));
     angles_b.sort_by(|x, y| x.partial_cmp(y).unwrap_or(std::cmp::Ordering::Equal));
 
     let angle_sim = compare_sorted_f64(&angles_a, &angles_b, 360.0);
 
-    let mut curv_a: Vec<f64> = a
-        .nodes
-        .iter()
-        .filter_map(|n| n.curvature)
-        .collect();
-    let mut curv_b: Vec<f64> = b
-        .nodes
-        .iter()
-        .filter_map(|n| n.curvature)
-        .collect();
+    let mut curv_a: Vec<f64> = a.nodes.iter().filter_map(|n| n.curvature).collect();
+    let mut curv_b: Vec<f64> = b.nodes.iter().filter_map(|n| n.curvature).collect();
     curv_a.sort_by(|x, y| x.partial_cmp(y).unwrap_or(std::cmp::Ordering::Equal));
     curv_b.sort_by(|x, y| x.partial_cmp(y).unwrap_or(std::cmp::Ordering::Equal));
 
@@ -387,10 +372,8 @@ pub fn detect_operations_list(gir: &Gir) -> Vec<Operation> {
                             ops.push(Operation::Possibility);
                         }
                     }
-                    "□→" => {
-                        if !ops.contains(&Operation::Counterfactual) {
-                            ops.push(Operation::Counterfactual);
-                        }
+                    "□→" if !ops.contains(&Operation::Counterfactual) => {
+                        ops.push(Operation::Counterfactual);
                     }
                     _ => {}
                 }
@@ -426,7 +409,13 @@ fn compute_depth(gir: &Gir) -> u32 {
     fn dfs_depth(node: &str, children: &std::collections::HashMap<&str, Vec<&str>>) -> u32 {
         match children.get(node) {
             None => 1,
-            Some(kids) => 1 + kids.iter().map(|k| dfs_depth(k, children)).max().unwrap_or(0),
+            Some(kids) => {
+                1 + kids
+                    .iter()
+                    .map(|k| dfs_depth(k, children))
+                    .max()
+                    .unwrap_or(0)
+            }
         }
     }
 
@@ -435,8 +424,7 @@ fn compute_depth(gir: &Gir) -> u32 {
 
 /// Compute the maximum breadth (most children at any level).
 fn compute_breadth(gir: &Gir) -> u32 {
-    let mut children_count: std::collections::HashMap<&str, u32> =
-        std::collections::HashMap::new();
+    let mut children_count: std::collections::HashMap<&str, u32> = std::collections::HashMap::new();
     for edge in &gir.edges {
         if edge.edge_type == EdgeType::Contains {
             *children_count.entry(edge.source.as_str()).or_insert(0) += 1;
@@ -496,14 +484,20 @@ mod tests {
     fn symmetry_circle_is_so2() {
         let node = Node::enclosure("c", EnclosureShape::Circle);
         assert_eq!(classify_symmetry(&node), SymmetryGroup::So2);
-        assert_eq!(symmetry_to_part_of_speech(SymmetryGroup::So2), PartOfSpeech::Determiner);
+        assert_eq!(
+            symmetry_to_part_of_speech(SymmetryGroup::So2),
+            PartOfSpeech::Determiner
+        );
     }
 
     #[test]
     fn symmetry_triangle_is_d3() {
         let node = Node::enclosure("t", EnclosureShape::Triangle);
         assert_eq!(classify_symmetry(&node), SymmetryGroup::D3);
-        assert_eq!(symmetry_to_part_of_speech(SymmetryGroup::D3), PartOfSpeech::Noun);
+        assert_eq!(
+            symmetry_to_part_of_speech(SymmetryGroup::D3),
+            PartOfSpeech::Noun
+        );
     }
 
     #[test]
@@ -530,14 +524,20 @@ mod tests {
     fn symmetry_directed_line_is_none() {
         let node = Node::line("l", true);
         assert_eq!(classify_symmetry(&node), SymmetryGroup::None);
-        assert_eq!(symmetry_to_part_of_speech(SymmetryGroup::None), PartOfSpeech::Verb);
+        assert_eq!(
+            symmetry_to_part_of_speech(SymmetryGroup::None),
+            PartOfSpeech::Verb
+        );
     }
 
     #[test]
     fn symmetry_undirected_line_is_bilateral() {
         let node = Node::line("l", false);
         assert_eq!(classify_symmetry(&node), SymmetryGroup::Bilateral);
-        assert_eq!(symmetry_to_part_of_speech(SymmetryGroup::Bilateral), PartOfSpeech::Adjective);
+        assert_eq!(
+            symmetry_to_part_of_speech(SymmetryGroup::Bilateral),
+            PartOfSpeech::Adjective
+        );
     }
 
     #[test]
@@ -567,15 +567,15 @@ mod tests {
                 Node::point("p1"),
                 Node::line("l1", true),
             ],
-            vec![
-                Edge::contains("root", "p1"),
-                Edge::contains("root", "l1"),
-            ],
+            vec![Edge::contains("root", "p1"), Edge::contains("root", "l1")],
         );
         let report = analyze_structure(&gir);
         assert_eq!(report.symmetry_group, SymmetryGroup::So2);
         assert_eq!(report.part_of_speech, PartOfSpeech::Determiner);
-        assert_eq!(report.node_symmetries.get("root"), Some(&SymmetryGroup::So2));
+        assert_eq!(
+            report.node_symmetries.get("root"),
+            Some(&SymmetryGroup::So2)
+        );
         assert_eq!(report.node_symmetries.get("p1"), Some(&SymmetryGroup::None));
         assert_eq!(report.node_symmetries.get("l1"), Some(&SymmetryGroup::None));
     }

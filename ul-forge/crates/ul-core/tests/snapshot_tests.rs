@@ -19,60 +19,109 @@ fn svg_snapshot(name: &str, input: &str) {
         embed_gir: false,
         ..RenderOptions::default()
     };
-    let svg = renderer::render(&gir, &opts).unwrap_or_else(|e| panic!("render failed for {name}: {e}"));
+    let svg =
+        renderer::render(&gir, &opts).unwrap_or_else(|e| panic!("render failed for {name}: {e}"));
     assert_snapshot!(format!("svg_{name}"), svg);
 }
 
 // ── GIR snapshots for 12 Tier-1 glyphs ──
 
 #[test]
-fn gir_existence()    { parse_snapshot("existence",    "○{●}"); }
+fn gir_existence() {
+    parse_snapshot("existence", "○{●}");
+}
 #[test]
-fn gir_relation()     { parse_snapshot("relation",     "→"); }
+fn gir_relation() {
+    parse_snapshot("relation", "→");
+}
 #[test]
-fn gir_quality()      { parse_snapshot("quality",      "∠60"); }
+fn gir_quality() {
+    parse_snapshot("quality", "∠60");
+}
 #[test]
-fn gir_process()      { parse_snapshot("process",      "~"); }
+fn gir_process() {
+    parse_snapshot("process", "~");
+}
 #[test]
-fn gir_concept()      { parse_snapshot("concept",      "○"); }
+fn gir_concept() {
+    parse_snapshot("concept", "○");
+}
 #[test]
-fn gir_structure()    { parse_snapshot("structure",    "△"); }
+fn gir_structure() {
+    parse_snapshot("structure", "△");
+}
 #[test]
-fn gir_foundation()   { parse_snapshot("foundation",   "□"); }
+fn gir_foundation() {
+    parse_snapshot("foundation", "□");
+}
 #[test]
-fn gir_point()        { parse_snapshot("point",        "●"); }
+fn gir_point() {
+    parse_snapshot("point", "●");
+}
 #[test]
-fn gir_connection()   { parse_snapshot("connection",   "● → ●"); }
+fn gir_connection() {
+    parse_snapshot("connection", "● → ●");
+}
 #[test]
-fn gir_boundary()     { parse_snapshot("boundary",     "○ | ○"); }
+fn gir_boundary() {
+    parse_snapshot("boundary", "○ | ○");
+}
 #[test]
-fn gir_intersection() { parse_snapshot("intersection", "○ & ○"); }
+fn gir_intersection() {
+    parse_snapshot("intersection", "○ & ○");
+}
 #[test]
-fn gir_containment()  { parse_snapshot("containment",  "○{○}"); }
+fn gir_containment() {
+    parse_snapshot("containment", "○{○}");
+}
 
 // ── SVG snapshots for 12 Tier-1 glyphs ──
 
 #[test]
-fn svg_existence()    { svg_snapshot("existence",    "○{●}"); }
+fn svg_existence() {
+    svg_snapshot("existence", "○{●}");
+}
 #[test]
-fn svg_relation()     { svg_snapshot("relation",     "→"); }
+fn svg_relation() {
+    svg_snapshot("relation", "→");
+}
 #[test]
-fn svg_quality()      { svg_snapshot("quality",      "∠60"); }
+fn svg_quality() {
+    svg_snapshot("quality", "∠60");
+}
 #[test]
-fn svg_process()      { svg_snapshot("process",      "~"); }
+fn svg_process() {
+    svg_snapshot("process", "~");
+}
 #[test]
-fn svg_concept()      { svg_snapshot("concept",      "○"); }
+fn svg_concept() {
+    svg_snapshot("concept", "○");
+}
 #[test]
-fn svg_structure()    { svg_snapshot("structure",    "△"); }
+fn svg_structure() {
+    svg_snapshot("structure", "△");
+}
 #[test]
-fn svg_foundation()   { svg_snapshot("foundation",   "□"); }
+fn svg_foundation() {
+    svg_snapshot("foundation", "□");
+}
 #[test]
-fn svg_point()        { svg_snapshot("point",        "●"); }
+fn svg_point() {
+    svg_snapshot("point", "●");
+}
 #[test]
-fn svg_connection()   { svg_snapshot("connection",   "● → ●"); }
+fn svg_connection() {
+    svg_snapshot("connection", "● → ●");
+}
 #[test]
-fn svg_boundary()     { svg_snapshot("boundary",     "○ | ○"); }
+fn svg_boundary() {
+    svg_snapshot("boundary", "○ | ○");
+}
 #[test]
-fn svg_intersection() { svg_snapshot("intersection", "○ & ○"); }
+fn svg_intersection() {
+    svg_snapshot("intersection", "○ & ○");
+}
 #[test]
-fn svg_containment()  { svg_snapshot("containment",  "○{○}"); }
+fn svg_containment() {
+    svg_snapshot("containment", "○{○}");
+}

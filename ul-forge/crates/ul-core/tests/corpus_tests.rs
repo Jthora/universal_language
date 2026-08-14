@@ -44,7 +44,10 @@ fn every_corpus_entry_verifies_against_the_implementation() {
         .filter(|p| p.extension().is_some_and(|x| x == "json"))
         .collect();
     entries.sort();
-    assert!(!entries.is_empty(), "corpus is empty — the harness has nothing to verify");
+    assert!(
+        !entries.is_empty(),
+        "corpus is empty — the harness has nothing to verify"
+    );
 
     for path in entries {
         let text = fs::read_to_string(&path).expect("read entry");
@@ -65,7 +68,11 @@ fn every_corpus_entry_verifies_against_the_implementation() {
         }
         match &exp["genus"] {
             Value::Number(g) => {
-                assert_eq!(map.genus(), Some(g.as_u64().expect("genus") as u32), "{id}: genus");
+                assert_eq!(
+                    map.genus(),
+                    Some(g.as_u64().expect("genus") as u32),
+                    "{id}: genus"
+                );
             }
             Value::Null => {
                 assert_eq!(map.genus(), None, "{id}: genus formula must not apply");
@@ -73,7 +80,10 @@ fn every_corpus_entry_verifies_against_the_implementation() {
             _ => {}
         }
         if let Some(ds) = exp["degree_sequence"].as_array() {
-            let want: Vec<usize> = ds.iter().map(|d| d.as_u64().expect("deg") as usize).collect();
+            let want: Vec<usize> = ds
+                .iter()
+                .map(|d| d.as_u64().expect("deg") as usize)
+                .collect();
             assert_eq!(map.degree_sequence(), want, "{id}: degree sequence");
         }
 
@@ -101,10 +111,18 @@ fn every_corpus_entry_verifies_against_the_implementation() {
                 }
             }
             if let Some(pf) = exp["planar_faces"].as_u64() {
-                assert_eq!(map.faces_planar(&nesting).len() as u64, pf, "{id}: planar faces");
+                assert_eq!(
+                    map.faces_planar(&nesting).len() as u64,
+                    pf,
+                    "{id}: planar faces"
+                );
             }
             if let Some(chi) = exp["euler_planar"].as_i64() {
-                assert_eq!(map.euler_characteristic_planar(&nesting), chi, "{id}: planar Euler");
+                assert_eq!(
+                    map.euler_characteristic_planar(&nesting),
+                    chi,
+                    "{id}: planar Euler"
+                );
             }
             map.faces_planar(&nesting)
         } else {
@@ -113,17 +131,30 @@ fn every_corpus_entry_verifies_against_the_implementation() {
 
         // Lexicon-grade regional semantics: co-facality is the machine-checkable form of
         // containment/separation/adjacency (spec/grammar-core.md).
-        let cofacial = |a: usize, b: usize| region_faces.iter().any(|f| f.contains(&a) && f.contains(&b));
+        let cofacial = |a: usize, b: usize| {
+            region_faces
+                .iter()
+                .any(|f| f.contains(&a) && f.contains(&b))
+        };
         if let Some(pairs) = exp["same_face"].as_array() {
             for p in pairs {
-                let (a, b) = (p[0].as_u64().unwrap() as usize, p[1].as_u64().unwrap() as usize);
+                let (a, b) = (
+                    p[0].as_u64().unwrap() as usize,
+                    p[1].as_u64().unwrap() as usize,
+                );
                 assert!(cofacial(a, b), "{id}: darts {a},{b} must share a region");
             }
         }
         if let Some(pairs) = exp["different_face"].as_array() {
             for p in pairs {
-                let (a, b) = (p[0].as_u64().unwrap() as usize, p[1].as_u64().unwrap() as usize);
-                assert!(!cofacial(a, b), "{id}: darts {a},{b} must lie in different regions");
+                let (a, b) = (
+                    p[0].as_u64().unwrap() as usize,
+                    p[1].as_u64().unwrap() as usize,
+                );
+                assert!(
+                    !cofacial(a, b),
+                    "{id}: darts {a},{b} must lie in different regions"
+                );
             }
         }
 

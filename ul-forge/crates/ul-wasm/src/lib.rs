@@ -82,25 +82,53 @@ pub fn compose(operation: &str, operands_json: &str) -> Result<JsValue, JsError>
             .map_err(|e| JsError::new(&format!("invalid operands JSON: {e}")))?;
         let girs: Vec<ul_core::Gir> = operands
             .iter()
-            .map(|s| ul_core::parser::parse(s).map_err(|e| JsError::new(&format!("parse error on '{s}': {e}"))))
+            .map(|s| {
+                ul_core::parser::parse(s)
+                    .map_err(|e| JsError::new(&format!("parse error on '{s}': {e}")))
+            })
             .collect::<Result<Vec<_>, _>>()?;
 
         let result = match operation.as_str() {
-            "negate" => ul_core::composer::negate(girs.first().ok_or_else(|| JsError::new("negate requires 1 operand"))?),
-            "embed" => ul_core::composer::embed(girs.first().ok_or_else(|| JsError::new("embed requires 1 operand"))?),
-            "abstract" => ul_core::composer::abstract_op(girs.first().ok_or_else(|| JsError::new("abstract requires 1 operand"))?),
-            "invert" => ul_core::composer::invert(girs.first().ok_or_else(|| JsError::new("invert requires 1 operand"))?),
-            "predicate" if girs.len() >= 3 => ul_core::composer::predicate(&girs[0], &girs[1], &girs[2]),
-            "modify_entity" if girs.len() >= 2 => ul_core::composer::modify_entity(&girs[0], &girs[1]),
-            "modify_relation" if girs.len() >= 2 => ul_core::composer::modify_relation(&girs[0], &girs[1]),
+            "negate" => ul_core::composer::negate(
+                girs.first()
+                    .ok_or_else(|| JsError::new("negate requires 1 operand"))?,
+            ),
+            "embed" => ul_core::composer::embed(
+                girs.first()
+                    .ok_or_else(|| JsError::new("embed requires 1 operand"))?,
+            ),
+            "abstract" => ul_core::composer::abstract_op(
+                girs.first()
+                    .ok_or_else(|| JsError::new("abstract requires 1 operand"))?,
+            ),
+            "invert" => ul_core::composer::invert(
+                girs.first()
+                    .ok_or_else(|| JsError::new("invert requires 1 operand"))?,
+            ),
+            "predicate" if girs.len() >= 3 => {
+                ul_core::composer::predicate(&girs[0], &girs[1], &girs[2])
+            }
+            "modify_entity" if girs.len() >= 2 => {
+                ul_core::composer::modify_entity(&girs[0], &girs[1])
+            }
+            "modify_relation" if girs.len() >= 2 => {
+                ul_core::composer::modify_relation(&girs[0], &girs[1])
+            }
             "conjoin" if girs.len() >= 2 => ul_core::composer::conjoin(&girs[0], &girs[1]),
             "disjoin" if girs.len() >= 2 => ul_core::composer::disjoin(&girs[0], &girs[1]),
             "compose" if girs.len() >= 2 => ul_core::composer::compose(&girs[0], &girs[1]),
             "quantify" if girs.len() >= 2 => ul_core::composer::quantify(&girs[0], &girs[1]),
             "bind" if girs.len() >= 2 => ul_core::composer::bind(&girs[0], &girs[1]),
-            "modify_assertion" if girs.len() >= 2 => ul_core::composer::modify_assertion(&girs[0], &girs[1]),
-            _ => return Err(JsError::new(&format!("unknown operation or insufficient operands: {operation}"))),
-        }.map_err(|e| JsError::new(&e.to_string()))?;
+            "modify_assertion" if girs.len() >= 2 => {
+                ul_core::composer::modify_assertion(&girs[0], &girs[1])
+            }
+            _ => {
+                return Err(JsError::new(&format!(
+                    "unknown operation or insufficient operands: {operation}"
+                )))
+            }
+        }
+        .map_err(|e| JsError::new(&e.to_string()))?;
 
         Ok(serde_wasm_bindgen::to_value(&result)?)
     }))

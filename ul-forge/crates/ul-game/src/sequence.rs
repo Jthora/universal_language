@@ -77,9 +77,7 @@ fn complexity_progression(a: &Gir, b: &Gir) -> f64 {
     let ca = a.nodes.len() as f64;
     let cb = b.nodes.len() as f64;
 
-    if cb >= ca {
-        1.0
-    } else if ca == 0.0 {
+    if cb >= ca || ca == 0.0 {
         1.0
     } else {
         (cb / ca).max(0.0)

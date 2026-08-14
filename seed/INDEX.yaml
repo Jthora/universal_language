@@ -36,9 +36,9 @@ stack:
     gap: "modules N/F/S/P authored; Q gated on the engine; corpus grows with the derivation ladder"
     claims: [CURRICULUM-MUST-BE-SELF-CERTIFYING, TIERS-TRAVEL-WITH-CONTENT]
   execution:
-    paths: [ul-forge/]
-    status: partial
-    gap: "the M2 engine — UQPL has no executable core; the critical path"
+    paths: [ul-forge/, spec/engine-core.md, spec/grammar-core.md]
+    status: in-progress
+    gap: "typed layer (UQPL proper), lambda/combinator encodings, optimal reduction — engine v1 exists"
     claims: [UQPL-IS-FORMAL-TIER-CLOSURE, INTERACTION-NETS-CARRY-ROTATION, QUANTUM-IS-LINEAR-DISCIPLINE]
   self_application:
     paths: [ul-forge/crates/ul-core/src/map.rs]
