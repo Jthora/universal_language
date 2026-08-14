@@ -3,6 +3,7 @@
 **Type:** cycle
 **Opened:** 2026-08-12
 **Status:** closed
+**Superseded by:** `048`  ← *the one permitted edit to a closed note (`../README.md`)* — the protocol audit; see it before relying on this note's evidence grades
 **Thread:** executes Volley 1 of `044`
 **Question:** who has already failed at the Cure, at UP, and at deriving a notation?
 

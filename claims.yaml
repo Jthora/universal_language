@@ -395,13 +395,16 @@ claims:
     statement: "UL is an emergent universality class — structure arising reliably across substrates under coarse-graining — not a logically forced signature nor a convention."
     tier: CONJECTURED
     falsified_by: >
-      PRIMARY: no order parameter can be identified for the system. Universality classes are defined
-      AT A CRITICAL POINT, and class membership is set by dimensionality and ORDER-PARAMETER
-      SYMMETRY. With no order parameter there is no symmetry to break, no critical point and no
-      class — the claim is then not false but a CATEGORY ERROR, and should be RETIRED rather than
-      disconfirmed. Note 033's "identify G and H" is therefore not a refinement of this claim; it is
-      its HYPOTHESIS, and it has been open since 2026-08-01.
-      SECONDARY: independently emerged communication protocols show no shared invariants under
+      PRIMARY, REPLACED 2026-08-12 (note 048) AND NOW EMPIRICAL: no measured quantity in an
+      independently emerged communication population shows POWER-LAW OR SCALE-FREE BEHAVIOUR. That is
+      the observable signature of a critical state, it is cheap to test, and someone may already have
+      measured it. It replaces "identify G and H", which had been open since 2026-08-01 with no
+      progress and was not actually the sharpest available test.
+      SECONDARY: an order parameter cannot be identified even in principle. Class membership is set
+      by dimensionality and ORDER-PARAMETER SYMMETRY; with nothing to measure there is no symmetry to
+      break and no class, and the claim would then be a CATEGORY ERROR to be RETIRED rather than
+      disconfirmed.
+      TERTIARY: independently emerged communication protocols show no shared invariants under
       progressive coarse-graining, or fall on a continuum rather than into discrete classes.
     scope: >
       PRECONDITION MADE EXPLICIT 2026-08-12 (note 047), from a primary read of Ansanelli, "Critical
@@ -420,8 +423,25 @@ claims:
       coarse-graining" is FALSE in general and true only at criticality.
       AND DIMENSION IS A PRECONDITION, NOT A PARAMETER: "for d = 1 it fails completely: there is no
       phase transition."
-      NOT MET HERE: no critical point, no order parameter, no diverging correlation length and no
-      tuning parameter has been identified for anything in this project.
+      OBJECTION WITHDRAWN 2026-08-12 (note 048), BY THE R1 SEARCH THAT SHOULD HAVE RUN BEFORE ANY OF
+      THE ABOVE WAS RECORDED. The paragraph above originally continued "and no tuning parameter has
+      been identified", treating the absence of a tuning parameter as fatal. IT IS NOT.
+      SELF-ORGANIZED CRITICALITY (Bak, Tang & Wiesenfeld 1987): "Generally, critical states are
+      achieved through the fine-tuning of physical parameters such as temperature and pressure, but
+      some complex systems evolve collectively to such critical states only through mutual
+      interactions and show power law behavior there, WITHOUT NEEDING ANY FINE TUNING of physical
+      parameters."
+      SO: criticality without an external tuning parameter is a documented mechanism, not an
+      exception. AND SOC REQUIRES DRIVEN DYNAMICS — "dynamical systems with spatial degrees of
+      freedom naturally evolve into a self-organized critical point", through "mutual interactions".
+      A POPULATION OF COMMUNICATING AGENTS IS EXACTLY SUCH A SYSTEM, which is why this qualifies the
+      claim rather than merely softening it.
+      WHAT REMAINS UNMET: no order parameter, no observed scale invariance, no measured power law.
+      Those are still absent, and they are what the falsifier now targets.
+      EVIDENCE RANK, CORRECTED (S1): the Ansanelli source quoted above is a STUDENT'S COURSE
+      HANDOUT citing its own references [1]-[6], i.e. rank (5) summary — NOT the "primary read" note
+      047 called it. The physics is standard and the quotations are almost certainly accurate; S1
+      ranks by verifiability, not by correctness, and this claim still has no rank-(2) source.
       CRITICAL SEPARATION — TWO DIFFERENT FIXED POINTS HAVE BEEN RUNNING TOGETHER UNDER ONE WORD.
       (i) The ERLANGEN fixed point: what survives an increasing tower of transformation groups. It
       rests on theorems (Jordan, Whitney-Graustein, Heffter-Edmonds), needs NO critical point, and
@@ -1868,6 +1888,41 @@ claims:
       meaning lives" — see MAP-IS-A-DCEL-REDUCT and F-027 for why collapsing the two is the standing
       error.
 
+  - id: TWO-DISTINCT-FIXED-POINTS
+    scope_reviewed: [FIXED-POINT-IS-COMBINATORIAL-MAP, UL-IS-EMERGENT-UNIVERSAL, UL-WORK-IS-FIXED-POINT-WORK]   # all three MATERIAL and all three accounted for — this claim IS the separation those scopes now depend on, and it is registered here precisely so it stops living inside them
+    statement: >
+      This project uses "fixed point" for two unrelated objects. The ERLANGEN fixed point is what
+      survives an increasing tower of transformation groups; the RG fixed point is a universality
+      class. Neither supports the other, and results about one do not transfer.
+    tier: ARGUED
+    evidence: research/notes/048-volley-protocol-audit/README.md
+    priority: 0
+    falsified_by: >
+      A demonstration that the Erlangen filtration IS a renormalization-group flow — that coarse-
+      graining by an increasing transformation group can be written as an RG transformation with the
+      group parameter as the scale, with a corresponding order parameter and correlation length. That
+      would collapse the separation and make the universality argument available to the geometry
+      again. It is a real mathematical question and it has not been asked here.
+      WEAKER BUT SUFFICIENT: any construction exhibiting the combinatorial map as the attractor of a
+      flow with a tunable or self-organizing critical point.
+    scope: >
+      REGISTERED 2026-08-12 (note 048) UNDER R9 AND T12. This distinction was introduced in note 047
+      and applied in the same motion, while living inside another claim's scope field — no tier, no
+      evidence, no falsifier. That is F-027's exact shape, which is the failure R9 exists to prevent.
+      THE DISTINCTION:
+      (i) ERLANGEN. What survives E(2) < Sim(2) < Aff(2) < PGL(3) < Homeo. Rests on theorems —
+      Jordan, Whitney-Graustein, Heffter-Edmonds. Needs NO critical point, no order parameter, no
+      dynamics and no tuning. Has a genuinely non-trivial limit. Notes 014, 022, 024, 032 and 046
+      depend on none of the physics.
+      (ii) RG. A universality class. Needs a critical state — reachable by tuning OR by
+      self-organization (see UL-IS-EMERGENT-UNIVERSAL) — plus an order parameter and observable scale
+      invariance.
+      WHAT THE SEPARATION COSTS AND SAVES: it costs the universality argument, which was being used
+      to demote work as "microscopic" (see UL-WORK-IS-FIXED-POINT-WORK, one leg withdrawn). It saves
+      the derivational results entirely, since they never needed the physics.
+      HONEST LIMIT: this claim asserts the two are NOT KNOWN to be connected. It does not prove they
+      are unconnected, and the falsifier above is the shape of the connection someone might build.
+
   - id: MAP-IS-A-DCEL-REDUCT
     scope_reviewed: [FIXED-POINT-IS-COMBINATORIAL-MAP]   # no material effect — the hub's scope limits are about WHOSE fixed point the map is (UWS, not UL) and about connected configurations; this claim is a field-by-field correspondence between two data structures and is independent of both. The connectivity limit is carried instead by NESTING-HAS-A-STANDARD-ALTERNATIVE.
     statement: >
@@ -1878,7 +1933,13 @@ claims:
     evidence: research/notes/046-volley2-synonyms/README.md
     priority: 2
     scope: >
-      Structural correspondence, checked field by field against a primary source (Mount, CMSC 754
+      SOURCE RANK CORRECTED 2026-08-12 (note 048): Mount's CMSC 754 Lecture 10 is a COURSE HANDOUT
+      whose own reading assignment is "Chapter 2 in the 4M's" (de Berg et al.) — S1 rank (5), a
+      summary, NOT the "primary read" note 046 called it. The primary would be de Berg et al. or
+      Muller & Preparata (1978), neither of which has been opened. The tier stays VERIFIED because
+      what makes it VERIFIED is the field-by-field correspondence against OUR OWN code, which is
+      checkable here and does not depend on the source's rank.
+      Structural correspondence, checked field by field against (Mount, CMSC 754
       Lecture 10, "The Doubly-Connected Edge List", Spring 2020): e.twin is alpha(d) = d^1; e.next is
       phi(d) = sigma[alpha(d)]; the face record f.inc_edge is what we derive as a phi-orbit. The two
       structures carry the SAME INFORMATION and disagree only about which half is primitive — DCEL
@@ -2145,6 +2206,10 @@ claims:
       Justin found all seven in 1986, Huzita's 1991 list of six was incomplete, and Hatori recovered
       the seventh in 2001. Six was an enumeration error, not a structure. Dismissal was predicted in
       advance (note 028 section 1).
+      SOURCE RANK, CORRECTED 2026-08-12 (note 048): the Lucero material below was taken from SEARCH
+      RESULTS and the paper was never opened, despite arxiv.org/pdf/1610.09923 appearing in those
+      results. S1 rank (5). This is an S8 violation committed INSIDE the volley whose stated purpose
+      was fixing S8 violations. Treat the 7 -> 8 revision as reported-but-unverified until fetched.
       COMPLETENESS SCOPED 2026-08-12 (note 047). "The complete set" IS A THEOREM OVER A STATED
       DOMAIN, NOT A DEFINITION — and the count moved again after the sentence quoted above was
       written. LUCERO (2017) ADDED AN EIGHTH, found "after enumerating all possible incidences
@@ -2744,8 +2809,18 @@ claims:
       INSTITUTION kills an ontology; it does not show that HUMAN INVOLVEMENT does. The operative
       variable is institutional sustainment, not automation.
       METHOD FINDING: a graveyard contains only the dead. Note 045 ran S10 and derived a design rule
-      from failures alone, never asking who SURVIVED. Earns S13 — pair every graveyard survey with a
-      survivor survey.
+      from failures alone, never asking who SURVIVED — which R1 already required. See RESEARCH-
+      PROTOCOL.md R1, survivor clause, and note 048.
+      THE CAUSAL EXPLANATION IS OUR INFERENCE, NOT A FINDING (T11, note 048). "The operative variable
+      is institutional sustainment, not automation" compares an ENTERPRISE KNOWLEDGE-GRAPH graveyard
+      against a BIOMEDICAL ONTOLOGY CONSORTIUM — different domains, funding models, eras and corpora,
+      from different studies. NO STUDY VARIED STEWARDSHIP AND MEASURED DECAY. The FALSIFICATION is
+      sound regardless, since one counterexample kills a universal claim; the EXPLANATION is not a
+      finding and must not be cited as one.
+      REVIVAL CONDITION FOR THE ARGUED FORM (R4, recorded late — it was omitted at demotion time):
+      the stronger claim returns if evidence shows human-in-the-loop maintenance fails EVEN WITH
+      sustained institutional support, or that the sustained cases are structurally unavailable to
+      systems of this kind rather than merely expensive.
       ORIGINAL EVIDENCE, retained for the record and no longer load-bearing. "Without a steward
       and regular reconciliation, ontology models become stale within two quarters" — "a governance
       problem that has defeated a generation of master-data programs." "Common failures are cultural

@@ -705,3 +705,35 @@ registering `CURE-MUST-BE-AUTOMATIC` pointed back at `044`. This is F-019's shap
 retroactively) turned forward: **rules are not applied prospectively either, unless something in the
 authoring path enforces them.** The tier contract in `check-claims.rb` is the only thing in this repo
 that fires at authoring time, and it checks *shape*, not *provenance*.
+
+## F-031 — seventeen rules failed at once, because they were background rather than subject
+**Date:** 2026-08-12
+**What happened:** a rule-by-rule audit of volleys 1–3 against all 34 protocol rules found **9
+passed, 17 failed, 4 partial, 4 never used** — and the 18-box checklist was **not run once, for any
+finding, in any volley.**
+**Why it matters beyond the instance:** the seventeen are not seventeen mistakes. They cluster into
+**four acts**: one adversarial search not run (flagged independently by R1, R6, T1, T8, T9); course
+notes counted as primary reads (S1, S8, S11, T2); a taxonomy introduced and applied in one motion
+while living in another claim's `scope:` field (R9, T12); and a new rule written where an existing
+one had been broken (R7, the meta-rule). **That four errors trip seventeen rules is the protocol
+working — it is redundant by design. That none of the seventeen fired is the failure.**
+**The generator, and it is the whole point:** **every rule that fired was one invoked deliberately as
+the volley's subject** — S2 preregister, S9 synonym sweep, S10 failure-first, R8 check-your-own,
+S6 build-it. **Every rule that failed had to fire spontaneously, mid-writing, while attention was on
+something else.** F-030 recorded this for a single rule in a plan; it generalizes: **rules here work
+when they are the topic and fail when they are the background.**
+**How it was caught:** the project owner asked for a compliance pass. **Not by any rule, checker, or
+self-review inside the volleys** — all three volleys ended with "all checks pass" and a confident
+summary, which is §0's master signature exactly: *output that sounds rigorous and ends the
+conversation.*
+**Demonstrated in the same session, twice over:** while writing this entry, an edit merged two claim
+blocks and produced **six duplicate YAML keys — F-028's exact failure mode.** `check-claims.rb`
+caught it, verified by injection. **The prose rules did not fire; the executable one did.**
+**Fix:** S13 folded back into R1 rather than kept as rule thirty-four. The corrections in note 048
+applied. **No new rule added** — that would be the failure repeating.
+**The generalizable point:** this repo has two kinds of rule. **Commands that execute** (six
+checkers, `check.rb --strict`) fire every time, and every one of them was written after prose failed
+at the same job. **Prose that must be remembered** fires when it is the subject and not otherwise.
+**Eighteen checklist boxes are prose. One of them is a command, and it is the only box that was
+ticked.** Adding rules to the prose column has a measured hit rate near zero; the question worth
+asking about any future rule is *what executes it?*

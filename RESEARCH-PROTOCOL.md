@@ -82,7 +82,19 @@ Full text: `research/method/negative-results.md`. **Normative.**
 
 - **R1 — Adversarial search is mandatory on every negative.** Before recording any finding that
   closes a line of work, run **at least one** search in the opposite direction. Not "when warranted"
-  — that judgment is the compromised one. Cost: seconds. Would have caught 3 of the 7.
+  — that judgment is the compromised one. Cost: seconds. Would have caught **4 of the 8**.
+  - **The opposite of a graveyard is a survivor.** `045` surveyed why ontology projects die and
+    derived a design rule from the causes of death alone. The opposite-direction query — *which ones
+    survived?* — was never run. Two volleys later a primary read found the **Gene Ontology**: sixty
+    monthly releases, monotonous growth, no decay, **manually curated throughout.** The survivor
+    falsified the rule. **A graveyard contains only the dead; the failure record tells you what
+    kills, and only the survivors tell you what saves.**
+  - **The opposite of an obstruction is a workaround.** `047` recorded that universality needs a
+    tuning parameter and we have none. One query returns **self-organized criticality** — criticality
+    reached *without* tuning, a 1987 result. **The conclusion was published before the search.**
+  - **This clause was briefly written as a separate rule, S13.** It is not separate; R1 already
+    required it. Folded back deliberately — **a thirty-fourth rule makes the checklist longer and
+    less likely to be run, which is how seventeen rules failed at once.** See `048`.
 - **R2 — A negative may not be cited without its scope.** Record the conditions under which it
   holds; citing it requires showing the target is inside them. **No scope, not citable.**
 - **R3 — Retire formalizations, never claims.** `metric-projection-repair: RETIRED`, not
@@ -151,14 +163,8 @@ so you never have to settle how bad it is to act on them.
 - **S10 — Failure-first survey, at the start.** Find who tried and why they stopped, *before*
   building. The Leibniz/Wilkins/Solresol/Blissymbolics survey was the most informative crawl about
   UWS's prospects and it ran at note 37 of 43. **A field's graveyard is better documented than its
-  frontier.**
-- **S13 — Pair every graveyard survey with a survivor survey.** S10 sends you to the failures, and
-  **a graveyard contains only the dead.** `045` surveyed ontology failure and derived a design rule
-  — *the Cure must be automatic* — from the causes of death alone. Two volleys later a primary read
-  found the **Gene Ontology**: sixty monthly releases, monotonous growth, no decay, and **manually
-  curated throughout.** The survivor falsified the rule. **The failure record tells you what kills;
-  only the survivors tell you what saves.** A design derived from failures alone optimizes against
-  the causes of death without ever learning the causes of life.
+  frontier.** **Then run R1's survivor clause on it** — that survey has still never had one, and
+  `037` already half-records a survivor it did not pursue.
 - **S11 — Scope-before-cite.** One query on a source's own limitations *before* using it as evidence.
   AMR was cited as universality evidence twice, the second time after the repo had recorded it as
   English-only.

@@ -3,6 +3,7 @@
 **Type:** cycle
 **Opened:** 2026-08-12
 **Status:** closed
+**Superseded by:** `048`  ← *the one permitted edit to a closed note (`../README.md`)* — the protocol audit; see it before relying on this note's evidence grades
 **Thread:** executes Volley 2 of `044`; completes the sweep `043` prescribed as **S9**
 **Question:** what do the other four vocabularies for our fixed-point object already know?
 
