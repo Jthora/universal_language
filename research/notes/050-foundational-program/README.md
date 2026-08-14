@@ -35,7 +35,16 @@ and they are registered in `claims.yaml` so the checkers see them.
 
 ## 2. What UQPL actually presupposes — the spec read against the repo
 
-The wiki spec (`wiki.fusiongirl.app/wiki/UQPL`) is a typed lambda calculus over the five geometric
+> **OWNER CLARIFICATION, 2026-08-12 (recorded in `052`):** *"whatever is on the wiki is still
+> 'wet-clay' and we're in the pioneering side of the project now here in this repo. We're here to
+> figure out WHAT a UQPL really is, what is it for and why is it important."*
+>
+> **The wiki spec is therefore demoted from target to draft input.** REQ-4's chain stands, but its
+> endpoint is not "satisfy the spec" — it is **derive what UQPL is.** The table below remains
+> useful as a reading of the sketch, not as an obligation. The purpose-layer — what UL is *for* —
+> is registered and researched in `052`.
+
+The wiki sketch (`wiki.fusiongirl.app/wiki/UQPL`) is a typed lambda calculus over the five geometric
 primitives, computing `MeaningStructure* → MeaningStructure*`, **"SPECIFICATION-LEVEL — the page is
 the spec, not a running implementation."** Read against the rebuilt repo:
 

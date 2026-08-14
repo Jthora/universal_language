@@ -2904,6 +2904,157 @@ claims:
       theorem about the mark itself. This dodges F-012, which is about depiction, not instantiation.
       DEPENDENCY, explicit: rests on READING-INVARIANCE-TARGET.
 
+  - id: UL-IS-TWO-TIER
+    scope_reviewed: [READING-INVARIANCE-TARGET]   # MATERIAL and accounted for — the natural tier's 'no core explanation' property is exactly what that target must prove for the surviving invariants; this claim's notes route the encirclement prediction to that theorem's jurisdiction rather than asserting it
+    statement: >
+      UL has two tiers. A NATURAL tier communicated without formal comprehension — core geometric
+      perception, motion, position, the relational part of sound — and a FORMAL tier requiring
+      symbolic recombination to comprehend. The boundary between the tiers is an empirical variable,
+      not a given.
+    tier: ARGUED
+    evidence: research/notes/052-what-uqpl-is/README.md
+    priority: 1
+    scope: >
+      OWNER ANCHOR A1 (2026-08-12), REGISTERED WITH THE LITERATURE'S CORRECTION. Confirmed as
+      structure: Munduruku children and adults with no schooling and no geometric vocabulary
+      "spontaneously made use of basic geometric concepts such as points, lines, parallelism, or
+      right angles" (Dehaene, Izard, Pica & Spelke 2006) — core geometry without education is a
+      documented finding. Corrected as scope: the geometric-regularity effect holds in ALL humans
+      "regardless of age, culture and education" and is ABSENT in baboons (Sable-Meyer et al., PNAS
+      2021), and the field's own explanation of the dissociation is "a language of thought for the
+      mental representation of geometric shapes" — so the tested boundary for geometric regularity
+      currently sits INSIDE primates, narrower than "most things and lifeforms". Motion and
+      intuitive physics: not yet searched, breadth open. The auditory tier lands where note 036
+      already put it — the relational part of music travels cross-culturally, the conventional part
+      does not.
+      S8 DEBT: PNAS and Science primaries not fetched; summaries only.
+    notes: >
+      The formal tier being the EXPLANATION of the human side of the boundary (symbolic
+      recombination) is precisely the shape the owner's sketch requires: the natural tier gets any
+      mind onto the ladder; the formal tier is what a mature mind builds on it. Falsifier for the
+      structure claim: cross-cultural failure of the natural tier in its core domain — e.g. the
+      encirclement-reads-as-enclosure prediction failing across cultures the way depiction did
+      (F-012). Note the M1 defense is specific: enclosure is topologically REAL in the mark (Jordan),
+      not depicted; the receiver must still read topologically, which is READING-INVARIANCE-TARGET's
+      jurisdiction.
+
+  - id: ALIGNMENT-IS-FORMAT-ACQUISITION
+    scope_reviewed: [READING-INVARIANCE-TARGET, UL-IS-EMERGENT-UNIVERSAL]   # hub 1 MATERIAL — 'the format that survives every reading' is that theorem; this claim's notes state the dependency explicitly and inherit its deep failure mode. hub 2 accounted for — the PRH connection is marked adjacent-not-identical (T11) and this claim takes no support from the universality-class conjecture
+    statement: >
+      The alignment thesis, scoped to what evidence permits: learning UL aligns a mind by FORMAT
+      ACQUISITION — the acquired representational format becomes the format of thought within the
+      language's domain — not by general cognitive purification. UL's domain is space, structure,
+      relation and computation, so format-scoped alignment over that domain is the claim; the
+      strong far-transfer reading is renounced on the current record.
+    tier: CONJECTURED
+    evidence: research/notes/052-what-uqpl-is/README.md
+    priority: 1
+    falsified_by: >
+      Format-acquisition effects fail to exist for notational/geometric systems: teaching a
+      geometric-topological notation produces no measurable restructuring of nonverbal spatial or
+      structural representation (the Levinson-type effect fails to generalize from natural language
+      to notation). Or the Levinson-type spatial effects themselves fall to the task-effect critique
+      (Li & Gleitman) under adversarial review — S8 debt, primary not yet read.
+      REVIVAL CONDITION FOR THE STRONG FORM (R4): the strong "purification" reading returns only if
+      format-acquisition effects are shown to generalize beyond the acquired domain — the
+      common-elements inversion below is its one named route.
+    scope: >
+      OWNER ANCHOR A3, THE PROJECT'S PURPOSE-LAYER, REGISTERED WITH ITS STRONG READING KILLED IN THE
+      SAME MOTION (R1 ran BEFORE registration — F-030 inverted). THE MECHANISM, documented: Guugu
+      Yimithirr speakers "predominantly code for NONVERBAL memory in 'absolute' concepts congruent
+      with their language" (Levinson) — the strongest documented linguistic-relativity effects are
+      SPATIAL, UL's home domain. THE KILL, documented: "far transfer remains a chimera" (Sala &
+      Gobet 2017), effect sizes inversely related to design quality, consistent with common-elements
+      theory since Thorndike & Woodworth 1901.
+      THE COMMON-ELEMENTS INVERSION, marked as OUR INFERENCE (T11), no study has tested it: transfer
+      occurs exactly where elements are shared; a language whose elements are the universe's
+      invariants shares elements with every domain BY CONSTRUCTION; by the very theory that killed
+      formal discipline, a language of universal elements is the unique best case for broad
+      transfer. That is the PREDICTION this thesis makes, not a finding.
+      CONVERGENT SHADOW IN ARTIFICIAL MINDS (abstract read directly): "this convergence is driving
+      toward a shared statistical model of reality" (Platonic Representation Hypothesis, Huh et al.
+      2024) — implicit convergence with scale. UL would be the EXPLICIT, derivation-checked form of
+      the convergence target. Adjacent evidence-direction for UL-IS-EMERGENT-UNIVERSAL, not
+      identical (representational similarity is not a protocol invariant — T11). Authors acknowledge
+      counterexamples; full read owed (S8).
+      TESTABLE NOW, and nobody has run it: format-acquisition effects from learning a
+      geometric/topological notation — measurable on humans and on models.
+    notes: >
+      "A Universal Perspective/Perception enabling language": the acquired format is the one that
+      survives every reading (READING-INVARIANCE-TARGET), so the mind that carries it represents in
+      the universe's coordinates. Every load-bearing edge of this claim routes through that theorem.
+
+  - id: QUANTUM-IS-LINEAR-DISCIPLINE
+    statement: >
+      The honest baseline meaning of the Q in UQPL: the operational layer's resource discipline is
+      the universe's own — no free copy (no-cloning) and no free delete (no-deleting), enforced
+      structurally rather than by convention. The M2 substrate already has this discipline. Literal
+      quantum execution is a separate, registered conjecture.
+    tier: ARGUED
+    evidence: research/notes/052-what-uqpl-is/README.md
+    priority: 1
+    scope: >
+      QUANTUM SIDE (summaries — S8 debt): linear types "statically enforce the no-cloning and
+      no-deleting theorems of quantum mechanics", an approach "pioneered by Selinger and Valiron";
+      the quantum lambda calculus type system is "based on intuitionistic linear logic".
+      SUBSTRATE SIDE (primary in hand, note 051, Gay section 1): interaction nets are linear-logic
+      proof nets, and the discipline is visible in the formalism — discarding "must be made explicit
+      by means of an agent Erase", and copying is an explicit duplicator agent, never free.
+      SO: the operational substrate M2 converged on independently is the one whose resource
+      discipline is quantum-compatible BY CONSTRUCTION. This is what keeps the language executable
+      by physics rather than only by abstraction.
+      NOT CLAIMED: that UQPL programs are literally quantum computations. The wiki's own honesty on
+      this ("whether these are literal or borrowed depends on what's executing the program") is
+      preserved. FALSIFIER for the baseline reading: a load-bearing operational feature that
+      essentially requires free (implicit, uncosted) copying or deletion.
+
+  - id: UQPL-IS-FORMAL-TIER-CLOSURE
+    scope_reviewed: [READING-INVARIANCE-TARGET, UL-IS-TWO-TIER, ALIGNMENT-IS-FORMAT-ACQUISITION]   # all MATERIAL by design — this claim is declared a dependent synthesis, exactly as strong as its components; each hub's limits (theorem unproved, tier boundary empirical, strong transfer renounced) are inherited and named in its falsified_by
+    statement: >
+      What a UQPL really is: the formal tier of UL, closed under execution. Universal = two-tier
+      readability, ledger-quantified. Quantum = linear resource discipline, physics-executable.
+      Programming = meaning as behavior, which is what makes acquisition install procedures rather
+      than labels. Language = the full REQ-1 stack. Its purpose is one property with two faces:
+      inter-mind (communication by derivation rather than convention, bootstrapped from the natural
+      tier) and intra-mind (format-scoped alignment — the Cure falls out of the second face).
+    tier: CONJECTURED
+    evidence: research/notes/052-what-uqpl-is/README.md
+    priority: 1
+    falsified_by: >
+      Any of its four load-bearing components failing: UL-IS-TWO-TIER's structure collapsing;
+      ALIGNMENT-IS-FORMAT-ACQUISITION's mechanism failing for notations; QUANTUM-IS-LINEAR-
+      DISCIPLINE's falsifier firing; or READING-INVARIANCE-TARGET failing, which would cut the
+      derivation-not-convention edge that both faces stand on. This claim is deliberately a
+      dependent synthesis — it is exactly as strong as its components and no stronger.
+    scope: >
+      REGISTERED UNDER R9: this is the answer to the owner's question "what a UQPL really is, what
+      is it for and why is it important", derived in the repo with the wiki as wet-clay input
+      (owner's designation, 2026-08-12). It replaces the wiki spec's fiat sort table as the
+      definitional layer; the spec's Erlangen levels and admissible-transformation framing are
+      retained as aligned sketch material. The four words are each load-bearing (owner anchor A5);
+      this claim is falsified word-by-word above rather than as a mood.
+
+  - id: CURE-IS-COROLLARY
+    statement: >
+      The Cure is a corollary of the alignment thesis, not UL's purpose: a mind that carries the
+      derivable anchor as its representational format has an internal comparator — drift becomes
+      self-detectable against a re-derivable fixed point. UL does not exist for the Cure; the Cure
+      falls out of what UL is.
+    tier: DESIGN-CHOICE
+    evidence: research/notes/052-what-uqpl-is/README.md
+    priority: 1
+    rationale: >
+      Owner repositioning, 2026-08-12, verbatim intent: the Cure "is a clue and a goal that UL may
+      serve, but it isn't 'the reason UL exists'". The repositioning also SHARPENS the architecture:
+      implicit representational convergence (Platonic Representation Hypothesis) has no anchor, so
+      drift is silent; an explicit derivation-checked format carries its anchor internally, so the
+      comparator of CURE-IS-COMPARATOR stops being a bolt-on and becomes a property of the
+      representation. Compatible with CURE-MUST-BE-AUTOMATIC as amended (the internalized comparator
+      needs no steward by construction).
+    alternatives_considered:
+      - "Cure-as-purpose (rejected by the owner: it inverts the dependency — a detector bolted onto an unaligned representation inherits the governance failures note 045 documented, while an aligned representation gets detection for free)"
+      - "Cure dropped entirely (rejected: the corollary is real and testable, and drift visibility remains the surviving residue of the Volley 1 findings)"
+
   - id: UNIVERSAL-MEANS-CONVENTION-FREE
     statement: >
       In ordinary usage "universal language" means something that travels without a shared
