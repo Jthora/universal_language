@@ -23,6 +23,25 @@ ALLOWED_STATUS = %w[strong partial defined in-progress not-started].freeze
 errors = []
 index  = YAML.load_file('seed/INDEX.yaml')
 
+# F-028's failure mode, textually: YAML keeps the last duplicate key and discards the rest
+# silently — a parsed check cannot see what the parser already threw away. Recurred in this very
+# file (notes/055): a phase block was inserted while the original remained. Scan raw text.
+raw = File.read('seed/INDEX.yaml', encoding: 'UTF-8')
+seen = Hash.new { |h, k| h[k] = Hash.new(0) }
+parent = ['(top)']
+raw.each_line do |line|
+  next if line =~ /^\s*(#|$)/
+  next unless (m = line.match(/^(\s*)([\w-]+):/))
+  depth = m[1].length / 2
+  parent = parent[0, depth] + [m[2]]
+  seen[parent[0..-2].join('.')][m[2]] += 1
+end
+seen.each do |scope, keys|
+  keys.select { |_, n| n > 1 }.each do |k, n|
+    errors << "duplicate key `#{k}` (x#{n}) under #{scope} — YAML silently discards all but the last"
+  end
+end
+
 claim_ids = File.read('claims.yaml', encoding: 'UTF-8')
                 .scan(/^\s+- id:\s*([A-Z0-9-]+)\s*$/).flatten
 

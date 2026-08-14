@@ -1,0 +1,10 @@
+{
+  "id": "001-triangle",
+  "tier": "VERIFIED",
+  "description": "A simple closed curve as a 3-cycle. Jordan: it bounds exactly two regions.",
+  "n_darts": 6,
+  "rotations": { "v0": [0, 5], "v1": [2, 1], "v2": [4, 3] },
+  "expected": { "vertices": 3, "edges": 3, "faces": 2, "genus": 0, "degree_sequence": [2, 2, 2] },
+  "provenance": "map.rs::tests::triangle_has_two_faces",
+  "teaches": "Module N: enclosure is not depicted, it is instantiated — the face count is a theorem about the mark."
+}

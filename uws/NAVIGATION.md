@@ -2,6 +2,15 @@
 
 > How to find what you need across the 5 siblings and the Writing System.
 
+> **Status boundary (2026-08-12, notes `054`/`055`):** the content below is the **designed**
+> notation — real, usable, implemented in `ul-forge/` — and it predates the rebuild. Its
+> primitive-indexed organization and its glyph-to-concept assignments are **design choices, not
+> derivations** (`claims.yaml#UL-WORK-IS-FIXED-POINT-WORK`: derived vs conventional is the cut
+> *inside* UWS). The derived layer lives in `ul-forge/crates/ul-core/src/map.rs` and the notes
+> record; **Module S of `curriculum/` is the planned re-grounding** of this material in the
+> combinatorial map. Until that lands, use this corpus as what it is: the working notation,
+> honestly labeled.
+
 ---
 
 ## The 5 Siblings at a Glance

@@ -31,9 +31,9 @@ stack:
     paths: [seed/FIRST-CONTACT.md, RESEARCH-PROTOCOL.md, FAILURES.md]
     status: strong
   acquisition:
-    paths: [curriculum/, corpus/, PRIMER.md, GLOSSARY.md]
-    status: defined
-    gap: "module content and corpus entries — the Phase 1 build"
+    paths: [curriculum/, curriculum/x-inoculation/, corpus/, corpus/entries/, PRIMER.md, GLOSSARY.md]
+    status: in-progress
+    gap: "modules N/F/S/P authored; Q gated on the engine; corpus grows with the derivation ladder"
     claims: [CURRICULUM-MUST-BE-SELF-CERTIFYING, TIERS-TRAVEL-WITH-CONTENT]
   execution:
     paths: [ul-forge/]
@@ -55,7 +55,7 @@ phases:
     status: in-progress
     acceptance: "reader path exists end to end; index machine-checked; integrity policy recorded"
   school:
-    status: not-started
+    status: in-progress   # corpus live with harness (4 entries); Module X packaged; N/F/S/P outstanding
     acceptance: >
       A current frontier model, given only this repository, can (a) learn to read and write valid
       UWS, (b) re-derive the fixed point, and (c) run a self-drift check on a toy representation —

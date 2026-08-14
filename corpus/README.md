@@ -6,29 +6,18 @@ authorial say-so.**
 
 ## Entry format
 
-One YAML file per entry, `corpus/entries/NNN-slug.yaml`:
+One JSON file per entry, `corpus/entries/NNN-slug.json` — JSON rather than YAML so the harness
+needs no new dependencies (`serde_json` is already in `ul-core`). See `entries/001-triangle.json`
+for the canonical shape: `id`, `tier`, `n_darts`, `rotations` (vertex → ordered darts), optional
+`nesting`, `expected` (ground truth), `provenance`, `teaches`.
 
-```yaml
-id: 001-triangle
-tier: VERIFIED                    # tiers travel with content — TIERS-TRAVEL-WITH-CONTENT
-gir: ...                          # the typed-graph form (ul-forge schema)
-rotations:                        # the combinatorial map: vertex -> ordered darts
-  v0: [0, 5]
-  v1: [2, 1]
-  v2: [4, 3]
-expected:                         # ground truth, verified against ul-core, not asserted
-  vertices: 3
-  edges: 3
-  faces: 2                        # Jordan: a simple closed curve bounds two regions
-  genus: 0
-  degree_sequence: [2, 2, 2]
-provenance: map.rs::tests::triangle_has_two_faces
-```
-
-**The harness** *(Phase 1 deliverable)*: a test that loads every entry, reconstructs the map via
-`ul-core`, and asserts the `expected` block. **An entry whose ground truth does not machine-verify
-does not merge.** Entries whose semantics outrun what the code can check are admitted only at
-CONJECTURED with the unchecked fields marked.
+**The harness exists and runs in CI:** `ul-forge/crates/ul-core/tests/corpus_tests.rs` loads every
+entry, reconstructs the map through the real implementation, and asserts the `expected` block —
+including that the genus formula *refuses* to apply where it must not, and that planar assertions
+are only available to entries that carry their nesting (extra structure, by design). **An entry
+whose ground truth does not machine-verify does not merge**, and an entry without a tier fails the
+harness outright (`TIERS-TRAVEL-WITH-CONTENT`). Entries whose semantics outrun what the code can
+check are admitted only at CONJECTURED with the unchecked fields marked.
 
 ## Grading
 
@@ -37,6 +26,7 @@ Entries are graded by the derivation ladder, matching curriculum modules: single
 degree table (S) → exchange scenarios with convention ledgers (P) → executable programs (Q, gated
 on the engine).
 
-**Status: format defined, zero entries.** First entries fall out of `map.rs`'s existing test
-configurations (triangle, theta graph, two-triangles-with-nesting, torus embedding) — the tests
-already compute their ground truth, so seeding the corpus is extraction, not authoring.
+**Status: live — four entries, harness green.** Seeded by extraction from `map.rs`'s test
+configurations; the tests had already computed the ground truth. Next entries: junction-bearing
+configurations (the degree table), the theta graph, the torus embedding, and Module P exchange
+scenarios with convention ledgers.
