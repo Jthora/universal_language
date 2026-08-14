@@ -757,3 +757,30 @@ not process. A claims-grade audit of "what does CI actually run" was never on an
 checkable as any other claim — `gh run list`, or read the workflow. **An enforcement claim that has
 never been observed firing is tier-CONJECTURED at best**, and this repo had been treating one as
 VERIFIED in spirit for its entire rebuilt life.
+
+## F-033 — the most dangerous examination was rescheduled three times while construction jumped the queue
+**Date:** 2026-08-12
+**What happened:** the adversary front — Quine's inscrutability of reference and the
+Kripke–Wittgenstein rule-following argument, the only standing literature aimed at the *center* of
+this project rather than its periphery — was queued in `052`, bumped by a redirection in `053`,
+de-numbered in `054`, and still had not run by `058`. In the same span, five construction cycles
+(grammar, lexicon, engine, invariance floor, re-architecture) were conceived and completed.
+**Why it matters beyond the instance:** every falsification this project's own process has aimed
+and landed was of a **peripheral** claim. No core commitment has been endangered by anything the
+process chose to aim. That is either soundness or target selection bias — and from inside, the two
+are indistinguishable. **The work queue is part of the epistemics: what gets scheduled first is
+what is actually believed to be at risk.** Constructive work is rewarding and terminal-feeling;
+adversarial work is aversive and keeps sliding — T4's asymmetry expressed as scheduling, live,
+after thirty-two logged failures about exactly this family of bias.
+**How it was caught:** by the owner — *"is this all just hallucinations and/or guess work without
+any sort of rigor?"* — not by any rule, checker, or checklist. R1/R6's own text says the human
+collaborator must spot-check because the compromised faculty audits itself; this entry is that
+clause firing.
+**Fix, executable:** (1) queued adversarial work is opened as a note **immediately**, with
+preregistration, so the tracker sees it (`059` now exists and is open); (2) `check-notes.rb` gains
+a **staleness rule**: an open `cycle`/`correction` note lapped by more than three later notes fails
+CI — standing programs (`decision` notes) are exempt. Verified by injection. The deferral pattern
+is now mechanically impossible to repeat silently.
+**The generalizable point:** danger-first is a *queue property*, not a virtue. A process that
+cannot show its most threatening open item at the top of a machine-tracked queue is optimizing for
+the feeling of progress — and the feeling of progress is this project's oldest documented enemy.
