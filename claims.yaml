@@ -2788,6 +2788,15 @@ claims:
       is proof-shaped (T5).
       WHAT EXISTS: notes 014/022/024 prove the survival direction for specific transformation
       towers. The quantification over readings F is the open mathematics.
+      THE DEEP FAILURE MODE NOW HAS LITERATURE NAMES (note 059): it is Kripkenstein's quus applied
+      to derivation (any finite check-battery underdetermines the rule; Kripke pre-empted the
+      machine reply explicitly) and Putnam's JUST-MORE-THEORY objection (any constraint added to
+      fix interpretation is itself reinterpretable). The literature's standard straight solution is
+      Lewisian reference magnetism — eligibility restricted to NATURAL properties — which is
+      POSITED rather than derived, and contested. THIS TARGET'S DISTINCTIVE FORM IS THEREFORE:
+      derive eligibility from invariance instead of positing it, against just-more-theory. The
+      normativity gap (what makes the natural reading BINDING, not merely available) is the
+      remaining exposure and applies to ERLANGEN-ANSWERS-GOODMAN-SELECTION as well.
       PROGRESS 2026-08-12 (note 058): the F0 floor is machine-checked — see READING-INVARIANCE-F0.
       Presentation-class invariance (relabeling, mirror, subdivision) holds across the full corpus
       on every CI run. The floor does not touch this claim's deep failure mode, which stands.
@@ -2803,7 +2812,7 @@ claims:
       reading-independent.
 
   - id: SEMANTIC-STACK-M1-M2-M3
-    scope_reviewed: [ERLANGEN-ANSWERS-GOODMAN-SELECTION]   # MATERIAL and accounted for — M1's named objection is answered only if that CONJECTURED claim holds; this stack claim therefore lists M1's collapse in its own falsified_by rather than treating the answer as settled
+    scope_reviewed: [ERLANGEN-ANSWERS-GOODMAN-SELECTION, INDETERMINACY-FLOOR-IS-UNIVERSAL]   # hub 1 MATERIAL and accounted for — M1's named objection is answered only if that CONJECTURED claim holds; this stack lists M1's collapse in its own falsified_by. hub 2 MATERIAL and accounted for — the floor is absorbed by the stack's own amendment: M2 is use-theoretic, M1's surviving level is structural, and no route claims classical meaning-facts
     statement: >
       The map-to-meaning gap decomposes into three convention-minimal routes, ordered
       icon-and-index-first, symbol-last: M1 exemplification (the mark instantiates the property it
@@ -2833,10 +2842,14 @@ claims:
       bottom-up in nonsymbolic representations of two kinds: (1) iconic representations, which are
       analogs of the proximal sensory projections ... and (2) categorical representations" —
       icon-first, symbol-derived, from cognitive science, no contact with notation theory.
-      STANDING ADVERSARY FRONT, preregistered for note 052: Quine (inscrutability of reference),
-      Kripke-Wittgenstein (rule-following). Each gets Zadrozny treatment on first contact: scope
-      checked before import (T8), adversarially searched (R1), not allowed to end the conversation
-      (T4). S8 DEBT: Goodman and Harnad are cited from search summaries; a primary each before this
+      ADVERSARY FRONT RUN 2026-08-12 (note 059) — the negatives SURVIVED scope-checking, the first
+      in the record to do so, and the stack absorbs them by being what it already was: M2 is a USE
+      THEORY of meaning (behavior, practice, checkable agreement — the Wittgensteinian position;
+      Kripke's own skeptical solution provides assertibility-in-practice, explicitly NOT meaning
+      facts), and M1's surviving level is structural (Quine's own concession zone: truth-values and
+      structure survive gerrymandered reference). CEILING RECORDED: communal quus is real — the
+      community's dispositions are finite too — so UP/coupling yields PRACTICE, NOT FACTS, and no
+      route in this stack claims otherwise. See INDETERMINACY-FLOOR-IS-UNIVERSAL. S8 DEBT: Goodman and Harnad are cited from search summaries; a primary each before this
       claim rises above priority 1.
 
   - id: INTERACTION-NETS-CARRY-ROTATION
@@ -2910,6 +2923,10 @@ claims:
       curve does not depict enclosure; it ENCLOSES, and Jordan certifies the possessed property as a
       theorem about the mark itself. This dodges F-012, which is about depiction, not instantiation.
       DEPENDENCY, explicit: rests on READING-INVARIANCE-TARGET.
+      NORMATIVITY GAP, added 2026-08-12 (note 059): canonical selection must be shown BINDING on a
+      reader, not merely available — the same regress the IEP records against
+      simplicity/naturalness answers to Kripkenstein. Availability of the invariant reading is
+      proved territory; its bindingness is exactly the eligibility-from-invariance question.
 
   - id: UL-IS-TWO-TIER
     scope_reviewed: [READING-INVARIANCE-TARGET]   # MATERIAL and accounted for — the natural tier's 'no core explanation' property is exactly what that target must prove for the surviving invariants; this claim's notes route the encirclement prediction to that theorem's jurisdiction rather than asserting it
@@ -3291,6 +3308,43 @@ claims:
       The proof SHAPE scales: invariance argued generator-by-generator, then inherited by the
       generated class. Extending F0 with new generators (each with its stated reason) is the
       incremental path; characterizing the full class via institutions is the theorem path.
+
+  - id: INDETERMINACY-FLOOR-IS-UNIVERSAL
+    scope_reviewed: [READING-INVARIANCE-TARGET, SEMANTIC-STACK-M1-M2-M3]   # hub 1 MATERIAL and accounted for — this claim supplies the literature identification of that hub's deep failure mode and does not weaken the target; hub 2 MATERIAL and accounted for — M2's use-theoretic reading is exactly what survives the floor, recorded in that hub's amendment
+    statement: >
+      The Quine and Kripke-Wittgenstein arguments are universal solvents: no symbol system — no
+      natural language, no formal system, no machine, no community — has classical meaning-facts by
+      their lights. They therefore set a floor shared by every possible communicator and can rank
+      no language below any other. What they do not touch is coordination cost: the ledger's
+      comparisons (Z/2 versus S_n, the lever-game economics) are about arbitrary convention, and
+      symmetry-breaking costs are real whether or not meaning-facts exist.
+    tier: ARGUED
+    evidence: research/notes/059-adversary-front/README.md
+    priority: 0
+    scope: >
+      FROM TWO PRIMARY-GRADE READS (IEP "Kripke's Wittgenstein"; IEP "The Indeterminacy of
+      Translation and Radical Interpretation" — S8 satisfied). The skeptical argument surveys "at
+      least ten candidates" for a meaning-constituting fact and rules them all out, INCLUDING
+      MACHINES — "why is it that such a fact or rule cannot be interpreted in a different way?" —
+      so machine-checked floors do not escape; Kripke pre-empted the machine reply. The quus
+      finitude problem applies to communities as well as individuals (raised by Blackburn,
+      Boghossian, Wright): COUPLING YIELDS PRACTICE, NOT FACTS. Quine: "there is no fact as to
+      what a term refers to", extended to the home language.
+      WHAT SURVIVES, BY QUINE'S OWN LIGHTS: truth-values of observation sentences under
+      gerrymandered readings; sentence-level structure over term-reference; pragmatic success via
+      charity. The lexicon's register-split (structural facts VERIFIED, reader-meaning
+      CONJECTURED) sits exactly on the line the philosophy draws.
+      WHAT THIS KILLS IN OUR OWN RHETORIC, permanently: "meaning by derivation, full stop" and
+      "the answer key is the universe" as claims to classical meaning-facts. Derivation does not
+      manufacture such facts; nothing does. The project's semantics is USE-THEORETIC (M2, meaning
+      as behavior) plus structural (M1's surviving level), and says so.
+    notes: >
+      This is the first front in the project's record where a line-closing negative SURVIVED
+      scope-checking (S7 logged in note 059). It closes nothing: it scopes the rhetoric down to
+      what the architecture already was. The standing exposure, stated without cosmetics: if
+      eligibility cannot be derived from invariance (READING-INVARIANCE-TARGET against Putnam's
+      just-more-theory), UL's universality is coordination-universality only — more than any prior
+      constructed language achieved, and less than the slogans claimed.
 
   - id: UNIVERSAL-MEANS-CONVENTION-FREE
     statement: >
