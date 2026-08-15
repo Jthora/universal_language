@@ -225,12 +225,30 @@ claims:
       on the acyclic core; keep apartness as the fallback if stability fails.
 
   - id: SEMANTIC-EQUALITY
+    scope_reviewed: [EQUALITY-IS-TWO-LAYERED]   # MATERIAL and accounted for — the successor's decidable/undecidable split is exactly why this claim is retired in the general form only, and its total-fragment residue is this claim's revival condition
     statement: "There exists a decision procedure determining whether two GIR structures mean the same thing."
-    tier: CONJECTURED
+    tier: RETIRED
+    superseded_by: EQUALITY-IS-TWO-LAYERED
+    formalization: >
+      RETIRED IN THE GENERAL FORM ONLY (R3): "a single decision procedure for semantic equality,
+      where meaning is given by the project's committed use-theoretic semantics". Structural
+      equality is NOT retired and is decidable — see EQUALITY-IS-TWO-LAYERED.
+    refutation_tier: ARGUED
+    revival_condition: >
+      Restrict the operational layer to a TOTAL, non-Turing-complete fragment, where contextual
+      equivalence becomes decidable; then a decision procedure exists for that fragment and this
+      claim returns scoped to it. The expressiveness cost of that restriction is unmeasured, and
+      measuring it is the concrete next question. Alternatively: show that the project's semantics
+      is NOT operational after all, which would reopen the general form — but note 059 committed to
+      the use-theoretic reading, so that route requires undoing a load-bearing decision.
     falsified_by: "A proof that GIR semantic equivalence is undecidable in the general case."
-    evidence: null
+    evidence: research/notes/062-computation-template/README.md
     notes: >
-      DOES NOT EXIST IN ANY FORM, but is no longer novel research. Term rewriting + Knuth-Bendix
+      THE FALSIFIER FIRED, 2026-08-12 (note 062), from our own research rather than an outside
+      objection. Contextual equivalence is undecidable for Turing-complete languages; the M2 engine
+      is Turing-universal; note 059 committed the project to use-theoretic semantics. Those three
+      together are the proof the falsifier named. Retired per R3 in the general form only.
+      ORIGINAL NOTES, retained: DOES NOT EXIST IN ANY FORM, but is no longer novel research. Term rewriting + Knuth-Bendix
       completion is the standard solution shape: confluent terminating rewrite system -> decide
       equality by normal-form comparison. BLOCKED on IR-NORMALIZATION-STRATEGY: that machinery
       applies cleanly to terms, and confluence is undecidable for general graph rewriting.
@@ -3378,6 +3396,81 @@ claims:
       eligibility cannot be derived from invariance (READING-INVARIANCE-TARGET against Putnam's
       just-more-theory), UL's universality is coordination-universality only — more than any prior
       constructed language achieved, and less than the slogans claimed.
+
+  - id: CHURCH-TURING-TEMPLATE
+    scope_reviewed: [READING-INVARIANCE-TARGET, INDETERMINACY-FLOOR-IS-UNIVERSAL, FIXED-POINT-IS-COMBINATORIAL-MAP]   # hub 1 MATERIAL and accounted for — this claim identifies that target as the bridging half and imports a THIRD statement of its deep failure mode rather than easing it; hub 2 MATERIAL and accounted for — the missing extensional criterion for meaning IS Quine's conclusion, reached from computability; hub 3 accounted for — the syntactic equivalences cited are standard results about the map, already recorded there as prior art
+    statement: >
+      Computation's foundations decompose into two parts, and UL must be located in each
+      separately: (a) PROVED equivalences among independent formalisms, over an object with an
+      EXTENSIONAL CRITERION, and (b) ONE BRIDGING THESIS identifying that formal class with an
+      informal notion. UL's syntactic object has both halves of (a) — the map's equivalences with
+      DCEL, ribbon graphs, dessins and rotation systems are standard results. UL's SEMANTICS has
+      neither, and the reason is precise: there is no agreed extensional criterion for meaning.
+    tier: ARGUED
+    evidence: research/notes/062-computation-template/README.md
+    priority: 1
+    scope: >
+      EVIDENCE RANK, STATED UP FRONT (S1/S8): the Dershowitz-Gurevich paper FAILED TO FETCH (TLS
+      certificate error) and the Shapiro critique was reached through search summaries only. This
+      claim is ARGUED on rank-(5) evidence plus the maintainer's own knowledge of the standard
+      decomposition, with the primary recorded as an outstanding debt. Do not promote without it.
+      WHAT IS PROVED IN COMPUTATION: Turing proved the Turing-machine/lambda-calculus equivalence;
+      the class of computable functions is extensionally defined, so "the same" is checkable.
+      WHAT IS ASSUMED: "the equivalence of formal models is proven, but the identification of this
+      equivalence with intuitive computability is assumed."
+      THE BRIDGE CAN BE PROMOTED, WITH A STING: Dershowitz & Gurevich (BSL 2008) derive Church's
+      Thesis from "Sequential Postulates" via the Abstract State Machine theorem — so a bridging
+      thesis is a staging post, not a dead end. BUT the standing objection is OUR OWN OBSTRUCTION:
+      Shapiro, extending Waismann, argues pre-theoretical concepts have OPEN TEXTURE — a sharpening
+      may REPLACE the original concept rather than capture it — and informal notions are "too rich
+      for their meanings to be settled by any single finite expression". D-G justify their
+      first-order framing by appeal to mathematical practice's track record, not by proof, and
+      their result excludes randomness, parallelism and quantum computing.
+      THE THREE-LITERATURE CONVERGENCE IS OUR INFERENCE (T11), not a finding of any of them:
+      Putnam's just-more-theory, Kripkenstein's finitude, and Shapiro's open texture are the same
+      obstruction in philosophy of language, philosophy of mind, and philosophy of computability.
+      READING-INVARIANCE-TARGET's deep failure mode is therefore not a quirk of this program.
+      WHAT THIS LICENSES AND WHAT IT FORBIDS: it licenses treating a bridging thesis with strong
+      convergence evidence as a RESPECTABLE endpoint — ninety years of computer science rest on
+      one. It FORBIDS victory-by-resemblance: the part a UL program would collect resemblances
+      toward is precisely the contested part in computation too. Registered after a preregistered
+      self-suspicion (note 062 section 1) that this template was being reached for as a comfortable
+      retreat from the theorem route; the verdict was recorded against that comfort.
+    notes: >
+      THE SHARPEST STATEMENT OF THE SEMANTIC GAP THIS PROJECT HAS: the gap is not "the bridge is
+      unbuilt" but "the far side has no agreed extension". That is Quine's conclusion reached from
+      computability rather than from philosophy of language, and it is why the use-theoretic route
+      (M2) is the buildable one — behavior HAS an extensional criterion where meaning does not.
+
+  - id: EQUALITY-IS-TWO-LAYERED
+    scope_reviewed: [CHURCH-TURING-TEMPLATE, SEMANTIC-STACK-M1-M2-M3, M2-ENGINE-V1-EXISTS, INTERACTION-NETS-CARRY-ROTATION]   # hub 1 supplies the extensional-criterion reasoning; hub 2 accounted for — the decidable layer is structural and the undecidable one is M2's, with M1/M3 untouched; hubs 3-4 MATERIAL — the substrate's Turing-universality (Lafont 1997, primary-read) is precisely what makes the operational layer undecidable, and that hub's own limit (our engine realizes the combinators only by construction, not by demonstration) is why this claim says 'by construction'
+    statement: >
+      Equality in this project is two-layered and the layers have opposite decidability.
+      STRUCTURAL equality — isomorphism of combinatorial maps — is DECIDABLE, and the shipped
+      invariant signature is a sound, incomplete approximation of it. OPERATIONAL equality —
+      contextual/observational equivalence of behavior — is UNDECIDABLE in general, because the M2
+      engine is Turing-universal. No single procedure spans both.
+    tier: ARGUED
+    evidence: research/notes/062-computation-template/README.md
+    priority: 0
+    scope: >
+      SUPERSEDES the general form of SEMANTIC-EQUALITY, whose own falsifier this fires.
+      DECIDABLE LAYER: map isomorphism. essential_invariants() is sound-but-incomplete for it —
+      equal maps always share a signature; sharing a signature does not prove equality (the
+      signature() doc comment already records which direction it errs).
+      UNDECIDABLE LAYER: contextual equivalence — "two programs are equivalent iff no context
+      distinguishes them" — is the standard PL criterion and is undecidable for Turing-complete
+      languages. Our engine is Turing-universal by construction (INTERACTION-NETS-CARRY-ROTATION,
+      Lafont 1997), so this is not an accident of implementation but a consequence of the power we
+      deliberately built in. KNOWN SOUND APPROXIMATIONS: bisimulation, logical relations, e-graph
+      saturation (see SEMANTIC-EQUALITY-IMPL, which is an approximation and not a decision
+      procedure — its DESIGN-CHOICE framing should be read that way).
+      WHY THE ARCHITECTURE WAS ALREADY RIGHT: the comparator we shipped works on the decidable
+      layer (invariants over structure), not on full semantic equality. The claim was wrong; the
+      build was not.
+      HONEST RESIDUE: a TOTAL (non-Turing-complete) fragment would restore decidability at the cost
+      of expressiveness. That trade is unexplored and is the surviving route — see the revival
+      condition on SEMANTIC-EQUALITY.
 
   - id: UNIVERSAL-MEANS-CONVENTION-FREE
     statement: >
