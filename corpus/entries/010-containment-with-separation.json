@@ -1,0 +1,23 @@
+{
+  "id": "010-containment-with-separation",
+  "tier": "VERIFIED",
+  "lexicon": "CONTAINMENT + SEPARATION — X is inside C1, and C2 is outside C1",
+  "description": "One configuration carrying both regional relations at once: a segment enclosed by a triangle (as in 005), with a second triangle at top level (as in 006). Containment is co-facality with C1's bounded orbit; separation is co-facality of C1's and C2's outward sides in the shared unbounded region. Three components, so the raw orbit count (5, one sphere per component) and the genus formula are both wrong for the plane — the nesting is what makes the planar reading available, and the two relations are two facts about one merged face structure.",
+  "n_darts": 14,
+  "rotations": {
+    "v0": [0, 5], "v1": [2, 1], "v2": [4, 3],
+    "s0": [6], "s1": [7],
+    "v3": [8, 13], "v4": [10, 9], "v5": [12, 11]
+  },
+  "nesting": { "top_level_outer_darts": [1, 9], "placements": [[6, 0]] },
+  "expected": {
+    "vertices": 8, "edges": 7, "components": 3,
+    "faces": 5, "genus": null,
+    "planar_faces": 3, "euler_planar": 4,
+    "degree_sequence": [1, 1, 2, 2, 2, 2, 2, 2],
+    "same_face": [[0, 6], [1, 9]],
+    "different_face": [[1, 6], [0, 9], [6, 8], [0, 8], [6, 9]]
+  },
+  "provenance": "composed from 005 (containment) and 006 (separation) by O1 juxtaposition: the stroke placed in C1's bounded face, C2 at top level; verified by this harness",
+  "teaches": "Module F: containment and separation compose in one nesting structure — the stroke shares C1's bounded region while C2 shares only the unbounded one, and both meanings are theorems about the same merged face set."
+}

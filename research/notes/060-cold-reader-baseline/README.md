@@ -52,8 +52,55 @@ designed `uws/` corpus and the derived layer — the exact boundary `054` marked
 **What would surprise:** a clean pass on all three (the School phase is cheaper than planned), or
 total failure on A (the corpus format itself is unlearnable — worse than any prediction).
 
-## 3. The run
+## 3. The run — interrupted, partially salvaged
+
+**The agent hit a session limit mid-report.** Its final line claimed all three tasks were done,
+but **the structured report — attempt counts, tasks B and C, and the friction list — was never
+delivered.** The friction list was preregistered as the real deliverable, so **the run is
+incomplete and this note stays open.** A recovery message has been sent asking only for the
+report, no re-work.
+
+**Its claim of completion is not evidence.** What follows is what physically exists on disk and
+what I verified myself.
+
+### 3a. Task A — VERIFIED INDEPENDENTLY, and it passes
+
+The worktree contains exactly one artifact: `corpus/entries/010-containment-with-separation.json`.
+Copied into the main tree and run against the harness by me, not by it:
+
+- `every_corpus_entry_verifies_against_the_implementation` — **pass**
+- `every_corpus_entry_is_reading_invariant` — **pass**
+
+**What the entry actually does**, which is more than the task asked:
+
+- **Composes `005` and `006` into one configuration** — segment inside triangle 1, triangle 2 at
+  top level — the O1 juxtaposition of two lexicon entries, correctly nested.
+- **Gets the dart arithmetic right**: triangle 2's rotations shifted +2 from the `003`/`004`
+  pattern, and the outer-face representative shifted with them (dart 7 → 9).
+- **Handles the disconnection subtlety unprompted**: `"genus": null` — the formula must *refuse* to
+  apply at three components — plus the raw-vs-planar face distinction (5 raw, 3 planar) and
+  `euler_planar` = 1 + c = 4.
+- **Encodes both relations as co-facality**: `same_face [[0,6]]` is containment, `same_face [[1,9]]`
+  is separation (both outward sides sharing the unbounded region), with five `different_face`
+  assertions pinning the rest.
+- Its `teaches` line is accurate and its `provenance` names the composition honestly.
+
+**P1 is answered on the evidence available: pass, not partial** — and the entry is good enough to
+adopt into the corpus (kept, attributed). **What P1 also asked — the iteration count — is exactly
+what was lost**, so *how hard* this was is unknown, which is the measurement that would have sized
+Module N/S. That is the cost of the interruption.
+
+### 3b. Tasks B and C — no evidence either way
+
+Nothing on disk. The agent's claim is unverified and is **not** recorded as a result.
 
 ## 4. Findings
+
+**One finding is already banked, and it is the design's central bet:** a reader with no context
+authored a *new, correct, composed* expression in this notation and had it machine-verified,
+using only the repository. **The self-certification loop closed at least once without a human.**
+
+**Everything else is pending.** No friction list means no module specification, which was the
+point of running the baseline before building the curriculum.
 
 ## 5. What changed
