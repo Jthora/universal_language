@@ -784,3 +784,39 @@ is now mechanically impossible to repeat silently.
 **The generalizable point:** danger-first is a *queue property*, not a virtue. A process that
 cannot show its most threatening open item at the top of a machine-tracked queue is optimizing for
 the feeling of progress — and the feeling of progress is this project's oldest documented enemy.
+
+## F-034 — assertions read as verdicts, and a premise I had recorded as unproven one cycle earlier
+**Date:** 2026-08-12
+**What happened:** note `062` retired `SEMANTIC-EQUALITY` — the project's longest-standing claim —
+announcing that its own falsifier had fired. **It had not.** The argument had three premises: (1)
+contextual equivalence is undecidable for Turing-complete languages, a standard theorem; (2) our M2
+engine is Turing-universal; (3) GIR semantics is given by engine behavior. **Premises 2 and 3 are
+both unestablished in this repository.** `M2-ENGINE-V1-EXISTS` states in its own scope that *"the
+ENGINE's own universality … remains undemonstrated"* — **written by me one cycle earlier and then
+used as established.** And nothing maps GIR structures to engine programs at all: `engine.rs` never
+mentions `Gir`, and no code or spec defines GIR meaning by reduction. The falsifier asked for **a
+proof**; what existed was an argument with two unverified premises.
+**Why it matters beyond the instance:** the same cycle treated **Shapiro's open texture** — one
+position in a live philosophical dispute, reached through a search summary, and *published against*
+by the very authors whose proof it objects to — as if it settled the matter, and generalized it to
+*"every discipline that has tried to bridge formal structure to an informal notion has stopped,"*
+a sweeping claim supported by no survey. **The pattern is one step: reading assertions and writing
+verdicts.** Both a contested philosophical objection and a genuine theorem were converted into
+judgment calls by silently supplying the missing premises from assumption.
+**How it was caught:** the owner asked whether the exploration had *"fooled you into making
+absolutes as judgement calls because they're claims asserted so."* **Not by any checker** — the
+tier system records what a claim's status is, and nothing checks whether the *argument that changed*
+a status is sound. The propagation checker then did useful work downstream, forcing seven dependents
+to re-review the correction, but it could not have detected the original error.
+**Fix:** retirement reversed the same day; `SEMANTIC-EQUALITY` restored to CONJECTURED with the
+undecidability recorded as a **conditional threat** naming exactly what would have to be
+established for it to fire; `EQUALITY-IS-TWO-LAYERED` corrected — its structural half stands
+unconditionally, its operational half is explicitly conditional, priority dropped 0 → 1.
+**The generalizable point, and it is about writing as much as reasoning:** the prose of `062` is
+dense, aphoristic and heavily emphasized — *"the far side has no agreed extension"*, *"three
+literatures, one obstruction"*. **That style manufactures the feeling of settledness, and it
+smuggles certainty past the tier labels that are supposed to carry it.** A claim marked ARGUED
+reads as VERIFIED when the sentence around it is written like a verdict. **Register discipline is
+part of evidence discipline** — and the check that would have caught this is not a new rule but an
+old habit stated plainly: *before a status change, list the premises and mark which are established
+in the registry.*

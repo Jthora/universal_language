@@ -188,6 +188,7 @@ claims:
       retired. NEG-INVOLUTION was the first found; others may exist and should be audited.
 
   - id: SEMANTIC-APARTNESS
+    scope_reviewed: [SEMANTIC-EQUALITY]   # no material change — apartness was motivated as a weaker constructive alternative to equality, and the reversed retirement leaves that motivation exactly as it was: equality is unproven either way
     statement: >
       The constructively correct primitive is semantic APARTNESS — a positive demonstration that two
       structures differ — rather than semantic equality.
@@ -225,29 +226,30 @@ claims:
       on the acyclic core; keep apartness as the fallback if stability fails.
 
   - id: SEMANTIC-EQUALITY
-    scope_reviewed: [EQUALITY-IS-TWO-LAYERED]   # MATERIAL and accounted for — the successor's decidable/undecidable split is exactly why this claim is retired in the general form only, and its total-fragment residue is this claim's revival condition
+    scope_reviewed: [EQUALITY-IS-TWO-LAYERED, M2-ENGINE-V1-EXISTS]   # MATERIAL and central — that hub's own scope records the engine's universality as UNDEMONSTRATED, which is precisely the premise this claim's reversal turns on
     statement: "There exists a decision procedure determining whether two GIR structures mean the same thing."
-    tier: RETIRED
-    superseded_by: EQUALITY-IS-TWO-LAYERED
-    formalization: >
-      RETIRED IN THE GENERAL FORM ONLY (R3): "a single decision procedure for semantic equality,
-      where meaning is given by the project's committed use-theoretic semantics". Structural
-      equality is NOT retired and is decidable — see EQUALITY-IS-TWO-LAYERED.
-    refutation_tier: ARGUED
-    revival_condition: >
-      Restrict the operational layer to a TOTAL, non-Turing-complete fragment, where contextual
-      equivalence becomes decidable; then a decision procedure exists for that fragment and this
-      claim returns scoped to it. The expressiveness cost of that restriction is unmeasured, and
-      measuring it is the concrete next question. Alternatively: show that the project's semantics
-      is NOT operational after all, which would reopen the general form — but note 059 committed to
-      the use-theoretic reading, so that route requires undoing a load-bearing decision.
+    tier: CONJECTURED
     falsified_by: "A proof that GIR semantic equivalence is undecidable in the general case."
-    evidence: research/notes/062-computation-template/README.md
+    evidence: null
+    scope: >
+      RETIREMENT REVERSED 2026-08-12, SAME DAY (F-034). Note 062 retired this claim on the grounds
+      that its falsifier had fired. IT HAD NOT. The argument was: contextual equivalence is
+      undecidable for Turing-complete languages; our M2 engine is Turing-universal; note 059
+      committed us to use-theoretic semantics. Premise 1 is a standard theorem. PREMISES 2 AND 3
+      ARE BOTH UNESTABLISHED IN THIS REPOSITORY:
+      (2) M2-ENGINE-V1-EXISTS states in its own scope that "the ENGINE's own universality (that our
+      implementation realizes the combinators) remains undemonstrated" — recorded by the maintainer
+      one cycle earlier and then used as established.
+      (3) NOTHING MAPS GIR STRUCTURES TO ENGINE PROGRAMS. engine.rs never mentions Gir; no code or
+      spec defines GIR meaning by reduction. The undecidability argument is about programs under
+      reduction and this claim is about static typed graphs.
+      The falsifier asked for A PROOF. What existed was an argument with two unverified premises.
+      WHAT REMAINS TRUE: undecidability is a genuine THREAT to this claim, conditional on (2) and
+      (3) being established. If GIR semantics is ever defined by reduction over a Turing-complete
+      engine, the falsifier fires then. Until then this stays CONJECTURED and the threat is
+      recorded, not executed.
     notes: >
-      THE FALSIFIER FIRED, 2026-08-12 (note 062), from our own research rather than an outside
-      objection. Contextual equivalence is undecidable for Turing-complete languages; the M2 engine
-      is Turing-universal; note 059 committed the project to use-theoretic semantics. Those three
-      together are the proof the falsifier named. Retired per R3 in the general form only.
+      A CLAIMED FIRING OF THE FALSIFIER WAS WITHDRAWN THE SAME DAY — see scope above and F-034.
       ORIGINAL NOTES, retained: DOES NOT EXIST IN ANY FORM, but is no longer novel research. Term rewriting + Knuth-Bendix
       completion is the standard solution shape: confluent terminating rewrite system -> decide
       equality by normal-form comparison. BLOCKED on IR-NORMALIZATION-STRATEGY: that machinery
@@ -338,6 +340,7 @@ claims:
     superseded_conjecture: "IR-NORMALIZATION-STRATEGY (CONJECTURED form, 2026-08-01) — see FAILURES.md F-011"
 
   - id: SEMANTIC-EQUALITY-IMPL
+    scope_reviewed: [SEMANTIC-EQUALITY]   # MATERIAL and accounted for — e-graph saturation is a SOUND APPROXIMATION, not a decision procedure, and that reading is now the correct one whether or not equality turns out decidable; the hub's reversal removes nothing this implementation relied on
     statement: "semantically_equal is implemented as e-class equality under equality saturation (e-graphs)."
     tier: DESIGN-CHOICE
     rationale: research/engineering/ir-decision.md
@@ -380,7 +383,7 @@ claims:
       is how Euler -> Venn -> Peirce -> Shin actually progressed.
 
   - id: IR-NORMALIZATION-STRATEGY-OLD
-    scope_reviewed: [NEG-INVOLUTION]   # no effect — historical reference only
+    scope_reviewed: [NEG-INVOLUTION, SEMANTIC-EQUALITY]   # no effect — historical/retired strategy record, unaffected by the hub's tier restoration
     statement: "GIR admits a decidable notion of structural/semantic equivalence via normalization (unrestricted)."
     tier: RETIRED
     superseded_by: research/engineering/ir-decision.md
@@ -1296,6 +1299,7 @@ claims:
       something weaker. Absent from this repository until 2026-08 — see FAILURES.md F-016.
 
   - id: RICE-BOUNDS-SEMANTIC-EQUALITY
+    scope_reviewed: [SEMANTIC-EQUALITY]   # MATERIAL and reinforcing — F-023 recorded Rice being imported without checking its preconditions; the hub's reversal is the SAME error repeated with a different undecidability result, and both now carry the precondition warning explicitly
     statement: >
       Semantic equality is undecidable for any Turing-expressive representation; sound decidable
       approximation is available via abstract interpretation, at the provable cost of infinitely
@@ -1519,6 +1523,7 @@ claims:
   # ─── Zadrozny scope correction (added 2026-08, note 011) ───────────────────
 
   - id: ZADROZNY-SCOPE
+    scope_reviewed: [SEMANTIC-EQUALITY]   # no material effect — Zadrozny concerns compositionality's vacuity, not the decidability of structural equality; the scopes are independent
     statement: >
       Zadrozny's vacuity result applies to UNCONSTRAINED compositionality only; it does not show
       compositionality vacuous once background constraints on syntax and lexical semantics are
@@ -3443,18 +3448,25 @@ claims:
       (M2) is the buildable one — behavior HAS an extensional criterion where meaning does not.
 
   - id: EQUALITY-IS-TWO-LAYERED
-    scope_reviewed: [CHURCH-TURING-TEMPLATE, SEMANTIC-STACK-M1-M2-M3, M2-ENGINE-V1-EXISTS, INTERACTION-NETS-CARRY-ROTATION]   # hub 1 supplies the extensional-criterion reasoning; hub 2 accounted for — the decidable layer is structural and the undecidable one is M2's, with M1/M3 untouched; hubs 3-4 MATERIAL — the substrate's Turing-universality (Lafont 1997, primary-read) is precisely what makes the operational layer undecidable, and that hub's own limit (our engine realizes the combinators only by construction, not by demonstration) is why this claim says 'by construction'
+    scope_reviewed: [CHURCH-TURING-TEMPLATE, SEMANTIC-STACK-M1-M2-M3, M2-ENGINE-V1-EXISTS, INTERACTION-NETS-CARRY-ROTATION, SEMANTIC-EQUALITY]   # hub 1 supplies the extensional-criterion reasoning; hub 2 accounted for — the decidable layer is structural, M1/M3 untouched; hubs 3-4 MATERIAL AND THE SOURCE OF THIS CLAIM'S CORRECTION — hub 3 records the engine's universality as UNDEMONSTRATED, which is why the undecidability transfer is now stated as conditional rather than asserted; hub 5 MATERIAL — that claim is restored to CONJECTURED and is NOT superseded by this one
     statement: >
-      Equality in this project is two-layered and the layers have opposite decidability.
-      STRUCTURAL equality — isomorphism of combinatorial maps — is DECIDABLE, and the shipped
-      invariant signature is a sound, incomplete approximation of it. OPERATIONAL equality —
-      contextual/observational equivalence of behavior — is UNDECIDABLE in general, because the M2
-      engine is Turing-universal. No single procedure spans both.
+      Equality in this project is two-layered. STRUCTURAL equality — isomorphism of combinatorial
+      maps — is DECIDABLE, and the shipped invariant signature is a sound, incomplete approximation
+      of it: that half is established. OPERATIONAL equality — contextual equivalence of behavior —
+      is undecidable FOR TURING-COMPLETE LANGUAGES, which is a standard theorem; whether it applies
+      to this project is CONDITIONAL on two things this repository has not established.
     tier: ARGUED
     evidence: research/notes/062-computation-template/README.md
-    priority: 0
+    priority: 1
     scope: >
-      SUPERSEDES the general form of SEMANTIC-EQUALITY, whose own falsifier this fires.
+      CORRECTED 2026-08-12, SAME DAY (F-034). This claim originally asserted that operational
+      equality here IS undecidable and that it superseded SEMANTIC-EQUALITY by firing its
+      falsifier. BOTH OVERSTATEMENTS ARE WITHDRAWN. The undecidability transfer is CONDITIONAL on
+      (a) our engine actually being Turing-universal — its own claim records this as undemonstrated
+      — and (b) GIR semantics being defined by engine reduction, which nothing in the repository
+      does. SEMANTIC-EQUALITY is restored to CONJECTURED.
+      WHAT SURVIVES UNCONDITIONALLY: the structural layer. Map isomorphism is decidable, and
+      essential_invariants() is sound-but-incomplete for it.
       DECIDABLE LAYER: map isomorphism. essential_invariants() is sound-but-incomplete for it —
       equal maps always share a signature; sharing a signature does not prove equality (the
       signature() doc comment already records which direction it errs).
