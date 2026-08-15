@@ -3,8 +3,47 @@
   "tier": "VERIFIED",
   "description": "Two disjoint triangles WITHOUT nesting information. The rotation system alone treats each component as embedded on its own sphere: four faces, chi = 2c. Decidable and wrong for the plane — nothing signals it.",
   "n_darts": 12,
-  "rotations": { "v0": [0, 5], "v1": [2, 1], "v2": [4, 3], "v3": [6, 11], "v4": [8, 7], "v5": [10, 9] },
-  "expected": { "vertices": 6, "edges": 6, "faces": 4, "genus": null, "degree_sequence": [2, 2, 2, 2, 2, 2] },
+  "rotations": {
+    "v0": [
+      0,
+      5
+    ],
+    "v1": [
+      2,
+      1
+    ],
+    "v2": [
+      4,
+      3
+    ],
+    "v3": [
+      6,
+      11
+    ],
+    "v4": [
+      8,
+      7
+    ],
+    "v5": [
+      10,
+      9
+    ]
+  },
+  "expected": {
+    "vertices": 6,
+    "edges": 6,
+    "components": 2,
+    "faces": 4,
+    "genus": null,
+    "degree_sequence": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ]
+  },
   "provenance": "map.rs::tests::degree_sequence_cannot_see_connectivity",
   "teaches": "Module F: Heffter-Edmonds is stated for CONNECTED graphs (F-025). Disconnection costs information the map does not carry."
 }

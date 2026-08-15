@@ -3,9 +3,53 @@
   "tier": "VERIFIED",
   "description": "The same two triangles WITH nesting: both components at top level in the plane. The two outer faces are identified; three regions, V - E + F = 1 + c.",
   "n_darts": 12,
-  "rotations": { "v0": [0, 5], "v1": [2, 1], "v2": [4, 3], "v3": [6, 11], "v4": [8, 7], "v5": [10, 9] },
-  "nesting": { "top_level_outer_darts": [1, 7] },
-  "expected": { "vertices": 6, "edges": 6, "planar_faces": 3, "euler_planar": 3, "degree_sequence": [2, 2, 2, 2, 2, 2] },
+  "rotations": {
+    "v0": [
+      0,
+      5
+    ],
+    "v1": [
+      2,
+      1
+    ],
+    "v2": [
+      4,
+      3
+    ],
+    "v3": [
+      6,
+      11
+    ],
+    "v4": [
+      8,
+      7
+    ],
+    "v5": [
+      10,
+      9
+    ]
+  },
+  "nesting": {
+    "top_level_outer_darts": [
+      1,
+      7
+    ]
+  },
+  "expected": {
+    "vertices": 6,
+    "edges": 6,
+    "components": 2,
+    "planar_faces": 3,
+    "euler_planar": 3,
+    "degree_sequence": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ]
+  },
   "provenance": "map.rs::tests::nesting_recovers_the_correct_planar_face_count",
   "teaches": "Module F: the nesting relation is genuinely extra structure — choosing an outer face is choosing a point at infinity."
 }

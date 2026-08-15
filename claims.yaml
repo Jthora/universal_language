@@ -3272,6 +3272,17 @@ claims:
       count TO A READER is the M1 exemplification route (SEMANTIC-STACK-M1-M2-M3, CONJECTURED),
       whose keystone is READING-INVARIANCE-TARGET. The lexicon is built so that IF M1 holds, the
       meanings are theorems; the structural half is banked either way.
+      VACUITY HOLE FOUND AND FIXED 2026-08-12 (note 060, cold-reader finding): the harness treated
+      every `expected` key as optional and silently skipped absent ones, so an entry could pass
+      while asserting almost nothing — and worse, indexing a missing key yielded Value::Null, so an
+      entry that merely OMITTED `genus` was silently asserting "the formula must not apply", an
+      assertion its author never wrote. Both fixed and probe-verified: absent now differs from
+      null, the structural floor (vertices/edges/components) is mandatory, and an entry declaring a
+      lexicon meaning must machine-check the structure that meaning consists in — regional
+      (same_face/different_face) or local (degree_sequence). THE FIX IMMEDIATELY CAUGHT THIS
+      PROJECT'S OWN SEED ENTRIES (001-004 asserted no components) and then caught a case where the
+      RULE was wrong rather than the entry (008's meaning IS its degree sequence). The entries this
+      claim rests on were re-verified under the stricter harness.
       COVERAGE, honestly: five meanings is a start, not a vocabulary. No assertion layer, no
       quantification, no relations beyond the regional ones, no degree-0 Point (unrepresentable in
       the current object — see GRAMMAR-CORE-IS-DERIVED).

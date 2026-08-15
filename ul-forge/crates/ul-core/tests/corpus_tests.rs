@@ -66,15 +66,19 @@ fn every_corpus_entry_verifies_against_the_implementation() {
         if let Some(f) = exp["faces"].as_u64() {
             assert_eq!(map.faces().len() as u64, f, "{id}: faces (raw orbit count)");
         }
-        match &exp["genus"] {
-            Value::Number(g) => {
+        // ABSENT vs NULL must differ, and did not (notes/060, cold-reader finding): indexing a
+        // missing key yields Value::Null, so an entry that merely OMITTED `genus` was silently
+        // asserting "the formula must not apply" — an assertion its author never wrote. Use
+        // .get() so absent means absent.
+        match exp.get("genus") {
+            Some(Value::Number(g)) => {
                 assert_eq!(
                     map.genus(),
                     Some(g.as_u64().expect("genus") as u32),
                     "{id}: genus"
                 );
             }
-            Value::Null => {
+            Some(Value::Null) => {
                 assert_eq!(map.genus(), None, "{id}: genus formula must not apply");
             }
             _ => {}
@@ -164,6 +168,31 @@ fn every_corpus_entry_verifies_against_the_implementation() {
             ["VERIFIED", "ARGUED", "CONJECTURED"].contains(&tier),
             "{id}: missing or invalid tier — TIERS-TRAVEL-WITH-CONTENT"
         );
+
+        // NO VACUOUS ENTRIES (notes/060, cold-reader finding): every `expected` key is optional
+        // and silently skipped, so an entry could "pass" while asserting almost nothing. A corpus
+        // entry is a CLAIM; a claim that risks nothing verifies nothing. Require the structural
+        // floor, plus a regional assertion for any entry that declares a lexicon meaning.
+        let obj = exp.as_object().expect("expected block must be an object");
+        for required in ["vertices", "edges", "components"] {
+            assert!(
+                obj.contains_key(required),
+                "{id}: `expected.{required}` missing — no vacuous entries"
+            );
+        }
+        // A lexicon entry must machine-check the structure its MEANING consists in. The two kinds
+        // the lexicon currently carries: regional relations (containment, separation, adjacency)
+        // and local degree types (junction, free end). Requiring only the first was too narrow —
+        // 008's meaning IS its degree sequence, and the rule, not the entry, was wrong.
+        if entry.get("lexicon").is_some() {
+            let regional = obj.contains_key("same_face") || obj.contains_key("different_face");
+            let degree_typed = obj.contains_key("degree_sequence");
+            assert!(
+                regional || degree_typed,
+                "{id}: declares a lexicon meaning but machine-checks no structure carrying it \
+                 (regional: same_face/different_face, or local: degree_sequence)"
+            );
+        }
     }
 }
 

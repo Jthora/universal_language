@@ -26,7 +26,10 @@ Entries are graded by the derivation ladder, matching curriculum modules: single
 degree table (S) → exchange scenarios with convention ledgers (P) → executable programs (Q, gated
 on the engine).
 
-**Status: live — four entries, harness green.** Seeded by extraction from `map.rs`'s test
-configurations; the tests had already computed the ground truth. Next entries: junction-bearing
-configurations (the degree table), the theta graph, the torus embedding, and Module P exchange
-scenarios with convention ledgers.
+**Status: live.** The count is deliberately not written here — it went stale within a day of being
+written, and a cold reader could not tell whether this file or `entries/` was authoritative
+(`060`). **`entries/` is authoritative; `corpus_tests.rs` is the contract.** For how to author an
+entry, see **`corpus/AUTHORING.md`**.
+
+**Next:** the theta graph and torus embedding (drift cases the degree sequence cannot see), and
+Module P exchange scenarios with convention ledgers.

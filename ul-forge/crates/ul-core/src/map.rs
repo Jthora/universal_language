@@ -616,16 +616,12 @@ impl CombinatorialMap {
 mod tests {
     use super::*;
 
-    /// Build a cycle graph on `n` vertices directly as a rotation system.
+    /// The public constructor, re-exported for the tests. There was a private duplicate here that
+    /// SHADOWED `CombinatorialMap::cycle`, so `provenance` strings naming `map.rs::tests::*`
+    /// pointed at a code path that was not the public API (cold-reader finding, notes/060).
+    use CombinatorialMap as _CM;
     fn cycle(n: usize) -> CombinatorialMap {
-        // Edge i joins vertex i to vertex (i+1) % n, with darts 2i (at i) and 2i+1 at (i+1).
-        let mut rotations: Vec<(NodeId, Vec<Dart>)> = Vec::new();
-        for v in 0..n {
-            let incoming = 2 * ((v + n - 1) % n) + 1;
-            let outgoing = 2 * v;
-            rotations.push((format!("v{v}"), vec![outgoing, incoming]));
-        }
-        CombinatorialMap::from_rotations(rotations, 2 * n)
+        _CM::cycle(n)
     }
 
     #[test]

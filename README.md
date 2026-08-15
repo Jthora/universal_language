@@ -96,8 +96,9 @@ receiver shares our reading procedure. Every load-bearing edge of the program ro
 ├── uws/                 The Universal Writing System corpus
 ├── ul-forge/            Working implementation: parser, validator, composer, renderer,
 │                        combinatorial map (map.rs), WASM bindings, web editor. 354 tests.
-├── design/              What is INTENDED. Every doc marked "not yet built."
-└── spec/                What EXISTS. Present tense. First entry: grammar-core.md — the derived grammar.
+└── spec/                What EXISTS. Present tense — grammar-core.md, engine-core.md,
+                         reading-invariance-v1.md. Intended-but-unbuilt work lives in
+                         research/notes/, not in a separate tree.
 ```
 
 ---
