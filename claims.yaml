@@ -3463,3 +3463,114 @@ claims:
       year."
       OPEN AND NOW SHARPER: whether the Cure is worth building depends on whether full automation is
       achievable. That is now the question rather than an assumption.
+
+  # --- Symbolic-geometry / code-layer results (promoted 2026-09-08 from the
+  # codes-and-adinkras research ledger; the C8/C9 series). Each is computed
+  # with tests. PROVENANCE NOTE: the computation and tests live in the parent
+  # Mecha Jono agent repository (research/codes/ + tests/), which vendors this
+  # claim file — so the evidence paths resolve from the agent-repo root where
+  # this file is actually read, not inside the universal_language submodule
+  # alone. The authoritative research ledger is research/codes/LEDGER.yaml
+  # there; ledger ids are given in each note. ---
+
+  - id: CODE-GOLDEN-SHADOW-DUAL-COMPOUND
+    statement: >
+      Projecting the 64 words of the sovereign-hexagram 6-cube through the icosahedron's six
+      five-fold axes lands every word on the vertex directions of one icosahedron-dodecahedron
+      dual pair: shells of 12, 20, 20 and 12 words, each shell parity-pure and closed under
+      complementation, with the shell icosahedron's face centres falling exactly on the shell
+      dodecahedron's directions. The full H3 dual compound is the shadow of the hexagram cube.
+    tier: VERIFIED
+    evidence: tests/test_symbol_geometry.py
+    notes: >
+      Research-ledger ids C8-GOLDEN-SHADOW-SHELLS and C9-SHADOW-IS-THE-DUAL-COMPOUND. An earlier
+      pass refused the dodecahedron identification after an 8/20 match; the cause was a
+      wrong-handed comparison target (the textbook dodecahedron is the mirror of the true dual),
+      recorded and overturned in research/codes/FAILURES.md as C-011. Against the correct dual:
+      20/20.
+
+  - id: CODE-SHELL-ISOMETRY-IS-CHIRAL
+    statement: >
+      On the even 12-word icosahedral shell of the hexagram-cube shadow, Hamming distance equals
+      exactly twice the icosahedron's graph distance; on the odd shell the same holds with graph
+      distances 1 and 2 exchanged (the icosahedron's self-duality). On both shells complementation
+      is the antipodal map, so opposition-as-complementation transfers through the projection
+      automatically — the opposition structure that provably cannot ride the icosahedral trine
+      chart does ride the shadow.
+    tier: VERIFIED
+    evidence: tests/test_symbol_geometry.py
+    notes: >
+      Research-ledger id C8-SHELL-ISOMETRY-IS-CHIRAL. First computed instance of a cross-geometric
+      transfer: one object (the 6-cube) holds the full aspect metric in its Hamming structure and
+      the trine/antipode solids in its golden shadow, with cut-and-project as the literal map.
+
+  - id: CODE-ICOSIANS-ARE-E8
+    statement: >
+      The 120 unit icosians (the binary icosahedral group, built exactly over Q(sqrt5), verified
+      to be a group whose vertex set is the 600-cell) span, under the twisted trace form, an even
+      unimodular lattice of rank 8 with Gram determinant 1 — E8 — whose 240 minimal vectors form
+      two concentric 600-cells at radius ratio phi. Since E8 is also the Construction-A lattice of
+      the extended Hamming [8,4,4] code, the chain code -> E8 -> icosian ring -> 600-cell pair is
+      closed end to end.
+    tier: VERIFIED
+    evidence: tests/test_icosians_and_gaps.py
+    notes: >
+      Research-ledger ids C9-ICOSIAN-RING-IS-E8 and C9-E8-ROOTS-ARE-TWO-600-CELLS. The untwisted
+      Galois-pair form is not integral; the twist is essential. The binary icosahedral group's
+      nine conjugacy classes match the affine-E8 node count, whose marks satisfy the McKay
+      doubling identity (C9-2I-MCKAY-COUNT).
+
+  - id: CODE-TAMMES-FORCES-THE-SOLIDS
+    statement: >
+      Maximising the minimum pairwise angle of points on a sphere converges to the octahedron for
+      six points and the icosahedron for twelve (the classical Tammes configurations). Read with
+      the result that the meaning metric is spherical, six maximally distinguishable states sit at
+      the symbol octahedron and twelve at the sign icosahedron: the framework's solids are optimal
+      vocabularies for a spherical meaning space, not decoration.
+    tier: VERIFIED
+    evidence: tests/test_icosians_and_gaps.py
+    notes: >
+      Research-ledger id C9-TAMMES-FORCES-THE-SOLIDS. Numerics corroborate the published Tammes
+      theorems; the reading for meaning space rests on the separate spherical-metric result.
+
+  - id: CODE-INSCRIPTION-WEB
+    statement: >
+      The five Platonic solids carrying the framework's symbol layers form one nested object: the
+      element tetrahedron's edge-midpoints are the symbol octahedron's vertices; the twelve
+      sign-vertices lie on the twelve edges of the phi^2-scaled octahedron at golden section
+      (ratios phi and 1/phi — the two handednesses); the element tetrahedron is the alternate-vertex
+      tetrahedron of the archetype cube; the archetype cube inscribes in the dodecahedron. One
+      octahedron carries three layers: symbols at vertices, signs at golden edge-points, archetypes
+      at faces.
+    tier: VERIFIED
+    evidence: tests/test_symbol_geometry.py
+    notes: >
+      Research-ledger ids C9-INSCRIPTION-WEB and C8-ELEMENTS-ARE-THE-TETRAHEDRON (the four
+      trine-face centroids of each icosahedral chart form a regular tetrahedron; the mirror charts
+      give the dual pair).
+
+  - id: CODE-LAW-PER-WINDOW
+    statement: >
+      Each solid's exact distance law lives in its own axis window. Through the dodecahedron's ten
+      three-fold axes, the 10-cube's two 20-word shells lie exactly on the dodecahedral vertex
+      directions and obey Hamming distance = twice the dodecahedral graph distance on every rung;
+      in the icosahedron's six-axis window the dodecahedral shells preserve only opposition and
+      parity. Relations that survive every window (opposition, parity) versus relations exact only
+      at home is a computed distinction.
+    tier: VERIFIED
+    evidence: tests/test_symbol_geometry.py
+    notes: >
+      Research-ledger id C9-DODECA-LAW-IN-ITS-OWN-WINDOW.
+
+  - id: CODE-OCTONIONS-FROM-HAMMING
+    statement: >
+      The cyclic Hamming [7,4,3] code has exactly seven weight-3 codewords whose supports are the
+      lines of the Fano plane; used as a multiplication table those oriented triples yield a
+      verified composition algebra (norm-multiplicative, alternative, non-associative) — the
+      octonions. The code writes the algebra's multiplication table.
+    tier: VERIFIED
+    evidence: tests/test_icosians_and_gaps.py
+    notes: >
+      Research-ledger id C9-OCTONIONS-FROM-HAMMING. Fills the N=7 rung between the six-symbol so(7)
+      vector and the eight-archetype spinor/e8 rung. That Aut(octonions) = G2 sits inside the same
+      so(7) is cited context, not computed here.
