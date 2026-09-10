@@ -3791,3 +3791,73 @@ claims:
       Research-ledger id C9-OCTONIONS-FROM-HAMMING. Fills the N=7 rung between the six-symbol so(7)
       vector and the eight-archetype spinor/e8 rung. That Aut(octonions) = G2 sits inside the same
       so(7) is cited context, not computed here.
+
+  # ─── Grounding: what makes a glyph's meaning non-arbitrary ─────────────────
+  # Added 2026-09-10. See the owner's correction: the geometric DEFINITION is
+  # itself the meaning where the form instantiates the property. Prior text that
+  # treated UL's symbol-to-meaning relation as conventional is superseded.
+
+  - id: GROUNDING-BY-SELF-DENOTATION
+    statement: >
+      A glyph's meaning is non-arbitrary exactly where the glyph instantiates the property it
+      denotes. A straight line does not represent linearity by convention; it is linear, and the
+      mathematical definition is the meaning.
+    tier: ARGUED
+    evidence: docs/grounding/00-self-denotation.md
+    scope: >
+      Holds for glyphs denoting their own geometric structure (tier 0), and for meanings that
+      follow from a geometric relation which IS the relation denoted (tier 1: containment is
+      inclusion, order along a line is a total order, connectedness is connectedness). Does NOT
+      extend to non-structural content, which requires assignment and is tier 2.
+    falsified_by: >
+      A demonstration that a tier-0 or tier-1 assignment could be coherently replaced by a
+      different one without changing the geometry — which would show the relation was
+      conventional after all.
+    notes: >
+      Proof is the correct instrument here and no empirical study would be stronger, because
+      nothing is claimed about the world — only about what a structure instantiates. Precedent:
+      Peirce's existential graphs ground the logical vocabulary diagrammatically (enclosure is
+      negation, juxtaposition is conjunction) and the graph is the proof object rather than a
+      picture of one.
+
+  - id: PRIMITIVE-SEMANTIC-IDENTITY
+    statement: >
+      Each geometric primitive is identical to a semantic category — Point = Existence,
+      Line = Relation, Angle = Quality, Curve = Process, Enclosure = Concept.
+    tier: RETIRED
+    superseded_by: GROUNDING-BY-SELF-DENOTATION
+    formalization: >
+      The 1:1 identity reading. A point instantiates zero-dimensionality; it does not instantiate
+      existence, and "existence" is not a geometric property, so the correspondence cannot be
+      derived from the geometry. What was presented as forced was assigned.
+    revival_condition: >
+      A derivation of a semantic category from a geometric property alone, without first defining
+      that category by role properties chosen to mirror that geometry. F-003 records why the
+      existing derivation does not meet this.
+    refutation_tier: ARGUED
+    notes: >
+      WHAT SURVIVES: the taxonomic association is often defensible. A point does sit in a taxonomy
+      stack reaching toward existence-like concepts — minimal specification, indivisibility, the
+      thing posited before anything can be located. That reasoning is kept. What is withdrawn is
+      collapsing the association into an identity and then treating the identity as derived. An
+      association is not an identity, and a taxonomy is not a proof.
+
+  - id: GROUNDING-TIER-REQUIRED
+    statement: >
+      Every lexicon entry and every published UL claim carries its grounding tier: 0 self-denoting,
+      1 structural with the rule stated, or 2 assigned.
+    tier: DESIGN-CHOICE
+    rationale: docs/grounding/00-self-denotation.md
+    alternatives_considered:
+      - "uniform confidence across all entries (the prior state; made the provable half look as
+         weak as the assigned half)"
+      - "publish only tier 0 and 1 (loses the content layer entirely)"
+      - "tier claims but not lexicon entries (leaves the error free to regenerate at the entry
+         level, which is where it originated)"
+    notes: >
+      The point of separating the tiers is not caution. It is that the provable half can then be
+      asserted WITHOUT hedging, because a reader checking the strongest claim no longer finds the
+      weakest one attached to it. Enforced at the publishing path by tools/grounding_guard.py in
+      the ul_agent repo rather than by review — per F-017, patching instances instead of fixing
+      the generator guarantees the instances return, and per F-032, an enforcement layer whose
+      enforcement is unenforced prose is not an enforcement layer.
