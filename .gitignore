@@ -44,3 +44,4 @@ node_modules/
 # Temporary files
 *.tmp
 *.log
+.claude/

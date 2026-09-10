@@ -66,15 +66,19 @@ fn every_corpus_entry_verifies_against_the_implementation() {
         if let Some(f) = exp["faces"].as_u64() {
             assert_eq!(map.faces().len() as u64, f, "{id}: faces (raw orbit count)");
         }
-        match &exp["genus"] {
-            Value::Number(g) => {
+        // ABSENT vs NULL must differ, and did not (notes/060, cold-reader finding): indexing a
+        // missing key yields Value::Null, so an entry that merely OMITTED `genus` was silently
+        // asserting "the formula must not apply" — an assertion its author never wrote. Use
+        // .get() so absent means absent.
+        match exp.get("genus") {
+            Some(Value::Number(g)) => {
                 assert_eq!(
                     map.genus(),
                     Some(g.as_u64().expect("genus") as u32),
                     "{id}: genus"
                 );
             }
-            Value::Null => {
+            Some(Value::Null) => {
                 assert_eq!(map.genus(), None, "{id}: genus formula must not apply");
             }
             _ => {}
@@ -164,5 +168,69 @@ fn every_corpus_entry_verifies_against_the_implementation() {
             ["VERIFIED", "ARGUED", "CONJECTURED"].contains(&tier),
             "{id}: missing or invalid tier — TIERS-TRAVEL-WITH-CONTENT"
         );
+
+        // NO VACUOUS ENTRIES (notes/060, cold-reader finding): every `expected` key is optional
+        // and silently skipped, so an entry could "pass" while asserting almost nothing. A corpus
+        // entry is a CLAIM; a claim that risks nothing verifies nothing. Require the structural
+        // floor, plus a regional assertion for any entry that declares a lexicon meaning.
+        let obj = exp.as_object().expect("expected block must be an object");
+        for required in ["vertices", "edges", "components"] {
+            assert!(
+                obj.contains_key(required),
+                "{id}: `expected.{required}` missing — no vacuous entries"
+            );
+        }
+        // A lexicon entry must machine-check the structure its MEANING consists in. The two kinds
+        // the lexicon currently carries: regional relations (containment, separation, adjacency)
+        // and local degree types (junction, free end). Requiring only the first was too narrow —
+        // 008's meaning IS its degree sequence, and the rule, not the entry, was wrong.
+        if entry.get("lexicon").is_some() {
+            let regional = obj.contains_key("same_face") || obj.contains_key("different_face");
+            let degree_typed = obj.contains_key("degree_sequence");
+            assert!(
+                regional || degree_typed,
+                "{id}: declares a lexicon meaning but machine-checks no structure carrying it \
+                 (regional: same_face/different_face, or local: degree_sequence)"
+            );
+        }
+    }
+}
+
+/// Every corpus entry is also reading-invariant over the 𝔽₀ generators: mirror, relabeling,
+/// subdivision (spec/reading-invariance-v1.md). The lexicon's ground truth does not depend on
+/// how the reader numbers, orients, or samples the drawing.
+#[test]
+fn every_corpus_entry_is_reading_invariant() {
+    let dir = corpus_dir();
+    let mut entries: Vec<_> = fs::read_dir(&dir)
+        .expect("corpus dir")
+        .map(|e| e.expect("dir entry").path())
+        .filter(|p| p.extension().is_some_and(|x| x == "json"))
+        .collect();
+    entries.sort();
+
+    for path in entries {
+        let entry: Value =
+            serde_json::from_str(&fs::read_to_string(&path).expect("read")).expect("json");
+        let id = entry["id"].as_str().expect("id");
+        let map = load_map(&entry);
+        let base = map.essential_invariants();
+
+        // mirror
+        assert_eq!(map.mirror().essential_invariants(), base, "{id}: mirror");
+
+        // an edge-reversing relabeling
+        let e = map.edge_count();
+        let perm: Vec<usize> = (0..e).rev().collect();
+        let flip: Vec<bool> = (0..e).map(|i| i % 2 == 0).collect();
+        assert_eq!(
+            map.relabel(&perm, &flip).essential_invariants(),
+            base,
+            "{id}: relabel"
+        );
+
+        // a double subdivision
+        let sub = map.subdivide(0).subdivide(1);
+        assert_eq!(sub.essential_invariants(), base, "{id}: subdivision");
     }
 }

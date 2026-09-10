@@ -54,6 +54,24 @@ notes.each do |path|
   end
 end
 
+# F-033: a cycle left open while later notes close around it is the deferral pattern that let
+# the adversary front slide three times. Standing programs (type: decision) may stay open;
+# investigative notes (cycle/correction) may not be lapped by more than LAP later notes.
+LAP = 3
+ids = notes.map { |p| File.basename(File.dirname(p))[0, 3].to_i }
+max_id = ids.max || 0
+notes.each do |path|
+  id3 = File.basename(File.dirname(path))[0, 3]
+  text = File.read(path, encoding: 'UTF-8')
+  type   = text[/^\*\*Type:\*\* *(\w+)/, 1].to_s
+  status = text[/^\*\*Status:\*\* *(\w+)/, 1].to_s
+  next unless status == 'open' && %w[cycle correction].include?(type)
+  lag = max_id - id3.to_i
+  if lag > LAP
+    errors << "#{id3}: open #{type} lapped by #{lag} later notes — danger-first queue (F-033): run it or close it"
+  end
+end
+
 corrects.each do |target, by|
   path = notes.find { |p| File.basename(File.dirname(p)).start_with?(target) }
   next unless path

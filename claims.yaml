@@ -188,6 +188,7 @@ claims:
       retired. NEG-INVOLUTION was the first found; others may exist and should be audited.
 
   - id: SEMANTIC-APARTNESS
+    scope_reviewed: [SEMANTIC-EQUALITY]   # no material change — apartness was motivated as a weaker constructive alternative to equality, and the reversed retirement leaves that motivation exactly as it was: equality is unproven either way
     statement: >
       The constructively correct primitive is semantic APARTNESS — a positive demonstration that two
       structures differ — rather than semantic equality.
@@ -225,12 +226,31 @@ claims:
       on the acyclic core; keep apartness as the fallback if stability fails.
 
   - id: SEMANTIC-EQUALITY
+    scope_reviewed: [EQUALITY-IS-TWO-LAYERED, M2-ENGINE-V1-EXISTS]   # MATERIAL and central — that hub's own scope records the engine's universality as UNDEMONSTRATED, which is precisely the premise this claim's reversal turns on
     statement: "There exists a decision procedure determining whether two GIR structures mean the same thing."
     tier: CONJECTURED
     falsified_by: "A proof that GIR semantic equivalence is undecidable in the general case."
     evidence: null
+    scope: >
+      RETIREMENT REVERSED 2026-08-12, SAME DAY (F-034). Note 062 retired this claim on the grounds
+      that its falsifier had fired. IT HAD NOT. The argument was: contextual equivalence is
+      undecidable for Turing-complete languages; our M2 engine is Turing-universal; note 059
+      committed us to use-theoretic semantics. Premise 1 is a standard theorem. PREMISES 2 AND 3
+      ARE BOTH UNESTABLISHED IN THIS REPOSITORY:
+      (2) M2-ENGINE-V1-EXISTS states in its own scope that "the ENGINE's own universality (that our
+      implementation realizes the combinators) remains undemonstrated" — recorded by the maintainer
+      one cycle earlier and then used as established.
+      (3) NOTHING MAPS GIR STRUCTURES TO ENGINE PROGRAMS. engine.rs never mentions Gir; no code or
+      spec defines GIR meaning by reduction. The undecidability argument is about programs under
+      reduction and this claim is about static typed graphs.
+      The falsifier asked for A PROOF. What existed was an argument with two unverified premises.
+      WHAT REMAINS TRUE: undecidability is a genuine THREAT to this claim, conditional on (2) and
+      (3) being established. If GIR semantics is ever defined by reduction over a Turing-complete
+      engine, the falsifier fires then. Until then this stays CONJECTURED and the threat is
+      recorded, not executed.
     notes: >
-      DOES NOT EXIST IN ANY FORM, but is no longer novel research. Term rewriting + Knuth-Bendix
+      A CLAIMED FIRING OF THE FALSIFIER WAS WITHDRAWN THE SAME DAY — see scope above and F-034.
+      ORIGINAL NOTES, retained: DOES NOT EXIST IN ANY FORM, but is no longer novel research. Term rewriting + Knuth-Bendix
       completion is the standard solution shape: confluent terminating rewrite system -> decide
       equality by normal-form comparison. BLOCKED on IR-NORMALIZATION-STRATEGY: that machinery
       applies cleanly to terms, and confluence is undecidable for general graph rewriting.
@@ -320,6 +340,7 @@ claims:
     superseded_conjecture: "IR-NORMALIZATION-STRATEGY (CONJECTURED form, 2026-08-01) — see FAILURES.md F-011"
 
   - id: SEMANTIC-EQUALITY-IMPL
+    scope_reviewed: [SEMANTIC-EQUALITY]   # MATERIAL and accounted for — e-graph saturation is a SOUND APPROXIMATION, not a decision procedure, and that reading is now the correct one whether or not equality turns out decidable; the hub's reversal removes nothing this implementation relied on
     statement: "semantically_equal is implemented as e-class equality under equality saturation (e-graphs)."
     tier: DESIGN-CHOICE
     rationale: research/engineering/ir-decision.md
@@ -362,7 +383,7 @@ claims:
       is how Euler -> Venn -> Peirce -> Shin actually progressed.
 
   - id: IR-NORMALIZATION-STRATEGY-OLD
-    scope_reviewed: [NEG-INVOLUTION]   # no effect — historical reference only
+    scope_reviewed: [NEG-INVOLUTION, SEMANTIC-EQUALITY]   # no effect — historical/retired strategy record, unaffected by the hub's tier restoration
     statement: "GIR admits a decidable notion of structural/semantic equivalence via normalization (unrestricted)."
     tier: RETIRED
     superseded_by: research/engineering/ir-decision.md
@@ -1278,6 +1299,7 @@ claims:
       something weaker. Absent from this repository until 2026-08 — see FAILURES.md F-016.
 
   - id: RICE-BOUNDS-SEMANTIC-EQUALITY
+    scope_reviewed: [SEMANTIC-EQUALITY]   # MATERIAL and reinforcing — F-023 recorded Rice being imported without checking its preconditions; the hub's reversal is the SAME error repeated with a different undecidability result, and both now carry the precondition warning explicitly
     statement: >
       Semantic equality is undecidable for any Turing-expressive representation; sound decidable
       approximation is available via abstract interpretation, at the provable cost of infinitely
@@ -1501,6 +1523,7 @@ claims:
   # ─── Zadrozny scope correction (added 2026-08, note 011) ───────────────────
 
   - id: ZADROZNY-SCOPE
+    scope_reviewed: [SEMANTIC-EQUALITY]   # no material effect — Zadrozny concerns compositionality's vacuity, not the decidability of structural equality; the scopes are independent
     statement: >
       Zadrozny's vacuity result applies to UNCONSTRAINED compositionality only; it does not show
       compositionality vacuous once background constraints on syntax and lexical semantics are
@@ -2764,7 +2787,7 @@ claims:
       - "universality relative to human cultures only (rejected: weaker than the owner's requirement, and the METI record shows even that bar defeats visual designs — F-012)"
 
   - id: READING-INVARIANCE-TARGET
-    scope_reviewed: [ERLANGEN-ANSWERS-GOODMAN-SELECTION]   # accounted for — the dependency runs the other way (that claim falls with this one); its S8/S9 debts affect M1's application of this target, not the target itself
+    scope_reviewed: [ERLANGEN-ANSWERS-GOODMAN-SELECTION, READING-INVARIANCE-F0]   # hub 1 accounted for — the dependency runs the other way (that claim falls with this one). hub 2 accounted for — F0 is this target's own floor, and its scope states explicitly that the floor does not discharge the quantifier or touch the deep failure mode
     statement: >
       The theorem target that would make syntax-layer universality literal: for every reasonable
       forgetful reading F of a configuration, the invariants recoverable through F contain the
@@ -2788,6 +2811,18 @@ claims:
       is proof-shaped (T5).
       WHAT EXISTS: notes 014/022/024 prove the survival direction for specific transformation
       towers. The quantification over readings F is the open mathematics.
+      THE DEEP FAILURE MODE NOW HAS LITERATURE NAMES (note 059): it is Kripkenstein's quus applied
+      to derivation (any finite check-battery underdetermines the rule; Kripke pre-empted the
+      machine reply explicitly) and Putnam's JUST-MORE-THEORY objection (any constraint added to
+      fix interpretation is itself reinterpretable). The literature's standard straight solution is
+      Lewisian reference magnetism — eligibility restricted to NATURAL properties — which is
+      POSITED rather than derived, and contested. THIS TARGET'S DISTINCTIVE FORM IS THEREFORE:
+      derive eligibility from invariance instead of positing it, against just-more-theory. The
+      normativity gap (what makes the natural reading BINDING, not merely available) is the
+      remaining exposure and applies to ERLANGEN-ANSWERS-GOODMAN-SELECTION as well.
+      PROGRESS 2026-08-12 (note 058): the F0 floor is machine-checked — see READING-INVARIANCE-F0.
+      Presentation-class invariance (relabeling, mirror, subdivision) holds across the full corpus
+      on every CI run. The floor does not touch this claim's deep failure mode, which stands.
       FORMAL SHAPE, from institution theory (Goguen-Burstall, note 051): an institution's "single
       defining axiom is the satisfaction condition — truth is invariant under change of notation":
       Mod(sigma)(M') satisfies rho iff M' satisfies Sen(sigma)(rho). The framework is DEFINITIONAL —
@@ -2800,7 +2835,7 @@ claims:
       reading-independent.
 
   - id: SEMANTIC-STACK-M1-M2-M3
-    scope_reviewed: [ERLANGEN-ANSWERS-GOODMAN-SELECTION]   # MATERIAL and accounted for — M1's named objection is answered only if that CONJECTURED claim holds; this stack claim therefore lists M1's collapse in its own falsified_by rather than treating the answer as settled
+    scope_reviewed: [ERLANGEN-ANSWERS-GOODMAN-SELECTION, INDETERMINACY-FLOOR-IS-UNIVERSAL]   # hub 1 MATERIAL and accounted for — M1's named objection is answered only if that CONJECTURED claim holds; this stack lists M1's collapse in its own falsified_by. hub 2 MATERIAL and accounted for — the floor is absorbed by the stack's own amendment: M2 is use-theoretic, M1's surviving level is structural, and no route claims classical meaning-facts
     statement: >
       The map-to-meaning gap decomposes into three convention-minimal routes, ordered
       icon-and-index-first, symbol-last: M1 exemplification (the mark instantiates the property it
@@ -2830,10 +2865,14 @@ claims:
       bottom-up in nonsymbolic representations of two kinds: (1) iconic representations, which are
       analogs of the proximal sensory projections ... and (2) categorical representations" —
       icon-first, symbol-derived, from cognitive science, no contact with notation theory.
-      STANDING ADVERSARY FRONT, preregistered for note 052: Quine (inscrutability of reference),
-      Kripke-Wittgenstein (rule-following). Each gets Zadrozny treatment on first contact: scope
-      checked before import (T8), adversarially searched (R1), not allowed to end the conversation
-      (T4). S8 DEBT: Goodman and Harnad are cited from search summaries; a primary each before this
+      ADVERSARY FRONT RUN 2026-08-12 (note 059) — the negatives SURVIVED scope-checking, the first
+      in the record to do so, and the stack absorbs them by being what it already was: M2 is a USE
+      THEORY of meaning (behavior, practice, checkable agreement — the Wittgensteinian position;
+      Kripke's own skeptical solution provides assertibility-in-practice, explicitly NOT meaning
+      facts), and M1's surviving level is structural (Quine's own concession zone: truth-values and
+      structure survive gerrymandered reference). CEILING RECORDED: communal quus is real — the
+      community's dispositions are finite too — so UP/coupling yields PRACTICE, NOT FACTS, and no
+      route in this stack claims otherwise. See INDETERMINACY-FLOOR-IS-UNIVERSAL. S8 DEBT: Goodman and Harnad are cited from search summaries; a primary each before this
       claim rises above priority 1.
 
   - id: INTERACTION-NETS-CARRY-ROTATION
@@ -2861,9 +2900,15 @@ claims:
       with the label alphabet compressible to THREE symbols (interaction combinators) while the
       rotation stays. Ledger entry: 3 symbols + rotation + one marked dart per vertex =
       Turing-universal.
-      S8 DEBT, EXPLICIT: Turing-universality and combinator completeness are reported from summaries
-      (Lafont 1997; Salikhmetov 2017) — the combinators paper has not been fetched. The DEFINITION
-      is primary-verified; the UNIVERSALITY is not yet.
+      S8 DEBT CLEARED 2026-08-12 (note 061) — Lafont 1997 read in the original, and the claim came
+      back STRONGER: "a very simple system of interaction combinators, with only three symbols and
+      six rules, is a universal model of distributed computation", where universal means "any other
+      interaction system can be translated into it" preserving "the complexity and the degree of
+      parallelism" — and "Turing machines ... are intrinsically sequential and cannot be universal
+      in the above sense". Port order inventor-confirmed: auxiliary ports "are not interchangeable
+      ... implicitly numbered in clockwise order" — CLOCKWISE where Gay 1991 wrote ANTICLOCKWISE:
+      the two primary sources use opposite chiralities, the mirror-convention Z/2 live in the
+      literature's own bookkeeping.
       T11: the relevance to UQPL's open problems (Turing-completeness, optimal reduction via
       Lamping/Asperti-Guerrini) is OUR INFERENCE connecting separate literatures, marked as such.
       MACHINE-CHECKED LEG, ADDED 2026-08-12 (note 057): our own engine's agents ARE rotations with
@@ -2907,6 +2952,17 @@ claims:
       curve does not depict enclosure; it ENCLOSES, and Jordan certifies the possessed property as a
       theorem about the mark itself. This dodges F-012, which is about depiction, not instantiation.
       DEPENDENCY, explicit: rests on READING-INVARIANCE-TARGET.
+      NORMATIVITY GAP, added 2026-08-12 (note 059): canonical selection must be shown BINDING on a
+      reader, not merely available — the same regress the IEP records against
+      simplicity/naturalness answers to Kripkenstein. Availability of the invariant reading is
+      proved territory; its bindingness is exactly the eligibility-from-invariance question.
+      GOODMAN PRIMARY READ, S8 CLEARED (note 061, SEP): exemplification is "possession plus
+      reference", and the selector is explicit — "which of its properties does a sample exemplify
+      depends on the SYSTEM within which the sample is being used". The objection at its sharpest:
+      the selector is a USE-SYSTEM. Our move, restated: make the use-system itself the derivable
+      one. S9 SWEEP CLOSED: exemplification, symbol grounding, and natural-meaning vocabularies all
+      searched — no prior filtration-based solution to the selection problem found; the
+      novelty-of-approach cell is called as swept, at summary rank for the third vocabulary.
 
   - id: UL-IS-TWO-TIER
     scope_reviewed: [READING-INVARIANCE-TARGET]   # MATERIAL and accounted for — the natural tier's 'no core explanation' property is exactly what that target must prove for the surviving invariants; this claim's notes route the encirclement prediction to that theorem's jurisdiction rather than asserting it
@@ -2975,12 +3031,19 @@ claims:
       invariants shares elements with every domain BY CONSTRUCTION; by the very theory that killed
       formal discipline, a language of universal elements is the unique best case for broad
       transfer. That is the PREDICTION this thesis makes, not a finding.
-      CONVERGENT SHADOW IN ARTIFICIAL MINDS (abstract read directly): "this convergence is driving
-      toward a shared statistical model of reality" (Platonic Representation Hypothesis, Huh et al.
-      2024) — implicit convergence with scale. UL would be the EXPLICIT, derivation-checked form of
-      the convergence target. Adjacent evidence-direction for UL-IS-EMERGENT-UNIVERSAL, not
-      identical (representational similarity is not a protocol invariant — T11). Authors acknowledge
-      counterexamples; full read owed (S8).
+      CONVERGENT SHADOW IN ARTIFICIAL MINDS — DOWNGRADED 2026-08-12 (note 061) after reading the
+      PRH authors' own limitations: the convergence argument "only strictly holds for bijective
+      projections" (lossy/stochastic observation breaks it); measured vision-language alignment
+      "only reaches a score of 0.16" with the authors themselves unsure whether that is strong or
+      poor; special-purpose systems may not converge; and a SOCIOLOGICAL-BIAS ALTERNATIVE stands —
+      convergence toward human-like representations because the field aims at them. PRH is a
+      hypothesis with acknowledged counterexamples, cited here as direction only, not support.
+      MECHANISM CONTESTED AT PRIMARY LEVEL, recorded 2026-08-12 (note 061): Li & Gleitman 2002
+      (read) reproduce the frame-choice strategies WITHIN English "by manipulating landmark cues,
+      suggesting that language itself may not be the key causal factor"; Levinson, Kita, Haun &
+      Rasch replied the same year ("Returning the tables" — UNREAD, new S8 debt). The named
+      falsifier of this claim is therefore PARTIALLY LIVE, and the format-acquisition experiment
+      carries correspondingly more of the thesis's weight.
       TESTABLE NOW, and nobody has run it: format-acquisition effects from learning a
       geometric/topological notation — measurable on humans and on models.
     notes: >
@@ -3232,6 +3295,17 @@ claims:
       count TO A READER is the M1 exemplification route (SEMANTIC-STACK-M1-M2-M3, CONJECTURED),
       whose keystone is READING-INVARIANCE-TARGET. The lexicon is built so that IF M1 holds, the
       meanings are theorems; the structural half is banked either way.
+      VACUITY HOLE FOUND AND FIXED 2026-08-12 (note 060, cold-reader finding): the harness treated
+      every `expected` key as optional and silently skipped absent ones, so an entry could pass
+      while asserting almost nothing — and worse, indexing a missing key yielded Value::Null, so an
+      entry that merely OMITTED `genus` was silently asserting "the formula must not apply", an
+      assertion its author never wrote. Both fixed and probe-verified: absent now differs from
+      null, the structural floor (vertices/edges/components) is mandatory, and an entry declaring a
+      lexicon meaning must machine-check the structure that meaning consists in — regional
+      (same_face/different_face) or local (degree_sequence). THE FIX IMMEDIATELY CAUGHT THIS
+      PROJECT'S OWN SEED ENTRIES (001-004 asserted no components) and then caught a case where the
+      RULE was wrong rather than the entry (008's meaning IS its degree sequence). The entries this
+      claim rests on were re-verified under the stricter harness.
       COVERAGE, honestly: five meanings is a start, not a vocabulary. No assertion layer, no
       quantification, no relations beyond the regional ones, no degree-0 Point (unrepresentable in
       the current object — see GRAMMAR-CORE-IS-DERIVED).
@@ -3257,15 +3331,158 @@ claims:
       Six tests (engine.rs), spec at spec/engine-core.md. LIMITS, exactly: v1 EXECUTES, IT DOES NOT
       YET MEAN — world-reference is M3 and is not code; no optimal reduction, no lambda encoding,
       no type layer (UQPL's typed calculus sits above this and does not exist); strong confluence
-      is Lafont's theorem inherited and smoke-tested, not formally verified here; the S8 DEBT on
-      substrate universality stands (Lafont 1997 unread) — v1 demonstrates arithmetic, not
-      universality. The demo system is the Add/S/Z arithmetic from the primary source (Gay 1991).
+      is Lafont's theorem inherited and smoke-tested, not formally verified here. S8 DEBT CLEARED
+      (note 061): Lafont 1997 read — the substrate's universality is the strong translation sense,
+      stricter than Turing-equivalence. v1 still demonstrates arithmetic only; the ENGINE's own
+      universality (that our implementation realizes the combinators) remains undemonstrated. The
+      demo system is the Add/S/Z arithmetic from the primary source (Gay 1991).
     notes: >
       The bridge test (every_net_state_is_a_valid_map_with_principal_first_rotations) upgrades two
       claims from literature-supported to machine-checked-in-our-code: the rotation-with-marked-dart
       structure of agents (INTERACTION-NETS-CARRY-ROTATION) and the structural resource discipline
       (QUANTUM-IS-LINEAR-DISCIPLINE). Priority 0 with S8 satisfied structurally: rank (1)/(4)
       evidence, our own code and tests.
+
+  - id: READING-INVARIANCE-F0
+    scope_reviewed: [READING-INVARIANCE-TARGET]   # MATERIAL and accounted for — this claim is the hub's machine-checked floor and explicitly NOT its discharge; the hub's deep failure mode (characterizing "reasonable" without circularity) is untouched by F0, whose generators are readings we defined
+    statement: >
+      Reading invariance holds, machine-checked, for the generated class F0 = relabeling x mirror x
+      subdivision: the essential invariants (components, face count, genus, degrees != 2) are
+      identical across every reading in the class, for five subject configurations and for EVERY
+      corpus entry. The lexicon's ground truth does not depend on how a reader numbers, orients, or
+      samples the drawing.
+    tier: VERIFIED
+    evidence: spec/reading-invariance-v1.md
+    priority: 1
+    scope: >
+      F0 IS THE FLOOR, NOT THE THEOREM. Its generators are presentation changes WE defined, each
+      with designed-in invariance (isomorphism; orbit reversal; degree-2 inertness per
+      SUBDIVISION-IS-INERT). The target quantifies over ALL reasonable readings and its hard part
+      is exactly what F0 dodges. Tests: reading_invariance_holds_for_the_presentation_class
+      (map.rs), every_corpus_entry_is_reading_invariant (corpus harness) — both on every CI run.
+    notes: >
+      The proof SHAPE scales: invariance argued generator-by-generator, then inherited by the
+      generated class. Extending F0 with new generators (each with its stated reason) is the
+      incremental path; characterizing the full class via institutions is the theorem path.
+
+  - id: INDETERMINACY-FLOOR-IS-UNIVERSAL
+    scope_reviewed: [READING-INVARIANCE-TARGET, SEMANTIC-STACK-M1-M2-M3]   # hub 1 MATERIAL and accounted for — this claim supplies the literature identification of that hub's deep failure mode and does not weaken the target; hub 2 MATERIAL and accounted for — M2's use-theoretic reading is exactly what survives the floor, recorded in that hub's amendment
+    statement: >
+      The Quine and Kripke-Wittgenstein arguments are universal solvents: no symbol system — no
+      natural language, no formal system, no machine, no community — has classical meaning-facts by
+      their lights. They therefore set a floor shared by every possible communicator and can rank
+      no language below any other. What they do not touch is coordination cost: the ledger's
+      comparisons (Z/2 versus S_n, the lever-game economics) are about arbitrary convention, and
+      symmetry-breaking costs are real whether or not meaning-facts exist.
+    tier: ARGUED
+    evidence: research/notes/059-adversary-front/README.md
+    priority: 0
+    scope: >
+      FROM TWO PRIMARY-GRADE READS (IEP "Kripke's Wittgenstein"; IEP "The Indeterminacy of
+      Translation and Radical Interpretation" — S8 satisfied). The skeptical argument surveys "at
+      least ten candidates" for a meaning-constituting fact and rules them all out, INCLUDING
+      MACHINES — "why is it that such a fact or rule cannot be interpreted in a different way?" —
+      so machine-checked floors do not escape; Kripke pre-empted the machine reply. The quus
+      finitude problem applies to communities as well as individuals (raised by Blackburn,
+      Boghossian, Wright): COUPLING YIELDS PRACTICE, NOT FACTS. Quine: "there is no fact as to
+      what a term refers to", extended to the home language.
+      WHAT SURVIVES, BY QUINE'S OWN LIGHTS: truth-values of observation sentences under
+      gerrymandered readings; sentence-level structure over term-reference; pragmatic success via
+      charity. The lexicon's register-split (structural facts VERIFIED, reader-meaning
+      CONJECTURED) sits exactly on the line the philosophy draws.
+      WHAT THIS KILLS IN OUR OWN RHETORIC, permanently: "meaning by derivation, full stop" and
+      "the answer key is the universe" as claims to classical meaning-facts. Derivation does not
+      manufacture such facts; nothing does. The project's semantics is USE-THEORETIC (M2, meaning
+      as behavior) plus structural (M1's surviving level), and says so.
+    notes: >
+      This is the first front in the project's record where a line-closing negative SURVIVED
+      scope-checking (S7 logged in note 059). It closes nothing: it scopes the rhetoric down to
+      what the architecture already was. The standing exposure, stated without cosmetics: if
+      eligibility cannot be derived from invariance (READING-INVARIANCE-TARGET against Putnam's
+      just-more-theory), UL's universality is coordination-universality only — more than any prior
+      constructed language achieved, and less than the slogans claimed.
+
+  - id: CHURCH-TURING-TEMPLATE
+    scope_reviewed: [READING-INVARIANCE-TARGET, INDETERMINACY-FLOOR-IS-UNIVERSAL, FIXED-POINT-IS-COMBINATORIAL-MAP]   # hub 1 MATERIAL and accounted for — this claim identifies that target as the bridging half and imports a THIRD statement of its deep failure mode rather than easing it; hub 2 MATERIAL and accounted for — the missing extensional criterion for meaning IS Quine's conclusion, reached from computability; hub 3 accounted for — the syntactic equivalences cited are standard results about the map, already recorded there as prior art
+    statement: >
+      Computation's foundations decompose into two parts, and UL must be located in each
+      separately: (a) PROVED equivalences among independent formalisms, over an object with an
+      EXTENSIONAL CRITERION, and (b) ONE BRIDGING THESIS identifying that formal class with an
+      informal notion. UL's syntactic object has both halves of (a) — the map's equivalences with
+      DCEL, ribbon graphs, dessins and rotation systems are standard results. UL's SEMANTICS has
+      neither, and the reason is precise: there is no agreed extensional criterion for meaning.
+    tier: ARGUED
+    evidence: research/notes/062-computation-template/README.md
+    priority: 1
+    scope: >
+      EVIDENCE RANK, STATED UP FRONT (S1/S8): the Dershowitz-Gurevich paper FAILED TO FETCH (TLS
+      certificate error) and the Shapiro critique was reached through search summaries only. This
+      claim is ARGUED on rank-(5) evidence plus the maintainer's own knowledge of the standard
+      decomposition, with the primary recorded as an outstanding debt. Do not promote without it.
+      WHAT IS PROVED IN COMPUTATION: Turing proved the Turing-machine/lambda-calculus equivalence;
+      the class of computable functions is extensionally defined, so "the same" is checkable.
+      WHAT IS ASSUMED: "the equivalence of formal models is proven, but the identification of this
+      equivalence with intuitive computability is assumed."
+      THE BRIDGE CAN BE PROMOTED, WITH A STING: Dershowitz & Gurevich (BSL 2008) derive Church's
+      Thesis from "Sequential Postulates" via the Abstract State Machine theorem — so a bridging
+      thesis is a staging post, not a dead end. BUT the standing objection is OUR OWN OBSTRUCTION:
+      Shapiro, extending Waismann, argues pre-theoretical concepts have OPEN TEXTURE — a sharpening
+      may REPLACE the original concept rather than capture it — and informal notions are "too rich
+      for their meanings to be settled by any single finite expression". D-G justify their
+      first-order framing by appeal to mathematical practice's track record, not by proof, and
+      their result excludes randomness, parallelism and quantum computing.
+      THE THREE-LITERATURE CONVERGENCE IS OUR INFERENCE (T11), not a finding of any of them:
+      Putnam's just-more-theory, Kripkenstein's finitude, and Shapiro's open texture are the same
+      obstruction in philosophy of language, philosophy of mind, and philosophy of computability.
+      READING-INVARIANCE-TARGET's deep failure mode is therefore not a quirk of this program.
+      WHAT THIS LICENSES AND WHAT IT FORBIDS: it licenses treating a bridging thesis with strong
+      convergence evidence as a RESPECTABLE endpoint — ninety years of computer science rest on
+      one. It FORBIDS victory-by-resemblance: the part a UL program would collect resemblances
+      toward is precisely the contested part in computation too. Registered after a preregistered
+      self-suspicion (note 062 section 1) that this template was being reached for as a comfortable
+      retreat from the theorem route; the verdict was recorded against that comfort.
+    notes: >
+      THE SHARPEST STATEMENT OF THE SEMANTIC GAP THIS PROJECT HAS: the gap is not "the bridge is
+      unbuilt" but "the far side has no agreed extension". That is Quine's conclusion reached from
+      computability rather than from philosophy of language, and it is why the use-theoretic route
+      (M2) is the buildable one — behavior HAS an extensional criterion where meaning does not.
+
+  - id: EQUALITY-IS-TWO-LAYERED
+    scope_reviewed: [CHURCH-TURING-TEMPLATE, SEMANTIC-STACK-M1-M2-M3, M2-ENGINE-V1-EXISTS, INTERACTION-NETS-CARRY-ROTATION, SEMANTIC-EQUALITY]   # hub 1 supplies the extensional-criterion reasoning; hub 2 accounted for — the decidable layer is structural, M1/M3 untouched; hubs 3-4 MATERIAL AND THE SOURCE OF THIS CLAIM'S CORRECTION — hub 3 records the engine's universality as UNDEMONSTRATED, which is why the undecidability transfer is now stated as conditional rather than asserted; hub 5 MATERIAL — that claim is restored to CONJECTURED and is NOT superseded by this one
+    statement: >
+      Equality in this project is two-layered. STRUCTURAL equality — isomorphism of combinatorial
+      maps — is DECIDABLE, and the shipped invariant signature is a sound, incomplete approximation
+      of it: that half is established. OPERATIONAL equality — contextual equivalence of behavior —
+      is undecidable FOR TURING-COMPLETE LANGUAGES, which is a standard theorem; whether it applies
+      to this project is CONDITIONAL on two things this repository has not established.
+    tier: ARGUED
+    evidence: research/notes/062-computation-template/README.md
+    priority: 1
+    scope: >
+      CORRECTED 2026-08-12, SAME DAY (F-034). This claim originally asserted that operational
+      equality here IS undecidable and that it superseded SEMANTIC-EQUALITY by firing its
+      falsifier. BOTH OVERSTATEMENTS ARE WITHDRAWN. The undecidability transfer is CONDITIONAL on
+      (a) our engine actually being Turing-universal — its own claim records this as undemonstrated
+      — and (b) GIR semantics being defined by engine reduction, which nothing in the repository
+      does. SEMANTIC-EQUALITY is restored to CONJECTURED.
+      WHAT SURVIVES UNCONDITIONALLY: the structural layer. Map isomorphism is decidable, and
+      essential_invariants() is sound-but-incomplete for it.
+      DECIDABLE LAYER: map isomorphism. essential_invariants() is sound-but-incomplete for it —
+      equal maps always share a signature; sharing a signature does not prove equality (the
+      signature() doc comment already records which direction it errs).
+      UNDECIDABLE LAYER: contextual equivalence — "two programs are equivalent iff no context
+      distinguishes them" — is the standard PL criterion and is undecidable for Turing-complete
+      languages. Our engine is Turing-universal by construction (INTERACTION-NETS-CARRY-ROTATION,
+      Lafont 1997), so this is not an accident of implementation but a consequence of the power we
+      deliberately built in. KNOWN SOUND APPROXIMATIONS: bisimulation, logical relations, e-graph
+      saturation (see SEMANTIC-EQUALITY-IMPL, which is an approximation and not a decision
+      procedure — its DESIGN-CHOICE framing should be read that way).
+      WHY THE ARCHITECTURE WAS ALREADY RIGHT: the comparator we shipped works on the decidable
+      layer (invariants over structure), not on full semantic equality. The claim was wrong; the
+      build was not.
+      HONEST RESIDUE: a TOTAL (non-Turing-complete) fragment would restore decidability at the cost
+      of expressiveness. That trade is unexplored and is the surviving route — see the revival
+      condition on SEMANTIC-EQUALITY.
 
   - id: UNIVERSAL-MEANS-CONVENTION-FREE
     statement: >

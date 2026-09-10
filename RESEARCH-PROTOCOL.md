@@ -137,7 +137,10 @@ so you never have to settle how bad it is to act on them.
 - **S1 — Rank evidence by verifiability, not citation weight.**
   **(1)** proof you can check yourself → **(2)** primary source read directly → **(3)** convergence
   across non-contacting traditions → **(4)** reproduction you ran → **(5)** single citation via
-  summary. **Nothing foundational rests on (5).**
+  summary. **Nothing foundational rests on (5).** **And quotation marks are rank-(2) punctuation:**
+  reserve them for text read in a rendered primary. A search summary's "quote" is a model's
+  paraphrase wearing quotation marks — paraphrase it and tag the rank instead. *(Added with F-033's
+  process review: the registry stayed more honest than the prose because prose invents precision.)*
 - **S2 — Preregister expectations before searching.** Write what you expect and what would change
   the plan. **Literature-pull is only visible against a recorded prior.**
 - **S3 — Independently rederive load-bearing negatives.** A planted or misread impossibility result
