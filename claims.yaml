@@ -2101,6 +2101,16 @@ claims:
       is not matching structure. Interesting only if an independent reason emerges why primitives
       should correspond to pairwise projections, and there is none. Note 017 recorded retrofitting
       such correspondences as this project's documented failure mode.
+      DISAMBIGUATED 2026-09-10 (note 063), AND THE VERDICT ABOVE IS UNCHANGED. There are two
+      different C(4,2) = 6 in this project, over two different four-sets, and they must not be
+      conflated: HERE the four are SHAPE AXES (curvature, singularity, closure, junction degree)
+      and the six are 2-D projection TABLES. In the empirical UWS corpus the four are ELEMENTS
+      (Fire, Air, Water, Earth) and the six are MARKS, and note 063 shows that second pairing has
+      real structure — the rotation class of a mark is a function of the Hamming distance of the
+      element-pair it spans. That says nothing about whether primitives should correspond to
+      pairwise projections of AXES, which is what this entry asks for and still has no answer to.
+      Reading 063 as the answer would be exactly the numerical-coincidence error this entry exists
+      to prevent. See UWS-MARK-PAIRS-TRACK-ROTATION-CLASS.
 
   - id: TWO-KINDS-OF-AXIS
     scope_reviewed: [FIXED-POINT-IS-COMBINATORIAL-MAP, BINARY-AXES-ARE-HYPEROCTAHEDRAL]   # no effect — the shape/transformation distinction is independent of connectivity and of the polytope exclusion
@@ -3698,7 +3708,7 @@ claims:
       complementation, with the shell icosahedron's face centres falling exactly on the shell
       dodecahedron's directions. The full H3 dual compound is the shadow of the hexagram cube.
     tier: VERIFIED
-    evidence: tests/test_symbol_geometry.py
+    evidence: ul_agent:tests/test_symbol_geometry.py
     notes: >
       Research-ledger ids C8-GOLDEN-SHADOW-SHELLS and C9-SHADOW-IS-THE-DUAL-COMPOUND. An earlier
       pass refused the dodecahedron identification after an 8/20 match; the cause was a
@@ -3715,7 +3725,7 @@ claims:
       automatically — the opposition structure that provably cannot ride the icosahedral trine
       chart does ride the shadow.
     tier: VERIFIED
-    evidence: tests/test_symbol_geometry.py
+    evidence: ul_agent:tests/test_symbol_geometry.py
     notes: >
       Research-ledger id C8-SHELL-ISOMETRY-IS-CHIRAL. First computed instance of a cross-geometric
       transfer: one object (the 6-cube) holds the full aspect metric in its Hamming structure and
@@ -3730,7 +3740,7 @@ claims:
       the extended Hamming [8,4,4] code, the chain code -> E8 -> icosian ring -> 600-cell pair is
       closed end to end.
     tier: VERIFIED
-    evidence: tests/test_icosians_and_gaps.py
+    evidence: ul_agent:tests/test_icosians_and_gaps.py
     notes: >
       Research-ledger ids C9-ICOSIAN-RING-IS-E8 and C9-E8-ROOTS-ARE-TWO-600-CELLS. The untwisted
       Galois-pair form is not integral; the twist is essential. The binary icosahedral group's
@@ -3745,7 +3755,7 @@ claims:
       the symbol octahedron and twelve at the sign icosahedron: the framework's solids are optimal
       vocabularies for a spherical meaning space, not decoration.
     tier: VERIFIED
-    evidence: tests/test_icosians_and_gaps.py
+    evidence: ul_agent:tests/test_icosians_and_gaps.py
     notes: >
       Research-ledger id C9-TAMMES-FORCES-THE-SOLIDS. Numerics corroborate the published Tammes
       theorems; the reading for meaning space rests on the separate spherical-metric result.
@@ -3760,7 +3770,7 @@ claims:
       octahedron carries three layers: symbols at vertices, signs at golden edge-points, archetypes
       at faces.
     tier: VERIFIED
-    evidence: tests/test_symbol_geometry.py
+    evidence: ul_agent:tests/test_symbol_geometry.py
     notes: >
       Research-ledger ids C9-INSCRIPTION-WEB and C8-ELEMENTS-ARE-THE-TETRAHEDRON (the four
       trine-face centroids of each icosahedral chart form a regular tetrahedron; the mirror charts
@@ -3775,7 +3785,7 @@ claims:
       parity. Relations that survive every window (opposition, parity) versus relations exact only
       at home is a computed distinction.
     tier: VERIFIED
-    evidence: tests/test_symbol_geometry.py
+    evidence: ul_agent:tests/test_symbol_geometry.py
     notes: >
       Research-ledger id C9-DODECA-LAW-IN-ITS-OWN-WINDOW.
 
@@ -3786,7 +3796,7 @@ claims:
       verified composition algebra (norm-multiplicative, alternative, non-associative) — the
       octonions. The code writes the algebra's multiplication table.
     tier: VERIFIED
-    evidence: tests/test_icosians_and_gaps.py
+    evidence: ul_agent:tests/test_icosians_and_gaps.py
     notes: >
       Research-ledger id C9-OCTONIONS-FROM-HAMMING. Fills the N=7 rung between the six-symbol so(7)
       vector and the eight-archetype spinor/e8 rung. That Aut(octonions) = G2 sits inside the same
@@ -3803,7 +3813,7 @@ claims:
       denotes. A straight line does not represent linearity by convention; it is linear, and the
       mathematical definition is the meaning.
     tier: ARGUED
-    evidence: docs/grounding/00-self-denotation.md
+    evidence: ul_agent:docs/grounding/00-self-denotation.md
     scope: >
       Holds for glyphs denoting their own geometric structure (tier 0), and for meanings that
       follow from a geometric relation which IS the relation denoted (tier 1: containment is
@@ -3861,3 +3871,103 @@ claims:
       the ul_agent repo rather than by review — per F-017, patching instances instead of fixing
       the generator guarantees the instances return, and per F-032, an enforcement layer whose
       enforcement is unenforced prose is not an enforcement layer.
+
+  # ─── The drawn corpus: measuring the practice (added 2026-09-10, note 063) ──
+  # These concern the owner's Universal Symbology sheets as ARTIFACTS. The
+  # evidence is machine measurement of bitmaps, not proof about a formal object.
+  # Distinguish that from notes 022-026, which derive and then look.
+
+  - id: UWS-SIGN-GRAMMAR-IS-MODULAR
+    statement: >
+      In the drawn UWS corpus a zodiac glyph is computed, not assigned: geometry is n mod 3
+      (angle/square/arc = Cardinal/Fixed/Mutable), apex direction is n mod 2, and the crossbar is
+      n mod 4 in {2,3}. Direction and crossbar together are the element, so a sign is
+      (n mod 3) x (n mod 4); since gcd(3,4)=1, Z/12 = Z/3 x Z/4 and the twelve cells are exactly
+      covered.
+    tier: VERIFIED
+    evidence: research/notes/063-the-sign-grammar/verify.py
+    scope: >
+      A statement about THIS corpus of drawings, not about notation in general and not about any
+      formal object. It says the practice is generated by a rule; it does not say the rule is
+      forced, and one designer produced every sheet.
+    notes: >
+      MEASURED, NOT READ. The verifier reads no labels: apex direction from ink distribution,
+      crossbar from the interior cavity count (a plain triangle encloses one region, a barred one
+      two), waveform baseline from flanking horizontal rules, wheel position from colour-blob
+      centroids. Results: Base 12 signs 12/12; Base 36 decans 12/12; Cosmic Families 24/24 marks
+      within 2.7 degrees of their sign angle, same theta0 = 60 in all four panels. The two bitmap
+      sheets share no visual construction.
+      HELD-OUT PREDICTION, made before the sheet was examined: cusps 5-12 of base24_cusps were
+      derived from the rule and written down first. All twelve matched on upper geometry, lower
+      geometry and both baseline bits, plus the force sequence 12/12. The closure is forced rather
+      than observed — direction is n mod 2, so adjacent signs always carry opposite direction bits
+      and every adjacent pair fuses into a closed figure. Base 24 = 12 + 12 where the second twelve
+      is a theorem of the first.
+      THE CHECKER CAN FAIL, and that is pinned. Swapping Fire and Air inside the arithmetic breaks
+      three of the five checks; tests/test_symbology_grammar.py in the ul_agent repo asserts it.
+      Per F-032, a green suite that cannot go red is not evidence. The verifier and its three
+      sheets live beside this note so the claim is checkable from a bare clone here.
+
+  - id: UWS-MARK-PAIRS-TRACK-ROTATION-CLASS
+    statement: >
+      The corpus's element-pair to mark table is a complete bijection over C(4,2) = 6, and a mark's
+      rotation class is a function of the Hamming distance of the element-pair it spans: distance 2
+      gives the rotation-invariant marks {Point, Circle}, distance 1 by direction gives
+      {Line, Wave}, distance 1 by crossbar gives {Angle, Curve}.
+    tier: ARGUED
+    evidence: research/notes/063-the-sign-grammar/README.md
+    scope: >
+      Establishes that the mapping is GENERATED by two independent structures rather than listed.
+      Does NOT establish that it is forced. A consistent mapping across one designer's own
+      artifacts is not evidence that no other mapping was available.
+    notes: >
+      One side of the correspondence is not an assignment at all: rotation-invariance is a provable
+      property of a mark, and the other side is arithmetic on a 2-bit code. CosmicFamilies states
+      four of the six rows independently and names exactly the four OPPOSITE-DIRECTION pairs as its
+      "families", leaving the two same-direction pairs as the modality operators — which is the 4+2
+      split of the six marks, generated rather than chosen. That is the concrete mechanism behind
+      UWS-PRIMITIVE-COUNT being malformed: 3 pairs, 3+3 and 4+2 are three real partitions of one
+      six-set and no single count represents three partitions.
+      DO NOT CONFLATE with the C(4,2) coincidence in MANY-TABLES-ONE-STRUCTURE. That one is four
+      SHAPE AXES giving six TABLES; this one is four ELEMENTS giving six MARKS. This claim does not
+      answer that entry's open question and must not be cited as doing so.
+
+  - id: UWS-MODALITY-SEMANTICS-ARE-GEOMETRIC
+    statement: >
+      TWO of the three modality marks carry meanings that follow from their geometry rather than
+      from assignment: a line is a flat surface and flatness IS specular reflection, so it
+      reflects; a concave curve bounds a region, and what enters that region is contained, so it
+      receives. The third — the angle read as 'active' — is NOT derived, and is recorded as
+      undetermined rather than asserted.
+    tier: ARGUED
+    evidence: research/notes/063-the-sign-grammar/README.md
+    scope: >
+      Covers the Line and Curve marks. Does NOT cover the Angle mark. Does NOT extend to the four
+      elements or to the Cardinal/Fixed/Mutable astrological vocabulary. The Aether/Nether gloss
+      holds only GIVEN that up and down are meaningful on the page — an embedding assumption
+      inherited from the reader's body, not a property of the plane.
+    notes: >
+      Five artifacts converge independently on the same three readings: Init / Act / Spark /
+      Active for the angle; Level / Peace / Reflective for the line; Hold / Soak / Pass / Receptive
+      for the cup. The Emotional Permutation Framework states the set as
+      M in {Active, Reflective, Receptive}. Likewise the up-mark is glossed AETHER — the upper air
+      — and the down-mark NETHER, beneath.
+      This is GROUNDING-BY-SELF-DENOTATION at tier 1: the meaning follows from a geometric relation
+      that IS the relation denoted. Same shape as "is linear MEANS is linear" — here "is concave
+      MEANS contains", because bounding a region is what concavity does.
+      CORRECTED 2026-09-10, within hours of first registration, by the propagation check in
+      data/derivation/derivation_register.json. The original statement claimed all THREE marks.
+      "A vertex concentrates curvature" is geometric and provable; "a vertex acts" is not — that
+      step goes from a geometric fact to an agentive reading with nothing in between, which is
+      precisely the move F-003 records as this project's failure mode. Two of the three survive
+      the standard; the third is now register entry `vertex-acts`, status undetermined, carrying
+      a success condition. Also sharpened: the earlier wording said a concave form "collects what
+      FALLS into it", which smuggles in gravity and a direction of down — containment needs
+      neither.
+      A DERIVATION ROUTED THROUGH AN UNDETERMINED PREMISE IS ITSELF UNDETERMINED. Four claims
+      marked derived failed that check on its first run, this project's own included.
+      TWO DEFECTS IN THE SOURCE, recorded so they are not inherited: the framework's matrix P has
+      a filler intensity column (no generating rule, one value repeats), and P is called a
+      permutation matrix four times when it is a 12x3 table of labels. The 12 = 4 x 3 result
+      survives both; they are presentation faults, and they are the first thing a hostile reader
+      finds.
