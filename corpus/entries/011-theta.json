@@ -1,0 +1,16 @@
+{
+  "id": "011-theta",
+  "tier": "VERIFIED",
+  "lexicon": "JUNCTION PAIR \u2014 two degree-3 junctions joined by three independent connections",
+  "description": "Two vertices joined by three parallel edges, the second junction traversed in the opposite sense to the first. Same vertices, same edges, same degree sequence as 012 \u2014 the ONLY difference is the cyclic order at one vertex. Read this way the graph bounds three regions in the plane. The degree sequence cannot see the difference and neither can the vertex or edge count; only the rotation carries it.",
+  "n_darts": 6,
+  "rotations": { "a": [0, 2, 4], "b": [1, 5, 3] },
+  "expected": {
+    "vertices": 2, "edges": 3, "components": 1,
+    "faces": 3, "genus": 0,
+    "degree_sequence": [3, 3],
+    "same_face": [[0, 5]], "different_face": [[0, 1]]
+  },
+  "provenance": "map.rs::tests::theta_graph_planar_embedding_has_three_faces",
+  "teaches": "Module S/F: the theta graph is the minimal drift case \u2014 vertex count, edge count and degree sequence are all blind to the embedding. The rotation is content. Compare 012: the same graph, one dart reordered, a different surface."
+}

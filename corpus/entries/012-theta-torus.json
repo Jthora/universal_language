@@ -1,0 +1,16 @@
+{
+  "id": "012-theta-torus",
+  "tier": "VERIFIED",
+  "lexicon": "JUNCTION PAIR \u2014 the same two junctions and the same three connections, read the other way",
+  "description": "The identical graph as 011 \u2014 two vertices, three edges, degree sequence [3, 3] \u2014 with the second junction traversed in the SAME sense as the first rather than the opposite. One face, Euler characteristic 0, genus 1: the same structure now lives on a torus. Nothing in the graph changed. Only the rotation did. Darts 0 and 1 lie in different regions in 011 and the same region here \u2014 the machine-checkable form of the difference.",
+  "n_darts": 6,
+  "rotations": { "a": [0, 2, 4], "b": [1, 3, 5] },
+  "expected": {
+    "vertices": 2, "edges": 3, "components": 1,
+    "faces": 1, "genus": 1,
+    "degree_sequence": [3, 3],
+    "same_face": [[0, 1]]
+  },
+  "provenance": "map.rs::tests::the_same_graph_on_a_torus_has_one_face",
+  "teaches": "Module F: the rotation IS the embedding. Same graph, same degree sequence, different surface \u2014 the drift case the degree sequence cannot see, and the reason genus is a reading of the marks rather than a property of them."
+}
