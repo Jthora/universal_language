@@ -4681,3 +4681,87 @@ claims:
       The usability gap and the curriculum gap are the same gap, and this is the first evidence about
       which direction resolves it.
     scope_reviewed: [LEXICON-V1-FIVE-MEANINGS, ATLAS-COMPLETENESS-IS-THE-PROGRESS-BAR, CURRICULUM-MUST-BE-SELF-CERTIFYING, SEMANTIC-EQUALITY]
+
+  # ─── The bridge object (2026-10-14, note 069) ──────────────────────────────
+
+  - id: MAP-AUTOMORPHISMS-EXIST
+    statement: >
+      The automorphism group of a combinatorial map is computed in `map.rs`, as both cosets in
+      explicit dart permutations: orientation-preserving (φσ = σφ, φα = αφ) and
+      orientation-reversing (φσ = σ⁻¹φ, φα = αφ). Disconnected maps are handled; the search is
+      budgeted so a pathological input reports `truncated` rather than hanging.
+    tier: VERIFIED
+    evidence: ul-forge/crates/ul-core/src/map.rs
+    notes: >
+      Checked against group theory rather than against its own output: a bare edge gives order 2,
+      the triangle and square maps give D3 (6) and D4 (8), the 3-star gives 3 rotations and 3
+      DISTINCT mirrors (order 6, disjoint cosets), two disjoint edges give 2*2*2 = 8.
+      A BUG CAUGHT BY PROBING BEFORE ANY ASSERTION WAS WRITTEN: v1 subtracted the Aut+/Aut- overlap
+      to avoid double counting the group order, and reported a single edge as CHIRAL. The two sets
+      are cosets — disjoint when sigma != sigma inverse, IDENTICAL when sigma is an involution
+      (every vertex of degree at most 2) — so subtracting the overlap destroys emptiness exactly
+      where the map is most obviously amphichiral, and chirality IS emptiness. order() takes the
+      union; `mirror_coincides_with_rotation()` reports the involution case separately, because the
+      triangle and the 3-star both have order 6 and are structurally different.
+      The Codex's rule covers it ("detectors get seeded both ways before they run at scale — every
+      detector over-fired the first time, one by 100x"), except that this one UNDER-fired, which is
+      the harder direction to notice: a false negative presents as a clean pass.
+      NO POSITIVE CHIRALITY TEST EXISTS YET — every map probed has a non-empty mirror coset.
+
+  - id: MAP-SYMMETRY-BOUNDS-DRAWN-SYMMETRY
+    statement: >
+      For a figure encoded as a combinatorial map, the map's automorphism group BOUNDS the drawn
+      figure's symmetry rather than computing it: map symmetry >= drawn symmetry, with equality
+      exactly when the drawing realizes the combinatorial symmetry. A combinatorial map carries no
+      metric, so its automorphism group is the symmetry of the most symmetric realization.
+    tier: VERIFIED
+    evidence: ul-forge/crates/ul-core/src/map.rs
+    priority: 1
+    scope: >
+      Defined only on figures with FINITE symmetry. The Codex records `symmetry: "inf"` for Point
+      and Circle; a combinatorial map is discrete and no automorphism computation can return that,
+      so those figures are permanently outside the bridge. This is a scope condition, not a gap to
+      close. Also: the two witness figures were encoded FOR note 069 from the Codex's published
+      measurements; they are not corpus entries, and no figure yet exists authored in both
+      vocabularies.
+    notes: >
+      THE TWO CASES, both as tests. Equality: cross(Line,Line) — the "+", Codex orbit 91, measured
+      symmetry 4 and mirror_axes 4; the map gives Aut+ = 4 and Aut- = 4. Strict: close(Angle) —
+      Codex orbit 24, an isoceles triangle measured at symmetry 1 and mirror_axes 1; the map of a
+      3-cycle gives 6 and 6, because it cannot distinguish isoceles from equilateral.
+      CORRECTS WHAT I TOLD THE OWNER: "Aut(map) computes exactly those" — it does not. An inequality
+      with a stated equality condition is the better result, because it is checkable in both
+      directions and it explains the mismatches rather than being embarrassed by them.
+    scope_reviewed: [MAP-AUTOMORPHISMS-EXIST, CROSSING-IS-A-LEDGER-LINE]
+
+  - id: CROSSING-IS-A-LEDGER-LINE
+    statement: >
+      The combinatorial map formalism cannot represent ink that overlaps without joining: a map is
+      a graph embedding, so every place two edges meet is a vertex. The Codex's model admits the
+      other case — its "+" records components 2 and crossings 1, two strokes that cross. Bridging
+      the two therefore requires ruling on whether a crossing is a vertex, and either answer is a
+      convention on the load-bearing path, hence a ledger entry rather than an implementation
+      detail.
+    tier: ARGUED
+    evidence: research/notes/069-map-automorphisms/README.md
+    priority: 0
+    scope: >
+      Names the convention and its cost; does NOT settle it — the ruling is the owner's. Says
+      nothing about which answer is cheaper. Note 069 section 6 records the recommendation (answer
+      yes, a crossing is a vertex, and accept that `components` and `strokes` become unbridgeable
+      rather than merely mismatched) as a recommendation only.
+    notes: >
+      CONSEQUENCE FOR THE SHARED VOCABULARY: the two corpora were reported in note 068 as sharing
+      exactly one field, `components`. That was understated — the two `components` mean different
+      things, theirs counting ink strokes before crossings are resolved and the repo's counting
+      graph components after, so the vocabularies share ZERO fields with matching semantics.
+      WHY IT IS A LEDGER LINE AND NOT A DETAIL: note 049 found the recurring cap in every capped
+      notation to be hard-coding a discretization of a continuum without recording that you did.
+      A crossing is exactly such a choice. Under LEDGER-CLOSURE-IS-UNIVERSE-SCOPE an unforced
+      element on the load-bearing path is a free parameter and therefore a measured shortfall in
+      scope, so the bridge is not free and its cost belongs on the ledger before anything is built
+      on top of it.
+      ALSO CORRECTS MY OWN RECOMMENDATION: I told the owner that Aut(map) "isn't a design question
+      where getting it wrong bakes in a convention". The automorphism group is indeed not a choice.
+      WHICH FIGURES ENCODE AS WHICH MAPS IS. The convention sits one level below where I looked.
+    scope_reviewed: [LEDGER-CLOSURE-IS-UNIVERSE-SCOPE, UNIVERSALITY-IS-A-LEDGER, NOTATIONS-ARE-CAPPED-NOT-FAILED]

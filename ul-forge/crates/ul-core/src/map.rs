@@ -612,8 +612,399 @@ impl CombinatorialMap {
     }
 }
 
+
+// ─── Automorphisms of the map ─────────────────────────────────────────────────
+//
+// WHY THIS EXISTS (research/notes/069)
+//   The repo computes invariants of the formal object; the companion Cosmic Codex measures
+//   features of the drawn figure. The two corpora shared exactly ONE field (`components`).
+//   Aut(map) is the object that connects them: for a map, the orientation-preserving
+//   automorphisms are the combinatorial rotations and the orientation-reversing ones are the
+//   mirrors — which is precisely what the Codex records as `symmetry` and `mirror_axes`.
+//   Neither corpus had it (automorphism appeared twice in this repo and not at all there).
+//
+// WHAT IS AND IS NOT CAPTURED
+//   A combinatorial map is DISCRETE, so continuous symmetry is not representable. The Codex
+//   records `symmetry: "inf"` for Point and Circle; no Aut(map) computation can return that,
+//   and the bridge is therefore defined only on figures with finite symmetry. That is a scope
+//   condition on the bridge, not a defect in this code.
+//
+//   These are symmetries of the map on its surface. For a PLANAR drawing the realizable
+//   rotations are the subgroup that also fixes the outer face; see `planar_symmetry`.
+
+/// The automorphism group of a [`CombinatorialMap`], as explicit dart permutations.
+#[derive(Debug, Clone, PartialEq)]
+pub struct MapAutomorphisms {
+    /// Permutations `φ` with `φσ = σφ` and `φα = αφ` — orientation-preserving (rotations).
+    pub preserving: Vec<Vec<Dart>>,
+    /// Permutations `φ` with `φσ = σ⁻¹φ` and `φα = αφ` — orientation-reversing (mirrors).
+    pub reversing: Vec<Vec<Dart>>,
+    /// The search hit its step budget; the lists may be incomplete. Never silently ignored.
+    pub truncated: bool,
+}
+
+impl MapAutomorphisms {
+    /// `|Aut⁺|` — the number of combinatorial rotations.
+    pub fn rotation_order(&self) -> usize {
+        self.preserving.len()
+    }
+
+    /// `|Aut⁻|` — the number of orientation-reversing automorphisms.
+    pub fn mirror_count(&self) -> usize {
+        self.reversing.len()
+    }
+
+    /// A map with no orientation-reversing automorphism is chiral: its mirror image is not
+    /// reachable by any rotation. The Codex derives exactly one chiral mark (the Wave).
+    pub fn is_chiral(&self) -> bool {
+        self.reversing.is_empty()
+    }
+
+    /// `|Aut|` — the full group order, as the size of the UNION. When σ is an involution the
+    /// two lists coincide and the union is the shorter answer; summing would double it.
+    pub fn order(&self) -> usize {
+        let mut all: std::collections::BTreeSet<&Vec<Dart>> = self.preserving.iter().collect();
+        all.extend(self.reversing.iter());
+        all.len()
+    }
+
+    /// True when every orientation-reversing automorphism is also orientation-preserving —
+    /// i.e. σ is an involution, so the map cannot distinguish a mirror from a rotation.
+    pub fn mirror_coincides_with_rotation(&self) -> bool {
+        !self.preserving.is_empty() && self.preserving == self.reversing
+    }
+}
+
+/// Default propagation-step budget for the automorphism search.
+pub const AUT_DEFAULT_BUDGET: usize = 4_000_000;
+
+impl CombinatorialMap {
+    /// `σ⁻¹`, as a lookup table.
+    fn sigma_inverse(&self) -> Vec<Dart> {
+        let mut inv = vec![0; self.n_darts];
+        for d in 0..self.n_darts {
+            inv[self.sigma[d]] = d;
+        }
+        inv
+    }
+
+    /// Assign `φ(d) = image` and force every consequence of the σ and α constraints.
+    ///
+    /// Returns `false` on contradiction — either `φ` was already assigned elsewhere for some
+    /// dart, or the candidate image is already taken (which would break injectivity).
+    fn propagate_aut(
+        &self,
+        sigma_target: &[Dart],
+        phi: &mut [Dart],
+        used: &mut [bool],
+        d: Dart,
+        image: Dart,
+    ) -> bool {
+        let unassigned = usize::MAX;
+        let mut stack = vec![(d, image)];
+        while let Some((x, y)) = stack.pop() {
+            if phi[x] != unassigned {
+                if phi[x] != y {
+                    return false;
+                }
+                continue;
+            }
+            if used[y] {
+                return false;
+            }
+            phi[x] = y;
+            used[y] = true;
+            // σ: φ(σ(x)) = sigma_target(φ(x)).  sigma_target is σ for the preserving case
+            // and σ⁻¹ for the reversing case — the only difference between the two searches.
+            stack.push((self.sigma[x], sigma_target[y]));
+            // α: φ(α(x)) = α(φ(x)).  Edges pair the same way under either orientation.
+            stack.push((Self::alpha(x), Self::alpha(y)));
+        }
+        true
+    }
+
+    /// Backtracking enumeration. Darts are assigned in index order; each unassigned dart's
+    /// image is guessed and propagated, which fixes its whole connected component at once.
+    /// Disconnected maps are handled naturally — the next free dart opens the next component.
+    fn enumerate_aut(
+        &self,
+        sigma_target: &[Dart],
+        phi: &mut Vec<Dart>,
+        used: &mut Vec<bool>,
+        out: &mut Vec<Vec<Dart>>,
+        budget: &mut usize,
+    ) -> bool {
+        let unassigned = usize::MAX;
+        match (0..self.n_darts).find(|&d| phi[d] == unassigned) {
+            None => {
+                out.push(phi.clone());
+                true
+            }
+            Some(d0) => {
+                for candidate in 0..self.n_darts {
+                    if used[candidate] {
+                        continue;
+                    }
+                    if *budget == 0 {
+                        return false;
+                    }
+                    *budget -= 1;
+                    let saved_phi = phi.clone();
+                    let saved_used = used.clone();
+                    if self.propagate_aut(sigma_target, phi, used, d0, candidate)
+                        && !self.enumerate_aut(sigma_target, phi, used, out, budget)
+                    {
+                        return false;
+                    }
+                    phi.clone_from(&saved_phi);
+                    used.clone_from(&saved_used);
+                }
+                true
+            }
+        }
+    }
+
+    /// The automorphism group, with the default step budget.
+    pub fn automorphisms(&self) -> MapAutomorphisms {
+        self.automorphisms_within(AUT_DEFAULT_BUDGET)
+    }
+
+    /// The automorphism group, with an explicit step budget.
+    ///
+    /// An automorphism of a connected map is determined by the image of a single dart, so the
+    /// search is small in practice; the budget exists so a pathological input degrades
+    /// visibly (`truncated`) rather than hanging.
+    pub fn automorphisms_within(&self, budget: usize) -> MapAutomorphisms {
+        let unassigned = usize::MAX;
+        let sigma_fwd = self.sigma.clone();
+        let sigma_inv = self.sigma_inverse();
+        let mut truncated = false;
+        let mut groups: Vec<Vec<Vec<Dart>>> = Vec::with_capacity(2);
+
+        for target in [&sigma_fwd, &sigma_inv] {
+            let mut phi = vec![unassigned; self.n_darts];
+            let mut used = vec![false; self.n_darts];
+            let mut out = Vec::new();
+            let mut remaining = budget;
+            if !self.enumerate_aut(target, &mut phi, &mut used, &mut out, &mut remaining) {
+                truncated = true;
+            }
+            groups.push(out);
+        }
+
+        let reversing = groups.pop().unwrap_or_default();
+        let preserving = groups.pop().unwrap_or_default();
+
+        // NOT deduplicated, deliberately. Aut⁺ and Aut⁻ are COSETS: disjoint when σ ≠ σ⁻¹, and
+        // IDENTICAL when σ is an involution (every vertex of degree ≤ 2), because then the
+        // reversing condition is the preserving condition. Subtracting the overlap — which an
+        // earlier version of this function did, to avoid "double counting" — reported a single
+        // edge as having no mirror and therefore as CHIRAL, which is plainly false. Chirality is
+        // `Aut⁻` being EMPTY, and emptiness is destroyed by that subtraction exactly in the cases
+        // where the map is most obviously amphichiral. `order()` takes the union instead.
+        MapAutomorphisms {
+            preserving,
+            reversing,
+            truncated,
+        }
+    }
+
+    /// The symmetries realizable by a **planar drawing**: those automorphisms that also fix
+    /// the set of outer darts, since a rotation or reflection of the page cannot move the
+    /// unbounded region into a bounded one.
+    ///
+    /// Returns `(rotation_order, mirror_count)`.
+    pub fn planar_symmetry(&self, nesting: &Nesting) -> (usize, usize) {
+        let aut = self.automorphisms();
+
+        // The unbounded region: every dart on the outer face of a component that nothing
+        // contains. A rotation or reflection of the page maps that region to itself, so an
+        // automorphism realizable by a planar drawing must preserve this dart set.
+        let mut unbounded = std::collections::BTreeSet::new();
+        for &(outer, container) in &nesting.placements {
+            if container.is_none() {
+                let mut d = outer;
+                loop {
+                    unbounded.insert(d);
+                    d = self.phi(d);
+                    if d == outer {
+                        break;
+                    }
+                }
+            }
+        }
+
+        // With no nesting information there is no distinguished face, so nothing is excluded
+        // and the planar answer is the full combinatorial one. Said rather than silently done.
+        if unbounded.is_empty() {
+            return (aut.rotation_order(), aut.mirror_count());
+        }
+
+        let fixes_unbounded = |p: &Vec<Dart>| -> bool {
+            unbounded
+                .iter()
+                .all(|&d| p.get(d).is_some_and(|&img| unbounded.contains(&img)))
+        };
+        (
+            aut.preserving.iter().filter(|p| fixes_unbounded(p)).count(),
+            aut.reversing.iter().filter(|p| fixes_unbounded(p)).count(),
+        )
+    }
+}
+
 #[cfg(test)]
 mod tests {
+    // ─── Automorphisms ───────────────────────────────────────────────────────
+    //
+    // Hand-checkable cases. Each expected value is group theory, not a recording of what the
+    // code printed: the triangle and square maps have |Aut| = 6 and 8 (D3, D4), the 3-star has
+    // 3 rotations and 3 distinct mirrors, and two disjoint edges give 2·2·2 = 8.
+
+    fn triangle_map() -> CombinatorialMap {
+        CombinatorialMap::from_rotations(
+            vec![
+                ("v0".into(), vec![0, 5]),
+                ("v1".into(), vec![1, 2]),
+                ("v2".into(), vec![3, 4]),
+            ],
+            6,
+        )
+    }
+
+    fn star3_map() -> CombinatorialMap {
+        CombinatorialMap::from_rotations(
+            vec![
+                ("c".into(), vec![0, 2, 4]),
+                ("l1".into(), vec![1]),
+                ("l2".into(), vec![3]),
+                ("l3".into(), vec![5]),
+            ],
+            6,
+        )
+    }
+
+    /// The "+" of cross(Line,Line): a degree-4 centre with four free ends.
+    fn plus_map() -> CombinatorialMap {
+        CombinatorialMap::from_rotations(
+            vec![
+                ("c".into(), vec![0, 2, 4, 6]),
+                ("n".into(), vec![1]),
+                ("e".into(), vec![3]),
+                ("s".into(), vec![5]),
+                ("w".into(), vec![7])
+            ],
+            8,
+        )
+    }
+
+    #[test]
+    fn single_edge_is_not_chiral() {
+        // Regression: an earlier version subtracted the Aut⁺/Aut⁻ overlap and reported a bare
+        // edge as chiral. σ is the identity here, so the cosets coincide and the mirror set is
+        // the rotation set — emptiness, which is what chirality means, must survive that.
+        let m = CombinatorialMap::from_rotations(
+            vec![("a".into(), vec![0]), ("b".into(), vec![1])],
+            2,
+        );
+        let a = m.automorphisms();
+        assert_eq!(a.rotation_order(), 2);
+        assert_eq!(a.mirror_count(), 2);
+        assert!(!a.is_chiral());
+        assert!(a.mirror_coincides_with_rotation());
+        assert_eq!(a.order(), 2, "union, not sum");
+        assert!(!a.truncated);
+    }
+
+    #[test]
+    fn triangle_and_square_are_dihedral() {
+        let t = triangle_map().automorphisms();
+        assert_eq!(t.order(), 6, "D3");
+        assert!(t.mirror_coincides_with_rotation(), "all vertices degree 2, so σ is an involution");
+
+        let sq = CombinatorialMap::from_rotations(
+            vec![
+                ("v0".into(), vec![0, 7]),
+                ("v1".into(), vec![1, 2]),
+                ("v2".into(), vec![3, 4]),
+                ("v3".into(), vec![5, 6]),
+            ],
+            8,
+        );
+        assert_eq!(sq.automorphisms().order(), 8, "D4");
+    }
+
+    #[test]
+    fn star_has_disjoint_rotation_and_mirror_cosets() {
+        // The centre has degree 3, so σ is a 3-cycle and σ⁻¹ ≠ σ: the cosets are disjoint and
+        // |Aut| is their sum. Contrast the triangle, which also has order 6 by coincidence.
+        let a = star3_map().automorphisms();
+        assert_eq!(a.rotation_order(), 3);
+        assert_eq!(a.mirror_count(), 3);
+        assert!(!a.mirror_coincides_with_rotation());
+        assert_eq!(a.order(), 6, "D3, as disjoint cosets");
+    }
+
+    #[test]
+    fn disconnected_maps_are_handled() {
+        // Two disjoint edges: swap within each edge, and swap the edges. 2·2·2 = 8.
+        let m = CombinatorialMap::from_rotations(
+            vec![
+                ("a".into(), vec![0]),
+                ("b".into(), vec![1]),
+                ("c".into(), vec![2]),
+                ("d".into(), vec![3]),
+            ],
+            4,
+        );
+        assert_eq!(m.automorphisms().rotation_order(), 8);
+    }
+
+    // ─── The bridge to the Codex's measured features ─────────────────────────
+
+    #[test]
+    fn bridge_agrees_on_a_maximally_symmetric_figure() {
+        // cross(Line,Line) — the "+", Codex orbit 91, measured symmetry = 4, mirror_axes = 4.
+        let a = plus_map().automorphisms();
+        assert_eq!(a.rotation_order(), 4, "matches Codex `symmetry`");
+        assert_eq!(a.mirror_count(), 4, "matches Codex `mirror_axes`");
+        assert!(!a.mirror_coincides_with_rotation(), "degree-4 centre, so the cosets are disjoint");
+    }
+
+    #[test]
+    fn bridge_is_an_upper_bound_not_an_identity() {
+        // close(Angle) — Codex orbit 24, measured symmetry = 1, mirror_axes = 1: an ISOCELES
+        // triangle. The map of a 3-cycle has |Aut⁺| = 6 whatever the edge lengths, because a
+        // combinatorial map carries no metric. So map symmetry BOUNDS drawn symmetry; it does
+        // not compute it. Equality holds exactly when the drawing realizes the combinatorial
+        // symmetry, as the "+" above does.
+        let map_rotations = triangle_map().automorphisms().rotation_order();
+        let codex_measured_symmetry = 1;
+        assert!(
+            map_rotations >= codex_measured_symmetry,
+            "map symmetry must bound the drawn symmetry"
+        );
+        assert!(
+            map_rotations > codex_measured_symmetry,
+            "and here the bound is strict — the metric information is simply absent"
+        );
+    }
+
+    #[test]
+    fn planar_symmetry_respects_the_unbounded_region() {
+        // With no nesting there is no distinguished face, so the planar answer is the full one.
+        let t = triangle_map();
+        let full = t.automorphisms();
+        assert_eq!(
+            t.planar_symmetry(&Nesting::default()),
+            (full.rotation_order(), full.mirror_count())
+        );
+        // Naming an outer face can only remove automorphisms, never add them.
+        let (rot, mir) = t.planar_symmetry(&Nesting::all_top_level(vec![0]));
+        assert!(rot <= full.rotation_order() && mir <= full.mirror_count());
+        assert!(rot >= 1, "the identity always survives");
+    }
+
+
     use super::*;
 
     /// The public constructor, re-exported for the tests. There was a private duplicate here that

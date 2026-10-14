@@ -121,7 +121,7 @@ stayed near-empty, and a visible percentage is the cheapest defence against that
   carries no information about the object. Read `ul-forge/crates/ul-core/src/`, not a number in prose.
 - **Universality is not established.** `UL-IS-EMERGENT-UNIVERSAL` has its precondition unmet. Never
   write bare "fixed point" — the Erlangen and RG fixed points are different objects.
-- **<!--s:claims_verified-->28<!--/s--> of <!--s:claims_total-->164<!--/s--> claims are VERIFIED.** That is the accurate picture of a program at this stage, and it
+- **<!--s:claims_verified-->30<!--/s--> of <!--s:claims_total-->167<!--/s--> claims are VERIFIED.** That is the accurate picture of a program at this stage, and it
   is published rather than smoothed.
 
 ## How the record works
