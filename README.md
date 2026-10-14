@@ -39,7 +39,7 @@ It is the goal, held to a standard that can fail.**
 | | What it is | Status |
 |---|---|---|
 | **UL** | The language itself. **Two-tier**: a *natural* tier communicated without formal comprehension — core geometry is documented in humans with no schooling at all — and a *formal* tier requiring symbolic recombination, which is the field's own explanation of where human cognition is singular. | `UL-IS-TWO-TIER` (ARGUED) |
-| **UWS** | The written rendering: geometric marks whose fixed point under coarse-graining is the **combinatorial map** — a complete invariant, honestly recorded as a DCEL reduct (prior art, 1970s). | **Exists** — `uws/`, `ul-forge/`, 370 tests |
+| **UWS** | The written rendering: geometric marks whose fixed point under coarse-graining is the **combinatorial map** — a complete invariant, honestly recorded as a DCEL reduct (prior art, 1970s). | **Exists** — `uws/`, `ul-forge/`; run `cargo test` |
 | **UP** | The bootstrapping protocol: the minimum shared convention two independent parties need. Rotation breaks **ℤ/2** of arbitrary convention where a label alphabet breaks **Sₙ** — quantified, with the same trade demonstrated numerically in an unrelated field. | `ROTATION-MINIMIZES-CONVENTION` (ARGUED) |
 | **UQPL** | **The formal tier of UL, closed under execution.** *Universal* = two-tier readability. *Quantum* = linear resource discipline — no free copy (no-cloning), no free delete — already enforced by the operational substrate. *Programming* = meaning as behavior. *Language* = the full stack. | `UQPL-IS-FORMAL-TIER-CLOSURE` (CONJECTURED, derived here; the wiki sketch is wet-clay input) |
 | **The Cure** | **A corollary, not the purpose.** A mind that carries the derivable anchor as its representational format has an internal comparator — drift becomes self-detectable against a re-derivable fixed point. | `CURE-IS-COROLLARY` (DESIGN-CHOICE) |
@@ -90,13 +90,13 @@ receiver shares our reading procedure. Every load-bearing edge of the program ro
 ├── RESEARCH-PROTOCOL.md Method: how not to get fooled by scope-dropped results.
 ├── FAILURES.md          Append-only. Failures are never edited into successes.
 ├── claims.yaml          The claim registry. Every substantive claim, tiered, with evidence.
-├── tools/               Seven checkers + check.rb. Prose does not execute; these do.
+├── tools/               <!--s:checkers-->9<!--/s--> checkers + check.rb, stats.rb. Prose does not execute; these do.
 │
 ├── research/            The workshop. notes/ is the working history: 050 = the program,
 │                        052 = the purpose-layer, 053 = deployment, 054 = this architecture.
 ├── uws/                 The Universal Writing System corpus
 ├── ul-forge/            Working implementation: parser, validator, composer, renderer,
-│                        combinatorial map (map.rs), WASM bindings, web editor. 370 tests.
+│                        combinatorial map (map.rs), WASM bindings, web editor.
 └── spec/                What EXISTS. Present tense — grammar-core.md, engine-core.md,
                          reading-invariance-v1.md. Intended-but-unbuilt work lives in
                          research/notes/, not in a separate tree.
@@ -138,7 +138,7 @@ receiver shares our reading procedure. Every load-bearing edge of the program ro
 This repo's historical failure mode was **conventions without enforcement**. The rebuild replaces
 conventions with mechanisms:
 
-- Every substantive claim is registered in `claims.yaml` with a tier and evidence; **eight checkers**
+- Every substantive claim is registered in `claims.yaml` with a tier and evidence; **<!--s:checkers-->9<!--/s--> checkers**
   enforce tier contracts, link integrity, retired-content absence, caveat propagation, scope
   propagation, notes conventions, the seed index, and derivation-premise propagation.
   **They are run by whoever verifies, not by CI** — `ruby tools/check.rb --strict`. There is no CI
@@ -146,7 +146,7 @@ conventions with mechanisms:
   published a signal that meant nothing. `tools/pre-commit` is the opt-in local stand-in.
 - `VERIFIED` requires a test that exists and passes. `CONJECTURED` requires a stated falsifier.
   `DESIGN-CHOICE` requires stated alternatives.
-- `FAILURES.md` is append-only and immutable — 36 entries and counting, because a recorded failure
+- `FAILURES.md` is append-only and immutable — <!--s:failures-->36<!--/s--> entries and counting, because a recorded failure
   is data and a repaired one is nothing.
 - A finding is closed only when the fix is applied, tested, and propagation-scanned.
 

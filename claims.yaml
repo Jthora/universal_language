@@ -4369,3 +4369,47 @@ claims:
       it was never the credibility layer — which is why its two-month silent failure changed nothing
       about what is actually established here, and why removing it changes nothing either.
     scope_reviewed: [REPO-IS-A-UP-INSTANCE]
+
+  # ─── Counts are generated, never written (2026-10-14) ──────────────────────
+
+  - id: COUNTS-ARE-GENERATED
+    statement: >
+      No count is stated in prose in this repository unless it is generated from the thing it
+      counts. `tools/stats.rb` is the single source; stated counts carry a generated marker;
+      `tools/check-counts.rb` verifies every marker against the source AND forbids bare counts in
+      the phrasings that have gone stale here. A count that cannot be computed — the test count —
+      is not stated at all.
+    tier: VERIFIED
+    evidence: tools/check-counts.rb
+    priority: 1
+    scope: >
+      Covers live documents. `research/notes/**` is immutable and `FAILURES.md` is append-only, so
+      both record what was true when written and are deliberately exempt — a count inside a closed
+      note is a historical fact, not a stale assertion. `research/surveys/research-register.md` is
+      exempt for the same reason. Lexicon and gallery tables stating the size of a static table in
+      the same file are description, not derived counts, and are not flagged.
+    notes: >
+      OWNER FINDING 2026-10-14: "the way that claims and VERIFIED keeps getting listed is
+      embarrassing and exhausting... those numbers should be dynamic, and not stored in static files
+      that simply get stale within a few iterations of effort."
+      THE EVIDENCE WAS THIS SESSION. In one day the repo stated "354 tests" (370), "31 entries"
+      (which became 34, then 35, then 36), "seven checkers" (which became eight, then nine), and
+      three different claim totals — each hand-patched across four files and wrong again by the next
+      commit. The checker's first run found 18 hand-written counts still live, including llms.txt
+      asserting "22 of 149 claims are VERIFIED" when the true figure was 26 of 156, CONTRIBUTING.md
+      claiming 337 tests, and PRIMER.md claiming six checkers.
+      NOTE 060 HAD ALREADY FOUND THE FIX AND IT DID NOT EXECUTE. Its finding 2 reads: "corpus/
+      README.md was factually stale (four entries vs ten). Fixed by removing the count: prose
+      duplicating the tree goes stale, so the tree is now named authoritative." That was applied to
+      one file and never generalised, because nothing enforced it — note 048's rule exactly: rules
+      fire when they are the subject and fail as background.
+      THE SECOND HALF IS THE LOAD-BEARING HALF. Verifying markers alone would be useless, since
+      nothing stopped the next writer from typing "156 claims" beside one. The checker therefore
+      forbids bare counts in the risky phrasings, which is what prevents REINTRODUCTION. The repo's
+      failure mode was never wrong numbers; it was hand-written numbers.
+      NEGATIVE CONTROL RUN, per the habit note 060's cold reader introduced: a probe claim was added
+      to make the registry 157, the checker was confirmed to fire ("llms.txt: claims_total says 156,
+      stats says 157"), and the probe was removed. The harness was shown to fail before its pass was
+      trusted.
+      SELF-DEMONSTRATING: adding this checker changed the checker count from 8 to 9, and every
+      marker stating it updated itself on the next --fix. Nothing was hand-edited.

@@ -32,6 +32,34 @@ data, a repaired one is nothing.
 
 ---
 
+## Two rules that are enforced, not requested
+
+**Run the checkers before you commit.** There is no CI in this repository, by decision
+(`FAILURES.md` F-036: four workflows existed and not one ever executed, so they published a signal
+that meant nothing). Enforcement is reader-run:
+
+```bash
+ruby tools/check.rb --strict                            # every checker
+cargo test --manifest-path ul-forge/Cargo.toml          # the Rust suite
+ln -sf ../../tools/pre-commit .git/hooks/pre-commit     # optional: run both automatically
+```
+
+**Never write a count by hand.** Claim totals, tier counts, failure-log length, checker count,
+corpus and register sizes — all of these went stale within hours, every time, for the whole life of
+this project (`claims.yaml#COUNTS-ARE-GENERATED`). So:
+
+- `tools/stats.rb` is the only source. `ruby tools/stats.rb` prints every count.
+- A count in prose carries a generated marker: `<!--s:claims_total-->157<!--/s-->`.
+- `ruby tools/check-counts.rb --fix` regenerates them; the checker fails if any is stale **and**
+  fails if you write a bare count in a phrasing that has gone stale before.
+- **The test count is not stated anywhere.** It cannot be computed without building: a static scan
+  of `#[test]` attributes undercounts, because doc-tests and generated cases are invisible to it.
+  So documents say `cargo test` rather than a number. A count that cannot be computed must not be
+  asserted — including in this sentence, which is why no figures appear in it.
+
+If you need a number the generator does not produce, add it to `tools/stats.rb` rather than typing
+it into a document.
+
 ## Code of Conduct
 
 Be rigorous, in both directions. Overclaiming and premature dismissal are both motivated reasoning,
@@ -69,7 +97,7 @@ The Forge is an 8-crate Rust workspace in `ul-forge/`.
 
 ```bash
 cd ul-forge
-cargo test --workspace        # 337 tests, all must pass
+cargo test --workspace        # all must pass
 cargo clippy --workspace      # No warnings allowed
 ```
 

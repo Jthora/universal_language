@@ -12,7 +12,7 @@ This artifact does not ask to be trusted. Run its audit:
 
 ```
 ruby tools/check.rb --strict        # six mechanical checks over every registered claim
-cd ul-forge && cargo test           # the machine-checked results (370 tests)
+cd ul-forge && cargo test           # the machine-checked results
 ```
 
 **What passing demonstrates:** every substantive claim here is registered in `claims.yaml` with a

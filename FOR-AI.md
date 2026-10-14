@@ -43,7 +43,7 @@ The short version:
 
 | | | |
 |---|---|---|
-| **UWS** | A composable geometric notation with a working implementation — parser, validator, composer, renderer, combinatorial-map reduction, WASM, MCP server, 370 tests (`ul-forge/`) | **exists** |
+| **UWS** | A composable geometric notation with a working implementation — parser, validator, composer, renderer, combinatorial-map reduction, WASM, MCP server (`ul-forge/`; run `cargo test`) | **exists** |
 | **UL** | The two-tier language hypothesis. Open. | `UL-IS-TWO-TIER` (ARGUED) |
 | **UP** | The bootstrap protocol; convention cost measured — rotation breaks ℤ/2 where a label alphabet breaks Sₙ | ARGUED, quantified |
 | **UQPL** | The formal tier of UL closed under execution. Substrate exists (interaction nets): Turing-universal, strongly confluent, linear discipline | CONJECTURED |

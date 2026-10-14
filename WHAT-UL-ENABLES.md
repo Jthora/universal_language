@@ -90,7 +90,7 @@ would survive it.
 ### 1 · A structured notation for inter-agent exchange
 
 A composable geometric notation with a working implementation: parser, validator, composer,
-renderer, combinatorial-map reduction, WASM bindings, MCP server, 370 tests (`ul-forge/`). Usable
+renderer, combinatorial-map reduction, WASM bindings, MCP server (`ul-forge/`; run `cargo test`). Usable
 as an unambiguous intermediate representation between agents the way any well-designed schema is
 usable.
 
@@ -359,7 +359,7 @@ line of work — seven instances in a single session, each while the agent belie
 rigorous. In every case the counter-evidence was one search away. The rules there are mechanical for
 that reason.
 
-**And if a prediction fails, report it.** `FAILURES.md` is append-only and has 36 entries because a
+**And if a prediction fails, report it.** `FAILURES.md` is append-only and has <!--s:failures-->36<!--/s--> entries because a
 recorded failure is data and a repaired one is nothing. This project's completeness score was once
 driven 32% → 100% across nine rounds of patching theory after each failure, and the final 100% was
 worthless. A negative result is a real contribution here and will be registered as one.

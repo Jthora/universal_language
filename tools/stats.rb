@@ -1,0 +1,61 @@
+#!/usr/bin/env ruby
+# encoding: utf-8
+# stats.rb — the single source of truth for every count this repository states.
+#
+# WHY THIS EXISTS (claims.yaml#COUNTS-ARE-GENERATED)
+#   Derived quantities were stored in prose, so they went stale within hours of any work. In one
+#   session alone: "354 tests" (was 370), "31 entries" (became 36), "seven checkers" (became eight),
+#   and three different claim totals — each hand-patched across four files, each wrong again by the
+#   next commit. Note 060 had already found the fix for corpus/README.md ("prose duplicating the
+#   tree goes stale, so the tree is now named authoritative") and nothing executed that lesson
+#   anywhere else.
+#
+#   A count belongs in exactly one place: computed from the thing it counts.
+#
+# USAGE
+#   ruby tools/stats.rb           # human-readable
+#   ruby tools/stats.rb --json    # machine-readable (consumed by tools/check-counts.rb)
+#
+# WHAT IS DELIBERATELY ABSENT
+#   The test count. 370 tests pass, but a static scan finds 360 `#[test]` attributes — doc-tests and
+#   generated cases make up the difference, so the true number cannot be known without building.
+#   Rather than publish a number that is wrong by ten, no document states a test count: they say
+#   `cargo test`. A count that cannot be computed must not be asserted.
+
+require 'yaml'
+require 'json'
+
+ROOT = File.expand_path('..', __dir__)
+Dir.chdir(ROOT)
+
+claims = YAML.load_file('claims.yaml')['claims']
+tiers  = claims.group_by { |c| c['tier'] }.transform_values(&:size)
+
+register_path = 'uws/register/derivation-register.json'
+register = File.exist?(register_path) ? JSON.parse(File.read(register_path, encoding: 'UTF-8')) : nil
+
+stats = {
+  'claims_total'     => claims.size,
+  'claims_verified'  => tiers.fetch('VERIFIED', 0),
+  'claims_argued'    => tiers.fetch('ARGUED', 0),
+  'claims_conjectured' => tiers.fetch('CONJECTURED', 0),
+  'claims_design'    => tiers.fetch('DESIGN-CHOICE', 0),
+  'claims_retired'   => tiers.fetch('RETIRED', 0),
+  'claims_priority0' => claims.count { |c| c['priority'].to_s == '0' },
+  'failures'         => File.read('FAILURES.md', encoding: 'UTF-8').scan(/^## F-\d+ /).size,
+  'notes'            => Dir.glob('research/notes/[0-9]*/').size,
+  'checkers'         => Dir.glob('tools/check-*.rb').size,
+  'corpus_entries'   => Dir.glob('corpus/entries/*.json').size,
+  'register_entries' => register ? register['claims'].size : 0,
+}
+
+if ARGV.include?('--json')
+  puts JSON.pretty_generate(stats)
+else
+  w = stats.keys.map(&:length).max
+  stats.each { |k, v| puts format("%-#{w}s  %d", k, v) }
+  puts
+  puts "tiers: " + tiers.sort_by { |_, n| -n }.map { |t, n| "#{t}=#{n}" }.join('  ')
+  puts
+  puts 'No test count here, on purpose — see the header. Run `cargo test` instead.'
+end

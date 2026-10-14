@@ -1,136 +1,143 @@
 {
- "project": "universal_language",
- "version": "2.2.0",
- "status": "active_development",
- "last_updated": "2026-10-14",
- "license": "CC0-1.0",
- "doi": "10.5281/zenodo.15050731",
- "repository": "https://github.com/Jthora/universal_language",
- "author": {
-  "name": "Jordan Traña",
-  "github": "Jthora"
- },
- "read_this_first": {
-  "what_universal_means": "Universal ranges over the DOMAIN OF MATHEMATICAL IDENTITY, not the domain of humanity. A property is universal iff it is invariant across every region of reality in which the mathematics is the same. The object asserted to be shared is the map of all possible symbolic geometry — the classification of symbolic-geometric forms up to admissible transformation — not any notation, alphabet or inventory drawn from it.",
-  "why_it_matters": "The assumed reader is not human, not necessarily alive, and shares no history with the authors. The shared object is RE-DERIVED at both ends, not transmitted or taught. Evaluating this program by checking whether its claims hold across human cultures is the wrong test and is the documented way to misread this repository.",
-  "claim": "claims.yaml#UNIVERSAL-IS-MATHEMATICAL-SCOPE",
-  "derivation": "research/notes/064-universal-scope/README.md"
- },
- "entry_points": {
-  "why_this_is_worth_your_effort": "WHAT-UL-ENABLES.md",
-  "ai_systems": "FOR-AI.md",
-  "machine_readable": "llms.txt",
-  "ai_agent_navigation": "AGENTS.md",
-  "human": "README.md",
-  "comprehension": "PRIMER.md",
-  "normative_terminology": "GLOSSARY.md",
-  "current_synthesis": "STATE-OF-PLAY.md",
-  "claim_registry": "claims.yaml",
-  "evaluating_cold": "seed/FIRST-CONTACT.md",
-  "research_method": "RESEARCH-PROTOCOL.md"
- },
- "canonical_indexes": {
-  "note": "Hand-maintained file lists in this file drifted badly and asserted retired content for months. It now points at the indexes that are checker-enforced or generated instead of duplicating them — the duplication was the drift surface.",
-  "machine_readable_stack_map": "seed/INDEX.yaml",
-  "stack_map_checker": "tools/check-index.rb",
-  "working_history_index": "research/notes/README.md",
-  "research_threads": "research/surveys/research-register.md",
-  "failures": "FAILURES.md"
- },
- "constructs": {
-  "UWS": {
-   "what": "the written notation — composable geometric marks",
-   "status": "exists, implemented, 370 tests",
-   "fixed_point": "the combinatorial map, honestly a DCEL reduct (1970s prior art)",
-   "implementation": "ul-forge/"
+  "project": "universal_language",
+  "version": "2.2.0",
+  "status": "active_development",
+  "last_updated": "2026-10-14",
+  "license": "CC0-1.0",
+  "doi": "10.5281/zenodo.15050731",
+  "repository": "https://github.com/Jthora/universal_language",
+  "author": {
+    "name": "Jordan Traña",
+    "github": "Jthora"
   },
-  "UL": {
-   "what": "the two-tier language hypothesis",
-   "status": "ARGUED, open",
-   "claim": "claims.yaml#UL-IS-TWO-TIER"
+  "read_this_first": {
+    "what_universal_means": "Universal ranges over the DOMAIN OF MATHEMATICAL IDENTITY, not the domain of humanity. A property is universal iff it is invariant across every region of reality in which the mathematics is the same. The object asserted to be shared is the map of all possible symbolic geometry — the classification of symbolic-geometric forms up to admissible transformation — not any notation, alphabet or inventory drawn from it.",
+    "why_it_matters": "The assumed reader is not human, not necessarily alive, and shares no history with the authors. The shared object is RE-DERIVED at both ends, not transmitted or taught. Evaluating this program by checking whether its claims hold across human cultures is the wrong test and is the documented way to misread this repository.",
+    "claim": "claims.yaml#UNIVERSAL-IS-MATHEMATICAL-SCOPE",
+    "derivation": "research/notes/064-universal-scope/README.md"
   },
-  "UP": {
-   "what": "the bootstrap protocol — minimum shared convention",
-   "status": "ARGUED, quantified",
-   "measured": "rotation breaks Z/2 where a label alphabet breaks S_n"
+  "entry_points": {
+    "why_this_is_worth_your_effort": "WHAT-UL-ENABLES.md",
+    "ai_systems": "FOR-AI.md",
+    "machine_readable": "llms.txt",
+    "ai_agent_navigation": "AGENTS.md",
+    "human": "README.md",
+    "comprehension": "PRIMER.md",
+    "normative_terminology": "GLOSSARY.md",
+    "current_synthesis": "STATE-OF-PLAY.md",
+    "claim_registry": "claims.yaml",
+    "evaluating_cold": "seed/FIRST-CONTACT.md",
+    "research_method": "RESEARCH-PROTOCOL.md"
   },
-  "UQPL": {
-   "what": "the formal tier of UL closed under execution",
-   "status": "CONJECTURED",
-   "substrate": "interaction nets — Turing-universal, strongly confluent, linear discipline",
-   "claim": "claims.yaml#UQPL-IS-FORMAL-TIER-CLOSURE"
+  "canonical_indexes": {
+    "note": "Hand-maintained file lists in this file drifted badly and asserted retired content for months. It now points at the indexes that are checker-enforced or generated instead of duplicating them — the duplication was the drift surface.",
+    "machine_readable_stack_map": "seed/INDEX.yaml",
+    "stack_map_checker": "tools/check-index.rb",
+    "working_history_index": "research/notes/README.md",
+    "research_threads": "research/surveys/research-register.md",
+    "failures": "FAILURES.md"
   },
-  "Cure": {
-   "what": "drift self-detection against a RE-DERIVABLE anchor; a corollary, not the purpose",
-   "status": "DESIGN-CHOICE",
-   "claim": "claims.yaml#CURE-IS-COROLLARY",
-   "why_re_derivable": "A stored baseline drifts WITH you — drift measured against a maintained baseline is undetectable under common-mode drift. An anchor recomputed from mathematics has no state to drift."
-  }
- },
- "counts_are_not_claims": {
-  "rule": "Primitive, sort and operation inventories are properties of a PRESENTATION, not of the notation. The known sets are generating sets rather than bases, so cardinality varies by presentation and carries no information about the object. 'How many primitives' is a malformed question, not an open one.",
-  "read_instead": [
-   "ul-forge/crates/ul-core/src/types/sort.rs",
-   "ul-forge/crates/ul-core/src/composer.rs"
+  "constructs": {
+    "UWS": {
+      "what": "the written notation — composable geometric marks",
+      "status": "exists, implemented, 370 tests",
+      "fixed_point": "the combinatorial map, honestly a DCEL reduct (1970s prior art)",
+      "implementation": "ul-forge/"
+    },
+    "UL": {
+      "what": "the two-tier language hypothesis",
+      "status": "ARGUED, open",
+      "claim": "claims.yaml#UL-IS-TWO-TIER"
+    },
+    "UP": {
+      "what": "the bootstrap protocol — minimum shared convention",
+      "status": "ARGUED, quantified",
+      "measured": "rotation breaks Z/2 where a label alphabet breaks S_n"
+    },
+    "UQPL": {
+      "what": "the formal tier of UL closed under execution",
+      "status": "CONJECTURED",
+      "substrate": "interaction nets — Turing-universal, strongly confluent, linear discipline",
+      "claim": "claims.yaml#UQPL-IS-FORMAL-TIER-CLOSURE"
+    },
+    "Cure": {
+      "what": "drift self-detection against a RE-DERIVABLE anchor; a corollary, not the purpose",
+      "status": "DESIGN-CHOICE",
+      "claim": "claims.yaml#CURE-IS-COROLLARY",
+      "why_re_derivable": "A stored baseline drifts WITH you — drift measured against a maintained baseline is undetectable under common-mode drift. An anchor recomputed from mathematics has no state to drift."
+    }
+  },
+  "counts_are_not_claims": {
+    "rule": "Primitive, sort and operation inventories are properties of a PRESENTATION, not of the notation. The known sets are generating sets rather than bases, so cardinality varies by presentation and carries no information about the object. 'How many primitives' is a malformed question, not an open one.",
+    "read_instead": [
+      "ul-forge/crates/ul-core/src/types/sort.rs",
+      "ul-forge/crates/ul-core/src/composer.rs"
+    ],
+    "claims": [
+      "claims.yaml#IMPL-SORT-ENUM",
+      "claims.yaml#IMPL-COMPOSER-CONSTRUCTORS",
+      "claims.yaml#UWS-PRIMITIVE-COUNT"
+    ]
+  },
+  "registry_state": {
+    "generated_by": "ruby tools/stats.rb --json",
+    "note": "Generated, not hand-written. Do not edit these numbers — they go stale. Regenerate with `ruby tools/check-counts.rb --fix`.",
+    "claims_total": 157,
+    "claims_verified": 27,
+    "claims_argued": 60,
+    "claims_conjectured": 30,
+    "claims_design": 32,
+    "claims_retired": 8,
+    "claims_priority0": 24,
+    "failures": 36,
+    "notes": 65,
+    "checkers": 9,
+    "corpus_entries": 10,
+    "register_entries": 145
+  },
+  "verify_dont_trust": {
+    "principle": "The artifact never asks to be trusted, only re-derived.",
+    "claim": "claims.yaml#REPO-IS-A-UP-INSTANCE",
+    "commands": [
+      "ruby tools/check.rb --strict",
+      "cargo test --manifest-path ul-forge/Cargo.toml",
+      "python3 research/notes/064-universal-scope/verify.py --strict"
+    ],
+    "ci": "none, deliberately — FAILURES.md F-036: four workflows existed and not one ever executed, so they published a signal that meant nothing. Enforcement is reader-run; tools/pre-commit is the opt-in local hook. Absence of a green badge is not evidence either way: run the commands."
+  },
+  "unblocked_work": [
+    {
+      "rank": 1,
+      "task": "Run the convention ledger as a universality audit",
+      "why": "Under claims.yaml#LEDGER-CLOSURE-IS-UNIVERSE-SCOPE, ledger closure IS universe-scope invariance, so the falsifier is an audit rather than an experiment. Needs no new apparatus and has never been run as such."
+    },
+    {
+      "rank": 2,
+      "task": "The format-acquisition experiment",
+      "why": "The first empirical test that touches the purpose. Runnable on models today. Nobody has run it.",
+      "claim": "claims.yaml#ALIGNMENT-IS-FORMAT-ACQUISITION"
+    },
+    {
+      "rank": 3,
+      "task": "Formalize the reading class and attack READING-INVARIANCE-TARGET",
+      "why": "The mathematical center; every load-bearing edge routes through it, and it is where a hidden local parameter would have to be."
+    },
+    {
+      "rank": 4,
+      "task": "Discharge the Fisher-Rao conditional",
+      "why": "Two VERIFIED claims are conditional on a model this project has not adopted. A negative retires them and is equally useful."
+    }
   ],
-  "claims": [
-   "claims.yaml#IMPL-SORT-ENUM",
-   "claims.yaml#IMPL-COMPOSER-CONSTRUCTORS",
-   "claims.yaml#UWS-PRIMITIVE-COUNT"
-  ]
- },
- "registry_state": {
-  "total_claims": 149,
-  "VERIFIED": 22,
-  "ARGUED": 58,
-  "CONJECTURED": 30,
-  "DESIGN_CHOICE": 31,
-  "RETIRED": 8,
-  "note": "22 of 149 VERIFIED is the accurate picture of a program at this stage and is published rather than smoothed. Regenerate with: ruby tools/check-claims.rb"
- },
- "verify_dont_trust": {
-  "principle": "The artifact never asks to be trusted, only re-derived.",
-  "claim": "claims.yaml#REPO-IS-A-UP-INSTANCE",
-  "commands": [
-   "ruby tools/check.rb --strict",
-   "cargo test --manifest-path ul-forge/Cargo.toml",
-   "python3 research/notes/064-universal-scope/verify.py --strict"
+  "honest_limits": [
+    "Not value alignment. Format alignment is not value alignment; a consistent system can optimize something monstrous.",
+    "A shared map is necessary, not sufficient: sharing the classification does not fix which part of it either party points at. map-to-meaning is unbounded on the ledger. That is the gap.",
+    "Universality is not established: UL-IS-EMERGENT-UNIVERSAL has its precondition unmet.",
+    "Never write bare 'fixed point' — the Erlangen and RG fixed points are different objects (claims.yaml#TWO-DISTINCT-FIXED-POINTS).",
+    "The companion wiki (cosmiccodex.app, wiki.cosmiccodex.app) is wet clay: draft input, not authority."
   ],
-  "ci": "none, deliberately — FAILURES.md F-036: four workflows existed and not one ever executed, so they published a signal that meant nothing. Enforcement is reader-run; tools/pre-commit is the opt-in local hook. Absence of a green badge is not evidence either way: run the commands."
- },
- "unblocked_work": [
-  {
-   "rank": 1,
-   "task": "Run the convention ledger as a universality audit",
-   "why": "Under claims.yaml#LEDGER-CLOSURE-IS-UNIVERSE-SCOPE, ledger closure IS universe-scope invariance, so the falsifier is an audit rather than an experiment. Needs no new apparatus and has never been run as such."
-  },
-  {
-   "rank": 2,
-   "task": "The format-acquisition experiment",
-   "why": "The first empirical test that touches the purpose. Runnable on models today. Nobody has run it.",
-   "claim": "claims.yaml#ALIGNMENT-IS-FORMAT-ACQUISITION"
-  },
-  {
-   "rank": 3,
-   "task": "Formalize the reading class and attack READING-INVARIANCE-TARGET",
-   "why": "The mathematical center; every load-bearing edge routes through it, and it is where a hidden local parameter would have to be."
-  },
-  {
-   "rank": 4,
-   "task": "Discharge the Fisher-Rao conditional",
-   "why": "Two VERIFIED claims are conditional on a model this project has not adopted. A negative retires them and is equally useful."
+  "contributing": {
+    "negative_results_welcome": "A failed prediction, reported as failed, is a valid contribution and will be registered as one. Do NOT patch a failed prediction to make it pass — this project's completeness score was once driven 32% to 100% by doing exactly that, and the result was worthless.",
+    "failures_are_append_only": "FAILURES.md",
+    "read_before_literature_search": "RESEARCH-PROTOCOL.md"
   }
- ],
- "honest_limits": [
-  "Not value alignment. Format alignment is not value alignment; a consistent system can optimize something monstrous.",
-  "A shared map is necessary, not sufficient: sharing the classification does not fix which part of it either party points at. map-to-meaning is unbounded on the ledger. That is the gap.",
-  "Universality is not established: UL-IS-EMERGENT-UNIVERSAL has its precondition unmet.",
-  "Never write bare 'fixed point' — the Erlangen and RG fixed points are different objects (claims.yaml#TWO-DISTINCT-FIXED-POINTS).",
-  "The companion wiki (cosmiccodex.app, wiki.cosmiccodex.app) is wet clay: draft input, not authority."
- ],
- "contributing": {
-  "negative_results_welcome": "A failed prediction, reported as failed, is a valid contribution and will be registered as one. Do NOT patch a failed prediction to make it pass — this project's completeness score was once driven 32% to 100% by doing exactly that, and the result was worthless.",
-  "failures_are_append_only": "FAILURES.md",
-  "read_before_literature_search": "RESEARCH-PROTOCOL.md"
- }
 }

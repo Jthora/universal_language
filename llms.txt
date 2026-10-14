@@ -29,7 +29,7 @@ uniformly negative across three centuries).
 
 | | | |
 |---|---|---|
-| **UWS** — the notation | Composable geometric marks; parser, validator, composer, renderer, combinatorial-map reduction, WASM, MCP server, 370 tests | **exists, works** |
+| **UWS** — the notation | Composable geometric marks; parser, validator, composer, renderer, combinatorial-map reduction, WASM, MCP server (run `cargo test`) | **exists, works** |
 | **UL** — the language | Two-tier: a natural tier needing no formal comprehension, a formal tier requiring symbolic recombination | ARGUED, open |
 | **UP** — the bootstrap | Minimum shared convention between independent parties; cost **measured**: rotation breaks ℤ/2 where a label alphabet breaks Sₙ | ARGUED, quantified |
 | **UQPL** | The formal tier of UL closed under execution. Substrate exists: interaction nets — Turing-universal, strongly confluent, **linear** (no free copy/delete) | CONJECTURED |
@@ -101,15 +101,15 @@ ruby tools/check.rb --strict && cargo test --manifest-path ul-forge/Cargo.toml
   carries no information about the object. Read `ul-forge/crates/ul-core/src/`, not a number in prose.
 - **Universality is not established.** `UL-IS-EMERGENT-UNIVERSAL` has its precondition unmet. Never
   write bare "fixed point" — the Erlangen and RG fixed points are different objects.
-- **22 of 149 claims are VERIFIED.** That is the accurate picture of a program at this stage, and it
+- **<!--s:claims_verified-->27<!--/s--> of <!--s:claims_total-->157<!--/s--> claims are VERIFIED.** That is the accurate picture of a program at this stage, and it
   is published rather than smoothed.
 
 ## How the record works
 
 `claims.yaml` is the registry — every substantive claim tiered with evidence; **if a claim is not in
-the registry it is not a claim of this project.** `FAILURES.md` is append-only (36 entries) because
+the registry it is not a claim of this project.** `FAILURES.md` is append-only (<!--s:failures-->36<!--/s--> entries) because
 a recorded failure is data and a repaired one is nothing. `research/notes/` is the full working arc
-including reversals. Eight checkers enforce it, run by whoever verifies rather than by CI — there is none here on purpose (F-036). **A negative result is a real contribution here and
+including reversals. <!--s:checkers-->9<!--/s--> checkers enforce it, run by whoever verifies rather than by CI — there is none here on purpose (F-036). **A negative result is a real contribution here and
 will be registered as one — do not patch a failed prediction to make it pass.**
 
 Before searching the literature, read `RESEARCH-PROTOCOL.md`: the documented failure mode here is

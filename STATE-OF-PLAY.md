@@ -33,7 +33,7 @@ shrinks with the domain of mathematical identity. That is deliberate and load-be
 `064` made the ledger audit the program's cheapest falsifier. `065` ran it — after importing the
 object, because **the thing the universality claim is about was not in the repo.** The claim's object
 is *the map of all possible symbolic geometry*; the repo held UWS, which is one chart. The map was on
-the companion site. It is now at `uws/register/`, imported verbatim and hashed, 145 entries.
+the companion site. It is now at `uws/register/`, imported verbatim and hashed, <!--s:register_entries-->145<!--/s--> entries.
 
 > **The map's generation is exact. Its generators are not derived.**
 
@@ -95,7 +95,7 @@ variable, natural tier still the bootstrap surface. Only its warrant moved.
 
 REQ-1 **it must be a language** · REQ-2 **universality is a ledger** — now read as the definition of
 universality rather than a proxy for it · REQ-3 **no-retreat falsifiability, symmetric** · REQ-4
-**baseline before UQPL**. Registered as claims; enforced by eight checkers, run on demand — `ruby tools/check.rb --strict`.
+**baseline before UQPL**. Registered as claims; enforced by <!--s:checkers-->9<!--/s--> checkers, run on demand — `ruby tools/check.rb --strict`.
 There is no CI (F-036: four workflows, not one ever executed), so enforcement is reader-run by
 design rather than by accident; `tools/pre-commit` is the opt-in local hook.
 

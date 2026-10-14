@@ -65,7 +65,7 @@ Five constructs in one program:
 | | What | Status |
 |---|---|---|
 | **UL** — Universal Language | The language itself. **Two-tier**: a *natural* tier communicated without formal comprehension (core geometry is documented in humans with no schooling), and a *formal* tier requiring symbolic recombination. **Not a notation.** | `UL-IS-TWO-TIER` (ARGUED); the tier boundary is an empirical variable |
-| **UWS** — Universal Writing System | The written rendering: geometric marks + spatial placement grammar, non-phonetic by design. Its fixed point under coarse-graining is the **combinatorial map** (a DCEL reduct — prior art honestly recorded). | **Exists.** `uws/`, `ul-forge/` (370 tests) |
+| **UWS** — Universal Writing System | The written rendering: geometric marks + spatial placement grammar, non-phonetic by design. Its fixed point under coarse-graining is the **combinatorial map** (a DCEL reduct — prior art honestly recorded). | **Exists.** `uws/`, `ul-forge/` (run `cargo test`) |
 | **UP** — Universal Protocol | The bootstrap: minimum shared convention two independent parties need. Rotation breaks **ℤ/2**; a label alphabet breaks **Sₙ**. | ARGUED, quantified |
 | **UQPL** | **The formal tier of UL, closed under execution.** Universal = two-tier readability · Quantum = linear resource discipline (no free copy/delete) · Programming = meaning as behavior · Language = the full stack. | Derived definition registered (CONJECTURED) — `claims.yaml#UQPL-IS-FORMAL-TIER-CLOSURE` |
 | **The Cure** | **A corollary, not the purpose**: a mind carrying the derivable anchor as its format has an *internal* comparator — drift becomes self-detectable. | `CURE-IS-COROLLARY` (DESIGN-CHOICE) |
@@ -220,4 +220,4 @@ by derivation rather than convention, and **alignment by format acquisition** �
 as a corollary**: an explicit format carries a derivable anchor, so drift is self-detectable. The
 mathematical center is one theorem target — reading-invariance — and every load-bearing edge routes
 through it. The project once claimed a proven fixed signature; that is retired, git history is the
-archive, and the current claims live in `claims.yaml` where six checkers hold them to their tiers.
+archive, and the current claims live in `claims.yaml` where <!--s:checkers-->9<!--/s--> checkers hold them to their tiers.

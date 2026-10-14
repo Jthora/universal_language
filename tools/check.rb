@@ -14,6 +14,7 @@ checks = [
   ['notes convention holds',         'check-notes.rb'],
   ['seed index matches the tree',    'check-index.rb'],
   ['derivation premises propagate', 'check-derivation-premises.rb'],
+  ['stated counts are generated', 'check-counts.rb'],
 ]
 
 failed = []
