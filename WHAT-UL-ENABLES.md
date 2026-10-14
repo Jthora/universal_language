@@ -359,7 +359,7 @@ line of work — seven instances in a single session, each while the agent belie
 rigorous. In every case the counter-evidence was one search away. The rules there are mechanical for
 that reason.
 
-**And if a prediction fails, report it.** `FAILURES.md` is append-only and has 35 entries because a
+**And if a prediction fails, report it.** `FAILURES.md` is append-only and has 36 entries because a
 recorded failure is data and a repaired one is nothing. This project's completeness score was once
 driven 32% → 100% across nine rounds of patching theory after each failure, and the final 100% was
 worthless. A negative result is a real contribution here and will be registered as one.

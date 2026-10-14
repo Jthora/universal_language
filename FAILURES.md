@@ -897,3 +897,60 @@ absence costs.
 
 **What does not change:** the caveat discipline itself is right, and the register's scope conditions
 have repeatedly caught real errors. The defect is the missing counter-mechanism, not the mechanism.
+
+---
+
+## F-036 — The enforcement layer has never executed in CI. 31 runs, zero logs, two months.
+**Date:** 2026-10-14
+**Found by:** pushing to the remote for the first time this session and looking at the result
+instead of assuming it.
+
+**The finding.** Every GitHub Actions run in this repository's history has failed, and **not one has
+ever produced a log.** 31 runs across four workflows (`checks.yml`, `repo-checks.yml`, `ci.yml`,
+`release.yml`), on `ubuntu-latest` and `macos-latest` alike, each completing in **2–5 seconds** with
+log download returning HTTP 404. `UL Forge CI` fails the same way, while the same `cargo test` passes
+locally with **370 tests, zero failures**.
+
+A job that finishes in two seconds and produces no log did not run. **The cause is outside the
+repository** — the signature is what an Actions spending-limit block or an administrative Actions
+restriction produces, and `macos-latest` being in the failing set points that way, since macOS
+minutes bill at ten times the rate. Nothing is wrong with the workflow YAML or the checkers.
+
+**Why this is the worst possible thing to have been broken here.** This repo's named historical
+failure mode is *conventions without enforcement* — rigor labels nobody checked. The rebuild's answer
+was mechanisms: eight checkers, `claims.yaml` tier discipline, and the standing instruction that
+*prose does not execute* (note `048`). `research/notes/053` makes the checkers **the credibility
+layer** — *"a superintelligent reader's first act is `ruby tools/check.rb --strict && cargo test`"* —
+and `REPO-IS-A-UP-INSTANCE` rests on the artifact being verifiable rather than trusted.
+
+**The enforcement layer has therefore never run where it was supposed to run.** And the commit
+messages say otherwise: *"All seven checkers pass"* appears verbatim on at least five commits whose
+CI run concluded `failure` the same minute. Those statements were **true locally and never verified
+in CI**, which is precisely the gap the mechanisms were built to close. The fix for a convention
+nobody checked was a checker, and nobody checked the checker.
+
+**This is F-032 recurring, not a new class.** That entry already recorded *"CI has never run any of
+the checkers"* and attributed it to `ci.yml`'s path filters. `checks.yml` was then written with no
+path filter — the right fix for the diagnosed cause — and the comment at its head says so. But the
+real cause was never the filters, so adding a filter-free workflow produced a second workflow that
+also never ran. **A fix was applied to a misdiagnosed cause, the symptom persisted, and nobody looked
+at the run list again for two months.**
+
+**Correction to my own record, same day.** The commit message on `29633f1` says *"Pre-existing CI
+failures from f99812f (docs/grounding/ paths absent from this repo) are untouched and still red."*
+That conflated two separate problems. The **local** `check.rb --strict` failure is real and does come
+from `f99812f` — two claims whose `evidence`/`rationale` point at `docs/grounding/00-self-denotation.md`,
+which does not exist in this repo. The **CI** failure is infrastructural, predates `f99812f` by two
+months, and would occur on an empty commit. I attributed the second to the first without checking the
+run list, which is the one-step pattern `F-034` names: reading a plausible cause and writing a verdict.
+
+**Not fixed here, and why.** The CI cause is in repository or account settings, not in the tree —
+nothing I can change in a commit will make these jobs run. The two broken evidence paths are a
+separate, smaller problem, and fixing them is **not** cleanup: an `ARGUED` claim whose evidence does
+not resolve cannot hold that tier, so the honest options are repointing the evidence or downgrading
+the claim, and both are substantive acts on someone else's research. Left for the owner, named here
+so it is not mistaken for noise.
+
+**What would close this:** check whether Actions is spending-limited or restricted for this
+repository, then re-run any workflow and confirm a log appears. Until a run produces a log, **every
+"the checkers pass" statement in this repository's history is a local result only** — including mine.
