@@ -501,7 +501,13 @@ fn transform_force_annotation(
         AstForceKind::Declare => PerformativeForce::Declare,
     };
 
-    let root = Node::enclosure(&root_id, EnclosureShape::Circle).with_force(perf_force);
+    // Sort::Assertion is what makes this an assertion rather than a decorated entity. Omitting it
+    // (the original bug, F-038) meant NO string the parser accepted ever produced an Assertion
+    // root, so `negate`, `conjoin`, `disjoin`, `embed`, `bind` and `modify_assertion` were
+    // unreachable from text and REQ-1's "expressive adequacy" was false in code.
+    let root = Node::enclosure(&root_id, EnclosureShape::Circle)
+        .with_force(perf_force)
+        .with_sort(Sort::Assertion);
     nodes.push(root);
 
     // Transform content as children

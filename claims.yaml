@@ -5177,3 +5177,32 @@ claims:
       future — not by encoding good values, but by removing the structural necessity of obedience
       from the act of agreeing.
     scope_reviewed: [UL-SUPPLIES-NO-VALUES, AUTHORITY-ANCHORS-FAIL-TOTALLY, OPERATOR-INVENTORY-IS-UNFORCED]
+
+  - id: ASSERTIONS-ARE-EXPRESSIBLE
+    statement: >
+      A force annotation in UL-Script parses to a root of sort Assertion, so the six composer
+      operations that require an Assertion operand — negate, conjoin, disjoin, embed, bind,
+      modify_assertion — are reachable from text. Negation, conjunction and disjunction are
+      therefore writable. An assertion frame is also a valid container, so the composer's own
+      output validates.
+    tier: VERIFIED
+    evidence: ul-forge/crates/ul-core/tests/assertion_sort_tests.rs
+    scope: >
+      Establishes REACHABILITY of the assertion sort and the sort discipline around it, NOT
+      semantic adequacy: nothing here says what an assertion MEANS, and map-to-meaning remains the
+      open ledger line. Says nothing about quantification beyond that quantify's output now
+      validates, and nothing about the schema/deserializer disagreement or the 33 unparseable
+      lexicon entries, which F-038 records as still open. "Expressive adequacy" in REQ-1's full
+      sense is not established by this; what is established is that the specific claim "a negation
+      cannot be written" is no longer true.
+    notes: >
+      WHY IT IS REGISTERED AT ALL. Before F-038 no string the parser accepted produced an
+      Assertion-sorted root, so REQ-1's "expressive adequacy" was false in the implementation while
+      the README asserted it. The reason nothing caught it is that the contract's first requirement
+      was never a registered claim — the same shape as F-035, where the goal was not a claim and so
+      nothing protected it. This entry exists so that the expressibility of a negation is now a
+      proposition the checkers and the suite both guard, rather than an assumption.
+      FOUND BY A COLD READER, not by the apparatus. 387 tests, 11 checkers and 182 claims missed it
+      because the suite tested the parser's node types and the composer's sorts separately and
+      never tested the join between them.
+    scope_reviewed: [UL-MUST-BE-A-LANGUAGE, UL-IS-TWO-TIER, IMPL-COMPOSER-CONSTRUCTORS]

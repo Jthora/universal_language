@@ -1006,3 +1006,68 @@ count resting on an undetermined premise is published as a pair. And the orbit c
 80, then 93**, three defects each hiding the next, *"all three invisible in the data and visible the
 moment the orbits were drawn side by side"* — hence their rule, **if you publish a count, draw it**,
 which `ATLAS-COMPLETENESS-IS-THE-PROGRESS-BAR` does not yet satisfy.
+
+---
+
+## F-038 — REQ-1 was false in code, not merely unproven: no string could express a negation
+
+**Date:** 2026-10-14
+**Found by:** a cold reader doing a usability pass, not by this repo's apparatus — which is the
+part that matters. 387 tests, 11 checkers and 182 registered claims did not catch it, because
+nothing asserted the sort of a parsed force annotation.
+
+**The failure.** `README.md`'s REQ-1 says UL *"must be a language — syntax, compositional
+semantics, **expressive adequacy**, transmissibility."* In fact **no string the parser accepted
+produced an `Assertion`-sorted root.** `assert{*}` parsed to sort `entity`. Since `negate`,
+`conjoin`, `disjoin`, `embed`, `bind` and `modify_assertion` all begin with
+`validate_root_sort(.., Sort::Assertion, ..)`, **6 of 13 composer operations were unreachable from
+text**, and the three that matter most were unreachable in the strongest sense:
+
+> **You could not write "not X", "A and B", or "A or B". At all.**
+
+Not "it was hard", not "the semantics were undecided" — the operations existed, were tested, and
+could not be reached from any input. A notation that cannot express a negation is not a language by
+REQ-1's own list, so the contract's first requirement was violated in the implementation while the
+README asserted it at the top.
+
+**Two causes, both small, both load-bearing.**
+
+1. `parser/transform.rs::transform_force_annotation` carried the doc comment *"Creates an
+   assertion-sort enclosure with the `force` field set"* — and then called
+   `Node::enclosure(..).with_force(..)` **without** `.with_sort(Sort::Assertion)`. The comment
+   described the intent; the code did not implement it. `Node::with_sort` existed and
+   `composer.rs` used it in five places, so the mechanism was present and simply not invoked here.
+2. `validator.rs` required a `contains` edge's source to be `Sort::Entity`. But `composer.rs`
+   deliberately builds **assertion-sorted enclosure frames that contain their operands** for
+   `predicate`, `negate`, `conjoin`, `disjoin` and `quantify`. So the composer emitted GIR **that
+   this repo's own validator rejected** — `compose predicate` (subject-relation-object, the most
+   basic operation there is) produced `"valid": false` — and the rule would equally have rejected
+   any assertion the parser produced. Fixing cause 1 alone would have traded one defect for
+   another.
+
+**Why nothing caught it.** The suite tested that the parser produced the right *node types* and
+that the composer produced the right *sorts*, and never tested the join: that something the parser
+produces can be fed to the composer. Each side was correct about itself. `claims.yaml` had no entry
+asserting expressibility, so the checkers had nothing to enforce — **the contract's first
+requirement was the one proposition the registry never registered**, which is the same shape as
+F-035 (the goal was not a claim, so nothing protected it).
+
+**Also found in the same pass, now fixed.** `ul-cli`'s `compose` indexed `girs[0..2]` while clap
+declared `num_args = 1..`, so **all 9 multi-operand operations aborted with
+`index out of bounds`, exit 101**, instead of reporting the error. The MCP server had the arity
+check; the CLI did not. The same surface, two implementations, one guarded.
+
+**Still open, recorded rather than fixed.** `schemas/gir.schema.json` requires
+`["root","nodes","edges"]` and never mentions `ul_gir`, which the Rust deserializer requires — so a
+document valid against the published schema is rejected by the implementation. 33 of the 42
+`ul_lexicon` entries do not parse, and several that do are indistinguishable from bare primitives
+("Democracy" and an empty hexagon are the same object). `uws/grammar/formal-grammar.md` specifies
+assertions as `[ content ]`, which the grammar cannot parse at all because `[` is taken by the modal
+operator — the spec documents a system that was never built.
+
+**The lesson, which is not the bug.** A doc comment is not an implementation and a passing suite is
+not coverage. But the generalisable part is narrower: **this project tests its halves and not its
+joins.** Both sides of the parser/composer boundary were internally consistent and the boundary was
+empty. The fix adds `tests/assertion_sort_tests.rs`, which tests exactly that join, including a
+negative control that an entity is still rejected where an assertion is required and that
+`Relation`/`Modifier` are still invalid containers.

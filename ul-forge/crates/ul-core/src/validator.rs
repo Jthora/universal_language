@@ -119,15 +119,21 @@ fn validate_sorts(gir: &Gir, result: &mut ValidationResult) {
 
         match edge.edge_type {
             EdgeType::Contains => {
-                // Source must be Entity with enclosure type
-                if source.sort != Sort::Entity {
+                // Source must be a container: an Enclosure node (checked just below) whose sort
+                // is Entity or Assertion. An ASSERTION FRAME IS A CONTAINER — composer.rs builds
+                // exactly that for `predicate`, `negate`, `conjoin`, `disjoin` and `quantify`
+                // (frame.sort = Sort::Assertion, with Edge::contains to its operands). Requiring
+                // Entity here made the composer emit GIR that this validator rejected, and it also
+                // blocked the parser from ever producing an Assertion root. Relation and Modifier
+                // remain invalid containers. See FAILURES.md F-038.
+                if source.sort != Sort::Entity && source.sort != Sort::Assertion {
                     result.add_error(UlError::SortViolation {
                         edge_type: EdgeType::Contains,
                         from_node: edge.source.clone(),
                         from_sort: source.sort,
                         to_node: edge.target.clone(),
                         to_sort: target.sort,
-                        reason: "contains source must be entity".to_string(),
+                        reason: "contains source must be entity or assertion".to_string(),
                     });
                 }
                 if source.node_type != crate::types::node::NodeType::Enclosure {

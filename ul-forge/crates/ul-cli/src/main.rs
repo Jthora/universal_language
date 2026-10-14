@@ -305,6 +305,24 @@ fn cmd_compose(
         .map(|s| ul_core::parser::parse(s))
         .collect::<Result<Vec<_>, _>>()?;
 
+    // Arity check BEFORE indexing. clap declares `num_args = 1..`, so the CLI happily accepted a
+    // single operand for binary and ternary operations and then indexed off the end of the vector:
+    // every one of the 9 multi-operand operations aborted with
+    // `index out of bounds: the len is 2 but the index is 2`, exit 101, instead of reporting the
+    // mistake. The MCP server had this check; the CLI did not (FAILURES.md F-038).
+    let needed = match operation {
+        "negate" | "embed" | "abstract" | "invert" => 1,
+        "predicate" => 3,
+        _ => 2,
+    };
+    if girs.len() != needed {
+        return Err(format!(
+            "{operation} requires {needed} operand(s), got {}",
+            girs.len()
+        )
+        .into());
+    }
+
     let result = match operation {
         "negate" => ul_core::composer::negate(&girs[0]),
         "embed" => ul_core::composer::embed(&girs[0]),

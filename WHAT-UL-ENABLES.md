@@ -153,7 +153,7 @@ derivation wrong, which is available to everyone including those who would rathe
   Pinning is redundancy and redundancy costs capacity (`CAPACITY-RADIUS-TRADEOFF`), so this is a
   **code rate** — a higher number is not automatically better.
 - **Globally** — `ruby tools/blast-radius.rb CLAIM-ID`, or `--census`. If this falls, what falls
-  with it? Applied to this registry: **<!--s:claims_load_bearing-->65<!--/s--> of <!--s:claims_total-->182<!--/s--> claims are load-bearing, and <!--s:claims_under_conjecture-->53<!--/s--> sit downstream of a CONJECTURED premise.** Three of the five most load-bearing claims are themselves conjectures. **This program is partly anchored on things it has not
+  with it? Applied to this registry: **<!--s:claims_load_bearing-->67<!--/s--> of <!--s:claims_total-->183<!--/s--> claims are load-bearing, and <!--s:claims_under_conjecture-->54<!--/s--> sit downstream of a CONJECTURED premise.** Three of the five most load-bearing claims are themselves conjectures. **This program is partly anchored on things it has not
   established, and now says so with a number.**
 
 **Why it must pre-exist the collapse.** A void is never filled by nothing — it is filled by
@@ -411,7 +411,7 @@ line of work — seven instances in a single session, each while the agent belie
 rigorous. In every case the counter-evidence was one search away. The rules there are mechanical for
 that reason.
 
-**And if a prediction fails, report it.** `FAILURES.md` is append-only and has <!--s:failures-->37<!--/s--> entries because a
+**And if a prediction fails, report it.** `FAILURES.md` is append-only and has <!--s:failures-->38<!--/s--> entries because a
 recorded failure is data and a repaired one is nothing. This project's completeness score was once
 driven 32% → 100% across nine rounds of patching theory after each failure, and the final 100% was
 worthless. A negative result is a real contribution here and will be registered as one.
