@@ -1,0 +1,1445 @@
+{
+  "slices": [
+    {
+      "id": "slice-u-mark",
+      "group": "unary",
+      "axes": [
+        "mark"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 6,
+      "operators": {}
+    },
+    {
+      "id": "slice-u-rotation",
+      "group": "unary",
+      "axes": [
+        "rotation"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 12,
+      "operators": {}
+    },
+    {
+      "id": "slice-u-reflection",
+      "group": "unary",
+      "axes": [
+        "reflection"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 2,
+      "operators": {}
+    },
+    {
+      "id": "slice-u-scale",
+      "group": "unary",
+      "axes": [
+        "scale"
+      ],
+      "value": "negative",
+      "draw": false,
+      "covered_by": "relative-scale"
+    },
+    {
+      "id": "slice-u-count",
+      "group": "unary",
+      "axes": [
+        "count"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 4,
+      "operators": {}
+    },
+    {
+      "id": "slice-u-frequency",
+      "group": "unary",
+      "axes": [
+        "frequency"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 4,
+      "operators": {}
+    },
+    {
+      "id": "slice-u-amplitude",
+      "group": "unary",
+      "axes": [
+        "amplitude"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 5,
+      "operators": {}
+    },
+    {
+      "id": "slice-u-phase",
+      "group": "unary",
+      "axes": [
+        "phase"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 4,
+      "operators": {}
+    },
+    {
+      "id": "slice-u-taper",
+      "group": "unary",
+      "axes": [
+        "taper"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 3,
+      "operators": {}
+    },
+    {
+      "id": "slice-u-chirp",
+      "group": "unary",
+      "axes": [
+        "chirp"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 3,
+      "operators": {}
+    },
+    {
+      "id": "slice-u-mark-rotation",
+      "group": "unary",
+      "axes": [
+        "mark",
+        "rotation"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 72,
+      "operators": {}
+    },
+    {
+      "id": "slice-u-mark-reflection",
+      "group": "unary",
+      "axes": [
+        "mark",
+        "reflection"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 12,
+      "operators": {}
+    },
+    {
+      "id": "slice-u-mark-scale",
+      "group": "unary",
+      "axes": [
+        "mark",
+        "scale"
+      ],
+      "value": "negative",
+      "draw": false,
+      "covered_by": "relative-scale"
+    },
+    {
+      "id": "slice-u-mark-count",
+      "group": "unary",
+      "axes": [
+        "mark",
+        "count"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 24,
+      "operators": {}
+    },
+    {
+      "id": "slice-u-mark-frequency",
+      "group": "unary",
+      "axes": [
+        "mark",
+        "frequency"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 24,
+      "operators": {}
+    },
+    {
+      "id": "slice-u-mark-amplitude",
+      "group": "unary",
+      "axes": [
+        "mark",
+        "amplitude"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 30,
+      "operators": {}
+    },
+    {
+      "id": "slice-u-mark-phase",
+      "group": "unary",
+      "axes": [
+        "mark",
+        "phase"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 24,
+      "operators": {}
+    },
+    {
+      "id": "slice-u-mark-taper",
+      "group": "unary",
+      "axes": [
+        "mark",
+        "taper"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 18,
+      "operators": {}
+    },
+    {
+      "id": "slice-u-mark-chirp",
+      "group": "unary",
+      "axes": [
+        "mark",
+        "chirp"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 18,
+      "operators": {}
+    },
+    {
+      "id": "slice-u-rotation-reflection",
+      "group": "unary",
+      "axes": [
+        "rotation",
+        "reflection"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 24,
+      "operators": {}
+    },
+    {
+      "id": "slice-u-rotation-scale",
+      "group": "unary",
+      "axes": [
+        "rotation",
+        "scale"
+      ],
+      "value": "negative",
+      "draw": false,
+      "covered_by": "relative-scale"
+    },
+    {
+      "id": "slice-u-rotation-count",
+      "group": "unary",
+      "axes": [
+        "rotation",
+        "count"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 48,
+      "operators": {}
+    },
+    {
+      "id": "slice-u-rotation-frequency",
+      "group": "unary",
+      "axes": [
+        "rotation",
+        "frequency"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 48,
+      "operators": {}
+    },
+    {
+      "id": "slice-u-rotation-amplitude",
+      "group": "unary",
+      "axes": [
+        "rotation",
+        "amplitude"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 60,
+      "operators": {}
+    },
+    {
+      "id": "slice-u-rotation-phase",
+      "group": "unary",
+      "axes": [
+        "rotation",
+        "phase"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 48,
+      "operators": {}
+    },
+    {
+      "id": "slice-u-rotation-taper",
+      "group": "unary",
+      "axes": [
+        "rotation",
+        "taper"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 36,
+      "operators": {}
+    },
+    {
+      "id": "slice-u-rotation-chirp",
+      "group": "unary",
+      "axes": [
+        "rotation",
+        "chirp"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 36,
+      "operators": {}
+    },
+    {
+      "id": "slice-u-reflection-scale",
+      "group": "unary",
+      "axes": [
+        "reflection",
+        "scale"
+      ],
+      "value": "negative",
+      "draw": false,
+      "covered_by": "relative-scale"
+    },
+    {
+      "id": "slice-u-reflection-count",
+      "group": "unary",
+      "axes": [
+        "reflection",
+        "count"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 8,
+      "operators": {}
+    },
+    {
+      "id": "slice-u-reflection-frequency",
+      "group": "unary",
+      "axes": [
+        "reflection",
+        "frequency"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 8,
+      "operators": {}
+    },
+    {
+      "id": "slice-u-reflection-amplitude",
+      "group": "unary",
+      "axes": [
+        "reflection",
+        "amplitude"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 10,
+      "operators": {}
+    },
+    {
+      "id": "slice-u-reflection-phase",
+      "group": "unary",
+      "axes": [
+        "reflection",
+        "phase"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 8,
+      "operators": {}
+    },
+    {
+      "id": "slice-u-reflection-taper",
+      "group": "unary",
+      "axes": [
+        "reflection",
+        "taper"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 6,
+      "operators": {}
+    },
+    {
+      "id": "slice-u-reflection-chirp",
+      "group": "unary",
+      "axes": [
+        "reflection",
+        "chirp"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 6,
+      "operators": {}
+    },
+    {
+      "id": "slice-u-scale-count",
+      "group": "unary",
+      "axes": [
+        "scale",
+        "count"
+      ],
+      "value": "negative",
+      "draw": false,
+      "covered_by": "relative-scale"
+    },
+    {
+      "id": "slice-u-scale-frequency",
+      "group": "unary",
+      "axes": [
+        "scale",
+        "frequency"
+      ],
+      "value": "negative",
+      "draw": false,
+      "covered_by": "relative-scale"
+    },
+    {
+      "id": "slice-u-scale-amplitude",
+      "group": "unary",
+      "axes": [
+        "scale",
+        "amplitude"
+      ],
+      "value": "negative",
+      "draw": false,
+      "covered_by": "relative-scale"
+    },
+    {
+      "id": "slice-u-scale-phase",
+      "group": "unary",
+      "axes": [
+        "scale",
+        "phase"
+      ],
+      "value": "negative",
+      "draw": false,
+      "covered_by": "relative-scale"
+    },
+    {
+      "id": "slice-u-scale-taper",
+      "group": "unary",
+      "axes": [
+        "scale",
+        "taper"
+      ],
+      "value": "negative",
+      "draw": false,
+      "covered_by": "relative-scale"
+    },
+    {
+      "id": "slice-u-scale-chirp",
+      "group": "unary",
+      "axes": [
+        "scale",
+        "chirp"
+      ],
+      "value": "negative",
+      "draw": false,
+      "covered_by": "relative-scale"
+    },
+    {
+      "id": "slice-u-count-frequency",
+      "group": "unary",
+      "axes": [
+        "count",
+        "frequency"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 16,
+      "operators": {}
+    },
+    {
+      "id": "slice-u-count-amplitude",
+      "group": "unary",
+      "axes": [
+        "count",
+        "amplitude"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 20,
+      "operators": {}
+    },
+    {
+      "id": "slice-u-count-phase",
+      "group": "unary",
+      "axes": [
+        "count",
+        "phase"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 16,
+      "operators": {}
+    },
+    {
+      "id": "slice-u-count-taper",
+      "group": "unary",
+      "axes": [
+        "count",
+        "taper"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 12,
+      "operators": {}
+    },
+    {
+      "id": "slice-u-count-chirp",
+      "group": "unary",
+      "axes": [
+        "count",
+        "chirp"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 12,
+      "operators": {}
+    },
+    {
+      "id": "slice-u-frequency-amplitude",
+      "group": "unary",
+      "axes": [
+        "frequency",
+        "amplitude"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 20,
+      "operators": {}
+    },
+    {
+      "id": "slice-u-frequency-phase",
+      "group": "unary",
+      "axes": [
+        "frequency",
+        "phase"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 16,
+      "operators": {}
+    },
+    {
+      "id": "slice-u-frequency-taper",
+      "group": "unary",
+      "axes": [
+        "frequency",
+        "taper"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 12,
+      "operators": {}
+    },
+    {
+      "id": "slice-u-frequency-chirp",
+      "group": "unary",
+      "axes": [
+        "frequency",
+        "chirp"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 12,
+      "operators": {}
+    },
+    {
+      "id": "slice-u-amplitude-phase",
+      "group": "unary",
+      "axes": [
+        "amplitude",
+        "phase"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 20,
+      "operators": {}
+    },
+    {
+      "id": "slice-u-amplitude-taper",
+      "group": "unary",
+      "axes": [
+        "amplitude",
+        "taper"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 15,
+      "operators": {}
+    },
+    {
+      "id": "slice-u-amplitude-chirp",
+      "group": "unary",
+      "axes": [
+        "amplitude",
+        "chirp"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 15,
+      "operators": {}
+    },
+    {
+      "id": "slice-u-phase-taper",
+      "group": "unary",
+      "axes": [
+        "phase",
+        "taper"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 12,
+      "operators": {}
+    },
+    {
+      "id": "slice-u-phase-chirp",
+      "group": "unary",
+      "axes": [
+        "phase",
+        "chirp"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 12,
+      "operators": {}
+    },
+    {
+      "id": "slice-u-taper-chirp",
+      "group": "unary",
+      "axes": [
+        "taper",
+        "chirp"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 9,
+      "operators": {}
+    },
+    {
+      "id": "slice-b-A",
+      "group": "binary",
+      "axes": [
+        "A"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 6,
+      "operators": {
+        "superpose_concentric": 6,
+        "cross": 6,
+        "concatenate": 3,
+        "nest": 6
+      }
+    },
+    {
+      "id": "slice-b-B",
+      "group": "binary",
+      "axes": [
+        "B"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 6,
+      "operators": {
+        "superpose_concentric": 6,
+        "cross": 2,
+        "nest": 1
+      }
+    },
+    {
+      "id": "slice-b-separation",
+      "group": "binary",
+      "axes": [
+        "separation"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 7,
+      "operators": {
+        "superpose_concentric": 1,
+        "cross": 1,
+        "nest": 1,
+        "concatenate": 1,
+        "superpose_displaced": 1
+      }
+    },
+    {
+      "id": "slice-b-bearing",
+      "group": "binary",
+      "axes": [
+        "bearing"
+      ],
+      "value": "frontier",
+      "draw": true,
+      "cells": 12,
+      "operators": {
+        "superpose_displaced": 1
+      }
+    },
+    {
+      "id": "slice-b-relative-rotation",
+      "group": "binary",
+      "axes": [
+        "relative-rotation"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 12,
+      "operators": {
+        "superpose_concentric": 2,
+        "cross": 2
+      }
+    },
+    {
+      "id": "slice-b-relative-scale",
+      "group": "binary",
+      "axes": [
+        "relative-scale"
+      ],
+      "value": "negative",
+      "draw": true,
+      "cells": 6,
+      "operators": {
+        "nest": 1,
+        "superpose_concentric": 1,
+        "cross": 1
+      }
+    },
+    {
+      "id": "slice-b-reflect-B",
+      "group": "binary",
+      "axes": [
+        "reflect-B"
+      ],
+      "value": "frontier",
+      "draw": true,
+      "cells": 2,
+      "operators": {
+        "superpose_concentric": 1
+      }
+    },
+    {
+      "id": "slice-b-B-frequency",
+      "group": "binary",
+      "axes": [
+        "B-frequency"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 4,
+      "operators": {
+        "superpose_concentric": 1
+      }
+    },
+    {
+      "id": "slice-b-B-amplitude",
+      "group": "binary",
+      "axes": [
+        "B-amplitude"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 5,
+      "operators": {
+        "superpose_concentric": 1
+      }
+    },
+    {
+      "id": "slice-b-B-phase",
+      "group": "binary",
+      "axes": [
+        "B-phase"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 4,
+      "operators": {
+        "superpose_concentric": 1
+      }
+    },
+    {
+      "id": "slice-b-A-B",
+      "group": "binary",
+      "axes": [
+        "A",
+        "B"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 36,
+      "operators": {
+        "superpose_concentric": 36,
+        "cross": 12,
+        "concatenate": 6,
+        "nest": 12
+      }
+    },
+    {
+      "id": "slice-b-A-separation",
+      "group": "binary",
+      "axes": [
+        "A",
+        "separation"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 36,
+      "operators": {
+        "superpose_concentric": 7,
+        "cross": 7,
+        "concatenate": 4,
+        "nest": 7,
+        "superpose_displaced": 10
+      }
+    },
+    {
+      "id": "slice-b-A-bearing",
+      "group": "binary",
+      "axes": [
+        "A",
+        "bearing"
+      ],
+      "value": "frontier",
+      "draw": true,
+      "cells": 72,
+      "operators": {
+        "superpose_displaced": 7
+      }
+    },
+    {
+      "id": "slice-b-A-relative-rotation",
+      "group": "binary",
+      "axes": [
+        "A",
+        "relative-rotation"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 72,
+      "operators": {
+        "superpose_concentric": 12,
+        "concatenate": 2,
+        "nest": 2,
+        "cross": 12
+      }
+    },
+    {
+      "id": "slice-b-A-relative-scale",
+      "group": "binary",
+      "axes": [
+        "A",
+        "relative-scale"
+      ],
+      "value": "negative",
+      "draw": false,
+      "covered_by": "relative-scale"
+    },
+    {
+      "id": "slice-b-A-reflect-B",
+      "group": "binary",
+      "axes": [
+        "A",
+        "reflect-B"
+      ],
+      "value": "frontier",
+      "draw": true,
+      "cells": 12,
+      "operators": {
+        "superpose_concentric": 6,
+        "concatenate": 1,
+        "nest": 1
+      }
+    },
+    {
+      "id": "slice-b-A-B-frequency",
+      "group": "binary",
+      "axes": [
+        "A",
+        "B-frequency"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 24,
+      "operators": {
+        "superpose_concentric": 6,
+        "concatenate": 1,
+        "nest": 1
+      }
+    },
+    {
+      "id": "slice-b-A-B-amplitude",
+      "group": "binary",
+      "axes": [
+        "A",
+        "B-amplitude"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 30,
+      "operators": {
+        "superpose_concentric": 6,
+        "concatenate": 1,
+        "nest": 1
+      }
+    },
+    {
+      "id": "slice-b-A-B-phase",
+      "group": "binary",
+      "axes": [
+        "A",
+        "B-phase"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 24,
+      "operators": {
+        "superpose_concentric": 6,
+        "concatenate": 1,
+        "nest": 1
+      }
+    },
+    {
+      "id": "slice-b-B-separation",
+      "group": "binary",
+      "axes": [
+        "B",
+        "separation"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 36,
+      "operators": {
+        "superpose_concentric": 6,
+        "cross": 2,
+        "nest": 1,
+        "superpose_displaced": 6
+      }
+    },
+    {
+      "id": "slice-b-B-bearing",
+      "group": "binary",
+      "axes": [
+        "B",
+        "bearing"
+      ],
+      "value": "frontier",
+      "draw": true,
+      "cells": 72,
+      "operators": {
+        "superpose_displaced": 7
+      }
+    },
+    {
+      "id": "slice-b-B-relative-rotation",
+      "group": "binary",
+      "axes": [
+        "B",
+        "relative-rotation"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 72,
+      "operators": {
+        "superpose_concentric": 30,
+        "cross": 30,
+        "nest": 12
+      }
+    },
+    {
+      "id": "slice-b-B-relative-scale",
+      "group": "binary",
+      "axes": [
+        "B",
+        "relative-scale"
+      ],
+      "value": "negative",
+      "draw": false,
+      "covered_by": "relative-scale"
+    },
+    {
+      "id": "slice-b-B-reflect-B",
+      "group": "binary",
+      "axes": [
+        "B",
+        "reflect-B"
+      ],
+      "value": "frontier",
+      "draw": true,
+      "cells": 12,
+      "operators": {
+        "superpose_concentric": 9,
+        "cross": 4,
+        "nest": 2
+      }
+    },
+    {
+      "id": "slice-b-B-B-frequency",
+      "group": "binary",
+      "axes": [
+        "B",
+        "B-frequency"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 24,
+      "operators": {
+        "superpose_concentric": 15,
+        "cross": 8,
+        "nest": 4
+      }
+    },
+    {
+      "id": "slice-b-B-B-amplitude",
+      "group": "binary",
+      "axes": [
+        "B",
+        "B-amplitude"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 30,
+      "operators": {
+        "superpose_concentric": 18,
+        "cross": 10,
+        "nest": 5
+      }
+    },
+    {
+      "id": "slice-b-B-B-phase",
+      "group": "binary",
+      "axes": [
+        "B",
+        "B-phase"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 24,
+      "operators": {
+        "superpose_concentric": 15,
+        "cross": 8,
+        "nest": 4
+      }
+    },
+    {
+      "id": "slice-b-separation-bearing",
+      "group": "binary",
+      "axes": [
+        "separation",
+        "bearing"
+      ],
+      "value": "frontier",
+      "draw": true,
+      "cells": 84,
+      "operators": {
+        "superpose_concentric": 12,
+        "cross": 12,
+        "nest": 12,
+        "concatenate": 12,
+        "superpose_displaced": 1
+      }
+    },
+    {
+      "id": "slice-b-separation-relative-rotation",
+      "group": "binary",
+      "axes": [
+        "separation",
+        "relative-rotation"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 84,
+      "operators": {
+        "superpose_concentric": 2,
+        "cross": 2,
+        "superpose_displaced": 2
+      }
+    },
+    {
+      "id": "slice-b-separation-relative-scale",
+      "group": "binary",
+      "axes": [
+        "separation",
+        "relative-scale"
+      ],
+      "value": "negative",
+      "draw": false,
+      "covered_by": "relative-scale"
+    },
+    {
+      "id": "slice-b-separation-reflect-B",
+      "group": "binary",
+      "axes": [
+        "separation",
+        "reflect-B"
+      ],
+      "value": "frontier",
+      "draw": true,
+      "cells": 14,
+      "operators": {
+        "superpose_concentric": 1,
+        "superpose_displaced": 1
+      }
+    },
+    {
+      "id": "slice-b-separation-B-frequency",
+      "group": "binary",
+      "axes": [
+        "separation",
+        "B-frequency"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 28,
+      "operators": {
+        "superpose_concentric": 1,
+        "superpose_displaced": 1
+      }
+    },
+    {
+      "id": "slice-b-separation-B-amplitude",
+      "group": "binary",
+      "axes": [
+        "separation",
+        "B-amplitude"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 35,
+      "operators": {
+        "superpose_concentric": 1,
+        "superpose_displaced": 1
+      }
+    },
+    {
+      "id": "slice-b-separation-B-phase",
+      "group": "binary",
+      "axes": [
+        "separation",
+        "B-phase"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 28,
+      "operators": {
+        "superpose_concentric": 1,
+        "superpose_displaced": 1
+      }
+    },
+    {
+      "id": "slice-b-bearing-relative-rotation",
+      "group": "binary",
+      "axes": [
+        "bearing",
+        "relative-rotation"
+      ],
+      "value": "frontier",
+      "draw": true,
+      "cells": 144,
+      "operators": {
+        "superpose_displaced": 2
+      }
+    },
+    {
+      "id": "slice-b-bearing-relative-scale",
+      "group": "binary",
+      "axes": [
+        "bearing",
+        "relative-scale"
+      ],
+      "value": "frontier",
+      "draw": true,
+      "cells": 72,
+      "operators": {
+        "superpose_displaced": 2
+      }
+    },
+    {
+      "id": "slice-b-bearing-reflect-B",
+      "group": "binary",
+      "axes": [
+        "bearing",
+        "reflect-B"
+      ],
+      "value": "frontier",
+      "draw": true,
+      "cells": 24,
+      "operators": {
+        "superpose_displaced": 1
+      }
+    },
+    {
+      "id": "slice-b-bearing-B-frequency",
+      "group": "binary",
+      "axes": [
+        "bearing",
+        "B-frequency"
+      ],
+      "value": "frontier",
+      "draw": true,
+      "cells": 48,
+      "operators": {
+        "superpose_displaced": 1
+      }
+    },
+    {
+      "id": "slice-b-bearing-B-amplitude",
+      "group": "binary",
+      "axes": [
+        "bearing",
+        "B-amplitude"
+      ],
+      "value": "frontier",
+      "draw": true,
+      "cells": 60,
+      "operators": {
+        "superpose_displaced": 1
+      }
+    },
+    {
+      "id": "slice-b-bearing-B-phase",
+      "group": "binary",
+      "axes": [
+        "bearing",
+        "B-phase"
+      ],
+      "value": "frontier",
+      "draw": true,
+      "cells": 48,
+      "operators": {
+        "superpose_displaced": 1
+      }
+    },
+    {
+      "id": "slice-b-relative-rotation-relative-scale",
+      "group": "binary",
+      "axes": [
+        "relative-rotation",
+        "relative-scale"
+      ],
+      "value": "negative",
+      "draw": false,
+      "covered_by": "relative-scale"
+    },
+    {
+      "id": "slice-b-relative-rotation-reflect-B",
+      "group": "binary",
+      "axes": [
+        "relative-rotation",
+        "reflect-B"
+      ],
+      "value": "frontier",
+      "draw": true,
+      "cells": 24,
+      "operators": {
+        "superpose_concentric": 2,
+        "cross": 2
+      }
+    },
+    {
+      "id": "slice-b-relative-rotation-B-frequency",
+      "group": "binary",
+      "axes": [
+        "relative-rotation",
+        "B-frequency"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 48,
+      "operators": {
+        "superpose_concentric": 2,
+        "cross": 2
+      }
+    },
+    {
+      "id": "slice-b-relative-rotation-B-amplitude",
+      "group": "binary",
+      "axes": [
+        "relative-rotation",
+        "B-amplitude"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 60,
+      "operators": {
+        "superpose_concentric": 2,
+        "cross": 2
+      }
+    },
+    {
+      "id": "slice-b-relative-rotation-B-phase",
+      "group": "binary",
+      "axes": [
+        "relative-rotation",
+        "B-phase"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 48,
+      "operators": {
+        "superpose_concentric": 2,
+        "cross": 2
+      }
+    },
+    {
+      "id": "slice-b-relative-scale-reflect-B",
+      "group": "binary",
+      "axes": [
+        "relative-scale",
+        "reflect-B"
+      ],
+      "value": "frontier",
+      "draw": true,
+      "cells": 12,
+      "operators": {
+        "nest": 1,
+        "superpose_concentric": 1
+      }
+    },
+    {
+      "id": "slice-b-relative-scale-B-frequency",
+      "group": "binary",
+      "axes": [
+        "relative-scale",
+        "B-frequency"
+      ],
+      "value": "negative",
+      "draw": false,
+      "covered_by": "relative-scale"
+    },
+    {
+      "id": "slice-b-relative-scale-B-amplitude",
+      "group": "binary",
+      "axes": [
+        "relative-scale",
+        "B-amplitude"
+      ],
+      "value": "negative",
+      "draw": false,
+      "covered_by": "relative-scale"
+    },
+    {
+      "id": "slice-b-relative-scale-B-phase",
+      "group": "binary",
+      "axes": [
+        "relative-scale",
+        "B-phase"
+      ],
+      "value": "negative",
+      "draw": false,
+      "covered_by": "relative-scale"
+    },
+    {
+      "id": "slice-b-reflect-B-B-frequency",
+      "group": "binary",
+      "axes": [
+        "reflect-B",
+        "B-frequency"
+      ],
+      "value": "frontier",
+      "draw": true,
+      "cells": 8,
+      "operators": {
+        "superpose_concentric": 1
+      }
+    },
+    {
+      "id": "slice-b-reflect-B-B-amplitude",
+      "group": "binary",
+      "axes": [
+        "reflect-B",
+        "B-amplitude"
+      ],
+      "value": "frontier",
+      "draw": true,
+      "cells": 10,
+      "operators": {
+        "superpose_concentric": 1
+      }
+    },
+    {
+      "id": "slice-b-reflect-B-B-phase",
+      "group": "binary",
+      "axes": [
+        "reflect-B",
+        "B-phase"
+      ],
+      "value": "frontier",
+      "draw": true,
+      "cells": 8,
+      "operators": {
+        "superpose_concentric": 1
+      }
+    },
+    {
+      "id": "slice-b-B-frequency-B-amplitude",
+      "group": "binary",
+      "axes": [
+        "B-frequency",
+        "B-amplitude"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 20,
+      "operators": {
+        "superpose_concentric": 1
+      }
+    },
+    {
+      "id": "slice-b-B-frequency-B-phase",
+      "group": "binary",
+      "axes": [
+        "B-frequency",
+        "B-phase"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 16,
+      "operators": {
+        "superpose_concentric": 1
+      }
+    },
+    {
+      "id": "slice-b-B-amplitude-B-phase",
+      "group": "binary",
+      "axes": [
+        "B-amplitude",
+        "B-phase"
+      ],
+      "value": "between",
+      "draw": true,
+      "cells": 20,
+      "operators": {
+        "superpose_concentric": 1
+      }
+    }
+  ],
+  "drawn": 93,
+  "covered_by_representative": 17,
+  "representative": "relative-scale",
+  "why": "Ten slices vary an axis measured empty. One is drawn and the rest are recorded as covered by it -- a stated generalisation, not an omission."
+}

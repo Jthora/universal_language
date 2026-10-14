@@ -1,0 +1,43 @@
+{
+  "sheet": "slice-binary-relative-scale-reflect-B",
+  "group": "binary",
+  "axes": [
+    "relative-scale",
+    "reflect-B"
+  ],
+  "cells": 12,
+  "held": {
+    "A": "Circle",
+    "B": "Wave",
+    "separation": 0.0,
+    "bearing": 0.0,
+    "relative-rotation": 0.0,
+    "B-frequency": 1.0,
+    "B-amplitude": 1.0,
+    "B-phase": 0.0
+  },
+  "operand_chosen_for": {
+    "relative-scale": "has extent",
+    "reflect-B": "is chiral"
+  },
+  "samples": {
+    "relative-scale": [
+      "0.25",
+      "0.4",
+      "0.6",
+      "1",
+      "1.5",
+      "2"
+    ],
+    "reflect-B": [
+      "as drawn",
+      "mirrored"
+    ]
+  },
+  "operators_on_this_slice": {
+    "nest": 1,
+    "superpose_concentric": 1
+  },
+  "contact_cells": 6,
+  "note": "operand chosen so the axis acts: relative-scale needs one that has extent, reflect-B needs one that is chiral"
+}

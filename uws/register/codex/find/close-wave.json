@@ -1,0 +1,17 @@
+{
+  "orbit": 3,
+  "members": [
+    "close(Wave)"
+  ],
+  "symmetry": "2",
+  "curvature": "singular",
+  "meaning": null,
+  "status": "undetermined",
+  "strokes": 2,
+  "components": 1,
+  "mirror_axes": "0",
+  "closed": true,
+  "crossings": "0",
+  "aspect": "wide",
+  "curvature_mix": "mixed"
+}

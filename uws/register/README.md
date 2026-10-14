@@ -8,6 +8,14 @@
 
 ---
 
+## The data layer lives beside it
+
+`codex/` holds the **detail** this file summarises — 374 hash-verified JSON files plus the corpus's
+own `SKILL.md`: the 94-construction catalog, the 20-axis slices, and 22 chart topics of group theory
+(Cayley tables, subgroup lattices, fundamental domains, an orbit distance matrix). See
+`codex/README.md`. Note `067` is why the detail matters: the correction to `065`'s headline was in a
+`derivation` field that a summary-level audit never read.
+
 ## Why it is here
 
 **The universality claim is about an object this repo did not contain.**

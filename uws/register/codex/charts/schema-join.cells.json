@@ -1,0 +1,75 @@
+{
+ "sheet": "charts/schema-join",
+ "cells": [
+  {
+   "id": "cell-schema-0",
+   "title": "IN / OUT: nest",
+   "desc": "B drawn inside A's region",
+   "schema": "IN / OUT",
+   "operator": "nest"
+  },
+  {
+   "id": "cell-schema-1",
+   "title": "CENTER / PERIPHERY: superpose_concentric",
+   "desc": "A and B share a centre",
+   "schema": "CENTER / PERIPHERY",
+   "operator": "superpose_concentric"
+  },
+  {
+   "id": "cell-schema-2",
+   "title": "NEAR / FAR: superpose_displaced",
+   "desc": "A and B set apart, not touching",
+   "schema": "NEAR / FAR",
+   "operator": "superpose_displaced"
+  },
+  {
+   "id": "cell-schema-3",
+   "title": "CONTACT: cross",
+   "desc": "A and B cut each other",
+   "schema": "CONTACT",
+   "operator": "cross"
+  },
+  {
+   "id": "cell-schema-4",
+   "title": "LINK: concatenate",
+   "desc": "A and B joined end to end",
+   "schema": "LINK",
+   "operator": "concatenate"
+  },
+  {
+   "id": "cell-schema-5",
+   "title": "BALANCE: reflect_pair",
+   "desc": "A placed against its own mirror",
+   "schema": "BALANCE",
+   "operator": "reflect_pair"
+  },
+  {
+   "id": "cell-schema-6",
+   "title": "UP / DOWN: no attested operator",
+   "desc": "needs a privileged vertical; see updown-is-meaningful",
+   "schema": "UP / DOWN",
+   "operator": "none"
+  },
+  {
+   "id": "cell-schema-7",
+   "title": "FRONT / BACK: no attested operator",
+   "desc": "needs a distinguished direction along the figure",
+   "schema": "FRONT / BACK",
+   "operator": "none"
+  },
+  {
+   "id": "cell-schema-8",
+   "title": "PATH: no attested operator",
+   "desc": "needs source and goal told apart, i.e. a direction",
+   "schema": "PATH",
+   "operator": "none"
+  },
+  {
+   "id": "cell-schema-9",
+   "title": "PART / WHOLE: no attested operator",
+   "desc": "mereological, not positional — a different gap",
+   "schema": "PART / WHOLE",
+   "operator": "none"
+  }
+ ]
+}

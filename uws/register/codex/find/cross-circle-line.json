@@ -1,0 +1,20 @@
+{
+  "orbit": 5,
+  "members": [
+    "superpose_concentric(Line,Circle)",
+    "superpose_concentric(Circle,Line)",
+    "cross(Line,Circle)",
+    "cross(Circle,Line)"
+  ],
+  "symmetry": "2",
+  "curvature": "singular",
+  "meaning": null,
+  "status": "undetermined",
+  "strokes": 2,
+  "components": 1,
+  "mirror_axes": "2",
+  "closed": false,
+  "crossings": "0",
+  "aspect": "square",
+  "curvature_mix": "mixed"
+}

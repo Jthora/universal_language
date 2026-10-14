@@ -1,0 +1,18 @@
+{
+  "orbit": 57,
+  "members": [
+    "nest(Line,Angle)",
+    "nest(Line,Curve)"
+  ],
+  "symmetry": "1",
+  "curvature": "singular",
+  "meaning": null,
+  "status": "undetermined",
+  "strokes": 2,
+  "components": 2,
+  "mirror_axes": "1",
+  "closed": false,
+  "crossings": "1",
+  "aspect": "wide",
+  "curvature_mix": "straight"
+}

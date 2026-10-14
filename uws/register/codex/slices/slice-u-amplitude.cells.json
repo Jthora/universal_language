@@ -1,0 +1,50 @@
+{
+ "sheet": "slices/slice-u-amplitude",
+ "cells": [
+  {
+   "id": "cell-0-0",
+   "title": "axis-x amplitude, x 0.25, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=0.25, phase=0, taper=0, chirp=0, mark=Wave, rotation=0°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "amplitude",
+   "x": "0.25",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-0-1",
+   "title": "axis-x amplitude, x 0.5, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=0.5, phase=0, taper=0, chirp=0, mark=Wave, rotation=0°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "amplitude",
+   "x": "0.5",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-0-2",
+   "title": "axis-x amplitude, x 1, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=0, mark=Wave, rotation=0°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "amplitude",
+   "x": "1",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-0-3",
+   "title": "axis-x amplitude, x 1.5, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1.5, phase=0, taper=0, chirp=0, mark=Wave, rotation=0°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "amplitude",
+   "x": "1.5",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-0-4",
+   "title": "axis-x amplitude, x 2, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=2, phase=0, taper=0, chirp=0, mark=Wave, rotation=0°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "amplitude",
+   "x": "2",
+   "operator": "none",
+   "contact": "false"
+  }
+ ]
+}

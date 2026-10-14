@@ -1,0 +1,39 @@
+{
+  "sheet": "slice-unary-frequency-chirp",
+  "group": "unary",
+  "axes": [
+    "frequency",
+    "chirp"
+  ],
+  "cells": 12,
+  "held": {
+    "mark": "Wave",
+    "rotation": 0.0,
+    "reflection": 0,
+    "scale": 1.0,
+    "count": 1,
+    "amplitude": 1.0,
+    "phase": 0.0,
+    "taper": 0.0
+  },
+  "operand_chosen_for": {
+    "frequency": "has a profile to vary",
+    "chirp": "has a profile to vary"
+  },
+  "samples": {
+    "frequency": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "chirp": [
+      "0",
+      "1",
+      "2"
+    ]
+  },
+  "operators_on_this_slice": {},
+  "contact_cells": 0,
+  "note": "operand chosen so the axis acts: frequency needs one that has a profile to vary, chirp needs one that has a profile to vary"
+}

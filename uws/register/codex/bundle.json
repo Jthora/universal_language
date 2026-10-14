@@ -1,0 +1,2179 @@
+{
+  "schema_version": "1.0.0",
+  "title": "The Cosmic Codex — derived layer",
+  "invariant": "Every assertion carries its derivation status, at the assertion, not in a footnote.",
+  "status_vocabulary": {
+    "derived": "assert freely; the derivation is in `derivation`",
+    "derived_given": "assert only together with its `given` premise",
+    "measured": "assert as a fact about these artifacts, not as necessity",
+    "undetermined": "use, do not assert; `success_condition` says what would settle it",
+    "conventional": "assert as a choice, never as a result",
+    "withdrawn": "do not assert; retained so citations resolve to the retraction"
+  },
+  "sources": {
+    "derivation_register.json": "827516b7d1f5dd34",
+    "combination_space.json": "55d88c4359c58931",
+    "term_ledger.json": "c0894b1e2eef63d5",
+    "symbology_glyph.py": "f99c8317d00e5796",
+    "symbol_combinations.py": "d173eb34de993fd1"
+  },
+  "verify": {
+    "how": "Re-derive this bundle from source.",
+    "commands": [
+      "python3 tools/verify_symbology_grammar.py    # 12/12 off the sheets",
+      "python3 tools/symbology_glyph.py --check     # glyphs read back as their rule",
+      "python3 tools/symbol_combinations.py --closure"
+    ]
+  },
+  "borrowed_frameworks": {
+    "image_schemas": {
+      "source": "Johnson / Lakoff, via the wiki page `Cosmic Cipher - Image Schemas Relational Layer`",
+      "adopted_as": "the ten relational schemas: IN/OUT, CENTER/PERIPHERY, NEAR/FAR, CONTACT, LINK, BALANCE, UP/DOWN, FRONT/BACK, PATH, PART/WHOLE",
+      "recorded_only_in": "a comment in tools/symbol_transforms.py until F154",
+      "category_fit": "PARTIAL, and the misfit is informative. The borrowed inventory is a FLAT LIST OF TEN. In this notation it is not flat.",
+      "how_the_ten_decompose": [
+        "4 are REGIONS OF ONE CONTINUOUS AXIS -- CENTER/PERIPHERY at r=0, IN/OUT at 0<r<extent(A), CONTACT at r~extent(A), NEAR/FAR at r>extent(A). Boundaries set by A's own extent, not by convention. `schemas-are-regions-not-a-vocabulary`, derived.",
+        "3 are ONE FRAME-BOUND GAP -- UP/DOWN, FRONT/BACK, PATH all need a declared frame. `the-grammar-gaps-are-the-frame-bound-schemas`, derived_given.",
+        "LINK and BALANCE have attested operators (concatenate, reflect_pair).",
+        "PART/WHOLE is a separate mereological absence, not positional."
+      ],
+      "verdict": "Ten names resolve into one axis, one gap and three singletons -- five things, not ten. The schemas fit as a source of coverage questions and misfit as a vocabulary, because they are motivated by embodied experience while the notation is motivated by geometry. Where the two agree the schema dissolves into a geometric parameter; where they disagree the schema needs something the notation lacks.",
+      "bears_on": "Phase A of the semantic programme. The lesson is NOT to adopt a second flat inventory. Use NSM primes, thematic roles or an upper ontology as PROBE LISTS -- can the notation say this? -- and let the answer group itself."
+    }
+  },
+  "marks": [
+    {
+      "id": "Point",
+      "symmetry_order": "inf",
+      "curvature_class": "singular",
+      "rotation_class": "invariant",
+      "asserts": [
+        {
+          "claim": "rotation-class-is-symmetry-order",
+          "status": "derived",
+          "statement": "The corpus's three rotation classes are the order of each mark's rotational symmetry group: infinite, 2, 1.",
+          "derivation": "Sampled each mark as a point set and rotated it; 6/6 agreement with the stated trichotomy. A sine is odd, so a half-turn returns it -- which is why Wave groups with Line.",
+          "finding": "F85"
+        },
+        {
+          "claim": "mark-polarity",
+          "status": "derived",
+          "statement": "The mark polarity axis is curvature class: zero or singular curvature vs smooth non-zero curvature.",
+          "derivation": "Largest discrete turning angle along each stroke; 6/6 against the corpus's stated split. Point 0 (0-dim), Line 0 (straight), Angle 33.7 (corner), Curve/Wave/Circle 0.75-8.5 (smooth). This is the `singularity` shape axis of notes 022-026.",
+          "finding": "F88"
+        }
+      ]
+    },
+    {
+      "id": "Line",
+      "symmetry_order": "2",
+      "curvature_class": "singular",
+      "rotation_class": "orientation-bearing",
+      "asserts": [
+        {
+          "claim": "rotation-class-is-symmetry-order",
+          "status": "derived",
+          "statement": "The corpus's three rotation classes are the order of each mark's rotational symmetry group: infinite, 2, 1.",
+          "derivation": "Sampled each mark as a point set and rotated it; 6/6 agreement with the stated trichotomy. A sine is odd, so a half-turn returns it -- which is why Wave groups with Line.",
+          "finding": "F85"
+        },
+        {
+          "claim": "mark-polarity",
+          "status": "derived",
+          "statement": "The mark polarity axis is curvature class: zero or singular curvature vs smooth non-zero curvature.",
+          "derivation": "Largest discrete turning angle along each stroke; 6/6 against the corpus's stated split. Point 0 (0-dim), Line 0 (straight), Angle 33.7 (corner), Curve/Wave/Circle 0.75-8.5 (smooth). This is the `singularity` shape axis of notes 022-026.",
+          "finding": "F88"
+        }
+      ]
+    },
+    {
+      "id": "Angle",
+      "symmetry_order": "1",
+      "curvature_class": "singular",
+      "rotation_class": "modulating",
+      "asserts": [
+        {
+          "claim": "rotation-class-is-symmetry-order",
+          "status": "derived",
+          "statement": "The corpus's three rotation classes are the order of each mark's rotational symmetry group: infinite, 2, 1.",
+          "derivation": "Sampled each mark as a point set and rotated it; 6/6 agreement with the stated trichotomy. A sine is odd, so a half-turn returns it -- which is why Wave groups with Line.",
+          "finding": "F85"
+        },
+        {
+          "claim": "mark-polarity",
+          "status": "derived",
+          "statement": "The mark polarity axis is curvature class: zero or singular curvature vs smooth non-zero curvature.",
+          "derivation": "Largest discrete turning angle along each stroke; 6/6 against the corpus's stated split. Point 0 (0-dim), Line 0 (straight), Angle 33.7 (corner), Curve/Wave/Circle 0.75-8.5 (smooth). This is the `singularity` shape axis of notes 022-026.",
+          "finding": "F88"
+        }
+      ]
+    },
+    {
+      "id": "Curve",
+      "symmetry_order": "1",
+      "curvature_class": "smooth",
+      "rotation_class": "modulating",
+      "asserts": [
+        {
+          "claim": "rotation-class-is-symmetry-order",
+          "status": "derived",
+          "statement": "The corpus's three rotation classes are the order of each mark's rotational symmetry group: infinite, 2, 1.",
+          "derivation": "Sampled each mark as a point set and rotated it; 6/6 agreement with the stated trichotomy. A sine is odd, so a half-turn returns it -- which is why Wave groups with Line.",
+          "finding": "F85"
+        },
+        {
+          "claim": "mark-polarity",
+          "status": "derived",
+          "statement": "The mark polarity axis is curvature class: zero or singular curvature vs smooth non-zero curvature.",
+          "derivation": "Largest discrete turning angle along each stroke; 6/6 against the corpus's stated split. Point 0 (0-dim), Line 0 (straight), Angle 33.7 (corner), Curve/Wave/Circle 0.75-8.5 (smooth). This is the `singularity` shape axis of notes 022-026.",
+          "finding": "F88"
+        }
+      ]
+    },
+    {
+      "id": "Wave",
+      "symmetry_order": "2",
+      "curvature_class": "smooth",
+      "rotation_class": "orientation-bearing",
+      "asserts": [
+        {
+          "claim": "rotation-class-is-symmetry-order",
+          "status": "derived",
+          "statement": "The corpus's three rotation classes are the order of each mark's rotational symmetry group: infinite, 2, 1.",
+          "derivation": "Sampled each mark as a point set and rotated it; 6/6 agreement with the stated trichotomy. A sine is odd, so a half-turn returns it -- which is why Wave groups with Line.",
+          "finding": "F85"
+        },
+        {
+          "claim": "mark-polarity",
+          "status": "derived",
+          "statement": "The mark polarity axis is curvature class: zero or singular curvature vs smooth non-zero curvature.",
+          "derivation": "Largest discrete turning angle along each stroke; 6/6 against the corpus's stated split. Point 0 (0-dim), Line 0 (straight), Angle 33.7 (corner), Curve/Wave/Circle 0.75-8.5 (smooth). This is the `singularity` shape axis of notes 022-026.",
+          "finding": "F88"
+        }
+      ]
+    },
+    {
+      "id": "Circle",
+      "symmetry_order": "inf",
+      "curvature_class": "smooth",
+      "rotation_class": "invariant",
+      "asserts": [
+        {
+          "claim": "rotation-class-is-symmetry-order",
+          "status": "derived",
+          "statement": "The corpus's three rotation classes are the order of each mark's rotational symmetry group: infinite, 2, 1.",
+          "derivation": "Sampled each mark as a point set and rotated it; 6/6 agreement with the stated trichotomy. A sine is odd, so a half-turn returns it -- which is why Wave groups with Line.",
+          "finding": "F85"
+        },
+        {
+          "claim": "mark-polarity",
+          "status": "derived",
+          "statement": "The mark polarity axis is curvature class: zero or singular curvature vs smooth non-zero curvature.",
+          "derivation": "Largest discrete turning angle along each stroke; 6/6 against the corpus's stated split. Point 0 (0-dim), Line 0 (straight), Angle 33.7 (corner), Curve/Wave/Circle 0.75-8.5 (smooth). This is the `singularity` shape axis of notes 022-026.",
+          "finding": "F88"
+        }
+      ]
+    }
+  ],
+  "signs": [
+    {
+      "n": 1,
+      "id": "Aries",
+      "geometry": "angle",
+      "modality": "Cardinal",
+      "element": "Fire",
+      "apex_up": true,
+      "crossbar": false,
+      "rule": {
+        "geometry": "n mod 3",
+        "direction": "n mod 2",
+        "crossbar": "n mod 4 in {2,3}"
+      },
+      "asserts": [
+        {
+          "claim": "z12-factors",
+          "status": "derived",
+          "statement": "Z/12 = Z/3 x Z/4, so 3 modalities x 4 elements covers twelve cells with no repeat and no gap.",
+          "derivation": "gcd(3,4)=1, Chinese Remainder Theorem. This is why there are twelve, not an observation that there happen to be.",
+          "finding": "F48"
+        }
+      ],
+      "carries_undetermined": [
+        {
+          "claim": "element-bit-assignment",
+          "status": "derived_given",
+          "statement": "up+unbarred is Fire, up+barred is Air, down+unbarred is Water, down+barred is Earth.",
+          "derivation": "THE DIRECTION BIT IS DENSITY. F19 records, and F70 confirms on a second artifact, that the elements ARE the states of matter: Fire = Plasma, Air = Gas, Water = Liquid, Earth = Solid. Split the four phases by density and plasma and gas are the rarefied pair, liquid and solid the dense pair; buoyancy lifts the first and sinks the second. That is the direction bit, four for four, one property throughout -- not 'fire rises' about one element but a single threshold on a single quantity sorting all four. And it derives exactly the half that needed deriving: the PARTITION, not which side of the page each lands on, which `direction-is-read-as-contrast` says the notation never reads anyway.",
+          "given": "the states-of-matter identification (F19/F70), and ordinary conditions, under which the density ordering of the four phases holds.",
+          "success_condition": "THE DIRECTION BIT IS REACHED (F148). What remains is the CROSSBAR bit, which partitions {Air, Earth} against {Fire, Water} -- in phases, {Gas, Solid} against {Plasma, Liquid}. F140 gave the bit a reading, open end versus bounded level, which the corpus itself names Destiny and Reality. What is missing is a property of the four phases that groups gas with solid against plasma with liquid. Density does not: solid and gas are the extremes of that ordering, not a pair. A pattern that fits and is NOT evidence: along the transition chain Solid-Liquid-Gas-Plasma the bit is the parity of the position, with positions 1 and 3 barred. With four items and two bits any assignment can be so described, and parity names no physical property. Recorded as F47 recorded the opponent-colour coincidence.",
+          "scope": "The direction bit only. The crossbar bit has a reading (F140) and no derivation. And the derivation runs through a physical identification, so it grounds the notation in matter rather than in geometry -- which is what the original success condition warned about, met by making the import explicit and total rather than anecdotal.",
+          "finding": "F51 -> F140 -> F148"
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "id": "Taurus",
+      "geometry": "square",
+      "modality": "Fixed",
+      "element": "Earth",
+      "apex_up": false,
+      "crossbar": true,
+      "rule": {
+        "geometry": "n mod 3",
+        "direction": "n mod 2",
+        "crossbar": "n mod 4 in {2,3}"
+      },
+      "asserts": [
+        {
+          "claim": "z12-factors",
+          "status": "derived",
+          "statement": "Z/12 = Z/3 x Z/4, so 3 modalities x 4 elements covers twelve cells with no repeat and no gap.",
+          "derivation": "gcd(3,4)=1, Chinese Remainder Theorem. This is why there are twelve, not an observation that there happen to be.",
+          "finding": "F48"
+        }
+      ],
+      "carries_undetermined": [
+        {
+          "claim": "element-bit-assignment",
+          "status": "derived_given",
+          "statement": "up+unbarred is Fire, up+barred is Air, down+unbarred is Water, down+barred is Earth.",
+          "derivation": "THE DIRECTION BIT IS DENSITY. F19 records, and F70 confirms on a second artifact, that the elements ARE the states of matter: Fire = Plasma, Air = Gas, Water = Liquid, Earth = Solid. Split the four phases by density and plasma and gas are the rarefied pair, liquid and solid the dense pair; buoyancy lifts the first and sinks the second. That is the direction bit, four for four, one property throughout -- not 'fire rises' about one element but a single threshold on a single quantity sorting all four. And it derives exactly the half that needed deriving: the PARTITION, not which side of the page each lands on, which `direction-is-read-as-contrast` says the notation never reads anyway.",
+          "given": "the states-of-matter identification (F19/F70), and ordinary conditions, under which the density ordering of the four phases holds.",
+          "success_condition": "THE DIRECTION BIT IS REACHED (F148). What remains is the CROSSBAR bit, which partitions {Air, Earth} against {Fire, Water} -- in phases, {Gas, Solid} against {Plasma, Liquid}. F140 gave the bit a reading, open end versus bounded level, which the corpus itself names Destiny and Reality. What is missing is a property of the four phases that groups gas with solid against plasma with liquid. Density does not: solid and gas are the extremes of that ordering, not a pair. A pattern that fits and is NOT evidence: along the transition chain Solid-Liquid-Gas-Plasma the bit is the parity of the position, with positions 1 and 3 barred. With four items and two bits any assignment can be so described, and parity names no physical property. Recorded as F47 recorded the opponent-colour coincidence.",
+          "scope": "The direction bit only. The crossbar bit has a reading (F140) and no derivation. And the derivation runs through a physical identification, so it grounds the notation in matter rather than in geometry -- which is what the original success condition warned about, met by making the import explicit and total rather than anecdotal.",
+          "finding": "F51 -> F140 -> F148"
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "id": "Gemini",
+      "geometry": "arc",
+      "modality": "Mutable",
+      "element": "Air",
+      "apex_up": true,
+      "crossbar": true,
+      "rule": {
+        "geometry": "n mod 3",
+        "direction": "n mod 2",
+        "crossbar": "n mod 4 in {2,3}"
+      },
+      "asserts": [
+        {
+          "claim": "z12-factors",
+          "status": "derived",
+          "statement": "Z/12 = Z/3 x Z/4, so 3 modalities x 4 elements covers twelve cells with no repeat and no gap.",
+          "derivation": "gcd(3,4)=1, Chinese Remainder Theorem. This is why there are twelve, not an observation that there happen to be.",
+          "finding": "F48"
+        }
+      ],
+      "carries_undetermined": [
+        {
+          "claim": "element-bit-assignment",
+          "status": "derived_given",
+          "statement": "up+unbarred is Fire, up+barred is Air, down+unbarred is Water, down+barred is Earth.",
+          "derivation": "THE DIRECTION BIT IS DENSITY. F19 records, and F70 confirms on a second artifact, that the elements ARE the states of matter: Fire = Plasma, Air = Gas, Water = Liquid, Earth = Solid. Split the four phases by density and plasma and gas are the rarefied pair, liquid and solid the dense pair; buoyancy lifts the first and sinks the second. That is the direction bit, four for four, one property throughout -- not 'fire rises' about one element but a single threshold on a single quantity sorting all four. And it derives exactly the half that needed deriving: the PARTITION, not which side of the page each lands on, which `direction-is-read-as-contrast` says the notation never reads anyway.",
+          "given": "the states-of-matter identification (F19/F70), and ordinary conditions, under which the density ordering of the four phases holds.",
+          "success_condition": "THE DIRECTION BIT IS REACHED (F148). What remains is the CROSSBAR bit, which partitions {Air, Earth} against {Fire, Water} -- in phases, {Gas, Solid} against {Plasma, Liquid}. F140 gave the bit a reading, open end versus bounded level, which the corpus itself names Destiny and Reality. What is missing is a property of the four phases that groups gas with solid against plasma with liquid. Density does not: solid and gas are the extremes of that ordering, not a pair. A pattern that fits and is NOT evidence: along the transition chain Solid-Liquid-Gas-Plasma the bit is the parity of the position, with positions 1 and 3 barred. With four items and two bits any assignment can be so described, and parity names no physical property. Recorded as F47 recorded the opponent-colour coincidence.",
+          "scope": "The direction bit only. The crossbar bit has a reading (F140) and no derivation. And the derivation runs through a physical identification, so it grounds the notation in matter rather than in geometry -- which is what the original success condition warned about, met by making the import explicit and total rather than anecdotal.",
+          "finding": "F51 -> F140 -> F148"
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "id": "Cancer",
+      "geometry": "angle",
+      "modality": "Cardinal",
+      "element": "Water",
+      "apex_up": false,
+      "crossbar": false,
+      "rule": {
+        "geometry": "n mod 3",
+        "direction": "n mod 2",
+        "crossbar": "n mod 4 in {2,3}"
+      },
+      "asserts": [
+        {
+          "claim": "z12-factors",
+          "status": "derived",
+          "statement": "Z/12 = Z/3 x Z/4, so 3 modalities x 4 elements covers twelve cells with no repeat and no gap.",
+          "derivation": "gcd(3,4)=1, Chinese Remainder Theorem. This is why there are twelve, not an observation that there happen to be.",
+          "finding": "F48"
+        }
+      ],
+      "carries_undetermined": [
+        {
+          "claim": "element-bit-assignment",
+          "status": "derived_given",
+          "statement": "up+unbarred is Fire, up+barred is Air, down+unbarred is Water, down+barred is Earth.",
+          "derivation": "THE DIRECTION BIT IS DENSITY. F19 records, and F70 confirms on a second artifact, that the elements ARE the states of matter: Fire = Plasma, Air = Gas, Water = Liquid, Earth = Solid. Split the four phases by density and plasma and gas are the rarefied pair, liquid and solid the dense pair; buoyancy lifts the first and sinks the second. That is the direction bit, four for four, one property throughout -- not 'fire rises' about one element but a single threshold on a single quantity sorting all four. And it derives exactly the half that needed deriving: the PARTITION, not which side of the page each lands on, which `direction-is-read-as-contrast` says the notation never reads anyway.",
+          "given": "the states-of-matter identification (F19/F70), and ordinary conditions, under which the density ordering of the four phases holds.",
+          "success_condition": "THE DIRECTION BIT IS REACHED (F148). What remains is the CROSSBAR bit, which partitions {Air, Earth} against {Fire, Water} -- in phases, {Gas, Solid} against {Plasma, Liquid}. F140 gave the bit a reading, open end versus bounded level, which the corpus itself names Destiny and Reality. What is missing is a property of the four phases that groups gas with solid against plasma with liquid. Density does not: solid and gas are the extremes of that ordering, not a pair. A pattern that fits and is NOT evidence: along the transition chain Solid-Liquid-Gas-Plasma the bit is the parity of the position, with positions 1 and 3 barred. With four items and two bits any assignment can be so described, and parity names no physical property. Recorded as F47 recorded the opponent-colour coincidence.",
+          "scope": "The direction bit only. The crossbar bit has a reading (F140) and no derivation. And the derivation runs through a physical identification, so it grounds the notation in matter rather than in geometry -- which is what the original success condition warned about, met by making the import explicit and total rather than anecdotal.",
+          "finding": "F51 -> F140 -> F148"
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "id": "Leo",
+      "geometry": "square",
+      "modality": "Fixed",
+      "element": "Fire",
+      "apex_up": true,
+      "crossbar": false,
+      "rule": {
+        "geometry": "n mod 3",
+        "direction": "n mod 2",
+        "crossbar": "n mod 4 in {2,3}"
+      },
+      "asserts": [
+        {
+          "claim": "z12-factors",
+          "status": "derived",
+          "statement": "Z/12 = Z/3 x Z/4, so 3 modalities x 4 elements covers twelve cells with no repeat and no gap.",
+          "derivation": "gcd(3,4)=1, Chinese Remainder Theorem. This is why there are twelve, not an observation that there happen to be.",
+          "finding": "F48"
+        }
+      ],
+      "carries_undetermined": [
+        {
+          "claim": "element-bit-assignment",
+          "status": "derived_given",
+          "statement": "up+unbarred is Fire, up+barred is Air, down+unbarred is Water, down+barred is Earth.",
+          "derivation": "THE DIRECTION BIT IS DENSITY. F19 records, and F70 confirms on a second artifact, that the elements ARE the states of matter: Fire = Plasma, Air = Gas, Water = Liquid, Earth = Solid. Split the four phases by density and plasma and gas are the rarefied pair, liquid and solid the dense pair; buoyancy lifts the first and sinks the second. That is the direction bit, four for four, one property throughout -- not 'fire rises' about one element but a single threshold on a single quantity sorting all four. And it derives exactly the half that needed deriving: the PARTITION, not which side of the page each lands on, which `direction-is-read-as-contrast` says the notation never reads anyway.",
+          "given": "the states-of-matter identification (F19/F70), and ordinary conditions, under which the density ordering of the four phases holds.",
+          "success_condition": "THE DIRECTION BIT IS REACHED (F148). What remains is the CROSSBAR bit, which partitions {Air, Earth} against {Fire, Water} -- in phases, {Gas, Solid} against {Plasma, Liquid}. F140 gave the bit a reading, open end versus bounded level, which the corpus itself names Destiny and Reality. What is missing is a property of the four phases that groups gas with solid against plasma with liquid. Density does not: solid and gas are the extremes of that ordering, not a pair. A pattern that fits and is NOT evidence: along the transition chain Solid-Liquid-Gas-Plasma the bit is the parity of the position, with positions 1 and 3 barred. With four items and two bits any assignment can be so described, and parity names no physical property. Recorded as F47 recorded the opponent-colour coincidence.",
+          "scope": "The direction bit only. The crossbar bit has a reading (F140) and no derivation. And the derivation runs through a physical identification, so it grounds the notation in matter rather than in geometry -- which is what the original success condition warned about, met by making the import explicit and total rather than anecdotal.",
+          "finding": "F51 -> F140 -> F148"
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "id": "Virgo",
+      "geometry": "arc",
+      "modality": "Mutable",
+      "element": "Earth",
+      "apex_up": false,
+      "crossbar": true,
+      "rule": {
+        "geometry": "n mod 3",
+        "direction": "n mod 2",
+        "crossbar": "n mod 4 in {2,3}"
+      },
+      "asserts": [
+        {
+          "claim": "z12-factors",
+          "status": "derived",
+          "statement": "Z/12 = Z/3 x Z/4, so 3 modalities x 4 elements covers twelve cells with no repeat and no gap.",
+          "derivation": "gcd(3,4)=1, Chinese Remainder Theorem. This is why there are twelve, not an observation that there happen to be.",
+          "finding": "F48"
+        }
+      ],
+      "carries_undetermined": [
+        {
+          "claim": "element-bit-assignment",
+          "status": "derived_given",
+          "statement": "up+unbarred is Fire, up+barred is Air, down+unbarred is Water, down+barred is Earth.",
+          "derivation": "THE DIRECTION BIT IS DENSITY. F19 records, and F70 confirms on a second artifact, that the elements ARE the states of matter: Fire = Plasma, Air = Gas, Water = Liquid, Earth = Solid. Split the four phases by density and plasma and gas are the rarefied pair, liquid and solid the dense pair; buoyancy lifts the first and sinks the second. That is the direction bit, four for four, one property throughout -- not 'fire rises' about one element but a single threshold on a single quantity sorting all four. And it derives exactly the half that needed deriving: the PARTITION, not which side of the page each lands on, which `direction-is-read-as-contrast` says the notation never reads anyway.",
+          "given": "the states-of-matter identification (F19/F70), and ordinary conditions, under which the density ordering of the four phases holds.",
+          "success_condition": "THE DIRECTION BIT IS REACHED (F148). What remains is the CROSSBAR bit, which partitions {Air, Earth} against {Fire, Water} -- in phases, {Gas, Solid} against {Plasma, Liquid}. F140 gave the bit a reading, open end versus bounded level, which the corpus itself names Destiny and Reality. What is missing is a property of the four phases that groups gas with solid against plasma with liquid. Density does not: solid and gas are the extremes of that ordering, not a pair. A pattern that fits and is NOT evidence: along the transition chain Solid-Liquid-Gas-Plasma the bit is the parity of the position, with positions 1 and 3 barred. With four items and two bits any assignment can be so described, and parity names no physical property. Recorded as F47 recorded the opponent-colour coincidence.",
+          "scope": "The direction bit only. The crossbar bit has a reading (F140) and no derivation. And the derivation runs through a physical identification, so it grounds the notation in matter rather than in geometry -- which is what the original success condition warned about, met by making the import explicit and total rather than anecdotal.",
+          "finding": "F51 -> F140 -> F148"
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "id": "Libra",
+      "geometry": "angle",
+      "modality": "Cardinal",
+      "element": "Air",
+      "apex_up": true,
+      "crossbar": true,
+      "rule": {
+        "geometry": "n mod 3",
+        "direction": "n mod 2",
+        "crossbar": "n mod 4 in {2,3}"
+      },
+      "asserts": [
+        {
+          "claim": "z12-factors",
+          "status": "derived",
+          "statement": "Z/12 = Z/3 x Z/4, so 3 modalities x 4 elements covers twelve cells with no repeat and no gap.",
+          "derivation": "gcd(3,4)=1, Chinese Remainder Theorem. This is why there are twelve, not an observation that there happen to be.",
+          "finding": "F48"
+        }
+      ],
+      "carries_undetermined": [
+        {
+          "claim": "element-bit-assignment",
+          "status": "derived_given",
+          "statement": "up+unbarred is Fire, up+barred is Air, down+unbarred is Water, down+barred is Earth.",
+          "derivation": "THE DIRECTION BIT IS DENSITY. F19 records, and F70 confirms on a second artifact, that the elements ARE the states of matter: Fire = Plasma, Air = Gas, Water = Liquid, Earth = Solid. Split the four phases by density and plasma and gas are the rarefied pair, liquid and solid the dense pair; buoyancy lifts the first and sinks the second. That is the direction bit, four for four, one property throughout -- not 'fire rises' about one element but a single threshold on a single quantity sorting all four. And it derives exactly the half that needed deriving: the PARTITION, not which side of the page each lands on, which `direction-is-read-as-contrast` says the notation never reads anyway.",
+          "given": "the states-of-matter identification (F19/F70), and ordinary conditions, under which the density ordering of the four phases holds.",
+          "success_condition": "THE DIRECTION BIT IS REACHED (F148). What remains is the CROSSBAR bit, which partitions {Air, Earth} against {Fire, Water} -- in phases, {Gas, Solid} against {Plasma, Liquid}. F140 gave the bit a reading, open end versus bounded level, which the corpus itself names Destiny and Reality. What is missing is a property of the four phases that groups gas with solid against plasma with liquid. Density does not: solid and gas are the extremes of that ordering, not a pair. A pattern that fits and is NOT evidence: along the transition chain Solid-Liquid-Gas-Plasma the bit is the parity of the position, with positions 1 and 3 barred. With four items and two bits any assignment can be so described, and parity names no physical property. Recorded as F47 recorded the opponent-colour coincidence.",
+          "scope": "The direction bit only. The crossbar bit has a reading (F140) and no derivation. And the derivation runs through a physical identification, so it grounds the notation in matter rather than in geometry -- which is what the original success condition warned about, met by making the import explicit and total rather than anecdotal.",
+          "finding": "F51 -> F140 -> F148"
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "id": "Scorpio",
+      "geometry": "square",
+      "modality": "Fixed",
+      "element": "Water",
+      "apex_up": false,
+      "crossbar": false,
+      "rule": {
+        "geometry": "n mod 3",
+        "direction": "n mod 2",
+        "crossbar": "n mod 4 in {2,3}"
+      },
+      "asserts": [
+        {
+          "claim": "z12-factors",
+          "status": "derived",
+          "statement": "Z/12 = Z/3 x Z/4, so 3 modalities x 4 elements covers twelve cells with no repeat and no gap.",
+          "derivation": "gcd(3,4)=1, Chinese Remainder Theorem. This is why there are twelve, not an observation that there happen to be.",
+          "finding": "F48"
+        }
+      ],
+      "carries_undetermined": [
+        {
+          "claim": "element-bit-assignment",
+          "status": "derived_given",
+          "statement": "up+unbarred is Fire, up+barred is Air, down+unbarred is Water, down+barred is Earth.",
+          "derivation": "THE DIRECTION BIT IS DENSITY. F19 records, and F70 confirms on a second artifact, that the elements ARE the states of matter: Fire = Plasma, Air = Gas, Water = Liquid, Earth = Solid. Split the four phases by density and plasma and gas are the rarefied pair, liquid and solid the dense pair; buoyancy lifts the first and sinks the second. That is the direction bit, four for four, one property throughout -- not 'fire rises' about one element but a single threshold on a single quantity sorting all four. And it derives exactly the half that needed deriving: the PARTITION, not which side of the page each lands on, which `direction-is-read-as-contrast` says the notation never reads anyway.",
+          "given": "the states-of-matter identification (F19/F70), and ordinary conditions, under which the density ordering of the four phases holds.",
+          "success_condition": "THE DIRECTION BIT IS REACHED (F148). What remains is the CROSSBAR bit, which partitions {Air, Earth} against {Fire, Water} -- in phases, {Gas, Solid} against {Plasma, Liquid}. F140 gave the bit a reading, open end versus bounded level, which the corpus itself names Destiny and Reality. What is missing is a property of the four phases that groups gas with solid against plasma with liquid. Density does not: solid and gas are the extremes of that ordering, not a pair. A pattern that fits and is NOT evidence: along the transition chain Solid-Liquid-Gas-Plasma the bit is the parity of the position, with positions 1 and 3 barred. With four items and two bits any assignment can be so described, and parity names no physical property. Recorded as F47 recorded the opponent-colour coincidence.",
+          "scope": "The direction bit only. The crossbar bit has a reading (F140) and no derivation. And the derivation runs through a physical identification, so it grounds the notation in matter rather than in geometry -- which is what the original success condition warned about, met by making the import explicit and total rather than anecdotal.",
+          "finding": "F51 -> F140 -> F148"
+        }
+      ]
+    },
+    {
+      "n": 9,
+      "id": "Sagittarius",
+      "geometry": "arc",
+      "modality": "Mutable",
+      "element": "Fire",
+      "apex_up": true,
+      "crossbar": false,
+      "rule": {
+        "geometry": "n mod 3",
+        "direction": "n mod 2",
+        "crossbar": "n mod 4 in {2,3}"
+      },
+      "asserts": [
+        {
+          "claim": "z12-factors",
+          "status": "derived",
+          "statement": "Z/12 = Z/3 x Z/4, so 3 modalities x 4 elements covers twelve cells with no repeat and no gap.",
+          "derivation": "gcd(3,4)=1, Chinese Remainder Theorem. This is why there are twelve, not an observation that there happen to be.",
+          "finding": "F48"
+        }
+      ],
+      "carries_undetermined": [
+        {
+          "claim": "element-bit-assignment",
+          "status": "derived_given",
+          "statement": "up+unbarred is Fire, up+barred is Air, down+unbarred is Water, down+barred is Earth.",
+          "derivation": "THE DIRECTION BIT IS DENSITY. F19 records, and F70 confirms on a second artifact, that the elements ARE the states of matter: Fire = Plasma, Air = Gas, Water = Liquid, Earth = Solid. Split the four phases by density and plasma and gas are the rarefied pair, liquid and solid the dense pair; buoyancy lifts the first and sinks the second. That is the direction bit, four for four, one property throughout -- not 'fire rises' about one element but a single threshold on a single quantity sorting all four. And it derives exactly the half that needed deriving: the PARTITION, not which side of the page each lands on, which `direction-is-read-as-contrast` says the notation never reads anyway.",
+          "given": "the states-of-matter identification (F19/F70), and ordinary conditions, under which the density ordering of the four phases holds.",
+          "success_condition": "THE DIRECTION BIT IS REACHED (F148). What remains is the CROSSBAR bit, which partitions {Air, Earth} against {Fire, Water} -- in phases, {Gas, Solid} against {Plasma, Liquid}. F140 gave the bit a reading, open end versus bounded level, which the corpus itself names Destiny and Reality. What is missing is a property of the four phases that groups gas with solid against plasma with liquid. Density does not: solid and gas are the extremes of that ordering, not a pair. A pattern that fits and is NOT evidence: along the transition chain Solid-Liquid-Gas-Plasma the bit is the parity of the position, with positions 1 and 3 barred. With four items and two bits any assignment can be so described, and parity names no physical property. Recorded as F47 recorded the opponent-colour coincidence.",
+          "scope": "The direction bit only. The crossbar bit has a reading (F140) and no derivation. And the derivation runs through a physical identification, so it grounds the notation in matter rather than in geometry -- which is what the original success condition warned about, met by making the import explicit and total rather than anecdotal.",
+          "finding": "F51 -> F140 -> F148"
+        }
+      ]
+    },
+    {
+      "n": 10,
+      "id": "Capricorn",
+      "geometry": "angle",
+      "modality": "Cardinal",
+      "element": "Earth",
+      "apex_up": false,
+      "crossbar": true,
+      "rule": {
+        "geometry": "n mod 3",
+        "direction": "n mod 2",
+        "crossbar": "n mod 4 in {2,3}"
+      },
+      "asserts": [
+        {
+          "claim": "z12-factors",
+          "status": "derived",
+          "statement": "Z/12 = Z/3 x Z/4, so 3 modalities x 4 elements covers twelve cells with no repeat and no gap.",
+          "derivation": "gcd(3,4)=1, Chinese Remainder Theorem. This is why there are twelve, not an observation that there happen to be.",
+          "finding": "F48"
+        }
+      ],
+      "carries_undetermined": [
+        {
+          "claim": "element-bit-assignment",
+          "status": "derived_given",
+          "statement": "up+unbarred is Fire, up+barred is Air, down+unbarred is Water, down+barred is Earth.",
+          "derivation": "THE DIRECTION BIT IS DENSITY. F19 records, and F70 confirms on a second artifact, that the elements ARE the states of matter: Fire = Plasma, Air = Gas, Water = Liquid, Earth = Solid. Split the four phases by density and plasma and gas are the rarefied pair, liquid and solid the dense pair; buoyancy lifts the first and sinks the second. That is the direction bit, four for four, one property throughout -- not 'fire rises' about one element but a single threshold on a single quantity sorting all four. And it derives exactly the half that needed deriving: the PARTITION, not which side of the page each lands on, which `direction-is-read-as-contrast` says the notation never reads anyway.",
+          "given": "the states-of-matter identification (F19/F70), and ordinary conditions, under which the density ordering of the four phases holds.",
+          "success_condition": "THE DIRECTION BIT IS REACHED (F148). What remains is the CROSSBAR bit, which partitions {Air, Earth} against {Fire, Water} -- in phases, {Gas, Solid} against {Plasma, Liquid}. F140 gave the bit a reading, open end versus bounded level, which the corpus itself names Destiny and Reality. What is missing is a property of the four phases that groups gas with solid against plasma with liquid. Density does not: solid and gas are the extremes of that ordering, not a pair. A pattern that fits and is NOT evidence: along the transition chain Solid-Liquid-Gas-Plasma the bit is the parity of the position, with positions 1 and 3 barred. With four items and two bits any assignment can be so described, and parity names no physical property. Recorded as F47 recorded the opponent-colour coincidence.",
+          "scope": "The direction bit only. The crossbar bit has a reading (F140) and no derivation. And the derivation runs through a physical identification, so it grounds the notation in matter rather than in geometry -- which is what the original success condition warned about, met by making the import explicit and total rather than anecdotal.",
+          "finding": "F51 -> F140 -> F148"
+        }
+      ]
+    },
+    {
+      "n": 11,
+      "id": "Aquarius",
+      "geometry": "square",
+      "modality": "Fixed",
+      "element": "Air",
+      "apex_up": true,
+      "crossbar": true,
+      "rule": {
+        "geometry": "n mod 3",
+        "direction": "n mod 2",
+        "crossbar": "n mod 4 in {2,3}"
+      },
+      "asserts": [
+        {
+          "claim": "z12-factors",
+          "status": "derived",
+          "statement": "Z/12 = Z/3 x Z/4, so 3 modalities x 4 elements covers twelve cells with no repeat and no gap.",
+          "derivation": "gcd(3,4)=1, Chinese Remainder Theorem. This is why there are twelve, not an observation that there happen to be.",
+          "finding": "F48"
+        }
+      ],
+      "carries_undetermined": [
+        {
+          "claim": "element-bit-assignment",
+          "status": "derived_given",
+          "statement": "up+unbarred is Fire, up+barred is Air, down+unbarred is Water, down+barred is Earth.",
+          "derivation": "THE DIRECTION BIT IS DENSITY. F19 records, and F70 confirms on a second artifact, that the elements ARE the states of matter: Fire = Plasma, Air = Gas, Water = Liquid, Earth = Solid. Split the four phases by density and plasma and gas are the rarefied pair, liquid and solid the dense pair; buoyancy lifts the first and sinks the second. That is the direction bit, four for four, one property throughout -- not 'fire rises' about one element but a single threshold on a single quantity sorting all four. And it derives exactly the half that needed deriving: the PARTITION, not which side of the page each lands on, which `direction-is-read-as-contrast` says the notation never reads anyway.",
+          "given": "the states-of-matter identification (F19/F70), and ordinary conditions, under which the density ordering of the four phases holds.",
+          "success_condition": "THE DIRECTION BIT IS REACHED (F148). What remains is the CROSSBAR bit, which partitions {Air, Earth} against {Fire, Water} -- in phases, {Gas, Solid} against {Plasma, Liquid}. F140 gave the bit a reading, open end versus bounded level, which the corpus itself names Destiny and Reality. What is missing is a property of the four phases that groups gas with solid against plasma with liquid. Density does not: solid and gas are the extremes of that ordering, not a pair. A pattern that fits and is NOT evidence: along the transition chain Solid-Liquid-Gas-Plasma the bit is the parity of the position, with positions 1 and 3 barred. With four items and two bits any assignment can be so described, and parity names no physical property. Recorded as F47 recorded the opponent-colour coincidence.",
+          "scope": "The direction bit only. The crossbar bit has a reading (F140) and no derivation. And the derivation runs through a physical identification, so it grounds the notation in matter rather than in geometry -- which is what the original success condition warned about, met by making the import explicit and total rather than anecdotal.",
+          "finding": "F51 -> F140 -> F148"
+        }
+      ]
+    },
+    {
+      "n": 12,
+      "id": "Pisces",
+      "geometry": "arc",
+      "modality": "Mutable",
+      "element": "Water",
+      "apex_up": false,
+      "crossbar": false,
+      "rule": {
+        "geometry": "n mod 3",
+        "direction": "n mod 2",
+        "crossbar": "n mod 4 in {2,3}"
+      },
+      "asserts": [
+        {
+          "claim": "z12-factors",
+          "status": "derived",
+          "statement": "Z/12 = Z/3 x Z/4, so 3 modalities x 4 elements covers twelve cells with no repeat and no gap.",
+          "derivation": "gcd(3,4)=1, Chinese Remainder Theorem. This is why there are twelve, not an observation that there happen to be.",
+          "finding": "F48"
+        }
+      ],
+      "carries_undetermined": [
+        {
+          "claim": "element-bit-assignment",
+          "status": "derived_given",
+          "statement": "up+unbarred is Fire, up+barred is Air, down+unbarred is Water, down+barred is Earth.",
+          "derivation": "THE DIRECTION BIT IS DENSITY. F19 records, and F70 confirms on a second artifact, that the elements ARE the states of matter: Fire = Plasma, Air = Gas, Water = Liquid, Earth = Solid. Split the four phases by density and plasma and gas are the rarefied pair, liquid and solid the dense pair; buoyancy lifts the first and sinks the second. That is the direction bit, four for four, one property throughout -- not 'fire rises' about one element but a single threshold on a single quantity sorting all four. And it derives exactly the half that needed deriving: the PARTITION, not which side of the page each lands on, which `direction-is-read-as-contrast` says the notation never reads anyway.",
+          "given": "the states-of-matter identification (F19/F70), and ordinary conditions, under which the density ordering of the four phases holds.",
+          "success_condition": "THE DIRECTION BIT IS REACHED (F148). What remains is the CROSSBAR bit, which partitions {Air, Earth} against {Fire, Water} -- in phases, {Gas, Solid} against {Plasma, Liquid}. F140 gave the bit a reading, open end versus bounded level, which the corpus itself names Destiny and Reality. What is missing is a property of the four phases that groups gas with solid against plasma with liquid. Density does not: solid and gas are the extremes of that ordering, not a pair. A pattern that fits and is NOT evidence: along the transition chain Solid-Liquid-Gas-Plasma the bit is the parity of the position, with positions 1 and 3 barred. With four items and two bits any assignment can be so described, and parity names no physical property. Recorded as F47 recorded the opponent-colour coincidence.",
+          "scope": "The direction bit only. The crossbar bit has a reading (F140) and no derivation. And the derivation runs through a physical identification, so it grounds the notation in matter rather than in geometry -- which is what the original success condition warned about, met by making the import explicit and total rather than anecdotal.",
+          "finding": "F51 -> F140 -> F148"
+        }
+      ]
+    }
+  ],
+  "operators": [
+    {
+      "id": "superpose_concentric",
+      "arity": 2,
+      "attestation": "F44/F56",
+      "attested_by": "the hexagram; Point-in-Circle; the teardrop",
+      "status": "measured",
+      "note": "attested on a sheet; its semantics are not thereby derived"
+    },
+    {
+      "id": "superpose_displaced",
+      "arity": 2,
+      "attestation": "F44",
+      "attested_by": "Chaos: the two triangles side by side",
+      "status": "measured",
+      "note": "attested on a sheet; its semantics are not thereby derived"
+    },
+    {
+      "id": "cross",
+      "arity": 2,
+      "attestation": "F9",
+      "attested_by": "SymbolFolds: two lines at right angles -> +",
+      "status": "measured",
+      "note": "attested on a sheet; its semantics are not thereby derived"
+    },
+    {
+      "id": "concatenate",
+      "arity": 2,
+      "attestation": "F42",
+      "attested_by": "arch followed by cup = the sine",
+      "status": "measured",
+      "note": "attested on a sheet; its semantics are not thereby derived"
+    },
+    {
+      "id": "nest",
+      "arity": 2,
+      "attestation": "F56",
+      "attested_by": "Point inside Circle; Universe containing Star System",
+      "status": "measured",
+      "note": "attested on a sheet; its semantics are not thereby derived"
+    },
+    {
+      "id": "reflect_pair",
+      "arity": 1,
+      "attestation": "F9",
+      "attested_by": "SymbolFolds: two waves mirrored -> infinity",
+      "status": "measured",
+      "note": "attested on a sheet; its semantics are not thereby derived"
+    }
+  ],
+  "combination_space": {
+    "depth": 2,
+    "combinations": 191,
+    "orbits": 93,
+    "recorded": 4,
+    "undetermined": 89,
+    "orbit count is exact": false,
+    "orbit count range": [
+      89,
+      94
+    ],
+    "orbit count bound": "the-orbit-count-is-tolerance-bounded",
+    "note": "Orbits are the thesaurus: combinations producing the same figure up to rotation and reflection are synonyms. An orbit with no recorded meaning is UNDETERMINED, not free to fill. `combinations` is exact; `orbits` is a quotient taken at a calibrated tolerance and is 89-94 across the interval that calibration licenses -- cite it as a central value, never as an exact count. See the-orbit-count-is-tolerance-bounded."
+  },
+  "terms": [
+    {
+      "id": "Active",
+      "primary_sense": "Angle",
+      "status": "derived",
+      "senses": [
+        {
+          "referent": "Angle",
+          "sources": [
+            "EmotionalPermutation",
+            "Base12Harmonics"
+          ],
+          "primary": true,
+          "note": null
+        }
+      ]
+    },
+    {
+      "id": "Aether",
+      "primary_sense": "Angle",
+      "status": "derived",
+      "senses": [
+        {
+          "referent": "Angle",
+          "sources": [
+            "Base6Set",
+            "CheatSheet",
+            "CosmicCypher_Mk3_2024-7-Cropped_Banner2"
+          ],
+          "primary": true,
+          "note": "three artifacts; and the name reads off the figure -- aether is the upper air, the mark reaches up"
+        },
+        {
+          "referent": "hexagram (Order/Harmony)",
+          "sources": [
+            "SolCenter"
+          ],
+          "primary": false,
+          "note": "one artifact, and it conflates Aether with Order, which the cheat sheet lists separately"
+        }
+      ]
+    },
+    {
+      "id": "Alpha",
+      "primary_sense": "Angle",
+      "status": "derived",
+      "senses": [
+        {
+          "referent": "Angle",
+          "sources": [
+            "Base6Set",
+            "CheatSheet",
+            "CosmicCypher_Mk3_2024-7-Cropped_Banner2",
+            "CosmicBalance"
+          ],
+          "primary": true,
+          "note": null
+        }
+      ]
+    },
+    {
+      "id": "Amperage",
+      "primary_sense": null,
+      "status": "undetermined",
+      "senses": [
+        {
+          "referent": "Line",
+          "sources": [
+            "PointShapeLineWaveAngleCurve"
+          ],
+          "primary": null,
+          "note": "measured off the alignment: `Amperage` at rows 137-155 sits inside the Line box's span of 113-267, over 100 rows clear of the Wave box. the two sheets swap these. They agree on DC-versus-AC, which the geometry settles -- a straight stroke is constant, a sine alternates -- and on Power = Voltage x Amperage. Current-versus-potential is not a distinction any figure makes, and that is exactly where they part. Nothing anchors either reading, so neither is primary."
+        },
+        {
+          "referent": "Wave",
+          "sources": [
+            "CheatSheet"
+          ],
+          "primary": null,
+          "note": "the cheat sheet's electrical panel reads Amperage `S` Liquidity, against Voltage `|` Value"
+        }
+      ]
+    },
+    {
+      "id": "Cardinal",
+      "primary_sense": "Angle",
+      "status": "derived",
+      "senses": [
+        {
+          "referent": "Angle",
+          "sources": [
+            "Base12_signs",
+            "Base36_Decans",
+            "CheatSheet",
+            "NaturesAndModalities",
+            "CosmicCypher_Mk3_2024-7-Cropped_Banner2"
+          ],
+          "primary": true,
+          "note": null
+        }
+      ]
+    },
+    {
+      "id": "Chaos",
+      "primary_sense": "Wave",
+      "status": "derived",
+      "senses": [
+        {
+          "referent": "Wave",
+          "sources": [
+            "TextPrimer",
+            "CheatSheet",
+            "Base6_rotary"
+          ],
+          "primary": true,
+          "note": null
+        },
+        {
+          "referent": "adjacent triangles",
+          "sources": [
+            "SolCenter"
+          ],
+          "primary": false,
+          "note": null
+        }
+      ]
+    },
+    {
+      "id": "Core",
+      "primary_sense": "Point",
+      "status": "derived",
+      "senses": [
+        {
+          "referent": "Point",
+          "sources": [
+            "TextPrimer",
+            "CheatSheet",
+            "CosmicBalance",
+            "Base6Set",
+            "Base24Cusps"
+          ],
+          "primary": true,
+          "note": null
+        }
+      ]
+    },
+    {
+      "id": "Destiny",
+      "primary_sense": "Wave family (Fire & Water)",
+      "status": "derived",
+      "senses": [
+        {
+          "referent": "Wave family (Fire & Water)",
+          "sources": [
+            "CosmicFamilies",
+            "Base12_signs",
+            "CheatSheet"
+          ],
+          "primary": true,
+          "note": null
+        },
+        {
+          "referent": "right axis pole, opposite Reality",
+          "sources": [
+            "CosmicBalance"
+          ],
+          "primary": false,
+          "note": null
+        }
+      ]
+    },
+    {
+      "id": "Fixed",
+      "primary_sense": "Line",
+      "status": "derived",
+      "senses": [
+        {
+          "referent": "Line",
+          "sources": [
+            "Base12_signs",
+            "Base36_Decans",
+            "CheatSheet",
+            "NaturesAndModalities",
+            "CosmicCypher_Mk3_2024-7-Cropped_Banner2"
+          ],
+          "primary": true,
+          "note": null
+        }
+      ]
+    },
+    {
+      "id": "Life",
+      "primary_sense": null,
+      "status": "undetermined",
+      "senses": [
+        {
+          "referent": "teardrop (Angle + Curve)",
+          "sources": [
+            "CheatSheet",
+            "CosmicBalance"
+          ],
+          "primary": null,
+          "note": "UNRESOLVED: the cheat sheet's In/Out/Rise/Fall panel puts Life on the teardrop"
+        },
+        {
+          "referent": "spiral (Generation/Creation)",
+          "sources": [
+            "CosmicBalance"
+          ],
+          "primary": null,
+          "note": "UNRESOLVED: the same sheet labels the spiral Life/Generation. One sheet, two marks, same word."
+        }
+      ]
+    },
+    {
+      "id": "Many",
+      "primary_sense": "Wave",
+      "status": "derived",
+      "senses": [
+        {
+          "referent": "Wave",
+          "sources": [
+            "CosmicBalance",
+            "Base24Cusps"
+          ],
+          "primary": true,
+          "note": null
+        }
+      ]
+    },
+    {
+      "id": "Mixed",
+      "primary_sense": "Wave",
+      "status": "derived",
+      "senses": [
+        {
+          "referent": "Wave",
+          "sources": [
+            "SolCenter",
+            "Base16_Redux"
+          ],
+          "primary": true,
+          "note": null
+        }
+      ]
+    },
+    {
+      "id": "Mutable",
+      "primary_sense": "Curve",
+      "status": "derived",
+      "senses": [
+        {
+          "referent": "Curve",
+          "sources": [
+            "Base12_signs",
+            "Base36_Decans",
+            "CheatSheet",
+            "NaturesAndModalities",
+            "CosmicCypher_Mk3_2024-7-Cropped_Banner2"
+          ],
+          "primary": true,
+          "note": null
+        }
+      ]
+    },
+    {
+      "id": "Nether",
+      "primary_sense": "Curve",
+      "status": "derived",
+      "senses": [
+        {
+          "referent": "Curve",
+          "sources": [
+            "Base6Set",
+            "CheatSheet",
+            "CosmicCypher_Mk3_2024-7-Cropped_Banner2"
+          ],
+          "primary": true,
+          "note": "three artifacts; nether means beneath, and the mark opens downward"
+        },
+        {
+          "referent": "adjacent triangles (Chaos/Discord)",
+          "sources": [
+            "SolCenter"
+          ],
+          "primary": false,
+          "note": null
+        }
+      ]
+    },
+    {
+      "id": "Omega",
+      "primary_sense": "Curve",
+      "status": "derived",
+      "senses": [
+        {
+          "referent": "Curve",
+          "sources": [
+            "Base6Set",
+            "CheatSheet",
+            "CosmicCypher_Mk3_2024-7-Cropped_Banner2",
+            "CosmicBalance"
+          ],
+          "primary": true,
+          "note": null
+        }
+      ]
+    },
+    {
+      "id": "One",
+      "primary_sense": "Line",
+      "status": "derived",
+      "senses": [
+        {
+          "referent": "Line",
+          "sources": [
+            "CosmicBalance",
+            "Base24Cusps"
+          ],
+          "primary": true,
+          "note": null
+        }
+      ]
+    },
+    {
+      "id": "Order",
+      "primary_sense": "Line",
+      "status": "derived",
+      "senses": [
+        {
+          "referent": "Line",
+          "sources": [
+            "TextPrimer",
+            "CheatSheet",
+            "Base6_rotary"
+          ],
+          "primary": true,
+          "note": null
+        },
+        {
+          "referent": "hexagram",
+          "sources": [
+            "SolCenter"
+          ],
+          "primary": false,
+          "note": null
+        }
+      ]
+    },
+    {
+      "id": "Reality",
+      "primary_sense": "Line family (Air & Earth)",
+      "status": "derived",
+      "senses": [
+        {
+          "referent": "Line family (Air & Earth)",
+          "sources": [
+            "CosmicFamilies",
+            "Base12_signs",
+            "CheatSheet"
+          ],
+          "primary": true,
+          "note": null
+        },
+        {
+          "referent": "right axis pole, opposite Destiny",
+          "sources": [
+            "CosmicBalance"
+          ],
+          "primary": false,
+          "note": null
+        }
+      ]
+    },
+    {
+      "id": "Receptive",
+      "primary_sense": "Curve",
+      "status": "derived",
+      "senses": [
+        {
+          "referent": "Curve",
+          "sources": [
+            "EmotionalPermutation",
+            "Base12Harmonics"
+          ],
+          "primary": true,
+          "note": null
+        }
+      ]
+    },
+    {
+      "id": "Reflective",
+      "primary_sense": "Line",
+      "status": "derived",
+      "senses": [
+        {
+          "referent": "Line",
+          "sources": [
+            "EmotionalPermutation",
+            "Base12Harmonics"
+          ],
+          "primary": true,
+          "note": null
+        }
+      ]
+    },
+    {
+      "id": "Void",
+      "primary_sense": "Circle",
+      "status": "derived",
+      "senses": [
+        {
+          "referent": "Circle",
+          "sources": [
+            "TextPrimer",
+            "CheatSheet",
+            "CosmicBalance",
+            "Base24Cusps"
+          ],
+          "primary": true,
+          "note": null
+        }
+      ]
+    },
+    {
+      "id": "Voltage",
+      "primary_sense": null,
+      "status": "undetermined",
+      "senses": [
+        {
+          "referent": "Wave",
+          "sources": [
+            "PointShapeLineWaveAngleCurve"
+          ],
+          "primary": null,
+          "note": "`AC` at rows 373-391 and `Voltage` at 403-426 sit inside the Wave box's span of 283-437. the two sheets swap these. They agree on DC-versus-AC, which the geometry settles -- a straight stroke is constant, a sine alternates -- and on Power = Voltage x Amperage. Current-versus-potential is not a distinction any figure makes, and that is exactly where they part. Nothing anchors either reading, so neither is primary."
+        },
+        {
+          "referent": "Line",
+          "sources": [
+            "CheatSheet"
+          ],
+          "primary": null,
+          "note": "the cheat sheet reads Voltage `|` Value, against Amperage `S` Liquidity"
+        }
+      ]
+    },
+    {
+      "id": "Yang",
+      "primary_sense": "Angle",
+      "status": "derived",
+      "senses": [
+        {
+          "referent": "Angle",
+          "sources": [
+            "AI_Primer"
+          ],
+          "primary": true,
+          "note": "Yang active/upward on the up-pointing angle. Conventional and internally consistent."
+        },
+        {
+          "referent": "Curve",
+          "sources": [
+            "CheatSheet"
+          ],
+          "primary": false,
+          "note": "ERROR. See Yin."
+        }
+      ]
+    },
+    {
+      "id": "Yin",
+      "primary_sense": "Curve",
+      "status": "derived",
+      "senses": [
+        {
+          "referent": "Curve",
+          "sources": [
+            "AI_Primer"
+          ],
+          "primary": true,
+          "note": "AI_Primer v02a puts Yin on the down-opening curve, which matches both the received convention (Yin receptive/downward) and the same sheet's own Act/Pass modality row."
+        },
+        {
+          "referent": "Angle",
+          "sources": [
+            "CheatSheet"
+          ],
+          "primary": false,
+          "note": "ERROR. CheatSheet-ReferenceImage has the pair inverted; the panels are otherwise identical."
+        }
+      ]
+    }
+  ],
+  "claims": {
+    "a-butt-joint-is-not-a-kind-of-terminal": {
+      "claim": "a-butt-joint-is-not-a-kind-of-terminal",
+      "status": "derived_given",
+      "statement": "Two strokes meeting end to end make ink with no terminal in it. There are two kinds of terminal, not three: free, and stopping on other ink.",
+      "derivation": "A terminal is a place where the ink locally stops. Where two ends meet, it does not stop -- one strand arrives and one leaves, valence 2, which is what an unbroken stroke does everywhere along its length. Nothing in the ink marks the join.",
+      "given": "that ink is a set of covered points, so a join leaves no trace of itself."
+    },
+    "a-chain-of-segments-buys-peaks-not-turning": {
+      "claim": "a-chain-of-segments-buys-peaks-not-turning",
+      "status": "measured",
+      "statement": "What a sequence of segments reaches that a single segment cannot is more than one place where the turning concentrates. Segment COUNT, which the roster had as the axis, is not it.",
+      "success_condition": "A chain of n segments with more than one concentrated place that a single segment reproduces."
+    },
+    "a-coarse-alignment-search-inflates-every-distance": {
+      "claim": "a-coarse-alignment-search-inflates-every-distance",
+      "status": "measured",
+      "statement": "Distances computed by minimising over a grid of rotations are biased upward, always, and the bias is large relative to the separations the notation depends on.",
+      "success_condition": "A search whose reported minimum does not fall as the grid is refined."
+    },
+    "a-dependent-occupies-an-angle-not-a-bearing": {
+      "claim": "a-dependent-occupies-an-angle-not-a-bearing",
+      "status": "derived",
+      "statement": "How many dependents an anchor can carry is set by geometry, not by resolution: a dependent of relative scale s at separation r subtends 2*arctan(s/r), and at most 360 divided by that many fit around the anchor.",
+      "derivation": "A dependent is not a point at a bearing; it has extent, so it occupies an angular width seen from the anchor's centre. Two whose widths overlap are one figure rather than two dependents. The resolution limit gives a far larger number -- 62 to 376 distinguishable bearings -- and that number is not a capacity, because the marks would be on top of each other long before the bearings became indistinguishable."
+    },
+    "a-fixed-tolerance-in-absolute-units-is-the-same-error-three-times": {
+      "claim": "a-fixed-tolerance-in-absolute-units-is-the-same-error-three-times",
+      "status": "measured",
+      "statement": "Three separate constants in this corpus were expressed in units that the thing being measured does not control, and each reported its own units as structure.",
+      "success_condition": "A threshold in this corpus stated in absolute units that survives a change of resolution, sampling or scale."
+    },
+    "a-hand-does-not-hold-the-unit-steady": {
+      "claim": "a-hand-does-not-hold-the-unit-steady",
+      "status": "measured",
+      "statement": "The notation's unit is intrinsic but not stable. On the one drawing nobody generated, the pen width varies by a quarter within a single stroke and by a factor of 1.65 across one symbol pair.",
+      "success_condition": "A hand-drawn figure whose pen width is as steady as a generated one."
+    },
+    "a-hand-drawn-turning-has-a-noise-floor": {
+      "claim": "a-hand-drawn-turning-has-a-noise-floor",
+      "status": "withdrawn",
+      "statement": "WITHDRAWN. The claim said a photographed stroke's turning is real only above sqrt(m) * arctan(w/2d) -- about 143 degrees for a 29-step run. Both the derivation and the evidence were wrong.",
+      "why_withdrawn": "The derivation assumed the per-step direction errors are INDEPENDENT, so that they accumulate as a random walk. They are not: thinning picks one consistent line through a stroke, and the errors along it are correlated. And the large errors that appeared to confirm the model were a BUG. The tip of a skeleton at the end of a staircase has TWO neighbours -- the pixel before it and the one before that, which are mutually adjacent -- so a neighbour-count test for ends found none at all on a plain arc. The edge walk then started from the minimum-sorted pixel, which is in the MIDDLE, and covered exactly half the figure. A 180-degree arc read 76.9 degrees and a 270-degree arc read 115.9: halvings, registered as noise, with a derivation attached to them. The errors moved with the raster because the spur that triggered the split did."
+    },
+    "a-junction-is-odd-exactly-when-a-stroke-ends-there": {
+      "claim": "a-junction-is-odd-exactly-when-a-stroke-ends-there",
+      "status": "derived",
+      "statement": "The valence of a junction is even if and only if no stroke terminates at it. Every odd valence in the notation is the signature of a terminal.",
+      "derivation": "Valence is the number of pieces of stroke leaving the point, counted as crossings of a small circle round it. A run that passes through enters once and leaves once and so contributes two; a run that ENDS there enters and does not leave, contributing one. Parity therefore counts terminals, and nothing else."
+    },
+    "a-photographed-stroke-is-measured-at-the-pen-width": {
+      "claim": "a-photographed-stroke-is-measured-at-the-pen-width",
+      "status": "measured",
+      "statement": "Turning cannot be read from a skeleton at pixel resolution. The scale at which it can be read is the pen's own width.",
+      "success_condition": "A spacing at which a photographed figure's turning stops changing. There is none; the honest step is the pen's width, and the sensitivity belongs beside the number."
+    },
+    "a-redundant-point-changes-a-figure": {
+      "claim": "a-redundant-point-changes-a-figure",
+      "status": "measured",
+      "statement": "The corpus never draws it. Every attested Point adds ink: the question cannot be settled from this corpus, and that is now measured rather than unexamined.",
+      "success_condition": "SEARCHED AND NOT FOUND (F138). The nearest thing drawn is the cheat sheet's `To`/`From` pair -- the same arrow and the same 224 px disc, the Point 15.4 px from the head in one and 14.9 px from the tail in the other, against 121.7 and 118.7 px to the far end. In both the Point is SEPARATE INK, clear of the stroke by 7 px and 3 px. Elsewhere the same: `(.)` sits at a circle's centre, which the circle does not pass through, and `!` sits below a stroke's end. To reopen this would take an artifact outside the 24 sheets read.",
+      "finding": "F126 -> F138"
+    },
+    "a-segment-has-no-extent-axis": {
+      "claim": "a-segment-has-no-extent-axis",
+      "status": "measured",
+      "statement": "A segment's own extent is not an axis of its shape. Turning and concentration are scale-free, so scaling a segment leaves both unchanged and the figure identical.",
+      "derivation": "Turning is an angle, unaffected by scale. Concentration is a ratio of turning to turning, likewise. Measured: a segment scaled by 0.25, 1 and 4 gives turning 119.7 and concentration 0.490 at every scale, at Hausdorff distance 0.00e+00 from the original after normalisation.",
+      "given": "a-stroke-accumulates-its-features"
+    },
+    "a-single-run-reaches-every-symmetry-order": {
+      "claim": "a-single-run-reaches-every-symmetry-order",
+      "status": "measured",
+      "statement": "One closed run reaches every rotational symmetry order directly, including the three-fold and six-fold that composing two marks cannot reach at all.",
+      "success_condition": "A symmetry order reachable by composition and not by a single run."
+    },
+    "a-single-segment-beats-every-chain-on-the-benchmark": {
+      "claim": "a-single-segment-beats-every-chain-on-the-benchmark",
+      "status": "measured",
+      "statement": "The best fit to the left Challenge Symbol is ONE segment, and it beats every chain tried. The old conclusion that the figure needs a sequence is reversed.",
+      "success_condition": "A chain that fits better than the best single segment."
+    },
+    "a-stroke-accumulates-its-features": {
+      "claim": "a-stroke-accumulates-its-features",
+      "status": "measured",
+      "statement": "A stroke's featural content is an accumulation along its own length, not a lookup. Four measured quantities carry all six marks: extent, total absolute turning, how concentrated that turning is, and whether it reverses. The named marks are particular points on those axes and a shallow arc is an unnamed point on the same axis as the Curve.",
+      "success_condition": "A stroke these four do not separate, or a fifth quantity a reader uses that they do not capture."
+    },
+    "a-stroke-cannot-be-recovered-finer-than-its-pen": {
+      "claim": "a-stroke-cannot-be-recovered-finer-than-its-pen",
+      "status": "measured",
+      "statement": "The error in recovering a stroke's path from its drawn form tracks the pen width as a fraction of the figure's extent, roughly one for one. A corner sharper than the nib, or an endpoint inside the cap, is not in the ink to be recovered.",
+      "success_condition": "An extractor whose error falls below the pen width would refute the one-for-one reading; none is claimed here."
+    },
+    "a-threshold-below-the-sampling-angle-reports-sampling-as-structure": {
+      "claim": "a-threshold-below-the-sampling-angle-reports-sampling-as-structure",
+      "status": "measured",
+      "statement": "A fixed angular threshold for telling a crossing from a retrace is wrong whenever the drawing's own chords turn by more than it.",
+      "success_condition": "A fixed threshold that holds across sampling densities. There is none; the honest floor is a function of the drawing."
+    },
+    "aether-is-upper": {
+      "claim": "aether-is-upper",
+      "status": "derived_given",
+      "statement": "The up-pointing mark is Aether (upper air); the down-opening mark is Nether (beneath).",
+      "derivation": "Given that up and down are distinguished on the page, the mark reaching up is named for the upper region and the one opening down for the lower. The names are read off the figures' orientation.",
+      "given": "direction-is-read-as-contrast, and updown-is-meaningful beneath it",
+      "scope": "CORRECTED at F150. This used to say the claim 'reads a single mark against the frame rather than against another mark, so it is canvas-relative', and that is false: F69's own panel lists `∧` Alpha/Aether and `∪` Omega/Nether TOGETHER, both poles on one canvas, which is the contrastive form F141 measured everywhere and F145 derived. So the PAIRING -- that the Angle and the Curve are the two named, and which is opposite which -- is canvas-independent. What is frame-relative is only the choice of which member to call the UPPER one, and that is the same shape F148 found for the elements: the physics or the orientation derives the partition, never which side of the page it lands on.",
+      "finding": "F69"
+    },
+    "alternation-is-capped-by-lobe-parity": {
+      "claim": "alternation-is-capped-by-lobe-parity",
+      "status": "derived",
+      "statement": "Alternation and lobe count are not independent coordinates. A run that reverses n times can reach full alternation only when n is even; when n is odd the ceiling is 1 - 1/n.",
+      "derivation": "Alternation is 1 - |net| / absolute. With n lobes of equal turning and alternating sign, an even n pairs every lobe with an opposite and the net cancels exactly, giving 1. An odd n leaves one lobe unpaired, so the net is the turning of one lobe, which is 1/n of the absolute -- and the alternation is 1 - 1/n. Measured against that prediction at every n from 2 to 10: 1.000, 0.668, 1.000, 0.804, 0.994, 0.854, 0.999, 0.889, 0.999, against predicted 1, 0.667, 1, 0.800, 1, 0.857, 1, 0.889, 1."
+    },
+    "an-anchor-s-symmetry-bounds-the-bearing": {
+      "claim": "an-anchor-s-symmetry-bounds-the-bearing",
+      "status": "derived",
+      "statement": "In a frame-free notation a placement can carry separation and relative scale without limit, but the bearing it carries is bounded by the symmetry of the mark it is measured against: C-infinity anchors no direction at all, C2 anchors one only up to a half turn, C1 anchors one completely.",
+      "derivation": "A bearing has to be measured against something carried WITH the figure, since a bearing against the canvas is not frame-free -- measured, 271 degrees of drift under canvas rotation, while separation and relative scale drift by 4e-15 and 3e-16. The only thing available is the anchor's own axis. But any rotation that returns the anchor unchanged also returns that axis unchanged, and therefore the bearing with it. So the anchor's rotation group IS the ambiguity in any direction read off it. Point and Circle are C-infinity and every rotation returns them; Line and Wave are C2 and a half turn returns them; Angle and Curve are C1 and nothing but the identity does.",
+      "scope": "About what a placement CAN carry, not about what it means. Bounds the channel; does not fill it.",
+      "finding": "F85"
+    },
+    "angle-incidence-is-unreachable": {
+      "claim": "angle-incidence-is-unreachable",
+      "status": "derived",
+      "statement": "Two strokes sharing one end and diverging -- the Angle's own incidence -- is not produced by any attested operator on two Lines. Every oblique configuration is likewise unreachable.",
+      "derivation": "Enumerate the incidence classes of Line against Line: a Line has two parts, its ends and its interior, so endpoints meet, an endpoint lands on an interior, the interiors cross, or nothing touches -- crossed with collinear, perpendicular and oblique. Classify what each attested operator emits by the same scheme, from the strokes it hands back rather than from the flattened figure. Five of eleven classes are reached: interiors crossing perpendicular (cross), endpoints meeting collinear (concatenate), no shared point collinear (superpose_displaced), and coincident (superpose_concentric, reflect_pair). The six unreached are every oblique class and every class where endpoints meet at an angle.",
+      "scope": "About Point and Line only, and about the ATTESTED operator set. A generalised rotation operator would reach the oblique cells; whether the corpus licenses one is a separate question the register already carries. Says nothing about what any configuration means.",
+      "finding": "F130"
+    },
+    "area-was-never-blind-only-unmeasured": {
+      "claim": "area-was-never-blind-only-unmeasured",
+      "status": "measured",
+      "statement": "Enclosure, fill and holes are cheaply measurable and separate figures the stroke model cannot. A ring, a disc and an annulus have one path between them and two numbers tell all three apart.",
+      "success_condition": "A pair of figures the two numbers do not separate but a reader does."
+    },
+    "aspect-is-hamming-distance": {
+      "claim": "aspect-is-hamming-distance",
+      "status": "derived_given",
+      "statement": "Astrological aspect divided by 30 degrees equals the Hamming distance between the corresponding sovereign hexagrams, for every one of the 66 sign pairs.",
+      "derivation": "Given the identification, the twelve words are fully determined -- months 1 to 6 grow yang from the bottom (100000, 110000, ... 111111) and months 7 to 12 grow yin (011111, ... 000000). Consecutive words differ in exactly one bit, so the sequence is a Gray cycle on 12 of the 64 six-bit words, and the isometry is then a finite computation over all 66 pairs rather than a sample. research/codes/symbol_geometry.py aspect_is_hamming() checks every pair and returns True; 35 tests pass.",
+      "given": "that the ZodiacSignSymbols card's Chinese column encodes the twelve classical tidal (sovereign) hexagrams against the twelve signs in order. That identification is READ OFF AN ARTIFACT, not derived: the bar glyphs are decoded as six-bit words, bottom line first, yang = 1.",
+      "scope": "About this encoding, and only given the artifact's identification. A different assignment of hexagrams to signs would not generally have this property, which is what makes the artifact's ordering load-bearing rather than incidental. Says nothing about whether the identification is CORRECT -- only that the isometry follows if it is.",
+      "finding": "F167"
+    },
+    "attachment-point": {
+      "claim": "attachment-point",
+      "status": "derived_given",
+      "statement": "The modality mark rides the apex; the force marks flank the base.",
+      "derivation": "A triangle has one apex and one base. The apex is a vertex where the outline turns through its sharpest angle -- it points. The two base corners are exchanged by the triangle's own mirror symmetry, so neither supplies a direction the other does not. `symmetry-order-is-operator-capacity` (derived) says a transformation distinguishes two states of a figure exactly when it is not in that figure's stabiliser, so a rotation-class-1 mark has a meaning-bearing orientation while a mark a half-turn returns does not. Measured on Base36_Decans, the modality marks are exactly the class-1 marks and the force marks are exactly those a half-turn returns. So the assignment is forced: the orientable marks go to the one site that offers an orientation, and the marks whose orientation carries nothing go to the two sites that offer none. The reverse spends the only oriented site on marks that cannot read it, and places a single orientable mark at one of two corners exchanged by a reflection -- an unmotivated choice whose two readings are mirror images. Arity agrees: one apex takes the one modality, two corners take the two forces, and nothing else fits without a collision or an empty site.",
+      "given": "that each composite attaches exactly one modality and exactly two forces. That arity is a fact about the semantic layer, not about the geometry, and the derivation needs it.",
+      "success_condition": "Reached for apex-vs-base. What would carry it to `derived` is a reason the arity must be one modality and two forces -- at present that is read off the sheet rather than derived from the figure.",
+      "scope": "One sheet, measured completely. base24_cusps was checked and does NOT give a second instance: it is a different construction -- a cusp fuses two adjacent signs (cusp-closure) -- and 8 of its 48 drawn pieces are half-turn symmetric, so the clean class-1 / class-many split is not what that sheet does.",
+      "finding": "F51 -> F138 -> F143"
+    },
+    "attested-operators-are-frame-free": {
+      "claim": "attested-operators-are-frame-free",
+      "status": "derived",
+      "statement": "Every operator attested in the corpus reads a quantity that is unchanged when the reader turns the whole canvas.",
+      "derivation": "Each relation was reduced to the scalar it reads and that scalar measured before and after a global rotation, at eight angles over four figure pairs. IN/OUT, CENTER/PERIPHERY, NEAR/FAR, CONTACT and LINK drift by at most 1.3e-15 -- machine zero. BALANCE drifts 3.5e-2 once it is read as a relation ('these two are mirror twins') rather than as a named axis ('B is the flip of A about the horizontal'); that residue is the sampled-polyline floor, not frame dependence. UP/DOWN drifts 2.20 and FRONT/BACK 4.40, two orders of magnitude larger.",
+      "scope": "Measured over the attested operators at N=240 samples.",
+      "finding": "F103"
+    },
+    "base12-is-a-partition-not-a-group": {
+      "claim": "base12-is-a-partition-not-a-group",
+      "status": "derived",
+      "statement": "The icosahedron's twelve vertices carry a 4x3 PARTITION -- three golden rectangles crossed with four disjoint faces -- and carry no abelian group of order 12. Neither 'V4 x C3' nor 'C3 x C4 = C12' acts on them.",
+      "derivation": "Construct the solid, enumerate every rotation carrying the vertex set to itself (60), and every order-12 subgroup (5). The element orders are {1,2,3,5}: no element of order 4 and none of order 12, so C12 is not a subgroup. All five order-12 subgroups are A4 = V4 semidirect C3, non-abelian, acting freely; zero abelian subgroups act freely. The partition does hold: ten sets of four disjoint faces cover the twelve vertices, and exactly two of them meet each golden rectangle once, giving a 4x3 grid.",
+      "scope": "About the solid, not about the signs. Does not touch whether the twelve signs are correctly enumerated or correctly ordered -- it establishes that their cyclic order is not a symmetry of the icosahedron, so the two twelves agree in count and in partition and not in group.",
+      "finding": "F125"
+    },
+    "base8-cycle-order": {
+      "claim": "base8-cycle-order",
+      "status": "derived_given",
+      "statement": "The cusps run Wave - Fire - Point - Earth - Line - Air - Circle - Water.",
+      "derivation": "There are exactly three Hamiltonian cycles on the four elements, and the Force set's composition admits exactly one. `hamming-gives-rotation-class` fixes what each gap demands -- distance 2 gives an invariant mark, distance 1 by direction an orientation-bearing one, distance 1 by crossbar a modulating one -- and the Forces are Point, Circle, Line and Wave: two invariant, two orientation-bearing, NONE modulating. Fire-Air-Water-Earth and Fire-Air-Earth-Water each demand two modulating marks and are excluded for that reason; the all-edge cycle additionally has no gap for the two invariants that must be placed. Fire-Earth-Air-Water demands two invariant and two orientation-bearing, which is the set exactly. Checked gap by gap against F52: Wave at Water-Fire (direction), Point at Fire-Earth (distance 2), Line at Earth-Air (direction), Circle at Air-Water (distance 2).",
+      "given": "element-bit-assignment, via hamming-gives-rotation-class",
+      "success_condition": "REACHED for the order (F144). What is left is the assignment within it: a reason the pure-cardinality pair should be Earth and Water rather than Fire and Air, and a reason Earth should take the 'one' marks. The Destiny/Reality reading of F140 was tried and fails -- Fire is also open and Air also bounded, and both get mixed pairs.",
+      "scope": "The cycle ORDER only. Which INVARIANT sits in which of the two diagonal gaps, and which orientation-bearing mark in which of the two direction gaps, is two free binary choices -- four arrangements, all class-consistent, and the corpus draws one. All four make exactly two elements flanked by marks of a single cardinality; the corpus makes that pair Earth and Water, the two DOWN elements, with Earth taking both 'one' marks. Nothing found picks between the four.",
+      "finding": "F52 -> F144"
+    },
+    "breaking-is-the-spacing-law-applied-inside-a-mark": {
+      "claim": "breaking-is-the-spacing-law-applied-inside-a-mark",
+      "status": "derived",
+      "statement": "Cutting gaps into a run introduces no new axis. The duty cycle sets a gap-to-size ratio, and that ratio is read by the same measured thresholds that separate one symbol from two.",
+      "derivation": "`symbol_tables.spacing` measured that a gap below 0.216 of a mark's own size reads as within one symbol and above 1.126 as between two. A dashed run presents exactly that ratio between its pieces. Nothing distinguishes the two situations for a reader, so nothing should distinguish them in the notation."
+    },
+    "cardinality-bit": {
+      "claim": "cardinality-bit",
+      "status": "derived",
+      "statement": "Point/Line are the 'one' marks; Circle/Wave are the 'many' marks.",
+      "derivation": "A point is one location; a circle bounds an area, which is many locations. A line is one connection between two ends; a wave is that connection repeated. Cardinality of the figure's constituent units, read off the figure.",
+      "finding": "F55"
+    },
+    "closure-is-a-condition-on-turning": {
+      "claim": "closure-is-a-condition-on-turning",
+      "status": "measured",
+      "statement": "Closure is not an independent axis. A run closes only when its total turning is a multiple of 360 degrees.",
+      "success_condition": "A closed run whose total turning is not a multiple of 360."
+    },
+    "closure-rescues-a-cell-that-turning-cannot-hold": {
+      "claim": "closure-rescues-a-cell-that-turning-cannot-hold",
+      "status": "derived_given",
+      "statement": "Closure earns its place in the grid not by multiplying it but by recovering one cell the turning axis loses.",
+      "derivation": "The read-back error separates only three bends -- none, about 99 degrees, about 227 -- and the next step from 227 lands past 360. So a half turn and a FULL turn fall in the same cell: on bend alone this pipeline cannot tell a Curve from a Circle. Closure is a different question with a cheap exact answer -- do the ends meet -- and it separates exactly that pair at no cost. It cannot multiply the grid, because a run closes only when its turning is a multiple of 360.",
+      "given": "the measured read-back error, which is what makes 227 degrees and 360 degrees fall in one cell. The general form -- an axis that cannot vary freely may still be worth keeping if it resolves a degeneracy in one that can -- needs no measurement; that THIS degeneracy exists does."
+    },
+    "composition-is-where-the-lexicon-lives": {
+      "claim": "composition-is-where-the-lexicon-lives",
+      "status": "measured",
+      "statement": "One run carries forty distinguishable forms; two runs in a relation carry 26,640; three carry 4,428,800.",
+      "success_condition": "A composed entry whose parts are not both in the one-run lexicon."
+    },
+    "concatenate-does-not-concatenate": {
+      "claim": "concatenate-does-not-concatenate",
+      "status": "withdrawn",
+      "statement": "The concatenate operator does not join its two marks.",
+      "why_withdrawn": "Fixed. The operator now shifts B until it meets A, and the stroke gap measures 0.000 for Curve+Curve and Line+Line and 0.005 for Angle+Curve, against the 0.411 to 0.668 it left before. It was true of the implementation as it stood at F104 and is retained so citations reach the correction rather than a missing entry.",
+      "finding": "F104 -> F105"
+    },
+    "concatenate-joins-at-the-endpoints": {
+      "claim": "concatenate-joins-at-the-endpoints",
+      "status": "derived",
+      "statement": "concatenate places B so that its leading edge meets A's trailing edge, producing a connected figure rather than two marks set side by side.",
+      "derivation": "B is shifted by max(A.x) - min(B.x), which brings the two into contact by construction. Measured stroke gap: 0.000 for Curve+Curve and Line+Line, 0.005 for Angle+Curve, against a sampling step of 0.011 -- contact to within a fifth of a sample.",
+      "scope": "Joining needs an end to join at, and only Angle and Curve have distinguishable ends: Line, Wave, Point and Circle are returned by a half turn or better (F102), so for those 'which end' is not a canonical choice and the figure is well defined only up to congruence. Orbits quotient by rotation anyway, so this does not affect the count -- but a notation wanting to name the two ends apart would have to break the symmetry first.",
+      "finding": "F105"
+    },
+    "concatenating-a-point-is-degenerate": {
+      "claim": "concatenating-a-point-is-degenerate",
+      "status": "measured",
+      "statement": "Concatenating a Point onto the Line, the Wave or the Circle reproduces that mark: the point lands on the curve at its own extremity and adds nothing. Those figures nonetheless occupy separate orbits from the bare marks.",
+      "scope": "Not a defect to be fixed: whether a coincident point changes a symbol is semantic and the corpus does not say, so it is registered as a-redundant-point-changes-a-figure, undetermined. What IS a defect is the measurement inconsistency it exposes -- concatenate(Point,Circle) scores C-inf and concatenate(Circle,Point) scores C8 for two figures 0.029 apart that are both a circle. The C8 is an artifact of one duplicated sample shifting the centroid, and it is the only 8 in the whole depth-2 census.",
+      "finding": "F107"
+    },
+    "concave-receives": {
+      "claim": "concave-receives",
+      "status": "derived",
+      "statement": "The Curve mark's modality sense is 'Receptive' / Hold / Soak.",
+      "derivation": "A concave form bounds a region on its concave side; anything entering that region is contained. 'Receives' is containment, which is geometric. NOTE the sharpening: 'collects what FALLS into it' would have smuggled in gravity and a direction of down. Containment does not.",
+      "finding": "F65"
+    },
+    "connectivity-is-constituency": {
+      "claim": "connectivity-is-constituency",
+      "status": "measured",
+      "statement": "Connected ink is one constituent and disconnected ink is two. Nothing has to be stipulated about grouping.",
+      "derivation": "A stroke's featural content is accumulated by walking it, and accumulation along a path is defined only where the path is connected. A break in the ink is therefore a break in the accumulation, and the grouping follows from the integration rather than from a reading convention.",
+      "given": "a-stroke-accumulates-its-features",
+      "success_condition": "A derivation of a-stroke-accumulates-its-features that does not depend on measuring these particular figures would carry this up with it."
+    },
+    "continuation-decides-what-the-gap-leaves-open": {
+      "claim": "continuation-decides-what-the-gap-leaves-open",
+      "status": "measured",
+      "statement": "Tangent continuity separates an interrupted run from two marks at the same spacing, right across the band where the gap decides nothing.",
+      "success_condition": "A gap in that band at which the two cases read the same."
+    },
+    "corner-count-sets-the-order-sharpness-does-not": {
+      "claim": "corner-count-sets-the-order-sharpness-does-not",
+      "status": "measured",
+      "statement": "In a closed run turning 360 degrees, the number of corners sets the rotational symmetry order and the sharpness of those corners does not. A rounded triangle is still C3.",
+      "success_condition": "A closed run whose order changes with the sharpness of its corners rather than their number."
+    },
+    "cross-script-comparison-needs-skeletons": {
+      "claim": "cross-script-comparison-needs-skeletons",
+      "status": "derived_given",
+      "statement": "Skeletonisation makes SYMMETRY ORDER measurable on typographic letterforms and does NOT make curvature class measurable. The filled-region reading of F99 was invalid, and so was the raster skeleton that first replaced it.",
+      "derivation": "Two skeletonisers, ten controls of known order. A raster skeleton (Zhang-Suen on a pixel grid) reads C1 for rosettes of true order 3, 5, 6 and 8 while passing C2 and C4 -- a square lattice has C4 symmetry and the thinning hands it to the result, so the instrument imprints its own symmetry on the axis being measured. A medial axis taken as the interior Voronoi vertices of the boundary has no lattice and passes all ten. Curvature class still does not transfer: the medial axis of a filled region carries a branch at every convex corner -- a filled bar has an axis of five runs -- so skeletonisation does not invert thickening and a smooth stroke reads singular. Latin O measures C2 smooth, aspect 1.19: a typographic O is an ellipse, not the circle F99 expected.",
+      "given": "A lattice-free skeleton. The raster route is not merely less accurate, it is invalid for any order outside C1, C2, C4 and continuous.",
+      "success_condition": "Skeletonise -- extract the medial axis or centreline of each letterform, reducing a filled region to the stroke it represents, then measure THAT on the same axes. Until then the comparison is not available and must not be shown.",
+      "scope": "Lifts the INSTRUMENT only, and only for symmetry order. The UL-to-script comparison stays blocked by ul-is-not-phonetic (F100), which is the harder of the two blocks. What is now available is comparing phonetic scripts to each other on symmetry order: 64 letterforms across twelve scripts give 60 C1 and 4 C2.",
+      "finding": "F124"
+    },
+    "curve-pair-is-the-circle": {
+      "claim": "curve-pair-is-the-circle",
+      "status": "measured",
+      "statement": "The Curve and its own half-turn close into the Circle. Angle closes to the equilateral triangle, Staple to the square, Curve to the circle -- three marks, three regular figures, all by completion.",
+      "success_condition": "A reason the three modality marks should be the three that complete, rather than the three that tile. Measured, not explained.",
+      "scope": "About completion, not about tiling. Says nothing about which figure a mark generates when repeated along an axis, which is the separate and weaker reading.",
+      "finding": "F129"
+    },
+    "cusp-closure": {
+      "claim": "cusp-closure",
+      "status": "derived_given",
+      "statement": "Every adjacent sign pair fuses into a closed figure; there are exactly twelve such fusions.",
+      "derivation": "Direction is n mod 2, so consecutive signs always carry opposite direction bits: one contributes an up-gesture, the other a down-gesture, always. Closure is forced by parity, not drawn by choice.",
+      "given": "direction-bit-is-n-mod-2",
+      "finding": "F63"
+    },
+    "depth-2-cannot-reach-three-fold-symmetry": {
+      "claim": "depth-2-cannot-reach-three-fold-symmetry",
+      "status": "derived",
+      "statement": "The depth-2 combination space reaches rotational orders 1, 2, 4, 8 and infinite, and never 3 or 6. The triangle is C3 and the hexagram is C6, so both require three-fold iteration and neither can appear at this depth.",
+      "derivation": "Census over all 191 depth-2 combinations: 131 at C1, 41 at C2, 2 at C4, 1 at C8, 16 at C-inf. No C3 and no C6. Constructing them directly: rotate_repeat(Angle,3) measures C3 and two such triangles at 60 degrees measure C6. The attested binary operators place two marks; producing an odd order needs a third placement.",
+      "scope": "The single C8 is an artifact, not a result: it comes from concatenate(Circle,Point), the degenerate case of a-redundant-point-changes-a-figure, and is the only 8 in the census.",
+      "finding": "F109"
+    },
+    "direction-bit-is-n-mod-2": {
+      "claim": "direction-bit-is-n-mod-2",
+      "status": "measured",
+      "statement": "Apex direction alternates with sign index: up for odd n, down for even n.",
+      "success_condition": "A reason the wheel should alternate rather than group. Measured, not explained."
+    },
+    "direction-is-read-as-contrast": {
+      "claim": "direction-is-read-as-contrast",
+      "status": "derived",
+      "statement": "No meaning in this notation rests on which way is up. Every meaning-bearing use of the direction bit is a relation between marks on one canvas, and a relation between marks on one canvas survives any reorientation of that canvas.",
+      "derivation": "A transformation applied to a whole canvas moves every mark on it together, so any relation BETWEEN two of those marks is preserved; reading one mark against the frame is not preserved, because the frame is what moved. So contrastive reading is canvas-independent by construction. The supervoid reader of orientation-is-a-canvas-parameter reads the same thing as a reader on a planetary surface -- not because their `up` agrees, but because neither consults it.",
+      "scope": "The detector covers cells that RECORD a directional field. A sheet that draws a direction without recording one is invisible to it, so a clean run is evidence about the records and not about the ink. The corpus-wide claim rests on F141's reading of the labels, which is the part a shape-matching instrument could not carry.",
+      "finding": "F145"
+    },
+    "directional-schemas-need-a-declared-frame": {
+      "claim": "directional-schemas-need-a-declared-frame",
+      "status": "derived",
+      "statement": "UP/DOWN, FRONT/BACK and PATH become expressible only if the notation carries its own frame -- an explicit declaration of which way is positive on the canvas.",
+      "derivation": "They read frame-bound quantities (attested-operators-are-frame-free), and a frame is always available but never canonical (orientation-is-a-canvas-parameter). A quantity that depends on a choice can only be transmitted alongside that choice.",
+      "finding": "F103"
+    },
+    "element-bit-assignment": {
+      "claim": "element-bit-assignment",
+      "status": "derived_given",
+      "statement": "up+unbarred is Fire, up+barred is Air, down+unbarred is Water, down+barred is Earth.",
+      "derivation": "THE DIRECTION BIT IS DENSITY. F19 records, and F70 confirms on a second artifact, that the elements ARE the states of matter: Fire = Plasma, Air = Gas, Water = Liquid, Earth = Solid. Split the four phases by density and plasma and gas are the rarefied pair, liquid and solid the dense pair; buoyancy lifts the first and sinks the second. That is the direction bit, four for four, one property throughout -- not 'fire rises' about one element but a single threshold on a single quantity sorting all four. And it derives exactly the half that needed deriving: the PARTITION, not which side of the page each lands on, which `direction-is-read-as-contrast` says the notation never reads anyway.",
+      "given": "the states-of-matter identification (F19/F70), and ordinary conditions, under which the density ordering of the four phases holds.",
+      "success_condition": "THE DIRECTION BIT IS REACHED (F148). What remains is the CROSSBAR bit, which partitions {Air, Earth} against {Fire, Water} -- in phases, {Gas, Solid} against {Plasma, Liquid}. F140 gave the bit a reading, open end versus bounded level, which the corpus itself names Destiny and Reality. What is missing is a property of the four phases that groups gas with solid against plasma with liquid. Density does not: solid and gas are the extremes of that ordering, not a pair. A pattern that fits and is NOT evidence: along the transition chain Solid-Liquid-Gas-Plasma the bit is the parity of the position, with positions 1 and 3 barred. With four items and two bits any assignment can be so described, and parity names no physical property. Recorded as F47 recorded the opponent-colour coincidence.",
+      "scope": "The direction bit only. The crossbar bit has a reading (F140) and no derivation. And the derivation runs through a physical identification, so it grounds the notation in matter rather than in geometry -- which is what the original success condition warned about, met by making the import explicit and total rather than anecdotal.",
+      "finding": "F51 -> F140 -> F148"
+    },
+    "element-colours": {
+      "claim": "element-colours",
+      "status": "conventional",
+      "statement": "Fire red, Air yellow, Water blue, Earth green.",
+      "why_not_derivable": "A received Golden Dawn convention, adopted wholesale. The observation that the two opponent-colour axes fall on the two 'both bits differ' diagonals has p = 1/3 by chance and is recorded as not evidence.",
+      "finding": "F47"
+    },
+    "enclosures-follow-from-junctions-and-free-ends": {
+      "claim": "enclosures-follow-from-junctions-and-free-ends",
+      "status": "derived",
+      "statement": "How many regions a figure encloses is fixed by its junctions, its free ends and its components: enclosed = E - V + C.",
+      "derivation": "Euler's relation for a plane graph. The vertices are the junctions and the free ends; every edge has two ends, so 2E is the sum of the valences with each free end contributing one; the bounded faces are the enclosures."
+    },
+    "extraction-is-precise-and-not-accurate": {
+      "claim": "extraction-is-precise-and-not-accurate",
+      "status": "measured",
+      "statement": "Pulling the same figure off the same photograph nine ways gives turnings from 218.9 to 240.3 degrees -- repeatable to about 11 degrees. Reading a figure of KNOWN turning is accurate only to about 30 degrees plus 9 per cent.",
+      "success_condition": "An extraction perturbation that moves the turning by more than the accuracy bound."
+    },
+    "flat-reflects": {
+      "claim": "flat-reflects",
+      "status": "derived",
+      "statement": "The Line mark's modality sense is 'Reflective'.",
+      "derivation": "Specular reflection is defined by a surface normal, and a straight surface has one constant normal. Flatness IS specular reflection. Pure geometry.",
+      "finding": "F65"
+    },
+    "four-schemas-have-no-operator": {
+      "claim": "four-schemas-have-no-operator",
+      "status": "measured",
+      "statement": "Six of the ten relational schemas the corpus names have an attested operator; four do not -- UP/DOWN, FRONT/BACK, PATH and PART/WHOLE.",
+      "scope": "A fact about which operators are attested in this corpus, not a claim that the missing four are unexpressible.",
+      "finding": "F102"
+    },
+    "grouping-needs-continuation": {
+      "claim": "grouping-needs-continuation",
+      "status": "measured",
+      "statement": "Contact and nearness do not group ink correctly. A dashed line is read as one stroke and both criteria call it many, so grouping needs a third: whether the parts lie along one path.",
+      "success_condition": "A measure of collinearity or co-circularity across a gap that groups the dashes and does not group the Challenge Symbols' two symbols with each other."
+    },
+    "hamming-gives-rotation-class": {
+      "claim": "hamming-gives-rotation-class",
+      "status": "derived_given",
+      "statement": "A mark's rotation class is a function of the Hamming distance of the element-pair it spans.",
+      "derivation": "One side is provable (rotation invariance); the other is arithmetic on a 2-bit code. Distance 2 -> invariant, distance 1 by direction -> orientation-bearing, distance 1 by crossbar -> modulating.",
+      "given": "element-bit-assignment",
+      "finding": "F59"
+    },
+    "handedness-is-a-relation-not-a-total": {
+      "claim": "handedness-is-a-relation-not-a-total",
+      "status": "measured",
+      "statement": "No single accumulated quantity can carry handedness. Chirality is a relation between two quantities that vary together along the stroke.",
+      "derivation": "Reversing traversal flips the sign of any single signed accumulation, so no such total is a property of the figure. A spiral is nonetheless chiral -- 0.2690 from its own mirror over all 72 rotations tested -- because reversal flips its turning and its radius trend together, leaving the relation between them fixed. Chirality is therefore carried by the pattern, not by a total.",
+      "given": "reading-order-is-not-in-the-ink",
+      "success_condition": "A derivation of reading-order-is-not-in-the-ink that does not depend on measuring these particular figures would carry this up with it."
+    },
+    "how-many-symbols-the-notation-can-carry": {
+      "claim": "how-many-symbols-the-notation-can-carry",
+      "status": "derived_given",
+      "statement": "At a pen width of 0.06 of a mark's size, one mark carries about 1,700 distinguishable forms, a mark at a placement about 1.4e8, and two marks at a placement about 2.4e11. A pen the hand cannot hold steady costs thirty times that.",
+      "derivation": "Each axis has a range and a step below which two values cannot be told apart, and the steps are the resolution laws already derived from the pen width: separation and relative scale to w, bearing to w/r radians, own rotation to w/s, turning to about w radians per sample, concentration to w scaled by the 5% window. Levels are range over step; the notation's size is their product.",
+      "given": "the resolution laws, which are derived, and the assumption that the axes are FREE, which the reachability map says they are not. The numbers are therefore upper bounds, and are only useful for their order.",
+      "success_condition": "A symbol distinguishable on an axis at a step finer than the laws allow."
+    },
+    "insert-is-a-third-family": {
+      "claim": "insert-is-a-third-family",
+      "status": "derived_given",
+      "statement": "Splicing one figure into another's extent -- `insert` -- commutes with neither placement nor modulation, so the operator families are not exhausted by those two.",
+      "derivation": "insert(host, guest, at, span) replaces a stretch of the host with the guest, scaled and rotated so the guest's endpoints land on the host's cut points. Tested by F122's method: 0 of 125 placement pairs commute, and 0 of 78 eligible modulation hosts. Eligibility is enforced -- 108 of 186 candidate hosts have a flat profile, and modulation is the identity on those, so comparing them would be comparing a modulated figure with an unmodulated one.",
+      "given": "modulation-is-a-second-operator-family",
+      "scope": "About the operation, not about the corpus. Establishes that insert is in neither family and says nothing about whether the corpus states it as an operation. Figures with something spliced into them are drawn on the source sheets; drawn is not stated, which is the distinction the register exists for.",
+      "finding": "F131"
+    },
+    "legibility-floor-is-per-contrast": {
+      "claim": "legibility-floor-is-per-contrast",
+      "status": "derived",
+      "statement": "A mark drawn at relative scale s with a pen of width w stops being distinguishable from another mark when s falls below w divided by the distance between them. The floor is therefore not one number for the notation: it is set by the nearest contrast the mark actually has to carry.",
+      "derivation": "Two marks at unit scale sit a fixed distance apart under the corpus's own comparison -- least Hausdorff over rotation and reflection. Drawing both at relative scale s scales that distance by s, because the comparison is on normalised figures and Hausdorff is homogeneous of degree one. A pen of width w cannot render a difference smaller than w. So the pair is legible exactly while s x distance > w.",
+      "scope": "About whether two marks can be told apart at a size, not about whether a reader knows which one was meant. Bounds legibility, not interpretation."
+    },
+    "lobe-count-is-a-dimension": {
+      "claim": "lobe-count-is-a-dimension",
+      "status": "measured",
+      "statement": "How many times a run reverses is a coordinate in its own right, invisible to turning, concentration and alternation together.",
+      "success_condition": "A figure that lobe count does not separate from another sharing its other three coordinates."
+    },
+    "mark-chirality": {
+      "claim": "mark-chirality",
+      "status": "derived",
+      "statement": "Exactly one of the six marks is chiral: the Wave. For the other five the mirror image is reachable by a rotation, so reflection distinguishes nothing on them.",
+      "derivation": "Best alignment of each mark against its own mirror, swept over rotations. Point 0.0000, Line 0.0000, Angle 0.0106, Curve 0.0111, Circle 0.0168 -- all achiral. Wave 0.3898. Threshold 0.11, calibrated in a gap 0.0799 wide (achiral cluster tops out at 0.0725, chiral cluster starts at 0.1524) and seeded from both sides by construction: X unioned with mirror(X) maxes at 0.0356, while a spiral, an L, a comma and a swept pinwheel bottom out at 0.1882. The Wave is chiral because a sine is odd: a half-turn returns it, but no rotation returns its reflection.",
+      "scope": "Measured on these sampled figures at N=240. A polyline never lands exactly on its own mirror, which is why the achiral floor is 0.07 and not 0; the decision gap is an order of magnitude wider than that noise.",
+      "finding": "F102"
+    },
+    "mark-polarity": {
+      "claim": "mark-polarity",
+      "status": "derived",
+      "statement": "The mark polarity axis is curvature class: zero or singular curvature vs smooth non-zero curvature.",
+      "derivation": "Largest discrete turning angle along each stroke; 6/6 against the corpus's stated split. Point 0 (0-dim), Line 0 (straight), Angle 33.7 (corner), Curve/Wave/Circle 0.75-8.5 (smooth). This is the `singularity` shape axis of notes 022-026.",
+      "finding": "F88"
+    },
+    "marks-are-three-axes-two-poles": {
+      "claim": "marks-are-three-axes-two-poles",
+      "status": "derived",
+      "statement": "The six marks are three symmetry classes crossed with two curvature classes, and each class holds exactly two marks differing only in curvature: Point/Circle at infinite order, Line/Wave at order two, Angle/Curve at order one.",
+      "derivation": "Symmetry order is measured from the drawn figure (F85, 6/6) and curvature class from its stroke curvature (F88). Tabulating the six gives three orders, each with exactly one singular and one smooth mark. Nothing is assigned: both coordinates are read off the geometry.",
+      "finding": "F84"
+    },
+    "marks-factor-3x2": {
+      "claim": "marks-factor-3x2",
+      "status": "derived",
+      "statement": "The six marks are 3 symmetry classes x 2 curvature classes, every cell filled once; Z/6 = Z/3 x Z/2.",
+      "derivation": "Both factors are now derived: symmetry order (F85) and curvature class (F88). Crossing them is a bijection, 6/6.",
+      "finding": "F84"
+    },
+    "mirroring-is-meaningful": {
+      "claim": "mirroring-is-meaningful",
+      "status": "measured",
+      "statement": "No. The corpus draws both handednesses of its one chiral mark and neither hand carries a meaning the other lacks -- reflection stands in for an unreachable rotation, and it closes figures.",
+      "derivation": "A sine is odd, so a half-turn returns the Wave and its eight rotations collapse to four figures (mark-chirality, F102). A row of eight direction-cells therefore cannot be filled by rotation, and the mirror fills the other four. The reflection is supplying orientation, which every other mark gets from rotation alone.",
+      "scope": "About whether handedness is a meaning-bearing dimension. Says nothing against reflection being a real operation -- it is attested twice, as a substitute for rotation and as a constructor.",
+      "finding": "F102 -> F135"
+    },
+    "mixed-and-fixed": {
+      "claim": "mixed-and-fixed",
+      "status": "derived",
+      "statement": "The sine is 'Mixed' and the flat line is 'Fixed'.",
+      "derivation": "Over the two bits {arch present, cup present}: a sine is both, a flat line is neither. 'Mixed' is literally the full cell and 'Fixed' the empty one. The names state the code.",
+      "finding": "F42"
+    },
+    "modality-names": {
+      "claim": "modality-names",
+      "status": "conventional",
+      "statement": "The three geometries are called Cardinal, Fixed and Mutable.",
+      "why_not_derivable": "These are inherited astrological terms with an external referent and a history predating this notation. No geometric property picks the WORD 'cardinal'. The geometric senses (reflective, receptive) are separate entries and are derived; the astrological labels sit on top of them.",
+      "finding": "F48"
+    },
+    "modulation-is-a-second-operator-family": {
+      "claim": "modulation-is-a-second-operator-family",
+      "status": "derived_given",
+      "statement": "Operators fall into at least two families: PLACEMENT ('place B relative to A', parameterised by the relational axes) and MODULATION ('vary a parameter along A's own extent'). Only placement is documented.",
+      "derivation": "The family boundary is the FIXED-POINT SET. A figure left alone by every member of a family is a fact about that family as a set of maps, so it survives renaming and reparameterisation, and two families with different fixed-point sets cannot be the same family. Measured over the six marks: modulation fixes Point, Line and Circle (14/14 settings each); placement fixes NOTHING (no mark survives all 36 guest-operator combinations); insert fixes only the Point (30/30). Each set has a reason belonging to the operation rather than the code -- modulation re-reads an existing variation and its fixed points are exactly the constant-profile figures (Line spans 0.0000, Circle 0.0042 at the resolution floor, Point has no profile, against Angle 0.8913, Curve 0.8441, Wave 1.1000); insert splices into a stretch of extent and the Point has none; placement adds a second figure and nothing absorbs one without changing.",
+      "given": "that `modulate()` faithfully renders 'vary a parameter along the figure's own extent'. Implementing a family is a design act, which symbol_waveform.py states in its own header, and the boundary is derived for the families as implemented.",
+      "success_condition": "REACHED via the derivation branch (F146). The search branch closed at F137. What would carry this to `derived` is a reason the implemented modulation is the only faithful rendering of 'vary a parameter along the extent' rather than one of several.",
+      "scope": "The boundary between the families. Says nothing about whether the corpus STATES modulation as an operation -- F137 answered that as far as the corpus allows: the word `Modulations` is there, attached to a pair of marks, and the operation is not.",
+      "finding": "F98 -> F137 -> F139 -> F146"
+    },
+    "nesting-depth-is-bounded-by-the-gap-not-the-size": {
+      "claim": "nesting-depth-is-bounded-by-the-gap-not-the-size",
+      "status": "measured",
+      "statement": "How deep containment can go is set by the space BETWEEN levels, not by how small the innermost mark gets. At a pen width of 0.06 the deepest nesting is six levels, at a scale of 0.755 per level.",
+      "success_condition": "A nesting that outlives the gap law by more than one level."
+    },
+    "no-platonic-correspondence-is-a-group-match": {
+      "claim": "no-platonic-correspondence-is-a-group-match",
+      "status": "measured",
+      "statement": "No Platonic solid the corpus names has a rotation group containing the cyclic group its symbol set is stated to carry.",
+      "success_condition": "A correspondence stated as a partition rather than as a symmetry, or a solid whose group does contain the claimed structure."
+    },
+    "octahedron-matches-the-marks-as-a-partition": {
+      "claim": "octahedron-matches-the-marks-as-a-partition",
+      "status": "derived",
+      "statement": "The octahedron's correspondence with the six marks is a PARTITION match and not a symmetry: its own antipodal structure is 3 axes x 2 poles, which is exactly the marks' 3 symmetry classes x 2 curvature classes, but its rotation group contains no element of order six.",
+      "derivation": "Measured over all five Platonic solids by the same test. The octahedron has 3 antipodal pairs over 6 vertices, giving a 3x2 grid that matches the marks' measured factorisation without construction. Its rotation group has order 24 with element orders {1,2,3,4} -- no 6 -- so no cyclic reading of the six marks is a rotation of it. The group also permutes the three axes freely as S3, while the marks' three symmetry classes are ordered by symmetry order and cannot be exchanged; the solid therefore admits MORE motion than the marks do.",
+      "scope": "About the vertex partition, not about meaning. Says the grid corresponds; says nothing about which mark sits at which vertex."
+    },
+    "one-closed-run-reaches-every-valence-divisible-by-four": {
+      "claim": "one-closed-run-reaches-every-valence-divisible-by-four",
+      "status": "measured",
+      "statement": "A single closed run reaches arbitrarily high junction valence: a k-lobe rosette above unit amplitude makes one junction of valence 4k.",
+      "success_condition": "An even valence no single run can make."
+    },
+    "operand-swap-is-reflection": {
+      "claim": "operand-swap-is-reflection",
+      "status": "derived",
+      "statement": "For the operators that set B beside A -- superpose_displaced, concatenate, cross -- swapping the operands produces the mirror image, not merely a different figure.",
+      "derivation": "Of the 8 orbits that hold both handednesses, all 8 split exactly along the operand swap: op(A,B) on one side, op(B,A) on the other. Confirmed stable from 36 to 360 rotation steps, with distances flat to 5 decimal places.",
+      "scope": "Holds for the beside-operators. superpose_concentric is commutative outright (same figure), and nest is not a swap at all -- inner and outer are different roles.",
+      "finding": "F102"
+    },
+    "operators-are-points-in-a-placement-space": {
+      "claim": "operators-are-points-in-a-placement-space",
+      "status": "derived",
+      "statement": "The attested binary operators are not six unrelated operations. They are six POINTS in one placement space parameterised by separation r, bearing theta, B's own rotation phi, and relative scale s.",
+      "derivation": "Read off the operator definitions and confirmed by measuring the centroids and extents of what they emit. superpose_concentric r=0 phi=0 s=1; cross r=0 phi=90 s=1; nest r=0 s=0.4; superpose_displaced r=2.20 theta=0 s=1; concatenate r=2.10 theta=0 s=1. Bearing is undefined where r=0. Neighbouring pairs differ in exactly one coordinate: concentric to cross is phi alone, concentric to nest is s alone, displaced to concatenate is r alone.",
+      "finding": "F104"
+    },
+    "opposition-kind-tracks-rotation-class": {
+      "claim": "opposition-kind-tracks-rotation-class",
+      "status": "undetermined",
+      "statement": "Each mark pair carries its own KIND of opposition, and the kind tracks the pair's rotation class: rotation infinity opposes by AMOUNT, rotation 2 by CONSTANCY, rotation 1 by AGENCY.",
+      "success_condition": "BUILT AND SEALED, not merely described. `tools/opposition_exam.py` hands a reader the 32 cells as bare word pairs, shuffled, with the mark pair, the domain and my own labels stripped. They group them by kind, naming the groups as they please; scoring compares the PARTITION and never the names, against a null with the same group sizes. What is needed is a reader who has not seen the marks, and I cannot supply it -- anything I group, I group having written the labels.",
+      "scope": "About this corpus's attested vocabulary. Says nothing about necessity, and the three up/down cells on Angle/Curve are off-theme: they belong to the axis that directional-schemas-need-a-declared-frame says needs a frame.",
+      "finding": "F158"
+    },
+    "orbit-metric-is-not-a-hierarchy": {
+      "claim": "orbit-metric-is-not-a-hierarchy",
+      "status": "measured",
+      "statement": "The orbit metric is not an ultrametric, so a dendrogram of it is a distortion in the same way a flat scatter is.",
+      "success_condition": "A rendering whose assumption the metric actually satisfies. Measured, not explained."
+    },
+    "orbit-metric-is-not-euclidean": {
+      "claim": "orbit-metric-is-not-euclidean",
+      "status": "measured",
+      "statement": "The orbit distance matrix is not Euclidean-embeddable in any number of dimensions.",
+      "derivation": "Not a defect in the figures: a property of the comparison. The distance is a Hausdorff distance between point sets, minimised over rotation and reflection. Hausdorff distance is a metric but is not of negative type, so it admits no Euclidean embedding at any dimension. MEASURED, on 45 orbit representatives, that the group minimisation is not the cause: fixed alignment gives 11/45 negative eigenvalues at 12.7% of the positive mass, and minimising over 36 rotations and both mirrors gives 12/45 at 11.6% -- indistinguishable, and the quotient slightly REDUCES the negative mass. A prediction that the negative part would concentrate on symmetric figures (conical singularities at points with non-trivial stabilisers) was tested and refuted: Spearman between symmetry order and negative share is -0.034, p=0.74, and the C-infinity orbits carry the LOWEST negative share of any class. RE-TESTED at fine granularity after the coarse-search bias was found: the same 30 orbits, the same figures, measured at 10 degrees and again at 1 degree, give SIX negative eigenvalues either way, at 9.3% and 9.2% of the positive mass. The signature is not an artefact of the search grid. Refining the search moves every distance down (see `a-coarse-alignment-search-inflates-every-distance`) and moves the signature not at all.",
+      "success_condition": "Either a reason the comparison should fail the triangle inequality, or a corrected comparison that does not. Measured, not explained."
+    },
+    "order-and-register-are-drawn-because-they-cannot-be-implied": {
+      "claim": "order-and-register-are-drawn-because-they-cannot-be-implied",
+      "status": "measured",
+      "statement": "Tables 4.2 and 4.3 were open for want of a frame. The benchmark's author drew one, and spent more ink on it than on both symbols together.",
+      "success_condition": "A written string in this notation that fixes its own order and baseline without a drawn frame."
+    },
+    "orientation-is-a-canvas-parameter": {
+      "claim": "orientation-is-a-canvas-parameter",
+      "status": "derived",
+      "statement": "A plane has no privileged up, but no symbol is drawn on a bare plane. It is drawn on a CANVAS, which is a plane plus a frame, and the frame supplies the basis. An orientation is therefore always available and never canonical.",
+      "derivation": "Two independent routes. (1) In a rendered medium the frame is specified rather than inferred: SVG fixes +x rightward and +y downward, so for every artifact this project ships, up is pinned by a standard. (2) In a physical medium the frame comes from a gravitational anchor, and the anchor recurses without terminating -- leave Earth and the Sun serves, leave the star system and the galactic core serves. Each step replaces the anchor rather than removing it. Its sign can even invert: inside a cosmic supervoid the pull is outward from every side, so down points away from the observer rather than toward a mass.",
+      "finding": "F103"
+    },
+    "phase-is-harmony": {
+      "claim": "phase-is-harmony",
+      "status": "derived_given",
+      "statement": "Superposed on one centre = Order/Harmony; displaced side by side = Chaos/Discord.",
+      "derivation": "Under the waveform reading, sharing a centre is being in phase and displacement is being out of phase, and in-phase/out-of-phase IS the definition of consonance rather than a metaphor for it. The reading is faithful (waveform-alphabet-is-exact, 12/12 with no residue) and the sheet selects that domain at the very cells the derivation is about, by writing Harmony and Discord there -- which are acoustic words.",
+      "given": "waveform-alphabet-is-exact",
+      "finding": "F44 -> F134"
+    },
+    "placement-resolution-laws": {
+      "claim": "placement-resolution-laws",
+      "status": "derived",
+      "statement": "The smallest distinguishable change in a placement is w for separation and for relative scale, w/(r) radians for bearing, and w/(s) radians for the placed mark's own rotation, where w is the pen width. Bearing resolution improves with separation; rotation resolution improves with the placed mark's size.",
+      "derivation": "A change in separation or in relative scale moves the placed mark by that amount directly, so the figure moves one-for-one. A change in bearing of d radians moves a mark at separation r along an arc of r*d. A change of d radians in the mark's own rotation moves its extremes by s*d, s being its radius. A pen of width w cannot render a movement smaller than w, so each step must exceed w. Measured against the prediction at five separate configurations and agreeing to five decimal places: predicted bearing rates 0.02269, 0.04363, 0.02269, 0.01396, 0.03491 against measured 0.02269, 0.04363, 0.02269, 0.01396, 0.03490.",
+      "scope": "About what the ink can carry, not about what a reader can discriminate. The second is smaller and is not measured by this."
+    },
+    "plurality-must-be-spent-on-placements-and-the-ring-has-a-ceiling": {
+      "claim": "plurality-must-be-spent-on-placements-and-the-ring-has-a-ceiling",
+      "status": "measured",
+      "statement": "Because the notation cannot say `again`, plurality has to be spent on repeated marks at placements -- and a placement ring holds a bounded number of them.",
+      "success_condition": "A ring holding more copies than the touching capacity allows."
+    },
+    "point-line-configurations-are-covered": {
+      "claim": "point-line-configurations-are-covered",
+      "status": "derived_given",
+      "statement": "Every incidence class of a Point against a Line is reached by an attested operator, and three of the six distinguishable FIGURES are not.",
+      "derivation": "Six configurations: at an endpoint, at the midpoint, elsewhere on the line, and off it on the perpendicular bisector, on its own extension, or anywhere else. The three on-the-line positions add no ink -- measured across a fourfold range of sampling density, so the separation is shape and not spacing (F126's test) -- and are one figure between them. The three off-line positions form one incidence class and three figures, differing in mirror count. superpose_displaced reaches the class at its own fixed offset and none of the three figures.",
+      "given": "Incidence as the classification. A class with continuous parameters inside it can be reached without any particular figure in it being reached, which is why both granularities are reported.",
+      "finding": "F130"
+    },
+    "position-on-a-line-is-rank": {
+      "claim": "position-on-a-line-is-rank",
+      "status": "derived",
+      "statement": "A crossbar's position along a stem encodes ordinal rank; the two arrow forms are the open ends.",
+      "derivation": "Order along a line IS a total order. The figure does not represent the ordering, it instantiates it -- you can read the value off with a ruler.",
+      "finding": "F68"
+    },
+    "predicted-c3-smooth-mark": {
+      "claim": "predicted-c3-smooth-mark",
+      "status": "withdrawn",
+      "statement": "WITHDRAWN. Predicted that a fourth symmetry class C3 implies two missing marks: Triangle and a smooth three-fold figure.",
+      "why_withdrawn": "The prediction was conditional on C3 being a PRIMITIVE class. It is not -- C3 is produced by iterated superposition-with-rotation (F91). With the condition false the prediction dissolves. It was made, tested against the closure computation, and withdrawn on evidence; the empty (C3, smooth) cell was an artifact of treating a produced order as a primitive one.",
+      "finding": "F90 -> F91"
+    },
+    "radius-trend-is-not-independent-of-concentration": {
+      "claim": "radius-trend-is-not-independent-of-concentration",
+      "status": "measured",
+      "statement": "A spiral's growth rate leaks into its measured concentration, so the two axes of table 1.4 are not orthogonal.",
+      "success_condition": "A growth rate at which measured concentration matches the constant-radius value."
+    },
+    "reading-order-is-not-in-the-ink": {
+      "claim": "reading-order-is-not-in-the-ink",
+      "status": "measured",
+      "statement": "A figure does not carry the order in which it is read. Sequence must come from layout or an explicit mark.",
+      "success_condition": "A quantity of a single static stroke that distinguishes its two traversals."
+    },
+    "rederivability-defeats-capture": {
+      "claim": "rederivability-defeats-capture",
+      "status": "undetermined",
+      "statement": "A notation whose meanings are derivable from geometry, rather than assigned by authority, lets a mind reconstruct its concepts independently of whatever taught it -- and therefore detect and escape conceptual capture.",
+      "success_condition": "Show that possession of the derivation METHOD, without trusting the source, is sufficient to recover correct structure from a corpus containing inserted errors. THE PROTOCOL IS NOW RUNNABLE (F149): `tools/rederivability_exam.py` fixes the exam, the scoring is fixed in advance, and `data/derivation/rederivability_key.json` seals nine structural results to recover and five independently-confirmed defects to catch -- the Yin/Yang inversion, the Amperage/Voltage swap between two sheets, the Aether/Nether conflation, `Life` with two referents, the enharmonic spellings. What is still needed is a READER who has not read the withheld files. That is the whole of what is left, and it is not something the author of the findings can supply: anything I recover, I recover with the answers in hand.",
+      "scope": "The detection half is the half that speaks to the claim. Recovery alone would show the notation is learnable; catching an error in what taught you is the whole content of `rederivability-defeats-capture`. A reader who recovers the structure fluently and still flags nothing would REFUTE it, and the exam is built so that outcome is legible rather than deniable.",
+      "finding": "F149"
+    },
+    "reflect-pair-is-never-chiral": {
+      "claim": "reflect-pair-is-never-chiral",
+      "status": "derived",
+      "statement": "The reflect_pair operator cannot produce a chiral figure.",
+      "derivation": "A unioned with mirror(A) is symmetric about the mirror axis by construction, so it always has at least that one reflection and is never chiral. Measured 0/6 over the marks, all at or below 0.0279 against a 0.11 threshold.",
+      "finding": "F102"
+    },
+    "retracing-is-the-notations-blind-spot": {
+      "claim": "retracing-is-the-notations-blind-spot",
+      "status": "derived_given",
+      "statement": "The notation cannot express `again`. Going over a path twice produces the same ink as going over it once.",
+      "derivation": "Covering a point a second time adds nothing to a set. Union is idempotent; that is the whole argument, and it runs on the model of ink rather than on any measurement.",
+      "given": "that ink is modelled as a SET of covered points -- which is a modelling choice, and a false one for real ink on real paper, where a second pass is darker."
+    },
+    "rotation-class-is-symmetry-order": {
+      "claim": "rotation-class-is-symmetry-order",
+      "status": "derived",
+      "statement": "The corpus's three rotation classes are the order of each mark's rotational symmetry group: infinite, 2, 1.",
+      "derivation": "Sampled each mark as a point set and rotated it; 6/6 agreement with the stated trichotomy. A sine is odd, so a half-turn returns it -- which is why Wave groups with Line.",
+      "finding": "F85"
+    },
+    "rotation-follows-class-and-equality": {
+      "claim": "rotation-follows-class-and-equality",
+      "status": "measured",
+      "statement": "A composite's rotation class is a function of the operator, its arguments' ROTATION CLASSES, and whether the arguments are EQUAL -- not of which member of a rotation class each argument is. It holds for 63 of 66 signature classes. All three residues are `concatenate`, and all three are a Point-against-Circle distinction.",
+      "scope": "About rotation class only, over the figures combination_space.json enumerates. sigma does NOT preserve curvature -- it inverts it by construction -- and nothing here says the two members of a pair are interchangeable for any property other than rotation class.",
+      "finding": "F159"
+    },
+    "rotation-invariance": {
+      "claim": "rotation-invariance",
+      "status": "derived",
+      "statement": "Point and Circle are unchanged under rotation; Line, Wave, Angle and Curve are not.",
+      "derivation": "A point is 0-dimensional and a circle is rotationally symmetric about its centre. Provable with a protractor; no assignment involved.",
+      "finding": "F5"
+    },
+    "rotation-parameter-is-free": {
+      "claim": "rotation-parameter-is-free",
+      "status": "derived",
+      "statement": "Superposition takes a free rotation parameter; it is not quantized.",
+      "derivation": "The corpus draws rotations of 45 (rotary table), 30 (zodiac wheel), 10 (decan ring), 60 (hexagram) and 90 (cross) degrees. 45 is not a multiple of 30 or 60 and 60 is not a multiple of 45, so no single quantization admits all of them. A free parameter does.",
+      "finding": "F91"
+    },
+    "schemas-are-regions-not-a-vocabulary": {
+      "claim": "schemas-are-regions-not-a-vocabulary",
+      "status": "derived",
+      "statement": "The relational schemas are not a discrete vocabulary of ten. They are REGIONS of the continuous placement plane, separated by the extent of the first mark.",
+      "derivation": "Sweeping B around A over (r, theta): r=0 is CENTER/PERIPHERY, 0<r<extent(A) is IN/OUT, r at extent(A) is CONTACT, r>extent(A) is NEAR/FAR. The boundaries are not conventions -- they are where the two figures start and stop overlapping, which is a property of A's own extent.",
+      "finding": "F104"
+    },
+    "script-topology-is-measurable": {
+      "claim": "script-topology-is-measurable",
+      "status": "measured",
+      "statement": "Contour count, enclosed-region count, aspect ratio and ink ratio are well defined for a filled letterform and discriminate across scripts.",
+      "scope": "A fact about how these typefaces draw these characters, not about the scripts in the abstract. A different font gives different numbers. Says nothing about meaning, sound, or any relation to UL.",
+      "finding": "F100"
+    },
+    "self-crossing-is-not-a-function-of-turning": {
+      "claim": "self-crossing-is-not-a-function-of-turning",
+      "status": "measured",
+      "statement": "A run does not cross itself because it turns a lot. Turning alone never produces a crossing at any amount.",
+      "derivation": "A run crosses itself only where it returns to a place it has already been AT A DIFFERENT HEADING. Constant radius returns at the same heading every lap, which is retracing, not crossing; a trending radius does not return. What does produce a crossing is the radius passing through zero: a k-lobe rosette r = 1 + a cos(k th) crosses at amplitude above 1 and not at or below it, measured at a = 0.4, 0.9, 1.0 (zero crossings) against 1.4 and 2.0 (one).",
+      "success_condition": "A constant-radius run of some turning that crosses itself. None exists."
+    },
+    "separation-cannot-decide-containment": {
+      "claim": "separation-cannot-decide-containment",
+      "status": "measured",
+      "statement": "Whether one mark is inside another cannot be read from the placement parameters. Separation decides it for a circle and for nothing else.",
+      "success_condition": "A quantity computable from the placement parameters alone that agrees with containment on non-circular figures. A winding number or a point-in-polygon test would settle containment but is not a placement parameter."
+    },
+    "sigma-does-not-survive-the-quotient": {
+      "claim": "sigma-does-not-survive-the-quotient",
+      "status": "measured",
+      "statement": "The curvature swap is a clean fixed-point-free involution on the 191 FIGURES and only a partial one on the 93 ORBITS. It is well-defined on 77 orbits, and sigma(sigma(o)) = o holds on just 45 of them: 9 orbits that are their own dual and 18 dual pairs.",
+      "scope": "Measured over the orbit decomposition this build produces. Says nothing about the 16 ill-defined orbits beyond that sigma scatters their constructions, and nothing at all about meaning.",
+      "finding": "F161"
+    },
+    "six-marks-are-complete": {
+      "claim": "six-marks-are-complete",
+      "status": "derived",
+      "statement": "The six marks are complete WITH RESPECT TO SYMMETRY ORDER: every order the corpus uses is either a mark's own or is produced by composition.",
+      "derivation": "Iterated superposition-with-rotation reaches every C_n, verified by construction for n=2..8 from the C1 Angle alone. Triangle (C3) and the hexagram (C6) are therefore produced, not posited. Closure was also tested and does NOT reach C3 -- a chevron closes to an isoceles triangle, which is C1.",
+      "scope": "Covers symmetry order only. Does NOT establish that every figure the corpus draws is reachable -- matching an order is weaker than being the same figure. Two figures are now known unreachable, for two different reasons: the Spiral wants scaling (spiral-requires-scaling) and the teardrop wants a curved join (teardrop-reachability, F123). Neither wants a seventh mark.",
+      "finding": "F91"
+    },
+    "six-marks-name-four-cells-of-the-segment-grid": {
+      "claim": "six-marks-name-four-cells-of-the-segment-grid",
+      "status": "measured",
+      "statement": "On the grid of turning against concentration, the six named marks occupy four cells and the rest of the space has no name. Asked to choose among six, a classifier returns an undecided answer across most of it.",
+      "success_condition": "Names for the cells that carry contrasts a reader uses, or a demonstration that the unnamed cells are not contrastive."
+    },
+    "spiral-requires-scaling": {
+      "claim": "spiral-requires-scaling",
+      "status": "measured",
+      "statement": "The Spiral is not reachable by any attested operator, and the reason is not a missing scale parameter: it needs MODULATION -- varying a parameter along a mark's own extent -- which is a different operator family from placement.",
+      "scope": "Measured over the 186 enumerated depth-2 combinations, not proved for all compositions. Margin is 0.111 and the nearest case is a near-degenerate stroke. TWO EARLIER INVARIANTS FAILED and are kept on the record: curvature-per-sample (spiral measured 0.95, flat, indistinguishable from a circle) and radial monotonicity (0.967 vs 0.927, contaminated by component stacking order).",
+      "finding": "F95 -> F98"
+    },
+    "status-badges-are-a-convention": {
+      "claim": "status-badges-are-a-convention",
+      "status": "conventional",
+      "statement": "The six derivation statuses are drawn as six marks: filled square derived, open square undetermined, half-filled derived_given, barred square measured, circle conventional, and nothing for withdrawn.",
+      "why_not_derivable": "No geometric property selects the assignment. The shapes are ICONIC -- filled reads as closed, open reads as open, bars read as a tally -- but iconic is motivated, not derived, and a different set would carry the same distinctions equally well. It is recorded as a choice so that it is cited as one.",
+      "scope": "Used on every primer sheet, every cell grid and the L2 pages since F63, and never registered until now. A notation carrying the project's central invariant went six findings without a status of its own.",
+      "finding": "F113"
+    },
+    "stroke-count-is-in-the-kernel": {
+      "claim": "stroke-count-is-in-the-kernel",
+      "status": "measured",
+      "statement": "The ink does not record how many strokes made it, so stroke count is not an axis a page can supply.",
+      "success_condition": "Two figures whose ink differs only in how many strokes made them."
+    },
+    "symmetry-axis-truncation": {
+      "claim": "symmetry-axis-truncation",
+      "status": "derived",
+      "statement": "The mark set's use of only {inf,2,1} is not a gap: the omitted orders are reachable by composition, so they are correctly absent from the primitive set.",
+      "derivation": "Resolution (b) of the three options in F89. See six-marks-are-complete.",
+      "finding": "F91"
+    },
+    "symmetry-order-is-operator-capacity": {
+      "claim": "symmetry-order-is-operator-capacity",
+      "status": "derived",
+      "statement": "A transformation distinguishes two states of a figure exactly when it is not in that figure's stabiliser. So rotation conveys nothing on Point and Circle, conveys a direction-blind angle on Line and Wave, and conveys a full turn of distinct states only on Angle and Curve; reflection conveys a second state only on the Wave.",
+      "derivation": "The stabiliser of a figure under O(2) is its symmetry group, and the number of distinguishable images is the index of that stabiliser. The rotation half is the symmetry order already derived at F85; the reflection half is mark-chirality. Nothing is added beyond those two measurements -- the capacity statement is what they mean.",
+      "finding": "F102"
+    },
+    "taper-is-not-in-the-path": {
+      "claim": "taper-is-not-in-the-path",
+      "status": "measured",
+      "statement": "A changing pen width alters nothing the path measures, but it is the only way a single straight run acquires a direction.",
+      "success_condition": "A path measure that a pen can move."
+    },
+    "teardrop-reachability": {
+      "claim": "teardrop-reachability",
+      "status": "derived_given",
+      "statement": "The teardrop ('Life', Angle+Curve fused) is NOT reachable by close() composed with the attested operators. Exactly-one-corner figures do not occur in that space at all.",
+      "derivation": "23,424 close() expressions over the six marks: all five attested binary operators, reflect_pair and close as unary steps, sub-expressions nesting one deep on either side, close permitted at any position. 20,142 are closed and enclose area. None has exactly one corner -- the corner-count distribution runs 0:427, 1:NONE, 2:630, 3:2864, and upward. Nearest approach to a constructed teardrop is 0.326 Hausdorff against a same-figure tolerance of 0.073. The cause is structural: close() joins the free ends with a straight chord, and a chord meets two symmetrically-built ends either tangentially at both or at neither, so corners arrive in pairs. Permitting a curved join does produce single-cornered convex figures, which locates the missing capability as the join rather than a missing mark.",
+      "given": "close() joins with a straight chord, and composition nests one deep. A close() that curved would change the answer; depth is bounded by enumeration cost, not by principle.",
+      "success_condition": "Enumerate close() composed with binary operators. This is a scope gap in the search, not evidence of unreachability.",
+      "scope": "Settles reachability, not meaning. Says nothing about whether the corpus intends the teardrop as a primitive rather than a composite.",
+      "finding": "F123"
+    },
+    "the-alphabet-has-a-hole-between-line-and-curve": {
+      "claim": "the-alphabet-has-a-hole-between-line-and-curve",
+      "status": "measured",
+      "statement": "The six marks give a straight stroke and a semicircle with nothing between them, so a shallow arc -- an ordinary pen stroke -- has no mark of its own and is read as one of the two neighbours it is furthest from.",
+      "success_condition": "Either a mark for the shallow arc, making the inventory continuous in bend angle, or a derivation showing that a writing system does not need to distinguish arc extent -- in which case the Line and the Curve are one mark with a parameter, not two.",
+      "scope": "About bend angle, which the mark set does not parameterise. Says nothing against `six-marks-are-complete`, which is completeness with respect to SYMMETRY ORDER -- a different axis, and true."
+    },
+    "the-attested-semantics-is-spatial": {
+      "claim": "the-attested-semantics-is-spatial",
+      "status": "measured",
+      "statement": "Measured against an outside minimal-concept inventory, what this notation is attested to MEAN is spatial and very little else. 9 of 65 NSM semantic primes have an attested exponent; 5 of those 9 are the spatial primes, and SPACE is the only category of the sixteen in which every prime is either attested or a claim-cited hole.",
+      "scope": "A measurement of what is ATTESTED in this corpus, not a claim that the notation cannot express mental predicates or logic. An unattested prime may be unexpressible, or merely never drawn. The four recorded holes are the only ones this register can currently tell apart.",
+      "finding": "F155"
+    },
+    "the-benchmark-reads-in-the-corpus-tables": {
+      "claim": "the-benchmark-reads-in-the-corpus-tables",
+      "status": "measured",
+      "statement": "Every feature of both hand-drawn Challenge Symbols is a quantity the corpus's tables name, and each lands in a cell.",
+      "success_condition": "A feature of either symbol that no table in the corpus names."
+    },
+    "the-corpus-cannot-redraw-the-benchmark-and-the-gap-is-real": {
+      "claim": "the-corpus-cannot-redraw-the-benchmark-and-the-gap-is-real",
+      "status": "measured",
+      "statement": "The best figure the corpus can generate sits 0.1070 from the left Challenge Symbol, against a pipeline floor of 0.0557 at worst. The gap is about twice the floor, so it is a real difference -- but it is half what it was before the position axis was found.",
+      "success_condition": "A generated figure within 0.06 of the extracted one."
+    },
+    "the-domain-is-an-axis": {
+      "claim": "the-domain-is-an-axis",
+      "status": "measured",
+      "statement": "The corpus varies the interpretive DOMAIN the way it varies any other feature, so no reading of the marks is privileged and none can be.",
+      "scope": "About whether a domain can be privileged, not about whether the acoustic one is attested. It is: Sol-Center labels its two lateral axes Frequency and Level and names its centre cells Harmony and Discord, and ZodiacSignSymbols carries a Cromatic Tone column.",
+      "finding": "F134 -> F139"
+    },
+    "the-drawn-ticks-sit-just-above-the-legibility-floor": {
+      "claim": "the-drawn-ticks-sit-just-above-the-legibility-floor",
+      "status": "measured",
+      "statement": "Both hand-drawn dependent marks clear the derived legibility floor, and one of them barely.",
+      "success_condition": "A drawn dependent mark below the floor that a reader can still resolve."
+    },
+    "the-four-floors-are-one-floor": {
+      "claim": "the-four-floors-are-one-floor",
+      "status": "derived_given",
+      "statement": "Four rules that look unrelated are the same inequality: a feature exists while it is wider than the pen.",
+      "derivation": "Two marks resolve while the dependent one is at least w/r of the anchor. An enclosure survives while its inscribed radius exceeds w/2. Nesting continues while the ring between levels, s^k (1-s), exceeds w. A stroke's turning exists only down to a spacing of w. Each was derived separately and each reduces to the same comparison against the same quantity.",
+      "given": "the four rules themselves, two of which are measured rather than proved: that an enclosure survives while its inscribed radius exceeds half the pen width (19 of 21), and that nesting is bounded by the gap between levels rather than by the innermost size."
+    },
+    "the-gathers-width-is-not-a-separate-axis": {
+      "claim": "the-gathers-width-is-not-a-separate-axis",
+      "status": "measured",
+      "statement": "How BROAD a run's gather is adds nothing the grid does not already have. Widening it only makes the fit worse.",
+      "success_condition": "A gather width that fits better than the narrowest."
+    },
+    "the-generated-lexicon-contains-the-benchmark": {
+      "claim": "the-generated-lexicon-contains-the-benchmark",
+      "status": "measured",
+      "statement": "BOTH hand-drawn Challenge Symbols are entries the corpus generated without having seen them: the left at distance 0.072 in the two-mark lexicon, the right at 0.218 in the three-mark lexicon.",
+      "success_condition": "A feature of the left symbol that no generated entry carries."
+    },
+    "the-grammar-gaps-are-the-frame-bound-schemas": {
+      "claim": "the-grammar-gaps-are-the-frame-bound-schemas",
+      "status": "derived_given",
+      "statement": "Of the four relational schemas with no attested operator, three -- UP/DOWN, FRONT/BACK and PATH -- are the frame-bound ones and constitute a single gap. PART/WHOLE is frame-free and mereological, and is a separate absence.",
+      "derivation": "The attested operators are frame-free and the directional schemas are not, measured as drift under global rotation: at most 3.5e-2 for the attested against 2.20 and 4.40 for UP/DOWN and FRONT/BACK. So the inventory could never have contained them.",
+      "given": "four-schemas-have-no-operator",
+      "finding": "F103"
+    },
+    "the-kernel-halves-the-position-axis": {
+      "claim": "the-kernel-halves-the-position-axis",
+      "status": "derived_given",
+      "statement": "Where a run gathers its turning is readable only up to reflection about the run's middle, because reversing a run is in the kernel.",
+      "derivation": "Direction of travel leaves the ink unchanged. A run that gathers at position p, travelled the other way, gathers at 1 - p and inks identically. So the axis is not position but DISTANCE FROM THE MIDDLE, |p - 0.5|, and it runs over half the range anyone would write down.",
+      "given": "that direction of travel is in the kernel, which is measured -- a run and its reverse ink identically at 0.0000 against a floor of 0.026. Given that, the halving is arithmetic."
+    },
+    "the-notation-is-flat-until-containment": {
+      "claim": "the-notation-is-flat-until-containment",
+      "status": "measured",
+      "statement": "The notation can coordinate but cannot subordinate. Recursion requires containment, and containment is not expressible in it.",
+      "derivation": "Embedding a constituent inside a constituent requires 'inside' to be readable. Containment cannot be read from the placement parameters, measured: on a lobed closed figure a Point at separation 0.75 is inside along a lobe and outside in a notch, with identical r, bearing and scale. A circle is the one shape for which separation decides containment, which is why testing the question on a circle passes falsely.",
+      "given": "separation-cannot-decide-containment",
+      "success_condition": "A derivation of separation-cannot-decide-containment that does not depend on measuring these particular figures would carry this up with it."
+    },
+    "the-notation-is-readable-except-at-small-scale": {
+      "claim": "the-notation-is-readable-except-at-small-scale",
+      "status": "measured",
+      "statement": "Of 191 depth-2 constructions, 145 share a figure with another -- but only 5 of those collisions are non-trivial, and every non-degenerate one is caused by a nested mark being too small to show its curvature class.",
+      "success_condition": "The relative scale below which curvature class stops being recoverable, measured rather than assumed. That number is the notation's legibility floor and `nest`'s 0.4 should be set from it.",
+      "scope": "Depth 2 only. Depth 3 is not enumerated and may collide differently."
+    },
+    "the-one-run-lexicon": {
+      "claim": "the-one-run-lexicon",
+      "status": "measured",
+      "statement": "The tables generate a lexicon rather than only describing one. Forty one-run entries survive reachability and the pipeline's own read-back error, each with a reading derived from its geometry, and all four marks that live on these axes fall inside it.",
+      "success_condition": "A mark the corpus names that this grid cannot reach, or two entries a reader could not tell apart."
+    },
+    "the-orbit-count-is-tolerance-bounded": {
+      "claim": "the-orbit-count-is-tolerance-bounded",
+      "status": "measured",
+      "statement": "The orbit count is not an exact integer the corpus can assert. Across the interval its own calibration calls safe it runs 89 to 94, and doubling the rotation search does not settle it. 93 is the central value, not a constant.",
+      "scope": "About the count, not about the partition's structure. The 191 constructions are themselves exact and symmetric: 5 binary operators x 36 ordered pairs, plus reflect_pair on all 6 marks, plus close on 5 -- a Point has nothing to close. Nothing here disturbs any claim about which figures are related; it bounds only how many distinct ones there are.",
+      "finding": "F168"
+    },
+    "the-pair-is-the-unit-of-assignment": {
+      "claim": "the-pair-is-the-unit-of-assignment",
+      "status": "measured",
+      "statement": "Meaning is assigned to mark PAIRS, not to marks. A domain that names one mark of a pair names its partner, without exception, and the grid is sparse enough that this is not true by construction.",
+      "scope": "MEASURED over this census, whose entries are individually cited but which I assembled. The construction risk is that I recorded a word only when I could find its partner. Three things argue against it and none of them closes it: F134's table shows the sparse-but-paired shape before the census existed; the one unbalanced cell (temporal Point/Circle, 3 against 2) survives unpadded; and the contested pair (Amperage/Voltage) is recorded as contested rather than resolved to fit. The falsifier is a domain word on one mark whose partner has none, found by re-reading the sheets.",
+      "finding": "F156"
+    },
+    "the-pen-to-ink-map-has-a-kernel": {
+      "claim": "the-pen-to-ink-map-has-a-kernel",
+      "status": "measured",
+      "statement": "Six things the hand can vary leave the ink unchanged, and therefore can never carry meaning in this notation, however natural they are to a writer.",
+      "derivation": "The writing system is a map from what the hand does to what survives on the page, and it is not injective. The things it collapses are exactly the things unavailable to the notation. This generalises the grammar rule `no-reading-order-in-ink`, which named one member of the kernel; there are at least six, and stroke order is not the most consequential. Retracing is: a run may be gone over any number of times and the ink is the same, so the notation has no way to say `again`.",
+      "success_condition": "A pen variation that is in the kernel and that the corpus nonetheless uses to distinguish two symbols. There would then be two symbols with identical ink."
+    },
+    "the-pen-width-is-the-notations-unit": {
+      "claim": "the-pen-width-is-the-notations-unit",
+      "status": "derived_given",
+      "statement": "Absolute scale is not open after all. The pen width is an intrinsic unit: it can be read off any drawing without asking its author anything, and every length in the notation can be stated in it.",
+      "derivation": "Table G.3 was open on the grounds that nothing fixes a unit, so a figure and the same figure twice as large say the same thing. But the second figure is drawn with a pen twice as wide or it is not the same figure -- and if the pen is NOT scaled, the two figures differ in every one of the four floors, which is a difference the page carries. The unit is therefore in the drawing already.",
+      "given": "that a drawing is made with a pen of some width -- which is true of every drawing there is, but is a fact about drawing rather than about the notation."
+    },
+    "the-pipelines-own-floor-is-0.05": {
+      "claim": "the-pipelines-own-floor-is-0.05",
+      "status": "measured",
+      "statement": "Nothing this corpus draws can score below about 0.05 against an extracted figure, because the extraction does not return what it was given.",
+      "success_condition": "A generated figure that round-trips closer than the perturbation spread."
+    },
+    "the-roster-confused-unmeasured-with-unmeasurable": {
+      "claim": "the-roster-confused-unmeasured-with-unmeasurable",
+      "status": "measured",
+      "statement": "Every dimension the complexifier roster marked BLIND is cheaply measurable. Not one was a limit of the geometry; all were limits of the code that had been written.",
+      "success_condition": "A dimension along which ink varies that genuinely cannot be measured."
+    },
+    "the-transformations-panel-is-the-element-square": {
+      "claim": "the-transformations-panel-is-the-element-square",
+      "status": "measured",
+      "statement": "The cheat sheet's transformations 3x3 draws four inverse pairs around a centre, and the pair that looked like a fourth mark pair is not one: In/Out are the BARRED triangles and Rise/Fall the UNBARRED ones, so the panel reads the direction opposition at both settings of the crossbar bit.",
+      "scope": "One panel on one sheet, measured. Says nothing about the other 31 cells of the opposition census, which were read independently.",
+      "finding": "F164"
+    },
+    "thesaurus-size-depends-on-mirroring": {
+      "claim": "thesaurus-size-depends-on-mirroring",
+      "status": "derived_given",
+      "statement": "The depth-2 sign inventory is 93 if mirroring carries no meaning and 103 if it does.",
+      "derivation": "Re-running the enumeration quotienting by rotation alone rather than by rotation and reflection gives 103 orbits against 93. Only 10 of the 93 split, because for the other 30 chiral orbits these operators never construct the enantiomorph -- it is permitted by the geometry and unreachable at this depth.",
+      "given": "mirroring-is-meaningful",
+      "scope": "Depth 2, after the F105 correction to concatenate. Before that fix the pair read 80/88; the operator was placing its marks apart rather than joining them, which collapsed concatenate into superpose_displaced across most of the space. THE 93 IS TOLERANCE-BOUNDED: see the-orbit-count-is-tolerance-bounded, which measures it at 89 to 94 across the interval the calibration licenses. Cite it as a central value, not an exact count.",
+      "finding": "F102"
+    },
+    "theta0-is-60": {
+      "claim": "theta0-is-60",
+      "status": "measured",
+      "statement": "Aries begins 60 degrees clockwise from the top on every wheel in the corpus.",
+      "success_condition": "A reason for 60 rather than 0 or 90. Remarkable as stability across five years; says nothing about necessity.",
+      "finding": "F60, F76"
+    },
+    "thinning-splits-a-crossing-into-two-tees": {
+      "claim": "thinning-splits-a-crossing-into-two-tees",
+      "status": "measured",
+      "statement": "A skeleton cannot hold four strands meeting at one pixel and stay one pixel wide, so every X in a photographed figure arrives as two Y junctions joined by a stub.",
+      "success_condition": "A photographed crossing that thins to a single point of valence 4 without merging."
+    },
+    "three-cells-restate-the-geometry": {
+      "claim": "three-cells-restate-the-geometry",
+      "status": "measured",
+      "statement": "Three of the thirty-two attested domain-pair cells name the curvature itself, so they cannot be evidence for any semantic polarity aligned with curvature. Counting all thirty-two counts the premise three times.",
+      "scope": "A fact about which cells can bear weight, not about whether the polarity is real.",
+      "finding": "F158"
+    },
+    "three-marks-bracket-by-connectivity-not-by-order": {
+      "claim": "three-marks-bracket-by-connectivity-not-by-order",
+      "status": "derived_given",
+      "statement": "A three-mark symbol is not a flat product of three cells. Its bracketing is fixed by which relation joins the ink.",
+      "derivation": "The grammar's first rule is that constituency is connectivity. A relation that joins the ink -- crossing, abutting, overlapping, containing -- leaves ONE constituent, which can anchor a third mark. A relation that does not -- apart -- leaves two, and a third mark placed against them has no single thing to be placed against. So the only bracketing available is (connected pair) plus a mark apart.",
+      "given": "`connectivity-is-constituency`, which is measured rather than proved."
+    },
+    "three-wave-families": {
+      "claim": "three-wave-families",
+      "status": "derived",
+      "statement": "There are three wave families, and a figure can belong to one by CHARACTER while a different figure generates it by TILING. Generatively: Angle repeated is the triangle wave, Staple alternating is the square wave, Wave repeated is the sine wave. Characterologically: Angle is the triangle family, Line and Staple the square family, Curve and Wave the sine family. Closing the same generator gives that family's polygon: Angle at apex 60 degrees closes to an equilateral triangle and the Staple with body equal to upright closes to a square. The sine family is the exception -- the Wave closes to a lens and the Circle is already closed.",
+      "derivation": "GENERATIVE: tile each mark along its own axis and compare the run to the defined wave as a FUNCTION -- y over a shared grid at unit amplitude, over one detected period, phase and polarity free, by trimmed RMS. Angle 0.002, Staple 0.005, Wave 0.002. Floor 0.02 (the largest disagreement between an ideal wave and the same wave at another frequency over two to six periods); nearest two ideals 0.147 apart, seven times that. The Curve's tiling is 0.272 from the nearest ideal; the Line's and the Circle's profiles are flat, so they have no period. CHARACTEROLOGICAL: curvature class separates the smooth family, and the direction of the straight runs separates the other two. A figure whose every run is axis-parallel or axis-perpendicular keeps its angles under any axis-aligned stretch; one with runs at any other angle does not. Angle runs at 45 and 135; Line at 0; Staple and the square wave at 0 and 90. POLYGON: close the generator -- join its free ends with a chord -- and compare to the regular polygon under rotation and reflection. Equilateral triangle 0.045, square 0.0035, against a same-figure tolerance of 0.073. Each needs its free proportion set: a chevron closes to an isoceles triangle at any apex and an equilateral one only at sixty degrees.",
+      "scope": "About the alphabet, not about the twelve. Establishes which figure generates which wave and which belongs to which family, and says nothing about what a wave form MEANS. The Staple is not one of the six marks -- it is Line with a perpendicular upright at each end.",
+      "finding": "F129, F132"
+    },
+    "topology-depends-on-how-thickly-you-write": {
+      "claim": "topology-depends-on-how-thickly-you-write",
+      "status": "measured",
+      "statement": "A figure's readable topology is not a property of the figure alone. The same curve written with a thicker pen encloses fewer regions, and the threshold is exact enough to predict.",
+      "success_condition": "A figure whose inked topology differs from the rule's prediction by more than the raster can resolve."
+    },
+    "turning-is-read-back-to-a-floor-plus-a-proportion": {
+      "claim": "turning-is-read-back-to-a-floor-plus-a-proportion",
+      "status": "measured",
+      "statement": "Turning read back off ink is accurate to about 30 degrees plus 9 per cent of itself, while the figure stays clear of itself -- and collapses entirely when it does not.",
+      "success_condition": "A well-cleared figure whose turning reads back outside this band, or a figure below 1.5 pen widths of clearance whose turning survives."
+    },
+    "two-marks-stand-in-exactly-six-ways": {
+      "claim": "two-marks-stand-in-exactly-six-ways",
+      "status": "derived_given",
+      "statement": "There are six ways two marks can stand to each other, and the six are forced rather than chosen: fused, contained, overlapping, crossing, abutting, apart.",
+      "derivation": "Two yes-or-no questions exhaust the cases. Do they share a point? Is one inside a bounded region of the other? That gives four cells; the sharing cell splits by whether a stroke ENDS at the meeting, which is the same parity that separates a T from an X; and one further cell exists because some pairs are not two marks at all. Marks laid exactly on each other, and marks butted end to end, both make ink that a single unbroken run would make, so the page holds ONE mark. FUSED is that cell.",
+      "given": "the same model of ink the retracing claim rests on -- that ink is a SET of covered points. Five of the six cells follow from the two questions alone; FUSED needs the model, because it says a second pass over the same place adds nothing."
+    },
+    "two-unnamed-orbits-sit-beside-named-ones": {
+      "claim": "two-unnamed-orbits-sit-beside-named-ones",
+      "status": "measured",
+      "statement": "Of the four figures the corpus draws, two have an unnamed orbit within 0.085 of them and two have nothing within 0.35. The infinity sign, attested as reflect_pair(Wave), sits 0.081 from superpose_displaced(Circle,Circle) -- two circles set side by side.",
+      "scope": "A fact about these 93 representatives under this metric. It says nothing about meaning, and the two isolated cases -- Sun-in-Circle and the cross -- are equally a result: they have no near neighbour at all.",
+      "finding": "F107"
+    },
+    "ul-is-not-phonetic": {
+      "claim": "ul-is-not-phonetic",
+      "status": "derived",
+      "statement": "Universal Symbology is not a phonetic system, so comparing its marks to the letters of a phonetic alphabet is a category comparison, not a measurement -- regardless of how well it is instrumented.",
+      "derivation": "The six marks are individuated by symmetry order and curvature class (F84/F85/F88), which are geometric properties. A phonetic letter is individuated by the sound it records. Nothing maps one onto the other, and the corpus's own `Instruction Manual - Universal Symbology - Vocalization and Language` states vocalization as a GOAL rather than a result (F31), so the bridge that would license the comparison does not exist.",
+      "finding": "F100"
+    },
+    "up-is-shared-across-canvases": {
+      "claim": "up-is-shared-across-canvases",
+      "status": "withdrawn",
+      "statement": "WITHDRAWN. Asked whether two readers on different canvases assign the same direction to `up`.",
+      "why_withdrawn": "They do not, and this corpus had already derived why. `orientation-is-a-canvas-parameter` (derived, F103) says the frame always supplies an orientation and never canonically, and its own derivation carries the counterexample: inside a cosmic supervoid the pull is outward from every side, so `down` inverts. The question had an answer on file the whole time, and the answer is no. What was actually at stake was whether any MEANING in the notation depends on the agreement, and it does not -- see `direction-is-read-as-contrast`.",
+      "finding": "F141 -> F145"
+    },
+    "updown-is-meaningful": {
+      "claim": "updown-is-meaningful",
+      "status": "derived_given",
+      "statement": "Up and down are distinguishable on the page and carry meaning -- given a canvas, which always supplies them and never canonically.",
+      "given": "orientation-is-a-canvas-parameter",
+      "success_condition": "This is an embedding assumption, not a geometric fact -- a plane has no privileged up. It is inherited from the reader's body and gravity. Either derive it from the reading situation or record it as a stated premise of the notation."
+    },
+    "vertex-acts": {
+      "claim": "vertex-acts",
+      "status": "measured",
+      "statement": "The Angle takes the initiating / source / writing role and the Curve the receiving / sink / reading one, in every domain the corpus uses. The pairing is domain-invariant; why the singular-curvature mark takes the source role is not derived.",
+      "success_condition": "CHANGED at F147, because the old one asked for three different things. Directedness IS derivable -- the Angle is rotation class 1, so its orientation is meaning-bearing (symmetry-order-is-operator-capacity) -- but the CURVE IS ALSO CLASS 1, so directedness cannot discriminate the pair. Agency and initiation are not geometric properties and no measurement returns them. And the second branch, 'find a different geometric property of the vertex', has been searched: 28 settled claims characterise the Angle's geometry and not one of those facts is semantic (F142 took the most tempting candidate and showed it to be a pun on `init`). What is missing is not another property but a MAP -- a principled reason why, of the two class-1 marks, the singular-curvature one takes the source role. That map would close a dozen claims at once, and it is the Tier-1-to-Tier-2 gap F48 named: the grammar is grounded, the vocabulary it composes is still largely chosen.",
+      "scope": "About the corpus, not about necessity. Establishes that the pairing is not arbitrary WITHIN this corpus -- it survives the domain axis -- and says nothing about why the geometry should carry it.",
+      "finding": "F142 -> F147"
+    },
+    "waveform-alphabet-is-exact": {
+      "claim": "waveform-alphabet-is-exact",
+      "status": "measured",
+      "statement": "Every drawn sign-mark decomposes into waveshape x phase x datum with no residue, and the corpus performs both of the operations that decomposition implies.",
+      "success_condition": "Already measured. What would extend it is a reason the three waveshapes should be triangle, square and sine rather than any other three -- the completion result (curve-pair-is-the-circle) is the nearest thing and does not reach it.",
+      "scope": "About the ALPHABET being generated by those three parameters, and about the corpus drawing the inversions and datum-additions out in full. Says nothing about whether the acoustic SEMANTICS are intended -- that is the domain question, and `the-domain-is-an-axis` answers it.",
+      "finding": "F133"
+    },
+    "waveform-reading-is-intended": {
+      "claim": "waveform-reading-is-intended",
+      "status": "withdrawn",
+      "statement": "WITHDRAWN. Asked whether the marks are to be read as waveforms, and required something that would establish the waveform reading as THE reading rather than one useful one.",
+      "why_withdrawn": "The question is malformed, and the corpus says so in its own layout. `axis_census.json` has recorded since it was built that DOMAIN is an axis on three sheets -- PointShapeLineWaveAngleCurve (F10), VideoGamesProgrammingReactRedux (F18) and ZodiacSignSymbols (F39), with a fourth added at F139 -- and an axis is listed there only where a sheet VARIES it to distinguish cells. A notation that varies the domain deliberately, on three sheets, cannot have one. Worse for the original framing: the waveform features and the modality/element features are not rival readings of the marks but two names for ONE partition, since F46 settled that the geometry IS the modality. Asking which is the real reading asks which name for a partition is the real name. Retained under its own id so the 178 built pages and the tmpl.* strings that cite it reach the correction rather than a missing entry.",
+      "finding": "F133 -> F134"
+    },
+    "where-the-turning-gathers-is-an-axis-the-grid-was-missing": {
+      "claim": "where-the-turning-gathers-is-an-axis-the-grid-was-missing",
+      "status": "measured",
+      "statement": "Concentration says HOW MUCH of a run's turning gathers. WHERE it gathers is a separate quantity, it was fixed at the middle of the run without anyone noticing it was a parameter, and freeing it closes 37 per cent of the redraw gap.",
+      "success_condition": "A figure whose turning gathers somewhere the grid can already put it."
+    },
+    "z12-factors": {
+      "claim": "z12-factors",
+      "status": "derived",
+      "statement": "Z/12 = Z/3 x Z/4, so 3 modalities x 4 elements covers twelve cells with no repeat and no gap.",
+      "derivation": "gcd(3,4)=1, Chinese Remainder Theorem. This is why there are twelve, not an observation that there happen to be.",
+      "finding": "F48"
+    }
+  }
+}

@@ -1,0 +1,1270 @@
+{
+  "page": "explore",
+  "principle": "The served document is the complete document. Script may change what is shown; it must never change what is there.",
+  "script": "none — this page is CSS only",
+  "navigation": "The navigator has the same shape as what it indexes: one axis is a strip, two axes are a grid, and the lower triangle is the same slice with the page turned.",
+  "totals": {
+    "planar_slices": 110,
+    "derived_layouts": 19,
+    "all": 129
+  },
+  "unary_axes": [
+    {
+      "axis": "mark",
+      "varies": "which of the six",
+      "type": "discrete-6"
+    },
+    {
+      "axis": "rotation",
+      "varies": "phi, the turn applied",
+      "type": "circular"
+    },
+    {
+      "axis": "reflection",
+      "varies": "mirrored or not",
+      "type": "binary"
+    },
+    {
+      "axis": "scale",
+      "varies": "s, the size",
+      "type": "positive-real"
+    },
+    {
+      "axis": "count",
+      "varies": "n, how many copies",
+      "type": "natural"
+    },
+    {
+      "axis": "frequency",
+      "varies": "cycles packed into the extent",
+      "type": "natural"
+    },
+    {
+      "axis": "amplitude",
+      "varies": "depth of the excursion",
+      "type": "positive-real"
+    },
+    {
+      "axis": "phase",
+      "varies": "where in the cycle the extent begins",
+      "type": "circular"
+    },
+    {
+      "axis": "taper",
+      "varies": "the excursion grows or shrinks along the extent",
+      "type": "signed-real"
+    },
+    {
+      "axis": "chirp",
+      "varies": "the frequency itself changes along the extent",
+      "type": "positive-real"
+    }
+  ],
+  "binary_axes": [
+    {
+      "axis": "A",
+      "varies": "the first mark",
+      "type": "discrete-6"
+    },
+    {
+      "axis": "B",
+      "varies": "the second mark",
+      "type": "discrete-6"
+    },
+    {
+      "axis": "separation",
+      "varies": "r between centres",
+      "type": "positive-real"
+    },
+    {
+      "axis": "bearing",
+      "varies": "theta, direction of B from A",
+      "type": "circular"
+    },
+    {
+      "axis": "relative-rotation",
+      "varies": "phi, B's own turn",
+      "type": "circular"
+    },
+    {
+      "axis": "relative-scale",
+      "varies": "s, B's size against A",
+      "type": "positive-real"
+    },
+    {
+      "axis": "reflect-B",
+      "varies": "B mirrored or not",
+      "type": "binary"
+    },
+    {
+      "axis": "B-frequency",
+      "varies": "cycles packed into B's extent",
+      "type": "natural"
+    },
+    {
+      "axis": "B-amplitude",
+      "varies": "depth of B's excursion",
+      "type": "positive-real"
+    },
+    {
+      "axis": "B-phase",
+      "varies": "where in the cycle B's extent begins",
+      "type": "circular"
+    }
+  ],
+  "slices": {
+    "unary": [
+      {
+        "kind": "strip",
+        "axes": [
+          "mark"
+        ],
+        "varies": "which of the six",
+        "type": "discrete-6"
+      },
+      {
+        "kind": "strip",
+        "axes": [
+          "rotation"
+        ],
+        "varies": "phi, the turn applied",
+        "type": "circular"
+      },
+      {
+        "kind": "strip",
+        "axes": [
+          "reflection"
+        ],
+        "varies": "mirrored or not",
+        "type": "binary"
+      },
+      {
+        "kind": "strip",
+        "axes": [
+          "scale"
+        ],
+        "varies": "s, the size",
+        "type": "positive-real"
+      },
+      {
+        "kind": "strip",
+        "axes": [
+          "count"
+        ],
+        "varies": "n, how many copies",
+        "type": "natural"
+      },
+      {
+        "kind": "strip",
+        "axes": [
+          "frequency"
+        ],
+        "varies": "cycles packed into the extent",
+        "type": "natural"
+      },
+      {
+        "kind": "strip",
+        "axes": [
+          "amplitude"
+        ],
+        "varies": "depth of the excursion",
+        "type": "positive-real"
+      },
+      {
+        "kind": "strip",
+        "axes": [
+          "phase"
+        ],
+        "varies": "where in the cycle the extent begins",
+        "type": "circular"
+      },
+      {
+        "kind": "strip",
+        "axes": [
+          "taper"
+        ],
+        "varies": "the excursion grows or shrinks along the extent",
+        "type": "signed-real"
+      },
+      {
+        "kind": "strip",
+        "axes": [
+          "chirp"
+        ],
+        "varies": "the frequency itself changes along the extent",
+        "type": "positive-real"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "mark",
+          "rotation"
+        ],
+        "varies": "which of the six  x  phi, the turn applied",
+        "type": "discrete-6 x circular"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "mark",
+          "reflection"
+        ],
+        "varies": "which of the six  x  mirrored or not",
+        "type": "discrete-6 x binary"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "mark",
+          "scale"
+        ],
+        "varies": "which of the six  x  s, the size",
+        "type": "discrete-6 x positive-real"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "mark",
+          "count"
+        ],
+        "varies": "which of the six  x  n, how many copies",
+        "type": "discrete-6 x natural"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "mark",
+          "frequency"
+        ],
+        "varies": "which of the six  x  cycles packed into the extent",
+        "type": "discrete-6 x natural"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "mark",
+          "amplitude"
+        ],
+        "varies": "which of the six  x  depth of the excursion",
+        "type": "discrete-6 x positive-real"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "mark",
+          "phase"
+        ],
+        "varies": "which of the six  x  where in the cycle the extent begins",
+        "type": "discrete-6 x circular"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "mark",
+          "taper"
+        ],
+        "varies": "which of the six  x  the excursion grows or shrinks along the extent",
+        "type": "discrete-6 x signed-real"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "mark",
+          "chirp"
+        ],
+        "varies": "which of the six  x  the frequency itself changes along the extent",
+        "type": "discrete-6 x positive-real"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "rotation",
+          "reflection"
+        ],
+        "varies": "phi, the turn applied  x  mirrored or not",
+        "type": "circular x binary"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "rotation",
+          "scale"
+        ],
+        "varies": "phi, the turn applied  x  s, the size",
+        "type": "circular x positive-real"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "rotation",
+          "count"
+        ],
+        "varies": "phi, the turn applied  x  n, how many copies",
+        "type": "circular x natural"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "rotation",
+          "frequency"
+        ],
+        "varies": "phi, the turn applied  x  cycles packed into the extent",
+        "type": "circular x natural"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "rotation",
+          "amplitude"
+        ],
+        "varies": "phi, the turn applied  x  depth of the excursion",
+        "type": "circular x positive-real"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "rotation",
+          "phase"
+        ],
+        "varies": "phi, the turn applied  x  where in the cycle the extent begins",
+        "type": "circular x circular"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "rotation",
+          "taper"
+        ],
+        "varies": "phi, the turn applied  x  the excursion grows or shrinks along the extent",
+        "type": "circular x signed-real"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "rotation",
+          "chirp"
+        ],
+        "varies": "phi, the turn applied  x  the frequency itself changes along the extent",
+        "type": "circular x positive-real"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "reflection",
+          "scale"
+        ],
+        "varies": "mirrored or not  x  s, the size",
+        "type": "binary x positive-real"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "reflection",
+          "count"
+        ],
+        "varies": "mirrored or not  x  n, how many copies",
+        "type": "binary x natural"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "reflection",
+          "frequency"
+        ],
+        "varies": "mirrored or not  x  cycles packed into the extent",
+        "type": "binary x natural"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "reflection",
+          "amplitude"
+        ],
+        "varies": "mirrored or not  x  depth of the excursion",
+        "type": "binary x positive-real"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "reflection",
+          "phase"
+        ],
+        "varies": "mirrored or not  x  where in the cycle the extent begins",
+        "type": "binary x circular"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "reflection",
+          "taper"
+        ],
+        "varies": "mirrored or not  x  the excursion grows or shrinks along the extent",
+        "type": "binary x signed-real"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "reflection",
+          "chirp"
+        ],
+        "varies": "mirrored or not  x  the frequency itself changes along the extent",
+        "type": "binary x positive-real"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "scale",
+          "count"
+        ],
+        "varies": "s, the size  x  n, how many copies",
+        "type": "positive-real x natural"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "scale",
+          "frequency"
+        ],
+        "varies": "s, the size  x  cycles packed into the extent",
+        "type": "positive-real x natural"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "scale",
+          "amplitude"
+        ],
+        "varies": "s, the size  x  depth of the excursion",
+        "type": "positive-real x positive-real"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "scale",
+          "phase"
+        ],
+        "varies": "s, the size  x  where in the cycle the extent begins",
+        "type": "positive-real x circular"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "scale",
+          "taper"
+        ],
+        "varies": "s, the size  x  the excursion grows or shrinks along the extent",
+        "type": "positive-real x signed-real"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "scale",
+          "chirp"
+        ],
+        "varies": "s, the size  x  the frequency itself changes along the extent",
+        "type": "positive-real x positive-real"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "count",
+          "frequency"
+        ],
+        "varies": "n, how many copies  x  cycles packed into the extent",
+        "type": "natural x natural"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "count",
+          "amplitude"
+        ],
+        "varies": "n, how many copies  x  depth of the excursion",
+        "type": "natural x positive-real"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "count",
+          "phase"
+        ],
+        "varies": "n, how many copies  x  where in the cycle the extent begins",
+        "type": "natural x circular"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "count",
+          "taper"
+        ],
+        "varies": "n, how many copies  x  the excursion grows or shrinks along the extent",
+        "type": "natural x signed-real"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "count",
+          "chirp"
+        ],
+        "varies": "n, how many copies  x  the frequency itself changes along the extent",
+        "type": "natural x positive-real"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "frequency",
+          "amplitude"
+        ],
+        "varies": "cycles packed into the extent  x  depth of the excursion",
+        "type": "natural x positive-real"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "frequency",
+          "phase"
+        ],
+        "varies": "cycles packed into the extent  x  where in the cycle the extent begins",
+        "type": "natural x circular"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "frequency",
+          "taper"
+        ],
+        "varies": "cycles packed into the extent  x  the excursion grows or shrinks along the extent",
+        "type": "natural x signed-real"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "frequency",
+          "chirp"
+        ],
+        "varies": "cycles packed into the extent  x  the frequency itself changes along the extent",
+        "type": "natural x positive-real"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "amplitude",
+          "phase"
+        ],
+        "varies": "depth of the excursion  x  where in the cycle the extent begins",
+        "type": "positive-real x circular"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "amplitude",
+          "taper"
+        ],
+        "varies": "depth of the excursion  x  the excursion grows or shrinks along the extent",
+        "type": "positive-real x signed-real"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "amplitude",
+          "chirp"
+        ],
+        "varies": "depth of the excursion  x  the frequency itself changes along the extent",
+        "type": "positive-real x positive-real"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "phase",
+          "taper"
+        ],
+        "varies": "where in the cycle the extent begins  x  the excursion grows or shrinks along the extent",
+        "type": "circular x signed-real"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "phase",
+          "chirp"
+        ],
+        "varies": "where in the cycle the extent begins  x  the frequency itself changes along the extent",
+        "type": "circular x positive-real"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "taper",
+          "chirp"
+        ],
+        "varies": "the excursion grows or shrinks along the extent  x  the frequency itself changes along the extent",
+        "type": "signed-real x positive-real"
+      }
+    ],
+    "binary": [
+      {
+        "kind": "strip",
+        "axes": [
+          "A"
+        ],
+        "varies": "the first mark",
+        "type": "discrete-6"
+      },
+      {
+        "kind": "strip",
+        "axes": [
+          "B"
+        ],
+        "varies": "the second mark",
+        "type": "discrete-6"
+      },
+      {
+        "kind": "strip",
+        "axes": [
+          "separation"
+        ],
+        "varies": "r between centres",
+        "type": "positive-real"
+      },
+      {
+        "kind": "strip",
+        "axes": [
+          "bearing"
+        ],
+        "varies": "theta, direction of B from A",
+        "type": "circular"
+      },
+      {
+        "kind": "strip",
+        "axes": [
+          "relative-rotation"
+        ],
+        "varies": "phi, B's own turn",
+        "type": "circular"
+      },
+      {
+        "kind": "strip",
+        "axes": [
+          "relative-scale"
+        ],
+        "varies": "s, B's size against A",
+        "type": "positive-real"
+      },
+      {
+        "kind": "strip",
+        "axes": [
+          "reflect-B"
+        ],
+        "varies": "B mirrored or not",
+        "type": "binary"
+      },
+      {
+        "kind": "strip",
+        "axes": [
+          "B-frequency"
+        ],
+        "varies": "cycles packed into B's extent",
+        "type": "natural"
+      },
+      {
+        "kind": "strip",
+        "axes": [
+          "B-amplitude"
+        ],
+        "varies": "depth of B's excursion",
+        "type": "positive-real"
+      },
+      {
+        "kind": "strip",
+        "axes": [
+          "B-phase"
+        ],
+        "varies": "where in the cycle B's extent begins",
+        "type": "circular"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "A",
+          "B"
+        ],
+        "varies": "the first mark  x  the second mark",
+        "type": "discrete-6 x discrete-6"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "A",
+          "separation"
+        ],
+        "varies": "the first mark  x  r between centres",
+        "type": "discrete-6 x positive-real"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "A",
+          "bearing"
+        ],
+        "varies": "the first mark  x  theta, direction of B from A",
+        "type": "discrete-6 x circular"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "A",
+          "relative-rotation"
+        ],
+        "varies": "the first mark  x  phi, B's own turn",
+        "type": "discrete-6 x circular"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "A",
+          "relative-scale"
+        ],
+        "varies": "the first mark  x  s, B's size against A",
+        "type": "discrete-6 x positive-real"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "A",
+          "reflect-B"
+        ],
+        "varies": "the first mark  x  B mirrored or not",
+        "type": "discrete-6 x binary"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "A",
+          "B-frequency"
+        ],
+        "varies": "the first mark  x  cycles packed into B's extent",
+        "type": "discrete-6 x natural"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "A",
+          "B-amplitude"
+        ],
+        "varies": "the first mark  x  depth of B's excursion",
+        "type": "discrete-6 x positive-real"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "A",
+          "B-phase"
+        ],
+        "varies": "the first mark  x  where in the cycle B's extent begins",
+        "type": "discrete-6 x circular"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "B",
+          "separation"
+        ],
+        "varies": "the second mark  x  r between centres",
+        "type": "discrete-6 x positive-real"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "B",
+          "bearing"
+        ],
+        "varies": "the second mark  x  theta, direction of B from A",
+        "type": "discrete-6 x circular"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "B",
+          "relative-rotation"
+        ],
+        "varies": "the second mark  x  phi, B's own turn",
+        "type": "discrete-6 x circular"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "B",
+          "relative-scale"
+        ],
+        "varies": "the second mark  x  s, B's size against A",
+        "type": "discrete-6 x positive-real"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "B",
+          "reflect-B"
+        ],
+        "varies": "the second mark  x  B mirrored or not",
+        "type": "discrete-6 x binary"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "B",
+          "B-frequency"
+        ],
+        "varies": "the second mark  x  cycles packed into B's extent",
+        "type": "discrete-6 x natural"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "B",
+          "B-amplitude"
+        ],
+        "varies": "the second mark  x  depth of B's excursion",
+        "type": "discrete-6 x positive-real"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "B",
+          "B-phase"
+        ],
+        "varies": "the second mark  x  where in the cycle B's extent begins",
+        "type": "discrete-6 x circular"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "separation",
+          "bearing"
+        ],
+        "varies": "r between centres  x  theta, direction of B from A",
+        "type": "positive-real x circular"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "separation",
+          "relative-rotation"
+        ],
+        "varies": "r between centres  x  phi, B's own turn",
+        "type": "positive-real x circular"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "separation",
+          "relative-scale"
+        ],
+        "varies": "r between centres  x  s, B's size against A",
+        "type": "positive-real x positive-real"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "separation",
+          "reflect-B"
+        ],
+        "varies": "r between centres  x  B mirrored or not",
+        "type": "positive-real x binary"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "separation",
+          "B-frequency"
+        ],
+        "varies": "r between centres  x  cycles packed into B's extent",
+        "type": "positive-real x natural"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "separation",
+          "B-amplitude"
+        ],
+        "varies": "r between centres  x  depth of B's excursion",
+        "type": "positive-real x positive-real"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "separation",
+          "B-phase"
+        ],
+        "varies": "r between centres  x  where in the cycle B's extent begins",
+        "type": "positive-real x circular"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "bearing",
+          "relative-rotation"
+        ],
+        "varies": "theta, direction of B from A  x  phi, B's own turn",
+        "type": "circular x circular"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "bearing",
+          "relative-scale"
+        ],
+        "varies": "theta, direction of B from A  x  s, B's size against A",
+        "type": "circular x positive-real"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "bearing",
+          "reflect-B"
+        ],
+        "varies": "theta, direction of B from A  x  B mirrored or not",
+        "type": "circular x binary"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "bearing",
+          "B-frequency"
+        ],
+        "varies": "theta, direction of B from A  x  cycles packed into B's extent",
+        "type": "circular x natural"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "bearing",
+          "B-amplitude"
+        ],
+        "varies": "theta, direction of B from A  x  depth of B's excursion",
+        "type": "circular x positive-real"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "bearing",
+          "B-phase"
+        ],
+        "varies": "theta, direction of B from A  x  where in the cycle B's extent begins",
+        "type": "circular x circular"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "relative-rotation",
+          "relative-scale"
+        ],
+        "varies": "phi, B's own turn  x  s, B's size against A",
+        "type": "circular x positive-real"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "relative-rotation",
+          "reflect-B"
+        ],
+        "varies": "phi, B's own turn  x  B mirrored or not",
+        "type": "circular x binary"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "relative-rotation",
+          "B-frequency"
+        ],
+        "varies": "phi, B's own turn  x  cycles packed into B's extent",
+        "type": "circular x natural"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "relative-rotation",
+          "B-amplitude"
+        ],
+        "varies": "phi, B's own turn  x  depth of B's excursion",
+        "type": "circular x positive-real"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "relative-rotation",
+          "B-phase"
+        ],
+        "varies": "phi, B's own turn  x  where in the cycle B's extent begins",
+        "type": "circular x circular"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "relative-scale",
+          "reflect-B"
+        ],
+        "varies": "s, B's size against A  x  B mirrored or not",
+        "type": "positive-real x binary"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "relative-scale",
+          "B-frequency"
+        ],
+        "varies": "s, B's size against A  x  cycles packed into B's extent",
+        "type": "positive-real x natural"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "relative-scale",
+          "B-amplitude"
+        ],
+        "varies": "s, B's size against A  x  depth of B's excursion",
+        "type": "positive-real x positive-real"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "relative-scale",
+          "B-phase"
+        ],
+        "varies": "s, B's size against A  x  where in the cycle B's extent begins",
+        "type": "positive-real x circular"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "reflect-B",
+          "B-frequency"
+        ],
+        "varies": "B mirrored or not  x  cycles packed into B's extent",
+        "type": "binary x natural"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "reflect-B",
+          "B-amplitude"
+        ],
+        "varies": "B mirrored or not  x  depth of B's excursion",
+        "type": "binary x positive-real"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "reflect-B",
+          "B-phase"
+        ],
+        "varies": "B mirrored or not  x  where in the cycle B's extent begins",
+        "type": "binary x circular"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "B-frequency",
+          "B-amplitude"
+        ],
+        "varies": "cycles packed into B's extent  x  depth of B's excursion",
+        "type": "natural x positive-real"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "B-frequency",
+          "B-phase"
+        ],
+        "varies": "cycles packed into B's extent  x  where in the cycle B's extent begins",
+        "type": "natural x circular"
+      },
+      {
+        "kind": "grid",
+        "axes": [
+          "B-amplitude",
+          "B-phase"
+        ],
+        "varies": "depth of B's excursion  x  where in the cycle B's extent begins",
+        "type": "positive-real x circular"
+      }
+    ]
+  },
+  "derived_layouts": [
+    {
+      "layout": "subgroup lattice",
+      "structure": "a partial order (subgroups of O(2) under inclusion)",
+      "form": "Hasse diagram; marks placed at their own group",
+      "shows": "which groups the alphabet realises, and which it leaves empty",
+      "status": "drawn (F105)"
+    },
+    {
+      "layout": "Cayley table",
+      "structure": "a group's multiplication",
+      "form": "square matrix, |G| x |G|",
+      "shows": "how a mark's own symmetries compose; D2 is 4x4",
+      "status": "drawn (F105)"
+    },
+    {
+      "layout": "fixed-point table",
+      "structure": "a group action's stabilisers",
+      "form": "marks x transformations, cell = moved or not",
+      "shows": "the symmetry group of each mark, as data rather than a label",
+      "status": "drawn (F105)"
+    },
+    {
+      "layout": "capacity table",
+      "structure": "orbit size = index of the stabiliser",
+      "form": "marks x operators, cell = how many distinct states",
+      "shows": "what a turn or a mirror can SAY on each mark",
+      "status": "drawn (F105)"
+    },
+    {
+      "layout": "enantiomorph sheet",
+      "structure": "the mirror pairing",
+      "form": "two columns: figure, its mirror; a mark per row",
+      "shows": "that exactly one mark is chiral",
+      "status": "drawn (F105)"
+    },
+    {
+      "layout": "fundamental domain",
+      "structure": "the quotient of the figure by its own symmetry",
+      "form": "the figure with its generating wedge shaded",
+      "shows": "how much of a figure is independent; a Circle's wedge is a point",
+      "status": "drawn (F105)"
+    },
+    {
+      "layout": "orbit sheet",
+      "structure": "a quotient (combinations modulo rotation and reflection)",
+      "form": "grid of orbit representatives, members listed",
+      "shows": "the thesaurus: which constructions are synonyms",
+      "status": "drawn (F101)"
+    },
+    {
+      "layout": "orbit collapse map",
+      "structure": "the quotient map A x B -> orbits",
+      "form": "6x6 per operator, cells coloured by destination orbit",
+      "shows": "synonymy made visible: cells that share an orbit look identical",
+      "status": "drawn (F106)"
+    },
+    {
+      "layout": "commutativity map",
+      "structure": "the symmetry of a binary operation",
+      "form": "6x6, cell = same / mirror / different",
+      "shows": "that A-beside-B and B-beside-A are enantiomorphs",
+      "status": "drawn (F106)"
+    },
+    {
+      "layout": "distance matrix",
+      "structure": "a metric on the orbit set",
+      "form": "95x95 heatmap of Hausdorff distance",
+      "shows": "which unnamed orbits are near which named ones",
+      "status": "drawn (F107)"
+    },
+    {
+      "layout": "dendrogram",
+      "structure": "a hierarchy induced by that metric",
+      "form": "tree, leaves are orbits",
+      "shows": "families among the 91 unnamed figures",
+      "status": "drawn (F107)"
+    },
+    {
+      "layout": "MDS scatter",
+      "structure": "the same metric, embedded",
+      "form": "2-D scatter of the orbits",
+      "shows": "the shape of the space itself, with its loss stated",
+      "status": "drawn (F107)"
+    },
+    {
+      "layout": "reachability graph",
+      "structure": "a relation: one operand substituted",
+      "form": "chord diagram, orbits on a ring ordered by the distance tree",
+      "shows": "which figures are one mark-swap apart; true reachability needs depth 3",
+      "status": "drawn (F108)"
+    },
+    {
+      "layout": "incidence matrix",
+      "structure": "a bipartite relation (marks participate in orbits)",
+      "form": "6 x 80 boolean",
+      "shows": "which marks are load-bearing and which are rare",
+      "status": "drawn (F108)"
+    },
+    {
+      "layout": "schema join",
+      "structure": "a partial function (schema -> operator)",
+      "form": "10 rows, operator or a gap",
+      "shows": "that four schemas have no operator",
+      "status": "drawn (F108)"
+    },
+    {
+      "layout": "frame table",
+      "structure": "invariance of each relation under reorientation",
+      "form": "schemas x drift under a global turn",
+      "shows": "that the attested operators are exactly the frame-free ones",
+      "status": "drawn (F108)"
+    },
+    {
+      "layout": "chirality source map",
+      "structure": "a three-valued classification of the orbits",
+      "form": "6x6 per operator: achiral / inherited / from arrangement",
+      "shows": "that placement manufactures handedness the alphabet lacks",
+      "status": "drawn (F105)"
+    },
+    {
+      "layout": "depth ladder",
+      "structure": "composition beyond two marks",
+      "form": "tree or nested cells, depth 3+",
+      "shows": "the triangle and hexagram, which depth 2 cannot reach",
+      "status": "drawn (F109)"
+    },
+    {
+      "layout": "modulation strip",
+      "structure": "a parameter varying ALONG a mark's extent",
+      "form": "one mark, a sweep of the varying parameter",
+      "shows": "the second operator family; the spiral needs it",
+      "status": "blocked: modulation-is-a-second-operator-family"
+    }
+  ],
+  "operator_coordinates": {
+    "superpose_concentric": {
+      "r": 0.0,
+      "theta": null,
+      "phi": 0,
+      "s": 1.0
+    },
+    "cross": {
+      "r": 0.0,
+      "theta": null,
+      "phi": 90,
+      "s": 1.0
+    },
+    "nest": {
+      "r": 0.0,
+      "theta": null,
+      "phi": 0,
+      "s": 0.4
+    },
+    "superpose_displaced": {
+      "r": 2.2,
+      "theta": 0,
+      "phi": 0,
+      "s": 1.0
+    },
+    "concatenate": {
+      "r": "contact",
+      "theta": 0,
+      "phi": 0,
+      "s": 1.0,
+      "kind": "surface",
+      "r_range": [
+        0.0,
+        2.0
+      ]
+    },
+    "reflect_pair": {
+      "r": 0.0,
+      "theta": null,
+      "phi": 0,
+      "s": 1.0,
+      "note": "unary: B is fixed to mirror(A)"
+    }
+  }
+}

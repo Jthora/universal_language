@@ -1,0 +1,28 @@
+{
+  "page": "open",
+  "title": "Open questions",
+  "lede": "A claim here is undetermined when the derivation has not been done, not when the answer is unknowable. Each one names what would settle it.",
+  "undetermined_means": "the derivation has not been done",
+  "why_shown": "These are the questions the derivation has not yet reached. Each names the result that would settle it, so the section doubles as a work list: this is where the research currently stands and where a contributor starts.",
+  "claims": [
+    {
+      "claim": "opposition-kind-tracks-rotation-class",
+      "status": "undetermined",
+      "statement": "Each mark pair carries its own KIND of opposition, and the kind tracks the pair's rotation class: rotation infinity opposes by AMOUNT, rotation 2 by CONSTANCY, rotation 1 by AGENCY.",
+      "success_condition": "BUILT AND SEALED, not merely described. `tools/opposition_exam.py` hands a reader the 32 cells as bare word pairs, shuffled, with the mark pair, the domain and my own labels stripped. They group them by kind, naming the groups as they please; scoring compares the PARTITION and never the names, against a null with the same group sizes. What is needed is a reader who has not seen the marks, and I cannot supply it -- anything I group, I group having written the labels.",
+      "scope": "About this corpus's attested vocabulary. Says nothing about necessity, and the three up/down cells on Angle/Curve are off-theme: they belong to the axis that directional-schemas-need-a-declared-frame says needs a frame.",
+      "finding": "F158",
+      "id": "opposition-kind-tracks-rotation-class"
+    },
+    {
+      "claim": "rederivability-defeats-capture",
+      "status": "undetermined",
+      "statement": "A notation whose meanings are derivable from geometry, rather than assigned by authority, lets a mind reconstruct its concepts independently of whatever taught it -- and therefore detect and escape conceptual capture.",
+      "success_condition": "Show that possession of the derivation METHOD, without trusting the source, is sufficient to recover correct structure from a corpus containing inserted errors. THE PROTOCOL IS NOW RUNNABLE (F149): `tools/rederivability_exam.py` fixes the exam, the scoring is fixed in advance, and `data/derivation/rederivability_key.json` seals nine structural results to recover and five independently-confirmed defects to catch -- the Yin/Yang inversion, the Amperage/Voltage swap between two sheets, the Aether/Nether conflation, `Life` with two referents, the enharmonic spellings. What is still needed is a READER who has not read the withheld files. That is the whole of what is left, and it is not something the author of the findings can supply: anything I recover, I recover with the answers in hand.",
+      "scope": "The detection half is the half that speaks to the claim. Recovery alone would show the notation is learnable; catching an error in what taught you is the whole content of `rederivability-defeats-capture`. A reader who recovers the structure fluently and still flags nothing would REFUTE it, and the exam is built so that outcome is legible rather than deniable.",
+      "finding": "F149",
+      "id": "rederivability-defeats-capture"
+    }
+  ],
+  "the_frontier_too": "Most open questions in this system are not in this register at all: they are the orbits with no recorded meaning. See find/index.json."
+}

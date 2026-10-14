@@ -1,0 +1,137 @@
+{
+ "sheet": "slices/slice-b-relative-scale-reflect-B",
+ "cells": [
+  {
+   "id": "cell-0-0",
+   "title": "axis-x reflect-B, x as drawn, axis-y relative-scale, y 0.25, operator none, contact false",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0, A=Circle, B=Wave, separation=0, bearing=0°, relative-rotation=0°, relative-scale=0.25, reflect-B=as drawn",
+   "axis-x": "reflect-B",
+   "x": "as drawn",
+   "axis-y": "relative-scale",
+   "y": "0.25",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-0-1",
+   "title": "axis-x reflect-B, x mirrored, axis-y relative-scale, y 0.25, operator none, contact false",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0, A=Circle, B=Wave, separation=0, bearing=0°, relative-rotation=0°, relative-scale=0.25, reflect-B=mirrored",
+   "axis-x": "reflect-B",
+   "x": "mirrored",
+   "axis-y": "relative-scale",
+   "y": "0.25",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-1-0",
+   "title": "axis-x reflect-B, x as drawn, axis-y relative-scale, y 0.4, operator nest, contact false",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0, A=Circle, B=Wave, separation=0, bearing=0°, relative-rotation=0°, relative-scale=0.4, reflect-B=as drawn",
+   "axis-x": "reflect-B",
+   "x": "as drawn",
+   "axis-y": "relative-scale",
+   "y": "0.4",
+   "operator": "nest",
+   "contact": "false"
+  },
+  {
+   "id": "cell-1-1",
+   "title": "axis-x reflect-B, x mirrored, axis-y relative-scale, y 0.4, operator none, contact false",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0, A=Circle, B=Wave, separation=0, bearing=0°, relative-rotation=0°, relative-scale=0.4, reflect-B=mirrored",
+   "axis-x": "reflect-B",
+   "x": "mirrored",
+   "axis-y": "relative-scale",
+   "y": "0.4",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-2-0",
+   "title": "axis-x reflect-B, x as drawn, axis-y relative-scale, y 0.6, operator none, contact false",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0, A=Circle, B=Wave, separation=0, bearing=0°, relative-rotation=0°, relative-scale=0.6, reflect-B=as drawn",
+   "axis-x": "reflect-B",
+   "x": "as drawn",
+   "axis-y": "relative-scale",
+   "y": "0.6",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-2-1",
+   "title": "axis-x reflect-B, x mirrored, axis-y relative-scale, y 0.6, operator none, contact false",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0, A=Circle, B=Wave, separation=0, bearing=0°, relative-rotation=0°, relative-scale=0.6, reflect-B=mirrored",
+   "axis-x": "reflect-B",
+   "x": "mirrored",
+   "axis-y": "relative-scale",
+   "y": "0.6",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-3-0",
+   "title": "axis-x reflect-B, x as drawn, axis-y relative-scale, y 1, operator superpose_concentric, contact true",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0, A=Circle, B=Wave, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "reflect-B",
+   "x": "as drawn",
+   "axis-y": "relative-scale",
+   "y": "1",
+   "operator": "superpose_concentric",
+   "contact": "true"
+  },
+  {
+   "id": "cell-3-1",
+   "title": "axis-x reflect-B, x mirrored, axis-y relative-scale, y 1, operator none, contact true",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0, A=Circle, B=Wave, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=mirrored",
+   "axis-x": "reflect-B",
+   "x": "mirrored",
+   "axis-y": "relative-scale",
+   "y": "1",
+   "operator": "none",
+   "contact": "true"
+  },
+  {
+   "id": "cell-4-0",
+   "title": "axis-x reflect-B, x as drawn, axis-y relative-scale, y 1.5, operator none, contact true",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0, A=Circle, B=Wave, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1.5, reflect-B=as drawn",
+   "axis-x": "reflect-B",
+   "x": "as drawn",
+   "axis-y": "relative-scale",
+   "y": "1.5",
+   "operator": "none",
+   "contact": "true"
+  },
+  {
+   "id": "cell-4-1",
+   "title": "axis-x reflect-B, x mirrored, axis-y relative-scale, y 1.5, operator none, contact true",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0, A=Circle, B=Wave, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1.5, reflect-B=mirrored",
+   "axis-x": "reflect-B",
+   "x": "mirrored",
+   "axis-y": "relative-scale",
+   "y": "1.5",
+   "operator": "none",
+   "contact": "true"
+  },
+  {
+   "id": "cell-5-0",
+   "title": "axis-x reflect-B, x as drawn, axis-y relative-scale, y 2, operator none, contact true",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0, A=Circle, B=Wave, separation=0, bearing=0°, relative-rotation=0°, relative-scale=2, reflect-B=as drawn",
+   "axis-x": "reflect-B",
+   "x": "as drawn",
+   "axis-y": "relative-scale",
+   "y": "2",
+   "operator": "none",
+   "contact": "true"
+  },
+  {
+   "id": "cell-5-1",
+   "title": "axis-x reflect-B, x mirrored, axis-y relative-scale, y 2, operator none, contact true",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0, A=Circle, B=Wave, separation=0, bearing=0°, relative-rotation=0°, relative-scale=2, reflect-B=mirrored",
+   "axis-x": "reflect-B",
+   "x": "mirrored",
+   "axis-y": "relative-scale",
+   "y": "2",
+   "operator": "none",
+   "contact": "true"
+  }
+ ]
+}

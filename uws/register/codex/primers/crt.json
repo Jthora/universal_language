@@ -1,0 +1,163 @@
+{
+  "sheet": "crt",
+  "title": "The twelve-sign factorisation",
+  "teaches": "Z/12 = Z/3 x Z/4 is derived; which factor is modality and which is element follows from their counts, and those counts come from the astrological frame, not from the geometry",
+  "legend_on_sheet": true,
+  "status_on_face": true,
+  "generated_not_traced": true,
+  "asserts": [
+    {
+      "claim": "z12-factors",
+      "status": "derived",
+      "statement": "Z/12 = Z/3 x Z/4, so 3 modalities x 4 elements covers twelve cells with no repeat and no gap.",
+      "derivation": "gcd(3,4)=1, Chinese Remainder Theorem. This is why there are twelve, not an observation that there happen to be.",
+      "finding": "F48"
+    },
+    {
+      "claim": "rotation-class-is-symmetry-order",
+      "status": "derived",
+      "statement": "The corpus's three rotation classes are the order of each mark's rotational symmetry group: infinite, 2, 1.",
+      "derivation": "Sampled each mark as a point set and rotated it; 6/6 agreement with the stated trichotomy. A sine is odd, so a half-turn returns it -- which is why Wave groups with Line.",
+      "finding": "F85"
+    }
+  ],
+  "carries_undetermined": [
+    {
+      "claim": "element-bit-assignment",
+      "status": "derived_given",
+      "statement": "up+unbarred is Fire, up+barred is Air, down+unbarred is Water, down+barred is Earth.",
+      "derivation": "THE DIRECTION BIT IS DENSITY. F19 records, and F70 confirms on a second artifact, that the elements ARE the states of matter: Fire = Plasma, Air = Gas, Water = Liquid, Earth = Solid. Split the four phases by density and plasma and gas are the rarefied pair, liquid and solid the dense pair; buoyancy lifts the first and sinks the second. That is the direction bit, four for four, one property throughout -- not 'fire rises' about one element but a single threshold on a single quantity sorting all four. And it derives exactly the half that needed deriving: the PARTITION, not which side of the page each lands on, which `direction-is-read-as-contrast` says the notation never reads anyway.",
+      "given": "the states-of-matter identification (F19/F70), and ordinary conditions, under which the density ordering of the four phases holds.",
+      "success_condition": "THE DIRECTION BIT IS REACHED (F148). What remains is the CROSSBAR bit, which partitions {Air, Earth} against {Fire, Water} -- in phases, {Gas, Solid} against {Plasma, Liquid}. F140 gave the bit a reading, open end versus bounded level, which the corpus itself names Destiny and Reality. What is missing is a property of the four phases that groups gas with solid against plasma with liquid. Density does not: solid and gas are the extremes of that ordering, not a pair. A pattern that fits and is NOT evidence: along the transition chain Solid-Liquid-Gas-Plasma the bit is the parity of the position, with positions 1 and 3 barred. With four items and two bits any assignment can be so described, and parity names no physical property. Recorded as F47 recorded the opponent-colour coincidence.",
+      "scope": "The direction bit only. The crossbar bit has a reading (F140) and no derivation. And the derivation runs through a physical identification, so it grounds the notation in matter rather than in geometry -- which is what the original success condition warned about, met by making the import explicit and total rather than anecdotal.",
+      "finding": "F51 -> F140 -> F148"
+    }
+  ],
+  "conventional": [
+    {
+      "claim": "element-colours",
+      "status": "conventional",
+      "statement": "Fire red, Air yellow, Water blue, Earth green.",
+      "why_not_derivable": "A received Golden Dawn convention, adopted wholesale. The observation that the two opponent-colour axes fall on the two 'both bits differ' diagonals has p = 1/3 by chance and is recorded as not evidence.",
+      "finding": "F47"
+    }
+  ],
+  "signs": [
+    {
+      "n": 1,
+      "id": "Aries",
+      "geometry": "angle",
+      "modality": "Cardinal",
+      "element": "Fire",
+      "apex_up": true,
+      "crossbar": false
+    },
+    {
+      "n": 2,
+      "id": "Taurus",
+      "geometry": "square",
+      "modality": "Fixed",
+      "element": "Earth",
+      "apex_up": false,
+      "crossbar": true
+    },
+    {
+      "n": 3,
+      "id": "Gemini",
+      "geometry": "arc",
+      "modality": "Mutable",
+      "element": "Air",
+      "apex_up": true,
+      "crossbar": true
+    },
+    {
+      "n": 4,
+      "id": "Cancer",
+      "geometry": "angle",
+      "modality": "Cardinal",
+      "element": "Water",
+      "apex_up": false,
+      "crossbar": false
+    },
+    {
+      "n": 5,
+      "id": "Leo",
+      "geometry": "square",
+      "modality": "Fixed",
+      "element": "Fire",
+      "apex_up": true,
+      "crossbar": false
+    },
+    {
+      "n": 6,
+      "id": "Virgo",
+      "geometry": "arc",
+      "modality": "Mutable",
+      "element": "Earth",
+      "apex_up": false,
+      "crossbar": true
+    },
+    {
+      "n": 7,
+      "id": "Libra",
+      "geometry": "angle",
+      "modality": "Cardinal",
+      "element": "Air",
+      "apex_up": true,
+      "crossbar": true
+    },
+    {
+      "n": 8,
+      "id": "Scorpio",
+      "geometry": "square",
+      "modality": "Fixed",
+      "element": "Water",
+      "apex_up": false,
+      "crossbar": false
+    },
+    {
+      "n": 9,
+      "id": "Sagittarius",
+      "geometry": "arc",
+      "modality": "Mutable",
+      "element": "Fire",
+      "apex_up": true,
+      "crossbar": false
+    },
+    {
+      "n": 10,
+      "id": "Capricorn",
+      "geometry": "angle",
+      "modality": "Cardinal",
+      "element": "Earth",
+      "apex_up": false,
+      "crossbar": true
+    },
+    {
+      "n": 11,
+      "id": "Aquarius",
+      "geometry": "square",
+      "modality": "Fixed",
+      "element": "Air",
+      "apex_up": true,
+      "crossbar": true
+    },
+    {
+      "n": 12,
+      "id": "Pisces",
+      "geometry": "arc",
+      "modality": "Mutable",
+      "element": "Water",
+      "apex_up": false,
+      "crossbar": false
+    }
+  ],
+  "verify": {
+    "how": "Re-derive this bundle from source.",
+    "commands": [
+      "python3 tools/verify_symbology_grammar.py    # 12/12 off the sheets",
+      "python3 tools/symbology_glyph.py --check     # glyphs read back as their rule",
+      "python3 tools/symbol_combinations.py --closure"
+    ]
+  }
+}

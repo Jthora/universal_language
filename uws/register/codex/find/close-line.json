@@ -1,0 +1,30 @@
+{
+  "orbit": 1,
+  "members": [
+    "reflect_pair(Line)",
+    "close(Line)",
+    "superpose_concentric(Point,Line)",
+    "superpose_concentric(Line,Point)",
+    "superpose_concentric(Line,Line)",
+    "superpose_displaced(Line,Line)",
+    "cross(Point,Line)",
+    "cross(Line,Point)",
+    "concatenate(Point,Line)",
+    "concatenate(Line,Point)",
+    "concatenate(Line,Line)",
+    "nest(Point,Line)",
+    "nest(Line,Point)",
+    "nest(Line,Line)"
+  ],
+  "symmetry": "2",
+  "curvature": "singular",
+  "meaning": null,
+  "status": "undetermined",
+  "strokes": 2,
+  "components": 2,
+  "mirror_axes": "2",
+  "closed": false,
+  "crossings": "1",
+  "aspect": "wide",
+  "curvature_mix": "straight"
+}

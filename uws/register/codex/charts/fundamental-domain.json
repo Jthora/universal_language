@@ -1,0 +1,44 @@
+{
+  "sheet": "fundamental-domain",
+  "title": "Fundamental domain of each mark",
+  "rows": [
+    {
+      "mark": "Point",
+      "group": "O(2)",
+      "order": "inf",
+      "domain_fraction": 0.0
+    },
+    {
+      "mark": "Line",
+      "group": "D2",
+      "order": 4,
+      "domain_fraction": 0.4875
+    },
+    {
+      "mark": "Angle",
+      "group": "D1",
+      "order": 2,
+      "domain_fraction": 0.4875
+    },
+    {
+      "mark": "Curve",
+      "group": "D1",
+      "order": 2,
+      "domain_fraction": 0.4875
+    },
+    {
+      "mark": "Wave",
+      "group": "C2",
+      "order": 2,
+      "domain_fraction": 0.4875
+    },
+    {
+      "mark": "Circle",
+      "group": "O(2)",
+      "order": "inf",
+      "domain_fraction": 0.0125
+    }
+  ],
+  "note": "order and domain disagree when a group element acts trivially on the figure — the Line's own axis-mirror does",
+  "teaches": "how much of a figure is independent of its own symmetry"
+}

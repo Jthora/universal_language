@@ -1,0 +1,37 @@
+{
+  "sheet": "slice-unary-mark-reflection",
+  "group": "unary",
+  "axes": [
+    "mark",
+    "reflection"
+  ],
+  "cells": 12,
+  "held": {
+    "rotation": 0.0,
+    "scale": 1.0,
+    "count": 1,
+    "frequency": 1.0,
+    "amplitude": 1.0,
+    "phase": 0.0,
+    "taper": 0.0,
+    "chirp": 0.0
+  },
+  "operand_chosen_for": {},
+  "samples": {
+    "mark": [
+      "Point",
+      "Line",
+      "Angle",
+      "Curve",
+      "Wave",
+      "Circle"
+    ],
+    "reflection": [
+      "as drawn",
+      "mirrored"
+    ]
+  },
+  "operators_on_this_slice": {},
+  "contact_cells": 0,
+  "note": ""
+}

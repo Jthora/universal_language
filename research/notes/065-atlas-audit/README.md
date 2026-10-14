@@ -3,6 +3,7 @@
 **Type:** cycle
 **Opened:** 2026-10-14
 **Status:** closed
+**Superseded by:** `067` *(partly — the headline's "no derivation recorded for the set" is FALSE: `attested-operators-are-frame-free` is derived, and the inventory is closed under reorientation. The ledger line still does not close, because that condition is necessary and not sufficient.)*  ← *the one permitted edit to a closed note (`../README.md`)*
 **Thread:** executes the work `064` §2(b) named as the program's cheapest falsifier; imports the
 object that claim is about (`uws/register/`); adopts one rule from it and gives it an executor
 (`tools/check-derivation-premises.rb`, the eighth checker).

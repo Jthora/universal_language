@@ -1,0 +1,71 @@
+{
+ "sheet": "slices/slice-u-reflection-chirp",
+ "cells": [
+  {
+   "id": "cell-0-0",
+   "title": "axis-x chirp, x 0, axis-y reflection, y as drawn, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=0, mark=Wave, rotation=0°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "chirp",
+   "x": "0",
+   "axis-y": "reflection",
+   "y": "as drawn",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-0-1",
+   "title": "axis-x chirp, x 1, axis-y reflection, y as drawn, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=1, mark=Wave, rotation=0°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "chirp",
+   "x": "1",
+   "axis-y": "reflection",
+   "y": "as drawn",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-0-2",
+   "title": "axis-x chirp, x 2, axis-y reflection, y as drawn, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=2, mark=Wave, rotation=0°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "chirp",
+   "x": "2",
+   "axis-y": "reflection",
+   "y": "as drawn",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-1-0",
+   "title": "axis-x chirp, x 0, axis-y reflection, y mirrored, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=0, mark=Wave, rotation=0°, reflection=mirrored, scale=1, count=1",
+   "axis-x": "chirp",
+   "x": "0",
+   "axis-y": "reflection",
+   "y": "mirrored",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-1-1",
+   "title": "axis-x chirp, x 1, axis-y reflection, y mirrored, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=1, mark=Wave, rotation=0°, reflection=mirrored, scale=1, count=1",
+   "axis-x": "chirp",
+   "x": "1",
+   "axis-y": "reflection",
+   "y": "mirrored",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-1-2",
+   "title": "axis-x chirp, x 2, axis-y reflection, y mirrored, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=2, mark=Wave, rotation=0°, reflection=mirrored, scale=1, count=1",
+   "axis-x": "chirp",
+   "x": "2",
+   "axis-y": "reflection",
+   "y": "mirrored",
+   "operator": "none",
+   "contact": "false"
+  }
+ ]
+}

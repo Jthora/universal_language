@@ -1,0 +1,137 @@
+{
+ "sheet": "slices/slice-u-phase-chirp",
+ "cells": [
+  {
+   "id": "cell-0-0",
+   "title": "axis-x chirp, x 0, axis-y phase, y 0, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=0, mark=Wave, rotation=0°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "chirp",
+   "x": "0",
+   "axis-y": "phase",
+   "y": "0",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-0-1",
+   "title": "axis-x chirp, x 1, axis-y phase, y 0, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=1, mark=Wave, rotation=0°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "chirp",
+   "x": "1",
+   "axis-y": "phase",
+   "y": "0",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-0-2",
+   "title": "axis-x chirp, x 2, axis-y phase, y 0, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=2, mark=Wave, rotation=0°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "chirp",
+   "x": "2",
+   "axis-y": "phase",
+   "y": "0",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-1-0",
+   "title": "axis-x chirp, x 0, axis-y phase, y 0.25, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0.25, taper=0, chirp=0, mark=Wave, rotation=0°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "chirp",
+   "x": "0",
+   "axis-y": "phase",
+   "y": "0.25",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-1-1",
+   "title": "axis-x chirp, x 1, axis-y phase, y 0.25, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0.25, taper=0, chirp=1, mark=Wave, rotation=0°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "chirp",
+   "x": "1",
+   "axis-y": "phase",
+   "y": "0.25",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-1-2",
+   "title": "axis-x chirp, x 2, axis-y phase, y 0.25, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0.25, taper=0, chirp=2, mark=Wave, rotation=0°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "chirp",
+   "x": "2",
+   "axis-y": "phase",
+   "y": "0.25",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-2-0",
+   "title": "axis-x chirp, x 0, axis-y phase, y 0.5, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0.5, taper=0, chirp=0, mark=Wave, rotation=0°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "chirp",
+   "x": "0",
+   "axis-y": "phase",
+   "y": "0.5",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-2-1",
+   "title": "axis-x chirp, x 1, axis-y phase, y 0.5, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0.5, taper=0, chirp=1, mark=Wave, rotation=0°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "chirp",
+   "x": "1",
+   "axis-y": "phase",
+   "y": "0.5",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-2-2",
+   "title": "axis-x chirp, x 2, axis-y phase, y 0.5, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0.5, taper=0, chirp=2, mark=Wave, rotation=0°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "chirp",
+   "x": "2",
+   "axis-y": "phase",
+   "y": "0.5",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-3-0",
+   "title": "axis-x chirp, x 0, axis-y phase, y 0.75, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0.75, taper=0, chirp=0, mark=Wave, rotation=0°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "chirp",
+   "x": "0",
+   "axis-y": "phase",
+   "y": "0.75",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-3-1",
+   "title": "axis-x chirp, x 1, axis-y phase, y 0.75, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0.75, taper=0, chirp=1, mark=Wave, rotation=0°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "chirp",
+   "x": "1",
+   "axis-y": "phase",
+   "y": "0.75",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-3-2",
+   "title": "axis-x chirp, x 2, axis-y phase, y 0.75, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0.75, taper=0, chirp=2, mark=Wave, rotation=0°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "chirp",
+   "x": "2",
+   "axis-y": "phase",
+   "y": "0.75",
+   "operator": "none",
+   "contact": "false"
+  }
+ ]
+}

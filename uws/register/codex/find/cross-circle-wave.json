@@ -1,0 +1,20 @@
+{
+  "orbit": 15,
+  "members": [
+    "superpose_concentric(Wave,Circle)",
+    "superpose_concentric(Circle,Wave)",
+    "cross(Wave,Circle)",
+    "cross(Circle,Wave)"
+  ],
+  "symmetry": "2",
+  "curvature": "smooth",
+  "meaning": null,
+  "status": "undetermined",
+  "strokes": 2,
+  "components": 1,
+  "mirror_axes": "0",
+  "closed": false,
+  "crossings": "0",
+  "aspect": "square",
+  "curvature_mix": "smooth"
+}

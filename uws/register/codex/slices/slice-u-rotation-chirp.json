@@ -1,0 +1,47 @@
+{
+  "sheet": "slice-unary-rotation-chirp",
+  "group": "unary",
+  "axes": [
+    "rotation",
+    "chirp"
+  ],
+  "cells": 36,
+  "held": {
+    "mark": "Wave",
+    "reflection": 0,
+    "scale": 1.0,
+    "count": 1,
+    "frequency": 1.0,
+    "amplitude": 1.0,
+    "phase": 0.0,
+    "taper": 0.0
+  },
+  "operand_chosen_for": {
+    "rotation": "is not rotation-invariant",
+    "chirp": "has a profile to vary"
+  },
+  "samples": {
+    "rotation": [
+      "0°",
+      "30°",
+      "60°",
+      "90°",
+      "120°",
+      "150°",
+      "180°",
+      "210°",
+      "240°",
+      "270°",
+      "300°",
+      "330°"
+    ],
+    "chirp": [
+      "0",
+      "1",
+      "2"
+    ]
+  },
+  "operators_on_this_slice": {},
+  "contact_cells": 0,
+  "note": "operand chosen so the axis acts: rotation needs one that is not rotation-invariant, chirp needs one that has a profile to vary"
+}

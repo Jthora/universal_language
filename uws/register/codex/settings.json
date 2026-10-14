@@ -1,0 +1,236 @@
+{
+  "page": "settings",
+  "title": "Display",
+  "note": "These choices are stored in this browser only. Nothing is sent anywhere, and the pages are complete without them.",
+  "themes": [
+    {
+      "id": "paper",
+      "name": "Paper",
+      "note": "warm off-white, the colour of a working sheet"
+    },
+    {
+      "id": "slate",
+      "name": "Slate",
+      "note": "cool neutral grey; flat and quiet for long reading"
+    },
+    {
+      "id": "blueprint",
+      "name": "Blueprint",
+      "note": "drafting paper: cyan ground, deep navy line"
+    },
+    {
+      "id": "terminal",
+      "name": "Terminal",
+      "note": "phosphor on black; the drawings read as traces"
+    },
+    {
+      "id": "parchment",
+      "name": "Parchment",
+      "note": "aged leaf and sepia; warmest of the set"
+    },
+    {
+      "id": "contrast",
+      "name": "High contrast",
+      "note": "pure white and pure black; maximum separation"
+    }
+  ],
+  "languages": [
+    {
+      "code": "en",
+      "endonym": "English",
+      "english": "English",
+      "group": "europe",
+      "direction": "ltr"
+    },
+    {
+      "code": "sw",
+      "endonym": "Kiswahili",
+      "english": "Swahili",
+      "group": "africa",
+      "direction": "ltr"
+    },
+    {
+      "code": "am",
+      "endonym": "አማርኛ",
+      "english": "Amharic",
+      "group": "africa",
+      "direction": "ltr"
+    },
+    {
+      "code": "id",
+      "endonym": "Bahasa Indonesia",
+      "english": "Indonesian",
+      "group": "asia",
+      "direction": "ltr"
+    },
+    {
+      "code": "hi",
+      "endonym": "हिन्दी",
+      "english": "Hindi",
+      "group": "asia",
+      "direction": "ltr"
+    },
+    {
+      "code": "tpi",
+      "endonym": "Tok Pisin",
+      "english": "Tok Pisin",
+      "group": "pacific",
+      "direction": "ltr"
+    },
+    {
+      "code": "zh",
+      "endonym": "简体中文",
+      "english": "Chinese (Simplified)",
+      "group": "asia",
+      "direction": "ltr"
+    },
+    {
+      "code": "zh-Hant",
+      "endonym": "繁體中文",
+      "english": "Chinese (Traditional)",
+      "group": "asia",
+      "direction": "ltr"
+    },
+    {
+      "code": "ja",
+      "endonym": "日本語",
+      "english": "Japanese",
+      "group": "asia",
+      "direction": "ltr"
+    },
+    {
+      "code": "ko",
+      "endonym": "한국어",
+      "english": "Korean",
+      "group": "asia",
+      "direction": "ltr"
+    },
+    {
+      "code": "vi",
+      "endonym": "Tiếng Việt",
+      "english": "Vietnamese",
+      "group": "asia",
+      "direction": "ltr"
+    },
+    {
+      "code": "th",
+      "endonym": "ไทย",
+      "english": "Thai",
+      "group": "asia",
+      "direction": "ltr"
+    },
+    {
+      "code": "bn",
+      "endonym": "বাংলা",
+      "english": "Bengali",
+      "group": "asia",
+      "direction": "ltr"
+    },
+    {
+      "code": "ta",
+      "endonym": "தமிழ்",
+      "english": "Tamil",
+      "group": "asia",
+      "direction": "ltr"
+    },
+    {
+      "code": "ar",
+      "endonym": "العربية",
+      "english": "Arabic",
+      "group": "wasia",
+      "direction": "rtl"
+    },
+    {
+      "code": "fa",
+      "endonym": "فارسی",
+      "english": "Persian",
+      "group": "wasia",
+      "direction": "rtl"
+    },
+    {
+      "code": "he",
+      "endonym": "עברית",
+      "english": "Hebrew",
+      "group": "wasia",
+      "direction": "rtl"
+    },
+    {
+      "code": "tr",
+      "endonym": "Türkçe",
+      "english": "Turkish",
+      "group": "wasia",
+      "direction": "ltr"
+    },
+    {
+      "code": "ru",
+      "endonym": "Русский",
+      "english": "Russian",
+      "group": "europe",
+      "direction": "ltr"
+    },
+    {
+      "code": "es",
+      "endonym": "Español",
+      "english": "Spanish",
+      "group": "europe",
+      "direction": "ltr"
+    },
+    {
+      "code": "pt",
+      "endonym": "Português",
+      "english": "Portuguese",
+      "group": "europe",
+      "direction": "ltr"
+    },
+    {
+      "code": "fr",
+      "endonym": "Français",
+      "english": "French",
+      "group": "europe",
+      "direction": "ltr"
+    },
+    {
+      "code": "de",
+      "endonym": "Deutsch",
+      "english": "German",
+      "group": "europe",
+      "direction": "ltr"
+    },
+    {
+      "code": "la",
+      "endonym": "Latina",
+      "english": "Latin",
+      "group": "historic",
+      "direction": "ltr"
+    },
+    {
+      "code": "grc",
+      "endonym": "Ἑλληνικά",
+      "english": "Ancient Greek",
+      "group": "historic",
+      "direction": "ltr"
+    },
+    {
+      "code": "sa",
+      "endonym": "संस्कृतम्",
+      "english": "Sanskrit",
+      "group": "historic",
+      "direction": "ltr"
+    },
+    {
+      "code": "lzh",
+      "endonym": "文言",
+      "english": "Classical Chinese",
+      "group": "historic",
+      "direction": "ltr"
+    },
+    {
+      "code": "cu",
+      "endonym": "Словѣньскъ",
+      "english": "Old Church Slavonic",
+      "group": "historic",
+      "direction": "ltr"
+    }
+  ],
+  "nothing_is_sent_anywhere": true
+}

@@ -1,0 +1,113 @@
+{
+ "sheet": "charts/capacity",
+ "cells": [
+  {
+   "id": "cell-cap-Point-0",
+   "title": "Point: a rotation conveys nothing — every rotation returns the same figure",
+   "desc": "mark Point; group O(2); rotation_conveys = nothing — every rotation returns the same figure",
+   "mark": "Point",
+   "group": "O(2)",
+   "transformation": "rotation",
+   "conveys": "nothing — every rotation returns the same figure"
+  },
+  {
+   "id": "cell-cap-Point-1",
+   "title": "Point: a mirror conveys nothing — the mirror image is some rotation of it",
+   "desc": "mark Point; group O(2); mirror_conveys = nothing — the mirror image is some rotation of it",
+   "mark": "Point",
+   "group": "O(2)",
+   "transformation": "mirror",
+   "conveys": "nothing — the mirror image is some rotation of it"
+  },
+  {
+   "id": "cell-cap-Line-0",
+   "title": "Line: a rotation conveys a turn of distinct states, but a 180-degree turn returns the figure — so opposite directions cannot be told apart",
+   "desc": "mark Line; group D2; rotation_conveys = a turn of distinct states, but a 180-degree turn returns the figure — so opposite directions cannot be told apart",
+   "mark": "Line",
+   "group": "D2",
+   "transformation": "rotation",
+   "conveys": "a turn of distinct states, but a 180-degree turn returns the figure — so opposite directions cannot be told apart"
+  },
+  {
+   "id": "cell-cap-Line-1",
+   "title": "Line: a mirror conveys nothing — the mirror image is some rotation of it",
+   "desc": "mark Line; group D2; mirror_conveys = nothing — the mirror image is some rotation of it",
+   "mark": "Line",
+   "group": "D2",
+   "transformation": "mirror",
+   "conveys": "nothing — the mirror image is some rotation of it"
+  },
+  {
+   "id": "cell-cap-Angle-0",
+   "title": "Angle: a rotation conveys a full turn of distinct states — every angle is a different figure",
+   "desc": "mark Angle; group D1; rotation_conveys = a full turn of distinct states — every angle is a different figure",
+   "mark": "Angle",
+   "group": "D1",
+   "transformation": "rotation",
+   "conveys": "a full turn of distinct states — every angle is a different figure"
+  },
+  {
+   "id": "cell-cap-Angle-1",
+   "title": "Angle: a mirror conveys nothing — the mirror image is some rotation of it",
+   "desc": "mark Angle; group D1; mirror_conveys = nothing — the mirror image is some rotation of it",
+   "mark": "Angle",
+   "group": "D1",
+   "transformation": "mirror",
+   "conveys": "nothing — the mirror image is some rotation of it"
+  },
+  {
+   "id": "cell-cap-Curve-0",
+   "title": "Curve: a rotation conveys a full turn of distinct states — every angle is a different figure",
+   "desc": "mark Curve; group D1; rotation_conveys = a full turn of distinct states — every angle is a different figure",
+   "mark": "Curve",
+   "group": "D1",
+   "transformation": "rotation",
+   "conveys": "a full turn of distinct states — every angle is a different figure"
+  },
+  {
+   "id": "cell-cap-Curve-1",
+   "title": "Curve: a mirror conveys nothing — the mirror image is some rotation of it",
+   "desc": "mark Curve; group D1; mirror_conveys = nothing — the mirror image is some rotation of it",
+   "mark": "Curve",
+   "group": "D1",
+   "transformation": "mirror",
+   "conveys": "nothing — the mirror image is some rotation of it"
+  },
+  {
+   "id": "cell-cap-Wave-0",
+   "title": "Wave: a rotation conveys a turn of distinct states, but a 180-degree turn returns the figure — so opposite directions cannot be told apart",
+   "desc": "mark Wave; group C2; rotation_conveys = a turn of distinct states, but a 180-degree turn returns the figure — so opposite directions cannot be told apart",
+   "mark": "Wave",
+   "group": "C2",
+   "transformation": "rotation",
+   "conveys": "a turn of distinct states, but a 180-degree turn returns the figure — so opposite directions cannot be told apart"
+  },
+  {
+   "id": "cell-cap-Wave-1",
+   "title": "Wave: a mirror conveys a second state, unreachable by any rotation",
+   "desc": "mark Wave; group C2; mirror_conveys = a second state, unreachable by any rotation",
+   "mark": "Wave",
+   "group": "C2",
+   "transformation": "mirror",
+   "conveys": "a second state, unreachable by any rotation"
+  },
+  {
+   "id": "cell-cap-Circle-0",
+   "title": "Circle: a rotation conveys nothing — every rotation returns the same figure",
+   "desc": "mark Circle; group O(2); rotation_conveys = nothing — every rotation returns the same figure",
+   "mark": "Circle",
+   "group": "O(2)",
+   "transformation": "rotation",
+   "conveys": "nothing — every rotation returns the same figure"
+  },
+  {
+   "id": "cell-cap-Circle-1",
+   "title": "Circle: a mirror conveys nothing — the mirror image is some rotation of it",
+   "desc": "mark Circle; group O(2); mirror_conveys = nothing — the mirror image is some rotation of it",
+   "mark": "Circle",
+   "group": "O(2)",
+   "transformation": "mirror",
+   "conveys": "nothing — the mirror image is some rotation of it"
+  }
+ ]
+}

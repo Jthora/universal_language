@@ -1,0 +1,17 @@
+{
+  "orbit": 29,
+  "members": [
+    "superpose_concentric(Angle,Angle)"
+  ],
+  "symmetry": "1",
+  "curvature": "singular",
+  "meaning": null,
+  "status": "undetermined",
+  "strokes": 2,
+  "components": 2,
+  "mirror_axes": "1",
+  "closed": false,
+  "crossings": "1",
+  "aspect": "wide",
+  "curvature_mix": "straight"
+}

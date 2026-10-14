@@ -1,0 +1,40 @@
+{
+  "sheet": "slice-binary-reflect-B-B-phase",
+  "group": "binary",
+  "axes": [
+    "reflect-B",
+    "B-phase"
+  ],
+  "cells": 8,
+  "held": {
+    "A": "Circle",
+    "B": "Wave",
+    "separation": 0.0,
+    "bearing": 0.0,
+    "relative-rotation": 0.0,
+    "relative-scale": 1.0,
+    "B-frequency": 1.0,
+    "B-amplitude": 1.0
+  },
+  "operand_chosen_for": {
+    "reflect-B": "is chiral",
+    "B-phase": "has a profile to vary"
+  },
+  "samples": {
+    "reflect-B": [
+      "as drawn",
+      "mirrored"
+    ],
+    "B-phase": [
+      "0",
+      "0.25",
+      "0.5",
+      "0.75"
+    ]
+  },
+  "operators_on_this_slice": {
+    "superpose_concentric": 1
+  },
+  "contact_cells": 8,
+  "note": "operand chosen so the axis acts: reflect-B needs one that is chiral, B-phase needs one that has a profile to vary"
+}

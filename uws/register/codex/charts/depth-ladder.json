@@ -1,0 +1,33 @@
+{
+  "sheet": "depth-ladder",
+  "title": "Placement depth ladder",
+  "depth2_orders": {
+    "inf": 17,
+    "2": 51,
+    "1": 121,
+    "4": 2
+  },
+  "absent": [
+    "3",
+    "6"
+  ],
+  "targets": [
+    {
+      "figure": "triangle",
+      "construction": "rotate_repeat(Angle, 3)",
+      "order": "3"
+    },
+    {
+      "figure": "six-point",
+      "construction": "rotate_repeat(Line, 3)",
+      "order": "6"
+    },
+    {
+      "figure": "hexagram",
+      "construction": "two triangles at 60 degrees",
+      "order": "6"
+    }
+  ],
+  "not_enumerated": "the full depth-3 space is 5700 combinations, quadratic to group, about 44 hours; not computed",
+  "teaches": "why the triangle and the hexagram need a third placement"
+}

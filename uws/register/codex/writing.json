@@ -1,0 +1,605 @@
+{
+  "page": "writing",
+  "how_to_read_an_entry": "A reading is derived, not assigned: it is the geometry said in language. Nothing here has to be memorised, which is what makes the notation featural.",
+  "generated_by": "tools/symbol_lexicon.py",
+  "pen width": 0.06,
+  "hand factor": 1.65,
+  "counts": {
+    "one run": 40,
+    "two marks": 26640,
+    "three marks": 4428800
+  },
+  "composition": {
+    "relations": {
+      "apart": null,
+      "abutting": "joined at a point to",
+      "crossing": "passing through",
+      "overlapping": "overlapping",
+      "contained": "inside",
+      "fused": false
+    },
+    "connects": {
+      "crossing": true,
+      "abutting": true,
+      "overlapping": true,
+      "contained": true,
+      "apart": false,
+      "fused": true
+    },
+    "bearings": [
+      0.0,
+      90.0,
+      180.0,
+      270.0
+    ],
+    "scales": [
+      0.35,
+      0.75
+    ],
+    "bracketing": "three marks are (connected pair) + a mark apart"
+  },
+  "forms": [
+    {
+      "turning": 0.0,
+      "concentration": 0.05,
+      "offset": 0.0,
+      "peaks asked": 1,
+      "closed": false,
+      "measured turning": 0.0,
+      "measured concentration": 0.0,
+      "measured peaks": 0,
+      "reading": "A run that does not change direction, open at both ends."
+    },
+    {
+      "turning": 99.0,
+      "concentration": 0.05,
+      "offset": 0.0,
+      "peaks asked": 1,
+      "closed": false,
+      "measured turning": 98.6,
+      "measured concentration": 0.054,
+      "measured peaks": 0,
+      "reading": "A run that changes direction by 99 degrees, spread evenly along its length, open at both ends."
+    },
+    {
+      "turning": 99.0,
+      "concentration": 0.525,
+      "offset": 0.0,
+      "peaks asked": 1,
+      "closed": false,
+      "measured turning": 98.8,
+      "measured concentration": 0.514,
+      "measured peaks": 1,
+      "reading": "A run that changes direction by 99 degrees, 52 per cent of it in the sharpest twentieth, with one place where it gathers, open at both ends."
+    },
+    {
+      "turning": 99.0,
+      "concentration": 0.525,
+      "offset": 0.083,
+      "peaks asked": 1,
+      "closed": false,
+      "measured turning": 98.8,
+      "measured concentration": 0.511,
+      "measured peaks": 1,
+      "reading": "A run that changes direction by 99 degrees, 52 per cent of it in the sharpest twentieth, the gather 0.08 of the way off centre, with one place where it gathers, open at both ends."
+    },
+    {
+      "turning": 99.0,
+      "concentration": 0.525,
+      "offset": 0.165,
+      "peaks asked": 1,
+      "closed": false,
+      "measured turning": 98.8,
+      "measured concentration": 0.517,
+      "measured peaks": 1,
+      "reading": "A run that changes direction by 99 degrees, 52 per cent of it in the sharpest twentieth, the gather 0.17 of the way off centre, with one place where it gathers, open at both ends."
+    },
+    {
+      "turning": 99.0,
+      "concentration": 0.525,
+      "offset": 0.247,
+      "peaks asked": 1,
+      "closed": false,
+      "measured turning": 98.8,
+      "measured concentration": 0.517,
+      "measured peaks": 1,
+      "reading": "A run that changes direction by 99 degrees, 52 per cent of it in the sharpest twentieth, the gather 0.25 of the way off centre, with one place where it gathers, open at both ends."
+    },
+    {
+      "turning": 99.0,
+      "concentration": 0.525,
+      "offset": 0.33,
+      "peaks asked": 1,
+      "closed": false,
+      "measured turning": 98.8,
+      "measured concentration": 0.511,
+      "measured peaks": 1,
+      "reading": "A run that changes direction by 99 degrees, 52 per cent of it in the sharpest twentieth, the gather 0.33 of the way off centre, with one place where it gathers, open at both ends."
+    },
+    {
+      "turning": 99.0,
+      "concentration": 0.525,
+      "offset": 0.413,
+      "peaks asked": 1,
+      "closed": false,
+      "measured turning": 98.8,
+      "measured concentration": 0.515,
+      "measured peaks": 1,
+      "reading": "A run that changes direction by 99 degrees, 52 per cent of it in the sharpest twentieth, the gather 0.41 of the way off centre, with one place where it gathers, open at both ends."
+    },
+    {
+      "turning": 99.0,
+      "concentration": 1.0,
+      "offset": 0.0,
+      "peaks asked": 1,
+      "closed": false,
+      "measured turning": 99.0,
+      "measured concentration": 0.976,
+      "measured peaks": 1,
+      "reading": "A run that changes direction by 99 degrees, almost all of it at one place, with one place where it gathers, open at both ends."
+    },
+    {
+      "turning": 99.0,
+      "concentration": 1.0,
+      "offset": 0.083,
+      "peaks asked": 1,
+      "closed": false,
+      "measured turning": 99.0,
+      "measured concentration": 0.97,
+      "measured peaks": 1,
+      "reading": "A run that changes direction by 99 degrees, almost all of it at one place, the gather 0.08 of the way off centre, with one place where it gathers, open at both ends."
+    },
+    {
+      "turning": 99.0,
+      "concentration": 1.0,
+      "offset": 0.165,
+      "peaks asked": 1,
+      "closed": false,
+      "measured turning": 99.0,
+      "measured concentration": 0.982,
+      "measured peaks": 1,
+      "reading": "A run that changes direction by 99 degrees, almost all of it at one place, the gather 0.17 of the way off centre, with one place where it gathers, open at both ends."
+    },
+    {
+      "turning": 99.0,
+      "concentration": 1.0,
+      "offset": 0.247,
+      "peaks asked": 1,
+      "closed": false,
+      "measured turning": 99.0,
+      "measured concentration": 0.982,
+      "measured peaks": 1,
+      "reading": "A run that changes direction by 99 degrees, almost all of it at one place, the gather 0.25 of the way off centre, with one place where it gathers, open at both ends."
+    },
+    {
+      "turning": 99.0,
+      "concentration": 1.0,
+      "offset": 0.33,
+      "peaks asked": 1,
+      "closed": false,
+      "measured turning": 99.0,
+      "measured concentration": 0.969,
+      "measured peaks": 1,
+      "reading": "A run that changes direction by 99 degrees, almost all of it at one place, the gather 0.33 of the way off centre, with one place where it gathers, open at both ends."
+    },
+    {
+      "turning": 99.0,
+      "concentration": 1.0,
+      "offset": 0.413,
+      "peaks asked": 1,
+      "closed": false,
+      "measured turning": 99.0,
+      "measured concentration": 0.977,
+      "measured peaks": 1,
+      "reading": "A run that changes direction by 99 degrees, almost all of it at one place, the gather 0.41 of the way off centre, with one place where it gathers, open at both ends."
+    },
+    {
+      "turning": 227.4,
+      "concentration": 0.05,
+      "offset": 0.0,
+      "peaks asked": 1,
+      "closed": false,
+      "measured turning": 226.4,
+      "measured concentration": 0.054,
+      "measured peaks": 0,
+      "reading": "A run that changes direction by 227 degrees, more than a half turn, spread evenly along its length, open at both ends."
+    },
+    {
+      "turning": 227.4,
+      "concentration": 0.525,
+      "offset": 0.0,
+      "peaks asked": 1,
+      "closed": false,
+      "measured turning": 226.9,
+      "measured concentration": 0.514,
+      "measured peaks": 1,
+      "reading": "A run that changes direction by 227 degrees, more than a half turn, 52 per cent of it in the sharpest twentieth, with one place where it gathers, open at both ends."
+    },
+    {
+      "turning": 227.4,
+      "concentration": 0.525,
+      "offset": 0.083,
+      "peaks asked": 1,
+      "closed": false,
+      "measured turning": 226.9,
+      "measured concentration": 0.511,
+      "measured peaks": 1,
+      "reading": "A run that changes direction by 227 degrees, more than a half turn, 52 per cent of it in the sharpest twentieth, the gather 0.08 of the way off centre, with one place where it gathers, open at both ends."
+    },
+    {
+      "turning": 227.4,
+      "concentration": 0.525,
+      "offset": 0.165,
+      "peaks asked": 1,
+      "closed": false,
+      "measured turning": 226.9,
+      "measured concentration": 0.517,
+      "measured peaks": 1,
+      "reading": "A run that changes direction by 227 degrees, more than a half turn, 52 per cent of it in the sharpest twentieth, the gather 0.17 of the way off centre, with one place where it gathers, open at both ends."
+    },
+    {
+      "turning": 227.4,
+      "concentration": 0.525,
+      "offset": 0.247,
+      "peaks asked": 1,
+      "closed": false,
+      "measured turning": 226.9,
+      "measured concentration": 0.517,
+      "measured peaks": 1,
+      "reading": "A run that changes direction by 227 degrees, more than a half turn, 52 per cent of it in the sharpest twentieth, the gather 0.25 of the way off centre, with one place where it gathers, open at both ends."
+    },
+    {
+      "turning": 227.4,
+      "concentration": 0.525,
+      "offset": 0.33,
+      "peaks asked": 1,
+      "closed": false,
+      "measured turning": 226.9,
+      "measured concentration": 0.511,
+      "measured peaks": 1,
+      "reading": "A run that changes direction by 227 degrees, more than a half turn, 52 per cent of it in the sharpest twentieth, the gather 0.33 of the way off centre, with one place where it gathers, open at both ends."
+    },
+    {
+      "turning": 227.4,
+      "concentration": 0.525,
+      "offset": 0.413,
+      "peaks asked": 1,
+      "closed": false,
+      "measured turning": 226.9,
+      "measured concentration": 0.515,
+      "measured peaks": 1,
+      "reading": "A run that changes direction by 227 degrees, more than a half turn, 52 per cent of it in the sharpest twentieth, the gather 0.41 of the way off centre, with one place where it gathers, open at both ends."
+    },
+    {
+      "turning": 227.4,
+      "concentration": 1.0,
+      "offset": 0.0,
+      "peaks asked": 1,
+      "closed": false,
+      "measured turning": 227.4,
+      "measured concentration": 0.976,
+      "measured peaks": 1,
+      "reading": "A run that changes direction by 227 degrees, more than a half turn, almost all of it at one place, with one place where it gathers, open at both ends."
+    },
+    {
+      "turning": 227.4,
+      "concentration": 1.0,
+      "offset": 0.083,
+      "peaks asked": 1,
+      "closed": false,
+      "measured turning": 227.4,
+      "measured concentration": 0.97,
+      "measured peaks": 1,
+      "reading": "A run that changes direction by 227 degrees, more than a half turn, almost all of it at one place, the gather 0.08 of the way off centre, with one place where it gathers, open at both ends."
+    },
+    {
+      "turning": 227.4,
+      "concentration": 1.0,
+      "offset": 0.165,
+      "peaks asked": 1,
+      "closed": false,
+      "measured turning": 227.4,
+      "measured concentration": 0.982,
+      "measured peaks": 1,
+      "reading": "A run that changes direction by 227 degrees, more than a half turn, almost all of it at one place, the gather 0.17 of the way off centre, with one place where it gathers, open at both ends."
+    },
+    {
+      "turning": 227.4,
+      "concentration": 1.0,
+      "offset": 0.247,
+      "peaks asked": 1,
+      "closed": false,
+      "measured turning": 227.4,
+      "measured concentration": 0.982,
+      "measured peaks": 1,
+      "reading": "A run that changes direction by 227 degrees, more than a half turn, almost all of it at one place, the gather 0.25 of the way off centre, with one place where it gathers, open at both ends."
+    },
+    {
+      "turning": 227.4,
+      "concentration": 1.0,
+      "offset": 0.33,
+      "peaks asked": 1,
+      "closed": false,
+      "measured turning": 227.4,
+      "measured concentration": 0.969,
+      "measured peaks": 1,
+      "reading": "A run that changes direction by 227 degrees, more than a half turn, almost all of it at one place, the gather 0.33 of the way off centre, with one place where it gathers, open at both ends."
+    },
+    {
+      "turning": 227.4,
+      "concentration": 1.0,
+      "offset": 0.413,
+      "peaks asked": 1,
+      "closed": false,
+      "measured turning": 227.4,
+      "measured concentration": 0.977,
+      "measured peaks": 1,
+      "reading": "A run that changes direction by 227 degrees, more than a half turn, almost all of it at one place, the gather 0.41 of the way off centre, with one place where it gathers, open at both ends."
+    },
+    {
+      "turning": 360.0,
+      "concentration": 0.05,
+      "offset": 0.0,
+      "peaks asked": 1,
+      "closed": true,
+      "measured turning": 358.4,
+      "measured concentration": 0.054,
+      "measured peaks": 0,
+      "reading": "A run that returns to its own starting direction, spread evenly along its length, closed on itself."
+    },
+    {
+      "turning": 360.0,
+      "concentration": 0.525,
+      "offset": 0.0,
+      "peaks asked": 1,
+      "closed": true,
+      "measured turning": 359.2,
+      "measured concentration": 0.514,
+      "measured peaks": 1,
+      "reading": "A run that returns to its own starting direction, 52 per cent of it in the sharpest twentieth, with one place where it gathers, closed on itself."
+    },
+    {
+      "turning": 360.0,
+      "concentration": 0.525,
+      "offset": 0.083,
+      "peaks asked": 1,
+      "closed": true,
+      "measured turning": 359.2,
+      "measured concentration": 0.511,
+      "measured peaks": 1,
+      "reading": "A run that returns to its own starting direction, 52 per cent of it in the sharpest twentieth, the gather 0.08 of the way off centre, with one place where it gathers, closed on itself."
+    },
+    {
+      "turning": 360.0,
+      "concentration": 0.525,
+      "offset": 0.165,
+      "peaks asked": 1,
+      "closed": true,
+      "measured turning": 359.2,
+      "measured concentration": 0.517,
+      "measured peaks": 1,
+      "reading": "A run that returns to its own starting direction, 52 per cent of it in the sharpest twentieth, the gather 0.17 of the way off centre, with one place where it gathers, closed on itself."
+    },
+    {
+      "turning": 360.0,
+      "concentration": 0.525,
+      "offset": 0.247,
+      "peaks asked": 1,
+      "closed": true,
+      "measured turning": 359.2,
+      "measured concentration": 0.517,
+      "measured peaks": 1,
+      "reading": "A run that returns to its own starting direction, 52 per cent of it in the sharpest twentieth, the gather 0.25 of the way off centre, with one place where it gathers, closed on itself."
+    },
+    {
+      "turning": 360.0,
+      "concentration": 0.525,
+      "offset": 0.33,
+      "peaks asked": 1,
+      "closed": true,
+      "measured turning": 359.2,
+      "measured concentration": 0.511,
+      "measured peaks": 1,
+      "reading": "A run that returns to its own starting direction, 52 per cent of it in the sharpest twentieth, the gather 0.33 of the way off centre, with one place where it gathers, closed on itself."
+    },
+    {
+      "turning": 360.0,
+      "concentration": 0.525,
+      "offset": 0.413,
+      "peaks asked": 1,
+      "closed": true,
+      "measured turning": 359.2,
+      "measured concentration": 0.515,
+      "measured peaks": 1,
+      "reading": "A run that returns to its own starting direction, 52 per cent of it in the sharpest twentieth, the gather 0.41 of the way off centre, with one place where it gathers, closed on itself."
+    },
+    {
+      "turning": 360.0,
+      "concentration": 1.0,
+      "offset": 0.0,
+      "peaks asked": 1,
+      "closed": true,
+      "measured turning": 360.0,
+      "measured concentration": 0.976,
+      "measured peaks": 1,
+      "reading": "A run that returns to its own starting direction, almost all of it at one place, with one place where it gathers, closed on itself."
+    },
+    {
+      "turning": 360.0,
+      "concentration": 1.0,
+      "offset": 0.083,
+      "peaks asked": 1,
+      "closed": true,
+      "measured turning": 360.0,
+      "measured concentration": 0.97,
+      "measured peaks": 1,
+      "reading": "A run that returns to its own starting direction, almost all of it at one place, the gather 0.08 of the way off centre, with one place where it gathers, closed on itself."
+    },
+    {
+      "turning": 360.0,
+      "concentration": 1.0,
+      "offset": 0.165,
+      "peaks asked": 1,
+      "closed": true,
+      "measured turning": 360.0,
+      "measured concentration": 0.982,
+      "measured peaks": 1,
+      "reading": "A run that returns to its own starting direction, almost all of it at one place, the gather 0.17 of the way off centre, with one place where it gathers, closed on itself."
+    },
+    {
+      "turning": 360.0,
+      "concentration": 1.0,
+      "offset": 0.247,
+      "peaks asked": 1,
+      "closed": true,
+      "measured turning": 360.0,
+      "measured concentration": 0.982,
+      "measured peaks": 1,
+      "reading": "A run that returns to its own starting direction, almost all of it at one place, the gather 0.25 of the way off centre, with one place where it gathers, closed on itself."
+    },
+    {
+      "turning": 360.0,
+      "concentration": 1.0,
+      "offset": 0.33,
+      "peaks asked": 1,
+      "closed": true,
+      "measured turning": 360.0,
+      "measured concentration": 0.969,
+      "measured peaks": 1,
+      "reading": "A run that returns to its own starting direction, almost all of it at one place, the gather 0.33 of the way off centre, with one place where it gathers, closed on itself."
+    },
+    {
+      "turning": 360.0,
+      "concentration": 1.0,
+      "offset": 0.413,
+      "peaks asked": 1,
+      "closed": true,
+      "measured turning": 360.0,
+      "measured concentration": 0.977,
+      "measured peaks": 1,
+      "reading": "A run that returns to its own starting direction, almost all of it at one place, the gather 0.41 of the way off centre, with one place where it gathers, closed on itself."
+    }
+  ],
+  "claims": [
+    {
+      "claim": "where-the-turning-gathers-is-an-axis-the-grid-was-missing",
+      "status": "measured",
+      "statement": "Concentration says HOW MUCH of a run's turning gathers. WHERE it gathers is a separate quantity, it was fixed at the middle of the run without anyone noticing it was a parameter, and freeing it closes 37 per cent of the redraw gap.",
+      "success_condition": "A figure whose turning gathers somewhere the grid can already put it."
+    },
+    {
+      "claim": "a-chain-of-segments-buys-peaks-not-turning",
+      "status": "measured",
+      "statement": "What a sequence of segments reaches that a single segment cannot is more than one place where the turning concentrates. Segment COUNT, which the roster had as the axis, is not it.",
+      "success_condition": "A chain of n segments with more than one concentrated place that a single segment reproduces."
+    },
+    {
+      "claim": "self-crossing-is-not-a-function-of-turning",
+      "status": "measured",
+      "statement": "A run does not cross itself because it turns a lot. Turning alone never produces a crossing at any amount.",
+      "derivation": "A run crosses itself only where it returns to a place it has already been AT A DIFFERENT HEADING. Constant radius returns at the same heading every lap, which is retracing, not crossing; a trending radius does not return. What does produce a crossing is the radius passing through zero: a k-lobe rosette r = 1 + a cos(k th) crosses at amplitude above 1 and not at or below it, measured at a = 0.4, 0.9, 1.0 (zero crossings) against 1.4 and 2.0 (one).",
+      "success_condition": "A constant-radius run of some turning that crosses itself. None exists."
+    },
+    {
+      "claim": "taper-is-not-in-the-path",
+      "status": "measured",
+      "statement": "A changing pen width alters nothing the path measures, but it is the only way a single straight run acquires a direction.",
+      "success_condition": "A path measure that a pen can move."
+    },
+    {
+      "claim": "the-four-floors-are-one-floor",
+      "status": "derived_given",
+      "statement": "Four rules that look unrelated are the same inequality: a feature exists while it is wider than the pen.",
+      "derivation": "Two marks resolve while the dependent one is at least w/r of the anchor. An enclosure survives while its inscribed radius exceeds w/2. Nesting continues while the ring between levels, s^k (1-s), exceeds w. A stroke's turning exists only down to a spacing of w. Each was derived separately and each reduces to the same comparison against the same quantity.",
+      "given": "the four rules themselves, two of which are measured rather than proved: that an enclosure survives while its inscribed radius exceeds half the pen width (19 of 21), and that nesting is bounded by the gap between levels rather than by the innermost size."
+    },
+    {
+      "claim": "the-pen-width-is-the-notations-unit",
+      "status": "derived_given",
+      "statement": "Absolute scale is not open after all. The pen width is an intrinsic unit: it can be read off any drawing without asking its author anything, and every length in the notation can be stated in it.",
+      "derivation": "Table G.3 was open on the grounds that nothing fixes a unit, so a figure and the same figure twice as large say the same thing. But the second figure is drawn with a pen twice as wide or it is not the same figure -- and if the pen is NOT scaled, the two figures differ in every one of the four floors, which is a difference the page carries. The unit is therefore in the drawing already.",
+      "given": "that a drawing is made with a pen of some width -- which is true of every drawing there is, but is a fact about drawing rather than about the notation."
+    },
+    {
+      "claim": "a-hand-does-not-hold-the-unit-steady",
+      "status": "measured",
+      "statement": "The notation's unit is intrinsic but not stable. On the one drawing nobody generated, the pen width varies by a quarter within a single stroke and by a factor of 1.65 across one symbol pair.",
+      "success_condition": "A hand-drawn figure whose pen width is as steady as a generated one."
+    },
+    {
+      "claim": "topology-depends-on-how-thickly-you-write",
+      "status": "measured",
+      "statement": "A figure's readable topology is not a property of the figure alone. The same curve written with a thicker pen encloses fewer regions, and the threshold is exact enough to predict.",
+      "success_condition": "A figure whose inked topology differs from the rule's prediction by more than the raster can resolve."
+    },
+    {
+      "claim": "the-pen-to-ink-map-has-a-kernel",
+      "status": "measured",
+      "statement": "Six things the hand can vary leave the ink unchanged, and therefore can never carry meaning in this notation, however natural they are to a writer.",
+      "derivation": "The writing system is a map from what the hand does to what survives on the page, and it is not injective. The things it collapses are exactly the things unavailable to the notation. This generalises the grammar rule `no-reading-order-in-ink`, which named one member of the kernel; there are at least six, and stroke order is not the most consequential. Retracing is: a run may be gone over any number of times and the ink is the same, so the notation has no way to say `again`.",
+      "success_condition": "A pen variation that is in the kernel and that the corpus nonetheless uses to distinguish two symbols. There would then be two symbols with identical ink."
+    },
+    {
+      "claim": "retracing-is-the-notations-blind-spot",
+      "status": "derived_given",
+      "statement": "The notation cannot express `again`. Going over a path twice produces the same ink as going over it once.",
+      "derivation": "Covering a point a second time adds nothing to a set. Union is idempotent; that is the whole argument, and it runs on the model of ink rather than on any measurement.",
+      "given": "that ink is modelled as a SET of covered points -- which is a modelling choice, and a false one for real ink on real paper, where a second pass is darker."
+    },
+    {
+      "claim": "stroke-count-is-in-the-kernel",
+      "status": "measured",
+      "statement": "The ink does not record how many strokes made it, so stroke count is not an axis a page can supply.",
+      "success_condition": "Two figures whose ink differs only in how many strokes made them."
+    },
+    {
+      "claim": "order-and-register-are-drawn-because-they-cannot-be-implied",
+      "status": "measured",
+      "statement": "Tables 4.2 and 4.3 were open for want of a frame. The benchmark's author drew one, and spent more ink on it than on both symbols together.",
+      "success_condition": "A written string in this notation that fixes its own order and baseline without a drawn frame."
+    },
+    {
+      "claim": "two-marks-stand-in-exactly-six-ways",
+      "status": "derived_given",
+      "statement": "There are six ways two marks can stand to each other, and the six are forced rather than chosen: fused, contained, overlapping, crossing, abutting, apart.",
+      "derivation": "Two yes-or-no questions exhaust the cases. Do they share a point? Is one inside a bounded region of the other? That gives four cells; the sharing cell splits by whether a stroke ENDS at the meeting, which is the same parity that separates a T from an X; and one further cell exists because some pairs are not two marks at all. Marks laid exactly on each other, and marks butted end to end, both make ink that a single unbroken run would make, so the page holds ONE mark. FUSED is that cell.",
+      "given": "the same model of ink the retracing claim rests on -- that ink is a SET of covered points. Five of the six cells follow from the two questions alone; FUSED needs the model, because it says a second pass over the same place adds nothing."
+    },
+    {
+      "claim": "a-junction-is-odd-exactly-when-a-stroke-ends-there",
+      "status": "derived",
+      "statement": "The valence of a junction is even if and only if no stroke terminates at it. Every odd valence in the notation is the signature of a terminal.",
+      "derivation": "Valence is the number of pieces of stroke leaving the point, counted as crossings of a small circle round it. A run that passes through enters once and leaves once and so contributes two; a run that ENDS there enters and does not leave, contributing one. Parity therefore counts terminals, and nothing else."
+    },
+    {
+      "claim": "enclosures-follow-from-junctions-and-free-ends",
+      "status": "derived",
+      "statement": "How many regions a figure encloses is fixed by its junctions, its free ends and its components: enclosed = E - V + C.",
+      "derivation": "Euler's relation for a plane graph. The vertices are the junctions and the free ends; every edge has two ends, so 2E is the sum of the valences with each free end contributing one; the bounded faces are the enclosures."
+    },
+    {
+      "claim": "nesting-depth-is-bounded-by-the-gap-not-the-size",
+      "status": "measured",
+      "statement": "How deep containment can go is set by the space BETWEEN levels, not by how small the innermost mark gets. At a pen width of 0.06 the deepest nesting is six levels, at a scale of 0.755 per level.",
+      "success_condition": "A nesting that outlives the gap law by more than one level."
+    },
+    {
+      "claim": "the-benchmark-reads-in-the-corpus-tables",
+      "status": "measured",
+      "statement": "Every feature of both hand-drawn Challenge Symbols is a quantity the corpus's tables name, and each lands in a cell.",
+      "success_condition": "A feature of either symbol that no table in the corpus names."
+    },
+    {
+      "claim": "the-generated-lexicon-contains-the-benchmark",
+      "status": "measured",
+      "statement": "BOTH hand-drawn Challenge Symbols are entries the corpus generated without having seen them: the left at distance 0.072 in the two-mark lexicon, the right at 0.218 in the three-mark lexicon.",
+      "success_condition": "A feature of the left symbol that no generated entry carries."
+    },
+    {
+      "claim": "the-corpus-cannot-redraw-the-benchmark-and-the-gap-is-real",
+      "status": "measured",
+      "statement": "The best figure the corpus can generate sits 0.1070 from the left Challenge Symbol, against a pipeline floor of 0.0557 at worst. The gap is about twice the floor, so it is a real difference -- but it is half what it was before the position axis was found.",
+      "success_condition": "A generated figure within 0.06 of the extracted one."
+    }
+  ]
+}

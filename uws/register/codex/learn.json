@@ -1,0 +1,32 @@
+{
+  "page": "learn",
+  "title": "The fundamentals",
+  "lede": "Five ideas, in order. Each one uses the one before it, so reading them in sequence costs less than reading them apart. Each ends with something small you can check yourself — do that part, because being told a system is checkable is not the same as having checked it.",
+  "reading_order_matters": "Each step uses the one before it. The order is the content, not a presentation choice.",
+  "steps": [
+    {
+      "id": "marks",
+      "heading": "A mark is a figure, not a letter",
+      "body": "Two independent properties fix the whole set. Is the figure straight or curved? And what can you do to it — turn it, flip it — that leaves it looking identical? Choose one answer to each and you have named a mark. Every mark below is that pair of answers, drawn.",
+      "sheet": "cells/marks.html"
+    },
+    {
+      "id": "signs",
+      "heading": "A sign is arithmetic",
+      "body": "The signs are not designed. Each one is the product of a number's remainder on division by three and its remainder on division by four. Nothing about the drawing is a choice: change the number and the figure changes with it, the same way every time.",
+      "sheet": "cells/signs.html"
+    },
+    {
+      "id": "operators",
+      "heading": "Two marks make a third thing",
+      "body": "An operator says where to put the second mark relative to the first: inside it, across it, beside it, around it. The result is a new figure, and which figures are reachable at all is something you compute, not something anyone decides.",
+      "sheet": "primers/operators.html"
+    },
+    {
+      "id": "status",
+      "heading": "Every claim carries its licence",
+      "body": "Every statement here carries a badge giving the standing of its derivation. The badge is drawn rather than spelled, so it reads identically in every language.",
+      "sheet": "primers/status.html"
+    }
+  ]
+}

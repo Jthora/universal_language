@@ -1,0 +1,125 @@
+{
+ "sheet": "primers/crt",
+ "cells": [
+  {
+   "id": "cell-crt-1",
+   "title": "index 1 — geometry 1, direction 1, crossbar no",
+   "desc": "the glyph is computed from the index; nothing here is looked up",
+   "index": "1",
+   "geometry": "angle",
+   "apex-up": "True",
+   "crossbar": "False",
+   "derived": "glyph generated from the index by the sign rule"
+  },
+  {
+   "id": "cell-crt-2",
+   "title": "index 2 — geometry 2, direction 0, crossbar yes",
+   "desc": "the glyph is computed from the index; nothing here is looked up",
+   "index": "2",
+   "geometry": "square",
+   "apex-up": "False",
+   "crossbar": "True",
+   "derived": "glyph generated from the index by the sign rule"
+  },
+  {
+   "id": "cell-crt-3",
+   "title": "index 3 — geometry 0, direction 1, crossbar yes",
+   "desc": "the glyph is computed from the index; nothing here is looked up",
+   "index": "3",
+   "geometry": "arc",
+   "apex-up": "True",
+   "crossbar": "True",
+   "derived": "glyph generated from the index by the sign rule"
+  },
+  {
+   "id": "cell-crt-4",
+   "title": "index 4 — geometry 1, direction 0, crossbar no",
+   "desc": "the glyph is computed from the index; nothing here is looked up",
+   "index": "4",
+   "geometry": "angle",
+   "apex-up": "False",
+   "crossbar": "False",
+   "derived": "glyph generated from the index by the sign rule"
+  },
+  {
+   "id": "cell-crt-5",
+   "title": "index 5 — geometry 2, direction 1, crossbar no",
+   "desc": "the glyph is computed from the index; nothing here is looked up",
+   "index": "5",
+   "geometry": "square",
+   "apex-up": "True",
+   "crossbar": "False",
+   "derived": "glyph generated from the index by the sign rule"
+  },
+  {
+   "id": "cell-crt-6",
+   "title": "index 6 — geometry 0, direction 0, crossbar yes",
+   "desc": "the glyph is computed from the index; nothing here is looked up",
+   "index": "6",
+   "geometry": "arc",
+   "apex-up": "False",
+   "crossbar": "True",
+   "derived": "glyph generated from the index by the sign rule"
+  },
+  {
+   "id": "cell-crt-7",
+   "title": "index 7 — geometry 1, direction 1, crossbar yes",
+   "desc": "the glyph is computed from the index; nothing here is looked up",
+   "index": "7",
+   "geometry": "angle",
+   "apex-up": "True",
+   "crossbar": "True",
+   "derived": "glyph generated from the index by the sign rule"
+  },
+  {
+   "id": "cell-crt-8",
+   "title": "index 8 — geometry 2, direction 0, crossbar no",
+   "desc": "the glyph is computed from the index; nothing here is looked up",
+   "index": "8",
+   "geometry": "square",
+   "apex-up": "False",
+   "crossbar": "False",
+   "derived": "glyph generated from the index by the sign rule"
+  },
+  {
+   "id": "cell-crt-9",
+   "title": "index 9 — geometry 0, direction 1, crossbar no",
+   "desc": "the glyph is computed from the index; nothing here is looked up",
+   "index": "9",
+   "geometry": "arc",
+   "apex-up": "True",
+   "crossbar": "False",
+   "derived": "glyph generated from the index by the sign rule"
+  },
+  {
+   "id": "cell-crt-10",
+   "title": "index 10 — geometry 1, direction 0, crossbar yes",
+   "desc": "the glyph is computed from the index; nothing here is looked up",
+   "index": "10",
+   "geometry": "angle",
+   "apex-up": "False",
+   "crossbar": "True",
+   "derived": "glyph generated from the index by the sign rule"
+  },
+  {
+   "id": "cell-crt-11",
+   "title": "index 11 — geometry 2, direction 1, crossbar yes",
+   "desc": "the glyph is computed from the index; nothing here is looked up",
+   "index": "11",
+   "geometry": "square",
+   "apex-up": "True",
+   "crossbar": "True",
+   "derived": "glyph generated from the index by the sign rule"
+  },
+  {
+   "id": "cell-crt-12",
+   "title": "index 12 — geometry 0, direction 0, crossbar no",
+   "desc": "the glyph is computed from the index; nothing here is looked up",
+   "index": "12",
+   "geometry": "arc",
+   "apex-up": "False",
+   "crossbar": "False",
+   "derived": "glyph generated from the index by the sign rule"
+  }
+ ]
+}

@@ -1,0 +1,48 @@
+{
+  "sheet": "slice-unary-rotation-phase",
+  "group": "unary",
+  "axes": [
+    "rotation",
+    "phase"
+  ],
+  "cells": 48,
+  "held": {
+    "mark": "Wave",
+    "reflection": 0,
+    "scale": 1.0,
+    "count": 1,
+    "frequency": 1.0,
+    "amplitude": 1.0,
+    "taper": 0.0,
+    "chirp": 0.0
+  },
+  "operand_chosen_for": {
+    "rotation": "is not rotation-invariant",
+    "phase": "has a profile to vary"
+  },
+  "samples": {
+    "rotation": [
+      "0°",
+      "30°",
+      "60°",
+      "90°",
+      "120°",
+      "150°",
+      "180°",
+      "210°",
+      "240°",
+      "270°",
+      "300°",
+      "330°"
+    ],
+    "phase": [
+      "0",
+      "0.25",
+      "0.5",
+      "0.75"
+    ]
+  },
+  "operators_on_this_slice": {},
+  "contact_cells": 0,
+  "note": "operand chosen so the axis acts: rotation needs one that is not rotation-invariant, phase needs one that has a profile to vary"
+}

@@ -1,0 +1,91 @@
+{
+  "grid": "marks",
+  "title": "the marks",
+  "subtitle": "3 symmetry classes × 2 curvature classes — both measured, every cell filled once",
+  "rows": [
+    "C-inf",
+    "C2",
+    "C1"
+  ],
+  "cols": [
+    "zero or singular",
+    "smooth"
+  ],
+  "cells": [
+    {
+      "row": 0,
+      "col": 0,
+      "kind": "mark",
+      "id": "Point",
+      "symmetry-order": "inf",
+      "curvature-class": "singular",
+      "rotation-class": "invariant",
+      "status": "derived",
+      "derived-by": "rotation-class-is-symmetry-order; mark-polarity"
+    },
+    {
+      "row": 0,
+      "col": 1,
+      "kind": "mark",
+      "id": "Circle",
+      "symmetry-order": "inf",
+      "curvature-class": "smooth",
+      "rotation-class": "invariant",
+      "status": "derived",
+      "derived-by": "rotation-class-is-symmetry-order; mark-polarity"
+    },
+    {
+      "row": 1,
+      "col": 0,
+      "kind": "mark",
+      "id": "Line",
+      "symmetry-order": "2",
+      "curvature-class": "singular",
+      "rotation-class": "orientation-bearing",
+      "status": "derived",
+      "derived-by": "rotation-class-is-symmetry-order; mark-polarity"
+    },
+    {
+      "row": 1,
+      "col": 1,
+      "kind": "mark",
+      "id": "Wave",
+      "symmetry-order": "2",
+      "curvature-class": "smooth",
+      "rotation-class": "orientation-bearing",
+      "status": "derived",
+      "derived-by": "rotation-class-is-symmetry-order; mark-polarity"
+    },
+    {
+      "row": 2,
+      "col": 0,
+      "kind": "mark",
+      "id": "Angle",
+      "symmetry-order": "1",
+      "curvature-class": "singular",
+      "rotation-class": "modulating",
+      "status": "derived",
+      "derived-by": "rotation-class-is-symmetry-order; mark-polarity"
+    },
+    {
+      "row": 2,
+      "col": 1,
+      "kind": "mark",
+      "id": "Curve",
+      "symmetry-order": "1",
+      "curvature-class": "smooth",
+      "rotation-class": "modulating",
+      "status": "derived",
+      "derived-by": "rotation-class-is-symmetry-order; mark-polarity"
+    }
+  ],
+  "machine_readable": "each <g class='cell'> carries title, desc and data-* attributes; no rendering required",
+  "verify": {
+    "how": "Re-derive this bundle from source.",
+    "commands": [
+      "python3 tools/verify_symbology_grammar.py    # 12/12 off the sheets",
+      "python3 tools/symbology_glyph.py --check     # glyphs read back as their rule",
+      "python3 tools/symbol_combinations.py --closure"
+    ]
+  }
+}

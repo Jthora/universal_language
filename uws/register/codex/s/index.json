@@ -1,0 +1,175 @@
+{
+  "level": "L2 — one symbol per page",
+  "read_this_first": "Every assertion carries its derivation status, at the assertion, not in a footnote.",
+  "neighbours_are_computed": "Every 'near this' link is derived from a measured axis (symmetry order, curvature class, n mod 3, n mod 4), not from an editor's see-also list. Change the measurement and the neighbourhood moves.",
+  "pages": [
+    {
+      "id": "mark-point",
+      "label": "Point",
+      "family": "Marks",
+      "html": "mark-point.html",
+      "json": "mark-point.json",
+      "open_claims": []
+    },
+    {
+      "id": "mark-line",
+      "label": "Line",
+      "family": "Marks",
+      "html": "mark-line.html",
+      "json": "mark-line.json",
+      "open_claims": []
+    },
+    {
+      "id": "mark-angle",
+      "label": "Angle",
+      "family": "Marks",
+      "html": "mark-angle.html",
+      "json": "mark-angle.json",
+      "open_claims": []
+    },
+    {
+      "id": "mark-curve",
+      "label": "Curve",
+      "family": "Marks",
+      "html": "mark-curve.html",
+      "json": "mark-curve.json",
+      "open_claims": []
+    },
+    {
+      "id": "mark-wave",
+      "label": "Wave",
+      "family": "Marks",
+      "html": "mark-wave.html",
+      "json": "mark-wave.json",
+      "open_claims": []
+    },
+    {
+      "id": "mark-circle",
+      "label": "Circle",
+      "family": "Marks",
+      "html": "mark-circle.html",
+      "json": "mark-circle.json",
+      "open_claims": []
+    },
+    {
+      "id": "sign-01",
+      "label": "Aries",
+      "family": "Signs",
+      "html": "sign-01.html",
+      "json": "sign-01.json",
+      "open_claims": [
+        "element-bit-assignment"
+      ]
+    },
+    {
+      "id": "sign-02",
+      "label": "Taurus",
+      "family": "Signs",
+      "html": "sign-02.html",
+      "json": "sign-02.json",
+      "open_claims": [
+        "element-bit-assignment"
+      ]
+    },
+    {
+      "id": "sign-03",
+      "label": "Gemini",
+      "family": "Signs",
+      "html": "sign-03.html",
+      "json": "sign-03.json",
+      "open_claims": [
+        "element-bit-assignment"
+      ]
+    },
+    {
+      "id": "sign-04",
+      "label": "Cancer",
+      "family": "Signs",
+      "html": "sign-04.html",
+      "json": "sign-04.json",
+      "open_claims": [
+        "element-bit-assignment"
+      ]
+    },
+    {
+      "id": "sign-05",
+      "label": "Leo",
+      "family": "Signs",
+      "html": "sign-05.html",
+      "json": "sign-05.json",
+      "open_claims": [
+        "element-bit-assignment"
+      ]
+    },
+    {
+      "id": "sign-06",
+      "label": "Virgo",
+      "family": "Signs",
+      "html": "sign-06.html",
+      "json": "sign-06.json",
+      "open_claims": [
+        "element-bit-assignment"
+      ]
+    },
+    {
+      "id": "sign-07",
+      "label": "Libra",
+      "family": "Signs",
+      "html": "sign-07.html",
+      "json": "sign-07.json",
+      "open_claims": [
+        "element-bit-assignment"
+      ]
+    },
+    {
+      "id": "sign-08",
+      "label": "Scorpio",
+      "family": "Signs",
+      "html": "sign-08.html",
+      "json": "sign-08.json",
+      "open_claims": [
+        "element-bit-assignment"
+      ]
+    },
+    {
+      "id": "sign-09",
+      "label": "Sagittarius",
+      "family": "Signs",
+      "html": "sign-09.html",
+      "json": "sign-09.json",
+      "open_claims": [
+        "element-bit-assignment"
+      ]
+    },
+    {
+      "id": "sign-10",
+      "label": "Capricorn",
+      "family": "Signs",
+      "html": "sign-10.html",
+      "json": "sign-10.json",
+      "open_claims": [
+        "element-bit-assignment"
+      ]
+    },
+    {
+      "id": "sign-11",
+      "label": "Aquarius",
+      "family": "Signs",
+      "html": "sign-11.html",
+      "json": "sign-11.json",
+      "open_claims": [
+        "element-bit-assignment"
+      ]
+    },
+    {
+      "id": "sign-12",
+      "label": "Pisces",
+      "family": "Signs",
+      "html": "sign-12.html",
+      "json": "sign-12.json",
+      "open_claims": [
+        "element-bit-assignment"
+      ]
+    }
+  ]
+}

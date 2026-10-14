@@ -1,0 +1,39 @@
+{
+  "sheet": "slice-unary-count-frequency",
+  "group": "unary",
+  "axes": [
+    "count",
+    "frequency"
+  ],
+  "cells": 16,
+  "held": {
+    "mark": "Wave",
+    "rotation": 0.0,
+    "reflection": 0,
+    "scale": 1.0,
+    "amplitude": 1.0,
+    "phase": 0.0,
+    "taper": 0.0,
+    "chirp": 0.0
+  },
+  "operand_chosen_for": {
+    "frequency": "has a profile to vary"
+  },
+  "samples": {
+    "count": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "frequency": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ]
+  },
+  "operators_on_this_slice": {},
+  "contact_cells": 0,
+  "note": "operand chosen so the axis acts: frequency needs one that has a profile to vary"
+}

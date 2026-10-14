@@ -4222,9 +4222,11 @@ claims:
     statement: >
       Every operator in the register carries status `measured` — the register's own word for a fact
       about these artifacts rather than a necessity — and each notes that attestation does not
-      derive its semantics. The operator inventory is therefore the largest free parameter on the
-      classification layer's load-bearing path, and a far larger residue than the syntax layer's
-      proved Z/2. The classification layer's ledger line does not close.
+      derive its semantics. The SET, however, carries a derived necessary condition: it is closed
+      under reorientation (OPERATORS-ARE-CLOSED-UNDER-REORIENTATION). What remains unforced is
+      which frame-free relations the set contains and what they mean, so the classification layer's
+      ledger line still does not close — but the residue is a bounded search, not an open-ended
+      derivation.
     tier: ARGUED
     evidence: research/notes/065-atlas-audit/README.md
     priority: 0
@@ -4248,8 +4250,18 @@ claims:
       UNREACHABLE by 23,424 close()-expressions over the attested operators — "exactly-one-corner
       figures do not occur in that space at all". So the inventory is both unforced AND
       known-incomplete against a figure the corpus itself attests.
-      Deriving the inventory, or recording that it cannot be derived, is now the single
-      highest-value open item in the program.
+      CORRECTED 2026-10-14 by note 067, hours after registration. The original statement said "no
+      derivation recorded for the set", which is FALSE: `attested-operators-are-frame-free` is
+      tiered `derived` in the register I had already vendored and hashed. I audited the register's
+      STATUS fields and never read its DERIVATION fields, so a constraint stated about the
+      relational schemas was missed by an audit organised by operator. That is an R1 violation —
+      a negative finding recorded without one adversarial search against it — and the
+      counter-evidence was one grep away in a local file. Logged as F-037.
+      THE OPEN ITEM IS NOW BETTER POSED, which is the gain: is frame-freeness, plus the
+      symmetry-order bound on bearings, SUFFICIENT to force the attested set, or is there a
+      frame-free relation on two figures that the corpus does not attest? The second half is a cheap
+      falsifier — exhibit one such relation and the inventory is genuinely underdetermined; find
+      none and it is forced up to the stated conditions.
     scope_reviewed: [LEDGER-CLOSURE-IS-UNIVERSE-SCOPE, UNIVERSAL-IS-MATHEMATICAL-SCOPE]
 
   - id: ORBIT-PARTITION-IS-TOLERANCE-BOUNDED
@@ -4470,6 +4482,14 @@ claims:
       calibrated central value across 89-94, not an exact integer, so cite the ratio as approximate.
       Says nothing about D2, D3 or D4.
     notes: >
+      DENOMINATOR CAVEAT (note 067): the 93 is the third answer, not the first. The corpus's own
+      SKILL.md records it reading 122 until F101 and 80 until F105 — "three defects, each hiding the
+      next: a bucket key that saw sampling density, which the equality test ignores; a tolerance
+      loosened to cover a rotation search too coarse to align anything; and stroke boundaries
+      discarded by flattening. All three were invisible in the data and visible the moment the
+      orbits were drawn side by side." Their rule follows: IF YOU PUBLISH A COUNT, DRAW IT. This
+      claim publishes 4/93 and draws nothing, so the ratio is cited as current best and not as
+      settled.
       The honest progress bar, and the first one. It is low, and publishing it is the point: effort
       has historically gone to framing while the atlas stayed near-empty, and a visible 4% is the
       cheapest defence against that. Recomputed by audit.py rather than written down, per
@@ -4545,3 +4565,37 @@ claims:
       there and open. The ranking is honest; the framing understates that this capability is the
       point of the program rather than one of its benefits.
     scope_reviewed: [ADOPTION-RIDES-SELF-INTEREST, CURE-IS-COROLLARY]
+
+  # ─── The operator constraint, recovered (2026-10-14, note 067) ──────────────
+
+  - id: OPERATORS-ARE-CLOSED-UNDER-REORIENTATION
+    statement: >
+      The attested operator set is closed under reorientation: every operator reads a quantity that
+      is unchanged when the whole canvas is turned. The relational schemas the inventory omits —
+      UP/DOWN, FRONT/BACK, PATH — are exactly those that read frame-bound quantities and therefore
+      provably cannot be closed that way. The inventory's boundary is derived, not arbitrary.
+    tier: ARGUED
+    evidence: uws/register/README.md
+    priority: 0
+    scope: >
+      NECESSARY, NOT SUFFICIENT — and that distinction is the whole content of the correction in
+      note 067. It does not establish why THESE frame-free relations rather than other possible
+      ones, and it says nothing about the operators' semantics: each operator's own register entry
+      still reads "attested on a sheet; its semantics are not thereby derived". The register's
+      `primitive-completeness` entry carries the same shape of caveat — completeness holds with
+      respect to symmetry order, which it states is necessary and not sufficient.
+    notes: >
+      Upstream, in the imported register: `attested-operators-are-frame-free` (derived) — each
+      relation reduced to the scalar it reads and measured before and after a global rotation at
+      eight angles over four figure pairs; IN/OUT, CENTER/PERIPHERY, NEAR/FAR, CONTACT and LINK
+      drift by at most 1.3e-15, machine zero. `directional-schemas-need-a-declared-frame` (derived)
+      measures the omitted schemas drifting 2.20 and 4.40 under the same rotation.
+      Two companions sharpen it: `an-anchor-s-symmetry-bounds-the-bearing` (derived) — a bearing is
+      bounded by the symmetry of the mark it is measured against, C-infinity anchoring no direction,
+      C2 one only up to a half turn, C1 completely; and `direction-is-read-as-contrast` (derived) —
+      no meaning in this notation rests on which way is up.
+      WHY THIS MATTERS BEYOND THE CORRECTION: a frame-free notation is exactly what universe-scope
+      requires. A frame is a local parameter, so an operator set closed under reorientation is one
+      with that particular convention already eliminated — which is a ledger result at the
+      classification layer, and the first one there.
+    scope_reviewed: [OPERATOR-INVENTORY-IS-UNFORCED, UNIVERSAL-IS-MATHEMATICAL-SCOPE, LEDGER-CLOSURE-IS-UNIVERSE-SCOPE]

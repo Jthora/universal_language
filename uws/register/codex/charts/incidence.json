@@ -1,0 +1,22 @@
+{
+  "sheet": "incidence",
+  "title": "Mark incidence across the corpus",
+  "per_mark": {
+    "Point": 15,
+    "Line": 23,
+    "Angle": 34,
+    "Curve": 35,
+    "Wave": 32,
+    "Circle": 24
+  },
+  "ranked": [
+    "Curve",
+    "Angle",
+    "Wave",
+    "Circle",
+    "Line",
+    "Point"
+  ],
+  "orbits": 93,
+  "teaches": "which marks are load-bearing and which are rare"
+}

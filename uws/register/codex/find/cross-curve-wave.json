@@ -1,0 +1,18 @@
+{
+  "orbit": 80,
+  "members": [
+    "cross(Curve,Wave)",
+    "cross(Wave,Curve)"
+  ],
+  "symmetry": "1",
+  "curvature": "smooth",
+  "meaning": null,
+  "status": "undetermined",
+  "strokes": 2,
+  "components": 2,
+  "mirror_axes": "0",
+  "closed": false,
+  "crossings": "1",
+  "aspect": "square",
+  "curvature_mix": "smooth"
+}

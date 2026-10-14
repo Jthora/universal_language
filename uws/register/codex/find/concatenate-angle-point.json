@@ -1,0 +1,18 @@
+{
+  "orbit": 49,
+  "members": [
+    "concatenate(Point,Angle)",
+    "concatenate(Angle,Point)"
+  ],
+  "symmetry": "1",
+  "curvature": "singular",
+  "meaning": null,
+  "status": "undetermined",
+  "strokes": 2,
+  "components": 1,
+  "mirror_axes": "0",
+  "closed": false,
+  "crossings": "0",
+  "aspect": "wide",
+  "curvature_mix": "straight"
+}

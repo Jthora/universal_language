@@ -1,0 +1,76 @@
+{
+  "sheet": "cayley",
+  "title": "Cayley tables of the mark symmetries",
+  "groups": {
+    "C2": {
+      "elements": [
+        "e",
+        "r"
+      ],
+      "table": [
+        [
+          "e",
+          "r"
+        ],
+        [
+          "r",
+          "e"
+        ]
+      ]
+    },
+    "D1": {
+      "elements": [
+        "e",
+        "m"
+      ],
+      "table": [
+        [
+          "e",
+          "m"
+        ],
+        [
+          "m",
+          "e"
+        ]
+      ]
+    },
+    "D2": {
+      "elements": [
+        "e",
+        "r",
+        "m",
+        "rm"
+      ],
+      "table": [
+        [
+          "e",
+          "r",
+          "m",
+          "rm"
+        ],
+        [
+          "r",
+          "e",
+          "rm",
+          "m"
+        ],
+        [
+          "m",
+          "rm",
+          "e",
+          "r"
+        ],
+        [
+          "rm",
+          "m",
+          "r",
+          "e"
+        ]
+      ]
+    }
+  },
+  "infinite": [
+    "O(2)"
+  ],
+  "teaches": "the composition law behind each mark's symmetry"
+}

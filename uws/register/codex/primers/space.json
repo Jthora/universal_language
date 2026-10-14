@@ -1,0 +1,59 @@
+{
+  "sheet": "space",
+  "title": "The orbit thesaurus",
+  "teaches": "the orbit structure as a computed thesaurus, and the size of the frontier",
+  "legend_on_sheet": true,
+  "status_on_face": true,
+  "generated_not_traced": true,
+  "asserts": [
+    {
+      "claim": "six-marks-are-complete",
+      "status": "derived",
+      "statement": "The six marks are complete WITH RESPECT TO SYMMETRY ORDER: every order the corpus uses is either a mark's own or is produced by composition.",
+      "derivation": "Iterated superposition-with-rotation reaches every C_n, verified by construction for n=2..8 from the C1 Angle alone. Triangle (C3) and the hexagram (C6) are therefore produced, not posited. Closure was also tested and does NOT reach C3 -- a chevron closes to an isoceles triangle, which is C1.",
+      "scope": "Covers symmetry order only. Does NOT establish that every figure the corpus draws is reachable -- matching an order is weaker than being the same figure. Two figures are now known unreachable, for two different reasons: the Spiral wants scaling (spiral-requires-scaling) and the teardrop wants a curved join (teardrop-reachability, F123). Neither wants a seventh mark.",
+      "finding": "F91"
+    }
+  ],
+  "carries_undetermined": [
+    {
+      "claim": "teardrop-reachability",
+      "status": "derived_given",
+      "statement": "The teardrop ('Life', Angle+Curve fused) is NOT reachable by close() composed with the attested operators. Exactly-one-corner figures do not occur in that space at all.",
+      "derivation": "23,424 close() expressions over the six marks: all five attested binary operators, reflect_pair and close as unary steps, sub-expressions nesting one deep on either side, close permitted at any position. 20,142 are closed and enclose area. None has exactly one corner -- the corner-count distribution runs 0:427, 1:NONE, 2:630, 3:2864, and upward. Nearest approach to a constructed teardrop is 0.326 Hausdorff against a same-figure tolerance of 0.073. The cause is structural: close() joins the free ends with a straight chord, and a chord meets two symmetrically-built ends either tangentially at both or at neither, so corners arrive in pairs. Permitting a curved join does produce single-cornered convex figures, which locates the missing capability as the join rather than a missing mark.",
+      "given": "close() joins with a straight chord, and composition nests one deep. A close() that curved would change the answer; depth is bounded by enumeration cost, not by principle.",
+      "success_condition": "Enumerate close() composed with binary operators. This is a scope gap in the search, not evidence of unreachability.",
+      "scope": "Settles reachability, not meaning. Says nothing about whether the corpus intends the teardrop as a primitive rather than a composite.",
+      "finding": "F123"
+    },
+    {
+      "claim": "spiral-requires-scaling",
+      "status": "measured",
+      "statement": "The Spiral is not reachable by any attested operator, and the reason is not a missing scale parameter: it needs MODULATION -- varying a parameter along a mark's own extent -- which is a different operator family from placement.",
+      "scope": "Measured over the 186 enumerated depth-2 combinations, not proved for all compositions. Margin is 0.111 and the nearest case is a near-degenerate stroke. TWO EARLIER INVARIANTS FAILED and are kept on the record: curvature-per-sample (spiral measured 0.95, flat, indistinguishable from a circle) and radial monotonicity (0.967 vs 0.927, contaminated by component stacking order).",
+      "finding": "F95 -> F98"
+    }
+  ],
+  "combination_space": {
+    "depth": 2,
+    "combinations": 191,
+    "orbits": 93,
+    "recorded": 4,
+    "undetermined": 89,
+    "orbit count is exact": false,
+    "orbit count range": [
+      89,
+      94
+    ],
+    "orbit count bound": "the-orbit-count-is-tolerance-bounded",
+    "note": "Orbits are the thesaurus: combinations producing the same figure up to rotation and reflection are synonyms. An orbit with no recorded meaning is UNDETERMINED, not free to fill. `combinations` is exact; `orbits` is a quotient taken at a calibrated tolerance and is 89-94 across the interval that calibration licenses -- cite it as a central value, never as an exact count. See the-orbit-count-is-tolerance-bounded."
+  },
+  "verify": {
+    "how": "Re-derive this bundle from source.",
+    "commands": [
+      "python3 tools/verify_symbology_grammar.py    # 12/12 off the sheets",
+      "python3 tools/symbology_glyph.py --check     # glyphs read back as their rule",
+      "python3 tools/symbol_combinations.py --closure"
+    ]
+  }
+}

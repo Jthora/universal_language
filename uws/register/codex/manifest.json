@@ -1,0 +1,37 @@
+{
+  "artifact": "cosmic-codex-derived-layer",
+  "schema_version": "1.0.0",
+  "portable": true,
+  "requires": "python3 + numpy + pillow, for the verifiers only. bundle.json and the sheets need nothing.",
+  "contents": {
+    "index.html": "the landing -- no JavaScript, reflows, fits any viewport, 2 clicks to any symbol",
+    "index.json": "the same tree, for an agent",
+    "index.<lang>.html": "the landing in sw, am, id, hi, tpi. Prose only — the notation needs no translation. Machine-suggested and unreviewed; untranslated strings fall back to English",
+    "explore.html": "the chart catalogue, navigable — no script, and every state it can show is in the file at rest",
+    "explore.json": "the same catalogue, for an agent",
+    "bundle.json": "the whole system, one fetch",
+    "llms.txt": "orientation for an agent",
+    "SKILL.md": "the method, loadable as an agent skill",
+    "ul.py": "one command: glyph | mark | claim | open | verify",
+    "primers/": "5 generated sheets, SVG + JSON twin",
+    "i18n/": "27 languages, covering the regions asked for. The NOTATION needs no translation -- the status is drawn, the marks are figures -- so these carry the prose, and what they still want is a word a language already has",
+    "slices/": "93 sheets: one generator over every planar slice of configuration space. Ringed cells are attested operators; the rest has never been looked at",
+    "charts/": "88 file(s): slices of the placement space the operators sample. The schemas are regions of it, not a vocabulary of ten",
+    "find/": "188 file(s): every orbit the system permits, drawn on one sheet, plus the measured index that makes them searchable by shape",
+    "s/": "504 symbol pages (L2) with a JSON twin each; 'near this' is computed from a measured axis, so the thesaurus cannot drift from the taxonomy",
+    "cells/": "2 grids of cells; every cell readable as text via title, desc and data-* -- no rendering required",
+    "scripts/": "1 writing-system reference page(s) -- a convenience, explicitly NOT a comparison to UL",
+    "verify/": "3 runnable checks",
+    "verify/images/": "3 source sheets — the evidence the grammar was measured off, so the checks run from a bare copy"
+  },
+  "homes": [
+    "codex wiki",
+    "git",
+    "IPFS",
+    "archive"
+  ],
+  "integrity": {
+    "sha256sums": "SHA256SUMS covers every file except itself. Verify with: sha256sum -c SHA256SUMS",
+    "ipfs_cid": "recorded in ../CID.txt, not here -- storing it inside would change the content it names"
+  }
+}

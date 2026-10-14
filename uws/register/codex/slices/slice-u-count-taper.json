@@ -1,0 +1,38 @@
+{
+  "sheet": "slice-unary-count-taper",
+  "group": "unary",
+  "axes": [
+    "count",
+    "taper"
+  ],
+  "cells": 12,
+  "held": {
+    "mark": "Wave",
+    "rotation": 0.0,
+    "reflection": 0,
+    "scale": 1.0,
+    "frequency": 1.0,
+    "amplitude": 1.0,
+    "phase": 0.0,
+    "chirp": 0.0
+  },
+  "operand_chosen_for": {
+    "taper": "has a profile to vary"
+  },
+  "samples": {
+    "count": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "taper": [
+      "-1",
+      "0",
+      "1"
+    ]
+  },
+  "operators_on_this_slice": {},
+  "contact_cells": 0,
+  "note": "operand chosen so the axis acts: taper needs one that has a profile to vary"
+}

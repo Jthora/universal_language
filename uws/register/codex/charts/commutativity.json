@@ -1,0 +1,28 @@
+{
+  "sheet": "commutativity",
+  "title": "Operator commutativity table",
+  "per_operator": {
+    "superpose_concentric": {
+      "same": 36
+    },
+    "superpose_displaced": {
+      "same": 18,
+      "mirror": 14,
+      "different": 4
+    },
+    "cross": {
+      "same": 34,
+      "mirror": 2
+    },
+    "concatenate": {
+      "same": 18,
+      "mirror": 14,
+      "different": 4
+    },
+    "nest": {
+      "same": 16,
+      "different": 20
+    }
+  },
+  "teaches": "that A-beside-B and B-beside-A are enantiomorphs"
+}

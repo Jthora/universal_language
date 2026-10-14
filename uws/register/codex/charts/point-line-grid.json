@@ -1,0 +1,449 @@
+{
+  "sheet": "point-line-grid",
+  "title": "Point and Line configurations",
+  "teaches": "which configurations of the two most basic marks the attested operators reach",
+  "legend_on_sheet": true,
+  "generated_not_traced": true,
+  "point_line": [
+    {
+      "id": "point-on-endpoint",
+      "incidence_measured": "point on an endpoint",
+      "incidence": "endpoint",
+      "name": "at an endpoint",
+      "angle": "n/a",
+      "why": "the Point falls where the Line already ends",
+      "distance": 0.0041,
+      "falls_with_density": 0.251,
+      "adds_ink": false,
+      "symmetry": "2",
+      "curvature": "singular",
+      "mirror": "1",
+      "class_reached_by": [
+        "concatenate(Line,Point)",
+        "concatenate(Point,Line)"
+      ],
+      "figure_reached_by": [
+        "concatenate(Line,Line)",
+        "concatenate(Line,Point)",
+        "concatenate(Point,Line)",
+        "cross(Line,Point)",
+        "cross(Point,Line)",
+        "nest(Line,Line)",
+        "nest(Line,Point)",
+        "nest(Point,Line)",
+        "reflect_pair(Line)",
+        "superpose_concentric(Line,Line)",
+        "superpose_concentric(Line,Point)",
+        "superpose_concentric(Point,Line)",
+        "superpose_displaced(Line,Line)"
+      ]
+    },
+    {
+      "id": "point-on-midpoint",
+      "incidence_measured": "point on the interior",
+      "incidence": "interior",
+      "name": "at the midpoint",
+      "angle": "n/a",
+      "why": "the one interior position the Line's own half-turn fixes",
+      "distance": 0.0021,
+      "falls_with_density": 0.25,
+      "adds_ink": false,
+      "symmetry": "2",
+      "curvature": "singular",
+      "mirror": "1",
+      "class_reached_by": [
+        "cross(Line,Point)",
+        "cross(Point,Line)",
+        "nest(Line,Point)",
+        "nest(Point,Line)",
+        "superpose_concentric(Line,Point)",
+        "superpose_concentric(Point,Line)"
+      ],
+      "figure_reached_by": [
+        "concatenate(Line,Line)",
+        "concatenate(Line,Point)",
+        "concatenate(Point,Line)",
+        "cross(Line,Point)",
+        "cross(Point,Line)",
+        "nest(Line,Line)",
+        "nest(Line,Point)",
+        "nest(Point,Line)",
+        "reflect_pair(Line)",
+        "superpose_concentric(Line,Line)",
+        "superpose_concentric(Line,Point)",
+        "superpose_concentric(Point,Line)",
+        "superpose_displaced(Line,Line)"
+      ]
+    },
+    {
+      "id": "point-on-interior",
+      "incidence_measured": "point on the interior",
+      "incidence": "interior",
+      "name": "elsewhere on the line",
+      "angle": "n/a",
+      "why": "interior but not the midpoint: a continuum, one class",
+      "distance": 0.0019,
+      "falls_with_density": 0.251,
+      "adds_ink": false,
+      "symmetry": "2",
+      "curvature": "singular",
+      "mirror": "1",
+      "class_reached_by": [
+        "cross(Line,Point)",
+        "cross(Point,Line)",
+        "nest(Line,Point)",
+        "nest(Point,Line)",
+        "superpose_concentric(Line,Point)",
+        "superpose_concentric(Point,Line)"
+      ],
+      "figure_reached_by": [
+        "concatenate(Line,Line)",
+        "concatenate(Line,Point)",
+        "concatenate(Point,Line)",
+        "cross(Line,Point)",
+        "cross(Point,Line)",
+        "nest(Line,Line)",
+        "nest(Line,Point)",
+        "nest(Point,Line)",
+        "reflect_pair(Line)",
+        "superpose_concentric(Line,Line)",
+        "superpose_concentric(Line,Point)",
+        "superpose_concentric(Point,Line)",
+        "superpose_displaced(Line,Line)"
+      ]
+    },
+    {
+      "id": "point-off-bisector",
+      "incidence_measured": "point off the line",
+      "incidence": "none",
+      "name": "off it, on the perpendicular bisector",
+      "angle": "n/a",
+      "why": "off the Line but on its axis, so a mirror survives",
+      "distance": 0.7983,
+      "falls_with_density": 1.002,
+      "adds_ink": true,
+      "symmetry": "1",
+      "curvature": "singular",
+      "mirror": "0",
+      "class_reached_by": [
+        "superpose_displaced(Line,Point)",
+        "superpose_displaced(Point,Line)"
+      ],
+      "figure_reached_by": []
+    },
+    {
+      "id": "point-off-collinear",
+      "incidence_measured": "point off the line",
+      "incidence": "none",
+      "name": "off it, on its own extension",
+      "angle": "n/a",
+      "why": "collinear with the Line but beyond its end",
+      "distance": 0.4412,
+      "falls_with_density": 1.006,
+      "adds_ink": true,
+      "symmetry": "1",
+      "curvature": "singular",
+      "mirror": "1",
+      "class_reached_by": [
+        "superpose_displaced(Line,Point)",
+        "superpose_displaced(Point,Line)"
+      ],
+      "figure_reached_by": []
+    },
+    {
+      "id": "point-off-generic",
+      "incidence_measured": "point off the line",
+      "incidence": "none",
+      "name": "off it, anywhere else",
+      "angle": "n/a",
+      "why": "on neither axis: the composite keeps no symmetry",
+      "distance": 0.7973,
+      "falls_with_density": 1.002,
+      "adds_ink": true,
+      "symmetry": "1",
+      "curvature": "singular",
+      "mirror": "0",
+      "class_reached_by": [
+        "superpose_displaced(Line,Point)",
+        "superpose_displaced(Point,Line)"
+      ],
+      "figure_reached_by": []
+    }
+  ],
+  "line_line": [
+    {
+      "id": "cross-perpendicular",
+      "incidence": "interiors cross",
+      "angle": "perpendicular",
+      "name": "interiors cross, perpendicular",
+      "why": "each passes through the other's interior",
+      "distance": 1.0,
+      "falls_with_density": 1.0,
+      "adds_ink": true,
+      "symmetry": "4",
+      "curvature": "singular",
+      "mirror": "2",
+      "class_reached_by": [
+        "cross(Line,Line)"
+      ],
+      "figure_reached_by": [
+        "cross(Line,Line)"
+      ]
+    },
+    {
+      "id": "cross-oblique",
+      "incidence": "interiors cross",
+      "angle": "oblique",
+      "name": "interiors cross, oblique",
+      "why": "each passes through the other's interior",
+      "distance": 0.5736,
+      "falls_with_density": 1.0,
+      "adds_ink": true,
+      "symmetry": "2",
+      "curvature": "singular",
+      "mirror": "1",
+      "class_reached_by": [],
+      "figure_reached_by": []
+    },
+    {
+      "id": "vertex-perpendicular",
+      "incidence": "endpoints meet",
+      "angle": "perpendicular",
+      "name": "endpoints meet, perpendicular",
+      "why": "they meet at one end each: the Angle's own incidence",
+      "distance": 0.9487,
+      "falls_with_density": 1.0,
+      "adds_ink": true,
+      "symmetry": "1",
+      "curvature": "singular",
+      "mirror": "0",
+      "class_reached_by": [],
+      "figure_reached_by": []
+    },
+    {
+      "id": "vertex-oblique",
+      "incidence": "endpoints meet",
+      "angle": "oblique",
+      "name": "endpoints meet, oblique",
+      "why": "they meet at one end each: the Angle's own incidence",
+      "distance": 0.4456,
+      "falls_with_density": 1.0,
+      "adds_ink": true,
+      "symmetry": "1",
+      "curvature": "smooth",
+      "mirror": "0",
+      "class_reached_by": [],
+      "figure_reached_by": []
+    },
+    {
+      "id": "collinear-joined",
+      "incidence": "endpoints meet",
+      "angle": "collinear or parallel",
+      "name": "endpoints meet, collinear or parallel",
+      "why": "end to end along one direction: concatenation",
+      "distance": 0.0021,
+      "falls_with_density": 0.25,
+      "adds_ink": false,
+      "symmetry": "2",
+      "curvature": "singular",
+      "mirror": "1",
+      "class_reached_by": [
+        "concatenate(Line,Line)"
+      ],
+      "figure_reached_by": [
+        "concatenate(Line,Line)",
+        "concatenate(Line,Point)",
+        "concatenate(Point,Line)",
+        "cross(Line,Point)",
+        "cross(Point,Line)",
+        "nest(Line,Line)",
+        "nest(Line,Point)",
+        "nest(Point,Line)",
+        "reflect_pair(Line)",
+        "superpose_concentric(Line,Line)",
+        "superpose_concentric(Line,Point)",
+        "superpose_concentric(Point,Line)",
+        "superpose_displaced(Line,Line)"
+      ]
+    },
+    {
+      "id": "tee-perpendicular",
+      "incidence": "endpoint on interior",
+      "angle": "perpendicular",
+      "name": "endpoint on interior, perpendicular",
+      "why": "one ends where the other continues: a T",
+      "distance": 1.0,
+      "falls_with_density": 1.0,
+      "adds_ink": true,
+      "symmetry": "1",
+      "curvature": "singular",
+      "mirror": "0",
+      "class_reached_by": [],
+      "figure_reached_by": []
+    },
+    {
+      "id": "tee-oblique",
+      "incidence": "endpoint on interior",
+      "angle": "oblique",
+      "name": "endpoint on interior, oblique",
+      "why": "one ends where the other continues: a T",
+      "distance": 0.5736,
+      "falls_with_density": 1.0,
+      "adds_ink": true,
+      "symmetry": "1",
+      "curvature": "singular",
+      "mirror": "0",
+      "class_reached_by": [],
+      "figure_reached_by": []
+    },
+    {
+      "id": "parallel-offset",
+      "incidence": "no shared point",
+      "angle": "collinear or parallel",
+      "name": "no shared point, collinear or parallel",
+      "why": "same direction, never meeting",
+      "distance": 0.3351,
+      "falls_with_density": 1.0,
+      "adds_ink": true,
+      "symmetry": "2",
+      "curvature": "singular",
+      "mirror": "1",
+      "class_reached_by": [
+        "superpose_displaced(Line,Line)"
+      ],
+      "figure_reached_by": []
+    },
+    {
+      "id": "collinear-apart",
+      "incidence": "no shared point",
+      "angle": "collinear or parallel",
+      "name": "no shared point, collinear or parallel",
+      "why": "one direction with a gap: two marks, not one",
+      "distance": 0.1797,
+      "falls_with_density": 1.009,
+      "adds_ink": true,
+      "symmetry": "2",
+      "curvature": "singular",
+      "mirror": "1",
+      "class_reached_by": [
+        "superpose_displaced(Line,Line)"
+      ],
+      "figure_reached_by": []
+    },
+    {
+      "id": "skew-apart",
+      "incidence": "no shared point",
+      "angle": "oblique",
+      "name": "no shared point, oblique",
+      "why": "different directions, placed apart",
+      "distance": 0.7575,
+      "falls_with_density": 1.0,
+      "adds_ink": true,
+      "symmetry": "1",
+      "curvature": "singular",
+      "mirror": "0",
+      "class_reached_by": [],
+      "figure_reached_by": []
+    },
+    {
+      "id": "coincident",
+      "incidence": "coincident",
+      "angle": "collinear or parallel",
+      "name": "coincident, collinear or parallel",
+      "why": "the same Line twice: the degenerate cell",
+      "distance": 0.0,
+      "falls_with_density": 0.0,
+      "adds_ink": false,
+      "symmetry": "2",
+      "curvature": "singular",
+      "mirror": "1",
+      "class_reached_by": [
+        "reflect_pair(Line)",
+        "superpose_concentric(Line,Line)"
+      ],
+      "figure_reached_by": [
+        "concatenate(Line,Line)",
+        "concatenate(Line,Point)",
+        "concatenate(Point,Line)",
+        "cross(Line,Point)",
+        "cross(Point,Line)",
+        "nest(Line,Line)",
+        "nest(Line,Point)",
+        "nest(Point,Line)",
+        "reflect_pair(Line)",
+        "superpose_concentric(Line,Line)",
+        "superpose_concentric(Line,Point)",
+        "superpose_concentric(Point,Line)",
+        "superpose_displaced(Line,Line)"
+      ]
+    }
+  ],
+  "operator_classes": {
+    "coincident / collinear or parallel": [
+      "superpose_concentric(Line,Line)",
+      "reflect_pair(Line)"
+    ],
+    "endpoint on interior / collinear or parallel": [
+      "nest(Line,Line)"
+    ],
+    "endpoints meet / collinear or parallel": [
+      "concatenate(Line,Line)"
+    ],
+    "interiors cross / perpendicular": [
+      "cross(Line,Line)"
+    ],
+    "no shared point / collinear or parallel": [
+      "superpose_displaced(Line,Line)"
+    ],
+    "point off the line / n/a": [
+      "superpose_displaced(Point,Line)",
+      "superpose_displaced(Line,Point)"
+    ],
+    "point on an endpoint / n/a": [
+      "concatenate(Point,Line)",
+      "concatenate(Line,Point)"
+    ],
+    "point on the interior / n/a": [
+      "superpose_concentric(Point,Line)",
+      "superpose_concentric(Line,Point)",
+      "cross(Point,Line)",
+      "cross(Line,Point)",
+      "nest(Point,Line)",
+      "nest(Line,Point)"
+    ],
+    "two points / n/a": [
+      "superpose_concentric(Point,Point)",
+      "superpose_displaced(Point,Point)",
+      "cross(Point,Point)",
+      "concatenate(Point,Point)",
+      "nest(Point,Point)",
+      "reflect_pair(Point)"
+    ]
+  },
+  "unreached": {
+    "point_line_class_unreached": [],
+    "point_line_figure_unreached": [
+      "point-off-bisector",
+      "point-off-collinear",
+      "point-off-generic"
+    ],
+    "line_line_class_unreached": [
+      "cross-oblique",
+      "vertex-perpendicular",
+      "vertex-oblique",
+      "tee-perpendicular",
+      "tee-oblique",
+      "skew-apart"
+    ],
+    "line_line_figure_unreached": [
+      "cross-oblique",
+      "vertex-perpendicular",
+      "vertex-oblique",
+      "tee-perpendicular",
+      "tee-oblique",
+      "parallel-offset",
+      "collinear-apart",
+      "skew-apart"
+    ]
+  }
+}

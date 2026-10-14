@@ -1,0 +1,25 @@
+{
+  "orbit": 14,
+  "members": [
+    "superpose_concentric(Point,Wave)",
+    "superpose_concentric(Wave,Point)",
+    "superpose_concentric(Wave,Wave)",
+    "cross(Point,Wave)",
+    "cross(Wave,Point)",
+    "concatenate(Point,Wave)",
+    "concatenate(Wave,Point)",
+    "nest(Point,Wave)",
+    "nest(Wave,Point)"
+  ],
+  "symmetry": "2",
+  "curvature": "smooth",
+  "meaning": null,
+  "status": "undetermined",
+  "strokes": 2,
+  "components": 1,
+  "mirror_axes": "0",
+  "closed": false,
+  "crossings": "0",
+  "aspect": "wide",
+  "curvature_mix": "mixed"
+}

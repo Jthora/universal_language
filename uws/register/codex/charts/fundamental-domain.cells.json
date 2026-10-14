@@ -1,0 +1,59 @@
+{
+ "sheet": "charts/fundamental-domain",
+ "cells": [
+  {
+   "id": "cell-domain-Point",
+   "title": "Point: 0.0 of the stroke regenerates it",
+   "desc": "mark Point; group O(2); order inf; fundamental domain 0.0",
+   "mark": "Point",
+   "group": "O(2)",
+   "order": "inf",
+   "domain-fraction": "0.0"
+  },
+  {
+   "id": "cell-domain-Line",
+   "title": "Line: 0.4875 of the stroke regenerates it",
+   "desc": "mark Line; group D2; order 4; fundamental domain 0.4875",
+   "mark": "Line",
+   "group": "D2",
+   "order": "4",
+   "domain-fraction": "0.4875"
+  },
+  {
+   "id": "cell-domain-Angle",
+   "title": "Angle: 0.4875 of the stroke regenerates it",
+   "desc": "mark Angle; group D1; order 2; fundamental domain 0.4875",
+   "mark": "Angle",
+   "group": "D1",
+   "order": "2",
+   "domain-fraction": "0.4875"
+  },
+  {
+   "id": "cell-domain-Curve",
+   "title": "Curve: 0.4875 of the stroke regenerates it",
+   "desc": "mark Curve; group D1; order 2; fundamental domain 0.4875",
+   "mark": "Curve",
+   "group": "D1",
+   "order": "2",
+   "domain-fraction": "0.4875"
+  },
+  {
+   "id": "cell-domain-Wave",
+   "title": "Wave: 0.4875 of the stroke regenerates it",
+   "desc": "mark Wave; group C2; order 2; fundamental domain 0.4875",
+   "mark": "Wave",
+   "group": "C2",
+   "order": "2",
+   "domain-fraction": "0.4875"
+  },
+  {
+   "id": "cell-domain-Circle",
+   "title": "Circle: 0.0125 of the stroke regenerates it",
+   "desc": "mark Circle; group O(2); order inf; fundamental domain 0.0125",
+   "mark": "Circle",
+   "group": "O(2)",
+   "order": "inf",
+   "domain-fraction": "0.0125"
+  }
+ ]
+}

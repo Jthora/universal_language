@@ -1,0 +1,749 @@
+{
+ "sheet": "charts/substitution-graph",
+ "cells": [
+  {
+   "id": "cell-node-0",
+   "title": "orbit 0",
+   "desc": "5 orbit(s) one operand away",
+   "orbit": "0",
+   "degree": "5",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-1",
+   "title": "orbit 1",
+   "desc": "5 orbit(s) one operand away",
+   "orbit": "1",
+   "degree": "5",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-8",
+   "title": "orbit 8",
+   "desc": "6 orbit(s) one operand away",
+   "orbit": "8",
+   "degree": "6",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-57",
+   "title": "orbit 57",
+   "desc": "6 orbit(s) one operand away",
+   "orbit": "57",
+   "degree": "6",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-35",
+   "title": "orbit 35",
+   "desc": "6 orbit(s) one operand away",
+   "orbit": "35",
+   "degree": "6",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-36",
+   "title": "orbit 36",
+   "desc": "7 orbit(s) one operand away",
+   "orbit": "36",
+   "degree": "7",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-50",
+   "title": "orbit 50",
+   "desc": "4 orbit(s) one operand away",
+   "orbit": "50",
+   "degree": "4",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-51",
+   "title": "orbit 51",
+   "desc": "5 orbit(s) one operand away",
+   "orbit": "51",
+   "degree": "5",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-37",
+   "title": "orbit 37",
+   "desc": "7 orbit(s) one operand away",
+   "orbit": "37",
+   "degree": "7",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-43",
+   "title": "orbit 43",
+   "desc": "6 orbit(s) one operand away",
+   "orbit": "43",
+   "degree": "6",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-77",
+   "title": "orbit 77",
+   "desc": "7 orbit(s) one operand away",
+   "orbit": "77",
+   "degree": "7",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-56",
+   "title": "orbit 56",
+   "desc": "4 orbit(s) one operand away",
+   "orbit": "56",
+   "degree": "4",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-85",
+   "title": "orbit 85",
+   "desc": "5 orbit(s) one operand away",
+   "orbit": "85",
+   "degree": "5",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-39",
+   "title": "orbit 39 — Chaos pair (F44)",
+   "desc": "6 orbit(s) one operand away",
+   "orbit": "39",
+   "degree": "6",
+   "named": "true"
+  },
+  {
+   "id": "cell-node-40",
+   "title": "orbit 40",
+   "desc": "7 orbit(s) one operand away",
+   "orbit": "40",
+   "degree": "7",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-74",
+   "title": "orbit 74",
+   "desc": "6 orbit(s) one operand away",
+   "orbit": "74",
+   "degree": "6",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-52",
+   "title": "orbit 52",
+   "desc": "6 orbit(s) one operand away",
+   "orbit": "52",
+   "degree": "6",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-53",
+   "title": "orbit 53",
+   "desc": "7 orbit(s) one operand away",
+   "orbit": "53",
+   "degree": "7",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-82",
+   "title": "orbit 82",
+   "desc": "6 orbit(s) one operand away",
+   "orbit": "82",
+   "degree": "6",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-16",
+   "title": "orbit 16",
+   "desc": "7 orbit(s) one operand away",
+   "orbit": "16",
+   "degree": "7",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-41",
+   "title": "orbit 41",
+   "desc": "7 orbit(s) one operand away",
+   "orbit": "41",
+   "degree": "7",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-54",
+   "title": "orbit 54",
+   "desc": "4 orbit(s) one operand away",
+   "orbit": "54",
+   "degree": "4",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-75",
+   "title": "orbit 75",
+   "desc": "6 orbit(s) one operand away",
+   "orbit": "75",
+   "degree": "6",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-83",
+   "title": "orbit 83",
+   "desc": "3 orbit(s) one operand away",
+   "orbit": "83",
+   "degree": "3",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-14",
+   "title": "orbit 14",
+   "desc": "6 orbit(s) one operand away",
+   "orbit": "14",
+   "degree": "6",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-9",
+   "title": "orbit 9",
+   "desc": "6 orbit(s) one operand away",
+   "orbit": "9",
+   "degree": "6",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-2",
+   "title": "orbit 2",
+   "desc": "5 orbit(s) one operand away",
+   "orbit": "2",
+   "degree": "5",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-12",
+   "title": "orbit 12",
+   "desc": "5 orbit(s) one operand away",
+   "orbit": "12",
+   "degree": "5",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-19",
+   "title": "orbit 19",
+   "desc": "8 orbit(s) one operand away",
+   "orbit": "19",
+   "degree": "8",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-3",
+   "title": "orbit 3",
+   "desc": "3 orbit(s) one operand away",
+   "orbit": "3",
+   "degree": "3",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-4",
+   "title": "orbit 4",
+   "desc": "6 orbit(s) one operand away",
+   "orbit": "4",
+   "degree": "6",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-10",
+   "title": "orbit 10",
+   "desc": "7 orbit(s) one operand away",
+   "orbit": "10",
+   "degree": "7",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-18",
+   "title": "orbit 18",
+   "desc": "8 orbit(s) one operand away",
+   "orbit": "18",
+   "degree": "8",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-64",
+   "title": "orbit 64",
+   "desc": "8 orbit(s) one operand away",
+   "orbit": "64",
+   "degree": "8",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-89",
+   "title": "orbit 89",
+   "desc": "6 orbit(s) one operand away",
+   "orbit": "89",
+   "degree": "6",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-31",
+   "title": "orbit 31",
+   "desc": "6 orbit(s) one operand away",
+   "orbit": "31",
+   "degree": "6",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-69",
+   "title": "orbit 69",
+   "desc": "5 orbit(s) one operand away",
+   "orbit": "69",
+   "degree": "5",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-13",
+   "title": "orbit 13 — infinity (SymbolFolds)",
+   "desc": "5 orbit(s) one operand away",
+   "orbit": "13",
+   "degree": "5",
+   "named": "true"
+  },
+  {
+   "id": "cell-node-17",
+   "title": "orbit 17",
+   "desc": "5 orbit(s) one operand away",
+   "orbit": "17",
+   "degree": "5",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-38",
+   "title": "orbit 38",
+   "desc": "8 orbit(s) one operand away",
+   "orbit": "38",
+   "degree": "8",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-42",
+   "title": "orbit 42",
+   "desc": "8 orbit(s) one operand away",
+   "orbit": "42",
+   "degree": "8",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-55",
+   "title": "orbit 55",
+   "desc": "4 orbit(s) one operand away",
+   "orbit": "55",
+   "degree": "4",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-76",
+   "title": "orbit 76",
+   "desc": "7 orbit(s) one operand away",
+   "orbit": "76",
+   "degree": "7",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-84",
+   "title": "orbit 84",
+   "desc": "3 orbit(s) one operand away",
+   "orbit": "84",
+   "degree": "3",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-78",
+   "title": "orbit 78",
+   "desc": "8 orbit(s) one operand away",
+   "orbit": "78",
+   "degree": "8",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-26",
+   "title": "orbit 26",
+   "desc": "5 orbit(s) one operand away",
+   "orbit": "26",
+   "degree": "5",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-67",
+   "title": "orbit 67",
+   "desc": "6 orbit(s) one operand away",
+   "orbit": "67",
+   "degree": "6",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-58",
+   "title": "orbit 58",
+   "desc": "6 orbit(s) one operand away",
+   "orbit": "58",
+   "degree": "6",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-62",
+   "title": "orbit 62",
+   "desc": "7 orbit(s) one operand away",
+   "orbit": "62",
+   "degree": "7",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-59",
+   "title": "orbit 59",
+   "desc": "7 orbit(s) one operand away",
+   "orbit": "59",
+   "degree": "7",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-63",
+   "title": "orbit 63",
+   "desc": "8 orbit(s) one operand away",
+   "orbit": "63",
+   "degree": "8",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-86",
+   "title": "orbit 86",
+   "desc": "6 orbit(s) one operand away",
+   "orbit": "86",
+   "degree": "6",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-60",
+   "title": "orbit 60",
+   "desc": "7 orbit(s) one operand away",
+   "orbit": "60",
+   "degree": "7",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-87",
+   "title": "orbit 87",
+   "desc": "8 orbit(s) one operand away",
+   "orbit": "87",
+   "degree": "8",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-29",
+   "title": "orbit 29",
+   "desc": "5 orbit(s) one operand away",
+   "orbit": "29",
+   "degree": "5",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-30",
+   "title": "orbit 30",
+   "desc": "6 orbit(s) one operand away",
+   "orbit": "30",
+   "degree": "6",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-68",
+   "title": "orbit 68",
+   "desc": "5 orbit(s) one operand away",
+   "orbit": "68",
+   "degree": "5",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-81",
+   "title": "orbit 81",
+   "desc": "5 orbit(s) one operand away",
+   "orbit": "81",
+   "degree": "5",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-49",
+   "title": "orbit 49",
+   "desc": "4 orbit(s) one operand away",
+   "orbit": "49",
+   "degree": "4",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-27",
+   "title": "orbit 27",
+   "desc": "5 orbit(s) one operand away",
+   "orbit": "27",
+   "degree": "5",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-28",
+   "title": "orbit 28",
+   "desc": "6 orbit(s) one operand away",
+   "orbit": "28",
+   "degree": "6",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-24",
+   "title": "orbit 24",
+   "desc": "3 orbit(s) one operand away",
+   "orbit": "24",
+   "degree": "3",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-25",
+   "title": "orbit 25",
+   "desc": "3 orbit(s) one operand away",
+   "orbit": "25",
+   "degree": "3",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-61",
+   "title": "orbit 61",
+   "desc": "7 orbit(s) one operand away",
+   "orbit": "61",
+   "degree": "7",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-88",
+   "title": "orbit 88",
+   "desc": "8 orbit(s) one operand away",
+   "orbit": "88",
+   "degree": "8",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-33",
+   "title": "orbit 33",
+   "desc": "5 orbit(s) one operand away",
+   "orbit": "33",
+   "degree": "5",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-72",
+   "title": "orbit 72",
+   "desc": "9 orbit(s) one operand away",
+   "orbit": "72",
+   "degree": "9",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-34",
+   "title": "orbit 34",
+   "desc": "8 orbit(s) one operand away",
+   "orbit": "34",
+   "degree": "8",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-71",
+   "title": "orbit 71",
+   "desc": "9 orbit(s) one operand away",
+   "orbit": "71",
+   "degree": "9",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-73",
+   "title": "orbit 73",
+   "desc": "10 orbit(s) one operand away",
+   "orbit": "73",
+   "degree": "10",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-7",
+   "title": "orbit 7",
+   "desc": "6 orbit(s) one operand away",
+   "orbit": "7",
+   "degree": "6",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-91",
+   "title": "orbit 91 — + (SymbolFolds)",
+   "desc": "3 orbit(s) one operand away",
+   "orbit": "91",
+   "degree": "3",
+   "named": "true"
+  },
+  {
+   "id": "cell-node-92",
+   "title": "orbit 92",
+   "desc": "3 orbit(s) one operand away",
+   "orbit": "92",
+   "degree": "3",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-44",
+   "title": "orbit 44",
+   "desc": "4 orbit(s) one operand away",
+   "orbit": "44",
+   "degree": "4",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-45",
+   "title": "orbit 45",
+   "desc": "5 orbit(s) one operand away",
+   "orbit": "45",
+   "degree": "5",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-48",
+   "title": "orbit 48",
+   "desc": "5 orbit(s) one operand away",
+   "orbit": "48",
+   "degree": "5",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-80",
+   "title": "orbit 80",
+   "desc": "4 orbit(s) one operand away",
+   "orbit": "80",
+   "degree": "4",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-46",
+   "title": "orbit 46",
+   "desc": "3 orbit(s) one operand away",
+   "orbit": "46",
+   "degree": "3",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-47",
+   "title": "orbit 47",
+   "desc": "4 orbit(s) one operand away",
+   "orbit": "47",
+   "degree": "4",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-79",
+   "title": "orbit 79",
+   "desc": "3 orbit(s) one operand away",
+   "orbit": "79",
+   "degree": "3",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-5",
+   "title": "orbit 5",
+   "desc": "7 orbit(s) one operand away",
+   "orbit": "5",
+   "degree": "7",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-15",
+   "title": "orbit 15",
+   "desc": "4 orbit(s) one operand away",
+   "orbit": "15",
+   "degree": "4",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-11",
+   "title": "orbit 11",
+   "desc": "7 orbit(s) one operand away",
+   "orbit": "11",
+   "degree": "7",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-20",
+   "title": "orbit 20",
+   "desc": "8 orbit(s) one operand away",
+   "orbit": "20",
+   "degree": "8",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-65",
+   "title": "orbit 65",
+   "desc": "8 orbit(s) one operand away",
+   "orbit": "65",
+   "degree": "8",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-90",
+   "title": "orbit 90",
+   "desc": "6 orbit(s) one operand away",
+   "orbit": "90",
+   "degree": "6",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-32",
+   "title": "orbit 32",
+   "desc": "7 orbit(s) one operand away",
+   "orbit": "32",
+   "degree": "7",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-70",
+   "title": "orbit 70",
+   "desc": "6 orbit(s) one operand away",
+   "orbit": "70",
+   "degree": "6",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-22",
+   "title": "orbit 22 — Sun-in-Circle (F43)",
+   "desc": "7 orbit(s) one operand away",
+   "orbit": "22",
+   "degree": "7",
+   "named": "true"
+  },
+  {
+   "id": "cell-node-23",
+   "title": "orbit 23",
+   "desc": "8 orbit(s) one operand away",
+   "orbit": "23",
+   "degree": "8",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-21",
+   "title": "orbit 21",
+   "desc": "5 orbit(s) one operand away",
+   "orbit": "21",
+   "degree": "5",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-66",
+   "title": "orbit 66",
+   "desc": "3 orbit(s) one operand away",
+   "orbit": "66",
+   "degree": "3",
+   "named": "false"
+  },
+  {
+   "id": "cell-node-6",
+   "title": "orbit 6",
+   "desc": "5 orbit(s) one operand away",
+   "orbit": "6",
+   "degree": "5",
+   "named": "false"
+  }
+ ]
+}

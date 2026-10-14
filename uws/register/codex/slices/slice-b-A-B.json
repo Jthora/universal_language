@@ -1,0 +1,46 @@
+{
+  "sheet": "slice-binary-A-B",
+  "group": "binary",
+  "axes": [
+    "A",
+    "B"
+  ],
+  "cells": 36,
+  "held": {
+    "separation": 0.0,
+    "bearing": 0.0,
+    "relative-rotation": 0.0,
+    "relative-scale": 1.0,
+    "reflect-B": 0,
+    "B-frequency": 1.0,
+    "B-amplitude": 1.0,
+    "B-phase": 0.0
+  },
+  "operand_chosen_for": {},
+  "samples": {
+    "A": [
+      "Point",
+      "Line",
+      "Angle",
+      "Curve",
+      "Wave",
+      "Circle"
+    ],
+    "B": [
+      "Point",
+      "Line",
+      "Angle",
+      "Curve",
+      "Wave",
+      "Circle"
+    ]
+  },
+  "operators_on_this_slice": {
+    "superpose_concentric": 36,
+    "cross": 12,
+    "concatenate": 6,
+    "nest": 12
+  },
+  "contact_cells": 30,
+  "note": ""
+}

@@ -1,0 +1,58 @@
+{
+  "sheet": "slice-binary-bearing-relative-rotation",
+  "group": "binary",
+  "axes": [
+    "bearing",
+    "relative-rotation"
+  ],
+  "cells": 144,
+  "held": {
+    "A": "Circle",
+    "B": "Wave",
+    "separation": 2.2,
+    "relative-scale": 1.0,
+    "reflect-B": 0,
+    "B-frequency": 1.0,
+    "B-amplitude": 1.0,
+    "B-phase": 0.0
+  },
+  "operand_chosen_for": {
+    "relative-rotation": "is not rotation-invariant",
+    "bearing": "needs separation=2.2 or it moves nothing"
+  },
+  "samples": {
+    "bearing": [
+      "0°",
+      "30°",
+      "60°",
+      "90°",
+      "120°",
+      "150°",
+      "180°",
+      "210°",
+      "240°",
+      "270°",
+      "300°",
+      "330°"
+    ],
+    "relative-rotation": [
+      "0°",
+      "30°",
+      "60°",
+      "90°",
+      "120°",
+      "150°",
+      "180°",
+      "210°",
+      "240°",
+      "270°",
+      "300°",
+      "330°"
+    ]
+  },
+  "operators_on_this_slice": {
+    "superpose_displaced": 2
+  },
+  "contact_cells": 0,
+  "note": "operand chosen so the axis acts: relative-rotation needs one that is not rotation-invariant, bearing needs one that needs separation=2.2 or it moves nothing"
+}

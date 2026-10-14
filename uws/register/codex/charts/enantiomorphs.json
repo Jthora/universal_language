@@ -1,0 +1,47 @@
+{
+  "sheet": "enantiomorphs",
+  "title": "Enantiomorphs under reflection",
+  "rows": [
+    {
+      "mark": "Point",
+      "group": "O(2)",
+      "mirror_distance": 0.0,
+      "chiral": false
+    },
+    {
+      "mark": "Line",
+      "group": "D2",
+      "mirror_distance": 0.0,
+      "chiral": false
+    },
+    {
+      "mark": "Angle",
+      "group": "D1",
+      "mirror_distance": 0.00528,
+      "chiral": false
+    },
+    {
+      "mark": "Curve",
+      "group": "D1",
+      "mirror_distance": 0.00554,
+      "chiral": false
+    },
+    {
+      "mark": "Wave",
+      "group": "C2",
+      "mirror_distance": 0.38779,
+      "chiral": true
+    },
+    {
+      "mark": "Circle",
+      "group": "O(2)",
+      "mirror_distance": 0.00828,
+      "chiral": false
+    }
+  ],
+  "chiral": [
+    "Wave"
+  ],
+  "threshold": 0.11,
+  "teaches": "that reflection is inert on five of the six marks"
+}

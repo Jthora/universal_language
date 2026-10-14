@@ -1,0 +1,88 @@
+{
+  "id": "mark-circle",
+  "label": "Circle",
+  "family": "Marks",
+  "summary": "Cinf · smooth — one of six, and the six are 3 × 2",
+  "identity": [
+    [
+      "symmetry order",
+      "Cinf",
+      "derived"
+    ],
+    [
+      "rotation class",
+      "invariant",
+      "derived"
+    ],
+    [
+      "curvature class",
+      "smooth",
+      "derived"
+    ]
+  ],
+  "asserts": [
+    {
+      "claim": "rotation-class-is-symmetry-order",
+      "status": "derived",
+      "statement": "The corpus's three rotation classes are the order of each mark's rotational symmetry group: infinite, 2, 1.",
+      "derivation": "Sampled each mark as a point set and rotated it; 6/6 agreement with the stated trichotomy. A sine is odd, so a half-turn returns it -- which is why Wave groups with Line.",
+      "finding": "F85"
+    },
+    {
+      "claim": "mark-polarity",
+      "status": "derived",
+      "statement": "The mark polarity axis is curvature class: zero or singular curvature vs smooth non-zero curvature.",
+      "derivation": "Largest discrete turning angle along each stroke; 6/6 against the corpus's stated split. Point 0 (0-dim), Line 0 (straight), Angle 33.7 (corner), Curve/Wave/Circle 0.75-8.5 (smooth). This is the `singularity` shape axis of notes 022-026.",
+      "finding": "F88"
+    }
+  ],
+  "carries_undetermined": [],
+  "near": [
+    {
+      "axis": "same symmetry order",
+      "because": "symmetry_order = inf",
+      "status": "derived",
+      "items": [
+        {
+          "id": "mark-point",
+          "label": "Point",
+          "kind": "mark",
+          "arg": "Point"
+        }
+      ]
+    },
+    {
+      "axis": "same curvature class",
+      "because": "curvature_class = smooth",
+      "status": "derived",
+      "items": [
+        {
+          "id": "mark-curve",
+          "label": "Curve",
+          "kind": "mark",
+          "arg": "Curve"
+        },
+        {
+          "id": "mark-wave",
+          "label": "Wave",
+          "kind": "mark",
+          "arg": "Wave"
+        }
+      ]
+    }
+  ],
+  "prev": [
+    "mark-wave",
+    "Wave"
+  ],
+  "next": null,
+  "status_vocabulary": {
+    "derived": "assert freely; the derivation is in `derivation`",
+    "derived_given": "assert only together with its `given` premise",
+    "measured": "assert as a fact about these artifacts, not as necessity",
+    "undetermined": "use, do not assert; `success_condition` says what would settle it",
+    "conventional": "assert as a choice, never as a result",
+    "withdrawn": "do not assert; retained so citations resolve to the retraction"
+  },
+  "read_this_first": "Every assertion carries its derivation status, at the assertion, not in a footnote."
+}

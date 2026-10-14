@@ -1,0 +1,242 @@
+{
+  "sheet": "signs-as-waveforms",
+  "title": "The signs as waveforms",
+  "teaches": "the signs measured as waveforms, and the space between them",
+  "generated_not_traced": true,
+  "signs": [
+    {
+      "n": 1,
+      "id": "Aries",
+      "geometry": "angle",
+      "apex_up": true,
+      "crossbar": false,
+      "params": {
+        "chart": "cartesian",
+        "frequency": 1.0,
+        "amplitude": 0.2857,
+        "harmonicity": 0.9806,
+        "spread": 0.0505,
+        "phase": 0.0039,
+        "onset": 1.0,
+        "extent": 4.111,
+        "flatness": 0.0
+      }
+    },
+    {
+      "n": 2,
+      "id": "Taurus",
+      "geometry": "square",
+      "apex_up": false,
+      "crossbar": true,
+      "params": {
+        "chart": "cartesian",
+        "frequency": 1.0,
+        "amplitude": 0.3189,
+        "harmonicity": 0.7377,
+        "spread": 0.2002,
+        "phase": -0.9961,
+        "onset": 0.0,
+        "extent": 3.547,
+        "flatness": 0.0
+      }
+    },
+    {
+      "n": 3,
+      "id": "Gemini",
+      "geometry": "arc",
+      "apex_up": true,
+      "crossbar": true,
+      "params": {
+        "chart": "cartesian",
+        "frequency": 1.0,
+        "amplitude": 0.2426,
+        "harmonicity": 0.9268,
+        "spread": 0.1068,
+        "phase": 0.0039,
+        "onset": 0.0,
+        "extent": 3.111,
+        "flatness": 0.0
+      }
+    },
+    {
+      "n": 4,
+      "id": "Cancer",
+      "geometry": "angle",
+      "apex_up": false,
+      "crossbar": false,
+      "params": {
+        "chart": "cartesian",
+        "frequency": 1.0,
+        "amplitude": 0.2857,
+        "harmonicity": 0.9806,
+        "spread": 0.0505,
+        "phase": -0.9961,
+        "onset": 1.0,
+        "extent": 4.111,
+        "flatness": 0.0
+      }
+    },
+    {
+      "n": 5,
+      "id": "Leo",
+      "geometry": "square",
+      "apex_up": true,
+      "crossbar": false,
+      "params": {
+        "chart": "cartesian",
+        "frequency": 1.0,
+        "amplitude": 0.0757,
+        "harmonicity": 0.9888,
+        "spread": 0.0658,
+        "phase": 0.0039,
+        "onset": 0.598,
+        "extent": 3.609,
+        "flatness": 0.0
+      }
+    },
+    {
+      "n": 6,
+      "id": "Virgo",
+      "geometry": "arc",
+      "apex_up": false,
+      "crossbar": true,
+      "params": {
+        "chart": "cartesian",
+        "frequency": 1.0,
+        "amplitude": 0.2426,
+        "harmonicity": 0.9268,
+        "spread": 0.1068,
+        "phase": -0.9961,
+        "onset": 0.0,
+        "extent": 3.111,
+        "flatness": 0.0
+      }
+    },
+    {
+      "n": 7,
+      "id": "Libra",
+      "geometry": "angle",
+      "apex_up": true,
+      "crossbar": true,
+      "params": {
+        "chart": "cartesian",
+        "frequency": 1.0,
+        "amplitude": 0.2146,
+        "harmonicity": 0.978,
+        "spread": 0.0553,
+        "phase": 0.0039,
+        "onset": 0.0,
+        "extent": 2.896,
+        "flatness": 0.0
+      }
+    },
+    {
+      "n": 8,
+      "id": "Scorpio",
+      "geometry": "square",
+      "apex_up": false,
+      "crossbar": false,
+      "params": {
+        "chart": "cartesian",
+        "frequency": 1.0,
+        "amplitude": 0.0757,
+        "harmonicity": 0.9888,
+        "spread": 0.0658,
+        "phase": -0.9961,
+        "onset": 0.598,
+        "extent": 3.609,
+        "flatness": 0.0
+      }
+    },
+    {
+      "n": 9,
+      "id": "Sagittarius",
+      "geometry": "arc",
+      "apex_up": true,
+      "crossbar": false,
+      "params": {
+        "chart": "cartesian",
+        "frequency": 1.0,
+        "amplitude": 0.1931,
+        "harmonicity": 0.9995,
+        "spread": 0.0103,
+        "phase": 0.0039,
+        "onset": 1.0,
+        "extent": 3.482,
+        "flatness": 0.0
+      }
+    },
+    {
+      "n": 10,
+      "id": "Capricorn",
+      "geometry": "angle",
+      "apex_up": false,
+      "crossbar": true,
+      "params": {
+        "chart": "cartesian",
+        "frequency": 1.0,
+        "amplitude": 0.2146,
+        "harmonicity": 0.978,
+        "spread": 0.0553,
+        "phase": -0.9961,
+        "onset": 0.0,
+        "extent": 2.896,
+        "flatness": 0.0
+      }
+    },
+    {
+      "n": 11,
+      "id": "Aquarius",
+      "geometry": "square",
+      "apex_up": true,
+      "crossbar": true,
+      "params": {
+        "chart": "cartesian",
+        "frequency": 1.0,
+        "amplitude": 0.3189,
+        "harmonicity": 0.7377,
+        "spread": 0.2002,
+        "phase": 0.0039,
+        "onset": 0.0,
+        "extent": 3.547,
+        "flatness": 0.0
+      }
+    },
+    {
+      "n": 12,
+      "id": "Pisces",
+      "geometry": "arc",
+      "apex_up": false,
+      "crossbar": false,
+      "params": {
+        "chart": "cartesian",
+        "frequency": 1.0,
+        "amplitude": 0.1931,
+        "harmonicity": 0.9995,
+        "spread": 0.0103,
+        "phase": -0.9961,
+        "onset": 1.0,
+        "extent": 3.482,
+        "flatness": 0.0
+      }
+    }
+  ],
+  "interpolated_figures_are_not_signs": true,
+  "asserts": [
+    {
+      "claim": "waveform-alphabet-is-exact",
+      "status": "measured",
+      "statement": "Every drawn sign-mark decomposes into waveshape x phase x datum with no residue, and the corpus performs both of the operations that decomposition implies.",
+      "success_condition": "Already measured. What would extend it is a reason the three waveshapes should be triangle, square and sine rather than any other three -- the completion result (curve-pair-is-the-circle) is the nearest thing and does not reach it.",
+      "scope": "About the ALPHABET being generated by those three parameters, and about the corpus drawing the inversions and datum-additions out in full. Says nothing about whether the acoustic SEMANTICS are intended -- that is the domain question, and `the-domain-is-an-axis` answers it.",
+      "finding": "F133"
+    },
+    {
+      "claim": "the-domain-is-an-axis",
+      "status": "measured",
+      "statement": "The corpus varies the interpretive DOMAIN the way it varies any other feature, so no reading of the marks is privileged and none can be.",
+      "scope": "About whether a domain can be privileged, not about whether the acoustic one is attested. It is: Sol-Center labels its two lateral axes Frequency and Level and names its centre cells Harmony and Discord, and ZodiacSignSymbols carries a Cromatic Tone column.",
+      "finding": "F134 -> F139"
+    }
+  ]
+}

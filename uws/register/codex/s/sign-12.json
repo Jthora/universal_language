@@ -1,0 +1,132 @@
+{
+  "id": "sign-12",
+  "label": "Pisces",
+  "family": "Signs",
+  "summary": "n = 12 · Mutable Water — the cell, derived; the label on it, not",
+  "identity": [
+    [
+      "n",
+      12,
+      null
+    ],
+    [
+      "geometry",
+      "arc  (n mod 3 = 0)",
+      "derived"
+    ],
+    [
+      "modality",
+      "Mutable",
+      "derived"
+    ],
+    [
+      "apex",
+      "down",
+      "derived_given"
+    ],
+    [
+      "crossbar",
+      "False",
+      "derived"
+    ],
+    [
+      "element",
+      "Water  (n mod 4 = 0)",
+      "undetermined"
+    ]
+  ],
+  "asserts": [
+    {
+      "claim": "z12-factors",
+      "status": "derived",
+      "statement": "Z/12 = Z/3 x Z/4, so 3 modalities x 4 elements covers twelve cells with no repeat and no gap.",
+      "derivation": "gcd(3,4)=1, Chinese Remainder Theorem. This is why there are twelve, not an observation that there happen to be.",
+      "finding": "F48"
+    }
+  ],
+  "carries_undetermined": [
+    {
+      "claim": "element-bit-assignment",
+      "status": "derived_given",
+      "statement": "up+unbarred is Fire, up+barred is Air, down+unbarred is Water, down+barred is Earth.",
+      "derivation": "THE DIRECTION BIT IS DENSITY. F19 records, and F70 confirms on a second artifact, that the elements ARE the states of matter: Fire = Plasma, Air = Gas, Water = Liquid, Earth = Solid. Split the four phases by density and plasma and gas are the rarefied pair, liquid and solid the dense pair; buoyancy lifts the first and sinks the second. That is the direction bit, four for four, one property throughout -- not 'fire rises' about one element but a single threshold on a single quantity sorting all four. And it derives exactly the half that needed deriving: the PARTITION, not which side of the page each lands on, which `direction-is-read-as-contrast` says the notation never reads anyway.",
+      "given": "the states-of-matter identification (F19/F70), and ordinary conditions, under which the density ordering of the four phases holds.",
+      "success_condition": "THE DIRECTION BIT IS REACHED (F148). What remains is the CROSSBAR bit, which partitions {Air, Earth} against {Fire, Water} -- in phases, {Gas, Solid} against {Plasma, Liquid}. F140 gave the bit a reading, open end versus bounded level, which the corpus itself names Destiny and Reality. What is missing is a property of the four phases that groups gas with solid against plasma with liquid. Density does not: solid and gas are the extremes of that ordering, not a pair. A pattern that fits and is NOT evidence: along the transition chain Solid-Liquid-Gas-Plasma the bit is the parity of the position, with positions 1 and 3 barred. With four items and two bits any assignment can be so described, and parity names no physical property. Recorded as F47 recorded the opponent-colour coincidence.",
+      "scope": "The direction bit only. The crossbar bit has a reading (F140) and no derivation. And the derivation runs through a physical identification, so it grounds the notation in matter rather than in geometry -- which is what the original success condition warned about, met by making the import explicit and total rather than anecdotal.",
+      "finding": "F51 -> F140 -> F148"
+    }
+  ],
+  "near": [
+    {
+      "axis": "same geometry — Mutable",
+      "because": "n mod 3 is equal",
+      "status": "derived",
+      "items": [
+        {
+          "id": "sign-03",
+          "label": "Gemini",
+          "kind": "sign",
+          "arg": 3
+        },
+        {
+          "id": "sign-06",
+          "label": "Virgo",
+          "kind": "sign",
+          "arg": 6
+        },
+        {
+          "id": "sign-09",
+          "label": "Sagittarius",
+          "kind": "sign",
+          "arg": 9
+        }
+      ]
+    },
+    {
+      "axis": "same element — Water",
+      "because": "n mod 4 is equal",
+      "status": "derived",
+      "items": [
+        {
+          "id": "sign-04",
+          "label": "Cancer",
+          "kind": "sign",
+          "arg": 4
+        },
+        {
+          "id": "sign-08",
+          "label": "Scorpio",
+          "kind": "sign",
+          "arg": 8
+        }
+      ]
+    },
+    {
+      "axis": "opposite",
+      "because": "n + 6; the antipode of the twelve-cycle",
+      "status": "conventional",
+      "items": [
+        {
+          "id": "sign-06",
+          "label": "Virgo",
+          "kind": "sign",
+          "arg": 6
+        }
+      ]
+    }
+  ],
+  "prev": [
+    "sign-11",
+    "Aquarius"
+  ],
+  "next": null,
+  "status_vocabulary": {
+    "derived": "assert freely; the derivation is in `derivation`",
+    "derived_given": "assert only together with its `given` premise",
+    "measured": "assert as a fact about these artifacts, not as necessity",
+    "undetermined": "use, do not assert; `success_condition` says what would settle it",
+    "conventional": "assert as a choice, never as a result",
+    "withdrawn": "do not assert; retained so citations resolve to the retraction"
+  },
+  "read_this_first": "Every assertion carries its derivation status, at the assertion, not in a footnote."
+}

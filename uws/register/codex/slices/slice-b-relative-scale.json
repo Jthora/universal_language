@@ -1,0 +1,39 @@
+{
+  "sheet": "slice-binary-relative-scale",
+  "group": "binary",
+  "axes": [
+    "relative-scale"
+  ],
+  "cells": 6,
+  "held": {
+    "A": "Circle",
+    "B": "Circle",
+    "separation": 0.0,
+    "bearing": 0.0,
+    "relative-rotation": 0.0,
+    "reflect-B": 0,
+    "B-frequency": 1.0,
+    "B-amplitude": 1.0,
+    "B-phase": 0.0
+  },
+  "operand_chosen_for": {
+    "relative-scale": "has extent"
+  },
+  "samples": {
+    "relative-scale": [
+      "0.25",
+      "0.4",
+      "0.6",
+      "1",
+      "1.5",
+      "2"
+    ]
+  },
+  "operators_on_this_slice": {
+    "nest": 1,
+    "superpose_concentric": 1,
+    "cross": 1
+  },
+  "contact_cells": 1,
+  "note": "Scale is measured EMPTY: across 24 sheets and 8 documents nothing reads a size. This sheet is the representative for all 18 slices that vary it.  operand chosen so the axis acts: relative-scale needs one that has extent"
+}

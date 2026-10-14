@@ -1,0 +1,38 @@
+{
+  "sheet": "slice-unary-mark-taper",
+  "group": "unary",
+  "axes": [
+    "mark",
+    "taper"
+  ],
+  "cells": 18,
+  "held": {
+    "rotation": 0.0,
+    "reflection": 0,
+    "scale": 1.0,
+    "count": 1,
+    "frequency": 1.0,
+    "amplitude": 1.0,
+    "phase": 0.0,
+    "chirp": 0.0
+  },
+  "operand_chosen_for": {},
+  "samples": {
+    "mark": [
+      "Point",
+      "Line",
+      "Angle",
+      "Curve",
+      "Wave",
+      "Circle"
+    ],
+    "taper": [
+      "-1",
+      "0",
+      "1"
+    ]
+  },
+  "operators_on_this_slice": {},
+  "contact_cells": 0,
+  "note": ""
+}

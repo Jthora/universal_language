@@ -1,0 +1,121 @@
+{
+  "sheet": "insert",
+  "title": "Insertion, against the operator families",
+  "teaches": "that splicing a figure into another is in neither operator family",
+  "legend_on_sheet": true,
+  "generated_not_traced": true,
+  "positions": {
+    "at the edge": 0.0,
+    "at the side": 0.25,
+    "in the middle": 0.5,
+    "at the far edge": 1.0
+  },
+  "placement": {
+    "pairs": 125,
+    "agree": 0
+  },
+  "modulation": {
+    "eligible": 78,
+    "agree": 0,
+    "considered": 186,
+    "skipped_count": 108,
+    "skipped": [
+      "Point: no extent",
+      "Line: flat profile, modulation is the identity",
+      "Circle: flat profile, modulation is the identity",
+      "superpose_concentric(Point,Point): no extent",
+      "superpose_concentric(Point,Line): flat profile, modulation is the identity",
+      "superpose_concentric(Point,Circle): flat profile, modulation is the identity",
+      "superpose_concentric(Line,Point): flat profile, modulation is the identity",
+      "superpose_concentric(Line,Line): flat profile, modulation is the identity"
+    ]
+  },
+  "family": "a third family",
+  "insertions": [
+    {
+      "host": "Line",
+      "guest": "Angle",
+      "position": "at the edge",
+      "at": 0.0,
+      "changed_the_host": true
+    },
+    {
+      "host": "Line",
+      "guest": "Angle",
+      "position": "at the side",
+      "at": 0.25,
+      "changed_the_host": true
+    },
+    {
+      "host": "Line",
+      "guest": "Angle",
+      "position": "in the middle",
+      "at": 0.5,
+      "changed_the_host": true
+    },
+    {
+      "host": "Line",
+      "guest": "Angle",
+      "position": "at the far edge",
+      "at": 1.0,
+      "changed_the_host": true
+    },
+    {
+      "host": "Line",
+      "guest": "Curve",
+      "position": "at the edge",
+      "at": 0.0,
+      "changed_the_host": true
+    },
+    {
+      "host": "Line",
+      "guest": "Curve",
+      "position": "at the side",
+      "at": 0.25,
+      "changed_the_host": true
+    },
+    {
+      "host": "Line",
+      "guest": "Curve",
+      "position": "in the middle",
+      "at": 0.5,
+      "changed_the_host": true
+    },
+    {
+      "host": "Line",
+      "guest": "Curve",
+      "position": "at the far edge",
+      "at": 1.0,
+      "changed_the_host": true
+    },
+    {
+      "host": "Line",
+      "guest": "Wave",
+      "position": "at the edge",
+      "at": 0.0,
+      "changed_the_host": true
+    },
+    {
+      "host": "Line",
+      "guest": "Wave",
+      "position": "at the side",
+      "at": 0.25,
+      "changed_the_host": true
+    },
+    {
+      "host": "Line",
+      "guest": "Wave",
+      "position": "in the middle",
+      "at": 0.5,
+      "changed_the_host": true
+    },
+    {
+      "host": "Line",
+      "guest": "Wave",
+      "position": "at the far edge",
+      "at": 1.0,
+      "changed_the_host": true
+    }
+  ],
+  "asserts": []
+}

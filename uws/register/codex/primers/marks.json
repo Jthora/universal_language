@@ -1,0 +1,190 @@
+{
+  "sheet": "marks",
+  "title": "The mark factorisation",
+  "teaches": "Z/6 = Z/3 x Z/2, both axes measured",
+  "legend_on_sheet": true,
+  "status_on_face": true,
+  "generated_not_traced": true,
+  "asserts": [
+    {
+      "claim": "rotation-class-is-symmetry-order",
+      "status": "derived",
+      "statement": "The corpus's three rotation classes are the order of each mark's rotational symmetry group: infinite, 2, 1.",
+      "derivation": "Sampled each mark as a point set and rotated it; 6/6 agreement with the stated trichotomy. A sine is odd, so a half-turn returns it -- which is why Wave groups with Line.",
+      "finding": "F85"
+    },
+    {
+      "claim": "mark-polarity",
+      "status": "derived",
+      "statement": "The mark polarity axis is curvature class: zero or singular curvature vs smooth non-zero curvature.",
+      "derivation": "Largest discrete turning angle along each stroke; 6/6 against the corpus's stated split. Point 0 (0-dim), Line 0 (straight), Angle 33.7 (corner), Curve/Wave/Circle 0.75-8.5 (smooth). This is the `singularity` shape axis of notes 022-026.",
+      "finding": "F88"
+    },
+    {
+      "claim": "marks-factor-3x2",
+      "status": "derived",
+      "statement": "The six marks are 3 symmetry classes x 2 curvature classes, every cell filled once; Z/6 = Z/3 x Z/2.",
+      "derivation": "Both factors are now derived: symmetry order (F85) and curvature class (F88). Crossing them is a bijection, 6/6.",
+      "finding": "F84"
+    },
+    {
+      "claim": "six-marks-are-complete",
+      "status": "derived",
+      "statement": "The six marks are complete WITH RESPECT TO SYMMETRY ORDER: every order the corpus uses is either a mark's own or is produced by composition.",
+      "derivation": "Iterated superposition-with-rotation reaches every C_n, verified by construction for n=2..8 from the C1 Angle alone. Triangle (C3) and the hexagram (C6) are therefore produced, not posited. Closure was also tested and does NOT reach C3 -- a chevron closes to an isoceles triangle, which is C1.",
+      "scope": "Covers symmetry order only. Does NOT establish that every figure the corpus draws is reachable -- matching an order is weaker than being the same figure. Two figures are now known unreachable, for two different reasons: the Spiral wants scaling (spiral-requires-scaling) and the teardrop wants a curved join (teardrop-reachability, F123). Neither wants a seventh mark.",
+      "finding": "F91"
+    }
+  ],
+  "carries_undetermined": [
+    {
+      "claim": "spiral-requires-scaling",
+      "status": "measured",
+      "statement": "The Spiral is not reachable by any attested operator, and the reason is not a missing scale parameter: it needs MODULATION -- varying a parameter along a mark's own extent -- which is a different operator family from placement.",
+      "scope": "Measured over the 186 enumerated depth-2 combinations, not proved for all compositions. Margin is 0.111 and the nearest case is a near-degenerate stroke. TWO EARLIER INVARIANTS FAILED and are kept on the record: curvature-per-sample (spiral measured 0.95, flat, indistinguishable from a circle) and radial monotonicity (0.967 vs 0.927, contaminated by component stacking order).",
+      "finding": "F95 -> F98"
+    }
+  ],
+  "marks": [
+    {
+      "id": "Point",
+      "symmetry_order": "inf",
+      "curvature_class": "singular",
+      "rotation_class": "invariant",
+      "asserts": [
+        {
+          "claim": "rotation-class-is-symmetry-order",
+          "status": "derived",
+          "statement": "The corpus's three rotation classes are the order of each mark's rotational symmetry group: infinite, 2, 1.",
+          "derivation": "Sampled each mark as a point set and rotated it; 6/6 agreement with the stated trichotomy. A sine is odd, so a half-turn returns it -- which is why Wave groups with Line.",
+          "finding": "F85"
+        },
+        {
+          "claim": "mark-polarity",
+          "status": "derived",
+          "statement": "The mark polarity axis is curvature class: zero or singular curvature vs smooth non-zero curvature.",
+          "derivation": "Largest discrete turning angle along each stroke; 6/6 against the corpus's stated split. Point 0 (0-dim), Line 0 (straight), Angle 33.7 (corner), Curve/Wave/Circle 0.75-8.5 (smooth). This is the `singularity` shape axis of notes 022-026.",
+          "finding": "F88"
+        }
+      ]
+    },
+    {
+      "id": "Line",
+      "symmetry_order": "2",
+      "curvature_class": "singular",
+      "rotation_class": "orientation-bearing",
+      "asserts": [
+        {
+          "claim": "rotation-class-is-symmetry-order",
+          "status": "derived",
+          "statement": "The corpus's three rotation classes are the order of each mark's rotational symmetry group: infinite, 2, 1.",
+          "derivation": "Sampled each mark as a point set and rotated it; 6/6 agreement with the stated trichotomy. A sine is odd, so a half-turn returns it -- which is why Wave groups with Line.",
+          "finding": "F85"
+        },
+        {
+          "claim": "mark-polarity",
+          "status": "derived",
+          "statement": "The mark polarity axis is curvature class: zero or singular curvature vs smooth non-zero curvature.",
+          "derivation": "Largest discrete turning angle along each stroke; 6/6 against the corpus's stated split. Point 0 (0-dim), Line 0 (straight), Angle 33.7 (corner), Curve/Wave/Circle 0.75-8.5 (smooth). This is the `singularity` shape axis of notes 022-026.",
+          "finding": "F88"
+        }
+      ]
+    },
+    {
+      "id": "Angle",
+      "symmetry_order": "1",
+      "curvature_class": "singular",
+      "rotation_class": "modulating",
+      "asserts": [
+        {
+          "claim": "rotation-class-is-symmetry-order",
+          "status": "derived",
+          "statement": "The corpus's three rotation classes are the order of each mark's rotational symmetry group: infinite, 2, 1.",
+          "derivation": "Sampled each mark as a point set and rotated it; 6/6 agreement with the stated trichotomy. A sine is odd, so a half-turn returns it -- which is why Wave groups with Line.",
+          "finding": "F85"
+        },
+        {
+          "claim": "mark-polarity",
+          "status": "derived",
+          "statement": "The mark polarity axis is curvature class: zero or singular curvature vs smooth non-zero curvature.",
+          "derivation": "Largest discrete turning angle along each stroke; 6/6 against the corpus's stated split. Point 0 (0-dim), Line 0 (straight), Angle 33.7 (corner), Curve/Wave/Circle 0.75-8.5 (smooth). This is the `singularity` shape axis of notes 022-026.",
+          "finding": "F88"
+        }
+      ]
+    },
+    {
+      "id": "Curve",
+      "symmetry_order": "1",
+      "curvature_class": "smooth",
+      "rotation_class": "modulating",
+      "asserts": [
+        {
+          "claim": "rotation-class-is-symmetry-order",
+          "status": "derived",
+          "statement": "The corpus's three rotation classes are the order of each mark's rotational symmetry group: infinite, 2, 1.",
+          "derivation": "Sampled each mark as a point set and rotated it; 6/6 agreement with the stated trichotomy. A sine is odd, so a half-turn returns it -- which is why Wave groups with Line.",
+          "finding": "F85"
+        },
+        {
+          "claim": "mark-polarity",
+          "status": "derived",
+          "statement": "The mark polarity axis is curvature class: zero or singular curvature vs smooth non-zero curvature.",
+          "derivation": "Largest discrete turning angle along each stroke; 6/6 against the corpus's stated split. Point 0 (0-dim), Line 0 (straight), Angle 33.7 (corner), Curve/Wave/Circle 0.75-8.5 (smooth). This is the `singularity` shape axis of notes 022-026.",
+          "finding": "F88"
+        }
+      ]
+    },
+    {
+      "id": "Wave",
+      "symmetry_order": "2",
+      "curvature_class": "smooth",
+      "rotation_class": "orientation-bearing",
+      "asserts": [
+        {
+          "claim": "rotation-class-is-symmetry-order",
+          "status": "derived",
+          "statement": "The corpus's three rotation classes are the order of each mark's rotational symmetry group: infinite, 2, 1.",
+          "derivation": "Sampled each mark as a point set and rotated it; 6/6 agreement with the stated trichotomy. A sine is odd, so a half-turn returns it -- which is why Wave groups with Line.",
+          "finding": "F85"
+        },
+        {
+          "claim": "mark-polarity",
+          "status": "derived",
+          "statement": "The mark polarity axis is curvature class: zero or singular curvature vs smooth non-zero curvature.",
+          "derivation": "Largest discrete turning angle along each stroke; 6/6 against the corpus's stated split. Point 0 (0-dim), Line 0 (straight), Angle 33.7 (corner), Curve/Wave/Circle 0.75-8.5 (smooth). This is the `singularity` shape axis of notes 022-026.",
+          "finding": "F88"
+        }
+      ]
+    },
+    {
+      "id": "Circle",
+      "symmetry_order": "inf",
+      "curvature_class": "smooth",
+      "rotation_class": "invariant",
+      "asserts": [
+        {
+          "claim": "rotation-class-is-symmetry-order",
+          "status": "derived",
+          "statement": "The corpus's three rotation classes are the order of each mark's rotational symmetry group: infinite, 2, 1.",
+          "derivation": "Sampled each mark as a point set and rotated it; 6/6 agreement with the stated trichotomy. A sine is odd, so a half-turn returns it -- which is why Wave groups with Line.",
+          "finding": "F85"
+        },
+        {
+          "claim": "mark-polarity",
+          "status": "derived",
+          "statement": "The mark polarity axis is curvature class: zero or singular curvature vs smooth non-zero curvature.",
+          "derivation": "Largest discrete turning angle along each stroke; 6/6 against the corpus's stated split. Point 0 (0-dim), Line 0 (straight), Angle 33.7 (corner), Curve/Wave/Circle 0.75-8.5 (smooth). This is the `singularity` shape axis of notes 022-026.",
+          "finding": "F88"
+        }
+      ]
+    }
+  ],
+  "verify": {
+    "how": "Re-derive this bundle from source.",
+    "commands": [
+      "python3 tools/verify_symbology_grammar.py    # 12/12 off the sheets",
+      "python3 tools/symbology_glyph.py --check     # glyphs read back as their rule",
+      "python3 tools/symbol_combinations.py --closure"
+    ]
+  }
+}

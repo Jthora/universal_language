@@ -1,0 +1,22 @@
+{
+  "orbit": 22,
+  "members": [
+    "superpose_concentric(Point,Circle)",
+    "superpose_concentric(Circle,Point)",
+    "cross(Point,Circle)",
+    "cross(Circle,Point)",
+    "nest(Point,Circle)",
+    "nest(Circle,Point)"
+  ],
+  "symmetry": "inf",
+  "curvature": "smooth",
+  "meaning": "Sun-in-Circle (F43)",
+  "status": "recorded",
+  "strokes": 2,
+  "components": 1,
+  "mirror_axes": "inf",
+  "closed": true,
+  "crossings": "0",
+  "aspect": "square",
+  "curvature_mix": "mixed"
+}

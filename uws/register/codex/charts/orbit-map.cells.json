@@ -1,0 +1,842 @@
+{
+ "sheet": "charts/orbit-map",
+ "cells": [
+  {
+   "id": "cell-pt-0",
+   "title": "orbit 0",
+   "desc": "mds position 0.532, 0.417",
+   "orbit": "0",
+   "named": "false",
+   "x": "0.5320",
+   "y": "0.4174"
+  },
+  {
+   "id": "cell-pt-1",
+   "title": "orbit 1",
+   "desc": "mds position 0.016, 0.573",
+   "orbit": "1",
+   "named": "false",
+   "x": "0.0157",
+   "y": "0.5728"
+  },
+  {
+   "id": "cell-pt-2",
+   "title": "orbit 2",
+   "desc": "mds position 0.448, 0.396",
+   "orbit": "2",
+   "named": "false",
+   "x": "0.4484",
+   "y": "0.3959"
+  },
+  {
+   "id": "cell-pt-3",
+   "title": "orbit 3",
+   "desc": "mds position 0.209, 0.281",
+   "orbit": "3",
+   "named": "false",
+   "x": "0.2086",
+   "y": "0.2808"
+  },
+  {
+   "id": "cell-pt-4",
+   "title": "orbit 4",
+   "desc": "mds position 0.209, 0.276",
+   "orbit": "4",
+   "named": "false",
+   "x": "0.2091",
+   "y": "0.2765"
+  },
+  {
+   "id": "cell-pt-5",
+   "title": "orbit 5",
+   "desc": "mds position 0.986, 0.381",
+   "orbit": "5",
+   "named": "false",
+   "x": "0.9858",
+   "y": "0.3812"
+  },
+  {
+   "id": "cell-pt-6",
+   "title": "orbit 6",
+   "desc": "mds position 0.000, 0.132",
+   "orbit": "6",
+   "named": "false",
+   "x": "0.0000",
+   "y": "0.1323"
+  },
+  {
+   "id": "cell-pt-7",
+   "title": "orbit 7",
+   "desc": "mds position 0.514, 0.082",
+   "orbit": "7",
+   "named": "false",
+   "x": "0.5142",
+   "y": "0.0820"
+  },
+  {
+   "id": "cell-pt-8",
+   "title": "orbit 8",
+   "desc": "mds position 0.136, 0.516",
+   "orbit": "8",
+   "named": "false",
+   "x": "0.1359",
+   "y": "0.5160"
+  },
+  {
+   "id": "cell-pt-9",
+   "title": "orbit 9",
+   "desc": "mds position 0.414, 0.470",
+   "orbit": "9",
+   "named": "false",
+   "x": "0.4143",
+   "y": "0.4703"
+  },
+  {
+   "id": "cell-pt-10",
+   "title": "orbit 10",
+   "desc": "mds position 0.198, 0.285",
+   "orbit": "10",
+   "named": "false",
+   "x": "0.1980",
+   "y": "0.2847"
+  },
+  {
+   "id": "cell-pt-11",
+   "title": "orbit 11",
+   "desc": "mds position 0.988, 0.388",
+   "orbit": "11",
+   "named": "false",
+   "x": "0.9875",
+   "y": "0.3881"
+  },
+  {
+   "id": "cell-pt-12",
+   "title": "orbit 12",
+   "desc": "mds position 0.437, 0.321",
+   "orbit": "12",
+   "named": "false",
+   "x": "0.4372",
+   "y": "0.3215"
+  },
+  {
+   "id": "cell-pt-13",
+   "title": "orbit 13 — infinity (SymbolFolds)",
+   "desc": "mds position 0.474, 0.207",
+   "orbit": "13",
+   "named": "true",
+   "x": "0.4745",
+   "y": "0.2069"
+  },
+  {
+   "id": "cell-pt-14",
+   "title": "orbit 14",
+   "desc": "mds position 0.177, 0.304",
+   "orbit": "14",
+   "named": "false",
+   "x": "0.1773",
+   "y": "0.3042"
+  },
+  {
+   "id": "cell-pt-15",
+   "title": "orbit 15",
+   "desc": "mds position 0.988, 0.384",
+   "orbit": "15",
+   "named": "false",
+   "x": "0.9881",
+   "y": "0.3836"
+  },
+  {
+   "id": "cell-pt-16",
+   "title": "orbit 16",
+   "desc": "mds position 0.180, 0.410",
+   "orbit": "16",
+   "named": "false",
+   "x": "0.1801",
+   "y": "0.4103"
+  },
+  {
+   "id": "cell-pt-17",
+   "title": "orbit 17",
+   "desc": "mds position 0.429, 0.234",
+   "orbit": "17",
+   "named": "false",
+   "x": "0.4293",
+   "y": "0.2343"
+  },
+  {
+   "id": "cell-pt-18",
+   "title": "orbit 18",
+   "desc": "mds position 0.197, 0.288",
+   "orbit": "18",
+   "named": "false",
+   "x": "0.1973",
+   "y": "0.2881"
+  },
+  {
+   "id": "cell-pt-19",
+   "title": "orbit 19",
+   "desc": "mds position 0.417, 0.415",
+   "orbit": "19",
+   "named": "false",
+   "x": "0.4171",
+   "y": "0.4150"
+  },
+  {
+   "id": "cell-pt-20",
+   "title": "orbit 20",
+   "desc": "mds position 0.990, 0.389",
+   "orbit": "20",
+   "named": "false",
+   "x": "0.9902",
+   "y": "0.3889"
+  },
+  {
+   "id": "cell-pt-21",
+   "title": "orbit 21",
+   "desc": "mds position 0.700, 0.682",
+   "orbit": "21",
+   "named": "false",
+   "x": "0.7002",
+   "y": "0.6816"
+  },
+  {
+   "id": "cell-pt-22",
+   "title": "orbit 22 — Sun-in-Circle (F43)",
+   "desc": "mds position 0.967, 0.386",
+   "orbit": "22",
+   "named": "true",
+   "x": "0.9667",
+   "y": "0.3862"
+  },
+  {
+   "id": "cell-pt-23",
+   "title": "orbit 23",
+   "desc": "mds position 0.968, 0.437",
+   "orbit": "23",
+   "named": "false",
+   "x": "0.9675",
+   "y": "0.4375"
+  },
+  {
+   "id": "cell-pt-24",
+   "title": "orbit 24",
+   "desc": "mds position 0.439, 0.432",
+   "orbit": "24",
+   "named": "false",
+   "x": "0.4388",
+   "y": "0.4323"
+  },
+  {
+   "id": "cell-pt-25",
+   "title": "orbit 25",
+   "desc": "mds position 0.481, 0.429",
+   "orbit": "25",
+   "named": "false",
+   "x": "0.4809",
+   "y": "0.4291"
+  },
+  {
+   "id": "cell-pt-26",
+   "title": "orbit 26",
+   "desc": "mds position 0.112, 0.202",
+   "orbit": "26",
+   "named": "false",
+   "x": "0.1121",
+   "y": "0.2019"
+  },
+  {
+   "id": "cell-pt-27",
+   "title": "orbit 27",
+   "desc": "mds position 0.100, 0.207",
+   "orbit": "27",
+   "named": "false",
+   "x": "0.0997",
+   "y": "0.2068"
+  },
+  {
+   "id": "cell-pt-28",
+   "title": "orbit 28",
+   "desc": "mds position 0.154, 0.227",
+   "orbit": "28",
+   "named": "false",
+   "x": "0.1541",
+   "y": "0.2270"
+  },
+  {
+   "id": "cell-pt-29",
+   "title": "orbit 29",
+   "desc": "mds position 0.107, 0.148",
+   "orbit": "29",
+   "named": "false",
+   "x": "0.1071",
+   "y": "0.1479"
+  },
+  {
+   "id": "cell-pt-30",
+   "title": "orbit 30",
+   "desc": "mds position 0.161, 0.112",
+   "orbit": "30",
+   "named": "false",
+   "x": "0.1610",
+   "y": "0.1123"
+  },
+  {
+   "id": "cell-pt-31",
+   "title": "orbit 31",
+   "desc": "mds position 0.335, 0.196",
+   "orbit": "31",
+   "named": "false",
+   "x": "0.3347",
+   "y": "0.1960"
+  },
+  {
+   "id": "cell-pt-32",
+   "title": "orbit 32",
+   "desc": "mds position 0.995, 0.446",
+   "orbit": "32",
+   "named": "false",
+   "x": "0.9945",
+   "y": "0.4464"
+  },
+  {
+   "id": "cell-pt-33",
+   "title": "orbit 33",
+   "desc": "mds position 0.123, 0.551",
+   "orbit": "33",
+   "named": "false",
+   "x": "0.1229",
+   "y": "0.5515"
+  },
+  {
+   "id": "cell-pt-34",
+   "title": "orbit 34",
+   "desc": "mds position 0.232, 0.542",
+   "orbit": "34",
+   "named": "false",
+   "x": "0.2318",
+   "y": "0.5424"
+  },
+  {
+   "id": "cell-pt-35",
+   "title": "orbit 35",
+   "desc": "mds position 0.048, 0.486",
+   "orbit": "35",
+   "named": "false",
+   "x": "0.0480",
+   "y": "0.4855"
+  },
+  {
+   "id": "cell-pt-36",
+   "title": "orbit 36",
+   "desc": "mds position 0.053, 0.449",
+   "orbit": "36",
+   "named": "false",
+   "x": "0.0532",
+   "y": "0.4487"
+  },
+  {
+   "id": "cell-pt-37",
+   "title": "orbit 37",
+   "desc": "mds position 0.037, 0.388",
+   "orbit": "37",
+   "named": "false",
+   "x": "0.0370",
+   "y": "0.3877"
+  },
+  {
+   "id": "cell-pt-38",
+   "title": "orbit 38",
+   "desc": "mds position 0.251, 0.236",
+   "orbit": "38",
+   "named": "false",
+   "x": "0.2507",
+   "y": "0.2356"
+  },
+  {
+   "id": "cell-pt-39",
+   "title": "orbit 39 — Chaos pair (F44)",
+   "desc": "mds position 0.108, 0.472",
+   "orbit": "39",
+   "named": "true",
+   "x": "0.1078",
+   "y": "0.4722"
+  },
+  {
+   "id": "cell-pt-40",
+   "title": "orbit 40",
+   "desc": "mds position 0.102, 0.431",
+   "orbit": "40",
+   "named": "false",
+   "x": "0.1017",
+   "y": "0.4311"
+  },
+  {
+   "id": "cell-pt-41",
+   "title": "orbit 41",
+   "desc": "mds position 0.087, 0.380",
+   "orbit": "41",
+   "named": "false",
+   "x": "0.0866",
+   "y": "0.3800"
+  },
+  {
+   "id": "cell-pt-42",
+   "title": "orbit 42",
+   "desc": "mds position 0.319, 0.237",
+   "orbit": "42",
+   "named": "false",
+   "x": "0.3187",
+   "y": "0.2368"
+  },
+  {
+   "id": "cell-pt-43",
+   "title": "orbit 43",
+   "desc": "mds position 0.182, 0.432",
+   "orbit": "43",
+   "named": "false",
+   "x": "0.1822",
+   "y": "0.4321"
+  },
+  {
+   "id": "cell-pt-44",
+   "title": "orbit 44",
+   "desc": "mds position 0.561, 0.002",
+   "orbit": "44",
+   "named": "false",
+   "x": "0.5614",
+   "y": "0.0023"
+  },
+  {
+   "id": "cell-pt-45",
+   "title": "orbit 45",
+   "desc": "mds position 0.618, 0.034",
+   "orbit": "45",
+   "named": "false",
+   "x": "0.6177",
+   "y": "0.0344"
+  },
+  {
+   "id": "cell-pt-46",
+   "title": "orbit 46",
+   "desc": "mds position 0.602, 0.089",
+   "orbit": "46",
+   "named": "false",
+   "x": "0.6021",
+   "y": "0.0889"
+  },
+  {
+   "id": "cell-pt-47",
+   "title": "orbit 47",
+   "desc": "mds position 0.625, 0.104",
+   "orbit": "47",
+   "named": "false",
+   "x": "0.6249",
+   "y": "0.1036"
+  },
+  {
+   "id": "cell-pt-48",
+   "title": "orbit 48",
+   "desc": "mds position 0.566, 0.000",
+   "orbit": "48",
+   "named": "false",
+   "x": "0.5660",
+   "y": "0.0000"
+  },
+  {
+   "id": "cell-pt-49",
+   "title": "orbit 49",
+   "desc": "mds position 0.096, 0.145",
+   "orbit": "49",
+   "named": "false",
+   "x": "0.0961",
+   "y": "0.1446"
+  },
+  {
+   "id": "cell-pt-50",
+   "title": "orbit 50",
+   "desc": "mds position 0.061, 0.475",
+   "orbit": "50",
+   "named": "false",
+   "x": "0.0609",
+   "y": "0.4747"
+  },
+  {
+   "id": "cell-pt-51",
+   "title": "orbit 51",
+   "desc": "mds position 0.066, 0.451",
+   "orbit": "51",
+   "named": "false",
+   "x": "0.0659",
+   "y": "0.4512"
+  },
+  {
+   "id": "cell-pt-52",
+   "title": "orbit 52",
+   "desc": "mds position 0.157, 0.472",
+   "orbit": "52",
+   "named": "false",
+   "x": "0.1571",
+   "y": "0.4720"
+  },
+  {
+   "id": "cell-pt-53",
+   "title": "orbit 53",
+   "desc": "mds position 0.146, 0.441",
+   "orbit": "53",
+   "named": "false",
+   "x": "0.1457",
+   "y": "0.4412"
+  },
+  {
+   "id": "cell-pt-54",
+   "title": "orbit 54",
+   "desc": "mds position 0.118, 0.383",
+   "orbit": "54",
+   "named": "false",
+   "x": "0.1177",
+   "y": "0.3833"
+  },
+  {
+   "id": "cell-pt-55",
+   "title": "orbit 55",
+   "desc": "mds position 0.338, 0.219",
+   "orbit": "55",
+   "named": "false",
+   "x": "0.3383",
+   "y": "0.2185"
+  },
+  {
+   "id": "cell-pt-56",
+   "title": "orbit 56",
+   "desc": "mds position 0.213, 0.430",
+   "orbit": "56",
+   "named": "false",
+   "x": "0.2131",
+   "y": "0.4300"
+  },
+  {
+   "id": "cell-pt-57",
+   "title": "orbit 57",
+   "desc": "mds position 0.145, 0.553",
+   "orbit": "57",
+   "named": "false",
+   "x": "0.1453",
+   "y": "0.5531"
+  },
+  {
+   "id": "cell-pt-58",
+   "title": "orbit 58",
+   "desc": "mds position 0.111, 0.200",
+   "orbit": "58",
+   "named": "false",
+   "x": "0.1107",
+   "y": "0.2003"
+  },
+  {
+   "id": "cell-pt-59",
+   "title": "orbit 59",
+   "desc": "mds position 0.208, 0.244",
+   "orbit": "59",
+   "named": "false",
+   "x": "0.2077",
+   "y": "0.2443"
+  },
+  {
+   "id": "cell-pt-60",
+   "title": "orbit 60",
+   "desc": "mds position 0.239, 0.267",
+   "orbit": "60",
+   "named": "false",
+   "x": "0.2390",
+   "y": "0.2665"
+  },
+  {
+   "id": "cell-pt-61",
+   "title": "orbit 61",
+   "desc": "mds position 0.443, 0.485",
+   "orbit": "61",
+   "named": "false",
+   "x": "0.4426",
+   "y": "0.4855"
+  },
+  {
+   "id": "cell-pt-62",
+   "title": "orbit 62",
+   "desc": "mds position 0.148, 0.214",
+   "orbit": "62",
+   "named": "false",
+   "x": "0.1477",
+   "y": "0.2139"
+  },
+  {
+   "id": "cell-pt-63",
+   "title": "orbit 63",
+   "desc": "mds position 0.192, 0.223",
+   "orbit": "63",
+   "named": "false",
+   "x": "0.1921",
+   "y": "0.2230"
+  },
+  {
+   "id": "cell-pt-64",
+   "title": "orbit 64",
+   "desc": "mds position 0.212, 0.297",
+   "orbit": "64",
+   "named": "false",
+   "x": "0.2120",
+   "y": "0.2970"
+  },
+  {
+   "id": "cell-pt-65",
+   "title": "orbit 65",
+   "desc": "mds position 0.998, 0.419",
+   "orbit": "65",
+   "named": "false",
+   "x": "0.9976",
+   "y": "0.4188"
+  },
+  {
+   "id": "cell-pt-66",
+   "title": "orbit 66",
+   "desc": "mds position 0.694, 0.569",
+   "orbit": "66",
+   "named": "false",
+   "x": "0.6942",
+   "y": "0.5689"
+  },
+  {
+   "id": "cell-pt-67",
+   "title": "orbit 67",
+   "desc": "mds position 0.157, 0.231",
+   "orbit": "67",
+   "named": "false",
+   "x": "0.1568",
+   "y": "0.2313"
+  },
+  {
+   "id": "cell-pt-68",
+   "title": "orbit 68",
+   "desc": "mds position 0.159, 0.139",
+   "orbit": "68",
+   "named": "false",
+   "x": "0.1586",
+   "y": "0.1390"
+  },
+  {
+   "id": "cell-pt-69",
+   "title": "orbit 69",
+   "desc": "mds position 0.368, 0.193",
+   "orbit": "69",
+   "named": "false",
+   "x": "0.3676",
+   "y": "0.1930"
+  },
+  {
+   "id": "cell-pt-70",
+   "title": "orbit 70",
+   "desc": "mds position 0.982, 0.449",
+   "orbit": "70",
+   "named": "false",
+   "x": "0.9821",
+   "y": "0.4490"
+  },
+  {
+   "id": "cell-pt-71",
+   "title": "orbit 71",
+   "desc": "mds position 0.256, 0.514",
+   "orbit": "71",
+   "named": "false",
+   "x": "0.2558",
+   "y": "0.5142"
+  },
+  {
+   "id": "cell-pt-72",
+   "title": "orbit 72",
+   "desc": "mds position 0.247, 0.451",
+   "orbit": "72",
+   "named": "false",
+   "x": "0.2472",
+   "y": "0.4513"
+  },
+  {
+   "id": "cell-pt-73",
+   "title": "orbit 73",
+   "desc": "mds position 0.536, 0.502",
+   "orbit": "73",
+   "named": "false",
+   "x": "0.5357",
+   "y": "0.5016"
+  },
+  {
+   "id": "cell-pt-74",
+   "title": "orbit 74",
+   "desc": "mds position 0.101, 0.424",
+   "orbit": "74",
+   "named": "false",
+   "x": "0.1009",
+   "y": "0.4236"
+  },
+  {
+   "id": "cell-pt-75",
+   "title": "orbit 75",
+   "desc": "mds position 0.079, 0.382",
+   "orbit": "75",
+   "named": "false",
+   "x": "0.0793",
+   "y": "0.3818"
+  },
+  {
+   "id": "cell-pt-76",
+   "title": "orbit 76",
+   "desc": "mds position 0.316, 0.234",
+   "orbit": "76",
+   "named": "false",
+   "x": "0.3161",
+   "y": "0.2340"
+  },
+  {
+   "id": "cell-pt-77",
+   "title": "orbit 77",
+   "desc": "mds position 0.174, 0.427",
+   "orbit": "77",
+   "named": "false",
+   "x": "0.1744",
+   "y": "0.4274"
+  },
+  {
+   "id": "cell-pt-78",
+   "title": "orbit 78",
+   "desc": "mds position 0.318, 0.232",
+   "orbit": "78",
+   "named": "false",
+   "x": "0.3178",
+   "y": "0.2323"
+  },
+  {
+   "id": "cell-pt-79",
+   "title": "orbit 79",
+   "desc": "mds position 0.680, 0.137",
+   "orbit": "79",
+   "named": "false",
+   "x": "0.6799",
+   "y": "0.1365"
+  },
+  {
+   "id": "cell-pt-80",
+   "title": "orbit 80",
+   "desc": "mds position 0.617, 0.036",
+   "orbit": "80",
+   "named": "false",
+   "x": "0.6173",
+   "y": "0.0357"
+  },
+  {
+   "id": "cell-pt-81",
+   "title": "orbit 81",
+   "desc": "mds position 0.154, 0.142",
+   "orbit": "81",
+   "named": "false",
+   "x": "0.1535",
+   "y": "0.1424"
+  },
+  {
+   "id": "cell-pt-82",
+   "title": "orbit 82",
+   "desc": "mds position 0.147, 0.436",
+   "orbit": "82",
+   "named": "false",
+   "x": "0.1468",
+   "y": "0.4358"
+  },
+  {
+   "id": "cell-pt-83",
+   "title": "orbit 83",
+   "desc": "mds position 0.111, 0.380",
+   "orbit": "83",
+   "named": "false",
+   "x": "0.1111",
+   "y": "0.3804"
+  },
+  {
+   "id": "cell-pt-84",
+   "title": "orbit 84",
+   "desc": "mds position 0.371, 0.236",
+   "orbit": "84",
+   "named": "false",
+   "x": "0.3708",
+   "y": "0.2356"
+  },
+  {
+   "id": "cell-pt-85",
+   "title": "orbit 85",
+   "desc": "mds position 0.217, 0.439",
+   "orbit": "85",
+   "named": "false",
+   "x": "0.2166",
+   "y": "0.4387"
+  },
+  {
+   "id": "cell-pt-86",
+   "title": "orbit 86",
+   "desc": "mds position 0.227, 0.255",
+   "orbit": "86",
+   "named": "false",
+   "x": "0.2267",
+   "y": "0.2546"
+  },
+  {
+   "id": "cell-pt-87",
+   "title": "orbit 87",
+   "desc": "mds position 0.240, 0.253",
+   "orbit": "87",
+   "named": "false",
+   "x": "0.2399",
+   "y": "0.2535"
+  },
+  {
+   "id": "cell-pt-88",
+   "title": "orbit 88",
+   "desc": "mds position 0.443, 0.449",
+   "orbit": "88",
+   "named": "false",
+   "x": "0.4429",
+   "y": "0.4490"
+  },
+  {
+   "id": "cell-pt-89",
+   "title": "orbit 89",
+   "desc": "mds position 0.217, 0.295",
+   "orbit": "89",
+   "named": "false",
+   "x": "0.2167",
+   "y": "0.2949"
+  },
+  {
+   "id": "cell-pt-90",
+   "title": "orbit 90",
+   "desc": "mds position 1.000, 0.420",
+   "orbit": "90",
+   "named": "false",
+   "x": "1.0000",
+   "y": "0.4205"
+  },
+  {
+   "id": "cell-pt-91",
+   "title": "orbit 91 — + (SymbolFolds)",
+   "desc": "mds position 0.539, 0.122",
+   "orbit": "91",
+   "named": "true",
+   "x": "0.5394",
+   "y": "0.1215"
+  },
+  {
+   "id": "cell-pt-92",
+   "title": "orbit 92",
+   "desc": "mds position 0.723, 0.180",
+   "orbit": "92",
+   "named": "false",
+   "x": "0.7234",
+   "y": "0.1799"
+  }
+ ]
+}

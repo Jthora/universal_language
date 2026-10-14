@@ -1,0 +1,39 @@
+{
+  "sheet": "slice-unary-count-phase",
+  "group": "unary",
+  "axes": [
+    "count",
+    "phase"
+  ],
+  "cells": 16,
+  "held": {
+    "mark": "Wave",
+    "rotation": 0.0,
+    "reflection": 0,
+    "scale": 1.0,
+    "frequency": 1.0,
+    "amplitude": 1.0,
+    "taper": 0.0,
+    "chirp": 0.0
+  },
+  "operand_chosen_for": {
+    "phase": "has a profile to vary"
+  },
+  "samples": {
+    "count": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "phase": [
+      "0",
+      "0.25",
+      "0.5",
+      "0.75"
+    ]
+  },
+  "operators_on_this_slice": {},
+  "contact_cells": 0,
+  "note": "operand chosen so the axis acts: phase needs one that has a profile to vary"
+}

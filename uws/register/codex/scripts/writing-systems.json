@@ -1,0 +1,559 @@
+{
+  "section": "scripts",
+  "title": "Writing systems compared",
+  "is_a_ul_comparison": false,
+  "why_not": "UL is not phonetic; the vocalization bridge does not exist yet. See claim ul-is-not-phonetic.",
+  "measures": [
+    "contours",
+    "holes",
+    "aspect",
+    "ink"
+  ],
+  "deliberately_absent": [
+    "symmetry_order",
+    "curvature_class"
+  ],
+  "absent_because": "both assume a stroke; a glyph in a font is a filled region",
+  "scope": "facts about one typeface drawing one character, not about the script in the abstract",
+  "scripts": [
+    {
+      "script": "Latin",
+      "lang": "en",
+      "font": "DejaVuSans.ttf",
+      "glyphs": [
+        {
+          "char": "O",
+          "contours": 2,
+          "holes": 1,
+          "aspect": 0.89,
+          "ink": 0.37
+        },
+        {
+          "char": "I",
+          "contours": 1,
+          "holes": 0,
+          "aspect": 0.14,
+          "ink": 1.0
+        },
+        {
+          "char": "B",
+          "contours": 3,
+          "holes": 2,
+          "aspect": 0.71,
+          "ink": 0.54
+        },
+        {
+          "char": "S",
+          "contours": 1,
+          "holes": 0,
+          "aspect": 0.68,
+          "ink": 0.4
+        },
+        {
+          "char": "A",
+          "contours": 2,
+          "holes": 1,
+          "aspect": 0.92,
+          "ink": 0.33
+        },
+        {
+          "char": "W",
+          "contours": 1,
+          "holes": 0,
+          "aspect": 1.27,
+          "ink": 0.38
+        }
+      ]
+    },
+    {
+      "script": "Ge'ez",
+      "lang": "am",
+      "font": "FreeSerif.ttf",
+      "glyphs": [
+        {
+          "char": "ሀ",
+          "contours": 1,
+          "holes": 0,
+          "aspect": 0.8,
+          "ink": 0.43
+        },
+        {
+          "char": "ለ",
+          "contours": 1,
+          "holes": 0,
+          "aspect": 0.82,
+          "ink": 0.39
+        },
+        {
+          "char": "ሐ",
+          "contours": 1,
+          "holes": 0,
+          "aspect": 1.27,
+          "ink": 0.31
+        },
+        {
+          "char": "መ",
+          "contours": 3,
+          "holes": 2,
+          "aspect": 2.44,
+          "ink": 0.49
+        },
+        {
+          "char": "ሠ",
+          "contours": 1,
+          "holes": 0,
+          "aspect": 1.88,
+          "ink": 0.41
+        },
+        {
+          "char": "ረ",
+          "contours": 1,
+          "holes": 0,
+          "aspect": 0.87,
+          "ink": 0.29
+        }
+      ]
+    },
+    {
+      "script": "Devanagari",
+      "lang": "hi",
+      "font": "Lohit-Devanagari.ttf",
+      "glyphs": [
+        {
+          "char": "क",
+          "contours": 1,
+          "holes": 0,
+          "aspect": 1.17,
+          "ink": 0.34
+        },
+        {
+          "char": "ख",
+          "contours": 2,
+          "holes": 1,
+          "aspect": 1.28,
+          "ink": 0.36
+        },
+        {
+          "char": "ग",
+          "contours": 1,
+          "holes": 0,
+          "aspect": 0.82,
+          "ink": 0.3
+        },
+        {
+          "char": "घ",
+          "contours": 2,
+          "holes": 1,
+          "aspect": 1.0,
+          "ink": 0.33
+        },
+        {
+          "char": "ङ",
+          "contours": 2,
+          "holes": 0,
+          "aspect": 1.14,
+          "ink": 0.32
+        },
+        {
+          "char": "च",
+          "contours": 1,
+          "holes": 0,
+          "aspect": 1.0,
+          "ink": 0.33
+        }
+      ]
+    },
+    {
+      "script": "Bengali",
+      "lang": "bn",
+      "font": "Lohit-Bengali.ttf",
+      "glyphs": [
+        {
+          "char": "ক",
+          "contours": 2,
+          "holes": 1,
+          "aspect": 1.12,
+          "ink": 0.29
+        },
+        {
+          "char": "খ",
+          "contours": 1,
+          "holes": 0,
+          "aspect": 0.91,
+          "ink": 0.24
+        },
+        {
+          "char": "গ",
+          "contours": 1,
+          "holes": 0,
+          "aspect": 0.87,
+          "ink": 0.23
+        },
+        {
+          "char": "ঘ",
+          "contours": 2,
+          "holes": 1,
+          "aspect": 0.99,
+          "ink": 0.27
+        },
+        {
+          "char": "ঙ",
+          "contours": 2,
+          "holes": 1,
+          "aspect": 0.91,
+          "ink": 0.31
+        },
+        {
+          "char": "চ",
+          "contours": 2,
+          "holes": 1,
+          "aspect": 0.9,
+          "ink": 0.27
+        }
+      ]
+    },
+    {
+      "script": "Thai",
+      "lang": "th",
+      "font": "Loma.ttf",
+      "glyphs": [
+        {
+          "char": "ก",
+          "contours": 1,
+          "holes": 0,
+          "aspect": 0.84,
+          "ink": 0.38
+        },
+        {
+          "char": "ข",
+          "contours": 2,
+          "holes": 1,
+          "aspect": 0.98,
+          "ink": 0.46
+        },
+        {
+          "char": "ค",
+          "contours": 2,
+          "holes": 1,
+          "aspect": 0.9,
+          "ink": 0.5
+        },
+        {
+          "char": "ฆ",
+          "contours": 3,
+          "holes": 2,
+          "aspect": 1.08,
+          "ink": 0.47
+        },
+        {
+          "char": "ง",
+          "contours": 2,
+          "holes": 1,
+          "aspect": 0.61,
+          "ink": 0.45
+        },
+        {
+          "char": "จ",
+          "contours": 2,
+          "holes": 1,
+          "aspect": 0.8,
+          "ink": 0.44
+        }
+      ]
+    },
+    {
+      "script": "Khmer",
+      "lang": "km",
+      "font": "KhmerOS.ttf",
+      "glyphs": [
+        {
+          "char": "ក",
+          "contours": 2,
+          "holes": 0,
+          "aspect": 0.82,
+          "ink": 0.36
+        },
+        {
+          "char": "ខ",
+          "contours": 2,
+          "holes": 1,
+          "aspect": 0.68,
+          "ink": 0.42
+        },
+        {
+          "char": "គ",
+          "contours": 2,
+          "holes": 0,
+          "aspect": 0.82,
+          "ink": 0.4
+        },
+        {
+          "char": "ឃ",
+          "contours": 2,
+          "holes": 1,
+          "aspect": 1.5,
+          "ink": 0.32
+        },
+        {
+          "char": "ង",
+          "contours": 3,
+          "holes": 2,
+          "aspect": 0.7,
+          "ink": 0.38
+        },
+        {
+          "char": "ច",
+          "contours": 2,
+          "holes": 1,
+          "aspect": 0.82,
+          "ink": 0.39
+        }
+      ]
+    },
+    {
+      "script": "Myanmar",
+      "lang": "my",
+      "font": "Padauk-Regular.ttf",
+      "glyphs": [
+        {
+          "char": "က",
+          "contours": 2,
+          "holes": 0,
+          "aspect": 1.9,
+          "ink": 0.26
+        },
+        {
+          "char": "ခ",
+          "contours": 1,
+          "holes": 0,
+          "aspect": 0.97,
+          "ink": 0.36
+        },
+        {
+          "char": "ဂ",
+          "contours": 1,
+          "holes": 0,
+          "aspect": 1.0,
+          "ink": 0.26
+        },
+        {
+          "char": "ဃ",
+          "contours": 2,
+          "holes": 0,
+          "aspect": 1.89,
+          "ink": 0.27
+        },
+        {
+          "char": "င",
+          "contours": 1,
+          "holes": 0,
+          "aspect": 0.97,
+          "ink": 0.28
+        },
+        {
+          "char": "စ",
+          "contours": 3,
+          "holes": 1,
+          "aspect": 1.0,
+          "ink": 0.39
+        }
+      ]
+    },
+    {
+      "script": "Hangul",
+      "lang": "ko",
+      "font": "NotoSansCJK-Regular.ttc",
+      "glyphs": [
+        {
+          "char": "ㅇ",
+          "contours": 2,
+          "holes": 1,
+          "aspect": 1.13,
+          "ink": 0.39
+        },
+        {
+          "char": "ㅁ",
+          "contours": 2,
+          "holes": 1,
+          "aspect": 1.19,
+          "ink": 0.5
+        },
+        {
+          "char": "ㄱ",
+          "contours": 1,
+          "holes": 0,
+          "aspect": 1.19,
+          "ink": 0.27
+        },
+        {
+          "char": "ㅅ",
+          "contours": 1,
+          "holes": 0,
+          "aspect": 1.27,
+          "ink": 0.24
+        },
+        {
+          "char": "ㄴ",
+          "contours": 1,
+          "holes": 0,
+          "aspect": 1.23,
+          "ink": 0.27
+        },
+        {
+          "char": "ㅂ",
+          "contours": 2,
+          "holes": 1,
+          "aspect": 1.15,
+          "ink": 0.5
+        }
+      ]
+    },
+    {
+      "script": "Arabic",
+      "lang": "ar",
+      "font": "DejaVuSans.ttf",
+      "glyphs": [
+        {
+          "char": "ا",
+          "contours": 1,
+          "holes": 0,
+          "aspect": 0.12,
+          "ink": 1.0
+        },
+        {
+          "char": "و",
+          "contours": 2,
+          "holes": 1,
+          "aspect": 0.8,
+          "ink": 0.45
+        },
+        {
+          "char": "ن",
+          "contours": 1,
+          "holes": 0,
+          "aspect": 0.94,
+          "ink": 0.29
+        },
+        {
+          "char": "م",
+          "contours": 2,
+          "holes": 1,
+          "aspect": 0.78,
+          "ink": 0.39
+        },
+        {
+          "char": "ل",
+          "contours": 1,
+          "holes": 0,
+          "aspect": 0.62,
+          "ink": 0.25
+        },
+        {
+          "char": "ب",
+          "contours": 1,
+          "holes": 0,
+          "aspect": 1.61,
+          "ink": 0.25
+        }
+      ]
+    },
+    {
+      "script": "Georgian",
+      "lang": "ka",
+      "font": "DejaVuSans.ttf",
+      "glyphs": [
+        {
+          "char": "ა",
+          "contours": 1,
+          "holes": 0,
+          "aspect": 0.68,
+          "ink": 0.37
+        },
+        {
+          "char": "ბ",
+          "contours": 2,
+          "holes": 1,
+          "aspect": 0.49,
+          "ink": 0.37
+        },
+        {
+          "char": "გ",
+          "contours": 2,
+          "holes": 1,
+          "aspect": 0.63,
+          "ink": 0.38
+        },
+        {
+          "char": "დ",
+          "contours": 2,
+          "holes": 1,
+          "aspect": 0.91,
+          "ink": 0.37
+        },
+        {
+          "char": "ე",
+          "contours": 1,
+          "holes": 0,
+          "aspect": 0.51,
+          "ink": 0.42
+        },
+        {
+          "char": "ვ",
+          "contours": 1,
+          "holes": 0,
+          "aspect": 0.52,
+          "ink": 0.43
+        }
+      ]
+    },
+    {
+      "script": "Armenian",
+      "lang": "hy",
+      "font": "DejaVuSans.ttf",
+      "glyphs": [
+        {
+          "char": "ա",
+          "contours": 1,
+          "holes": 0,
+          "aspect": 1.42,
+          "ink": 0.41
+        },
+        {
+          "char": "բ",
+          "contours": 1,
+          "holes": 0,
+          "aspect": 0.6,
+          "ink": 0.41
+        },
+        {
+          "char": "գ",
+          "contours": 2,
+          "holes": 1,
+          "aspect": 0.77,
+          "ink": 0.36
+        },
+        {
+          "char": "դ",
+          "contours": 1,
+          "holes": 0,
+          "aspect": 0.73,
+          "ink": 0.33
+        },
+        {
+          "char": "ե",
+          "contours": 1,
+          "holes": 0,
+          "aspect": 0.6,
+          "ink": 0.41
+        },
+        {
+          "char": "զ",
+          "contours": 2,
+          "holes": 1,
+          "aspect": 0.77,
+          "ink": 0.36
+        }
+      ]
+    }
+  ]
+}

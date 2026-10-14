@@ -1,0 +1,32 @@
+{
+  "sheet": "placement-dial",
+  "title": "The placement plane",
+  "a": "Circle",
+  "b": "Point",
+  "scale": "one scale for the whole sheet, so sizes compare across rows",
+  "extent_of_a": 0.9999999999999999,
+  "radii": [
+    0.0,
+    0.35,
+    0.75,
+    1.0,
+    1.5,
+    2.2
+  ],
+  "bearings": [
+    0.0,
+    30.0,
+    60.0,
+    90.0,
+    120.0,
+    150.0,
+    180.0,
+    210.0,
+    240.0,
+    270.0,
+    300.0,
+    330.0
+  ],
+  "teaches": "the relational schemas are regions of a continuous placement plane, not a discrete vocabulary",
+  "frame_bound_axis": "bearing (theta) — see F103"
+}

@@ -1,0 +1,113 @@
+{
+ "sheet": "slices/slice-u-rotation",
+ "cells": [
+  {
+   "id": "cell-0-0",
+   "title": "axis-x rotation, x 0°, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=0, mark=Wave, rotation=0°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "rotation",
+   "x": "0°",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-0-1",
+   "title": "axis-x rotation, x 30°, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=0, mark=Wave, rotation=30°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "rotation",
+   "x": "30°",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-0-2",
+   "title": "axis-x rotation, x 60°, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=0, mark=Wave, rotation=60°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "rotation",
+   "x": "60°",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-0-3",
+   "title": "axis-x rotation, x 90°, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=0, mark=Wave, rotation=90°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "rotation",
+   "x": "90°",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-0-4",
+   "title": "axis-x rotation, x 120°, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=0, mark=Wave, rotation=120°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "rotation",
+   "x": "120°",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-0-5",
+   "title": "axis-x rotation, x 150°, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=0, mark=Wave, rotation=150°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "rotation",
+   "x": "150°",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-0-6",
+   "title": "axis-x rotation, x 180°, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=0, mark=Wave, rotation=180°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "rotation",
+   "x": "180°",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-0-7",
+   "title": "axis-x rotation, x 210°, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=0, mark=Wave, rotation=210°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "rotation",
+   "x": "210°",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-0-8",
+   "title": "axis-x rotation, x 240°, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=0, mark=Wave, rotation=240°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "rotation",
+   "x": "240°",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-0-9",
+   "title": "axis-x rotation, x 270°, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=0, mark=Wave, rotation=270°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "rotation",
+   "x": "270°",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-0-10",
+   "title": "axis-x rotation, x 300°, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=0, mark=Wave, rotation=300°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "rotation",
+   "x": "300°",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-0-11",
+   "title": "axis-x rotation, x 330°, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=0, mark=Wave, rotation=330°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "rotation",
+   "x": "330°",
+   "operator": "none",
+   "contact": "false"
+  }
+ ]
+}

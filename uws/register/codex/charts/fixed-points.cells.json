@@ -1,0 +1,275 @@
+{
+ "sheet": "charts/fixed-points",
+ "cells": [
+  {
+   "id": "cell-fixed-Point-0",
+   "title": "Point under turn 90: unmoved",
+   "desc": "mark Point; turn 90; hausdorff 0.0000; unmoved True",
+   "mark": "Point",
+   "transformation": "turn 90",
+   "distance": "0.0000",
+   "unmoved": "true"
+  },
+  {
+   "id": "cell-fixed-Point-1",
+   "title": "Point under turn 180: unmoved",
+   "desc": "mark Point; turn 180; hausdorff 0.0000; unmoved True",
+   "mark": "Point",
+   "transformation": "turn 180",
+   "distance": "0.0000",
+   "unmoved": "true"
+  },
+  {
+   "id": "cell-fixed-Point-2",
+   "title": "Point under turn 17: unmoved",
+   "desc": "mark Point; turn 17; hausdorff 0.0000; unmoved True",
+   "mark": "Point",
+   "transformation": "turn 17",
+   "distance": "0.0000",
+   "unmoved": "true"
+  },
+  {
+   "id": "cell-fixed-Point-3",
+   "title": "Point under mirror 0: unmoved",
+   "desc": "mark Point; mirror 0; hausdorff 0.0000; unmoved True",
+   "mark": "Point",
+   "transformation": "mirror 0",
+   "distance": "0.0000",
+   "unmoved": "true"
+  },
+  {
+   "id": "cell-fixed-Point-4",
+   "title": "Point under mirror 90: unmoved",
+   "desc": "mark Point; mirror 90; hausdorff 0.0000; unmoved True",
+   "mark": "Point",
+   "transformation": "mirror 90",
+   "distance": "0.0000",
+   "unmoved": "true"
+  },
+  {
+   "id": "cell-fixed-Line-0",
+   "title": "Line under turn 90: moved",
+   "desc": "mark Line; turn 90; hausdorff 1.0000; unmoved False",
+   "mark": "Line",
+   "transformation": "turn 90",
+   "distance": "1.0000",
+   "unmoved": "false"
+  },
+  {
+   "id": "cell-fixed-Line-1",
+   "title": "Line under turn 180: unmoved",
+   "desc": "mark Line; turn 180; hausdorff 0.0000; unmoved True",
+   "mark": "Line",
+   "transformation": "turn 180",
+   "distance": "0.0000",
+   "unmoved": "true"
+  },
+  {
+   "id": "cell-fixed-Line-2",
+   "title": "Line under turn 17: moved",
+   "desc": "mark Line; turn 17; hausdorff 0.2924; unmoved False",
+   "mark": "Line",
+   "transformation": "turn 17",
+   "distance": "0.2924",
+   "unmoved": "false"
+  },
+  {
+   "id": "cell-fixed-Line-3",
+   "title": "Line under mirror 0: unmoved",
+   "desc": "mark Line; mirror 0; hausdorff 0.0000; unmoved True",
+   "mark": "Line",
+   "transformation": "mirror 0",
+   "distance": "0.0000",
+   "unmoved": "true"
+  },
+  {
+   "id": "cell-fixed-Line-4",
+   "title": "Line under mirror 90: unmoved",
+   "desc": "mark Line; mirror 90; hausdorff 0.0000; unmoved True",
+   "mark": "Line",
+   "transformation": "mirror 90",
+   "distance": "0.0000",
+   "unmoved": "true"
+  },
+  {
+   "id": "cell-fixed-Angle-0",
+   "title": "Angle under turn 90: moved",
+   "desc": "mark Angle; turn 90; hausdorff 0.6340; unmoved False",
+   "mark": "Angle",
+   "transformation": "turn 90",
+   "distance": "0.6340",
+   "unmoved": "false"
+  },
+  {
+   "id": "cell-fixed-Angle-1",
+   "title": "Angle under turn 180: moved",
+   "desc": "mark Angle; turn 180; hausdorff 0.6314; unmoved False",
+   "mark": "Angle",
+   "transformation": "turn 180",
+   "distance": "0.6314",
+   "unmoved": "false"
+  },
+  {
+   "id": "cell-fixed-Angle-2",
+   "title": "Angle under turn 17: moved",
+   "desc": "mark Angle; turn 17; hausdorff 0.2956; unmoved False",
+   "mark": "Angle",
+   "transformation": "turn 17",
+   "distance": "0.2956",
+   "unmoved": "false"
+  },
+  {
+   "id": "cell-fixed-Angle-3",
+   "title": "Angle under mirror 0: moved",
+   "desc": "mark Angle; mirror 0; hausdorff 0.6314; unmoved False",
+   "mark": "Angle",
+   "transformation": "mirror 0",
+   "distance": "0.6314",
+   "unmoved": "false"
+  },
+  {
+   "id": "cell-fixed-Angle-4",
+   "title": "Angle under mirror 90: unmoved",
+   "desc": "mark Angle; mirror 90; hausdorff 0.0000; unmoved True",
+   "mark": "Angle",
+   "transformation": "mirror 90",
+   "distance": "0.0000",
+   "unmoved": "true"
+  },
+  {
+   "id": "cell-fixed-Curve-0",
+   "title": "Curve under turn 90: moved",
+   "desc": "mark Curve; turn 90; hausdorff 0.8518; unmoved False",
+   "mark": "Curve",
+   "transformation": "turn 90",
+   "distance": "0.8518",
+   "unmoved": "false"
+  },
+  {
+   "id": "cell-fixed-Curve-1",
+   "title": "Curve under turn 180: moved",
+   "desc": "mark Curve; turn 180; hausdorff 0.6157; unmoved False",
+   "mark": "Curve",
+   "transformation": "turn 180",
+   "distance": "0.6157",
+   "unmoved": "false"
+  },
+  {
+   "id": "cell-fixed-Curve-2",
+   "title": "Curve under turn 17: moved",
+   "desc": "mark Curve; turn 17; hausdorff 0.2956; unmoved False",
+   "mark": "Curve",
+   "transformation": "turn 17",
+   "distance": "0.2956",
+   "unmoved": "false"
+  },
+  {
+   "id": "cell-fixed-Curve-3",
+   "title": "Curve under mirror 0: moved",
+   "desc": "mark Curve; mirror 0; hausdorff 0.6157; unmoved False",
+   "mark": "Curve",
+   "transformation": "mirror 0",
+   "distance": "0.6157",
+   "unmoved": "false"
+  },
+  {
+   "id": "cell-fixed-Curve-4",
+   "title": "Curve under mirror 90: unmoved",
+   "desc": "mark Curve; mirror 90; hausdorff 0.0000; unmoved True",
+   "mark": "Curve",
+   "transformation": "mirror 90",
+   "distance": "0.0000",
+   "unmoved": "true"
+  },
+  {
+   "id": "cell-fixed-Wave-0",
+   "title": "Wave under turn 90: moved",
+   "desc": "mark Wave; turn 90; hausdorff 0.7567; unmoved False",
+   "mark": "Wave",
+   "transformation": "turn 90",
+   "distance": "0.7567",
+   "unmoved": "false"
+  },
+  {
+   "id": "cell-fixed-Wave-1",
+   "title": "Wave under turn 180: unmoved",
+   "desc": "mark Wave; turn 180; hausdorff 0.0000; unmoved True",
+   "mark": "Wave",
+   "transformation": "turn 180",
+   "distance": "0.0000",
+   "unmoved": "true"
+  },
+  {
+   "id": "cell-fixed-Wave-2",
+   "title": "Wave under turn 17: moved",
+   "desc": "mark Wave; turn 17; hausdorff 0.2956; unmoved False",
+   "mark": "Wave",
+   "transformation": "turn 17",
+   "distance": "0.2956",
+   "unmoved": "false"
+  },
+  {
+   "id": "cell-fixed-Wave-3",
+   "title": "Wave under mirror 0: moved",
+   "desc": "mark Wave; mirror 0; hausdorff 0.7265; unmoved False",
+   "mark": "Wave",
+   "transformation": "mirror 0",
+   "distance": "0.7265",
+   "unmoved": "false"
+  },
+  {
+   "id": "cell-fixed-Wave-4",
+   "title": "Wave under mirror 90: moved",
+   "desc": "mark Wave; mirror 90; hausdorff 0.7265; unmoved False",
+   "mark": "Wave",
+   "transformation": "mirror 90",
+   "distance": "0.7265",
+   "unmoved": "false"
+  },
+  {
+   "id": "cell-fixed-Circle-0",
+   "title": "Circle under turn 90: unmoved",
+   "desc": "mark Circle; turn 90; hausdorff 0.0062; unmoved True",
+   "mark": "Circle",
+   "transformation": "turn 90",
+   "distance": "0.0062",
+   "unmoved": "true"
+  },
+  {
+   "id": "cell-fixed-Circle-1",
+   "title": "Circle under turn 180: unmoved",
+   "desc": "mark Circle; turn 180; hausdorff 0.0077; unmoved True",
+   "mark": "Circle",
+   "transformation": "turn 180",
+   "distance": "0.0077",
+   "unmoved": "true"
+  },
+  {
+   "id": "cell-fixed-Circle-2",
+   "title": "Circle under turn 17: unmoved",
+   "desc": "mark Circle; turn 17; hausdorff 0.0056; unmoved True",
+   "mark": "Circle",
+   "transformation": "turn 17",
+   "distance": "0.0056",
+   "unmoved": "true"
+  },
+  {
+   "id": "cell-fixed-Circle-3",
+   "title": "Circle under mirror 0: unmoved",
+   "desc": "mark Circle; mirror 0; hausdorff 0.0000; unmoved True",
+   "mark": "Circle",
+   "transformation": "mirror 0",
+   "distance": "0.0000",
+   "unmoved": "true"
+  },
+  {
+   "id": "cell-fixed-Circle-4",
+   "title": "Circle under mirror 90: unmoved",
+   "desc": "mark Circle; mirror 90; hausdorff 0.0077; unmoved True",
+   "mark": "Circle",
+   "transformation": "mirror 90",
+   "distance": "0.0077",
+   "unmoved": "true"
+  }
+ ]
+}

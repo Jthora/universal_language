@@ -1,0 +1,203 @@
+{
+ "sheet": "slices/slice-u-mark-chirp",
+ "cells": [
+  {
+   "id": "cell-0-0",
+   "title": "axis-x chirp, x 0, axis-y mark, y Point, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=0, mark=Point, rotation=0°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "chirp",
+   "x": "0",
+   "axis-y": "mark",
+   "y": "Point",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-0-1",
+   "title": "axis-x chirp, x 1, axis-y mark, y Point, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=1, mark=Point, rotation=0°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "chirp",
+   "x": "1",
+   "axis-y": "mark",
+   "y": "Point",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-0-2",
+   "title": "axis-x chirp, x 2, axis-y mark, y Point, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=2, mark=Point, rotation=0°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "chirp",
+   "x": "2",
+   "axis-y": "mark",
+   "y": "Point",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-1-0",
+   "title": "axis-x chirp, x 0, axis-y mark, y Line, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=0, mark=Line, rotation=0°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "chirp",
+   "x": "0",
+   "axis-y": "mark",
+   "y": "Line",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-1-1",
+   "title": "axis-x chirp, x 1, axis-y mark, y Line, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=1, mark=Line, rotation=0°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "chirp",
+   "x": "1",
+   "axis-y": "mark",
+   "y": "Line",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-1-2",
+   "title": "axis-x chirp, x 2, axis-y mark, y Line, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=2, mark=Line, rotation=0°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "chirp",
+   "x": "2",
+   "axis-y": "mark",
+   "y": "Line",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-2-0",
+   "title": "axis-x chirp, x 0, axis-y mark, y Angle, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=0, mark=Angle, rotation=0°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "chirp",
+   "x": "0",
+   "axis-y": "mark",
+   "y": "Angle",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-2-1",
+   "title": "axis-x chirp, x 1, axis-y mark, y Angle, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=1, mark=Angle, rotation=0°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "chirp",
+   "x": "1",
+   "axis-y": "mark",
+   "y": "Angle",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-2-2",
+   "title": "axis-x chirp, x 2, axis-y mark, y Angle, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=2, mark=Angle, rotation=0°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "chirp",
+   "x": "2",
+   "axis-y": "mark",
+   "y": "Angle",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-3-0",
+   "title": "axis-x chirp, x 0, axis-y mark, y Curve, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=0, mark=Curve, rotation=0°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "chirp",
+   "x": "0",
+   "axis-y": "mark",
+   "y": "Curve",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-3-1",
+   "title": "axis-x chirp, x 1, axis-y mark, y Curve, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=1, mark=Curve, rotation=0°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "chirp",
+   "x": "1",
+   "axis-y": "mark",
+   "y": "Curve",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-3-2",
+   "title": "axis-x chirp, x 2, axis-y mark, y Curve, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=2, mark=Curve, rotation=0°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "chirp",
+   "x": "2",
+   "axis-y": "mark",
+   "y": "Curve",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-4-0",
+   "title": "axis-x chirp, x 0, axis-y mark, y Wave, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=0, mark=Wave, rotation=0°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "chirp",
+   "x": "0",
+   "axis-y": "mark",
+   "y": "Wave",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-4-1",
+   "title": "axis-x chirp, x 1, axis-y mark, y Wave, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=1, mark=Wave, rotation=0°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "chirp",
+   "x": "1",
+   "axis-y": "mark",
+   "y": "Wave",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-4-2",
+   "title": "axis-x chirp, x 2, axis-y mark, y Wave, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=2, mark=Wave, rotation=0°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "chirp",
+   "x": "2",
+   "axis-y": "mark",
+   "y": "Wave",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-5-0",
+   "title": "axis-x chirp, x 0, axis-y mark, y Circle, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=0, mark=Circle, rotation=0°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "chirp",
+   "x": "0",
+   "axis-y": "mark",
+   "y": "Circle",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-5-1",
+   "title": "axis-x chirp, x 1, axis-y mark, y Circle, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=1, mark=Circle, rotation=0°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "chirp",
+   "x": "1",
+   "axis-y": "mark",
+   "y": "Circle",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-5-2",
+   "title": "axis-x chirp, x 2, axis-y mark, y Circle, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=2, mark=Circle, rotation=0°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "chirp",
+   "x": "2",
+   "axis-y": "mark",
+   "y": "Circle",
+   "operator": "none",
+   "contact": "false"
+  }
+ ]
+}

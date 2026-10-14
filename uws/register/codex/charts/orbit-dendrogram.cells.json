@@ -1,0 +1,656 @@
+{
+ "sheet": "charts/orbit-dendrogram",
+ "cells": [
+  {
+   "id": "cell-leaf-0",
+   "title": "orbit 0",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "0",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-1",
+   "title": "orbit 1",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "1",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-8",
+   "title": "orbit 8",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "8",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-57",
+   "title": "orbit 57",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "57",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-35",
+   "title": "orbit 35",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "35",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-36",
+   "title": "orbit 36",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "36",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-50",
+   "title": "orbit 50",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "50",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-51",
+   "title": "orbit 51",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "51",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-37",
+   "title": "orbit 37",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "37",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-43",
+   "title": "orbit 43",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "43",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-77",
+   "title": "orbit 77",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "77",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-56",
+   "title": "orbit 56",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "56",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-85",
+   "title": "orbit 85",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "85",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-39",
+   "title": "orbit 39 — Chaos pair (F44)",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "39",
+   "named": "true"
+  },
+  {
+   "id": "cell-leaf-40",
+   "title": "orbit 40",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "40",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-74",
+   "title": "orbit 74",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "74",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-52",
+   "title": "orbit 52",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "52",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-53",
+   "title": "orbit 53",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "53",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-82",
+   "title": "orbit 82",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "82",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-16",
+   "title": "orbit 16",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "16",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-41",
+   "title": "orbit 41",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "41",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-54",
+   "title": "orbit 54",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "54",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-75",
+   "title": "orbit 75",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "75",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-83",
+   "title": "orbit 83",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "83",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-14",
+   "title": "orbit 14",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "14",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-9",
+   "title": "orbit 9",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "9",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-2",
+   "title": "orbit 2",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "2",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-12",
+   "title": "orbit 12",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "12",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-19",
+   "title": "orbit 19",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "19",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-3",
+   "title": "orbit 3",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "3",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-4",
+   "title": "orbit 4",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "4",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-10",
+   "title": "orbit 10",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "10",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-18",
+   "title": "orbit 18",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "18",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-64",
+   "title": "orbit 64",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "64",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-89",
+   "title": "orbit 89",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "89",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-31",
+   "title": "orbit 31",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "31",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-69",
+   "title": "orbit 69",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "69",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-13",
+   "title": "orbit 13 — infinity (SymbolFolds)",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "13",
+   "named": "true"
+  },
+  {
+   "id": "cell-leaf-17",
+   "title": "orbit 17",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "17",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-38",
+   "title": "orbit 38",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "38",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-42",
+   "title": "orbit 42",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "42",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-55",
+   "title": "orbit 55",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "55",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-76",
+   "title": "orbit 76",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "76",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-84",
+   "title": "orbit 84",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "84",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-78",
+   "title": "orbit 78",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "78",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-26",
+   "title": "orbit 26",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "26",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-67",
+   "title": "orbit 67",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "67",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-58",
+   "title": "orbit 58",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "58",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-62",
+   "title": "orbit 62",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "62",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-59",
+   "title": "orbit 59",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "59",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-63",
+   "title": "orbit 63",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "63",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-86",
+   "title": "orbit 86",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "86",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-60",
+   "title": "orbit 60",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "60",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-87",
+   "title": "orbit 87",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "87",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-29",
+   "title": "orbit 29",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "29",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-30",
+   "title": "orbit 30",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "30",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-68",
+   "title": "orbit 68",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "68",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-81",
+   "title": "orbit 81",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "81",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-49",
+   "title": "orbit 49",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "49",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-27",
+   "title": "orbit 27",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "27",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-28",
+   "title": "orbit 28",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "28",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-24",
+   "title": "orbit 24",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "24",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-25",
+   "title": "orbit 25",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "25",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-61",
+   "title": "orbit 61",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "61",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-88",
+   "title": "orbit 88",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "88",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-33",
+   "title": "orbit 33",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "33",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-72",
+   "title": "orbit 72",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "72",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-34",
+   "title": "orbit 34",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "34",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-71",
+   "title": "orbit 71",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "71",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-73",
+   "title": "orbit 73",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "73",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-7",
+   "title": "orbit 7",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "7",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-91",
+   "title": "orbit 91 — + (SymbolFolds)",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "91",
+   "named": "true"
+  },
+  {
+   "id": "cell-leaf-92",
+   "title": "orbit 92",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "92",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-44",
+   "title": "orbit 44",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "44",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-45",
+   "title": "orbit 45",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "45",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-48",
+   "title": "orbit 48",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "48",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-80",
+   "title": "orbit 80",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "80",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-46",
+   "title": "orbit 46",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "46",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-47",
+   "title": "orbit 47",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "47",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-79",
+   "title": "orbit 79",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "79",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-5",
+   "title": "orbit 5",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "5",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-15",
+   "title": "orbit 15",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "15",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-11",
+   "title": "orbit 11",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "11",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-20",
+   "title": "orbit 20",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "20",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-65",
+   "title": "orbit 65",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "65",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-90",
+   "title": "orbit 90",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "90",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-32",
+   "title": "orbit 32",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "32",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-70",
+   "title": "orbit 70",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "70",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-22",
+   "title": "orbit 22 — Sun-in-Circle (F43)",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "22",
+   "named": "true"
+  },
+  {
+   "id": "cell-leaf-23",
+   "title": "orbit 23",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "23",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-21",
+   "title": "orbit 21",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "21",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-66",
+   "title": "orbit 66",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "66",
+   "named": "false"
+  },
+  {
+   "id": "cell-leaf-6",
+   "title": "orbit 6",
+   "desc": "leaf in the average-linkage tree",
+   "orbit": "6",
+   "named": "false"
+  }
+ ]
+}

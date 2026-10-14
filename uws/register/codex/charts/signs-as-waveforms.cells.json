@@ -1,0 +1,422 @@
+{
+ "sheet": "charts/signs-as-waveforms",
+ "cells": [
+  {
+   "id": "cell-ae2b67f017",
+   "title": "Aries",
+   "desc": "",
+   "sign": "1",
+   "geometry": "angle",
+   "apex-up": "true",
+   "crossbar": "false",
+   "id_is_derived": true
+  },
+  {
+   "id": "cell-e374f3eeff",
+   "title": "Taurus",
+   "desc": "",
+   "sign": "2",
+   "geometry": "square",
+   "apex-up": "false",
+   "crossbar": "true",
+   "id_is_derived": true
+  },
+  {
+   "id": "cell-16350f812b",
+   "title": "Gemini",
+   "desc": "",
+   "sign": "3",
+   "geometry": "arc",
+   "apex-up": "true",
+   "crossbar": "true",
+   "id_is_derived": true
+  },
+  {
+   "id": "cell-b97c23ac3e",
+   "title": "Cancer",
+   "desc": "",
+   "sign": "4",
+   "geometry": "angle",
+   "apex-up": "false",
+   "crossbar": "false",
+   "id_is_derived": true
+  },
+  {
+   "id": "cell-09d73e2882",
+   "title": "Leo",
+   "desc": "",
+   "sign": "5",
+   "geometry": "square",
+   "apex-up": "true",
+   "crossbar": "false",
+   "id_is_derived": true
+  },
+  {
+   "id": "cell-82910b32dc",
+   "title": "Virgo",
+   "desc": "",
+   "sign": "6",
+   "geometry": "arc",
+   "apex-up": "false",
+   "crossbar": "true",
+   "id_is_derived": true
+  },
+  {
+   "id": "cell-686eec7f85",
+   "title": "Libra",
+   "desc": "",
+   "sign": "7",
+   "geometry": "angle",
+   "apex-up": "true",
+   "crossbar": "true",
+   "id_is_derived": true
+  },
+  {
+   "id": "cell-0932a53c05",
+   "title": "Scorpio",
+   "desc": "",
+   "sign": "8",
+   "geometry": "square",
+   "apex-up": "false",
+   "crossbar": "false",
+   "id_is_derived": true
+  },
+  {
+   "id": "cell-668d149cf1",
+   "title": "Sagittarius",
+   "desc": "",
+   "sign": "9",
+   "geometry": "arc",
+   "apex-up": "true",
+   "crossbar": "false",
+   "id_is_derived": true
+  },
+  {
+   "id": "cell-d7a6182d61",
+   "title": "Capricorn",
+   "desc": "",
+   "sign": "10",
+   "geometry": "angle",
+   "apex-up": "false",
+   "crossbar": "true",
+   "id_is_derived": true
+  },
+  {
+   "id": "cell-d6552208fb",
+   "title": "Aquarius",
+   "desc": "",
+   "sign": "11",
+   "geometry": "square",
+   "apex-up": "true",
+   "crossbar": "true",
+   "id_is_derived": true
+  },
+  {
+   "id": "cell-3539efcd59",
+   "title": "Pisces",
+   "desc": "",
+   "sign": "12",
+   "geometry": "arc",
+   "apex-up": "false",
+   "crossbar": "false",
+   "id_is_derived": true
+  },
+  {
+   "id": "cell-10f4fb1bd1",
+   "title": "Aries to Taurus, 25% across — not a sign",
+   "desc": "",
+   "between": "1-2",
+   "t": "0.25",
+   "is-a-sign": "false",
+   "id_is_derived": true
+  },
+  {
+   "id": "cell-e27f86d1a4",
+   "title": "Aries to Taurus, 50% across — not a sign",
+   "desc": "",
+   "between": "1-2",
+   "t": "0.50",
+   "is-a-sign": "false",
+   "id_is_derived": true
+  },
+  {
+   "id": "cell-47ee9f94b5",
+   "title": "Aries to Taurus, 75% across — not a sign",
+   "desc": "",
+   "between": "1-2",
+   "t": "0.75",
+   "is-a-sign": "false",
+   "id_is_derived": true
+  },
+  {
+   "id": "cell-da723018f8",
+   "title": "Taurus to Gemini, 25% across — not a sign",
+   "desc": "",
+   "between": "2-3",
+   "t": "0.25",
+   "is-a-sign": "false",
+   "id_is_derived": true
+  },
+  {
+   "id": "cell-716c0de57a",
+   "title": "Taurus to Gemini, 50% across — not a sign",
+   "desc": "",
+   "between": "2-3",
+   "t": "0.50",
+   "is-a-sign": "false",
+   "id_is_derived": true
+  },
+  {
+   "id": "cell-efff4a1835",
+   "title": "Taurus to Gemini, 75% across — not a sign",
+   "desc": "",
+   "between": "2-3",
+   "t": "0.75",
+   "is-a-sign": "false",
+   "id_is_derived": true
+  },
+  {
+   "id": "cell-2eb0414819",
+   "title": "Gemini to Cancer, 25% across — not a sign",
+   "desc": "",
+   "between": "3-4",
+   "t": "0.25",
+   "is-a-sign": "false",
+   "id_is_derived": true
+  },
+  {
+   "id": "cell-af082ed4ef",
+   "title": "Gemini to Cancer, 50% across — not a sign",
+   "desc": "",
+   "between": "3-4",
+   "t": "0.50",
+   "is-a-sign": "false",
+   "id_is_derived": true
+  },
+  {
+   "id": "cell-280f0265fa",
+   "title": "Gemini to Cancer, 75% across — not a sign",
+   "desc": "",
+   "between": "3-4",
+   "t": "0.75",
+   "is-a-sign": "false",
+   "id_is_derived": true
+  },
+  {
+   "id": "cell-793fc39cef",
+   "title": "Cancer to Leo, 25% across — not a sign",
+   "desc": "",
+   "between": "4-5",
+   "t": "0.25",
+   "is-a-sign": "false",
+   "id_is_derived": true
+  },
+  {
+   "id": "cell-509e403614",
+   "title": "Cancer to Leo, 50% across — not a sign",
+   "desc": "",
+   "between": "4-5",
+   "t": "0.50",
+   "is-a-sign": "false",
+   "id_is_derived": true
+  },
+  {
+   "id": "cell-816d345e34",
+   "title": "Cancer to Leo, 75% across — not a sign",
+   "desc": "",
+   "between": "4-5",
+   "t": "0.75",
+   "is-a-sign": "false",
+   "id_is_derived": true
+  },
+  {
+   "id": "cell-54de05943c",
+   "title": "Leo to Virgo, 25% across — not a sign",
+   "desc": "",
+   "between": "5-6",
+   "t": "0.25",
+   "is-a-sign": "false",
+   "id_is_derived": true
+  },
+  {
+   "id": "cell-a158fb49d9",
+   "title": "Leo to Virgo, 50% across — not a sign",
+   "desc": "",
+   "between": "5-6",
+   "t": "0.50",
+   "is-a-sign": "false",
+   "id_is_derived": true
+  },
+  {
+   "id": "cell-3c7036fbfe",
+   "title": "Leo to Virgo, 75% across — not a sign",
+   "desc": "",
+   "between": "5-6",
+   "t": "0.75",
+   "is-a-sign": "false",
+   "id_is_derived": true
+  },
+  {
+   "id": "cell-3984816d9c",
+   "title": "Virgo to Libra, 25% across — not a sign",
+   "desc": "",
+   "between": "6-7",
+   "t": "0.25",
+   "is-a-sign": "false",
+   "id_is_derived": true
+  },
+  {
+   "id": "cell-f8d2c4b243",
+   "title": "Virgo to Libra, 50% across — not a sign",
+   "desc": "",
+   "between": "6-7",
+   "t": "0.50",
+   "is-a-sign": "false",
+   "id_is_derived": true
+  },
+  {
+   "id": "cell-8d3add1b21",
+   "title": "Virgo to Libra, 75% across — not a sign",
+   "desc": "",
+   "between": "6-7",
+   "t": "0.75",
+   "is-a-sign": "false",
+   "id_is_derived": true
+  },
+  {
+   "id": "cell-a99bbe55fe",
+   "title": "Libra to Scorpio, 25% across — not a sign",
+   "desc": "",
+   "between": "7-8",
+   "t": "0.25",
+   "is-a-sign": "false",
+   "id_is_derived": true
+  },
+  {
+   "id": "cell-3bc03b605e",
+   "title": "Libra to Scorpio, 50% across — not a sign",
+   "desc": "",
+   "between": "7-8",
+   "t": "0.50",
+   "is-a-sign": "false",
+   "id_is_derived": true
+  },
+  {
+   "id": "cell-45f7774653",
+   "title": "Libra to Scorpio, 75% across — not a sign",
+   "desc": "",
+   "between": "7-8",
+   "t": "0.75",
+   "is-a-sign": "false",
+   "id_is_derived": true
+  },
+  {
+   "id": "cell-5b215da79f",
+   "title": "Scorpio to Sagittarius, 25% across — not a sign",
+   "desc": "",
+   "between": "8-9",
+   "t": "0.25",
+   "is-a-sign": "false",
+   "id_is_derived": true
+  },
+  {
+   "id": "cell-b24481b5be",
+   "title": "Scorpio to Sagittarius, 50% across — not a sign",
+   "desc": "",
+   "between": "8-9",
+   "t": "0.50",
+   "is-a-sign": "false",
+   "id_is_derived": true
+  },
+  {
+   "id": "cell-d6ce14058d",
+   "title": "Scorpio to Sagittarius, 75% across — not a sign",
+   "desc": "",
+   "between": "8-9",
+   "t": "0.75",
+   "is-a-sign": "false",
+   "id_is_derived": true
+  },
+  {
+   "id": "cell-51a063cbb3",
+   "title": "Sagittarius to Capricorn, 25% across — not a sign",
+   "desc": "",
+   "between": "9-10",
+   "t": "0.25",
+   "is-a-sign": "false",
+   "id_is_derived": true
+  },
+  {
+   "id": "cell-5383ab052e",
+   "title": "Sagittarius to Capricorn, 50% across — not a sign",
+   "desc": "",
+   "between": "9-10",
+   "t": "0.50",
+   "is-a-sign": "false",
+   "id_is_derived": true
+  },
+  {
+   "id": "cell-e33ec3e0dd",
+   "title": "Sagittarius to Capricorn, 75% across — not a sign",
+   "desc": "",
+   "between": "9-10",
+   "t": "0.75",
+   "is-a-sign": "false",
+   "id_is_derived": true
+  },
+  {
+   "id": "cell-9657a49b5a",
+   "title": "Capricorn to Aquarius, 25% across — not a sign",
+   "desc": "",
+   "between": "10-11",
+   "t": "0.25",
+   "is-a-sign": "false",
+   "id_is_derived": true
+  },
+  {
+   "id": "cell-c871fbd628",
+   "title": "Capricorn to Aquarius, 50% across — not a sign",
+   "desc": "",
+   "between": "10-11",
+   "t": "0.50",
+   "is-a-sign": "false",
+   "id_is_derived": true
+  },
+  {
+   "id": "cell-e98206e46a",
+   "title": "Capricorn to Aquarius, 75% across — not a sign",
+   "desc": "",
+   "between": "10-11",
+   "t": "0.75",
+   "is-a-sign": "false",
+   "id_is_derived": true
+  },
+  {
+   "id": "cell-7aa013e79b",
+   "title": "Aquarius to Pisces, 25% across — not a sign",
+   "desc": "",
+   "between": "11-12",
+   "t": "0.25",
+   "is-a-sign": "false",
+   "id_is_derived": true
+  },
+  {
+   "id": "cell-8782707a91",
+   "title": "Aquarius to Pisces, 50% across — not a sign",
+   "desc": "",
+   "between": "11-12",
+   "t": "0.50",
+   "is-a-sign": "false",
+   "id_is_derived": true
+  },
+  {
+   "id": "cell-6f5b1e8833",
+   "title": "Aquarius to Pisces, 75% across — not a sign",
+   "desc": "",
+   "between": "11-12",
+   "t": "0.75",
+   "is-a-sign": "false",
+   "id_is_derived": true
+  }
+ ]
+}

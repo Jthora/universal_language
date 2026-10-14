@@ -44,6 +44,9 @@ EXEMPT = lambda do |path|
   path.start_with?('research/notes/') ||
     path == 'FAILURES.md' ||
     path.start_with?('ul-forge/target/', 'tools/') ||
+    # Vendored third-party content, imported verbatim and hash-verified. Rewriting a count in it
+    # would break the verification that is the only reason to trust it (note 067 / uws/register/).
+    path.start_with?('uws/register/codex/') ||
     path.include?('/node_modules/') ||
     path == 'research/surveys/research-register.md'   # a record of past threads
 end

@@ -1,0 +1,16 @@
+{
+  "page": "about",
+  "title": "About",
+  "what": "A reference for Universal Symbology, generated from a machine-checked register rather than written by hand. Every page here is output. If a statement is not derivable from the register, there is no way for it to appear on a page.",
+  "how_to_read": "Start with the fundamentals; they are short and everything else assumes them. Then the atlas, which is where the actual content is. The open questions are worth reading early rather than last — they tell you how much weight the rest can bear.",
+  "if_you_are_a_machine": "Take the bundle, not the pages. It carries the whole register — every figure, every claim, every status and every derivation edge — in one fetch, and the pages are generated from it. Checksums are published beside it so you can tell whether what you got is what was built.",
+  "why_not_to_trust_it": "Every derivation here can be repeated. The tools that produced these pages ship alongside them, so any claim can be recomputed from the register and compared. A claim that does not reproduce is a defect; report it. This is what deriving a notation buys that inheriting one does not.",
+  "how_it_is_built": "A register of claims, a set of generators, and a test suite that compares every published status against what is actually on disk. The register is the source; the pages are derived; nothing is typed twice.",
+  "start_here": {
+    "whole_system": "bundle.json",
+    "orientation": "llms.txt",
+    "integrity": "SHA256SUMS",
+    "one_symbol": "s/index.json",
+    "the_frontier": "find/index.json"
+  }
+}

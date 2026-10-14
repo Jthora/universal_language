@@ -1,0 +1,228 @@
+{
+  "page": "atlas",
+  "title": "The atlas",
+  "lede": "Every chart this system admits: what the operators generate, how the figures sit relative to each other, and the continuous space between the named operators.",
+  "children": [
+    {
+      "id": "space",
+      "title": "Combinations",
+      "href": "primers/space.html",
+      "blurb": "what the operators generate"
+    },
+    {
+      "id": "slices",
+      "title": "Slices",
+      "href": "slices/slice-b-separation.html",
+      "blurb": "the space between operators"
+    },
+    {
+      "id": "nx-symmetry",
+      "title": "Symmetry of the marks",
+      "href": "atlas/symmetry.html",
+      "blurb": "what stays the same when a mark is turned or mirrored"
+    },
+    {
+      "id": "nx-operators",
+      "title": "What the operators do",
+      "href": "atlas/operators.html",
+      "blurb": "what happens when one mark is placed against another"
+    },
+    {
+      "id": "nx-orbits",
+      "title": "The orbit space",
+      "href": "atlas/orbits.html",
+      "blurb": "the figures the operators generate, and how they sit together"
+    },
+    {
+      "id": "signs",
+      "title": "The twelve",
+      "href": "cells/signs.html",
+      "blurb": "twelve positions from one rule; the astrological reading of them is Universal Astrological Symbology's"
+    },
+    {
+      "id": "explore",
+      "title": "Chart index",
+      "href": "explore.html",
+      "blurb": "every chart this system admits"
+    },
+    {
+      "id": "meaning",
+      "title": "Meaning space",
+      "href": "meaning.html",
+      "blurb": "where a figure sits, in three dimensions"
+    },
+    {
+      "id": "find",
+      "title": "The frontier",
+      "href": "find/index.html",
+      "blurb": "every permitted figure, drawn"
+    }
+  ],
+  "sections": [
+    {
+      "id": "start",
+      "title": "Start here",
+      "why": "One sheet per idea, drawn rather than described.",
+      "sheets": [
+        "crt",
+        "marks",
+        "operators",
+        "space",
+        "status"
+      ]
+    },
+    {
+      "id": "alphabet",
+      "title": "The alphabet itself",
+      "why": "The six marks, the wave forms they make, and how the two most basic of them stand to each other.",
+      "sheets": [
+        "insert",
+        "marks",
+        "point-line-grid",
+        "signs",
+        "signs-as-waveforms",
+        "wave-families"
+      ]
+    },
+    {
+      "id": "between",
+      "title": "The space between the operators",
+      "why": "The named operators are points in a space of twenty axes. Each cell below is one pair of axes, varied while everything else is held still — open one and it draws the whole plane of figures those two axes reach.",
+      "sheets": [
+        "slice-b-A",
+        "slice-b-A-B",
+        "slice-b-A-B-amplitude",
+        "slice-b-A-B-frequency",
+        "slice-b-A-B-phase",
+        "slice-b-A-bearing",
+        "slice-b-A-reflect-B",
+        "slice-b-A-relative-rotation",
+        "slice-b-A-separation",
+        "slice-b-B",
+        "slice-b-B-B-amplitude",
+        "slice-b-B-B-frequency",
+        "slice-b-B-B-phase",
+        "slice-b-B-amplitude",
+        "slice-b-B-amplitude-B-phase",
+        "slice-b-B-bearing",
+        "slice-b-B-frequency",
+        "slice-b-B-frequency-B-amplitude",
+        "slice-b-B-frequency-B-phase",
+        "slice-b-B-phase",
+        "slice-b-B-reflect-B",
+        "slice-b-B-relative-rotation",
+        "slice-b-B-separation",
+        "slice-b-bearing",
+        "slice-b-bearing-B-amplitude",
+        "slice-b-bearing-B-frequency",
+        "slice-b-bearing-B-phase",
+        "slice-b-bearing-reflect-B",
+        "slice-b-bearing-relative-rotation",
+        "slice-b-bearing-relative-scale",
+        "slice-b-reflect-B",
+        "slice-b-reflect-B-B-amplitude",
+        "slice-b-reflect-B-B-frequency",
+        "slice-b-reflect-B-B-phase",
+        "slice-b-relative-rotation",
+        "slice-b-relative-rotation-B-amplitude",
+        "slice-b-relative-rotation-B-frequency",
+        "slice-b-relative-rotation-B-phase",
+        "slice-b-relative-rotation-reflect-B",
+        "slice-b-relative-scale",
+        "slice-b-relative-scale-reflect-B",
+        "slice-b-separation",
+        "slice-b-separation-B-amplitude",
+        "slice-b-separation-B-frequency",
+        "slice-b-separation-B-phase",
+        "slice-b-separation-bearing",
+        "slice-b-separation-reflect-B",
+        "slice-b-separation-relative-rotation",
+        "slice-u-amplitude",
+        "slice-u-amplitude-chirp",
+        "slice-u-amplitude-phase",
+        "slice-u-amplitude-taper",
+        "slice-u-chirp",
+        "slice-u-count",
+        "slice-u-count-amplitude",
+        "slice-u-count-chirp",
+        "slice-u-count-frequency",
+        "slice-u-count-phase",
+        "slice-u-count-taper",
+        "slice-u-frequency",
+        "slice-u-frequency-amplitude",
+        "slice-u-frequency-chirp",
+        "slice-u-frequency-phase",
+        "slice-u-frequency-taper",
+        "slice-u-mark",
+        "slice-u-mark-amplitude",
+        "slice-u-mark-chirp",
+        "slice-u-mark-count",
+        "slice-u-mark-frequency",
+        "slice-u-mark-phase",
+        "slice-u-mark-reflection",
+        "slice-u-mark-rotation",
+        "slice-u-mark-taper",
+        "slice-u-phase",
+        "slice-u-phase-chirp",
+        "slice-u-phase-taper",
+        "slice-u-reflection",
+        "slice-u-reflection-amplitude",
+        "slice-u-reflection-chirp",
+        "slice-u-reflection-count",
+        "slice-u-reflection-frequency",
+        "slice-u-reflection-phase",
+        "slice-u-reflection-taper",
+        "slice-u-rotation",
+        "slice-u-rotation-amplitude",
+        "slice-u-rotation-chirp",
+        "slice-u-rotation-count",
+        "slice-u-rotation-frequency",
+        "slice-u-rotation-phase",
+        "slice-u-rotation-reflection",
+        "slice-u-rotation-taper",
+        "slice-u-taper",
+        "slice-u-taper-chirp"
+      ]
+    },
+    {
+      "id": "holds",
+      "title": "What holds across the whole set",
+      "why": "Symmetry, handedness, what commutes, and which constructions turn out to be the same figure.",
+      "sheets": [
+        "capacity",
+        "cayley",
+        "chirality-source",
+        "commutativity",
+        "depth-ladder",
+        "enantiomorphs",
+        "fixed-points",
+        "frame-table",
+        "fundamental-domain",
+        "incidence",
+        "orbit-collapse",
+        "orbit-dendrogram",
+        "orbit-distance",
+        "orbit-map",
+        "placement-dial",
+        "schema-join",
+        "subgroup-lattice",
+        "substitution-graph"
+      ]
+    },
+    {
+      "id": "frontier",
+      "title": "The frontier",
+      "why": "Every permitted figure, including the ones nothing is claimed about.",
+      "sheets": []
+    },
+    {
+      "id": "beside",
+      "title": "Beside the notation",
+      "why": "Writing systems compared to each other. Not compared to this notation.",
+      "sheets": [
+        "writing-systems"
+      ]
+    }
+  ],
+  "each_sheet_has": "an HTML page beside it carrying its claims and what it teaches, plus a .json twin"
+}

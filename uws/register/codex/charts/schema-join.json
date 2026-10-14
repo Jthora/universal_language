@@ -1,0 +1,19 @@
+{
+  "sheet": "schema-join",
+  "title": "Relational schema coverage",
+  "covered": [
+    "IN / OUT",
+    "CENTER / PERIPHERY",
+    "NEAR / FAR",
+    "CONTACT",
+    "LINK",
+    "BALANCE"
+  ],
+  "uncovered": [
+    "UP / DOWN",
+    "FRONT / BACK",
+    "PATH",
+    "PART / WHOLE"
+  ],
+  "teaches": "which relations the corpus has an operator for"
+}

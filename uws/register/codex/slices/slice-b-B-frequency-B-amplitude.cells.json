@@ -1,0 +1,225 @@
+{
+ "sheet": "slices/slice-b-B-frequency-B-amplitude",
+ "cells": [
+  {
+   "id": "cell-0-0",
+   "title": "axis-x B-amplitude, x 0.25, axis-y B-frequency, y 1, operator none, contact true",
+   "desc": "configuration: B-frequency=1, B-amplitude=0.25, B-phase=0, A=Circle, B=Wave, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-amplitude",
+   "x": "0.25",
+   "axis-y": "B-frequency",
+   "y": "1",
+   "operator": "none",
+   "contact": "true"
+  },
+  {
+   "id": "cell-0-1",
+   "title": "axis-x B-amplitude, x 0.5, axis-y B-frequency, y 1, operator none, contact true",
+   "desc": "configuration: B-frequency=1, B-amplitude=0.5, B-phase=0, A=Circle, B=Wave, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-amplitude",
+   "x": "0.5",
+   "axis-y": "B-frequency",
+   "y": "1",
+   "operator": "none",
+   "contact": "true"
+  },
+  {
+   "id": "cell-0-2",
+   "title": "axis-x B-amplitude, x 1, axis-y B-frequency, y 1, operator superpose_concentric, contact true",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0, A=Circle, B=Wave, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-amplitude",
+   "x": "1",
+   "axis-y": "B-frequency",
+   "y": "1",
+   "operator": "superpose_concentric",
+   "contact": "true"
+  },
+  {
+   "id": "cell-0-3",
+   "title": "axis-x B-amplitude, x 1.5, axis-y B-frequency, y 1, operator none, contact true",
+   "desc": "configuration: B-frequency=1, B-amplitude=1.5, B-phase=0, A=Circle, B=Wave, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-amplitude",
+   "x": "1.5",
+   "axis-y": "B-frequency",
+   "y": "1",
+   "operator": "none",
+   "contact": "true"
+  },
+  {
+   "id": "cell-0-4",
+   "title": "axis-x B-amplitude, x 2, axis-y B-frequency, y 1, operator none, contact true",
+   "desc": "configuration: B-frequency=1, B-amplitude=2, B-phase=0, A=Circle, B=Wave, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-amplitude",
+   "x": "2",
+   "axis-y": "B-frequency",
+   "y": "1",
+   "operator": "none",
+   "contact": "true"
+  },
+  {
+   "id": "cell-1-0",
+   "title": "axis-x B-amplitude, x 0.25, axis-y B-frequency, y 2, operator none, contact true",
+   "desc": "configuration: B-frequency=2, B-amplitude=0.25, B-phase=0, A=Circle, B=Wave, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-amplitude",
+   "x": "0.25",
+   "axis-y": "B-frequency",
+   "y": "2",
+   "operator": "none",
+   "contact": "true"
+  },
+  {
+   "id": "cell-1-1",
+   "title": "axis-x B-amplitude, x 0.5, axis-y B-frequency, y 2, operator none, contact true",
+   "desc": "configuration: B-frequency=2, B-amplitude=0.5, B-phase=0, A=Circle, B=Wave, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-amplitude",
+   "x": "0.5",
+   "axis-y": "B-frequency",
+   "y": "2",
+   "operator": "none",
+   "contact": "true"
+  },
+  {
+   "id": "cell-1-2",
+   "title": "axis-x B-amplitude, x 1, axis-y B-frequency, y 2, operator none, contact true",
+   "desc": "configuration: B-frequency=2, B-amplitude=1, B-phase=0, A=Circle, B=Wave, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-amplitude",
+   "x": "1",
+   "axis-y": "B-frequency",
+   "y": "2",
+   "operator": "none",
+   "contact": "true"
+  },
+  {
+   "id": "cell-1-3",
+   "title": "axis-x B-amplitude, x 1.5, axis-y B-frequency, y 2, operator none, contact true",
+   "desc": "configuration: B-frequency=2, B-amplitude=1.5, B-phase=0, A=Circle, B=Wave, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-amplitude",
+   "x": "1.5",
+   "axis-y": "B-frequency",
+   "y": "2",
+   "operator": "none",
+   "contact": "true"
+  },
+  {
+   "id": "cell-1-4",
+   "title": "axis-x B-amplitude, x 2, axis-y B-frequency, y 2, operator none, contact true",
+   "desc": "configuration: B-frequency=2, B-amplitude=2, B-phase=0, A=Circle, B=Wave, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-amplitude",
+   "x": "2",
+   "axis-y": "B-frequency",
+   "y": "2",
+   "operator": "none",
+   "contact": "true"
+  },
+  {
+   "id": "cell-2-0",
+   "title": "axis-x B-amplitude, x 0.25, axis-y B-frequency, y 3, operator none, contact true",
+   "desc": "configuration: B-frequency=3, B-amplitude=0.25, B-phase=0, A=Circle, B=Wave, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-amplitude",
+   "x": "0.25",
+   "axis-y": "B-frequency",
+   "y": "3",
+   "operator": "none",
+   "contact": "true"
+  },
+  {
+   "id": "cell-2-1",
+   "title": "axis-x B-amplitude, x 0.5, axis-y B-frequency, y 3, operator none, contact true",
+   "desc": "configuration: B-frequency=3, B-amplitude=0.5, B-phase=0, A=Circle, B=Wave, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-amplitude",
+   "x": "0.5",
+   "axis-y": "B-frequency",
+   "y": "3",
+   "operator": "none",
+   "contact": "true"
+  },
+  {
+   "id": "cell-2-2",
+   "title": "axis-x B-amplitude, x 1, axis-y B-frequency, y 3, operator none, contact true",
+   "desc": "configuration: B-frequency=3, B-amplitude=1, B-phase=0, A=Circle, B=Wave, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-amplitude",
+   "x": "1",
+   "axis-y": "B-frequency",
+   "y": "3",
+   "operator": "none",
+   "contact": "true"
+  },
+  {
+   "id": "cell-2-3",
+   "title": "axis-x B-amplitude, x 1.5, axis-y B-frequency, y 3, operator none, contact true",
+   "desc": "configuration: B-frequency=3, B-amplitude=1.5, B-phase=0, A=Circle, B=Wave, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-amplitude",
+   "x": "1.5",
+   "axis-y": "B-frequency",
+   "y": "3",
+   "operator": "none",
+   "contact": "true"
+  },
+  {
+   "id": "cell-2-4",
+   "title": "axis-x B-amplitude, x 2, axis-y B-frequency, y 3, operator none, contact true",
+   "desc": "configuration: B-frequency=3, B-amplitude=2, B-phase=0, A=Circle, B=Wave, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-amplitude",
+   "x": "2",
+   "axis-y": "B-frequency",
+   "y": "3",
+   "operator": "none",
+   "contact": "true"
+  },
+  {
+   "id": "cell-3-0",
+   "title": "axis-x B-amplitude, x 0.25, axis-y B-frequency, y 4, operator none, contact true",
+   "desc": "configuration: B-frequency=4, B-amplitude=0.25, B-phase=0, A=Circle, B=Wave, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-amplitude",
+   "x": "0.25",
+   "axis-y": "B-frequency",
+   "y": "4",
+   "operator": "none",
+   "contact": "true"
+  },
+  {
+   "id": "cell-3-1",
+   "title": "axis-x B-amplitude, x 0.5, axis-y B-frequency, y 4, operator none, contact true",
+   "desc": "configuration: B-frequency=4, B-amplitude=0.5, B-phase=0, A=Circle, B=Wave, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-amplitude",
+   "x": "0.5",
+   "axis-y": "B-frequency",
+   "y": "4",
+   "operator": "none",
+   "contact": "true"
+  },
+  {
+   "id": "cell-3-2",
+   "title": "axis-x B-amplitude, x 1, axis-y B-frequency, y 4, operator none, contact true",
+   "desc": "configuration: B-frequency=4, B-amplitude=1, B-phase=0, A=Circle, B=Wave, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-amplitude",
+   "x": "1",
+   "axis-y": "B-frequency",
+   "y": "4",
+   "operator": "none",
+   "contact": "true"
+  },
+  {
+   "id": "cell-3-3",
+   "title": "axis-x B-amplitude, x 1.5, axis-y B-frequency, y 4, operator none, contact true",
+   "desc": "configuration: B-frequency=4, B-amplitude=1.5, B-phase=0, A=Circle, B=Wave, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-amplitude",
+   "x": "1.5",
+   "axis-y": "B-frequency",
+   "y": "4",
+   "operator": "none",
+   "contact": "true"
+  },
+  {
+   "id": "cell-3-4",
+   "title": "axis-x B-amplitude, x 2, axis-y B-frequency, y 4, operator none, contact true",
+   "desc": "configuration: B-frequency=4, B-amplitude=2, B-phase=0, A=Circle, B=Wave, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-amplitude",
+   "x": "2",
+   "axis-y": "B-frequency",
+   "y": "4",
+   "operator": "none",
+   "contact": "true"
+  }
+ ]
+}

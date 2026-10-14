@@ -1,0 +1,17 @@
+{
+  "orbit": 10,
+  "members": [
+    "nest(Wave,Line)"
+  ],
+  "symmetry": "2",
+  "curvature": "singular",
+  "meaning": null,
+  "status": "undetermined",
+  "strokes": 2,
+  "components": 2,
+  "mirror_axes": "0",
+  "closed": false,
+  "crossings": "1",
+  "aspect": "wide",
+  "curvature_mix": "mixed"
+}

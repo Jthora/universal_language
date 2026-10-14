@@ -1,0 +1,17 @@
+{
+  "orbit": 66,
+  "members": [
+    "close(Circle)"
+  ],
+  "symmetry": "1",
+  "curvature": "smooth",
+  "meaning": null,
+  "status": "undetermined",
+  "strokes": 2,
+  "components": 1,
+  "mirror_axes": "1",
+  "closed": true,
+  "crossings": "0",
+  "aspect": "square",
+  "curvature_mix": "mixed"
+}

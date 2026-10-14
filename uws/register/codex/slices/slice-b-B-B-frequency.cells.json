@@ -1,0 +1,269 @@
+{
+ "sheet": "slices/slice-b-B-B-frequency",
+ "cells": [
+  {
+   "id": "cell-0-0",
+   "title": "axis-x B-frequency, x 1, axis-y B, y Point, operator superpose_concentric,cross,nest, contact false",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0, A=Circle, B=Point, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-frequency",
+   "x": "1",
+   "axis-y": "B",
+   "y": "Point",
+   "operator": "superpose_concentric,cross,nest",
+   "contact": "false"
+  },
+  {
+   "id": "cell-0-1",
+   "title": "axis-x B-frequency, x 2, axis-y B, y Point, operator superpose_concentric,cross,nest, contact false",
+   "desc": "configuration: B-frequency=2, B-amplitude=1, B-phase=0, A=Circle, B=Point, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-frequency",
+   "x": "2",
+   "axis-y": "B",
+   "y": "Point",
+   "operator": "superpose_concentric,cross,nest",
+   "contact": "false"
+  },
+  {
+   "id": "cell-0-2",
+   "title": "axis-x B-frequency, x 3, axis-y B, y Point, operator superpose_concentric,cross,nest, contact false",
+   "desc": "configuration: B-frequency=3, B-amplitude=1, B-phase=0, A=Circle, B=Point, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-frequency",
+   "x": "3",
+   "axis-y": "B",
+   "y": "Point",
+   "operator": "superpose_concentric,cross,nest",
+   "contact": "false"
+  },
+  {
+   "id": "cell-0-3",
+   "title": "axis-x B-frequency, x 4, axis-y B, y Point, operator superpose_concentric,cross,nest, contact false",
+   "desc": "configuration: B-frequency=4, B-amplitude=1, B-phase=0, A=Circle, B=Point, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-frequency",
+   "x": "4",
+   "axis-y": "B",
+   "y": "Point",
+   "operator": "superpose_concentric,cross,nest",
+   "contact": "false"
+  },
+  {
+   "id": "cell-1-0",
+   "title": "axis-x B-frequency, x 1, axis-y B, y Line, operator superpose_concentric, contact true",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0, A=Circle, B=Line, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-frequency",
+   "x": "1",
+   "axis-y": "B",
+   "y": "Line",
+   "operator": "superpose_concentric",
+   "contact": "true"
+  },
+  {
+   "id": "cell-1-1",
+   "title": "axis-x B-frequency, x 2, axis-y B, y Line, operator superpose_concentric, contact true",
+   "desc": "configuration: B-frequency=2, B-amplitude=1, B-phase=0, A=Circle, B=Line, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-frequency",
+   "x": "2",
+   "axis-y": "B",
+   "y": "Line",
+   "operator": "superpose_concentric",
+   "contact": "true"
+  },
+  {
+   "id": "cell-1-2",
+   "title": "axis-x B-frequency, x 3, axis-y B, y Line, operator superpose_concentric, contact true",
+   "desc": "configuration: B-frequency=3, B-amplitude=1, B-phase=0, A=Circle, B=Line, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-frequency",
+   "x": "3",
+   "axis-y": "B",
+   "y": "Line",
+   "operator": "superpose_concentric",
+   "contact": "true"
+  },
+  {
+   "id": "cell-1-3",
+   "title": "axis-x B-frequency, x 4, axis-y B, y Line, operator superpose_concentric, contact true",
+   "desc": "configuration: B-frequency=4, B-amplitude=1, B-phase=0, A=Circle, B=Line, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-frequency",
+   "x": "4",
+   "axis-y": "B",
+   "y": "Line",
+   "operator": "superpose_concentric",
+   "contact": "true"
+  },
+  {
+   "id": "cell-2-0",
+   "title": "axis-x B-frequency, x 1, axis-y B, y Angle, operator superpose_concentric, contact true",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0, A=Circle, B=Angle, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-frequency",
+   "x": "1",
+   "axis-y": "B",
+   "y": "Angle",
+   "operator": "superpose_concentric",
+   "contact": "true"
+  },
+  {
+   "id": "cell-2-1",
+   "title": "axis-x B-frequency, x 2, axis-y B, y Angle, operator none, contact true",
+   "desc": "configuration: B-frequency=2, B-amplitude=1, B-phase=0, A=Circle, B=Angle, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-frequency",
+   "x": "2",
+   "axis-y": "B",
+   "y": "Angle",
+   "operator": "none",
+   "contact": "true"
+  },
+  {
+   "id": "cell-2-2",
+   "title": "axis-x B-frequency, x 3, axis-y B, y Angle, operator none, contact true",
+   "desc": "configuration: B-frequency=3, B-amplitude=1, B-phase=0, A=Circle, B=Angle, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-frequency",
+   "x": "3",
+   "axis-y": "B",
+   "y": "Angle",
+   "operator": "none",
+   "contact": "true"
+  },
+  {
+   "id": "cell-2-3",
+   "title": "axis-x B-frequency, x 4, axis-y B, y Angle, operator none, contact true",
+   "desc": "configuration: B-frequency=4, B-amplitude=1, B-phase=0, A=Circle, B=Angle, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-frequency",
+   "x": "4",
+   "axis-y": "B",
+   "y": "Angle",
+   "operator": "none",
+   "contact": "true"
+  },
+  {
+   "id": "cell-3-0",
+   "title": "axis-x B-frequency, x 1, axis-y B, y Curve, operator superpose_concentric, contact true",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0, A=Circle, B=Curve, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-frequency",
+   "x": "1",
+   "axis-y": "B",
+   "y": "Curve",
+   "operator": "superpose_concentric",
+   "contact": "true"
+  },
+  {
+   "id": "cell-3-1",
+   "title": "axis-x B-frequency, x 2, axis-y B, y Curve, operator none, contact true",
+   "desc": "configuration: B-frequency=2, B-amplitude=1, B-phase=0, A=Circle, B=Curve, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-frequency",
+   "x": "2",
+   "axis-y": "B",
+   "y": "Curve",
+   "operator": "none",
+   "contact": "true"
+  },
+  {
+   "id": "cell-3-2",
+   "title": "axis-x B-frequency, x 3, axis-y B, y Curve, operator none, contact true",
+   "desc": "configuration: B-frequency=3, B-amplitude=1, B-phase=0, A=Circle, B=Curve, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-frequency",
+   "x": "3",
+   "axis-y": "B",
+   "y": "Curve",
+   "operator": "none",
+   "contact": "true"
+  },
+  {
+   "id": "cell-3-3",
+   "title": "axis-x B-frequency, x 4, axis-y B, y Curve, operator none, contact true",
+   "desc": "configuration: B-frequency=4, B-amplitude=1, B-phase=0, A=Circle, B=Curve, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-frequency",
+   "x": "4",
+   "axis-y": "B",
+   "y": "Curve",
+   "operator": "none",
+   "contact": "true"
+  },
+  {
+   "id": "cell-4-0",
+   "title": "axis-x B-frequency, x 1, axis-y B, y Wave, operator superpose_concentric, contact true",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0, A=Circle, B=Wave, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-frequency",
+   "x": "1",
+   "axis-y": "B",
+   "y": "Wave",
+   "operator": "superpose_concentric",
+   "contact": "true"
+  },
+  {
+   "id": "cell-4-1",
+   "title": "axis-x B-frequency, x 2, axis-y B, y Wave, operator none, contact true",
+   "desc": "configuration: B-frequency=2, B-amplitude=1, B-phase=0, A=Circle, B=Wave, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-frequency",
+   "x": "2",
+   "axis-y": "B",
+   "y": "Wave",
+   "operator": "none",
+   "contact": "true"
+  },
+  {
+   "id": "cell-4-2",
+   "title": "axis-x B-frequency, x 3, axis-y B, y Wave, operator none, contact true",
+   "desc": "configuration: B-frequency=3, B-amplitude=1, B-phase=0, A=Circle, B=Wave, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-frequency",
+   "x": "3",
+   "axis-y": "B",
+   "y": "Wave",
+   "operator": "none",
+   "contact": "true"
+  },
+  {
+   "id": "cell-4-3",
+   "title": "axis-x B-frequency, x 4, axis-y B, y Wave, operator none, contact true",
+   "desc": "configuration: B-frequency=4, B-amplitude=1, B-phase=0, A=Circle, B=Wave, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-frequency",
+   "x": "4",
+   "axis-y": "B",
+   "y": "Wave",
+   "operator": "none",
+   "contact": "true"
+  },
+  {
+   "id": "cell-5-0",
+   "title": "axis-x B-frequency, x 1, axis-y B, y Circle, operator superpose_concentric,cross, contact true",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0, A=Circle, B=Circle, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-frequency",
+   "x": "1",
+   "axis-y": "B",
+   "y": "Circle",
+   "operator": "superpose_concentric,cross",
+   "contact": "true"
+  },
+  {
+   "id": "cell-5-1",
+   "title": "axis-x B-frequency, x 2, axis-y B, y Circle, operator superpose_concentric,cross, contact true",
+   "desc": "configuration: B-frequency=2, B-amplitude=1, B-phase=0, A=Circle, B=Circle, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-frequency",
+   "x": "2",
+   "axis-y": "B",
+   "y": "Circle",
+   "operator": "superpose_concentric,cross",
+   "contact": "true"
+  },
+  {
+   "id": "cell-5-2",
+   "title": "axis-x B-frequency, x 3, axis-y B, y Circle, operator superpose_concentric,cross, contact true",
+   "desc": "configuration: B-frequency=3, B-amplitude=1, B-phase=0, A=Circle, B=Circle, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-frequency",
+   "x": "3",
+   "axis-y": "B",
+   "y": "Circle",
+   "operator": "superpose_concentric,cross",
+   "contact": "true"
+  },
+  {
+   "id": "cell-5-3",
+   "title": "axis-x B-frequency, x 4, axis-y B, y Circle, operator superpose_concentric,cross, contact true",
+   "desc": "configuration: B-frequency=4, B-amplitude=1, B-phase=0, A=Circle, B=Circle, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-frequency",
+   "x": "4",
+   "axis-y": "B",
+   "y": "Circle",
+   "operator": "superpose_concentric,cross",
+   "contact": "true"
+  }
+ ]
+}

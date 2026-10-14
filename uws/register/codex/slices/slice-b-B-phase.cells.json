@@ -1,0 +1,41 @@
+{
+ "sheet": "slices/slice-b-B-phase",
+ "cells": [
+  {
+   "id": "cell-0-0",
+   "title": "axis-x B-phase, x 0, operator superpose_concentric, contact true",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0, A=Circle, B=Wave, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-phase",
+   "x": "0",
+   "operator": "superpose_concentric",
+   "contact": "true"
+  },
+  {
+   "id": "cell-0-1",
+   "title": "axis-x B-phase, x 0.25, operator none, contact true",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0.25, A=Circle, B=Wave, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-phase",
+   "x": "0.25",
+   "operator": "none",
+   "contact": "true"
+  },
+  {
+   "id": "cell-0-2",
+   "title": "axis-x B-phase, x 0.5, operator none, contact true",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0.5, A=Circle, B=Wave, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-phase",
+   "x": "0.5",
+   "operator": "none",
+   "contact": "true"
+  },
+  {
+   "id": "cell-0-3",
+   "title": "axis-x B-phase, x 0.75, operator none, contact true",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0.75, A=Circle, B=Wave, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "B-phase",
+   "x": "0.75",
+   "operator": "none",
+   "contact": "true"
+  }
+ ]
+}

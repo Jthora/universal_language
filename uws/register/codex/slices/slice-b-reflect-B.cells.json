@@ -1,0 +1,23 @@
+{
+ "sheet": "slices/slice-b-reflect-B",
+ "cells": [
+  {
+   "id": "cell-0-0",
+   "title": "axis-x reflect-B, x as drawn, operator superpose_concentric, contact true",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0, A=Circle, B=Wave, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "reflect-B",
+   "x": "as drawn",
+   "operator": "superpose_concentric",
+   "contact": "true"
+  },
+  {
+   "id": "cell-0-1",
+   "title": "axis-x reflect-B, x mirrored, operator none, contact true",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0, A=Circle, B=Wave, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=mirrored",
+   "axis-x": "reflect-B",
+   "x": "mirrored",
+   "operator": "none",
+   "contact": "true"
+  }
+ ]
+}

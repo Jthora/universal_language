@@ -1,0 +1,38 @@
+{
+  "sheet": "slice-unary-taper-chirp",
+  "group": "unary",
+  "axes": [
+    "taper",
+    "chirp"
+  ],
+  "cells": 9,
+  "held": {
+    "mark": "Wave",
+    "rotation": 0.0,
+    "reflection": 0,
+    "scale": 1.0,
+    "count": 1,
+    "frequency": 1.0,
+    "amplitude": 1.0,
+    "phase": 0.0
+  },
+  "operand_chosen_for": {
+    "taper": "has a profile to vary",
+    "chirp": "has a profile to vary"
+  },
+  "samples": {
+    "taper": [
+      "-1",
+      "0",
+      "1"
+    ],
+    "chirp": [
+      "0",
+      "1",
+      "2"
+    ]
+  },
+  "operators_on_this_slice": {},
+  "contact_cells": 0,
+  "note": "operand chosen so the axis acts: taper needs one that has a profile to vary, chirp needs one that has a profile to vary"
+}

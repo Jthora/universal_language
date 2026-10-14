@@ -1,0 +1,842 @@
+{
+ "sheet": "charts/orbit-distance",
+ "cells": [
+  {
+   "id": "cell-row-0",
+   "title": "orbit 0",
+   "desc": "nearest orbit 46 at 1.0000",
+   "orbit": "0",
+   "named": "false",
+   "nearest": "46",
+   "nearest-distance": "1.0000"
+  },
+  {
+   "id": "cell-row-1",
+   "title": "orbit 1",
+   "desc": "nearest orbit 57 at 0.1786",
+   "orbit": "1",
+   "named": "false",
+   "nearest": "57",
+   "nearest-distance": "0.1786"
+  },
+  {
+   "id": "cell-row-2",
+   "title": "orbit 2",
+   "desc": "nearest orbit 12 at 0.1438",
+   "orbit": "2",
+   "named": "false",
+   "nearest": "12",
+   "nearest-distance": "0.1438"
+  },
+  {
+   "id": "cell-row-3",
+   "title": "orbit 3",
+   "desc": "nearest orbit 4 at 0.0822",
+   "orbit": "3",
+   "named": "false",
+   "nearest": "4",
+   "nearest-distance": "0.0822"
+  },
+  {
+   "id": "cell-row-4",
+   "title": "orbit 4",
+   "desc": "nearest orbit 3 at 0.0822",
+   "orbit": "4",
+   "named": "false",
+   "nearest": "3",
+   "nearest-distance": "0.0822"
+  },
+  {
+   "id": "cell-row-5",
+   "title": "orbit 5",
+   "desc": "nearest orbit 15 at 0.1565",
+   "orbit": "5",
+   "named": "false",
+   "nearest": "15",
+   "nearest-distance": "0.1565"
+  },
+  {
+   "id": "cell-row-6",
+   "title": "orbit 6",
+   "desc": "nearest orbit 74 at 0.9127",
+   "orbit": "6",
+   "named": "false",
+   "nearest": "74",
+   "nearest-distance": "0.9127"
+  },
+  {
+   "id": "cell-row-7",
+   "title": "orbit 7",
+   "desc": "nearest orbit 12 at 0.3151",
+   "orbit": "7",
+   "named": "false",
+   "nearest": "12",
+   "nearest-distance": "0.3151"
+  },
+  {
+   "id": "cell-row-8",
+   "title": "orbit 8",
+   "desc": "nearest orbit 57 at 0.1739",
+   "orbit": "8",
+   "named": "false",
+   "nearest": "57",
+   "nearest-distance": "0.1739"
+  },
+  {
+   "id": "cell-row-9",
+   "title": "orbit 9",
+   "desc": "nearest orbit 56 at 0.3097",
+   "orbit": "9",
+   "named": "false",
+   "nearest": "56",
+   "nearest-distance": "0.3097"
+  },
+  {
+   "id": "cell-row-10",
+   "title": "orbit 10",
+   "desc": "nearest orbit 18 at 0.1701",
+   "orbit": "10",
+   "named": "false",
+   "nearest": "18",
+   "nearest-distance": "0.1701"
+  },
+  {
+   "id": "cell-row-11",
+   "title": "orbit 11",
+   "desc": "nearest orbit 20 at 0.1437",
+   "orbit": "11",
+   "named": "false",
+   "nearest": "20",
+   "nearest-distance": "0.1437"
+  },
+  {
+   "id": "cell-row-12",
+   "title": "orbit 12",
+   "desc": "nearest orbit 2 at 0.1438",
+   "orbit": "12",
+   "named": "false",
+   "nearest": "2",
+   "nearest-distance": "0.1438"
+  },
+  {
+   "id": "cell-row-13",
+   "title": "orbit 13 — infinity (SymbolFolds)",
+   "desc": "nearest orbit 17 at 0.0794",
+   "orbit": "13",
+   "named": "true",
+   "nearest": "17",
+   "nearest-distance": "0.0794"
+  },
+  {
+   "id": "cell-row-14",
+   "title": "orbit 14",
+   "desc": "nearest orbit 16 at 0.2966",
+   "orbit": "14",
+   "named": "false",
+   "nearest": "16",
+   "nearest-distance": "0.2966"
+  },
+  {
+   "id": "cell-row-15",
+   "title": "orbit 15",
+   "desc": "nearest orbit 5 at 0.1565",
+   "orbit": "15",
+   "named": "false",
+   "nearest": "5",
+   "nearest-distance": "0.1565"
+  },
+  {
+   "id": "cell-row-16",
+   "title": "orbit 16",
+   "desc": "nearest orbit 54 at 0.1993",
+   "orbit": "16",
+   "named": "false",
+   "nearest": "54",
+   "nearest-distance": "0.1993"
+  },
+  {
+   "id": "cell-row-17",
+   "title": "orbit 17",
+   "desc": "nearest orbit 13 at 0.0794",
+   "orbit": "17",
+   "named": "false",
+   "nearest": "13",
+   "nearest-distance": "0.0794"
+  },
+  {
+   "id": "cell-row-18",
+   "title": "orbit 18",
+   "desc": "nearest orbit 10 at 0.1701",
+   "orbit": "18",
+   "named": "false",
+   "nearest": "10",
+   "nearest-distance": "0.1701"
+  },
+  {
+   "id": "cell-row-19",
+   "title": "orbit 19",
+   "desc": "nearest orbit 89 at 0.2793",
+   "orbit": "19",
+   "named": "false",
+   "nearest": "89",
+   "nearest-distance": "0.2793"
+  },
+  {
+   "id": "cell-row-20",
+   "title": "orbit 20",
+   "desc": "nearest orbit 11 at 0.1437",
+   "orbit": "20",
+   "named": "false",
+   "nearest": "11",
+   "nearest-distance": "0.1437"
+  },
+  {
+   "id": "cell-row-21",
+   "title": "orbit 21",
+   "desc": "nearest orbit 66 at 0.1946",
+   "orbit": "21",
+   "named": "false",
+   "nearest": "66",
+   "nearest-distance": "0.1946"
+  },
+  {
+   "id": "cell-row-22",
+   "title": "orbit 22 — Sun-in-Circle (F43)",
+   "desc": "nearest orbit 65 at 0.3962",
+   "orbit": "22",
+   "named": "true",
+   "nearest": "65",
+   "nearest-distance": "0.3962"
+  },
+  {
+   "id": "cell-row-23",
+   "title": "orbit 23",
+   "desc": "nearest orbit 90 at 0.3621",
+   "orbit": "23",
+   "named": "false",
+   "nearest": "90",
+   "nearest-distance": "0.3621"
+  },
+  {
+   "id": "cell-row-24",
+   "title": "orbit 24",
+   "desc": "nearest orbit 25 at 0.1639",
+   "orbit": "24",
+   "named": "false",
+   "nearest": "25",
+   "nearest-distance": "0.1639"
+  },
+  {
+   "id": "cell-row-25",
+   "title": "orbit 25",
+   "desc": "nearest orbit 24 at 0.1639",
+   "orbit": "25",
+   "named": "false",
+   "nearest": "24",
+   "nearest-distance": "0.1639"
+  },
+  {
+   "id": "cell-row-26",
+   "title": "orbit 26",
+   "desc": "nearest orbit 67 at 0.1484",
+   "orbit": "26",
+   "named": "false",
+   "nearest": "67",
+   "nearest-distance": "0.1484"
+  },
+  {
+   "id": "cell-row-27",
+   "title": "orbit 27",
+   "desc": "nearest orbit 28 at 0.1434",
+   "orbit": "27",
+   "named": "false",
+   "nearest": "28",
+   "nearest-distance": "0.1434"
+  },
+  {
+   "id": "cell-row-28",
+   "title": "orbit 28",
+   "desc": "nearest orbit 27 at 0.1434",
+   "orbit": "28",
+   "named": "false",
+   "nearest": "27",
+   "nearest-distance": "0.1434"
+  },
+  {
+   "id": "cell-row-29",
+   "title": "orbit 29",
+   "desc": "nearest orbit 68 at 0.1491",
+   "orbit": "29",
+   "named": "false",
+   "nearest": "68",
+   "nearest-distance": "0.1491"
+  },
+  {
+   "id": "cell-row-30",
+   "title": "orbit 30",
+   "desc": "nearest orbit 81 at 0.1465",
+   "orbit": "30",
+   "named": "false",
+   "nearest": "81",
+   "nearest-distance": "0.1465"
+  },
+  {
+   "id": "cell-row-31",
+   "title": "orbit 31",
+   "desc": "nearest orbit 69 at 0.1573",
+   "orbit": "31",
+   "named": "false",
+   "nearest": "69",
+   "nearest-distance": "0.1573"
+  },
+  {
+   "id": "cell-row-32",
+   "title": "orbit 32",
+   "desc": "nearest orbit 70 at 0.1507",
+   "orbit": "32",
+   "named": "false",
+   "nearest": "70",
+   "nearest-distance": "0.1507"
+  },
+  {
+   "id": "cell-row-33",
+   "title": "orbit 33",
+   "desc": "nearest orbit 34 at 0.2044",
+   "orbit": "33",
+   "named": "false",
+   "nearest": "34",
+   "nearest-distance": "0.2044"
+  },
+  {
+   "id": "cell-row-34",
+   "title": "orbit 34",
+   "desc": "nearest orbit 71 at 0.0716",
+   "orbit": "34",
+   "named": "false",
+   "nearest": "71",
+   "nearest-distance": "0.0716"
+  },
+  {
+   "id": "cell-row-35",
+   "title": "orbit 35",
+   "desc": "nearest orbit 36 at 0.0741",
+   "orbit": "35",
+   "named": "false",
+   "nearest": "36",
+   "nearest-distance": "0.0741"
+  },
+  {
+   "id": "cell-row-36",
+   "title": "orbit 36",
+   "desc": "nearest orbit 35 at 0.0741",
+   "orbit": "36",
+   "named": "false",
+   "nearest": "35",
+   "nearest-distance": "0.0741"
+  },
+  {
+   "id": "cell-row-37",
+   "title": "orbit 37",
+   "desc": "nearest orbit 41 at 0.2116",
+   "orbit": "37",
+   "named": "false",
+   "nearest": "41",
+   "nearest-distance": "0.2116"
+  },
+  {
+   "id": "cell-row-38",
+   "title": "orbit 38",
+   "desc": "nearest orbit 42 at 0.2121",
+   "orbit": "38",
+   "named": "false",
+   "nearest": "42",
+   "nearest-distance": "0.2121"
+  },
+  {
+   "id": "cell-row-39",
+   "title": "orbit 39 — Chaos pair (F44)",
+   "desc": "nearest orbit 40 at 0.0771",
+   "orbit": "39",
+   "named": "true",
+   "nearest": "40",
+   "nearest-distance": "0.0771"
+  },
+  {
+   "id": "cell-row-40",
+   "title": "orbit 40",
+   "desc": "nearest orbit 39 at 0.0771",
+   "orbit": "40",
+   "named": "false",
+   "nearest": "39",
+   "nearest-distance": "0.0771"
+  },
+  {
+   "id": "cell-row-41",
+   "title": "orbit 41",
+   "desc": "nearest orbit 54 at 0.0741",
+   "orbit": "41",
+   "named": "false",
+   "nearest": "54",
+   "nearest-distance": "0.0741"
+  },
+  {
+   "id": "cell-row-42",
+   "title": "orbit 42",
+   "desc": "nearest orbit 55 at 0.0747",
+   "orbit": "42",
+   "named": "false",
+   "nearest": "55",
+   "nearest-distance": "0.0747"
+  },
+  {
+   "id": "cell-row-43",
+   "title": "orbit 43",
+   "desc": "nearest orbit 77 at 0.0741",
+   "orbit": "43",
+   "named": "false",
+   "nearest": "77",
+   "nearest-distance": "0.0741"
+  },
+  {
+   "id": "cell-row-44",
+   "title": "orbit 44",
+   "desc": "nearest orbit 45 at 0.1488",
+   "orbit": "44",
+   "named": "false",
+   "nearest": "45",
+   "nearest-distance": "0.1488"
+  },
+  {
+   "id": "cell-row-45",
+   "title": "orbit 45",
+   "desc": "nearest orbit 44 at 0.1488",
+   "orbit": "45",
+   "named": "false",
+   "nearest": "44",
+   "nearest-distance": "0.1488"
+  },
+  {
+   "id": "cell-row-46",
+   "title": "orbit 46",
+   "desc": "nearest orbit 47 at 0.1532",
+   "orbit": "46",
+   "named": "false",
+   "nearest": "47",
+   "nearest-distance": "0.1532"
+  },
+  {
+   "id": "cell-row-47",
+   "title": "orbit 47",
+   "desc": "nearest orbit 46 at 0.1532",
+   "orbit": "47",
+   "named": "false",
+   "nearest": "46",
+   "nearest-distance": "0.1532"
+  },
+  {
+   "id": "cell-row-48",
+   "title": "orbit 48",
+   "desc": "nearest orbit 80 at 0.1546",
+   "orbit": "48",
+   "named": "false",
+   "nearest": "80",
+   "nearest-distance": "0.1546"
+  },
+  {
+   "id": "cell-row-49",
+   "title": "orbit 49",
+   "desc": "nearest orbit 81 at 0.1545",
+   "orbit": "49",
+   "named": "false",
+   "nearest": "81",
+   "nearest-distance": "0.1545"
+  },
+  {
+   "id": "cell-row-50",
+   "title": "orbit 50",
+   "desc": "nearest orbit 35 at 0.0742",
+   "orbit": "50",
+   "named": "false",
+   "nearest": "35",
+   "nearest-distance": "0.0742"
+  },
+  {
+   "id": "cell-row-51",
+   "title": "orbit 51",
+   "desc": "nearest orbit 50 at 0.0818",
+   "orbit": "51",
+   "named": "false",
+   "nearest": "50",
+   "nearest-distance": "0.0818"
+  },
+  {
+   "id": "cell-row-52",
+   "title": "orbit 52",
+   "desc": "nearest orbit 53 at 0.0849",
+   "orbit": "52",
+   "named": "false",
+   "nearest": "53",
+   "nearest-distance": "0.0849"
+  },
+  {
+   "id": "cell-row-53",
+   "title": "orbit 53",
+   "desc": "nearest orbit 52 at 0.0849",
+   "orbit": "53",
+   "named": "false",
+   "nearest": "52",
+   "nearest-distance": "0.0849"
+  },
+  {
+   "id": "cell-row-54",
+   "title": "orbit 54",
+   "desc": "nearest orbit 41 at 0.0741",
+   "orbit": "54",
+   "named": "false",
+   "nearest": "41",
+   "nearest-distance": "0.0741"
+  },
+  {
+   "id": "cell-row-55",
+   "title": "orbit 55",
+   "desc": "nearest orbit 42 at 0.0747",
+   "orbit": "55",
+   "named": "false",
+   "nearest": "42",
+   "nearest-distance": "0.0747"
+  },
+  {
+   "id": "cell-row-56",
+   "title": "orbit 56",
+   "desc": "nearest orbit 43 at 0.0742",
+   "orbit": "56",
+   "named": "false",
+   "nearest": "43",
+   "nearest-distance": "0.0742"
+  },
+  {
+   "id": "cell-row-57",
+   "title": "orbit 57",
+   "desc": "nearest orbit 8 at 0.1739",
+   "orbit": "57",
+   "named": "false",
+   "nearest": "8",
+   "nearest-distance": "0.1739"
+  },
+  {
+   "id": "cell-row-58",
+   "title": "orbit 58",
+   "desc": "nearest orbit 62 at 0.1524",
+   "orbit": "58",
+   "named": "false",
+   "nearest": "62",
+   "nearest-distance": "0.1524"
+  },
+  {
+   "id": "cell-row-59",
+   "title": "orbit 59",
+   "desc": "nearest orbit 86 at 0.1497",
+   "orbit": "59",
+   "named": "false",
+   "nearest": "86",
+   "nearest-distance": "0.1497"
+  },
+  {
+   "id": "cell-row-60",
+   "title": "orbit 60",
+   "desc": "nearest orbit 87 at 0.1561",
+   "orbit": "60",
+   "named": "false",
+   "nearest": "87",
+   "nearest-distance": "0.1561"
+  },
+  {
+   "id": "cell-row-61",
+   "title": "orbit 61",
+   "desc": "nearest orbit 88 at 0.1533",
+   "orbit": "61",
+   "named": "false",
+   "nearest": "88",
+   "nearest-distance": "0.1533"
+  },
+  {
+   "id": "cell-row-62",
+   "title": "orbit 62",
+   "desc": "nearest orbit 58 at 0.1524",
+   "orbit": "62",
+   "named": "false",
+   "nearest": "58",
+   "nearest-distance": "0.1524"
+  },
+  {
+   "id": "cell-row-63",
+   "title": "orbit 63",
+   "desc": "nearest orbit 86 at 0.0608",
+   "orbit": "63",
+   "named": "false",
+   "nearest": "86",
+   "nearest-distance": "0.0608"
+  },
+  {
+   "id": "cell-row-64",
+   "title": "orbit 64",
+   "desc": "nearest orbit 89 at 0.0615",
+   "orbit": "64",
+   "named": "false",
+   "nearest": "89",
+   "nearest-distance": "0.0615"
+  },
+  {
+   "id": "cell-row-65",
+   "title": "orbit 65",
+   "desc": "nearest orbit 90 at 0.0609",
+   "orbit": "65",
+   "named": "false",
+   "nearest": "90",
+   "nearest-distance": "0.0609"
+  },
+  {
+   "id": "cell-row-66",
+   "title": "orbit 66",
+   "desc": "nearest orbit 21 at 0.1946",
+   "orbit": "66",
+   "named": "false",
+   "nearest": "21",
+   "nearest-distance": "0.1946"
+  },
+  {
+   "id": "cell-row-67",
+   "title": "orbit 67",
+   "desc": "nearest orbit 26 at 0.1484",
+   "orbit": "67",
+   "named": "false",
+   "nearest": "26",
+   "nearest-distance": "0.1484"
+  },
+  {
+   "id": "cell-row-68",
+   "title": "orbit 68",
+   "desc": "nearest orbit 81 at 0.1408",
+   "orbit": "68",
+   "named": "false",
+   "nearest": "81",
+   "nearest-distance": "0.1408"
+  },
+  {
+   "id": "cell-row-69",
+   "title": "orbit 69",
+   "desc": "nearest orbit 31 at 0.1573",
+   "orbit": "69",
+   "named": "false",
+   "nearest": "31",
+   "nearest-distance": "0.1573"
+  },
+  {
+   "id": "cell-row-70",
+   "title": "orbit 70",
+   "desc": "nearest orbit 32 at 0.1507",
+   "orbit": "70",
+   "named": "false",
+   "nearest": "32",
+   "nearest-distance": "0.1507"
+  },
+  {
+   "id": "cell-row-71",
+   "title": "orbit 71",
+   "desc": "nearest orbit 34 at 0.0716",
+   "orbit": "71",
+   "named": "false",
+   "nearest": "34",
+   "nearest-distance": "0.0716"
+  },
+  {
+   "id": "cell-row-72",
+   "title": "orbit 72",
+   "desc": "nearest orbit 33 at 0.2106",
+   "orbit": "72",
+   "named": "false",
+   "nearest": "33",
+   "nearest-distance": "0.2106"
+  },
+  {
+   "id": "cell-row-73",
+   "title": "orbit 73",
+   "desc": "nearest orbit 71 at 0.4334",
+   "orbit": "73",
+   "named": "false",
+   "nearest": "71",
+   "nearest-distance": "0.4334"
+  },
+  {
+   "id": "cell-row-74",
+   "title": "orbit 74",
+   "desc": "nearest orbit 40 at 0.0825",
+   "orbit": "74",
+   "named": "false",
+   "nearest": "40",
+   "nearest-distance": "0.0825"
+  },
+  {
+   "id": "cell-row-75",
+   "title": "orbit 75",
+   "desc": "nearest orbit 41 at 0.0761",
+   "orbit": "75",
+   "named": "false",
+   "nearest": "41",
+   "nearest-distance": "0.0761"
+  },
+  {
+   "id": "cell-row-76",
+   "title": "orbit 76",
+   "desc": "nearest orbit 42 at 0.0763",
+   "orbit": "76",
+   "named": "false",
+   "nearest": "42",
+   "nearest-distance": "0.0763"
+  },
+  {
+   "id": "cell-row-77",
+   "title": "orbit 77",
+   "desc": "nearest orbit 43 at 0.0741",
+   "orbit": "77",
+   "named": "false",
+   "nearest": "43",
+   "nearest-distance": "0.0741"
+  },
+  {
+   "id": "cell-row-78",
+   "title": "orbit 78",
+   "desc": "nearest orbit 55 at 0.1990",
+   "orbit": "78",
+   "named": "false",
+   "nearest": "55",
+   "nearest-distance": "0.1990"
+  },
+  {
+   "id": "cell-row-79",
+   "title": "orbit 79",
+   "desc": "nearest orbit 47 at 0.1573",
+   "orbit": "79",
+   "named": "false",
+   "nearest": "47",
+   "nearest-distance": "0.1573"
+  },
+  {
+   "id": "cell-row-80",
+   "title": "orbit 80",
+   "desc": "nearest orbit 48 at 0.1546",
+   "orbit": "80",
+   "named": "false",
+   "nearest": "48",
+   "nearest-distance": "0.1546"
+  },
+  {
+   "id": "cell-row-81",
+   "title": "orbit 81",
+   "desc": "nearest orbit 68 at 0.1408",
+   "orbit": "81",
+   "named": "false",
+   "nearest": "68",
+   "nearest-distance": "0.1408"
+  },
+  {
+   "id": "cell-row-82",
+   "title": "orbit 82",
+   "desc": "nearest orbit 53 at 0.0897",
+   "orbit": "82",
+   "named": "false",
+   "nearest": "53",
+   "nearest-distance": "0.0897"
+  },
+  {
+   "id": "cell-row-83",
+   "title": "orbit 83",
+   "desc": "nearest orbit 54 at 0.0804",
+   "orbit": "83",
+   "named": "false",
+   "nearest": "54",
+   "nearest-distance": "0.0804"
+  },
+  {
+   "id": "cell-row-84",
+   "title": "orbit 84",
+   "desc": "nearest orbit 55 at 0.0807",
+   "orbit": "84",
+   "named": "false",
+   "nearest": "55",
+   "nearest-distance": "0.0807"
+  },
+  {
+   "id": "cell-row-85",
+   "title": "orbit 85",
+   "desc": "nearest orbit 56 at 0.0818",
+   "orbit": "85",
+   "named": "false",
+   "nearest": "56",
+   "nearest-distance": "0.0818"
+  },
+  {
+   "id": "cell-row-86",
+   "title": "orbit 86",
+   "desc": "nearest orbit 63 at 0.0608",
+   "orbit": "86",
+   "named": "false",
+   "nearest": "63",
+   "nearest-distance": "0.0608"
+  },
+  {
+   "id": "cell-row-87",
+   "title": "orbit 87",
+   "desc": "nearest orbit 60 at 0.1561",
+   "orbit": "87",
+   "named": "false",
+   "nearest": "60",
+   "nearest-distance": "0.1561"
+  },
+  {
+   "id": "cell-row-88",
+   "title": "orbit 88",
+   "desc": "nearest orbit 61 at 0.1533",
+   "orbit": "88",
+   "named": "false",
+   "nearest": "61",
+   "nearest-distance": "0.1533"
+  },
+  {
+   "id": "cell-row-89",
+   "title": "orbit 89",
+   "desc": "nearest orbit 64 at 0.0615",
+   "orbit": "89",
+   "named": "false",
+   "nearest": "64",
+   "nearest-distance": "0.0615"
+  },
+  {
+   "id": "cell-row-90",
+   "title": "orbit 90",
+   "desc": "nearest orbit 65 at 0.0609",
+   "orbit": "90",
+   "named": "false",
+   "nearest": "65",
+   "nearest-distance": "0.0609"
+  },
+  {
+   "id": "cell-row-91",
+   "title": "orbit 91 — + (SymbolFolds)",
+   "desc": "nearest orbit 7 at 0.3591",
+   "orbit": "91",
+   "named": "true",
+   "nearest": "7",
+   "nearest-distance": "0.3591"
+  },
+  {
+   "id": "cell-row-92",
+   "title": "orbit 92",
+   "desc": "nearest orbit 7 at 0.3591",
+   "orbit": "92",
+   "named": "false",
+   "nearest": "7",
+   "nearest-distance": "0.3591"
+  }
+ ]
+}

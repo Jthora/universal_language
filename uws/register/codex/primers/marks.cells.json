@@ -1,0 +1,71 @@
+{
+ "sheet": "primers/marks",
+ "cells": [
+  {
+   "id": "cell-mark-Point",
+   "title": "Point — symmetry order inf, singular curvature",
+   "desc": "unchanged under ANY rotation — cannot indicate a direction",
+   "mark": "Point",
+   "symmetry": "inf",
+   "curvature": "singular",
+   "symmetry-class": "invariant",
+   "rotation-order": "C-inf",
+   "measured": "both axes measured, not assigned"
+  },
+  {
+   "id": "cell-mark-Circle",
+   "title": "Circle — symmetry order inf, smooth curvature",
+   "desc": "unchanged under ANY rotation — cannot indicate a direction",
+   "mark": "Circle",
+   "symmetry": "inf",
+   "curvature": "smooth",
+   "symmetry-class": "invariant",
+   "rotation-order": "C-inf",
+   "measured": "both axes measured, not assigned"
+  },
+  {
+   "id": "cell-mark-Line",
+   "title": "Line — symmetry order 2, singular curvature",
+   "desc": "a half-turn returns it — indicates an axis, not a sense",
+   "mark": "Line",
+   "symmetry": "2",
+   "curvature": "singular",
+   "symmetry-class": "orientation-bearing",
+   "rotation-order": "C2",
+   "measured": "both axes measured, not assigned"
+  },
+  {
+   "id": "cell-mark-Wave",
+   "title": "Wave — symmetry order 2, smooth curvature",
+   "desc": "a half-turn returns it — indicates an axis, not a sense",
+   "mark": "Wave",
+   "symmetry": "2",
+   "curvature": "smooth",
+   "symmetry-class": "orientation-bearing",
+   "rotation-order": "C2",
+   "measured": "both axes measured, not assigned"
+  },
+  {
+   "id": "cell-mark-Angle",
+   "title": "Angle — symmetry order 1, singular curvature",
+   "desc": "no non-trivial rotation returns it — indicates axis AND sense",
+   "mark": "Angle",
+   "symmetry": "1",
+   "curvature": "singular",
+   "symmetry-class": "modulating",
+   "rotation-order": "C1",
+   "measured": "both axes measured, not assigned"
+  },
+  {
+   "id": "cell-mark-Curve",
+   "title": "Curve — symmetry order 1, smooth curvature",
+   "desc": "no non-trivial rotation returns it — indicates axis AND sense",
+   "mark": "Curve",
+   "symmetry": "1",
+   "curvature": "smooth",
+   "symmetry-class": "modulating",
+   "rotation-order": "C1",
+   "measured": "both axes measured, not assigned"
+  }
+ ]
+}

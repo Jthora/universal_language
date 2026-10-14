@@ -1,0 +1,113 @@
+{
+ "sheet": "slices/slice-b-bearing",
+ "cells": [
+  {
+   "id": "cell-0-0",
+   "title": "axis-x bearing, x 0°, operator superpose_displaced, contact false",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0, A=Circle, B=Point, separation=2.2, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "bearing",
+   "x": "0°",
+   "operator": "superpose_displaced",
+   "contact": "false"
+  },
+  {
+   "id": "cell-0-1",
+   "title": "axis-x bearing, x 30°, operator none, contact false",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0, A=Circle, B=Point, separation=2.2, bearing=30°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "bearing",
+   "x": "30°",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-0-2",
+   "title": "axis-x bearing, x 60°, operator none, contact false",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0, A=Circle, B=Point, separation=2.2, bearing=60°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "bearing",
+   "x": "60°",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-0-3",
+   "title": "axis-x bearing, x 90°, operator none, contact false",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0, A=Circle, B=Point, separation=2.2, bearing=90°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "bearing",
+   "x": "90°",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-0-4",
+   "title": "axis-x bearing, x 120°, operator none, contact false",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0, A=Circle, B=Point, separation=2.2, bearing=120°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "bearing",
+   "x": "120°",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-0-5",
+   "title": "axis-x bearing, x 150°, operator none, contact false",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0, A=Circle, B=Point, separation=2.2, bearing=150°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "bearing",
+   "x": "150°",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-0-6",
+   "title": "axis-x bearing, x 180°, operator none, contact false",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0, A=Circle, B=Point, separation=2.2, bearing=180°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "bearing",
+   "x": "180°",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-0-7",
+   "title": "axis-x bearing, x 210°, operator none, contact false",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0, A=Circle, B=Point, separation=2.2, bearing=210°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "bearing",
+   "x": "210°",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-0-8",
+   "title": "axis-x bearing, x 240°, operator none, contact false",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0, A=Circle, B=Point, separation=2.2, bearing=240°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "bearing",
+   "x": "240°",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-0-9",
+   "title": "axis-x bearing, x 270°, operator none, contact false",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0, A=Circle, B=Point, separation=2.2, bearing=270°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "bearing",
+   "x": "270°",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-0-10",
+   "title": "axis-x bearing, x 300°, operator none, contact false",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0, A=Circle, B=Point, separation=2.2, bearing=300°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "bearing",
+   "x": "300°",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-0-11",
+   "title": "axis-x bearing, x 330°, operator none, contact false",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0, A=Circle, B=Point, separation=2.2, bearing=330°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "bearing",
+   "x": "330°",
+   "operator": "none",
+   "contact": "false"
+  }
+ ]
+}

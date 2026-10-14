@@ -1,0 +1,68 @@
+{
+ "sheet": "slices/slice-b-separation",
+ "cells": [
+  {
+   "id": "cell-0-0",
+   "title": "axis-x separation, x 0, operator superpose_concentric,cross,nest, contact false",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0, A=Circle, B=Point, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "separation",
+   "x": "0",
+   "operator": "superpose_concentric,cross,nest",
+   "contact": "false"
+  },
+  {
+   "id": "cell-0-1",
+   "title": "axis-x separation, x 0.6, operator none, contact false",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0, A=Circle, B=Point, separation=0.6, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "separation",
+   "x": "0.6",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-0-2",
+   "title": "axis-x separation, x 0.995, operator concatenate, contact true",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0, A=Circle, B=Point, separation=0.995, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "separation",
+   "x": "0.995",
+   "operator": "concatenate",
+   "contact": "true"
+  },
+  {
+   "id": "cell-0-3",
+   "title": "axis-x separation, x 1.1, operator none, contact false",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0, A=Circle, B=Point, separation=1.1, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "separation",
+   "x": "1.1",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-0-4",
+   "title": "axis-x separation, x 1.6, operator none, contact false",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0, A=Circle, B=Point, separation=1.6, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "separation",
+   "x": "1.6",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-0-5",
+   "title": "axis-x separation, x 2.2, operator superpose_displaced, contact false",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0, A=Circle, B=Point, separation=2.2, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "separation",
+   "x": "2.2",
+   "operator": "superpose_displaced",
+   "contact": "false"
+  },
+  {
+   "id": "cell-0-6",
+   "title": "axis-x separation, x 3, operator none, contact false",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0, A=Circle, B=Point, separation=3, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "separation",
+   "x": "3",
+   "operator": "none",
+   "contact": "false"
+  }
+ ]
+}

@@ -1,0 +1,59 @@
+{
+ "sheet": "charts/enantiomorphs",
+ "cells": [
+  {
+   "id": "cell-enant-Point",
+   "title": "Point and its mirror: achiral",
+   "desc": "mark Point; group O(2); mirror distance 0.0000; chiral False",
+   "mark": "Point",
+   "group": "O(2)",
+   "mirror-distance": "0.0000",
+   "chiral": "false"
+  },
+  {
+   "id": "cell-enant-Line",
+   "title": "Line and its mirror: achiral",
+   "desc": "mark Line; group D2; mirror distance 0.0000; chiral False",
+   "mark": "Line",
+   "group": "D2",
+   "mirror-distance": "0.0000",
+   "chiral": "false"
+  },
+  {
+   "id": "cell-enant-Angle",
+   "title": "Angle and its mirror: achiral",
+   "desc": "mark Angle; group D1; mirror distance 0.0053; chiral False",
+   "mark": "Angle",
+   "group": "D1",
+   "mirror-distance": "0.0053",
+   "chiral": "false"
+  },
+  {
+   "id": "cell-enant-Curve",
+   "title": "Curve and its mirror: achiral",
+   "desc": "mark Curve; group D1; mirror distance 0.0055; chiral False",
+   "mark": "Curve",
+   "group": "D1",
+   "mirror-distance": "0.0055",
+   "chiral": "false"
+  },
+  {
+   "id": "cell-enant-Wave",
+   "title": "Wave and its mirror: chiral",
+   "desc": "mark Wave; group C2; mirror distance 0.3878; chiral True",
+   "mark": "Wave",
+   "group": "C2",
+   "mirror-distance": "0.3878",
+   "chiral": "true"
+  },
+  {
+   "id": "cell-enant-Circle",
+   "title": "Circle and its mirror: achiral",
+   "desc": "mark Circle; group O(2); mirror distance 0.0083; chiral False",
+   "mark": "Circle",
+   "group": "O(2)",
+   "mirror-distance": "0.0083",
+   "chiral": "false"
+  }
+ ]
+}

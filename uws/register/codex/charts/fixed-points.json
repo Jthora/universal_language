@@ -1,0 +1,54 @@
+{
+  "sheet": "fixed-points",
+  "title": "Fixed points of each mark",
+  "threshold": 0.05,
+  "rows": [
+    {
+      "mark": "Point",
+      "unmoved_by": [
+        "turn 90",
+        "turn 180",
+        "turn 17",
+        "mirror 0",
+        "mirror 90"
+      ]
+    },
+    {
+      "mark": "Line",
+      "unmoved_by": [
+        "turn 180",
+        "mirror 0",
+        "mirror 90"
+      ]
+    },
+    {
+      "mark": "Angle",
+      "unmoved_by": [
+        "mirror 90"
+      ]
+    },
+    {
+      "mark": "Curve",
+      "unmoved_by": [
+        "mirror 90"
+      ]
+    },
+    {
+      "mark": "Wave",
+      "unmoved_by": [
+        "turn 180"
+      ]
+    },
+    {
+      "mark": "Circle",
+      "unmoved_by": [
+        "turn 90",
+        "turn 180",
+        "turn 17",
+        "mirror 0",
+        "mirror 90"
+      ]
+    }
+  ],
+  "teaches": "the stabiliser of each mark, as measurement not label"
+}

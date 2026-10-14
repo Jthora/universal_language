@@ -1,0 +1,71 @@
+{
+ "sheet": "primers/operators",
+ "cells": [
+  {
+   "id": "cell-op-superpose_concentric",
+   "title": "superpose_concentric(Angle, Curve) — share a centre",
+   "desc": "attested: the hexagram; Point-in-Circle; the teardrop",
+   "operator": "superpose_concentric",
+   "operands": "Angle + Curve",
+   "does": "share a centre",
+   "attested": "the hexagram; Point-in-Circle; the teardrop",
+   "evidence": "F44 / F56",
+   "licence": "drawn on a sheet; its semantics are not thereby derived"
+  },
+  {
+   "id": "cell-op-superpose_displaced",
+   "title": "superpose_displaced(Angle, Angle) — the SAME components, displaced",
+   "desc": "attested: Chaos: two triangles side by side",
+   "operator": "superpose_displaced",
+   "operands": "Angle + Angle",
+   "does": "the SAME components, displaced",
+   "attested": "Chaos: two triangles side by side",
+   "evidence": "F44",
+   "licence": "drawn on a sheet; its semantics are not thereby derived"
+  },
+  {
+   "id": "cell-op-cross",
+   "title": "cross(Line, Line) — superpose a rotated copy",
+   "desc": "attested: SymbolFolds: two lines at right angles gives +",
+   "operator": "cross",
+   "operands": "Line + Line",
+   "does": "superpose a rotated copy",
+   "attested": "SymbolFolds: two lines at right angles gives +",
+   "evidence": "F9",
+   "licence": "drawn on a sheet; its semantics are not thereby derived"
+  },
+  {
+   "id": "cell-op-concatenate",
+   "title": "concatenate(Angle, Curve) — end to end",
+   "desc": "attested: arch followed by cup makes the sine",
+   "operator": "concatenate",
+   "operands": "Angle + Curve",
+   "does": "end to end",
+   "attested": "arch followed by cup makes the sine",
+   "evidence": "F42",
+   "licence": "drawn on a sheet; its semantics are not thereby derived"
+  },
+  {
+   "id": "cell-op-nest",
+   "title": "nest(Circle, Point) — one inside the other",
+   "desc": "attested: Universe containing Star System",
+   "operator": "nest",
+   "operands": "Circle + Point",
+   "does": "one inside the other",
+   "attested": "Universe containing Star System",
+   "evidence": "F56",
+   "licence": "drawn on a sheet; its semantics are not thereby derived"
+  },
+  {
+   "id": "cell-op-reflect_pair",
+   "title": "reflect_pair(Wave) — a mark and its mirror",
+   "desc": "attested: two waves mirrored give infinity",
+   "operator": "reflect_pair",
+   "operands": "Wave",
+   "does": "a mark and its mirror",
+   "attested": "two waves mirrored give infinity",
+   "evidence": "F9",
+   "licence": "drawn on a sheet; its semantics are not thereby derived"
+  }
+ ]
+}

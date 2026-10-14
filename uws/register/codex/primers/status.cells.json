@@ -1,0 +1,53 @@
+{
+ "sheet": "primers/status",
+ "cells": [
+  {
+   "id": "cell-status-derived",
+   "title": "derived — assert freely; the derivation is in `derivation`",
+   "desc": "",
+   "status": "derived",
+   "licence": "assert freely; the derivation is in `derivation`",
+   "drawn": "the badge is drawn, not written, so it reads in any language"
+  },
+  {
+   "id": "cell-status-derived_given",
+   "title": "derived_given — assert only together with its `given` premise",
+   "desc": "",
+   "status": "derived_given",
+   "licence": "assert only together with its `given` premise",
+   "drawn": "the badge is drawn, not written, so it reads in any language"
+  },
+  {
+   "id": "cell-status-measured",
+   "title": "measured — assert as a fact about these artifacts, not as necessity",
+   "desc": "",
+   "status": "measured",
+   "licence": "assert as a fact about these artifacts, not as necessity",
+   "drawn": "the badge is drawn, not written, so it reads in any language"
+  },
+  {
+   "id": "cell-status-undetermined",
+   "title": "undetermined — use, do not assert; `success_condition` says what would settle it",
+   "desc": "",
+   "status": "undetermined",
+   "licence": "use, do not assert; `success_condition` says what would settle it",
+   "drawn": "the badge is drawn, not written, so it reads in any language"
+  },
+  {
+   "id": "cell-status-conventional",
+   "title": "conventional — assert as a choice, never as a result",
+   "desc": "",
+   "status": "conventional",
+   "licence": "assert as a choice, never as a result",
+   "drawn": "the badge is drawn, not written, so it reads in any language"
+  },
+  {
+   "id": "cell-status-withdrawn",
+   "title": "withdrawn — do not assert; retained so citations resolve to the retraction",
+   "desc": "",
+   "status": "withdrawn",
+   "licence": "do not assert; retained so citations resolve to the retraction",
+   "drawn": "the badge is drawn, not written, so it reads in any language"
+  }
+ ]
+}

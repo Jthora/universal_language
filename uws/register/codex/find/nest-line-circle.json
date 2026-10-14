@@ -1,0 +1,17 @@
+{
+  "orbit": 9,
+  "members": [
+    "nest(Line,Circle)"
+  ],
+  "symmetry": "2",
+  "curvature": "singular",
+  "meaning": null,
+  "status": "undetermined",
+  "strokes": 2,
+  "components": 2,
+  "mirror_axes": "2",
+  "closed": true,
+  "crossings": "1",
+  "aspect": "wide",
+  "curvature_mix": "mixed"
+}

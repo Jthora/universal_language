@@ -1,0 +1,18 @@
+{
+  "orbit": 16,
+  "members": [
+    "superpose_displaced(Wave,Wave)",
+    "concatenate(Wave,Wave)"
+  ],
+  "symmetry": "2",
+  "curvature": "smooth",
+  "meaning": null,
+  "status": "undetermined",
+  "strokes": 2,
+  "components": 2,
+  "mirror_axes": "0",
+  "closed": false,
+  "crossings": "0",
+  "aspect": "wide",
+  "curvature_mix": "smooth"
+}

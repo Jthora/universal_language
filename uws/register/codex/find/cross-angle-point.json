@@ -1,0 +1,22 @@
+{
+  "orbit": 26,
+  "members": [
+    "superpose_concentric(Point,Angle)",
+    "superpose_concentric(Angle,Point)",
+    "cross(Point,Angle)",
+    "cross(Angle,Point)",
+    "nest(Point,Angle)",
+    "nest(Angle,Point)"
+  ],
+  "symmetry": "1",
+  "curvature": "singular",
+  "meaning": null,
+  "status": "undetermined",
+  "strokes": 2,
+  "components": 1,
+  "mirror_axes": "1",
+  "closed": false,
+  "crossings": "0",
+  "aspect": "wide",
+  "curvature_mix": "straight"
+}

@@ -1,0 +1,18 @@
+{
+  "orbit": 42,
+  "members": [
+    "superpose_displaced(Angle,Circle)",
+    "superpose_displaced(Circle,Angle)"
+  ],
+  "symmetry": "1",
+  "curvature": "singular",
+  "meaning": null,
+  "status": "undetermined",
+  "strokes": 2,
+  "components": 2,
+  "mirror_axes": "0",
+  "closed": true,
+  "crossings": "0",
+  "aspect": "wide",
+  "curvature_mix": "mixed"
+}

@@ -1,0 +1,71 @@
+{
+ "sheet": "cells/marks",
+ "cells": [
+  {
+   "id": "Point",
+   "title": "Point",
+   "desc": "kind: mark · id: Point · symmetry-order: inf · curvature-class: singular · rotation-class: invariant · status: derived · derived-by: rotation-class-is-symmetry-order; mark-polarity",
+   "kind": "mark",
+   "symmetry-order": "inf",
+   "curvature-class": "singular",
+   "rotation-class": "invariant",
+   "status": "derived",
+   "derived-by": "rotation-class-is-symmetry-order; mark-polarity"
+  },
+  {
+   "id": "Circle",
+   "title": "Circle",
+   "desc": "kind: mark · id: Circle · symmetry-order: inf · curvature-class: smooth · rotation-class: invariant · status: derived · derived-by: rotation-class-is-symmetry-order; mark-polarity",
+   "kind": "mark",
+   "symmetry-order": "inf",
+   "curvature-class": "smooth",
+   "rotation-class": "invariant",
+   "status": "derived",
+   "derived-by": "rotation-class-is-symmetry-order; mark-polarity"
+  },
+  {
+   "id": "Line",
+   "title": "Line",
+   "desc": "kind: mark · id: Line · symmetry-order: 2 · curvature-class: singular · rotation-class: orientation-bearing · status: derived · derived-by: rotation-class-is-symmetry-order; mark-polarity",
+   "kind": "mark",
+   "symmetry-order": "2",
+   "curvature-class": "singular",
+   "rotation-class": "orientation-bearing",
+   "status": "derived",
+   "derived-by": "rotation-class-is-symmetry-order; mark-polarity"
+  },
+  {
+   "id": "Wave",
+   "title": "Wave",
+   "desc": "kind: mark · id: Wave · symmetry-order: 2 · curvature-class: smooth · rotation-class: orientation-bearing · status: derived · derived-by: rotation-class-is-symmetry-order; mark-polarity",
+   "kind": "mark",
+   "symmetry-order": "2",
+   "curvature-class": "smooth",
+   "rotation-class": "orientation-bearing",
+   "status": "derived",
+   "derived-by": "rotation-class-is-symmetry-order; mark-polarity"
+  },
+  {
+   "id": "Angle",
+   "title": "Angle",
+   "desc": "kind: mark · id: Angle · symmetry-order: 1 · curvature-class: singular · rotation-class: modulating · status: derived · derived-by: rotation-class-is-symmetry-order; mark-polarity",
+   "kind": "mark",
+   "symmetry-order": "1",
+   "curvature-class": "singular",
+   "rotation-class": "modulating",
+   "status": "derived",
+   "derived-by": "rotation-class-is-symmetry-order; mark-polarity"
+  },
+  {
+   "id": "Curve",
+   "title": "Curve",
+   "desc": "kind: mark · id: Curve · symmetry-order: 1 · curvature-class: smooth · rotation-class: modulating · status: derived · derived-by: rotation-class-is-symmetry-order; mark-polarity",
+   "kind": "mark",
+   "symmetry-order": "1",
+   "curvature-class": "smooth",
+   "rotation-class": "modulating",
+   "status": "derived",
+   "derived-by": "rotation-class-is-symmetry-order; mark-polarity"
+  }
+ ]
+}

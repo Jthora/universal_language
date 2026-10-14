@@ -1,0 +1,269 @@
+{
+ "sheet": "slices/slice-u-rotation-reflection",
+ "cells": [
+  {
+   "id": "cell-0-0",
+   "title": "axis-x reflection, x as drawn, axis-y rotation, y 0°, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=0, mark=Wave, rotation=0°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "reflection",
+   "x": "as drawn",
+   "axis-y": "rotation",
+   "y": "0°",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-0-1",
+   "title": "axis-x reflection, x mirrored, axis-y rotation, y 0°, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=0, mark=Wave, rotation=0°, reflection=mirrored, scale=1, count=1",
+   "axis-x": "reflection",
+   "x": "mirrored",
+   "axis-y": "rotation",
+   "y": "0°",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-1-0",
+   "title": "axis-x reflection, x as drawn, axis-y rotation, y 30°, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=0, mark=Wave, rotation=30°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "reflection",
+   "x": "as drawn",
+   "axis-y": "rotation",
+   "y": "30°",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-1-1",
+   "title": "axis-x reflection, x mirrored, axis-y rotation, y 30°, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=0, mark=Wave, rotation=30°, reflection=mirrored, scale=1, count=1",
+   "axis-x": "reflection",
+   "x": "mirrored",
+   "axis-y": "rotation",
+   "y": "30°",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-2-0",
+   "title": "axis-x reflection, x as drawn, axis-y rotation, y 60°, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=0, mark=Wave, rotation=60°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "reflection",
+   "x": "as drawn",
+   "axis-y": "rotation",
+   "y": "60°",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-2-1",
+   "title": "axis-x reflection, x mirrored, axis-y rotation, y 60°, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=0, mark=Wave, rotation=60°, reflection=mirrored, scale=1, count=1",
+   "axis-x": "reflection",
+   "x": "mirrored",
+   "axis-y": "rotation",
+   "y": "60°",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-3-0",
+   "title": "axis-x reflection, x as drawn, axis-y rotation, y 90°, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=0, mark=Wave, rotation=90°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "reflection",
+   "x": "as drawn",
+   "axis-y": "rotation",
+   "y": "90°",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-3-1",
+   "title": "axis-x reflection, x mirrored, axis-y rotation, y 90°, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=0, mark=Wave, rotation=90°, reflection=mirrored, scale=1, count=1",
+   "axis-x": "reflection",
+   "x": "mirrored",
+   "axis-y": "rotation",
+   "y": "90°",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-4-0",
+   "title": "axis-x reflection, x as drawn, axis-y rotation, y 120°, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=0, mark=Wave, rotation=120°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "reflection",
+   "x": "as drawn",
+   "axis-y": "rotation",
+   "y": "120°",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-4-1",
+   "title": "axis-x reflection, x mirrored, axis-y rotation, y 120°, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=0, mark=Wave, rotation=120°, reflection=mirrored, scale=1, count=1",
+   "axis-x": "reflection",
+   "x": "mirrored",
+   "axis-y": "rotation",
+   "y": "120°",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-5-0",
+   "title": "axis-x reflection, x as drawn, axis-y rotation, y 150°, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=0, mark=Wave, rotation=150°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "reflection",
+   "x": "as drawn",
+   "axis-y": "rotation",
+   "y": "150°",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-5-1",
+   "title": "axis-x reflection, x mirrored, axis-y rotation, y 150°, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=0, mark=Wave, rotation=150°, reflection=mirrored, scale=1, count=1",
+   "axis-x": "reflection",
+   "x": "mirrored",
+   "axis-y": "rotation",
+   "y": "150°",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-6-0",
+   "title": "axis-x reflection, x as drawn, axis-y rotation, y 180°, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=0, mark=Wave, rotation=180°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "reflection",
+   "x": "as drawn",
+   "axis-y": "rotation",
+   "y": "180°",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-6-1",
+   "title": "axis-x reflection, x mirrored, axis-y rotation, y 180°, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=0, mark=Wave, rotation=180°, reflection=mirrored, scale=1, count=1",
+   "axis-x": "reflection",
+   "x": "mirrored",
+   "axis-y": "rotation",
+   "y": "180°",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-7-0",
+   "title": "axis-x reflection, x as drawn, axis-y rotation, y 210°, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=0, mark=Wave, rotation=210°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "reflection",
+   "x": "as drawn",
+   "axis-y": "rotation",
+   "y": "210°",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-7-1",
+   "title": "axis-x reflection, x mirrored, axis-y rotation, y 210°, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=0, mark=Wave, rotation=210°, reflection=mirrored, scale=1, count=1",
+   "axis-x": "reflection",
+   "x": "mirrored",
+   "axis-y": "rotation",
+   "y": "210°",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-8-0",
+   "title": "axis-x reflection, x as drawn, axis-y rotation, y 240°, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=0, mark=Wave, rotation=240°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "reflection",
+   "x": "as drawn",
+   "axis-y": "rotation",
+   "y": "240°",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-8-1",
+   "title": "axis-x reflection, x mirrored, axis-y rotation, y 240°, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=0, mark=Wave, rotation=240°, reflection=mirrored, scale=1, count=1",
+   "axis-x": "reflection",
+   "x": "mirrored",
+   "axis-y": "rotation",
+   "y": "240°",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-9-0",
+   "title": "axis-x reflection, x as drawn, axis-y rotation, y 270°, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=0, mark=Wave, rotation=270°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "reflection",
+   "x": "as drawn",
+   "axis-y": "rotation",
+   "y": "270°",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-9-1",
+   "title": "axis-x reflection, x mirrored, axis-y rotation, y 270°, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=0, mark=Wave, rotation=270°, reflection=mirrored, scale=1, count=1",
+   "axis-x": "reflection",
+   "x": "mirrored",
+   "axis-y": "rotation",
+   "y": "270°",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-10-0",
+   "title": "axis-x reflection, x as drawn, axis-y rotation, y 300°, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=0, mark=Wave, rotation=300°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "reflection",
+   "x": "as drawn",
+   "axis-y": "rotation",
+   "y": "300°",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-10-1",
+   "title": "axis-x reflection, x mirrored, axis-y rotation, y 300°, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=0, mark=Wave, rotation=300°, reflection=mirrored, scale=1, count=1",
+   "axis-x": "reflection",
+   "x": "mirrored",
+   "axis-y": "rotation",
+   "y": "300°",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-11-0",
+   "title": "axis-x reflection, x as drawn, axis-y rotation, y 330°, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=0, mark=Wave, rotation=330°, reflection=as drawn, scale=1, count=1",
+   "axis-x": "reflection",
+   "x": "as drawn",
+   "axis-y": "rotation",
+   "y": "330°",
+   "operator": "none",
+   "contact": "false"
+  },
+  {
+   "id": "cell-11-1",
+   "title": "axis-x reflection, x mirrored, axis-y rotation, y 330°, operator none, contact false",
+   "desc": "configuration: frequency=1, amplitude=1, phase=0, taper=0, chirp=0, mark=Wave, rotation=330°, reflection=mirrored, scale=1, count=1",
+   "axis-x": "reflection",
+   "x": "mirrored",
+   "axis-y": "rotation",
+   "y": "330°",
+   "operator": "none",
+   "contact": "false"
+  }
+ ]
+}

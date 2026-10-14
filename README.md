@@ -146,7 +146,7 @@ conventions with mechanisms:
   published a signal that meant nothing. `tools/pre-commit` is the opt-in local stand-in.
 - `VERIFIED` requires a test that exists and passes. `CONJECTURED` requires a stated falsifier.
   `DESIGN-CHOICE` requires stated alternatives.
-- `FAILURES.md` is append-only and immutable — <!--s:failures-->36<!--/s--> entries and counting, because a recorded failure
+- `FAILURES.md` is append-only and immutable — <!--s:failures-->37<!--/s--> entries and counting, because a recorded failure
   is data and a repaired one is nothing.
 - A finding is closed only when the fix is applied, tested, and propagation-scanned.
 

@@ -1,0 +1,55 @@
+{
+  "sheet": "frame-table",
+  "title": "Frame dependence of the operators",
+  "rows": [
+    {
+      "schema": "IN / OUT",
+      "operator": "nest",
+      "drift": 2.220446049250313e-15,
+      "frame_free": true
+    },
+    {
+      "schema": "CENTER / PERIPHERY",
+      "operator": "superpose_concentric",
+      "drift": 2.220446049250313e-15,
+      "frame_free": true
+    },
+    {
+      "schema": "NEAR / FAR",
+      "operator": "superpose_displaced",
+      "drift": 1.3343054500263433e-16,
+      "frame_free": true
+    },
+    {
+      "schema": "CONTACT",
+      "operator": "cross",
+      "drift": 1.3343054500263433e-16,
+      "frame_free": true
+    },
+    {
+      "schema": "LINK",
+      "operator": "concatenate",
+      "drift": 1.3343054500263433e-16,
+      "frame_free": true
+    },
+    {
+      "schema": "BALANCE",
+      "operator": "reflect_pair",
+      "drift": 0.034904812874566246,
+      "frame_free": true
+    },
+    {
+      "schema": "UP / DOWN",
+      "operator": null,
+      "drift": 2.1999999999999997,
+      "frame_free": false
+    },
+    {
+      "schema": "FRONT / BACK",
+      "operator": null,
+      "drift": 4.4,
+      "frame_free": false
+    }
+  ],
+  "teaches": "that the attested operators are exactly the frame-free ones"
+}

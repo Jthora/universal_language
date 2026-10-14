@@ -1,0 +1,95 @@
+{
+ "sheet": "charts/subgroup-lattice",
+ "cells": [
+  {
+   "id": "cell-group-C1",
+   "title": "C1 — no mark has this symmetry",
+   "desc": "group: C1; realised: False; marks: none",
+   "group": "C1",
+   "realised": "false",
+   "marks": "none",
+   "order": "1"
+  },
+  {
+   "id": "cell-group-D1",
+   "title": "D1 — Angle, Curve",
+   "desc": "group: D1; realised: True; marks: Angle, Curve",
+   "group": "D1",
+   "realised": "true",
+   "marks": "Angle,Curve",
+   "order": "2"
+  },
+  {
+   "id": "cell-group-C2",
+   "title": "C2 — Wave",
+   "desc": "group: C2; realised: True; marks: Wave",
+   "group": "C2",
+   "realised": "true",
+   "marks": "Wave",
+   "order": "2"
+  },
+  {
+   "id": "cell-group-D2",
+   "title": "D2 — Line",
+   "desc": "group: D2; realised: True; marks: Line",
+   "group": "D2",
+   "realised": "true",
+   "marks": "Line",
+   "order": "4"
+  },
+  {
+   "id": "cell-group-C3",
+   "title": "C3 — no mark has this symmetry",
+   "desc": "group: C3; realised: False; marks: none",
+   "group": "C3",
+   "realised": "false",
+   "marks": "none",
+   "order": "3"
+  },
+  {
+   "id": "cell-group-D3",
+   "title": "D3 — no mark has this symmetry",
+   "desc": "group: D3; realised: False; marks: none",
+   "group": "D3",
+   "realised": "false",
+   "marks": "none",
+   "order": "6"
+  },
+  {
+   "id": "cell-group-C4",
+   "title": "C4 — no mark has this symmetry",
+   "desc": "group: C4; realised: False; marks: none",
+   "group": "C4",
+   "realised": "false",
+   "marks": "none",
+   "order": "4"
+  },
+  {
+   "id": "cell-group-D4",
+   "title": "D4 — no mark has this symmetry",
+   "desc": "group: D4; realised: False; marks: none",
+   "group": "D4",
+   "realised": "false",
+   "marks": "none",
+   "order": "8"
+  },
+  {
+   "id": "cell-group-SO2",
+   "title": "SO(2) — no mark has this symmetry",
+   "desc": "group: SO(2); realised: False; marks: none",
+   "group": "SO(2)",
+   "realised": "false",
+   "marks": "none",
+   "order": "inf"
+  },
+  {
+   "id": "cell-group-O2",
+   "title": "O(2) — Point, Circle",
+   "desc": "group: O(2); realised: True; marks: Point, Circle",
+   "group": "O(2)",
+   "realised": "true",
+   "marks": "Point,Circle",
+   "order": "inf"
+  }
+ ]
+}

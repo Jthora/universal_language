@@ -1,0 +1,53 @@
+{
+  "sheet": "capacity",
+  "title": "Operator capacity",
+  "rows": [
+    {
+      "mark": "Point",
+      "group": "O(2)",
+      "rotation_conveys": "nothing — every rotation returns the same figure",
+      "mirror_conveys": "nothing — the mirror image is some rotation of it",
+      "can_carry_direction": false
+    },
+    {
+      "mark": "Line",
+      "group": "D2",
+      "rotation_conveys": "a turn of distinct states, but a 180-degree turn returns the figure — so opposite directions cannot be told apart",
+      "mirror_conveys": "nothing — the mirror image is some rotation of it",
+      "can_carry_direction": false
+    },
+    {
+      "mark": "Angle",
+      "group": "D1",
+      "rotation_conveys": "a full turn of distinct states — every angle is a different figure",
+      "mirror_conveys": "nothing — the mirror image is some rotation of it",
+      "can_carry_direction": true
+    },
+    {
+      "mark": "Curve",
+      "group": "D1",
+      "rotation_conveys": "a full turn of distinct states — every angle is a different figure",
+      "mirror_conveys": "nothing — the mirror image is some rotation of it",
+      "can_carry_direction": true
+    },
+    {
+      "mark": "Wave",
+      "group": "C2",
+      "rotation_conveys": "a turn of distinct states, but a 180-degree turn returns the figure — so opposite directions cannot be told apart",
+      "mirror_conveys": "a second state, unreachable by any rotation",
+      "can_carry_direction": false
+    },
+    {
+      "mark": "Circle",
+      "group": "O(2)",
+      "rotation_conveys": "nothing — every rotation returns the same figure",
+      "mirror_conveys": "nothing — the mirror image is some rotation of it",
+      "can_carry_direction": false
+    }
+  ],
+  "can_carry_direction": [
+    "Angle",
+    "Curve"
+  ],
+  "teaches": "the stabiliser as an operator's capacity, not a label"
+}

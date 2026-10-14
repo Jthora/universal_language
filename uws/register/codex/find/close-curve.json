@@ -1,0 +1,17 @@
+{
+  "orbit": 25,
+  "members": [
+    "close(Curve)"
+  ],
+  "symmetry": "1",
+  "curvature": "singular",
+  "meaning": null,
+  "status": "undetermined",
+  "strokes": 2,
+  "components": 1,
+  "mirror_axes": "1",
+  "closed": true,
+  "crossings": "0",
+  "aspect": "wide",
+  "curvature_mix": "mixed"
+}

@@ -1,0 +1,221 @@
+{
+ "sheet": "charts/cayley",
+ "cells": [
+  {
+   "id": "cell-cayley-C2-0-0",
+   "title": "C2: e then e = e",
+   "desc": "group C2; e * e = e",
+   "group": "C2",
+   "left": "e",
+   "right": "e",
+   "product": "e"
+  },
+  {
+   "id": "cell-cayley-C2-0-1",
+   "title": "C2: e then r = r",
+   "desc": "group C2; e * r = r",
+   "group": "C2",
+   "left": "e",
+   "right": "r",
+   "product": "r"
+  },
+  {
+   "id": "cell-cayley-C2-1-0",
+   "title": "C2: r then e = r",
+   "desc": "group C2; r * e = r",
+   "group": "C2",
+   "left": "r",
+   "right": "e",
+   "product": "r"
+  },
+  {
+   "id": "cell-cayley-C2-1-1",
+   "title": "C2: r then r = e",
+   "desc": "group C2; r * r = e",
+   "group": "C2",
+   "left": "r",
+   "right": "r",
+   "product": "e"
+  },
+  {
+   "id": "cell-cayley-D1-0-0",
+   "title": "D1: e then e = e",
+   "desc": "group D1; e * e = e",
+   "group": "D1",
+   "left": "e",
+   "right": "e",
+   "product": "e"
+  },
+  {
+   "id": "cell-cayley-D1-0-1",
+   "title": "D1: e then m = m",
+   "desc": "group D1; e * m = m",
+   "group": "D1",
+   "left": "e",
+   "right": "m",
+   "product": "m"
+  },
+  {
+   "id": "cell-cayley-D1-1-0",
+   "title": "D1: m then e = m",
+   "desc": "group D1; m * e = m",
+   "group": "D1",
+   "left": "m",
+   "right": "e",
+   "product": "m"
+  },
+  {
+   "id": "cell-cayley-D1-1-1",
+   "title": "D1: m then m = e",
+   "desc": "group D1; m * m = e",
+   "group": "D1",
+   "left": "m",
+   "right": "m",
+   "product": "e"
+  },
+  {
+   "id": "cell-cayley-D2-0-0",
+   "title": "D2: e then e = e",
+   "desc": "group D2; e * e = e",
+   "group": "D2",
+   "left": "e",
+   "right": "e",
+   "product": "e"
+  },
+  {
+   "id": "cell-cayley-D2-0-1",
+   "title": "D2: e then r = r",
+   "desc": "group D2; e * r = r",
+   "group": "D2",
+   "left": "e",
+   "right": "r",
+   "product": "r"
+  },
+  {
+   "id": "cell-cayley-D2-0-2",
+   "title": "D2: e then m = m",
+   "desc": "group D2; e * m = m",
+   "group": "D2",
+   "left": "e",
+   "right": "m",
+   "product": "m"
+  },
+  {
+   "id": "cell-cayley-D2-0-3",
+   "title": "D2: e then rm = rm",
+   "desc": "group D2; e * rm = rm",
+   "group": "D2",
+   "left": "e",
+   "right": "rm",
+   "product": "rm"
+  },
+  {
+   "id": "cell-cayley-D2-1-0",
+   "title": "D2: r then e = r",
+   "desc": "group D2; r * e = r",
+   "group": "D2",
+   "left": "r",
+   "right": "e",
+   "product": "r"
+  },
+  {
+   "id": "cell-cayley-D2-1-1",
+   "title": "D2: r then r = e",
+   "desc": "group D2; r * r = e",
+   "group": "D2",
+   "left": "r",
+   "right": "r",
+   "product": "e"
+  },
+  {
+   "id": "cell-cayley-D2-1-2",
+   "title": "D2: r then m = rm",
+   "desc": "group D2; r * m = rm",
+   "group": "D2",
+   "left": "r",
+   "right": "m",
+   "product": "rm"
+  },
+  {
+   "id": "cell-cayley-D2-1-3",
+   "title": "D2: r then rm = m",
+   "desc": "group D2; r * rm = m",
+   "group": "D2",
+   "left": "r",
+   "right": "rm",
+   "product": "m"
+  },
+  {
+   "id": "cell-cayley-D2-2-0",
+   "title": "D2: m then e = m",
+   "desc": "group D2; m * e = m",
+   "group": "D2",
+   "left": "m",
+   "right": "e",
+   "product": "m"
+  },
+  {
+   "id": "cell-cayley-D2-2-1",
+   "title": "D2: m then r = rm",
+   "desc": "group D2; m * r = rm",
+   "group": "D2",
+   "left": "m",
+   "right": "r",
+   "product": "rm"
+  },
+  {
+   "id": "cell-cayley-D2-2-2",
+   "title": "D2: m then m = e",
+   "desc": "group D2; m * m = e",
+   "group": "D2",
+   "left": "m",
+   "right": "m",
+   "product": "e"
+  },
+  {
+   "id": "cell-cayley-D2-2-3",
+   "title": "D2: m then rm = r",
+   "desc": "group D2; m * rm = r",
+   "group": "D2",
+   "left": "m",
+   "right": "rm",
+   "product": "r"
+  },
+  {
+   "id": "cell-cayley-D2-3-0",
+   "title": "D2: rm then e = rm",
+   "desc": "group D2; rm * e = rm",
+   "group": "D2",
+   "left": "rm",
+   "right": "e",
+   "product": "rm"
+  },
+  {
+   "id": "cell-cayley-D2-3-1",
+   "title": "D2: rm then r = m",
+   "desc": "group D2; rm * r = m",
+   "group": "D2",
+   "left": "rm",
+   "right": "r",
+   "product": "m"
+  },
+  {
+   "id": "cell-cayley-D2-3-2",
+   "title": "D2: rm then m = r",
+   "desc": "group D2; rm * m = r",
+   "group": "D2",
+   "left": "rm",
+   "right": "m",
+   "product": "r"
+  },
+  {
+   "id": "cell-cayley-D2-3-3",
+   "title": "D2: rm then rm = e",
+   "desc": "group D2; rm * rm = e",
+   "group": "D2",
+   "left": "rm",
+   "right": "rm",
+   "product": "e"
+  }
+ ]
+}

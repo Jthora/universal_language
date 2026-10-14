@@ -1,0 +1,39 @@
+{
+  "sheet": "slice-unary-mark-phase",
+  "group": "unary",
+  "axes": [
+    "mark",
+    "phase"
+  ],
+  "cells": 24,
+  "held": {
+    "rotation": 0.0,
+    "reflection": 0,
+    "scale": 1.0,
+    "count": 1,
+    "frequency": 1.0,
+    "amplitude": 1.0,
+    "taper": 0.0,
+    "chirp": 0.0
+  },
+  "operand_chosen_for": {},
+  "samples": {
+    "mark": [
+      "Point",
+      "Line",
+      "Angle",
+      "Curve",
+      "Wave",
+      "Circle"
+    ],
+    "phase": [
+      "0",
+      "0.25",
+      "0.5",
+      "0.75"
+    ]
+  },
+  "operators_on_this_slice": {},
+  "contact_cells": 0,
+  "note": ""
+}

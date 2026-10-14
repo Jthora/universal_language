@@ -1,0 +1,21 @@
+{
+  "orbit": 0,
+  "members": [
+    "reflect_pair(Point)",
+    "superpose_concentric(Point,Point)",
+    "cross(Point,Point)",
+    "concatenate(Point,Point)",
+    "nest(Point,Point)"
+  ],
+  "symmetry": "inf",
+  "curvature": "singular",
+  "meaning": null,
+  "status": "undetermined",
+  "strokes": 2,
+  "components": 1,
+  "mirror_axes": "inf",
+  "closed": false,
+  "crossings": "0",
+  "aspect": "point",
+  "curvature_mix": "straight"
+}

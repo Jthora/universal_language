@@ -1,0 +1,104 @@
+{
+  "sheet": "operators",
+  "title": "The operator families",
+  "teaches": "placement as one operator family, and the evidence that it is not the only one",
+  "legend_on_sheet": true,
+  "status_on_face": true,
+  "generated_not_traced": true,
+  "asserts": [
+    {
+      "claim": "rotation-parameter-is-free",
+      "status": "derived",
+      "statement": "Superposition takes a free rotation parameter; it is not quantized.",
+      "derivation": "The corpus draws rotations of 45 (rotary table), 30 (zodiac wheel), 10 (decan ring), 60 (hexagram) and 90 (cross) degrees. 45 is not a multiple of 30 or 60 and 60 is not a multiple of 45, so no single quantization admits all of them. A free parameter does.",
+      "finding": "F91"
+    },
+    {
+      "claim": "six-marks-are-complete",
+      "status": "derived",
+      "statement": "The six marks are complete WITH RESPECT TO SYMMETRY ORDER: every order the corpus uses is either a mark's own or is produced by composition.",
+      "derivation": "Iterated superposition-with-rotation reaches every C_n, verified by construction for n=2..8 from the C1 Angle alone. Triangle (C3) and the hexagram (C6) are therefore produced, not posited. Closure was also tested and does NOT reach C3 -- a chevron closes to an isoceles triangle, which is C1.",
+      "scope": "Covers symmetry order only. Does NOT establish that every figure the corpus draws is reachable -- matching an order is weaker than being the same figure. Two figures are now known unreachable, for two different reasons: the Spiral wants scaling (spiral-requires-scaling) and the teardrop wants a curved join (teardrop-reachability, F123). Neither wants a seventh mark.",
+      "finding": "F91"
+    }
+  ],
+  "carries_undetermined": [
+    {
+      "claim": "modulation-is-a-second-operator-family",
+      "status": "derived_given",
+      "statement": "Operators fall into at least two families: PLACEMENT ('place B relative to A', parameterised by the relational axes) and MODULATION ('vary a parameter along A's own extent'). Only placement is documented.",
+      "derivation": "The family boundary is the FIXED-POINT SET. A figure left alone by every member of a family is a fact about that family as a set of maps, so it survives renaming and reparameterisation, and two families with different fixed-point sets cannot be the same family. Measured over the six marks: modulation fixes Point, Line and Circle (14/14 settings each); placement fixes NOTHING (no mark survives all 36 guest-operator combinations); insert fixes only the Point (30/30). Each set has a reason belonging to the operation rather than the code -- modulation re-reads an existing variation and its fixed points are exactly the constant-profile figures (Line spans 0.0000, Circle 0.0042 at the resolution floor, Point has no profile, against Angle 0.8913, Curve 0.8441, Wave 1.1000); insert splices into a stretch of extent and the Point has none; placement adds a second figure and nothing absorbs one without changing.",
+      "given": "that `modulate()` faithfully renders 'vary a parameter along the figure's own extent'. Implementing a family is a design act, which symbol_waveform.py states in its own header, and the boundary is derived for the families as implemented.",
+      "success_condition": "REACHED via the derivation branch (F146). The search branch closed at F137. What would carry this to `derived` is a reason the implemented modulation is the only faithful rendering of 'vary a parameter along the extent' rather than one of several.",
+      "scope": "The boundary between the families. Says nothing about whether the corpus STATES modulation as an operation -- F137 answered that as far as the corpus allows: the word `Modulations` is there, attached to a pair of marks, and the operation is not.",
+      "finding": "F98 -> F137 -> F139 -> F146"
+    }
+  ],
+  "measured": [
+    {
+      "claim": "spiral-requires-scaling",
+      "status": "measured",
+      "statement": "The Spiral is not reachable by any attested operator, and the reason is not a missing scale parameter: it needs MODULATION -- varying a parameter along a mark's own extent -- which is a different operator family from placement.",
+      "scope": "Measured over the 186 enumerated depth-2 combinations, not proved for all compositions. Margin is 0.111 and the nearest case is a near-degenerate stroke. TWO EARLIER INVARIANTS FAILED and are kept on the record: curvature-per-sample (spiral measured 0.95, flat, indistinguishable from a circle) and radial monotonicity (0.967 vs 0.927, contaminated by component stacking order).",
+      "finding": "F95 -> F98"
+    }
+  ],
+  "operators": [
+    {
+      "id": "superpose_concentric",
+      "arity": 2,
+      "attestation": "F44/F56",
+      "attested_by": "the hexagram; Point-in-Circle; the teardrop",
+      "status": "measured",
+      "note": "attested on a sheet; its semantics are not thereby derived"
+    },
+    {
+      "id": "superpose_displaced",
+      "arity": 2,
+      "attestation": "F44",
+      "attested_by": "Chaos: the two triangles side by side",
+      "status": "measured",
+      "note": "attested on a sheet; its semantics are not thereby derived"
+    },
+    {
+      "id": "cross",
+      "arity": 2,
+      "attestation": "F9",
+      "attested_by": "SymbolFolds: two lines at right angles -> +",
+      "status": "measured",
+      "note": "attested on a sheet; its semantics are not thereby derived"
+    },
+    {
+      "id": "concatenate",
+      "arity": 2,
+      "attestation": "F42",
+      "attested_by": "arch followed by cup = the sine",
+      "status": "measured",
+      "note": "attested on a sheet; its semantics are not thereby derived"
+    },
+    {
+      "id": "nest",
+      "arity": 2,
+      "attestation": "F56",
+      "attested_by": "Point inside Circle; Universe containing Star System",
+      "status": "measured",
+      "note": "attested on a sheet; its semantics are not thereby derived"
+    },
+    {
+      "id": "reflect_pair",
+      "arity": 1,
+      "attestation": "F9",
+      "attested_by": "SymbolFolds: two waves mirrored -> infinity",
+      "status": "measured",
+      "note": "attested on a sheet; its semantics are not thereby derived"
+    }
+  ],
+  "verify": {
+    "how": "Re-derive this bundle from source.",
+    "commands": [
+      "python3 tools/verify_symbology_grammar.py    # 12/12 off the sheets",
+      "python3 tools/symbology_glyph.py --check     # glyphs read back as their rule",
+      "python3 tools/symbol_combinations.py --closure"
+    ]
+  }
+}

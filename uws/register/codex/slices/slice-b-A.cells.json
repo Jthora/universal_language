@@ -1,0 +1,59 @@
+{
+ "sheet": "slices/slice-b-A",
+ "cells": [
+  {
+   "id": "cell-0-0",
+   "title": "axis-x A, x Point, operator superpose_concentric,cross,concatenate,nest, contact true",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0, A=Point, B=Point, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "A",
+   "x": "Point",
+   "operator": "superpose_concentric,cross,concatenate,nest",
+   "contact": "true"
+  },
+  {
+   "id": "cell-0-1",
+   "title": "axis-x A, x Line, operator superpose_concentric,cross,concatenate,nest, contact true",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0, A=Line, B=Point, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "A",
+   "x": "Line",
+   "operator": "superpose_concentric,cross,concatenate,nest",
+   "contact": "true"
+  },
+  {
+   "id": "cell-0-2",
+   "title": "axis-x A, x Angle, operator superpose_concentric,cross,nest, contact false",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0, A=Angle, B=Point, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "A",
+   "x": "Angle",
+   "operator": "superpose_concentric,cross,nest",
+   "contact": "false"
+  },
+  {
+   "id": "cell-0-3",
+   "title": "axis-x A, x Curve, operator superpose_concentric,cross,nest, contact false",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0, A=Curve, B=Point, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "A",
+   "x": "Curve",
+   "operator": "superpose_concentric,cross,nest",
+   "contact": "false"
+  },
+  {
+   "id": "cell-0-4",
+   "title": "axis-x A, x Wave, operator superpose_concentric,cross,concatenate,nest, contact true",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0, A=Wave, B=Point, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "A",
+   "x": "Wave",
+   "operator": "superpose_concentric,cross,concatenate,nest",
+   "contact": "true"
+  },
+  {
+   "id": "cell-0-5",
+   "title": "axis-x A, x Circle, operator superpose_concentric,cross,nest, contact false",
+   "desc": "configuration: B-frequency=1, B-amplitude=1, B-phase=0, A=Circle, B=Point, separation=0, bearing=0°, relative-rotation=0°, relative-scale=1, reflect-B=as drawn",
+   "axis-x": "A",
+   "x": "Circle",
+   "operator": "superpose_concentric,cross,nest",
+   "contact": "false"
+  }
+ ]
+}

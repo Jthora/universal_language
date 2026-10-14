@@ -1,0 +1,102 @@
+{
+  "page": "framework",
+  "definitions_are_extracted_not_written": "Each definition is taken from the corpus page that owns the term. `definition_kind` says whether the page composed a one-sentence definition or whether this is its opening paragraph.",
+  "terms": [
+    {
+      "id": "ul",
+      "name": "Universal Language",
+      "why_it_matters_here": "The research programme all of this belongs to. Everything in this codex is one layer of it.",
+      "source_page": "Universal_Language",
+      "source_exists": true,
+      "definition": "Universal Language (UL) is a research program investigating whether there exists a minimal set of semantic primitives, together with open-ended, invariant-preserving transformation operators, that forms a universal substrate for representing and transforming meaning across natural language, formal mathematics, symbolic reasoning, artificial intelligence, and other representational systems.",
+      "definition_kind": "lead paragraph",
+      "analogy": "",
+      "predicts": "",
+      "remember": ""
+    },
+    {
+      "id": "us",
+      "name": "Universal Symbology",
+      "why_it_matters_here": "The layer this site is a reference for: how meaning is written down as figures rather than spelled as sounds.",
+      "source_page": "Universal_Symbology",
+      "source_exists": true,
+      "definition": "Universal Symbology is the visual and symbolic expression layer of Universal Language — the system of symbols, glyphs, and geometric notations that allow UL to be written, read, calculated, and transmitted across all forms of consciousness (organic, artificial, or cosmic).",
+      "definition_kind": "lead paragraph",
+      "analogy": "",
+      "predicts": "",
+      "remember": ""
+    },
+    {
+      "id": "comp",
+      "name": "Composition",
+      "why_it_matters_here": "How the six marks become an unbounded set of figures. The operators on the landing are this machinery.",
+      "source_page": "Universal_Symbology_Composition",
+      "source_exists": true,
+      "definition": "The six symbol-features are generators, not the whole alphabet; a small set of composition operators — orientation, scale, count, combination, placement — build every composite symbol and expression from them, as ordered trajectories through the semantic space.",
+      "definition_kind": "composed",
+      "analogy": "Like an alphabet of strokes that becomes a limitless script once you can rotate, resize, repeat, combine, and position them — the letters are few, the words unbounded.",
+      "predicts": "That composition is one operation at every scale (inside a symbol and between symbols), that the transformation layer IS this composition machinery, and that a spoken syllable is the same trajectory as a composite glyph in another medium.",
+      "remember": ""
+    },
+    {
+      "id": "syntax",
+      "name": "Universal Syntax",
+      "why_it_matters_here": "Which combinations are well-formed. The orbit space is the part of this that has been computed.",
+      "source_page": "Universal_Syntax",
+      "source_exists": true,
+      "definition": "Universal Syntax is the syntactic framework of Universal Language — the rules governing how the geometric primitives and UL's algebraic operations combine into valid, meaningful expressions.",
+      "definition_kind": "lead paragraph",
+      "analogy": "",
+      "predicts": "",
+      "remember": ""
+    },
+    {
+      "id": "grammar",
+      "name": "Universal Grammar",
+      "why_it_matters_here": "Which well-formed expressions are meaningful, and to whom.",
+      "source_page": "Universal_Grammar",
+      "source_exists": true,
+      "definition": "Universal Grammar in the FusionGirl universe is the complete set of structural rules that determine whether an expression in Universal Language is well-formed — meaningful, internally consistent, and interpretable by any conscious system (organic, artificial, or cosmic).",
+      "definition_kind": "lead paragraph",
+      "analogy": "",
+      "predicts": "",
+      "remember": ""
+    },
+    {
+      "id": "uws",
+      "name": "Universal Writing System",
+      "why_it_matters_here": "How the notation is inscribed and read back — the cell, the page, the reading order.",
+      "source_page": "Universal_Writing_System",
+      "source_exists": true,
+      "definition": "The Universal Writing System inscribes meaning in two layers — a small set of iconic symbol-features (the alphabet: what each mark is) arranged by image-schema spatial relations (the grammar: how marks are placed) — so that the arrangement itself carries meaning.",
+      "definition_kind": "composed",
+      "analogy": "Chemistry has atoms and bonds; here the symbol-features are the atoms and the spatial relations are the bonds — a point inside a circle means \"contained\" because of where it sits, not just what it is.",
+      "predicts": "That a reader who knows the features and the relations can decode an expression never seen before, because the geometry is iconic — the shape resembles the meaning.",
+      "remember": ""
+    },
+    {
+      "id": "usgs",
+      "name": "Universal Symbolic Geometry System",
+      "why_it_matters_here": "The geometry the meaning space is mapped onto. This is where the codex's figures acquire coordinates.",
+      "source_page": "Universal_Symbolic_Geometry_System",
+      "source_exists": true,
+      "definition": "The Universal Symbolic Geometry System is the whole framework — a family of symmetry geometries (one per regular polytope) onto which semantics, sound, and structure are mapped, organized by a numerical base ladder and anchored to real symmetry mathematics.",
+      "definition_kind": "composed",
+      "analogy": "It is an atlas of shapes-of-meaning: each regular solid (and, one dimension up, each regular polytope) is a chart, and the whole is the collection of charts and the maps between them.",
+      "predicts": "That there are exactly three distinct semantic geometries in 3D (not five), that expressive richness peaks in dimensions 3–4 and collapses above, and which mathematical toolkit fits which tier.",
+      "remember": ""
+    },
+    {
+      "id": "uas",
+      "name": "Universal Astrological Symbology",
+      "why_it_matters_here": "The branch the twelve signs belong to. Those signs are attested from source cards, not derived from the marks.",
+      "source_page": "Universal_Astrological_Symbology",
+      "source_exists": true,
+      "definition": "Universal Astrological Symbology is the branch of Universal Symbology concerned with the astrological symbol tower: how the zodiac's twelve signs, their elements, modalities, cusps and decans arise as compositions of the geometric base symbols rather than as an inherited list of arbitrary glyphs.",
+      "definition_kind": "lead paragraph",
+      "analogy": "",
+      "predicts": "",
+      "remember": ""
+    }
+  ]
+}

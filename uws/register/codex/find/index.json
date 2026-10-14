@@ -1,0 +1,1686 @@
+{
+  "orbits": [
+    {
+      "orbit": 0,
+      "members": [
+        "reflect_pair(Point)",
+        "superpose_concentric(Point,Point)",
+        "cross(Point,Point)",
+        "concatenate(Point,Point)",
+        "nest(Point,Point)"
+      ],
+      "symmetry": "inf",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 1,
+      "mirror_axes": "inf",
+      "closed": false,
+      "crossings": "0",
+      "aspect": "point",
+      "curvature_mix": "straight"
+    },
+    {
+      "orbit": 1,
+      "members": [
+        "reflect_pair(Line)",
+        "close(Line)",
+        "superpose_concentric(Point,Line)",
+        "superpose_concentric(Line,Point)",
+        "superpose_concentric(Line,Line)",
+        "superpose_displaced(Line,Line)",
+        "cross(Point,Line)",
+        "cross(Line,Point)",
+        "concatenate(Point,Line)",
+        "concatenate(Line,Point)",
+        "concatenate(Line,Line)",
+        "nest(Point,Line)",
+        "nest(Line,Point)",
+        "nest(Line,Line)"
+      ],
+      "symmetry": "2",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "2",
+      "closed": false,
+      "crossings": "1",
+      "aspect": "wide",
+      "curvature_mix": "straight"
+    },
+    {
+      "orbit": 2,
+      "members": [
+        "reflect_pair(Angle)"
+      ],
+      "symmetry": "2",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "2",
+      "closed": false,
+      "crossings": "1",
+      "aspect": "wide",
+      "curvature_mix": "straight"
+    },
+    {
+      "orbit": 3,
+      "members": [
+        "close(Wave)"
+      ],
+      "symmetry": "2",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 1,
+      "mirror_axes": "0",
+      "closed": true,
+      "crossings": "0",
+      "aspect": "wide",
+      "curvature_mix": "mixed"
+    },
+    {
+      "orbit": 4,
+      "members": [
+        "superpose_concentric(Line,Wave)",
+        "superpose_concentric(Wave,Line)"
+      ],
+      "symmetry": "2",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "0",
+      "closed": false,
+      "crossings": "1",
+      "aspect": "wide",
+      "curvature_mix": "mixed"
+    },
+    {
+      "orbit": 5,
+      "members": [
+        "superpose_concentric(Line,Circle)",
+        "superpose_concentric(Circle,Line)",
+        "cross(Line,Circle)",
+        "cross(Circle,Line)"
+      ],
+      "symmetry": "2",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 1,
+      "mirror_axes": "2",
+      "closed": false,
+      "crossings": "0",
+      "aspect": "square",
+      "curvature_mix": "mixed"
+    },
+    {
+      "orbit": 6,
+      "members": [
+        "superpose_displaced(Point,Point)"
+      ],
+      "symmetry": "2",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 1,
+      "mirror_axes": "2",
+      "closed": false,
+      "crossings": "0",
+      "aspect": "wide",
+      "curvature_mix": "straight"
+    },
+    {
+      "orbit": 7,
+      "members": [
+        "cross(Line,Wave)",
+        "cross(Wave,Line)"
+      ],
+      "symmetry": "2",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "0",
+      "closed": false,
+      "crossings": "1",
+      "aspect": "square",
+      "curvature_mix": "mixed"
+    },
+    {
+      "orbit": 8,
+      "members": [
+        "nest(Line,Wave)"
+      ],
+      "symmetry": "2",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "0",
+      "closed": false,
+      "crossings": "1",
+      "aspect": "wide",
+      "curvature_mix": "mixed"
+    },
+    {
+      "orbit": 9,
+      "members": [
+        "nest(Line,Circle)"
+      ],
+      "symmetry": "2",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "2",
+      "closed": true,
+      "crossings": "1",
+      "aspect": "wide",
+      "curvature_mix": "mixed"
+    },
+    {
+      "orbit": 10,
+      "members": [
+        "nest(Wave,Line)"
+      ],
+      "symmetry": "2",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "0",
+      "closed": false,
+      "crossings": "1",
+      "aspect": "wide",
+      "curvature_mix": "mixed"
+    },
+    {
+      "orbit": 11,
+      "members": [
+        "nest(Circle,Line)"
+      ],
+      "symmetry": "2",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "2",
+      "closed": true,
+      "crossings": "0",
+      "aspect": "square",
+      "curvature_mix": "mixed"
+    },
+    {
+      "orbit": 12,
+      "members": [
+        "reflect_pair(Curve)"
+      ],
+      "symmetry": "2",
+      "curvature": "smooth",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "2",
+      "closed": false,
+      "crossings": "1",
+      "aspect": "wide",
+      "curvature_mix": "smooth"
+    },
+    {
+      "orbit": 13,
+      "members": [
+        "reflect_pair(Wave)"
+      ],
+      "symmetry": "2",
+      "curvature": "smooth",
+      "meaning": "infinity (SymbolFolds)",
+      "status": "recorded",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "2",
+      "closed": false,
+      "crossings": "1",
+      "aspect": "wide",
+      "curvature_mix": "smooth"
+    },
+    {
+      "orbit": 14,
+      "members": [
+        "superpose_concentric(Point,Wave)",
+        "superpose_concentric(Wave,Point)",
+        "superpose_concentric(Wave,Wave)",
+        "cross(Point,Wave)",
+        "cross(Wave,Point)",
+        "concatenate(Point,Wave)",
+        "concatenate(Wave,Point)",
+        "nest(Point,Wave)",
+        "nest(Wave,Point)"
+      ],
+      "symmetry": "2",
+      "curvature": "smooth",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 1,
+      "mirror_axes": "0",
+      "closed": false,
+      "crossings": "0",
+      "aspect": "wide",
+      "curvature_mix": "mixed"
+    },
+    {
+      "orbit": 15,
+      "members": [
+        "superpose_concentric(Wave,Circle)",
+        "superpose_concentric(Circle,Wave)",
+        "cross(Wave,Circle)",
+        "cross(Circle,Wave)"
+      ],
+      "symmetry": "2",
+      "curvature": "smooth",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 1,
+      "mirror_axes": "0",
+      "closed": false,
+      "crossings": "0",
+      "aspect": "square",
+      "curvature_mix": "smooth"
+    },
+    {
+      "orbit": 16,
+      "members": [
+        "superpose_displaced(Wave,Wave)",
+        "concatenate(Wave,Wave)"
+      ],
+      "symmetry": "2",
+      "curvature": "smooth",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "0",
+      "closed": false,
+      "crossings": "0",
+      "aspect": "wide",
+      "curvature_mix": "smooth"
+    },
+    {
+      "orbit": 17,
+      "members": [
+        "superpose_displaced(Circle,Circle)",
+        "concatenate(Circle,Circle)"
+      ],
+      "symmetry": "2",
+      "curvature": "smooth",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "2",
+      "closed": true,
+      "crossings": "0",
+      "aspect": "wide",
+      "curvature_mix": "smooth"
+    },
+    {
+      "orbit": 18,
+      "members": [
+        "nest(Wave,Wave)"
+      ],
+      "symmetry": "2",
+      "curvature": "smooth",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "0",
+      "closed": false,
+      "crossings": "1",
+      "aspect": "wide",
+      "curvature_mix": "smooth"
+    },
+    {
+      "orbit": 19,
+      "members": [
+        "nest(Wave,Circle)"
+      ],
+      "symmetry": "2",
+      "curvature": "smooth",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "0",
+      "closed": true,
+      "crossings": "1",
+      "aspect": "wide",
+      "curvature_mix": "smooth"
+    },
+    {
+      "orbit": 20,
+      "members": [
+        "nest(Circle,Wave)"
+      ],
+      "symmetry": "2",
+      "curvature": "smooth",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "0",
+      "closed": true,
+      "crossings": "0",
+      "aspect": "square",
+      "curvature_mix": "smooth"
+    },
+    {
+      "orbit": 21,
+      "members": [
+        "reflect_pair(Circle)",
+        "superpose_concentric(Circle,Circle)",
+        "cross(Circle,Circle)",
+        "concatenate(Point,Circle)",
+        "concatenate(Circle,Point)"
+      ],
+      "symmetry": "inf",
+      "curvature": "smooth",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "inf",
+      "closed": true,
+      "crossings": "1",
+      "aspect": "square",
+      "curvature_mix": "smooth"
+    },
+    {
+      "orbit": 22,
+      "members": [
+        "superpose_concentric(Point,Circle)",
+        "superpose_concentric(Circle,Point)",
+        "cross(Point,Circle)",
+        "cross(Circle,Point)",
+        "nest(Point,Circle)",
+        "nest(Circle,Point)"
+      ],
+      "symmetry": "inf",
+      "curvature": "smooth",
+      "meaning": "Sun-in-Circle (F43)",
+      "status": "recorded",
+      "strokes": 2,
+      "components": 1,
+      "mirror_axes": "inf",
+      "closed": true,
+      "crossings": "0",
+      "aspect": "square",
+      "curvature_mix": "mixed"
+    },
+    {
+      "orbit": 23,
+      "members": [
+        "nest(Circle,Circle)"
+      ],
+      "symmetry": "inf",
+      "curvature": "smooth",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "inf",
+      "closed": true,
+      "crossings": "0",
+      "aspect": "square",
+      "curvature_mix": "smooth"
+    },
+    {
+      "orbit": 24,
+      "members": [
+        "close(Angle)"
+      ],
+      "symmetry": "1",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 1,
+      "mirror_axes": "1",
+      "closed": true,
+      "crossings": "0",
+      "aspect": "wide",
+      "curvature_mix": "straight"
+    },
+    {
+      "orbit": 25,
+      "members": [
+        "close(Curve)"
+      ],
+      "symmetry": "1",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 1,
+      "mirror_axes": "1",
+      "closed": true,
+      "crossings": "0",
+      "aspect": "wide",
+      "curvature_mix": "mixed"
+    },
+    {
+      "orbit": 26,
+      "members": [
+        "superpose_concentric(Point,Angle)",
+        "superpose_concentric(Angle,Point)",
+        "cross(Point,Angle)",
+        "cross(Angle,Point)",
+        "nest(Point,Angle)",
+        "nest(Angle,Point)"
+      ],
+      "symmetry": "1",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 1,
+      "mirror_axes": "1",
+      "closed": false,
+      "crossings": "0",
+      "aspect": "wide",
+      "curvature_mix": "straight"
+    },
+    {
+      "orbit": 27,
+      "members": [
+        "superpose_concentric(Line,Angle)",
+        "superpose_concentric(Angle,Line)"
+      ],
+      "symmetry": "1",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "1",
+      "closed": false,
+      "crossings": "1",
+      "aspect": "wide",
+      "curvature_mix": "straight"
+    },
+    {
+      "orbit": 28,
+      "members": [
+        "superpose_concentric(Line,Curve)",
+        "superpose_concentric(Curve,Line)"
+      ],
+      "symmetry": "1",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "1",
+      "closed": false,
+      "crossings": "1",
+      "aspect": "wide",
+      "curvature_mix": "mixed"
+    },
+    {
+      "orbit": 29,
+      "members": [
+        "superpose_concentric(Angle,Angle)"
+      ],
+      "symmetry": "1",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "1",
+      "closed": false,
+      "crossings": "1",
+      "aspect": "wide",
+      "curvature_mix": "straight"
+    },
+    {
+      "orbit": 30,
+      "members": [
+        "superpose_concentric(Angle,Curve)",
+        "superpose_concentric(Curve,Angle)"
+      ],
+      "symmetry": "1",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "1",
+      "closed": false,
+      "crossings": "1",
+      "aspect": "wide",
+      "curvature_mix": "mixed"
+    },
+    {
+      "orbit": 31,
+      "members": [
+        "superpose_concentric(Angle,Wave)",
+        "superpose_concentric(Wave,Angle)"
+      ],
+      "symmetry": "1",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "0",
+      "closed": false,
+      "crossings": "1",
+      "aspect": "wide",
+      "curvature_mix": "mixed"
+    },
+    {
+      "orbit": 32,
+      "members": [
+        "superpose_concentric(Angle,Circle)",
+        "superpose_concentric(Circle,Angle)",
+        "cross(Angle,Circle)",
+        "cross(Circle,Angle)"
+      ],
+      "symmetry": "1",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "1",
+      "closed": true,
+      "crossings": "0",
+      "aspect": "square",
+      "curvature_mix": "mixed"
+    },
+    {
+      "orbit": 33,
+      "members": [
+        "superpose_displaced(Point,Line)",
+        "superpose_displaced(Line,Point)"
+      ],
+      "symmetry": "1",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 1,
+      "mirror_axes": "1",
+      "closed": false,
+      "crossings": "0",
+      "aspect": "wide",
+      "curvature_mix": "straight"
+    },
+    {
+      "orbit": 34,
+      "members": [
+        "superpose_displaced(Point,Angle)",
+        "superpose_displaced(Angle,Point)"
+      ],
+      "symmetry": "1",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 1,
+      "mirror_axes": "0",
+      "closed": false,
+      "crossings": "0",
+      "aspect": "wide",
+      "curvature_mix": "straight"
+    },
+    {
+      "orbit": 35,
+      "members": [
+        "superpose_displaced(Line,Angle)",
+        "superpose_displaced(Angle,Line)"
+      ],
+      "symmetry": "1",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "0",
+      "closed": false,
+      "crossings": "0",
+      "aspect": "wide",
+      "curvature_mix": "straight"
+    },
+    {
+      "orbit": 36,
+      "members": [
+        "superpose_displaced(Line,Curve)",
+        "superpose_displaced(Curve,Line)"
+      ],
+      "symmetry": "1",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "0",
+      "closed": false,
+      "crossings": "0",
+      "aspect": "wide",
+      "curvature_mix": "mixed"
+    },
+    {
+      "orbit": 37,
+      "members": [
+        "superpose_displaced(Line,Wave)",
+        "superpose_displaced(Wave,Line)",
+        "concatenate(Line,Wave)",
+        "concatenate(Wave,Line)"
+      ],
+      "symmetry": "1",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "0",
+      "closed": false,
+      "crossings": "0",
+      "aspect": "wide",
+      "curvature_mix": "mixed"
+    },
+    {
+      "orbit": 38,
+      "members": [
+        "superpose_displaced(Line,Circle)",
+        "superpose_displaced(Circle,Line)",
+        "concatenate(Line,Circle)",
+        "concatenate(Circle,Line)"
+      ],
+      "symmetry": "1",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "1",
+      "closed": true,
+      "crossings": "0",
+      "aspect": "wide",
+      "curvature_mix": "mixed"
+    },
+    {
+      "orbit": 39,
+      "members": [
+        "superpose_displaced(Angle,Angle)"
+      ],
+      "symmetry": "1",
+      "curvature": "singular",
+      "meaning": "Chaos pair (F44)",
+      "status": "recorded",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "1",
+      "closed": false,
+      "crossings": "0",
+      "aspect": "wide",
+      "curvature_mix": "straight"
+    },
+    {
+      "orbit": 40,
+      "members": [
+        "superpose_displaced(Angle,Curve)",
+        "superpose_displaced(Curve,Angle)"
+      ],
+      "symmetry": "1",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "0",
+      "closed": false,
+      "crossings": "0",
+      "aspect": "wide",
+      "curvature_mix": "mixed"
+    },
+    {
+      "orbit": 41,
+      "members": [
+        "superpose_displaced(Angle,Wave)"
+      ],
+      "symmetry": "1",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "0",
+      "closed": false,
+      "crossings": "0",
+      "aspect": "wide",
+      "curvature_mix": "mixed"
+    },
+    {
+      "orbit": 42,
+      "members": [
+        "superpose_displaced(Angle,Circle)",
+        "superpose_displaced(Circle,Angle)"
+      ],
+      "symmetry": "1",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "0",
+      "closed": true,
+      "crossings": "0",
+      "aspect": "wide",
+      "curvature_mix": "mixed"
+    },
+    {
+      "orbit": 43,
+      "members": [
+        "superpose_displaced(Wave,Angle)"
+      ],
+      "symmetry": "1",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "0",
+      "closed": false,
+      "crossings": "0",
+      "aspect": "wide",
+      "curvature_mix": "mixed"
+    },
+    {
+      "orbit": 44,
+      "members": [
+        "cross(Line,Angle)",
+        "cross(Angle,Line)"
+      ],
+      "symmetry": "1",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "1",
+      "closed": false,
+      "crossings": "1",
+      "aspect": "square",
+      "curvature_mix": "straight"
+    },
+    {
+      "orbit": 45,
+      "members": [
+        "cross(Line,Curve)",
+        "cross(Curve,Line)"
+      ],
+      "symmetry": "1",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "1",
+      "closed": false,
+      "crossings": "1",
+      "aspect": "square",
+      "curvature_mix": "mixed"
+    },
+    {
+      "orbit": 46,
+      "members": [
+        "cross(Angle,Angle)"
+      ],
+      "symmetry": "1",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "1",
+      "closed": false,
+      "crossings": "1",
+      "aspect": "square",
+      "curvature_mix": "straight"
+    },
+    {
+      "orbit": 47,
+      "members": [
+        "cross(Angle,Curve)",
+        "cross(Curve,Angle)"
+      ],
+      "symmetry": "1",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "0",
+      "closed": false,
+      "crossings": "1",
+      "aspect": "square",
+      "curvature_mix": "mixed"
+    },
+    {
+      "orbit": 48,
+      "members": [
+        "cross(Angle,Wave)",
+        "cross(Wave,Angle)"
+      ],
+      "symmetry": "1",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "0",
+      "closed": false,
+      "crossings": "1",
+      "aspect": "square",
+      "curvature_mix": "mixed"
+    },
+    {
+      "orbit": 49,
+      "members": [
+        "concatenate(Point,Angle)",
+        "concatenate(Angle,Point)"
+      ],
+      "symmetry": "1",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 1,
+      "mirror_axes": "0",
+      "closed": false,
+      "crossings": "0",
+      "aspect": "wide",
+      "curvature_mix": "straight"
+    },
+    {
+      "orbit": 50,
+      "members": [
+        "concatenate(Line,Angle)",
+        "concatenate(Angle,Line)"
+      ],
+      "symmetry": "1",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "0",
+      "closed": false,
+      "crossings": "0",
+      "aspect": "wide",
+      "curvature_mix": "straight"
+    },
+    {
+      "orbit": 51,
+      "members": [
+        "concatenate(Line,Curve)",
+        "concatenate(Curve,Line)"
+      ],
+      "symmetry": "1",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "0",
+      "closed": false,
+      "crossings": "0",
+      "aspect": "wide",
+      "curvature_mix": "mixed"
+    },
+    {
+      "orbit": 52,
+      "members": [
+        "concatenate(Angle,Angle)"
+      ],
+      "symmetry": "1",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 1,
+      "mirror_axes": "1",
+      "closed": false,
+      "crossings": "0",
+      "aspect": "wide",
+      "curvature_mix": "straight"
+    },
+    {
+      "orbit": 53,
+      "members": [
+        "concatenate(Angle,Curve)",
+        "concatenate(Curve,Angle)"
+      ],
+      "symmetry": "1",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "0",
+      "closed": false,
+      "crossings": "0",
+      "aspect": "wide",
+      "curvature_mix": "mixed"
+    },
+    {
+      "orbit": 54,
+      "members": [
+        "concatenate(Angle,Wave)"
+      ],
+      "symmetry": "1",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "0",
+      "closed": false,
+      "crossings": "0",
+      "aspect": "wide",
+      "curvature_mix": "mixed"
+    },
+    {
+      "orbit": 55,
+      "members": [
+        "concatenate(Angle,Circle)",
+        "concatenate(Circle,Angle)"
+      ],
+      "symmetry": "1",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "0",
+      "closed": true,
+      "crossings": "0",
+      "aspect": "wide",
+      "curvature_mix": "mixed"
+    },
+    {
+      "orbit": 56,
+      "members": [
+        "concatenate(Wave,Angle)"
+      ],
+      "symmetry": "1",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "0",
+      "closed": false,
+      "crossings": "0",
+      "aspect": "wide",
+      "curvature_mix": "mixed"
+    },
+    {
+      "orbit": 57,
+      "members": [
+        "nest(Line,Angle)",
+        "nest(Line,Curve)"
+      ],
+      "symmetry": "1",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "1",
+      "closed": false,
+      "crossings": "1",
+      "aspect": "wide",
+      "curvature_mix": "straight"
+    },
+    {
+      "orbit": 58,
+      "members": [
+        "nest(Angle,Line)"
+      ],
+      "symmetry": "1",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "1",
+      "closed": false,
+      "crossings": "0",
+      "aspect": "wide",
+      "curvature_mix": "straight"
+    },
+    {
+      "orbit": 59,
+      "members": [
+        "nest(Angle,Angle)",
+        "nest(Angle,Curve)"
+      ],
+      "symmetry": "1",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "1",
+      "closed": false,
+      "crossings": "0",
+      "aspect": "wide",
+      "curvature_mix": "straight"
+    },
+    {
+      "orbit": 60,
+      "members": [
+        "nest(Angle,Wave)"
+      ],
+      "symmetry": "1",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "0",
+      "closed": false,
+      "crossings": "1",
+      "aspect": "wide",
+      "curvature_mix": "mixed"
+    },
+    {
+      "orbit": 61,
+      "members": [
+        "nest(Angle,Circle)"
+      ],
+      "symmetry": "1",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "1",
+      "closed": true,
+      "crossings": "1",
+      "aspect": "wide",
+      "curvature_mix": "mixed"
+    },
+    {
+      "orbit": 62,
+      "members": [
+        "nest(Curve,Line)"
+      ],
+      "symmetry": "1",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "1",
+      "closed": false,
+      "crossings": "0",
+      "aspect": "wide",
+      "curvature_mix": "mixed"
+    },
+    {
+      "orbit": 63,
+      "members": [
+        "nest(Curve,Angle)"
+      ],
+      "symmetry": "1",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "1",
+      "closed": false,
+      "crossings": "0",
+      "aspect": "wide",
+      "curvature_mix": "mixed"
+    },
+    {
+      "orbit": 64,
+      "members": [
+        "nest(Wave,Angle)"
+      ],
+      "symmetry": "1",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "0",
+      "closed": false,
+      "crossings": "1",
+      "aspect": "wide",
+      "curvature_mix": "mixed"
+    },
+    {
+      "orbit": 65,
+      "members": [
+        "nest(Circle,Angle)"
+      ],
+      "symmetry": "1",
+      "curvature": "singular",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "1",
+      "closed": true,
+      "crossings": "0",
+      "aspect": "square",
+      "curvature_mix": "mixed"
+    },
+    {
+      "orbit": 66,
+      "members": [
+        "close(Circle)"
+      ],
+      "symmetry": "1",
+      "curvature": "smooth",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 1,
+      "mirror_axes": "1",
+      "closed": true,
+      "crossings": "0",
+      "aspect": "square",
+      "curvature_mix": "mixed"
+    },
+    {
+      "orbit": 67,
+      "members": [
+        "superpose_concentric(Point,Curve)",
+        "superpose_concentric(Curve,Point)",
+        "cross(Point,Curve)",
+        "cross(Curve,Point)",
+        "nest(Point,Curve)",
+        "nest(Curve,Point)"
+      ],
+      "symmetry": "1",
+      "curvature": "smooth",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 1,
+      "mirror_axes": "1",
+      "closed": false,
+      "crossings": "0",
+      "aspect": "wide",
+      "curvature_mix": "mixed"
+    },
+    {
+      "orbit": 68,
+      "members": [
+        "superpose_concentric(Curve,Curve)"
+      ],
+      "symmetry": "1",
+      "curvature": "smooth",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "1",
+      "closed": false,
+      "crossings": "1",
+      "aspect": "wide",
+      "curvature_mix": "smooth"
+    },
+    {
+      "orbit": 69,
+      "members": [
+        "superpose_concentric(Curve,Wave)",
+        "superpose_concentric(Wave,Curve)"
+      ],
+      "symmetry": "1",
+      "curvature": "smooth",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "0",
+      "closed": false,
+      "crossings": "1",
+      "aspect": "wide",
+      "curvature_mix": "smooth"
+    },
+    {
+      "orbit": 70,
+      "members": [
+        "superpose_concentric(Curve,Circle)",
+        "superpose_concentric(Circle,Curve)",
+        "cross(Curve,Circle)",
+        "cross(Circle,Curve)"
+      ],
+      "symmetry": "1",
+      "curvature": "smooth",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "1",
+      "closed": true,
+      "crossings": "0",
+      "aspect": "square",
+      "curvature_mix": "smooth"
+    },
+    {
+      "orbit": 71,
+      "members": [
+        "superpose_displaced(Point,Curve)",
+        "superpose_displaced(Curve,Point)"
+      ],
+      "symmetry": "1",
+      "curvature": "smooth",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 1,
+      "mirror_axes": "0",
+      "closed": false,
+      "crossings": "0",
+      "aspect": "wide",
+      "curvature_mix": "mixed"
+    },
+    {
+      "orbit": 72,
+      "members": [
+        "superpose_displaced(Point,Wave)",
+        "superpose_displaced(Wave,Point)"
+      ],
+      "symmetry": "1",
+      "curvature": "smooth",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 1,
+      "mirror_axes": "0",
+      "closed": false,
+      "crossings": "0",
+      "aspect": "wide",
+      "curvature_mix": "mixed"
+    },
+    {
+      "orbit": 73,
+      "members": [
+        "superpose_displaced(Point,Circle)",
+        "superpose_displaced(Circle,Point)"
+      ],
+      "symmetry": "1",
+      "curvature": "smooth",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 1,
+      "mirror_axes": "1",
+      "closed": true,
+      "crossings": "0",
+      "aspect": "wide",
+      "curvature_mix": "mixed"
+    },
+    {
+      "orbit": 74,
+      "members": [
+        "superpose_displaced(Curve,Curve)"
+      ],
+      "symmetry": "1",
+      "curvature": "smooth",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "1",
+      "closed": false,
+      "crossings": "0",
+      "aspect": "wide",
+      "curvature_mix": "smooth"
+    },
+    {
+      "orbit": 75,
+      "members": [
+        "superpose_displaced(Curve,Wave)"
+      ],
+      "symmetry": "1",
+      "curvature": "smooth",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "0",
+      "closed": false,
+      "crossings": "0",
+      "aspect": "wide",
+      "curvature_mix": "smooth"
+    },
+    {
+      "orbit": 76,
+      "members": [
+        "superpose_displaced(Curve,Circle)",
+        "superpose_displaced(Circle,Curve)"
+      ],
+      "symmetry": "1",
+      "curvature": "smooth",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "0",
+      "closed": true,
+      "crossings": "0",
+      "aspect": "wide",
+      "curvature_mix": "smooth"
+    },
+    {
+      "orbit": 77,
+      "members": [
+        "superpose_displaced(Wave,Curve)"
+      ],
+      "symmetry": "1",
+      "curvature": "smooth",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "0",
+      "closed": false,
+      "crossings": "0",
+      "aspect": "wide",
+      "curvature_mix": "smooth"
+    },
+    {
+      "orbit": 78,
+      "members": [
+        "superpose_displaced(Wave,Circle)",
+        "superpose_displaced(Circle,Wave)",
+        "concatenate(Wave,Circle)",
+        "concatenate(Circle,Wave)"
+      ],
+      "symmetry": "1",
+      "curvature": "smooth",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "0",
+      "closed": true,
+      "crossings": "0",
+      "aspect": "wide",
+      "curvature_mix": "smooth"
+    },
+    {
+      "orbit": 79,
+      "members": [
+        "cross(Curve,Curve)"
+      ],
+      "symmetry": "1",
+      "curvature": "smooth",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "1",
+      "closed": false,
+      "crossings": "1",
+      "aspect": "square",
+      "curvature_mix": "smooth"
+    },
+    {
+      "orbit": 80,
+      "members": [
+        "cross(Curve,Wave)",
+        "cross(Wave,Curve)"
+      ],
+      "symmetry": "1",
+      "curvature": "smooth",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "0",
+      "closed": false,
+      "crossings": "1",
+      "aspect": "square",
+      "curvature_mix": "smooth"
+    },
+    {
+      "orbit": 81,
+      "members": [
+        "concatenate(Point,Curve)",
+        "concatenate(Curve,Point)"
+      ],
+      "symmetry": "1",
+      "curvature": "smooth",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 1,
+      "mirror_axes": "0",
+      "closed": false,
+      "crossings": "0",
+      "aspect": "wide",
+      "curvature_mix": "mixed"
+    },
+    {
+      "orbit": 82,
+      "members": [
+        "concatenate(Curve,Curve)"
+      ],
+      "symmetry": "1",
+      "curvature": "smooth",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "1",
+      "closed": false,
+      "crossings": "1",
+      "aspect": "wide",
+      "curvature_mix": "smooth"
+    },
+    {
+      "orbit": 83,
+      "members": [
+        "concatenate(Curve,Wave)"
+      ],
+      "symmetry": "1",
+      "curvature": "smooth",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "0",
+      "closed": false,
+      "crossings": "0",
+      "aspect": "wide",
+      "curvature_mix": "smooth"
+    },
+    {
+      "orbit": 84,
+      "members": [
+        "concatenate(Curve,Circle)",
+        "concatenate(Circle,Curve)"
+      ],
+      "symmetry": "1",
+      "curvature": "smooth",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "0",
+      "closed": true,
+      "crossings": "0",
+      "aspect": "wide",
+      "curvature_mix": "smooth"
+    },
+    {
+      "orbit": 85,
+      "members": [
+        "concatenate(Wave,Curve)"
+      ],
+      "symmetry": "1",
+      "curvature": "smooth",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "0",
+      "closed": false,
+      "crossings": "0",
+      "aspect": "wide",
+      "curvature_mix": "smooth"
+    },
+    {
+      "orbit": 86,
+      "members": [
+        "nest(Curve,Curve)"
+      ],
+      "symmetry": "1",
+      "curvature": "smooth",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "1",
+      "closed": false,
+      "crossings": "0",
+      "aspect": "wide",
+      "curvature_mix": "smooth"
+    },
+    {
+      "orbit": 87,
+      "members": [
+        "nest(Curve,Wave)"
+      ],
+      "symmetry": "1",
+      "curvature": "smooth",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "0",
+      "closed": false,
+      "crossings": "0",
+      "aspect": "wide",
+      "curvature_mix": "smooth"
+    },
+    {
+      "orbit": 88,
+      "members": [
+        "nest(Curve,Circle)"
+      ],
+      "symmetry": "1",
+      "curvature": "smooth",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "1",
+      "closed": true,
+      "crossings": "1",
+      "aspect": "wide",
+      "curvature_mix": "smooth"
+    },
+    {
+      "orbit": 89,
+      "members": [
+        "nest(Wave,Curve)"
+      ],
+      "symmetry": "1",
+      "curvature": "smooth",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "0",
+      "closed": false,
+      "crossings": "1",
+      "aspect": "wide",
+      "curvature_mix": "smooth"
+    },
+    {
+      "orbit": 90,
+      "members": [
+        "nest(Circle,Curve)"
+      ],
+      "symmetry": "1",
+      "curvature": "smooth",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "1",
+      "closed": true,
+      "crossings": "0",
+      "aspect": "square",
+      "curvature_mix": "smooth"
+    },
+    {
+      "orbit": 91,
+      "members": [
+        "cross(Line,Line)"
+      ],
+      "symmetry": "4",
+      "curvature": "singular",
+      "meaning": "+ (SymbolFolds)",
+      "status": "recorded",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "4",
+      "closed": false,
+      "crossings": "1",
+      "aspect": "square",
+      "curvature_mix": "straight"
+    },
+    {
+      "orbit": 92,
+      "members": [
+        "cross(Wave,Wave)"
+      ],
+      "symmetry": "4",
+      "curvature": "smooth",
+      "meaning": null,
+      "status": "undetermined",
+      "strokes": 2,
+      "components": 2,
+      "mirror_axes": "0",
+      "closed": false,
+      "crossings": "1",
+      "aspect": "square",
+      "curvature_mix": "smooth"
+    }
+  ],
+  "mirror_step_degrees": 15,
+  "scope": "Every property here is measured off the figure, not assigned. Mirror axes are sampled every 15 degrees, so the count is a LOWER BOUND in two ways: an axis lying between samples is missed, and a curve carried as a sampled polyline can fall short of its own ideal. The Sun-in-Circle scores 9 of a possible 12 for exactly that reason, and is left at 9 rather than rounded up to infinite -- widening the tolerance until the expected answer appears is the failure this project exists to prevent. None of this names an orbit: one with no recorded meaning stays UNDETERMINED, and the point of the index is that it can now be asked for rather than filled in.",
+  "how_to_query": "python3 tools/ul_cli.py find --closed --components 2; or filter orbits[] on any measured key"
+}

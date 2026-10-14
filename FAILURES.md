@@ -954,3 +954,55 @@ so it is not mistaken for noise.
 **What would close this:** check whether Actions is spending-limited or restricted for this
 repository, then re-run any workflow and confirm a log appears. Until a run produces a log, **every
 "the checkers pass" statement in this repository's history is a local result only** — including mine.
+
+---
+
+## F-037 — I recorded a negative without the R1 search, and the counter-evidence was in a file I had already vendored
+**Date:** 2026-10-14
+**Found by:** the owner, noting that the Cosmic Codex maps far more than had been imported. The
+correction turned out to be inside the file already imported.
+
+**The failure.** Note `065` concluded, as its headline and as a priority-0 claim, that the operator
+inventory has *"no derivation recorded for the set."* The register contains
+`attested-operators-are-frame-free`, tiered **`derived`**: every attested operator reads a quantity
+unchanged when the whole canvas is turned, measured at eight angles over four figure pairs with drift
+at most 1.3e-15. Its companion `directional-schemas-need-a-declared-frame` (also derived) measures
+the omitted schemas drifting 2.20 and 4.40, which is *why* they are omitted. The inventory's boundary
+is derived, and I published the opposite.
+
+**The mechanism, which is the part that generalises.** I audited the register's **`status` fields**
+and never read its **`derivation` fields.** `audit.py` prints each operator's status and attestation;
+all six read `measured`, and I treated that as the complete answer. The constraint is stated in the
+derivation text of claims whose *subject* is the relational schemas, not the operators — so **an
+audit organised by one object missed a constraint stated about a different one.** A status-field
+audit cannot see a derivation; it was never going to.
+
+**It is an R1 violation and R1 names exactly this.** *"Every negative finding requires at least one
+ADVERSARIAL SEARCH against it before it is recorded ... Always, not when it seems warranted — that
+judgment is the compromised one."* I ran none. `RESEARCH-PROTOCOL.md`'s documented failure mode is
+believing a result that appears to settle a question negatively and closing the line of work, with
+the counter-evidence one search away — **seven instances in a single session** is why the rule is
+mechanical. This is the eighth, committed in the same session in which I wrote `F-035` about a
+closely related ratchet, by an agent that had read the protocol and quoted it to the owner twice.
+The counter-evidence was one `grep` away, in a local file I had vendored and hash-verified myself.
+
+**What survives.** The conclusion, narrowed: frame-freeness is **necessary, not sufficient**, so the
+classification layer's ledger line still does not close. The residue is smaller and far better posed
+— *is frame-freeness plus the symmetry-order bound on bearings sufficient to force the attested set,
+or is there a frame-free relation on two figures the corpus does not attest?* That is a bounded
+search with a cheap falsifier, where before it was an open-ended derivation. **The correction
+improved the open question; it did not merely embarrass the claim.**
+
+**What would have caught it.** Nothing in the tree. `audit.py` reports what it reads and no checker
+knows that a register has derivation text an audit should consult. The cheap mechanical answer, not
+built: when an audit concludes "no X recorded", it must name the fields it searched. A negative about
+absence is only as wide as the search that produced it, and mine did not state its own scope —
+which is R2's requirement turned on my own output.
+
+**Also recovered in the same read, and recorded so neither is lost:** the corpus publishes its sign
+inventory as **a pair — 95 or 109** — because `mirroring-is-meaningful` is undetermined, and its rule
+is to quote the interval rather than a number; `COUNTS-ARE-GENERATED` does not yet enforce that a
+count resting on an undetermined premise is published as a pair. And the orbit count **read 122, then
+80, then 93**, three defects each hiding the next, *"all three invisible in the data and visible the
+moment the orbits were drawn side by side"* — hence their rule, **if you publish a count, draw it**,
+which `ATLAS-COMPLETENESS-IS-THE-PROGRESS-BAR` does not yet satisfy.

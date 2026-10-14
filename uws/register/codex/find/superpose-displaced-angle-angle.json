@@ -1,0 +1,17 @@
+{
+  "orbit": 39,
+  "members": [
+    "superpose_displaced(Angle,Angle)"
+  ],
+  "symmetry": "1",
+  "curvature": "singular",
+  "meaning": "Chaos pair (F44)",
+  "status": "recorded",
+  "strokes": 2,
+  "components": 2,
+  "mirror_axes": "1",
+  "closed": false,
+  "crossings": "0",
+  "aspect": "wide",
+  "curvature_mix": "straight"
+}

@@ -1,0 +1,28 @@
+{
+  "sheet": "orbit-collapse",
+  "title": "Orbit collapse under each operator",
+  "per_operator": {
+    "superpose_concentric": {
+      "cells": 36,
+      "distinct_orbits": 19
+    },
+    "superpose_displaced": {
+      "cells": 36,
+      "distinct_orbits": 23
+    },
+    "cross": {
+      "cells": 36,
+      "distinct_orbits": 21
+    },
+    "concatenate": {
+      "cells": 36,
+      "distinct_orbits": 22
+    },
+    "nest": {
+      "cells": 36,
+      "distinct_orbits": 28
+    }
+  },
+  "most_collapsing": "superpose_concentric",
+  "teaches": "which constructions are synonyms, by looking identical"
+}

@@ -1,0 +1,51 @@
+{
+  "sheet": "slice-binary-relative-rotation-B-frequency",
+  "group": "binary",
+  "axes": [
+    "relative-rotation",
+    "B-frequency"
+  ],
+  "cells": 48,
+  "held": {
+    "A": "Circle",
+    "B": "Wave",
+    "separation": 0.0,
+    "bearing": 0.0,
+    "relative-scale": 1.0,
+    "reflect-B": 0,
+    "B-amplitude": 1.0,
+    "B-phase": 0.0
+  },
+  "operand_chosen_for": {
+    "relative-rotation": "is not rotation-invariant",
+    "B-frequency": "has a profile to vary"
+  },
+  "samples": {
+    "relative-rotation": [
+      "0°",
+      "30°",
+      "60°",
+      "90°",
+      "120°",
+      "150°",
+      "180°",
+      "210°",
+      "240°",
+      "270°",
+      "300°",
+      "330°"
+    ],
+    "B-frequency": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ]
+  },
+  "operators_on_this_slice": {
+    "superpose_concentric": 2,
+    "cross": 2
+  },
+  "contact_cells": 48,
+  "note": "operand chosen so the axis acts: relative-rotation needs one that is not rotation-invariant, B-frequency needs one that has a profile to vary"
+}

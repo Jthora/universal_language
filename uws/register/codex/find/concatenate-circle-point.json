@@ -1,0 +1,21 @@
+{
+  "orbit": 21,
+  "members": [
+    "reflect_pair(Circle)",
+    "superpose_concentric(Circle,Circle)",
+    "cross(Circle,Circle)",
+    "concatenate(Point,Circle)",
+    "concatenate(Circle,Point)"
+  ],
+  "symmetry": "inf",
+  "curvature": "smooth",
+  "meaning": null,
+  "status": "undetermined",
+  "strokes": 2,
+  "components": 2,
+  "mirror_axes": "inf",
+  "closed": true,
+  "crossings": "1",
+  "aspect": "square",
+  "curvature_mix": "smooth"
+}

@@ -1,0 +1,1805 @@
+{
+ "sheet": "charts/orbit-collapse",
+ "cells": [
+  {
+   "id": "cell-superpose_concentric-Point-Point",
+   "title": "superpose_concentric(Point,Point) -> orbit 0",
+   "desc": "operator superpose_concentric; operands Point,Point; orbit 0; shares this orbit within the matrix: False",
+   "operator": "superpose_concentric",
+   "a": "Point",
+   "b": "Point",
+   "orbit": "0",
+   "shared": "false"
+  },
+  {
+   "id": "cell-superpose_concentric-Point-Line",
+   "title": "superpose_concentric(Point,Line) -> orbit 1",
+   "desc": "operator superpose_concentric; operands Point,Line; orbit 1; shares this orbit within the matrix: True",
+   "operator": "superpose_concentric",
+   "a": "Point",
+   "b": "Line",
+   "orbit": "1",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_concentric-Point-Angle",
+   "title": "superpose_concentric(Point,Angle) -> orbit 26",
+   "desc": "operator superpose_concentric; operands Point,Angle; orbit 26; shares this orbit within the matrix: True",
+   "operator": "superpose_concentric",
+   "a": "Point",
+   "b": "Angle",
+   "orbit": "26",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_concentric-Point-Curve",
+   "title": "superpose_concentric(Point,Curve) -> orbit 67",
+   "desc": "operator superpose_concentric; operands Point,Curve; orbit 67; shares this orbit within the matrix: True",
+   "operator": "superpose_concentric",
+   "a": "Point",
+   "b": "Curve",
+   "orbit": "67",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_concentric-Point-Wave",
+   "title": "superpose_concentric(Point,Wave) -> orbit 14",
+   "desc": "operator superpose_concentric; operands Point,Wave; orbit 14; shares this orbit within the matrix: True",
+   "operator": "superpose_concentric",
+   "a": "Point",
+   "b": "Wave",
+   "orbit": "14",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_concentric-Point-Circle",
+   "title": "superpose_concentric(Point,Circle) -> orbit 22",
+   "desc": "operator superpose_concentric; operands Point,Circle; orbit 22; shares this orbit within the matrix: True",
+   "operator": "superpose_concentric",
+   "a": "Point",
+   "b": "Circle",
+   "orbit": "22",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_concentric-Line-Point",
+   "title": "superpose_concentric(Line,Point) -> orbit 1",
+   "desc": "operator superpose_concentric; operands Line,Point; orbit 1; shares this orbit within the matrix: True",
+   "operator": "superpose_concentric",
+   "a": "Line",
+   "b": "Point",
+   "orbit": "1",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_concentric-Line-Line",
+   "title": "superpose_concentric(Line,Line) -> orbit 1",
+   "desc": "operator superpose_concentric; operands Line,Line; orbit 1; shares this orbit within the matrix: True",
+   "operator": "superpose_concentric",
+   "a": "Line",
+   "b": "Line",
+   "orbit": "1",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_concentric-Line-Angle",
+   "title": "superpose_concentric(Line,Angle) -> orbit 27",
+   "desc": "operator superpose_concentric; operands Line,Angle; orbit 27; shares this orbit within the matrix: True",
+   "operator": "superpose_concentric",
+   "a": "Line",
+   "b": "Angle",
+   "orbit": "27",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_concentric-Line-Curve",
+   "title": "superpose_concentric(Line,Curve) -> orbit 28",
+   "desc": "operator superpose_concentric; operands Line,Curve; orbit 28; shares this orbit within the matrix: True",
+   "operator": "superpose_concentric",
+   "a": "Line",
+   "b": "Curve",
+   "orbit": "28",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_concentric-Line-Wave",
+   "title": "superpose_concentric(Line,Wave) -> orbit 4",
+   "desc": "operator superpose_concentric; operands Line,Wave; orbit 4; shares this orbit within the matrix: True",
+   "operator": "superpose_concentric",
+   "a": "Line",
+   "b": "Wave",
+   "orbit": "4",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_concentric-Line-Circle",
+   "title": "superpose_concentric(Line,Circle) -> orbit 5",
+   "desc": "operator superpose_concentric; operands Line,Circle; orbit 5; shares this orbit within the matrix: True",
+   "operator": "superpose_concentric",
+   "a": "Line",
+   "b": "Circle",
+   "orbit": "5",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_concentric-Angle-Point",
+   "title": "superpose_concentric(Angle,Point) -> orbit 26",
+   "desc": "operator superpose_concentric; operands Angle,Point; orbit 26; shares this orbit within the matrix: True",
+   "operator": "superpose_concentric",
+   "a": "Angle",
+   "b": "Point",
+   "orbit": "26",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_concentric-Angle-Line",
+   "title": "superpose_concentric(Angle,Line) -> orbit 27",
+   "desc": "operator superpose_concentric; operands Angle,Line; orbit 27; shares this orbit within the matrix: True",
+   "operator": "superpose_concentric",
+   "a": "Angle",
+   "b": "Line",
+   "orbit": "27",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_concentric-Angle-Angle",
+   "title": "superpose_concentric(Angle,Angle) -> orbit 29",
+   "desc": "operator superpose_concentric; operands Angle,Angle; orbit 29; shares this orbit within the matrix: False",
+   "operator": "superpose_concentric",
+   "a": "Angle",
+   "b": "Angle",
+   "orbit": "29",
+   "shared": "false"
+  },
+  {
+   "id": "cell-superpose_concentric-Angle-Curve",
+   "title": "superpose_concentric(Angle,Curve) -> orbit 30",
+   "desc": "operator superpose_concentric; operands Angle,Curve; orbit 30; shares this orbit within the matrix: True",
+   "operator": "superpose_concentric",
+   "a": "Angle",
+   "b": "Curve",
+   "orbit": "30",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_concentric-Angle-Wave",
+   "title": "superpose_concentric(Angle,Wave) -> orbit 31",
+   "desc": "operator superpose_concentric; operands Angle,Wave; orbit 31; shares this orbit within the matrix: True",
+   "operator": "superpose_concentric",
+   "a": "Angle",
+   "b": "Wave",
+   "orbit": "31",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_concentric-Angle-Circle",
+   "title": "superpose_concentric(Angle,Circle) -> orbit 32",
+   "desc": "operator superpose_concentric; operands Angle,Circle; orbit 32; shares this orbit within the matrix: True",
+   "operator": "superpose_concentric",
+   "a": "Angle",
+   "b": "Circle",
+   "orbit": "32",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_concentric-Curve-Point",
+   "title": "superpose_concentric(Curve,Point) -> orbit 67",
+   "desc": "operator superpose_concentric; operands Curve,Point; orbit 67; shares this orbit within the matrix: True",
+   "operator": "superpose_concentric",
+   "a": "Curve",
+   "b": "Point",
+   "orbit": "67",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_concentric-Curve-Line",
+   "title": "superpose_concentric(Curve,Line) -> orbit 28",
+   "desc": "operator superpose_concentric; operands Curve,Line; orbit 28; shares this orbit within the matrix: True",
+   "operator": "superpose_concentric",
+   "a": "Curve",
+   "b": "Line",
+   "orbit": "28",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_concentric-Curve-Angle",
+   "title": "superpose_concentric(Curve,Angle) -> orbit 30",
+   "desc": "operator superpose_concentric; operands Curve,Angle; orbit 30; shares this orbit within the matrix: True",
+   "operator": "superpose_concentric",
+   "a": "Curve",
+   "b": "Angle",
+   "orbit": "30",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_concentric-Curve-Curve",
+   "title": "superpose_concentric(Curve,Curve) -> orbit 68",
+   "desc": "operator superpose_concentric; operands Curve,Curve; orbit 68; shares this orbit within the matrix: False",
+   "operator": "superpose_concentric",
+   "a": "Curve",
+   "b": "Curve",
+   "orbit": "68",
+   "shared": "false"
+  },
+  {
+   "id": "cell-superpose_concentric-Curve-Wave",
+   "title": "superpose_concentric(Curve,Wave) -> orbit 69",
+   "desc": "operator superpose_concentric; operands Curve,Wave; orbit 69; shares this orbit within the matrix: True",
+   "operator": "superpose_concentric",
+   "a": "Curve",
+   "b": "Wave",
+   "orbit": "69",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_concentric-Curve-Circle",
+   "title": "superpose_concentric(Curve,Circle) -> orbit 70",
+   "desc": "operator superpose_concentric; operands Curve,Circle; orbit 70; shares this orbit within the matrix: True",
+   "operator": "superpose_concentric",
+   "a": "Curve",
+   "b": "Circle",
+   "orbit": "70",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_concentric-Wave-Point",
+   "title": "superpose_concentric(Wave,Point) -> orbit 14",
+   "desc": "operator superpose_concentric; operands Wave,Point; orbit 14; shares this orbit within the matrix: True",
+   "operator": "superpose_concentric",
+   "a": "Wave",
+   "b": "Point",
+   "orbit": "14",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_concentric-Wave-Line",
+   "title": "superpose_concentric(Wave,Line) -> orbit 4",
+   "desc": "operator superpose_concentric; operands Wave,Line; orbit 4; shares this orbit within the matrix: True",
+   "operator": "superpose_concentric",
+   "a": "Wave",
+   "b": "Line",
+   "orbit": "4",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_concentric-Wave-Angle",
+   "title": "superpose_concentric(Wave,Angle) -> orbit 31",
+   "desc": "operator superpose_concentric; operands Wave,Angle; orbit 31; shares this orbit within the matrix: True",
+   "operator": "superpose_concentric",
+   "a": "Wave",
+   "b": "Angle",
+   "orbit": "31",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_concentric-Wave-Curve",
+   "title": "superpose_concentric(Wave,Curve) -> orbit 69",
+   "desc": "operator superpose_concentric; operands Wave,Curve; orbit 69; shares this orbit within the matrix: True",
+   "operator": "superpose_concentric",
+   "a": "Wave",
+   "b": "Curve",
+   "orbit": "69",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_concentric-Wave-Wave",
+   "title": "superpose_concentric(Wave,Wave) -> orbit 14",
+   "desc": "operator superpose_concentric; operands Wave,Wave; orbit 14; shares this orbit within the matrix: True",
+   "operator": "superpose_concentric",
+   "a": "Wave",
+   "b": "Wave",
+   "orbit": "14",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_concentric-Wave-Circle",
+   "title": "superpose_concentric(Wave,Circle) -> orbit 15",
+   "desc": "operator superpose_concentric; operands Wave,Circle; orbit 15; shares this orbit within the matrix: True",
+   "operator": "superpose_concentric",
+   "a": "Wave",
+   "b": "Circle",
+   "orbit": "15",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_concentric-Circle-Point",
+   "title": "superpose_concentric(Circle,Point) -> orbit 22",
+   "desc": "operator superpose_concentric; operands Circle,Point; orbit 22; shares this orbit within the matrix: True",
+   "operator": "superpose_concentric",
+   "a": "Circle",
+   "b": "Point",
+   "orbit": "22",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_concentric-Circle-Line",
+   "title": "superpose_concentric(Circle,Line) -> orbit 5",
+   "desc": "operator superpose_concentric; operands Circle,Line; orbit 5; shares this orbit within the matrix: True",
+   "operator": "superpose_concentric",
+   "a": "Circle",
+   "b": "Line",
+   "orbit": "5",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_concentric-Circle-Angle",
+   "title": "superpose_concentric(Circle,Angle) -> orbit 32",
+   "desc": "operator superpose_concentric; operands Circle,Angle; orbit 32; shares this orbit within the matrix: True",
+   "operator": "superpose_concentric",
+   "a": "Circle",
+   "b": "Angle",
+   "orbit": "32",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_concentric-Circle-Curve",
+   "title": "superpose_concentric(Circle,Curve) -> orbit 70",
+   "desc": "operator superpose_concentric; operands Circle,Curve; orbit 70; shares this orbit within the matrix: True",
+   "operator": "superpose_concentric",
+   "a": "Circle",
+   "b": "Curve",
+   "orbit": "70",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_concentric-Circle-Wave",
+   "title": "superpose_concentric(Circle,Wave) -> orbit 15",
+   "desc": "operator superpose_concentric; operands Circle,Wave; orbit 15; shares this orbit within the matrix: True",
+   "operator": "superpose_concentric",
+   "a": "Circle",
+   "b": "Wave",
+   "orbit": "15",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_concentric-Circle-Circle",
+   "title": "superpose_concentric(Circle,Circle) -> orbit 21",
+   "desc": "operator superpose_concentric; operands Circle,Circle; orbit 21; shares this orbit within the matrix: False",
+   "operator": "superpose_concentric",
+   "a": "Circle",
+   "b": "Circle",
+   "orbit": "21",
+   "shared": "false"
+  },
+  {
+   "id": "cell-superpose_displaced-Point-Point",
+   "title": "superpose_displaced(Point,Point) -> orbit 6",
+   "desc": "operator superpose_displaced; operands Point,Point; orbit 6; shares this orbit within the matrix: False",
+   "operator": "superpose_displaced",
+   "a": "Point",
+   "b": "Point",
+   "orbit": "6",
+   "shared": "false"
+  },
+  {
+   "id": "cell-superpose_displaced-Point-Line",
+   "title": "superpose_displaced(Point,Line) -> orbit 33",
+   "desc": "operator superpose_displaced; operands Point,Line; orbit 33; shares this orbit within the matrix: True",
+   "operator": "superpose_displaced",
+   "a": "Point",
+   "b": "Line",
+   "orbit": "33",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_displaced-Point-Angle",
+   "title": "superpose_displaced(Point,Angle) -> orbit 34",
+   "desc": "operator superpose_displaced; operands Point,Angle; orbit 34; shares this orbit within the matrix: True",
+   "operator": "superpose_displaced",
+   "a": "Point",
+   "b": "Angle",
+   "orbit": "34",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_displaced-Point-Curve",
+   "title": "superpose_displaced(Point,Curve) -> orbit 71",
+   "desc": "operator superpose_displaced; operands Point,Curve; orbit 71; shares this orbit within the matrix: True",
+   "operator": "superpose_displaced",
+   "a": "Point",
+   "b": "Curve",
+   "orbit": "71",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_displaced-Point-Wave",
+   "title": "superpose_displaced(Point,Wave) -> orbit 72",
+   "desc": "operator superpose_displaced; operands Point,Wave; orbit 72; shares this orbit within the matrix: True",
+   "operator": "superpose_displaced",
+   "a": "Point",
+   "b": "Wave",
+   "orbit": "72",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_displaced-Point-Circle",
+   "title": "superpose_displaced(Point,Circle) -> orbit 73",
+   "desc": "operator superpose_displaced; operands Point,Circle; orbit 73; shares this orbit within the matrix: True",
+   "operator": "superpose_displaced",
+   "a": "Point",
+   "b": "Circle",
+   "orbit": "73",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_displaced-Line-Point",
+   "title": "superpose_displaced(Line,Point) -> orbit 33",
+   "desc": "operator superpose_displaced; operands Line,Point; orbit 33; shares this orbit within the matrix: True",
+   "operator": "superpose_displaced",
+   "a": "Line",
+   "b": "Point",
+   "orbit": "33",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_displaced-Line-Line",
+   "title": "superpose_displaced(Line,Line) -> orbit 1",
+   "desc": "operator superpose_displaced; operands Line,Line; orbit 1; shares this orbit within the matrix: False",
+   "operator": "superpose_displaced",
+   "a": "Line",
+   "b": "Line",
+   "orbit": "1",
+   "shared": "false"
+  },
+  {
+   "id": "cell-superpose_displaced-Line-Angle",
+   "title": "superpose_displaced(Line,Angle) -> orbit 35",
+   "desc": "operator superpose_displaced; operands Line,Angle; orbit 35; shares this orbit within the matrix: True",
+   "operator": "superpose_displaced",
+   "a": "Line",
+   "b": "Angle",
+   "orbit": "35",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_displaced-Line-Curve",
+   "title": "superpose_displaced(Line,Curve) -> orbit 36",
+   "desc": "operator superpose_displaced; operands Line,Curve; orbit 36; shares this orbit within the matrix: True",
+   "operator": "superpose_displaced",
+   "a": "Line",
+   "b": "Curve",
+   "orbit": "36",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_displaced-Line-Wave",
+   "title": "superpose_displaced(Line,Wave) -> orbit 37",
+   "desc": "operator superpose_displaced; operands Line,Wave; orbit 37; shares this orbit within the matrix: True",
+   "operator": "superpose_displaced",
+   "a": "Line",
+   "b": "Wave",
+   "orbit": "37",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_displaced-Line-Circle",
+   "title": "superpose_displaced(Line,Circle) -> orbit 38",
+   "desc": "operator superpose_displaced; operands Line,Circle; orbit 38; shares this orbit within the matrix: True",
+   "operator": "superpose_displaced",
+   "a": "Line",
+   "b": "Circle",
+   "orbit": "38",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_displaced-Angle-Point",
+   "title": "superpose_displaced(Angle,Point) -> orbit 34",
+   "desc": "operator superpose_displaced; operands Angle,Point; orbit 34; shares this orbit within the matrix: True",
+   "operator": "superpose_displaced",
+   "a": "Angle",
+   "b": "Point",
+   "orbit": "34",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_displaced-Angle-Line",
+   "title": "superpose_displaced(Angle,Line) -> orbit 35",
+   "desc": "operator superpose_displaced; operands Angle,Line; orbit 35; shares this orbit within the matrix: True",
+   "operator": "superpose_displaced",
+   "a": "Angle",
+   "b": "Line",
+   "orbit": "35",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_displaced-Angle-Angle",
+   "title": "superpose_displaced(Angle,Angle) -> orbit 39",
+   "desc": "operator superpose_displaced; operands Angle,Angle; orbit 39; shares this orbit within the matrix: False",
+   "operator": "superpose_displaced",
+   "a": "Angle",
+   "b": "Angle",
+   "orbit": "39",
+   "shared": "false"
+  },
+  {
+   "id": "cell-superpose_displaced-Angle-Curve",
+   "title": "superpose_displaced(Angle,Curve) -> orbit 40",
+   "desc": "operator superpose_displaced; operands Angle,Curve; orbit 40; shares this orbit within the matrix: True",
+   "operator": "superpose_displaced",
+   "a": "Angle",
+   "b": "Curve",
+   "orbit": "40",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_displaced-Angle-Wave",
+   "title": "superpose_displaced(Angle,Wave) -> orbit 41",
+   "desc": "operator superpose_displaced; operands Angle,Wave; orbit 41; shares this orbit within the matrix: False",
+   "operator": "superpose_displaced",
+   "a": "Angle",
+   "b": "Wave",
+   "orbit": "41",
+   "shared": "false"
+  },
+  {
+   "id": "cell-superpose_displaced-Angle-Circle",
+   "title": "superpose_displaced(Angle,Circle) -> orbit 42",
+   "desc": "operator superpose_displaced; operands Angle,Circle; orbit 42; shares this orbit within the matrix: True",
+   "operator": "superpose_displaced",
+   "a": "Angle",
+   "b": "Circle",
+   "orbit": "42",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_displaced-Curve-Point",
+   "title": "superpose_displaced(Curve,Point) -> orbit 71",
+   "desc": "operator superpose_displaced; operands Curve,Point; orbit 71; shares this orbit within the matrix: True",
+   "operator": "superpose_displaced",
+   "a": "Curve",
+   "b": "Point",
+   "orbit": "71",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_displaced-Curve-Line",
+   "title": "superpose_displaced(Curve,Line) -> orbit 36",
+   "desc": "operator superpose_displaced; operands Curve,Line; orbit 36; shares this orbit within the matrix: True",
+   "operator": "superpose_displaced",
+   "a": "Curve",
+   "b": "Line",
+   "orbit": "36",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_displaced-Curve-Angle",
+   "title": "superpose_displaced(Curve,Angle) -> orbit 40",
+   "desc": "operator superpose_displaced; operands Curve,Angle; orbit 40; shares this orbit within the matrix: True",
+   "operator": "superpose_displaced",
+   "a": "Curve",
+   "b": "Angle",
+   "orbit": "40",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_displaced-Curve-Curve",
+   "title": "superpose_displaced(Curve,Curve) -> orbit 74",
+   "desc": "operator superpose_displaced; operands Curve,Curve; orbit 74; shares this orbit within the matrix: False",
+   "operator": "superpose_displaced",
+   "a": "Curve",
+   "b": "Curve",
+   "orbit": "74",
+   "shared": "false"
+  },
+  {
+   "id": "cell-superpose_displaced-Curve-Wave",
+   "title": "superpose_displaced(Curve,Wave) -> orbit 75",
+   "desc": "operator superpose_displaced; operands Curve,Wave; orbit 75; shares this orbit within the matrix: False",
+   "operator": "superpose_displaced",
+   "a": "Curve",
+   "b": "Wave",
+   "orbit": "75",
+   "shared": "false"
+  },
+  {
+   "id": "cell-superpose_displaced-Curve-Circle",
+   "title": "superpose_displaced(Curve,Circle) -> orbit 76",
+   "desc": "operator superpose_displaced; operands Curve,Circle; orbit 76; shares this orbit within the matrix: True",
+   "operator": "superpose_displaced",
+   "a": "Curve",
+   "b": "Circle",
+   "orbit": "76",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_displaced-Wave-Point",
+   "title": "superpose_displaced(Wave,Point) -> orbit 72",
+   "desc": "operator superpose_displaced; operands Wave,Point; orbit 72; shares this orbit within the matrix: True",
+   "operator": "superpose_displaced",
+   "a": "Wave",
+   "b": "Point",
+   "orbit": "72",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_displaced-Wave-Line",
+   "title": "superpose_displaced(Wave,Line) -> orbit 37",
+   "desc": "operator superpose_displaced; operands Wave,Line; orbit 37; shares this orbit within the matrix: True",
+   "operator": "superpose_displaced",
+   "a": "Wave",
+   "b": "Line",
+   "orbit": "37",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_displaced-Wave-Angle",
+   "title": "superpose_displaced(Wave,Angle) -> orbit 43",
+   "desc": "operator superpose_displaced; operands Wave,Angle; orbit 43; shares this orbit within the matrix: False",
+   "operator": "superpose_displaced",
+   "a": "Wave",
+   "b": "Angle",
+   "orbit": "43",
+   "shared": "false"
+  },
+  {
+   "id": "cell-superpose_displaced-Wave-Curve",
+   "title": "superpose_displaced(Wave,Curve) -> orbit 77",
+   "desc": "operator superpose_displaced; operands Wave,Curve; orbit 77; shares this orbit within the matrix: False",
+   "operator": "superpose_displaced",
+   "a": "Wave",
+   "b": "Curve",
+   "orbit": "77",
+   "shared": "false"
+  },
+  {
+   "id": "cell-superpose_displaced-Wave-Wave",
+   "title": "superpose_displaced(Wave,Wave) -> orbit 16",
+   "desc": "operator superpose_displaced; operands Wave,Wave; orbit 16; shares this orbit within the matrix: False",
+   "operator": "superpose_displaced",
+   "a": "Wave",
+   "b": "Wave",
+   "orbit": "16",
+   "shared": "false"
+  },
+  {
+   "id": "cell-superpose_displaced-Wave-Circle",
+   "title": "superpose_displaced(Wave,Circle) -> orbit 78",
+   "desc": "operator superpose_displaced; operands Wave,Circle; orbit 78; shares this orbit within the matrix: True",
+   "operator": "superpose_displaced",
+   "a": "Wave",
+   "b": "Circle",
+   "orbit": "78",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_displaced-Circle-Point",
+   "title": "superpose_displaced(Circle,Point) -> orbit 73",
+   "desc": "operator superpose_displaced; operands Circle,Point; orbit 73; shares this orbit within the matrix: True",
+   "operator": "superpose_displaced",
+   "a": "Circle",
+   "b": "Point",
+   "orbit": "73",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_displaced-Circle-Line",
+   "title": "superpose_displaced(Circle,Line) -> orbit 38",
+   "desc": "operator superpose_displaced; operands Circle,Line; orbit 38; shares this orbit within the matrix: True",
+   "operator": "superpose_displaced",
+   "a": "Circle",
+   "b": "Line",
+   "orbit": "38",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_displaced-Circle-Angle",
+   "title": "superpose_displaced(Circle,Angle) -> orbit 42",
+   "desc": "operator superpose_displaced; operands Circle,Angle; orbit 42; shares this orbit within the matrix: True",
+   "operator": "superpose_displaced",
+   "a": "Circle",
+   "b": "Angle",
+   "orbit": "42",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_displaced-Circle-Curve",
+   "title": "superpose_displaced(Circle,Curve) -> orbit 76",
+   "desc": "operator superpose_displaced; operands Circle,Curve; orbit 76; shares this orbit within the matrix: True",
+   "operator": "superpose_displaced",
+   "a": "Circle",
+   "b": "Curve",
+   "orbit": "76",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_displaced-Circle-Wave",
+   "title": "superpose_displaced(Circle,Wave) -> orbit 78",
+   "desc": "operator superpose_displaced; operands Circle,Wave; orbit 78; shares this orbit within the matrix: True",
+   "operator": "superpose_displaced",
+   "a": "Circle",
+   "b": "Wave",
+   "orbit": "78",
+   "shared": "true"
+  },
+  {
+   "id": "cell-superpose_displaced-Circle-Circle",
+   "title": "superpose_displaced(Circle,Circle) -> orbit 17",
+   "desc": "operator superpose_displaced; operands Circle,Circle; orbit 17; shares this orbit within the matrix: False",
+   "operator": "superpose_displaced",
+   "a": "Circle",
+   "b": "Circle",
+   "orbit": "17",
+   "shared": "false"
+  },
+  {
+   "id": "cell-cross-Point-Point",
+   "title": "cross(Point,Point) -> orbit 0",
+   "desc": "operator cross; operands Point,Point; orbit 0; shares this orbit within the matrix: False",
+   "operator": "cross",
+   "a": "Point",
+   "b": "Point",
+   "orbit": "0",
+   "shared": "false"
+  },
+  {
+   "id": "cell-cross-Point-Line",
+   "title": "cross(Point,Line) -> orbit 1",
+   "desc": "operator cross; operands Point,Line; orbit 1; shares this orbit within the matrix: True",
+   "operator": "cross",
+   "a": "Point",
+   "b": "Line",
+   "orbit": "1",
+   "shared": "true"
+  },
+  {
+   "id": "cell-cross-Point-Angle",
+   "title": "cross(Point,Angle) -> orbit 26",
+   "desc": "operator cross; operands Point,Angle; orbit 26; shares this orbit within the matrix: True",
+   "operator": "cross",
+   "a": "Point",
+   "b": "Angle",
+   "orbit": "26",
+   "shared": "true"
+  },
+  {
+   "id": "cell-cross-Point-Curve",
+   "title": "cross(Point,Curve) -> orbit 67",
+   "desc": "operator cross; operands Point,Curve; orbit 67; shares this orbit within the matrix: True",
+   "operator": "cross",
+   "a": "Point",
+   "b": "Curve",
+   "orbit": "67",
+   "shared": "true"
+  },
+  {
+   "id": "cell-cross-Point-Wave",
+   "title": "cross(Point,Wave) -> orbit 14",
+   "desc": "operator cross; operands Point,Wave; orbit 14; shares this orbit within the matrix: True",
+   "operator": "cross",
+   "a": "Point",
+   "b": "Wave",
+   "orbit": "14",
+   "shared": "true"
+  },
+  {
+   "id": "cell-cross-Point-Circle",
+   "title": "cross(Point,Circle) -> orbit 22",
+   "desc": "operator cross; operands Point,Circle; orbit 22; shares this orbit within the matrix: True",
+   "operator": "cross",
+   "a": "Point",
+   "b": "Circle",
+   "orbit": "22",
+   "shared": "true"
+  },
+  {
+   "id": "cell-cross-Line-Point",
+   "title": "cross(Line,Point) -> orbit 1",
+   "desc": "operator cross; operands Line,Point; orbit 1; shares this orbit within the matrix: True",
+   "operator": "cross",
+   "a": "Line",
+   "b": "Point",
+   "orbit": "1",
+   "shared": "true"
+  },
+  {
+   "id": "cell-cross-Line-Line",
+   "title": "cross(Line,Line) -> orbit 91",
+   "desc": "operator cross; operands Line,Line; orbit 91; shares this orbit within the matrix: False",
+   "operator": "cross",
+   "a": "Line",
+   "b": "Line",
+   "orbit": "91",
+   "shared": "false"
+  },
+  {
+   "id": "cell-cross-Line-Angle",
+   "title": "cross(Line,Angle) -> orbit 44",
+   "desc": "operator cross; operands Line,Angle; orbit 44; shares this orbit within the matrix: True",
+   "operator": "cross",
+   "a": "Line",
+   "b": "Angle",
+   "orbit": "44",
+   "shared": "true"
+  },
+  {
+   "id": "cell-cross-Line-Curve",
+   "title": "cross(Line,Curve) -> orbit 45",
+   "desc": "operator cross; operands Line,Curve; orbit 45; shares this orbit within the matrix: True",
+   "operator": "cross",
+   "a": "Line",
+   "b": "Curve",
+   "orbit": "45",
+   "shared": "true"
+  },
+  {
+   "id": "cell-cross-Line-Wave",
+   "title": "cross(Line,Wave) -> orbit 7",
+   "desc": "operator cross; operands Line,Wave; orbit 7; shares this orbit within the matrix: True",
+   "operator": "cross",
+   "a": "Line",
+   "b": "Wave",
+   "orbit": "7",
+   "shared": "true"
+  },
+  {
+   "id": "cell-cross-Line-Circle",
+   "title": "cross(Line,Circle) -> orbit 5",
+   "desc": "operator cross; operands Line,Circle; orbit 5; shares this orbit within the matrix: True",
+   "operator": "cross",
+   "a": "Line",
+   "b": "Circle",
+   "orbit": "5",
+   "shared": "true"
+  },
+  {
+   "id": "cell-cross-Angle-Point",
+   "title": "cross(Angle,Point) -> orbit 26",
+   "desc": "operator cross; operands Angle,Point; orbit 26; shares this orbit within the matrix: True",
+   "operator": "cross",
+   "a": "Angle",
+   "b": "Point",
+   "orbit": "26",
+   "shared": "true"
+  },
+  {
+   "id": "cell-cross-Angle-Line",
+   "title": "cross(Angle,Line) -> orbit 44",
+   "desc": "operator cross; operands Angle,Line; orbit 44; shares this orbit within the matrix: True",
+   "operator": "cross",
+   "a": "Angle",
+   "b": "Line",
+   "orbit": "44",
+   "shared": "true"
+  },
+  {
+   "id": "cell-cross-Angle-Angle",
+   "title": "cross(Angle,Angle) -> orbit 46",
+   "desc": "operator cross; operands Angle,Angle; orbit 46; shares this orbit within the matrix: False",
+   "operator": "cross",
+   "a": "Angle",
+   "b": "Angle",
+   "orbit": "46",
+   "shared": "false"
+  },
+  {
+   "id": "cell-cross-Angle-Curve",
+   "title": "cross(Angle,Curve) -> orbit 47",
+   "desc": "operator cross; operands Angle,Curve; orbit 47; shares this orbit within the matrix: True",
+   "operator": "cross",
+   "a": "Angle",
+   "b": "Curve",
+   "orbit": "47",
+   "shared": "true"
+  },
+  {
+   "id": "cell-cross-Angle-Wave",
+   "title": "cross(Angle,Wave) -> orbit 48",
+   "desc": "operator cross; operands Angle,Wave; orbit 48; shares this orbit within the matrix: True",
+   "operator": "cross",
+   "a": "Angle",
+   "b": "Wave",
+   "orbit": "48",
+   "shared": "true"
+  },
+  {
+   "id": "cell-cross-Angle-Circle",
+   "title": "cross(Angle,Circle) -> orbit 32",
+   "desc": "operator cross; operands Angle,Circle; orbit 32; shares this orbit within the matrix: True",
+   "operator": "cross",
+   "a": "Angle",
+   "b": "Circle",
+   "orbit": "32",
+   "shared": "true"
+  },
+  {
+   "id": "cell-cross-Curve-Point",
+   "title": "cross(Curve,Point) -> orbit 67",
+   "desc": "operator cross; operands Curve,Point; orbit 67; shares this orbit within the matrix: True",
+   "operator": "cross",
+   "a": "Curve",
+   "b": "Point",
+   "orbit": "67",
+   "shared": "true"
+  },
+  {
+   "id": "cell-cross-Curve-Line",
+   "title": "cross(Curve,Line) -> orbit 45",
+   "desc": "operator cross; operands Curve,Line; orbit 45; shares this orbit within the matrix: True",
+   "operator": "cross",
+   "a": "Curve",
+   "b": "Line",
+   "orbit": "45",
+   "shared": "true"
+  },
+  {
+   "id": "cell-cross-Curve-Angle",
+   "title": "cross(Curve,Angle) -> orbit 47",
+   "desc": "operator cross; operands Curve,Angle; orbit 47; shares this orbit within the matrix: True",
+   "operator": "cross",
+   "a": "Curve",
+   "b": "Angle",
+   "orbit": "47",
+   "shared": "true"
+  },
+  {
+   "id": "cell-cross-Curve-Curve",
+   "title": "cross(Curve,Curve) -> orbit 79",
+   "desc": "operator cross; operands Curve,Curve; orbit 79; shares this orbit within the matrix: False",
+   "operator": "cross",
+   "a": "Curve",
+   "b": "Curve",
+   "orbit": "79",
+   "shared": "false"
+  },
+  {
+   "id": "cell-cross-Curve-Wave",
+   "title": "cross(Curve,Wave) -> orbit 80",
+   "desc": "operator cross; operands Curve,Wave; orbit 80; shares this orbit within the matrix: True",
+   "operator": "cross",
+   "a": "Curve",
+   "b": "Wave",
+   "orbit": "80",
+   "shared": "true"
+  },
+  {
+   "id": "cell-cross-Curve-Circle",
+   "title": "cross(Curve,Circle) -> orbit 70",
+   "desc": "operator cross; operands Curve,Circle; orbit 70; shares this orbit within the matrix: True",
+   "operator": "cross",
+   "a": "Curve",
+   "b": "Circle",
+   "orbit": "70",
+   "shared": "true"
+  },
+  {
+   "id": "cell-cross-Wave-Point",
+   "title": "cross(Wave,Point) -> orbit 14",
+   "desc": "operator cross; operands Wave,Point; orbit 14; shares this orbit within the matrix: True",
+   "operator": "cross",
+   "a": "Wave",
+   "b": "Point",
+   "orbit": "14",
+   "shared": "true"
+  },
+  {
+   "id": "cell-cross-Wave-Line",
+   "title": "cross(Wave,Line) -> orbit 7",
+   "desc": "operator cross; operands Wave,Line; orbit 7; shares this orbit within the matrix: True",
+   "operator": "cross",
+   "a": "Wave",
+   "b": "Line",
+   "orbit": "7",
+   "shared": "true"
+  },
+  {
+   "id": "cell-cross-Wave-Angle",
+   "title": "cross(Wave,Angle) -> orbit 48",
+   "desc": "operator cross; operands Wave,Angle; orbit 48; shares this orbit within the matrix: True",
+   "operator": "cross",
+   "a": "Wave",
+   "b": "Angle",
+   "orbit": "48",
+   "shared": "true"
+  },
+  {
+   "id": "cell-cross-Wave-Curve",
+   "title": "cross(Wave,Curve) -> orbit 80",
+   "desc": "operator cross; operands Wave,Curve; orbit 80; shares this orbit within the matrix: True",
+   "operator": "cross",
+   "a": "Wave",
+   "b": "Curve",
+   "orbit": "80",
+   "shared": "true"
+  },
+  {
+   "id": "cell-cross-Wave-Wave",
+   "title": "cross(Wave,Wave) -> orbit 92",
+   "desc": "operator cross; operands Wave,Wave; orbit 92; shares this orbit within the matrix: False",
+   "operator": "cross",
+   "a": "Wave",
+   "b": "Wave",
+   "orbit": "92",
+   "shared": "false"
+  },
+  {
+   "id": "cell-cross-Wave-Circle",
+   "title": "cross(Wave,Circle) -> orbit 15",
+   "desc": "operator cross; operands Wave,Circle; orbit 15; shares this orbit within the matrix: True",
+   "operator": "cross",
+   "a": "Wave",
+   "b": "Circle",
+   "orbit": "15",
+   "shared": "true"
+  },
+  {
+   "id": "cell-cross-Circle-Point",
+   "title": "cross(Circle,Point) -> orbit 22",
+   "desc": "operator cross; operands Circle,Point; orbit 22; shares this orbit within the matrix: True",
+   "operator": "cross",
+   "a": "Circle",
+   "b": "Point",
+   "orbit": "22",
+   "shared": "true"
+  },
+  {
+   "id": "cell-cross-Circle-Line",
+   "title": "cross(Circle,Line) -> orbit 5",
+   "desc": "operator cross; operands Circle,Line; orbit 5; shares this orbit within the matrix: True",
+   "operator": "cross",
+   "a": "Circle",
+   "b": "Line",
+   "orbit": "5",
+   "shared": "true"
+  },
+  {
+   "id": "cell-cross-Circle-Angle",
+   "title": "cross(Circle,Angle) -> orbit 32",
+   "desc": "operator cross; operands Circle,Angle; orbit 32; shares this orbit within the matrix: True",
+   "operator": "cross",
+   "a": "Circle",
+   "b": "Angle",
+   "orbit": "32",
+   "shared": "true"
+  },
+  {
+   "id": "cell-cross-Circle-Curve",
+   "title": "cross(Circle,Curve) -> orbit 70",
+   "desc": "operator cross; operands Circle,Curve; orbit 70; shares this orbit within the matrix: True",
+   "operator": "cross",
+   "a": "Circle",
+   "b": "Curve",
+   "orbit": "70",
+   "shared": "true"
+  },
+  {
+   "id": "cell-cross-Circle-Wave",
+   "title": "cross(Circle,Wave) -> orbit 15",
+   "desc": "operator cross; operands Circle,Wave; orbit 15; shares this orbit within the matrix: True",
+   "operator": "cross",
+   "a": "Circle",
+   "b": "Wave",
+   "orbit": "15",
+   "shared": "true"
+  },
+  {
+   "id": "cell-cross-Circle-Circle",
+   "title": "cross(Circle,Circle) -> orbit 21",
+   "desc": "operator cross; operands Circle,Circle; orbit 21; shares this orbit within the matrix: False",
+   "operator": "cross",
+   "a": "Circle",
+   "b": "Circle",
+   "orbit": "21",
+   "shared": "false"
+  },
+  {
+   "id": "cell-concatenate-Point-Point",
+   "title": "concatenate(Point,Point) -> orbit 0",
+   "desc": "operator concatenate; operands Point,Point; orbit 0; shares this orbit within the matrix: False",
+   "operator": "concatenate",
+   "a": "Point",
+   "b": "Point",
+   "orbit": "0",
+   "shared": "false"
+  },
+  {
+   "id": "cell-concatenate-Point-Line",
+   "title": "concatenate(Point,Line) -> orbit 1",
+   "desc": "operator concatenate; operands Point,Line; orbit 1; shares this orbit within the matrix: True",
+   "operator": "concatenate",
+   "a": "Point",
+   "b": "Line",
+   "orbit": "1",
+   "shared": "true"
+  },
+  {
+   "id": "cell-concatenate-Point-Angle",
+   "title": "concatenate(Point,Angle) -> orbit 49",
+   "desc": "operator concatenate; operands Point,Angle; orbit 49; shares this orbit within the matrix: True",
+   "operator": "concatenate",
+   "a": "Point",
+   "b": "Angle",
+   "orbit": "49",
+   "shared": "true"
+  },
+  {
+   "id": "cell-concatenate-Point-Curve",
+   "title": "concatenate(Point,Curve) -> orbit 81",
+   "desc": "operator concatenate; operands Point,Curve; orbit 81; shares this orbit within the matrix: True",
+   "operator": "concatenate",
+   "a": "Point",
+   "b": "Curve",
+   "orbit": "81",
+   "shared": "true"
+  },
+  {
+   "id": "cell-concatenate-Point-Wave",
+   "title": "concatenate(Point,Wave) -> orbit 14",
+   "desc": "operator concatenate; operands Point,Wave; orbit 14; shares this orbit within the matrix: True",
+   "operator": "concatenate",
+   "a": "Point",
+   "b": "Wave",
+   "orbit": "14",
+   "shared": "true"
+  },
+  {
+   "id": "cell-concatenate-Point-Circle",
+   "title": "concatenate(Point,Circle) -> orbit 21",
+   "desc": "operator concatenate; operands Point,Circle; orbit 21; shares this orbit within the matrix: True",
+   "operator": "concatenate",
+   "a": "Point",
+   "b": "Circle",
+   "orbit": "21",
+   "shared": "true"
+  },
+  {
+   "id": "cell-concatenate-Line-Point",
+   "title": "concatenate(Line,Point) -> orbit 1",
+   "desc": "operator concatenate; operands Line,Point; orbit 1; shares this orbit within the matrix: True",
+   "operator": "concatenate",
+   "a": "Line",
+   "b": "Point",
+   "orbit": "1",
+   "shared": "true"
+  },
+  {
+   "id": "cell-concatenate-Line-Line",
+   "title": "concatenate(Line,Line) -> orbit 1",
+   "desc": "operator concatenate; operands Line,Line; orbit 1; shares this orbit within the matrix: True",
+   "operator": "concatenate",
+   "a": "Line",
+   "b": "Line",
+   "orbit": "1",
+   "shared": "true"
+  },
+  {
+   "id": "cell-concatenate-Line-Angle",
+   "title": "concatenate(Line,Angle) -> orbit 50",
+   "desc": "operator concatenate; operands Line,Angle; orbit 50; shares this orbit within the matrix: True",
+   "operator": "concatenate",
+   "a": "Line",
+   "b": "Angle",
+   "orbit": "50",
+   "shared": "true"
+  },
+  {
+   "id": "cell-concatenate-Line-Curve",
+   "title": "concatenate(Line,Curve) -> orbit 51",
+   "desc": "operator concatenate; operands Line,Curve; orbit 51; shares this orbit within the matrix: True",
+   "operator": "concatenate",
+   "a": "Line",
+   "b": "Curve",
+   "orbit": "51",
+   "shared": "true"
+  },
+  {
+   "id": "cell-concatenate-Line-Wave",
+   "title": "concatenate(Line,Wave) -> orbit 37",
+   "desc": "operator concatenate; operands Line,Wave; orbit 37; shares this orbit within the matrix: True",
+   "operator": "concatenate",
+   "a": "Line",
+   "b": "Wave",
+   "orbit": "37",
+   "shared": "true"
+  },
+  {
+   "id": "cell-concatenate-Line-Circle",
+   "title": "concatenate(Line,Circle) -> orbit 38",
+   "desc": "operator concatenate; operands Line,Circle; orbit 38; shares this orbit within the matrix: True",
+   "operator": "concatenate",
+   "a": "Line",
+   "b": "Circle",
+   "orbit": "38",
+   "shared": "true"
+  },
+  {
+   "id": "cell-concatenate-Angle-Point",
+   "title": "concatenate(Angle,Point) -> orbit 49",
+   "desc": "operator concatenate; operands Angle,Point; orbit 49; shares this orbit within the matrix: True",
+   "operator": "concatenate",
+   "a": "Angle",
+   "b": "Point",
+   "orbit": "49",
+   "shared": "true"
+  },
+  {
+   "id": "cell-concatenate-Angle-Line",
+   "title": "concatenate(Angle,Line) -> orbit 50",
+   "desc": "operator concatenate; operands Angle,Line; orbit 50; shares this orbit within the matrix: True",
+   "operator": "concatenate",
+   "a": "Angle",
+   "b": "Line",
+   "orbit": "50",
+   "shared": "true"
+  },
+  {
+   "id": "cell-concatenate-Angle-Angle",
+   "title": "concatenate(Angle,Angle) -> orbit 52",
+   "desc": "operator concatenate; operands Angle,Angle; orbit 52; shares this orbit within the matrix: False",
+   "operator": "concatenate",
+   "a": "Angle",
+   "b": "Angle",
+   "orbit": "52",
+   "shared": "false"
+  },
+  {
+   "id": "cell-concatenate-Angle-Curve",
+   "title": "concatenate(Angle,Curve) -> orbit 53",
+   "desc": "operator concatenate; operands Angle,Curve; orbit 53; shares this orbit within the matrix: True",
+   "operator": "concatenate",
+   "a": "Angle",
+   "b": "Curve",
+   "orbit": "53",
+   "shared": "true"
+  },
+  {
+   "id": "cell-concatenate-Angle-Wave",
+   "title": "concatenate(Angle,Wave) -> orbit 54",
+   "desc": "operator concatenate; operands Angle,Wave; orbit 54; shares this orbit within the matrix: False",
+   "operator": "concatenate",
+   "a": "Angle",
+   "b": "Wave",
+   "orbit": "54",
+   "shared": "false"
+  },
+  {
+   "id": "cell-concatenate-Angle-Circle",
+   "title": "concatenate(Angle,Circle) -> orbit 55",
+   "desc": "operator concatenate; operands Angle,Circle; orbit 55; shares this orbit within the matrix: True",
+   "operator": "concatenate",
+   "a": "Angle",
+   "b": "Circle",
+   "orbit": "55",
+   "shared": "true"
+  },
+  {
+   "id": "cell-concatenate-Curve-Point",
+   "title": "concatenate(Curve,Point) -> orbit 81",
+   "desc": "operator concatenate; operands Curve,Point; orbit 81; shares this orbit within the matrix: True",
+   "operator": "concatenate",
+   "a": "Curve",
+   "b": "Point",
+   "orbit": "81",
+   "shared": "true"
+  },
+  {
+   "id": "cell-concatenate-Curve-Line",
+   "title": "concatenate(Curve,Line) -> orbit 51",
+   "desc": "operator concatenate; operands Curve,Line; orbit 51; shares this orbit within the matrix: True",
+   "operator": "concatenate",
+   "a": "Curve",
+   "b": "Line",
+   "orbit": "51",
+   "shared": "true"
+  },
+  {
+   "id": "cell-concatenate-Curve-Angle",
+   "title": "concatenate(Curve,Angle) -> orbit 53",
+   "desc": "operator concatenate; operands Curve,Angle; orbit 53; shares this orbit within the matrix: True",
+   "operator": "concatenate",
+   "a": "Curve",
+   "b": "Angle",
+   "orbit": "53",
+   "shared": "true"
+  },
+  {
+   "id": "cell-concatenate-Curve-Curve",
+   "title": "concatenate(Curve,Curve) -> orbit 82",
+   "desc": "operator concatenate; operands Curve,Curve; orbit 82; shares this orbit within the matrix: False",
+   "operator": "concatenate",
+   "a": "Curve",
+   "b": "Curve",
+   "orbit": "82",
+   "shared": "false"
+  },
+  {
+   "id": "cell-concatenate-Curve-Wave",
+   "title": "concatenate(Curve,Wave) -> orbit 83",
+   "desc": "operator concatenate; operands Curve,Wave; orbit 83; shares this orbit within the matrix: False",
+   "operator": "concatenate",
+   "a": "Curve",
+   "b": "Wave",
+   "orbit": "83",
+   "shared": "false"
+  },
+  {
+   "id": "cell-concatenate-Curve-Circle",
+   "title": "concatenate(Curve,Circle) -> orbit 84",
+   "desc": "operator concatenate; operands Curve,Circle; orbit 84; shares this orbit within the matrix: True",
+   "operator": "concatenate",
+   "a": "Curve",
+   "b": "Circle",
+   "orbit": "84",
+   "shared": "true"
+  },
+  {
+   "id": "cell-concatenate-Wave-Point",
+   "title": "concatenate(Wave,Point) -> orbit 14",
+   "desc": "operator concatenate; operands Wave,Point; orbit 14; shares this orbit within the matrix: True",
+   "operator": "concatenate",
+   "a": "Wave",
+   "b": "Point",
+   "orbit": "14",
+   "shared": "true"
+  },
+  {
+   "id": "cell-concatenate-Wave-Line",
+   "title": "concatenate(Wave,Line) -> orbit 37",
+   "desc": "operator concatenate; operands Wave,Line; orbit 37; shares this orbit within the matrix: True",
+   "operator": "concatenate",
+   "a": "Wave",
+   "b": "Line",
+   "orbit": "37",
+   "shared": "true"
+  },
+  {
+   "id": "cell-concatenate-Wave-Angle",
+   "title": "concatenate(Wave,Angle) -> orbit 56",
+   "desc": "operator concatenate; operands Wave,Angle; orbit 56; shares this orbit within the matrix: False",
+   "operator": "concatenate",
+   "a": "Wave",
+   "b": "Angle",
+   "orbit": "56",
+   "shared": "false"
+  },
+  {
+   "id": "cell-concatenate-Wave-Curve",
+   "title": "concatenate(Wave,Curve) -> orbit 85",
+   "desc": "operator concatenate; operands Wave,Curve; orbit 85; shares this orbit within the matrix: False",
+   "operator": "concatenate",
+   "a": "Wave",
+   "b": "Curve",
+   "orbit": "85",
+   "shared": "false"
+  },
+  {
+   "id": "cell-concatenate-Wave-Wave",
+   "title": "concatenate(Wave,Wave) -> orbit 16",
+   "desc": "operator concatenate; operands Wave,Wave; orbit 16; shares this orbit within the matrix: False",
+   "operator": "concatenate",
+   "a": "Wave",
+   "b": "Wave",
+   "orbit": "16",
+   "shared": "false"
+  },
+  {
+   "id": "cell-concatenate-Wave-Circle",
+   "title": "concatenate(Wave,Circle) -> orbit 78",
+   "desc": "operator concatenate; operands Wave,Circle; orbit 78; shares this orbit within the matrix: True",
+   "operator": "concatenate",
+   "a": "Wave",
+   "b": "Circle",
+   "orbit": "78",
+   "shared": "true"
+  },
+  {
+   "id": "cell-concatenate-Circle-Point",
+   "title": "concatenate(Circle,Point) -> orbit 21",
+   "desc": "operator concatenate; operands Circle,Point; orbit 21; shares this orbit within the matrix: True",
+   "operator": "concatenate",
+   "a": "Circle",
+   "b": "Point",
+   "orbit": "21",
+   "shared": "true"
+  },
+  {
+   "id": "cell-concatenate-Circle-Line",
+   "title": "concatenate(Circle,Line) -> orbit 38",
+   "desc": "operator concatenate; operands Circle,Line; orbit 38; shares this orbit within the matrix: True",
+   "operator": "concatenate",
+   "a": "Circle",
+   "b": "Line",
+   "orbit": "38",
+   "shared": "true"
+  },
+  {
+   "id": "cell-concatenate-Circle-Angle",
+   "title": "concatenate(Circle,Angle) -> orbit 55",
+   "desc": "operator concatenate; operands Circle,Angle; orbit 55; shares this orbit within the matrix: True",
+   "operator": "concatenate",
+   "a": "Circle",
+   "b": "Angle",
+   "orbit": "55",
+   "shared": "true"
+  },
+  {
+   "id": "cell-concatenate-Circle-Curve",
+   "title": "concatenate(Circle,Curve) -> orbit 84",
+   "desc": "operator concatenate; operands Circle,Curve; orbit 84; shares this orbit within the matrix: True",
+   "operator": "concatenate",
+   "a": "Circle",
+   "b": "Curve",
+   "orbit": "84",
+   "shared": "true"
+  },
+  {
+   "id": "cell-concatenate-Circle-Wave",
+   "title": "concatenate(Circle,Wave) -> orbit 78",
+   "desc": "operator concatenate; operands Circle,Wave; orbit 78; shares this orbit within the matrix: True",
+   "operator": "concatenate",
+   "a": "Circle",
+   "b": "Wave",
+   "orbit": "78",
+   "shared": "true"
+  },
+  {
+   "id": "cell-concatenate-Circle-Circle",
+   "title": "concatenate(Circle,Circle) -> orbit 17",
+   "desc": "operator concatenate; operands Circle,Circle; orbit 17; shares this orbit within the matrix: False",
+   "operator": "concatenate",
+   "a": "Circle",
+   "b": "Circle",
+   "orbit": "17",
+   "shared": "false"
+  },
+  {
+   "id": "cell-nest-Point-Point",
+   "title": "nest(Point,Point) -> orbit 0",
+   "desc": "operator nest; operands Point,Point; orbit 0; shares this orbit within the matrix: False",
+   "operator": "nest",
+   "a": "Point",
+   "b": "Point",
+   "orbit": "0",
+   "shared": "false"
+  },
+  {
+   "id": "cell-nest-Point-Line",
+   "title": "nest(Point,Line) -> orbit 1",
+   "desc": "operator nest; operands Point,Line; orbit 1; shares this orbit within the matrix: True",
+   "operator": "nest",
+   "a": "Point",
+   "b": "Line",
+   "orbit": "1",
+   "shared": "true"
+  },
+  {
+   "id": "cell-nest-Point-Angle",
+   "title": "nest(Point,Angle) -> orbit 26",
+   "desc": "operator nest; operands Point,Angle; orbit 26; shares this orbit within the matrix: True",
+   "operator": "nest",
+   "a": "Point",
+   "b": "Angle",
+   "orbit": "26",
+   "shared": "true"
+  },
+  {
+   "id": "cell-nest-Point-Curve",
+   "title": "nest(Point,Curve) -> orbit 67",
+   "desc": "operator nest; operands Point,Curve; orbit 67; shares this orbit within the matrix: True",
+   "operator": "nest",
+   "a": "Point",
+   "b": "Curve",
+   "orbit": "67",
+   "shared": "true"
+  },
+  {
+   "id": "cell-nest-Point-Wave",
+   "title": "nest(Point,Wave) -> orbit 14",
+   "desc": "operator nest; operands Point,Wave; orbit 14; shares this orbit within the matrix: True",
+   "operator": "nest",
+   "a": "Point",
+   "b": "Wave",
+   "orbit": "14",
+   "shared": "true"
+  },
+  {
+   "id": "cell-nest-Point-Circle",
+   "title": "nest(Point,Circle) -> orbit 22",
+   "desc": "operator nest; operands Point,Circle; orbit 22; shares this orbit within the matrix: True",
+   "operator": "nest",
+   "a": "Point",
+   "b": "Circle",
+   "orbit": "22",
+   "shared": "true"
+  },
+  {
+   "id": "cell-nest-Line-Point",
+   "title": "nest(Line,Point) -> orbit 1",
+   "desc": "operator nest; operands Line,Point; orbit 1; shares this orbit within the matrix: True",
+   "operator": "nest",
+   "a": "Line",
+   "b": "Point",
+   "orbit": "1",
+   "shared": "true"
+  },
+  {
+   "id": "cell-nest-Line-Line",
+   "title": "nest(Line,Line) -> orbit 1",
+   "desc": "operator nest; operands Line,Line; orbit 1; shares this orbit within the matrix: True",
+   "operator": "nest",
+   "a": "Line",
+   "b": "Line",
+   "orbit": "1",
+   "shared": "true"
+  },
+  {
+   "id": "cell-nest-Line-Angle",
+   "title": "nest(Line,Angle) -> orbit 57",
+   "desc": "operator nest; operands Line,Angle; orbit 57; shares this orbit within the matrix: True",
+   "operator": "nest",
+   "a": "Line",
+   "b": "Angle",
+   "orbit": "57",
+   "shared": "true"
+  },
+  {
+   "id": "cell-nest-Line-Curve",
+   "title": "nest(Line,Curve) -> orbit 57",
+   "desc": "operator nest; operands Line,Curve; orbit 57; shares this orbit within the matrix: True",
+   "operator": "nest",
+   "a": "Line",
+   "b": "Curve",
+   "orbit": "57",
+   "shared": "true"
+  },
+  {
+   "id": "cell-nest-Line-Wave",
+   "title": "nest(Line,Wave) -> orbit 8",
+   "desc": "operator nest; operands Line,Wave; orbit 8; shares this orbit within the matrix: False",
+   "operator": "nest",
+   "a": "Line",
+   "b": "Wave",
+   "orbit": "8",
+   "shared": "false"
+  },
+  {
+   "id": "cell-nest-Line-Circle",
+   "title": "nest(Line,Circle) -> orbit 9",
+   "desc": "operator nest; operands Line,Circle; orbit 9; shares this orbit within the matrix: False",
+   "operator": "nest",
+   "a": "Line",
+   "b": "Circle",
+   "orbit": "9",
+   "shared": "false"
+  },
+  {
+   "id": "cell-nest-Angle-Point",
+   "title": "nest(Angle,Point) -> orbit 26",
+   "desc": "operator nest; operands Angle,Point; orbit 26; shares this orbit within the matrix: True",
+   "operator": "nest",
+   "a": "Angle",
+   "b": "Point",
+   "orbit": "26",
+   "shared": "true"
+  },
+  {
+   "id": "cell-nest-Angle-Line",
+   "title": "nest(Angle,Line) -> orbit 58",
+   "desc": "operator nest; operands Angle,Line; orbit 58; shares this orbit within the matrix: False",
+   "operator": "nest",
+   "a": "Angle",
+   "b": "Line",
+   "orbit": "58",
+   "shared": "false"
+  },
+  {
+   "id": "cell-nest-Angle-Angle",
+   "title": "nest(Angle,Angle) -> orbit 59",
+   "desc": "operator nest; operands Angle,Angle; orbit 59; shares this orbit within the matrix: True",
+   "operator": "nest",
+   "a": "Angle",
+   "b": "Angle",
+   "orbit": "59",
+   "shared": "true"
+  },
+  {
+   "id": "cell-nest-Angle-Curve",
+   "title": "nest(Angle,Curve) -> orbit 59",
+   "desc": "operator nest; operands Angle,Curve; orbit 59; shares this orbit within the matrix: True",
+   "operator": "nest",
+   "a": "Angle",
+   "b": "Curve",
+   "orbit": "59",
+   "shared": "true"
+  },
+  {
+   "id": "cell-nest-Angle-Wave",
+   "title": "nest(Angle,Wave) -> orbit 60",
+   "desc": "operator nest; operands Angle,Wave; orbit 60; shares this orbit within the matrix: False",
+   "operator": "nest",
+   "a": "Angle",
+   "b": "Wave",
+   "orbit": "60",
+   "shared": "false"
+  },
+  {
+   "id": "cell-nest-Angle-Circle",
+   "title": "nest(Angle,Circle) -> orbit 61",
+   "desc": "operator nest; operands Angle,Circle; orbit 61; shares this orbit within the matrix: False",
+   "operator": "nest",
+   "a": "Angle",
+   "b": "Circle",
+   "orbit": "61",
+   "shared": "false"
+  },
+  {
+   "id": "cell-nest-Curve-Point",
+   "title": "nest(Curve,Point) -> orbit 67",
+   "desc": "operator nest; operands Curve,Point; orbit 67; shares this orbit within the matrix: True",
+   "operator": "nest",
+   "a": "Curve",
+   "b": "Point",
+   "orbit": "67",
+   "shared": "true"
+  },
+  {
+   "id": "cell-nest-Curve-Line",
+   "title": "nest(Curve,Line) -> orbit 62",
+   "desc": "operator nest; operands Curve,Line; orbit 62; shares this orbit within the matrix: False",
+   "operator": "nest",
+   "a": "Curve",
+   "b": "Line",
+   "orbit": "62",
+   "shared": "false"
+  },
+  {
+   "id": "cell-nest-Curve-Angle",
+   "title": "nest(Curve,Angle) -> orbit 63",
+   "desc": "operator nest; operands Curve,Angle; orbit 63; shares this orbit within the matrix: False",
+   "operator": "nest",
+   "a": "Curve",
+   "b": "Angle",
+   "orbit": "63",
+   "shared": "false"
+  },
+  {
+   "id": "cell-nest-Curve-Curve",
+   "title": "nest(Curve,Curve) -> orbit 86",
+   "desc": "operator nest; operands Curve,Curve; orbit 86; shares this orbit within the matrix: False",
+   "operator": "nest",
+   "a": "Curve",
+   "b": "Curve",
+   "orbit": "86",
+   "shared": "false"
+  },
+  {
+   "id": "cell-nest-Curve-Wave",
+   "title": "nest(Curve,Wave) -> orbit 87",
+   "desc": "operator nest; operands Curve,Wave; orbit 87; shares this orbit within the matrix: False",
+   "operator": "nest",
+   "a": "Curve",
+   "b": "Wave",
+   "orbit": "87",
+   "shared": "false"
+  },
+  {
+   "id": "cell-nest-Curve-Circle",
+   "title": "nest(Curve,Circle) -> orbit 88",
+   "desc": "operator nest; operands Curve,Circle; orbit 88; shares this orbit within the matrix: False",
+   "operator": "nest",
+   "a": "Curve",
+   "b": "Circle",
+   "orbit": "88",
+   "shared": "false"
+  },
+  {
+   "id": "cell-nest-Wave-Point",
+   "title": "nest(Wave,Point) -> orbit 14",
+   "desc": "operator nest; operands Wave,Point; orbit 14; shares this orbit within the matrix: True",
+   "operator": "nest",
+   "a": "Wave",
+   "b": "Point",
+   "orbit": "14",
+   "shared": "true"
+  },
+  {
+   "id": "cell-nest-Wave-Line",
+   "title": "nest(Wave,Line) -> orbit 10",
+   "desc": "operator nest; operands Wave,Line; orbit 10; shares this orbit within the matrix: False",
+   "operator": "nest",
+   "a": "Wave",
+   "b": "Line",
+   "orbit": "10",
+   "shared": "false"
+  },
+  {
+   "id": "cell-nest-Wave-Angle",
+   "title": "nest(Wave,Angle) -> orbit 64",
+   "desc": "operator nest; operands Wave,Angle; orbit 64; shares this orbit within the matrix: False",
+   "operator": "nest",
+   "a": "Wave",
+   "b": "Angle",
+   "orbit": "64",
+   "shared": "false"
+  },
+  {
+   "id": "cell-nest-Wave-Curve",
+   "title": "nest(Wave,Curve) -> orbit 89",
+   "desc": "operator nest; operands Wave,Curve; orbit 89; shares this orbit within the matrix: False",
+   "operator": "nest",
+   "a": "Wave",
+   "b": "Curve",
+   "orbit": "89",
+   "shared": "false"
+  },
+  {
+   "id": "cell-nest-Wave-Wave",
+   "title": "nest(Wave,Wave) -> orbit 18",
+   "desc": "operator nest; operands Wave,Wave; orbit 18; shares this orbit within the matrix: False",
+   "operator": "nest",
+   "a": "Wave",
+   "b": "Wave",
+   "orbit": "18",
+   "shared": "false"
+  },
+  {
+   "id": "cell-nest-Wave-Circle",
+   "title": "nest(Wave,Circle) -> orbit 19",
+   "desc": "operator nest; operands Wave,Circle; orbit 19; shares this orbit within the matrix: False",
+   "operator": "nest",
+   "a": "Wave",
+   "b": "Circle",
+   "orbit": "19",
+   "shared": "false"
+  },
+  {
+   "id": "cell-nest-Circle-Point",
+   "title": "nest(Circle,Point) -> orbit 22",
+   "desc": "operator nest; operands Circle,Point; orbit 22; shares this orbit within the matrix: True",
+   "operator": "nest",
+   "a": "Circle",
+   "b": "Point",
+   "orbit": "22",
+   "shared": "true"
+  },
+  {
+   "id": "cell-nest-Circle-Line",
+   "title": "nest(Circle,Line) -> orbit 11",
+   "desc": "operator nest; operands Circle,Line; orbit 11; shares this orbit within the matrix: False",
+   "operator": "nest",
+   "a": "Circle",
+   "b": "Line",
+   "orbit": "11",
+   "shared": "false"
+  },
+  {
+   "id": "cell-nest-Circle-Angle",
+   "title": "nest(Circle,Angle) -> orbit 65",
+   "desc": "operator nest; operands Circle,Angle; orbit 65; shares this orbit within the matrix: False",
+   "operator": "nest",
+   "a": "Circle",
+   "b": "Angle",
+   "orbit": "65",
+   "shared": "false"
+  },
+  {
+   "id": "cell-nest-Circle-Curve",
+   "title": "nest(Circle,Curve) -> orbit 90",
+   "desc": "operator nest; operands Circle,Curve; orbit 90; shares this orbit within the matrix: False",
+   "operator": "nest",
+   "a": "Circle",
+   "b": "Curve",
+   "orbit": "90",
+   "shared": "false"
+  },
+  {
+   "id": "cell-nest-Circle-Wave",
+   "title": "nest(Circle,Wave) -> orbit 20",
+   "desc": "operator nest; operands Circle,Wave; orbit 20; shares this orbit within the matrix: False",
+   "operator": "nest",
+   "a": "Circle",
+   "b": "Wave",
+   "orbit": "20",
+   "shared": "false"
+  },
+  {
+   "id": "cell-nest-Circle-Circle",
+   "title": "nest(Circle,Circle) -> orbit 23",
+   "desc": "operator nest; operands Circle,Circle; orbit 23; shares this orbit within the matrix: False",
+   "operator": "nest",
+   "a": "Circle",
+   "b": "Circle",
+   "orbit": "23",
+   "shared": "false"
+  }
+ ]
+}

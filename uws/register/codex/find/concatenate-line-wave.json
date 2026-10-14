@@ -1,0 +1,20 @@
+{
+  "orbit": 37,
+  "members": [
+    "superpose_displaced(Line,Wave)",
+    "superpose_displaced(Wave,Line)",
+    "concatenate(Line,Wave)",
+    "concatenate(Wave,Line)"
+  ],
+  "symmetry": "1",
+  "curvature": "singular",
+  "meaning": null,
+  "status": "undetermined",
+  "strokes": 2,
+  "components": 2,
+  "mirror_axes": "0",
+  "closed": false,
+  "crossings": "0",
+  "aspect": "wide",
+  "curvature_mix": "mixed"
+}

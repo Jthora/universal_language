@@ -1,0 +1,1625 @@
+{
+ "sheet": "charts/commutativity",
+ "cells": [
+  {
+   "id": "cell-superpose_concentric-Point-Point",
+   "title": "superpose_concentric(Point,Point) vs superpose_concentric(Point,Point): same",
+   "desc": "operator superpose_concentric; Point against Point; swapping the operands gives the same figure",
+   "operator": "superpose_concentric",
+   "a": "Point",
+   "b": "Point",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_concentric-Point-Line",
+   "title": "superpose_concentric(Point,Line) vs superpose_concentric(Line,Point): same",
+   "desc": "operator superpose_concentric; Point against Line; swapping the operands gives the same figure",
+   "operator": "superpose_concentric",
+   "a": "Point",
+   "b": "Line",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_concentric-Point-Angle",
+   "title": "superpose_concentric(Point,Angle) vs superpose_concentric(Angle,Point): same",
+   "desc": "operator superpose_concentric; Point against Angle; swapping the operands gives the same figure",
+   "operator": "superpose_concentric",
+   "a": "Point",
+   "b": "Angle",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_concentric-Point-Curve",
+   "title": "superpose_concentric(Point,Curve) vs superpose_concentric(Curve,Point): same",
+   "desc": "operator superpose_concentric; Point against Curve; swapping the operands gives the same figure",
+   "operator": "superpose_concentric",
+   "a": "Point",
+   "b": "Curve",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_concentric-Point-Wave",
+   "title": "superpose_concentric(Point,Wave) vs superpose_concentric(Wave,Point): same",
+   "desc": "operator superpose_concentric; Point against Wave; swapping the operands gives the same figure",
+   "operator": "superpose_concentric",
+   "a": "Point",
+   "b": "Wave",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_concentric-Point-Circle",
+   "title": "superpose_concentric(Point,Circle) vs superpose_concentric(Circle,Point): same",
+   "desc": "operator superpose_concentric; Point against Circle; swapping the operands gives the same figure",
+   "operator": "superpose_concentric",
+   "a": "Point",
+   "b": "Circle",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_concentric-Line-Point",
+   "title": "superpose_concentric(Line,Point) vs superpose_concentric(Point,Line): same",
+   "desc": "operator superpose_concentric; Line against Point; swapping the operands gives the same figure",
+   "operator": "superpose_concentric",
+   "a": "Line",
+   "b": "Point",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_concentric-Line-Line",
+   "title": "superpose_concentric(Line,Line) vs superpose_concentric(Line,Line): same",
+   "desc": "operator superpose_concentric; Line against Line; swapping the operands gives the same figure",
+   "operator": "superpose_concentric",
+   "a": "Line",
+   "b": "Line",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_concentric-Line-Angle",
+   "title": "superpose_concentric(Line,Angle) vs superpose_concentric(Angle,Line): same",
+   "desc": "operator superpose_concentric; Line against Angle; swapping the operands gives the same figure",
+   "operator": "superpose_concentric",
+   "a": "Line",
+   "b": "Angle",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_concentric-Line-Curve",
+   "title": "superpose_concentric(Line,Curve) vs superpose_concentric(Curve,Line): same",
+   "desc": "operator superpose_concentric; Line against Curve; swapping the operands gives the same figure",
+   "operator": "superpose_concentric",
+   "a": "Line",
+   "b": "Curve",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_concentric-Line-Wave",
+   "title": "superpose_concentric(Line,Wave) vs superpose_concentric(Wave,Line): same",
+   "desc": "operator superpose_concentric; Line against Wave; swapping the operands gives the same figure",
+   "operator": "superpose_concentric",
+   "a": "Line",
+   "b": "Wave",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_concentric-Line-Circle",
+   "title": "superpose_concentric(Line,Circle) vs superpose_concentric(Circle,Line): same",
+   "desc": "operator superpose_concentric; Line against Circle; swapping the operands gives the same figure",
+   "operator": "superpose_concentric",
+   "a": "Line",
+   "b": "Circle",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_concentric-Angle-Point",
+   "title": "superpose_concentric(Angle,Point) vs superpose_concentric(Point,Angle): same",
+   "desc": "operator superpose_concentric; Angle against Point; swapping the operands gives the same figure",
+   "operator": "superpose_concentric",
+   "a": "Angle",
+   "b": "Point",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_concentric-Angle-Line",
+   "title": "superpose_concentric(Angle,Line) vs superpose_concentric(Line,Angle): same",
+   "desc": "operator superpose_concentric; Angle against Line; swapping the operands gives the same figure",
+   "operator": "superpose_concentric",
+   "a": "Angle",
+   "b": "Line",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_concentric-Angle-Angle",
+   "title": "superpose_concentric(Angle,Angle) vs superpose_concentric(Angle,Angle): same",
+   "desc": "operator superpose_concentric; Angle against Angle; swapping the operands gives the same figure",
+   "operator": "superpose_concentric",
+   "a": "Angle",
+   "b": "Angle",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_concentric-Angle-Curve",
+   "title": "superpose_concentric(Angle,Curve) vs superpose_concentric(Curve,Angle): same",
+   "desc": "operator superpose_concentric; Angle against Curve; swapping the operands gives the same figure",
+   "operator": "superpose_concentric",
+   "a": "Angle",
+   "b": "Curve",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_concentric-Angle-Wave",
+   "title": "superpose_concentric(Angle,Wave) vs superpose_concentric(Wave,Angle): same",
+   "desc": "operator superpose_concentric; Angle against Wave; swapping the operands gives the same figure",
+   "operator": "superpose_concentric",
+   "a": "Angle",
+   "b": "Wave",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_concentric-Angle-Circle",
+   "title": "superpose_concentric(Angle,Circle) vs superpose_concentric(Circle,Angle): same",
+   "desc": "operator superpose_concentric; Angle against Circle; swapping the operands gives the same figure",
+   "operator": "superpose_concentric",
+   "a": "Angle",
+   "b": "Circle",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_concentric-Curve-Point",
+   "title": "superpose_concentric(Curve,Point) vs superpose_concentric(Point,Curve): same",
+   "desc": "operator superpose_concentric; Curve against Point; swapping the operands gives the same figure",
+   "operator": "superpose_concentric",
+   "a": "Curve",
+   "b": "Point",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_concentric-Curve-Line",
+   "title": "superpose_concentric(Curve,Line) vs superpose_concentric(Line,Curve): same",
+   "desc": "operator superpose_concentric; Curve against Line; swapping the operands gives the same figure",
+   "operator": "superpose_concentric",
+   "a": "Curve",
+   "b": "Line",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_concentric-Curve-Angle",
+   "title": "superpose_concentric(Curve,Angle) vs superpose_concentric(Angle,Curve): same",
+   "desc": "operator superpose_concentric; Curve against Angle; swapping the operands gives the same figure",
+   "operator": "superpose_concentric",
+   "a": "Curve",
+   "b": "Angle",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_concentric-Curve-Curve",
+   "title": "superpose_concentric(Curve,Curve) vs superpose_concentric(Curve,Curve): same",
+   "desc": "operator superpose_concentric; Curve against Curve; swapping the operands gives the same figure",
+   "operator": "superpose_concentric",
+   "a": "Curve",
+   "b": "Curve",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_concentric-Curve-Wave",
+   "title": "superpose_concentric(Curve,Wave) vs superpose_concentric(Wave,Curve): same",
+   "desc": "operator superpose_concentric; Curve against Wave; swapping the operands gives the same figure",
+   "operator": "superpose_concentric",
+   "a": "Curve",
+   "b": "Wave",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_concentric-Curve-Circle",
+   "title": "superpose_concentric(Curve,Circle) vs superpose_concentric(Circle,Curve): same",
+   "desc": "operator superpose_concentric; Curve against Circle; swapping the operands gives the same figure",
+   "operator": "superpose_concentric",
+   "a": "Curve",
+   "b": "Circle",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_concentric-Wave-Point",
+   "title": "superpose_concentric(Wave,Point) vs superpose_concentric(Point,Wave): same",
+   "desc": "operator superpose_concentric; Wave against Point; swapping the operands gives the same figure",
+   "operator": "superpose_concentric",
+   "a": "Wave",
+   "b": "Point",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_concentric-Wave-Line",
+   "title": "superpose_concentric(Wave,Line) vs superpose_concentric(Line,Wave): same",
+   "desc": "operator superpose_concentric; Wave against Line; swapping the operands gives the same figure",
+   "operator": "superpose_concentric",
+   "a": "Wave",
+   "b": "Line",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_concentric-Wave-Angle",
+   "title": "superpose_concentric(Wave,Angle) vs superpose_concentric(Angle,Wave): same",
+   "desc": "operator superpose_concentric; Wave against Angle; swapping the operands gives the same figure",
+   "operator": "superpose_concentric",
+   "a": "Wave",
+   "b": "Angle",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_concentric-Wave-Curve",
+   "title": "superpose_concentric(Wave,Curve) vs superpose_concentric(Curve,Wave): same",
+   "desc": "operator superpose_concentric; Wave against Curve; swapping the operands gives the same figure",
+   "operator": "superpose_concentric",
+   "a": "Wave",
+   "b": "Curve",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_concentric-Wave-Wave",
+   "title": "superpose_concentric(Wave,Wave) vs superpose_concentric(Wave,Wave): same",
+   "desc": "operator superpose_concentric; Wave against Wave; swapping the operands gives the same figure",
+   "operator": "superpose_concentric",
+   "a": "Wave",
+   "b": "Wave",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_concentric-Wave-Circle",
+   "title": "superpose_concentric(Wave,Circle) vs superpose_concentric(Circle,Wave): same",
+   "desc": "operator superpose_concentric; Wave against Circle; swapping the operands gives the same figure",
+   "operator": "superpose_concentric",
+   "a": "Wave",
+   "b": "Circle",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_concentric-Circle-Point",
+   "title": "superpose_concentric(Circle,Point) vs superpose_concentric(Point,Circle): same",
+   "desc": "operator superpose_concentric; Circle against Point; swapping the operands gives the same figure",
+   "operator": "superpose_concentric",
+   "a": "Circle",
+   "b": "Point",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_concentric-Circle-Line",
+   "title": "superpose_concentric(Circle,Line) vs superpose_concentric(Line,Circle): same",
+   "desc": "operator superpose_concentric; Circle against Line; swapping the operands gives the same figure",
+   "operator": "superpose_concentric",
+   "a": "Circle",
+   "b": "Line",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_concentric-Circle-Angle",
+   "title": "superpose_concentric(Circle,Angle) vs superpose_concentric(Angle,Circle): same",
+   "desc": "operator superpose_concentric; Circle against Angle; swapping the operands gives the same figure",
+   "operator": "superpose_concentric",
+   "a": "Circle",
+   "b": "Angle",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_concentric-Circle-Curve",
+   "title": "superpose_concentric(Circle,Curve) vs superpose_concentric(Curve,Circle): same",
+   "desc": "operator superpose_concentric; Circle against Curve; swapping the operands gives the same figure",
+   "operator": "superpose_concentric",
+   "a": "Circle",
+   "b": "Curve",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_concentric-Circle-Wave",
+   "title": "superpose_concentric(Circle,Wave) vs superpose_concentric(Wave,Circle): same",
+   "desc": "operator superpose_concentric; Circle against Wave; swapping the operands gives the same figure",
+   "operator": "superpose_concentric",
+   "a": "Circle",
+   "b": "Wave",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_concentric-Circle-Circle",
+   "title": "superpose_concentric(Circle,Circle) vs superpose_concentric(Circle,Circle): same",
+   "desc": "operator superpose_concentric; Circle against Circle; swapping the operands gives the same figure",
+   "operator": "superpose_concentric",
+   "a": "Circle",
+   "b": "Circle",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_displaced-Point-Point",
+   "title": "superpose_displaced(Point,Point) vs superpose_displaced(Point,Point): same",
+   "desc": "operator superpose_displaced; Point against Point; swapping the operands gives the same figure",
+   "operator": "superpose_displaced",
+   "a": "Point",
+   "b": "Point",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_displaced-Point-Line",
+   "title": "superpose_displaced(Point,Line) vs superpose_displaced(Line,Point): same",
+   "desc": "operator superpose_displaced; Point against Line; swapping the operands gives the same figure",
+   "operator": "superpose_displaced",
+   "a": "Point",
+   "b": "Line",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_displaced-Point-Angle",
+   "title": "superpose_displaced(Point,Angle) vs superpose_displaced(Angle,Point): mirror",
+   "desc": "operator superpose_displaced; Point against Angle; swapping the operands gives the mirror figure",
+   "operator": "superpose_displaced",
+   "a": "Point",
+   "b": "Angle",
+   "relation": "mirror"
+  },
+  {
+   "id": "cell-superpose_displaced-Point-Curve",
+   "title": "superpose_displaced(Point,Curve) vs superpose_displaced(Curve,Point): mirror",
+   "desc": "operator superpose_displaced; Point against Curve; swapping the operands gives the mirror figure",
+   "operator": "superpose_displaced",
+   "a": "Point",
+   "b": "Curve",
+   "relation": "mirror"
+  },
+  {
+   "id": "cell-superpose_displaced-Point-Wave",
+   "title": "superpose_displaced(Point,Wave) vs superpose_displaced(Wave,Point): same",
+   "desc": "operator superpose_displaced; Point against Wave; swapping the operands gives the same figure",
+   "operator": "superpose_displaced",
+   "a": "Point",
+   "b": "Wave",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_displaced-Point-Circle",
+   "title": "superpose_displaced(Point,Circle) vs superpose_displaced(Circle,Point): same",
+   "desc": "operator superpose_displaced; Point against Circle; swapping the operands gives the same figure",
+   "operator": "superpose_displaced",
+   "a": "Point",
+   "b": "Circle",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_displaced-Line-Point",
+   "title": "superpose_displaced(Line,Point) vs superpose_displaced(Point,Line): same",
+   "desc": "operator superpose_displaced; Line against Point; swapping the operands gives the same figure",
+   "operator": "superpose_displaced",
+   "a": "Line",
+   "b": "Point",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_displaced-Line-Line",
+   "title": "superpose_displaced(Line,Line) vs superpose_displaced(Line,Line): same",
+   "desc": "operator superpose_displaced; Line against Line; swapping the operands gives the same figure",
+   "operator": "superpose_displaced",
+   "a": "Line",
+   "b": "Line",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_displaced-Line-Angle",
+   "title": "superpose_displaced(Line,Angle) vs superpose_displaced(Angle,Line): mirror",
+   "desc": "operator superpose_displaced; Line against Angle; swapping the operands gives the mirror figure",
+   "operator": "superpose_displaced",
+   "a": "Line",
+   "b": "Angle",
+   "relation": "mirror"
+  },
+  {
+   "id": "cell-superpose_displaced-Line-Curve",
+   "title": "superpose_displaced(Line,Curve) vs superpose_displaced(Curve,Line): mirror",
+   "desc": "operator superpose_displaced; Line against Curve; swapping the operands gives the mirror figure",
+   "operator": "superpose_displaced",
+   "a": "Line",
+   "b": "Curve",
+   "relation": "mirror"
+  },
+  {
+   "id": "cell-superpose_displaced-Line-Wave",
+   "title": "superpose_displaced(Line,Wave) vs superpose_displaced(Wave,Line): same",
+   "desc": "operator superpose_displaced; Line against Wave; swapping the operands gives the same figure",
+   "operator": "superpose_displaced",
+   "a": "Line",
+   "b": "Wave",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_displaced-Line-Circle",
+   "title": "superpose_displaced(Line,Circle) vs superpose_displaced(Circle,Line): same",
+   "desc": "operator superpose_displaced; Line against Circle; swapping the operands gives the same figure",
+   "operator": "superpose_displaced",
+   "a": "Line",
+   "b": "Circle",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_displaced-Angle-Point",
+   "title": "superpose_displaced(Angle,Point) vs superpose_displaced(Point,Angle): mirror",
+   "desc": "operator superpose_displaced; Angle against Point; swapping the operands gives the mirror figure",
+   "operator": "superpose_displaced",
+   "a": "Angle",
+   "b": "Point",
+   "relation": "mirror"
+  },
+  {
+   "id": "cell-superpose_displaced-Angle-Line",
+   "title": "superpose_displaced(Angle,Line) vs superpose_displaced(Line,Angle): mirror",
+   "desc": "operator superpose_displaced; Angle against Line; swapping the operands gives the mirror figure",
+   "operator": "superpose_displaced",
+   "a": "Angle",
+   "b": "Line",
+   "relation": "mirror"
+  },
+  {
+   "id": "cell-superpose_displaced-Angle-Angle",
+   "title": "superpose_displaced(Angle,Angle) vs superpose_displaced(Angle,Angle): same",
+   "desc": "operator superpose_displaced; Angle against Angle; swapping the operands gives the same figure",
+   "operator": "superpose_displaced",
+   "a": "Angle",
+   "b": "Angle",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_displaced-Angle-Curve",
+   "title": "superpose_displaced(Angle,Curve) vs superpose_displaced(Curve,Angle): mirror",
+   "desc": "operator superpose_displaced; Angle against Curve; swapping the operands gives the mirror figure",
+   "operator": "superpose_displaced",
+   "a": "Angle",
+   "b": "Curve",
+   "relation": "mirror"
+  },
+  {
+   "id": "cell-superpose_displaced-Angle-Wave",
+   "title": "superpose_displaced(Angle,Wave) vs superpose_displaced(Wave,Angle): different",
+   "desc": "operator superpose_displaced; Angle against Wave; swapping the operands gives the different figure",
+   "operator": "superpose_displaced",
+   "a": "Angle",
+   "b": "Wave",
+   "relation": "different"
+  },
+  {
+   "id": "cell-superpose_displaced-Angle-Circle",
+   "title": "superpose_displaced(Angle,Circle) vs superpose_displaced(Circle,Angle): mirror",
+   "desc": "operator superpose_displaced; Angle against Circle; swapping the operands gives the mirror figure",
+   "operator": "superpose_displaced",
+   "a": "Angle",
+   "b": "Circle",
+   "relation": "mirror"
+  },
+  {
+   "id": "cell-superpose_displaced-Curve-Point",
+   "title": "superpose_displaced(Curve,Point) vs superpose_displaced(Point,Curve): mirror",
+   "desc": "operator superpose_displaced; Curve against Point; swapping the operands gives the mirror figure",
+   "operator": "superpose_displaced",
+   "a": "Curve",
+   "b": "Point",
+   "relation": "mirror"
+  },
+  {
+   "id": "cell-superpose_displaced-Curve-Line",
+   "title": "superpose_displaced(Curve,Line) vs superpose_displaced(Line,Curve): mirror",
+   "desc": "operator superpose_displaced; Curve against Line; swapping the operands gives the mirror figure",
+   "operator": "superpose_displaced",
+   "a": "Curve",
+   "b": "Line",
+   "relation": "mirror"
+  },
+  {
+   "id": "cell-superpose_displaced-Curve-Angle",
+   "title": "superpose_displaced(Curve,Angle) vs superpose_displaced(Angle,Curve): mirror",
+   "desc": "operator superpose_displaced; Curve against Angle; swapping the operands gives the mirror figure",
+   "operator": "superpose_displaced",
+   "a": "Curve",
+   "b": "Angle",
+   "relation": "mirror"
+  },
+  {
+   "id": "cell-superpose_displaced-Curve-Curve",
+   "title": "superpose_displaced(Curve,Curve) vs superpose_displaced(Curve,Curve): same",
+   "desc": "operator superpose_displaced; Curve against Curve; swapping the operands gives the same figure",
+   "operator": "superpose_displaced",
+   "a": "Curve",
+   "b": "Curve",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_displaced-Curve-Wave",
+   "title": "superpose_displaced(Curve,Wave) vs superpose_displaced(Wave,Curve): different",
+   "desc": "operator superpose_displaced; Curve against Wave; swapping the operands gives the different figure",
+   "operator": "superpose_displaced",
+   "a": "Curve",
+   "b": "Wave",
+   "relation": "different"
+  },
+  {
+   "id": "cell-superpose_displaced-Curve-Circle",
+   "title": "superpose_displaced(Curve,Circle) vs superpose_displaced(Circle,Curve): mirror",
+   "desc": "operator superpose_displaced; Curve against Circle; swapping the operands gives the mirror figure",
+   "operator": "superpose_displaced",
+   "a": "Curve",
+   "b": "Circle",
+   "relation": "mirror"
+  },
+  {
+   "id": "cell-superpose_displaced-Wave-Point",
+   "title": "superpose_displaced(Wave,Point) vs superpose_displaced(Point,Wave): same",
+   "desc": "operator superpose_displaced; Wave against Point; swapping the operands gives the same figure",
+   "operator": "superpose_displaced",
+   "a": "Wave",
+   "b": "Point",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_displaced-Wave-Line",
+   "title": "superpose_displaced(Wave,Line) vs superpose_displaced(Line,Wave): same",
+   "desc": "operator superpose_displaced; Wave against Line; swapping the operands gives the same figure",
+   "operator": "superpose_displaced",
+   "a": "Wave",
+   "b": "Line",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_displaced-Wave-Angle",
+   "title": "superpose_displaced(Wave,Angle) vs superpose_displaced(Angle,Wave): different",
+   "desc": "operator superpose_displaced; Wave against Angle; swapping the operands gives the different figure",
+   "operator": "superpose_displaced",
+   "a": "Wave",
+   "b": "Angle",
+   "relation": "different"
+  },
+  {
+   "id": "cell-superpose_displaced-Wave-Curve",
+   "title": "superpose_displaced(Wave,Curve) vs superpose_displaced(Curve,Wave): different",
+   "desc": "operator superpose_displaced; Wave against Curve; swapping the operands gives the different figure",
+   "operator": "superpose_displaced",
+   "a": "Wave",
+   "b": "Curve",
+   "relation": "different"
+  },
+  {
+   "id": "cell-superpose_displaced-Wave-Wave",
+   "title": "superpose_displaced(Wave,Wave) vs superpose_displaced(Wave,Wave): same",
+   "desc": "operator superpose_displaced; Wave against Wave; swapping the operands gives the same figure",
+   "operator": "superpose_displaced",
+   "a": "Wave",
+   "b": "Wave",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_displaced-Wave-Circle",
+   "title": "superpose_displaced(Wave,Circle) vs superpose_displaced(Circle,Wave): same",
+   "desc": "operator superpose_displaced; Wave against Circle; swapping the operands gives the same figure",
+   "operator": "superpose_displaced",
+   "a": "Wave",
+   "b": "Circle",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_displaced-Circle-Point",
+   "title": "superpose_displaced(Circle,Point) vs superpose_displaced(Point,Circle): same",
+   "desc": "operator superpose_displaced; Circle against Point; swapping the operands gives the same figure",
+   "operator": "superpose_displaced",
+   "a": "Circle",
+   "b": "Point",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_displaced-Circle-Line",
+   "title": "superpose_displaced(Circle,Line) vs superpose_displaced(Line,Circle): same",
+   "desc": "operator superpose_displaced; Circle against Line; swapping the operands gives the same figure",
+   "operator": "superpose_displaced",
+   "a": "Circle",
+   "b": "Line",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_displaced-Circle-Angle",
+   "title": "superpose_displaced(Circle,Angle) vs superpose_displaced(Angle,Circle): mirror",
+   "desc": "operator superpose_displaced; Circle against Angle; swapping the operands gives the mirror figure",
+   "operator": "superpose_displaced",
+   "a": "Circle",
+   "b": "Angle",
+   "relation": "mirror"
+  },
+  {
+   "id": "cell-superpose_displaced-Circle-Curve",
+   "title": "superpose_displaced(Circle,Curve) vs superpose_displaced(Curve,Circle): mirror",
+   "desc": "operator superpose_displaced; Circle against Curve; swapping the operands gives the mirror figure",
+   "operator": "superpose_displaced",
+   "a": "Circle",
+   "b": "Curve",
+   "relation": "mirror"
+  },
+  {
+   "id": "cell-superpose_displaced-Circle-Wave",
+   "title": "superpose_displaced(Circle,Wave) vs superpose_displaced(Wave,Circle): same",
+   "desc": "operator superpose_displaced; Circle against Wave; swapping the operands gives the same figure",
+   "operator": "superpose_displaced",
+   "a": "Circle",
+   "b": "Wave",
+   "relation": "same"
+  },
+  {
+   "id": "cell-superpose_displaced-Circle-Circle",
+   "title": "superpose_displaced(Circle,Circle) vs superpose_displaced(Circle,Circle): same",
+   "desc": "operator superpose_displaced; Circle against Circle; swapping the operands gives the same figure",
+   "operator": "superpose_displaced",
+   "a": "Circle",
+   "b": "Circle",
+   "relation": "same"
+  },
+  {
+   "id": "cell-cross-Point-Point",
+   "title": "cross(Point,Point) vs cross(Point,Point): same",
+   "desc": "operator cross; Point against Point; swapping the operands gives the same figure",
+   "operator": "cross",
+   "a": "Point",
+   "b": "Point",
+   "relation": "same"
+  },
+  {
+   "id": "cell-cross-Point-Line",
+   "title": "cross(Point,Line) vs cross(Line,Point): same",
+   "desc": "operator cross; Point against Line; swapping the operands gives the same figure",
+   "operator": "cross",
+   "a": "Point",
+   "b": "Line",
+   "relation": "same"
+  },
+  {
+   "id": "cell-cross-Point-Angle",
+   "title": "cross(Point,Angle) vs cross(Angle,Point): same",
+   "desc": "operator cross; Point against Angle; swapping the operands gives the same figure",
+   "operator": "cross",
+   "a": "Point",
+   "b": "Angle",
+   "relation": "same"
+  },
+  {
+   "id": "cell-cross-Point-Curve",
+   "title": "cross(Point,Curve) vs cross(Curve,Point): same",
+   "desc": "operator cross; Point against Curve; swapping the operands gives the same figure",
+   "operator": "cross",
+   "a": "Point",
+   "b": "Curve",
+   "relation": "same"
+  },
+  {
+   "id": "cell-cross-Point-Wave",
+   "title": "cross(Point,Wave) vs cross(Wave,Point): same",
+   "desc": "operator cross; Point against Wave; swapping the operands gives the same figure",
+   "operator": "cross",
+   "a": "Point",
+   "b": "Wave",
+   "relation": "same"
+  },
+  {
+   "id": "cell-cross-Point-Circle",
+   "title": "cross(Point,Circle) vs cross(Circle,Point): same",
+   "desc": "operator cross; Point against Circle; swapping the operands gives the same figure",
+   "operator": "cross",
+   "a": "Point",
+   "b": "Circle",
+   "relation": "same"
+  },
+  {
+   "id": "cell-cross-Line-Point",
+   "title": "cross(Line,Point) vs cross(Point,Line): same",
+   "desc": "operator cross; Line against Point; swapping the operands gives the same figure",
+   "operator": "cross",
+   "a": "Line",
+   "b": "Point",
+   "relation": "same"
+  },
+  {
+   "id": "cell-cross-Line-Line",
+   "title": "cross(Line,Line) vs cross(Line,Line): same",
+   "desc": "operator cross; Line against Line; swapping the operands gives the same figure",
+   "operator": "cross",
+   "a": "Line",
+   "b": "Line",
+   "relation": "same"
+  },
+  {
+   "id": "cell-cross-Line-Angle",
+   "title": "cross(Line,Angle) vs cross(Angle,Line): same",
+   "desc": "operator cross; Line against Angle; swapping the operands gives the same figure",
+   "operator": "cross",
+   "a": "Line",
+   "b": "Angle",
+   "relation": "same"
+  },
+  {
+   "id": "cell-cross-Line-Curve",
+   "title": "cross(Line,Curve) vs cross(Curve,Line): same",
+   "desc": "operator cross; Line against Curve; swapping the operands gives the same figure",
+   "operator": "cross",
+   "a": "Line",
+   "b": "Curve",
+   "relation": "same"
+  },
+  {
+   "id": "cell-cross-Line-Wave",
+   "title": "cross(Line,Wave) vs cross(Wave,Line): same",
+   "desc": "operator cross; Line against Wave; swapping the operands gives the same figure",
+   "operator": "cross",
+   "a": "Line",
+   "b": "Wave",
+   "relation": "same"
+  },
+  {
+   "id": "cell-cross-Line-Circle",
+   "title": "cross(Line,Circle) vs cross(Circle,Line): same",
+   "desc": "operator cross; Line against Circle; swapping the operands gives the same figure",
+   "operator": "cross",
+   "a": "Line",
+   "b": "Circle",
+   "relation": "same"
+  },
+  {
+   "id": "cell-cross-Angle-Point",
+   "title": "cross(Angle,Point) vs cross(Point,Angle): same",
+   "desc": "operator cross; Angle against Point; swapping the operands gives the same figure",
+   "operator": "cross",
+   "a": "Angle",
+   "b": "Point",
+   "relation": "same"
+  },
+  {
+   "id": "cell-cross-Angle-Line",
+   "title": "cross(Angle,Line) vs cross(Line,Angle): same",
+   "desc": "operator cross; Angle against Line; swapping the operands gives the same figure",
+   "operator": "cross",
+   "a": "Angle",
+   "b": "Line",
+   "relation": "same"
+  },
+  {
+   "id": "cell-cross-Angle-Angle",
+   "title": "cross(Angle,Angle) vs cross(Angle,Angle): same",
+   "desc": "operator cross; Angle against Angle; swapping the operands gives the same figure",
+   "operator": "cross",
+   "a": "Angle",
+   "b": "Angle",
+   "relation": "same"
+  },
+  {
+   "id": "cell-cross-Angle-Curve",
+   "title": "cross(Angle,Curve) vs cross(Curve,Angle): mirror",
+   "desc": "operator cross; Angle against Curve; swapping the operands gives the mirror figure",
+   "operator": "cross",
+   "a": "Angle",
+   "b": "Curve",
+   "relation": "mirror"
+  },
+  {
+   "id": "cell-cross-Angle-Wave",
+   "title": "cross(Angle,Wave) vs cross(Wave,Angle): same",
+   "desc": "operator cross; Angle against Wave; swapping the operands gives the same figure",
+   "operator": "cross",
+   "a": "Angle",
+   "b": "Wave",
+   "relation": "same"
+  },
+  {
+   "id": "cell-cross-Angle-Circle",
+   "title": "cross(Angle,Circle) vs cross(Circle,Angle): same",
+   "desc": "operator cross; Angle against Circle; swapping the operands gives the same figure",
+   "operator": "cross",
+   "a": "Angle",
+   "b": "Circle",
+   "relation": "same"
+  },
+  {
+   "id": "cell-cross-Curve-Point",
+   "title": "cross(Curve,Point) vs cross(Point,Curve): same",
+   "desc": "operator cross; Curve against Point; swapping the operands gives the same figure",
+   "operator": "cross",
+   "a": "Curve",
+   "b": "Point",
+   "relation": "same"
+  },
+  {
+   "id": "cell-cross-Curve-Line",
+   "title": "cross(Curve,Line) vs cross(Line,Curve): same",
+   "desc": "operator cross; Curve against Line; swapping the operands gives the same figure",
+   "operator": "cross",
+   "a": "Curve",
+   "b": "Line",
+   "relation": "same"
+  },
+  {
+   "id": "cell-cross-Curve-Angle",
+   "title": "cross(Curve,Angle) vs cross(Angle,Curve): mirror",
+   "desc": "operator cross; Curve against Angle; swapping the operands gives the mirror figure",
+   "operator": "cross",
+   "a": "Curve",
+   "b": "Angle",
+   "relation": "mirror"
+  },
+  {
+   "id": "cell-cross-Curve-Curve",
+   "title": "cross(Curve,Curve) vs cross(Curve,Curve): same",
+   "desc": "operator cross; Curve against Curve; swapping the operands gives the same figure",
+   "operator": "cross",
+   "a": "Curve",
+   "b": "Curve",
+   "relation": "same"
+  },
+  {
+   "id": "cell-cross-Curve-Wave",
+   "title": "cross(Curve,Wave) vs cross(Wave,Curve): same",
+   "desc": "operator cross; Curve against Wave; swapping the operands gives the same figure",
+   "operator": "cross",
+   "a": "Curve",
+   "b": "Wave",
+   "relation": "same"
+  },
+  {
+   "id": "cell-cross-Curve-Circle",
+   "title": "cross(Curve,Circle) vs cross(Circle,Curve): same",
+   "desc": "operator cross; Curve against Circle; swapping the operands gives the same figure",
+   "operator": "cross",
+   "a": "Curve",
+   "b": "Circle",
+   "relation": "same"
+  },
+  {
+   "id": "cell-cross-Wave-Point",
+   "title": "cross(Wave,Point) vs cross(Point,Wave): same",
+   "desc": "operator cross; Wave against Point; swapping the operands gives the same figure",
+   "operator": "cross",
+   "a": "Wave",
+   "b": "Point",
+   "relation": "same"
+  },
+  {
+   "id": "cell-cross-Wave-Line",
+   "title": "cross(Wave,Line) vs cross(Line,Wave): same",
+   "desc": "operator cross; Wave against Line; swapping the operands gives the same figure",
+   "operator": "cross",
+   "a": "Wave",
+   "b": "Line",
+   "relation": "same"
+  },
+  {
+   "id": "cell-cross-Wave-Angle",
+   "title": "cross(Wave,Angle) vs cross(Angle,Wave): same",
+   "desc": "operator cross; Wave against Angle; swapping the operands gives the same figure",
+   "operator": "cross",
+   "a": "Wave",
+   "b": "Angle",
+   "relation": "same"
+  },
+  {
+   "id": "cell-cross-Wave-Curve",
+   "title": "cross(Wave,Curve) vs cross(Curve,Wave): same",
+   "desc": "operator cross; Wave against Curve; swapping the operands gives the same figure",
+   "operator": "cross",
+   "a": "Wave",
+   "b": "Curve",
+   "relation": "same"
+  },
+  {
+   "id": "cell-cross-Wave-Wave",
+   "title": "cross(Wave,Wave) vs cross(Wave,Wave): same",
+   "desc": "operator cross; Wave against Wave; swapping the operands gives the same figure",
+   "operator": "cross",
+   "a": "Wave",
+   "b": "Wave",
+   "relation": "same"
+  },
+  {
+   "id": "cell-cross-Wave-Circle",
+   "title": "cross(Wave,Circle) vs cross(Circle,Wave): same",
+   "desc": "operator cross; Wave against Circle; swapping the operands gives the same figure",
+   "operator": "cross",
+   "a": "Wave",
+   "b": "Circle",
+   "relation": "same"
+  },
+  {
+   "id": "cell-cross-Circle-Point",
+   "title": "cross(Circle,Point) vs cross(Point,Circle): same",
+   "desc": "operator cross; Circle against Point; swapping the operands gives the same figure",
+   "operator": "cross",
+   "a": "Circle",
+   "b": "Point",
+   "relation": "same"
+  },
+  {
+   "id": "cell-cross-Circle-Line",
+   "title": "cross(Circle,Line) vs cross(Line,Circle): same",
+   "desc": "operator cross; Circle against Line; swapping the operands gives the same figure",
+   "operator": "cross",
+   "a": "Circle",
+   "b": "Line",
+   "relation": "same"
+  },
+  {
+   "id": "cell-cross-Circle-Angle",
+   "title": "cross(Circle,Angle) vs cross(Angle,Circle): same",
+   "desc": "operator cross; Circle against Angle; swapping the operands gives the same figure",
+   "operator": "cross",
+   "a": "Circle",
+   "b": "Angle",
+   "relation": "same"
+  },
+  {
+   "id": "cell-cross-Circle-Curve",
+   "title": "cross(Circle,Curve) vs cross(Curve,Circle): same",
+   "desc": "operator cross; Circle against Curve; swapping the operands gives the same figure",
+   "operator": "cross",
+   "a": "Circle",
+   "b": "Curve",
+   "relation": "same"
+  },
+  {
+   "id": "cell-cross-Circle-Wave",
+   "title": "cross(Circle,Wave) vs cross(Wave,Circle): same",
+   "desc": "operator cross; Circle against Wave; swapping the operands gives the same figure",
+   "operator": "cross",
+   "a": "Circle",
+   "b": "Wave",
+   "relation": "same"
+  },
+  {
+   "id": "cell-cross-Circle-Circle",
+   "title": "cross(Circle,Circle) vs cross(Circle,Circle): same",
+   "desc": "operator cross; Circle against Circle; swapping the operands gives the same figure",
+   "operator": "cross",
+   "a": "Circle",
+   "b": "Circle",
+   "relation": "same"
+  },
+  {
+   "id": "cell-concatenate-Point-Point",
+   "title": "concatenate(Point,Point) vs concatenate(Point,Point): same",
+   "desc": "operator concatenate; Point against Point; swapping the operands gives the same figure",
+   "operator": "concatenate",
+   "a": "Point",
+   "b": "Point",
+   "relation": "same"
+  },
+  {
+   "id": "cell-concatenate-Point-Line",
+   "title": "concatenate(Point,Line) vs concatenate(Line,Point): same",
+   "desc": "operator concatenate; Point against Line; swapping the operands gives the same figure",
+   "operator": "concatenate",
+   "a": "Point",
+   "b": "Line",
+   "relation": "same"
+  },
+  {
+   "id": "cell-concatenate-Point-Angle",
+   "title": "concatenate(Point,Angle) vs concatenate(Angle,Point): mirror",
+   "desc": "operator concatenate; Point against Angle; swapping the operands gives the mirror figure",
+   "operator": "concatenate",
+   "a": "Point",
+   "b": "Angle",
+   "relation": "mirror"
+  },
+  {
+   "id": "cell-concatenate-Point-Curve",
+   "title": "concatenate(Point,Curve) vs concatenate(Curve,Point): mirror",
+   "desc": "operator concatenate; Point against Curve; swapping the operands gives the mirror figure",
+   "operator": "concatenate",
+   "a": "Point",
+   "b": "Curve",
+   "relation": "mirror"
+  },
+  {
+   "id": "cell-concatenate-Point-Wave",
+   "title": "concatenate(Point,Wave) vs concatenate(Wave,Point): same",
+   "desc": "operator concatenate; Point against Wave; swapping the operands gives the same figure",
+   "operator": "concatenate",
+   "a": "Point",
+   "b": "Wave",
+   "relation": "same"
+  },
+  {
+   "id": "cell-concatenate-Point-Circle",
+   "title": "concatenate(Point,Circle) vs concatenate(Circle,Point): same",
+   "desc": "operator concatenate; Point against Circle; swapping the operands gives the same figure",
+   "operator": "concatenate",
+   "a": "Point",
+   "b": "Circle",
+   "relation": "same"
+  },
+  {
+   "id": "cell-concatenate-Line-Point",
+   "title": "concatenate(Line,Point) vs concatenate(Point,Line): same",
+   "desc": "operator concatenate; Line against Point; swapping the operands gives the same figure",
+   "operator": "concatenate",
+   "a": "Line",
+   "b": "Point",
+   "relation": "same"
+  },
+  {
+   "id": "cell-concatenate-Line-Line",
+   "title": "concatenate(Line,Line) vs concatenate(Line,Line): same",
+   "desc": "operator concatenate; Line against Line; swapping the operands gives the same figure",
+   "operator": "concatenate",
+   "a": "Line",
+   "b": "Line",
+   "relation": "same"
+  },
+  {
+   "id": "cell-concatenate-Line-Angle",
+   "title": "concatenate(Line,Angle) vs concatenate(Angle,Line): mirror",
+   "desc": "operator concatenate; Line against Angle; swapping the operands gives the mirror figure",
+   "operator": "concatenate",
+   "a": "Line",
+   "b": "Angle",
+   "relation": "mirror"
+  },
+  {
+   "id": "cell-concatenate-Line-Curve",
+   "title": "concatenate(Line,Curve) vs concatenate(Curve,Line): mirror",
+   "desc": "operator concatenate; Line against Curve; swapping the operands gives the mirror figure",
+   "operator": "concatenate",
+   "a": "Line",
+   "b": "Curve",
+   "relation": "mirror"
+  },
+  {
+   "id": "cell-concatenate-Line-Wave",
+   "title": "concatenate(Line,Wave) vs concatenate(Wave,Line): same",
+   "desc": "operator concatenate; Line against Wave; swapping the operands gives the same figure",
+   "operator": "concatenate",
+   "a": "Line",
+   "b": "Wave",
+   "relation": "same"
+  },
+  {
+   "id": "cell-concatenate-Line-Circle",
+   "title": "concatenate(Line,Circle) vs concatenate(Circle,Line): same",
+   "desc": "operator concatenate; Line against Circle; swapping the operands gives the same figure",
+   "operator": "concatenate",
+   "a": "Line",
+   "b": "Circle",
+   "relation": "same"
+  },
+  {
+   "id": "cell-concatenate-Angle-Point",
+   "title": "concatenate(Angle,Point) vs concatenate(Point,Angle): mirror",
+   "desc": "operator concatenate; Angle against Point; swapping the operands gives the mirror figure",
+   "operator": "concatenate",
+   "a": "Angle",
+   "b": "Point",
+   "relation": "mirror"
+  },
+  {
+   "id": "cell-concatenate-Angle-Line",
+   "title": "concatenate(Angle,Line) vs concatenate(Line,Angle): mirror",
+   "desc": "operator concatenate; Angle against Line; swapping the operands gives the mirror figure",
+   "operator": "concatenate",
+   "a": "Angle",
+   "b": "Line",
+   "relation": "mirror"
+  },
+  {
+   "id": "cell-concatenate-Angle-Angle",
+   "title": "concatenate(Angle,Angle) vs concatenate(Angle,Angle): same",
+   "desc": "operator concatenate; Angle against Angle; swapping the operands gives the same figure",
+   "operator": "concatenate",
+   "a": "Angle",
+   "b": "Angle",
+   "relation": "same"
+  },
+  {
+   "id": "cell-concatenate-Angle-Curve",
+   "title": "concatenate(Angle,Curve) vs concatenate(Curve,Angle): mirror",
+   "desc": "operator concatenate; Angle against Curve; swapping the operands gives the mirror figure",
+   "operator": "concatenate",
+   "a": "Angle",
+   "b": "Curve",
+   "relation": "mirror"
+  },
+  {
+   "id": "cell-concatenate-Angle-Wave",
+   "title": "concatenate(Angle,Wave) vs concatenate(Wave,Angle): different",
+   "desc": "operator concatenate; Angle against Wave; swapping the operands gives the different figure",
+   "operator": "concatenate",
+   "a": "Angle",
+   "b": "Wave",
+   "relation": "different"
+  },
+  {
+   "id": "cell-concatenate-Angle-Circle",
+   "title": "concatenate(Angle,Circle) vs concatenate(Circle,Angle): mirror",
+   "desc": "operator concatenate; Angle against Circle; swapping the operands gives the mirror figure",
+   "operator": "concatenate",
+   "a": "Angle",
+   "b": "Circle",
+   "relation": "mirror"
+  },
+  {
+   "id": "cell-concatenate-Curve-Point",
+   "title": "concatenate(Curve,Point) vs concatenate(Point,Curve): mirror",
+   "desc": "operator concatenate; Curve against Point; swapping the operands gives the mirror figure",
+   "operator": "concatenate",
+   "a": "Curve",
+   "b": "Point",
+   "relation": "mirror"
+  },
+  {
+   "id": "cell-concatenate-Curve-Line",
+   "title": "concatenate(Curve,Line) vs concatenate(Line,Curve): mirror",
+   "desc": "operator concatenate; Curve against Line; swapping the operands gives the mirror figure",
+   "operator": "concatenate",
+   "a": "Curve",
+   "b": "Line",
+   "relation": "mirror"
+  },
+  {
+   "id": "cell-concatenate-Curve-Angle",
+   "title": "concatenate(Curve,Angle) vs concatenate(Angle,Curve): mirror",
+   "desc": "operator concatenate; Curve against Angle; swapping the operands gives the mirror figure",
+   "operator": "concatenate",
+   "a": "Curve",
+   "b": "Angle",
+   "relation": "mirror"
+  },
+  {
+   "id": "cell-concatenate-Curve-Curve",
+   "title": "concatenate(Curve,Curve) vs concatenate(Curve,Curve): same",
+   "desc": "operator concatenate; Curve against Curve; swapping the operands gives the same figure",
+   "operator": "concatenate",
+   "a": "Curve",
+   "b": "Curve",
+   "relation": "same"
+  },
+  {
+   "id": "cell-concatenate-Curve-Wave",
+   "title": "concatenate(Curve,Wave) vs concatenate(Wave,Curve): different",
+   "desc": "operator concatenate; Curve against Wave; swapping the operands gives the different figure",
+   "operator": "concatenate",
+   "a": "Curve",
+   "b": "Wave",
+   "relation": "different"
+  },
+  {
+   "id": "cell-concatenate-Curve-Circle",
+   "title": "concatenate(Curve,Circle) vs concatenate(Circle,Curve): mirror",
+   "desc": "operator concatenate; Curve against Circle; swapping the operands gives the mirror figure",
+   "operator": "concatenate",
+   "a": "Curve",
+   "b": "Circle",
+   "relation": "mirror"
+  },
+  {
+   "id": "cell-concatenate-Wave-Point",
+   "title": "concatenate(Wave,Point) vs concatenate(Point,Wave): same",
+   "desc": "operator concatenate; Wave against Point; swapping the operands gives the same figure",
+   "operator": "concatenate",
+   "a": "Wave",
+   "b": "Point",
+   "relation": "same"
+  },
+  {
+   "id": "cell-concatenate-Wave-Line",
+   "title": "concatenate(Wave,Line) vs concatenate(Line,Wave): same",
+   "desc": "operator concatenate; Wave against Line; swapping the operands gives the same figure",
+   "operator": "concatenate",
+   "a": "Wave",
+   "b": "Line",
+   "relation": "same"
+  },
+  {
+   "id": "cell-concatenate-Wave-Angle",
+   "title": "concatenate(Wave,Angle) vs concatenate(Angle,Wave): different",
+   "desc": "operator concatenate; Wave against Angle; swapping the operands gives the different figure",
+   "operator": "concatenate",
+   "a": "Wave",
+   "b": "Angle",
+   "relation": "different"
+  },
+  {
+   "id": "cell-concatenate-Wave-Curve",
+   "title": "concatenate(Wave,Curve) vs concatenate(Curve,Wave): different",
+   "desc": "operator concatenate; Wave against Curve; swapping the operands gives the different figure",
+   "operator": "concatenate",
+   "a": "Wave",
+   "b": "Curve",
+   "relation": "different"
+  },
+  {
+   "id": "cell-concatenate-Wave-Wave",
+   "title": "concatenate(Wave,Wave) vs concatenate(Wave,Wave): same",
+   "desc": "operator concatenate; Wave against Wave; swapping the operands gives the same figure",
+   "operator": "concatenate",
+   "a": "Wave",
+   "b": "Wave",
+   "relation": "same"
+  },
+  {
+   "id": "cell-concatenate-Wave-Circle",
+   "title": "concatenate(Wave,Circle) vs concatenate(Circle,Wave): same",
+   "desc": "operator concatenate; Wave against Circle; swapping the operands gives the same figure",
+   "operator": "concatenate",
+   "a": "Wave",
+   "b": "Circle",
+   "relation": "same"
+  },
+  {
+   "id": "cell-concatenate-Circle-Point",
+   "title": "concatenate(Circle,Point) vs concatenate(Point,Circle): same",
+   "desc": "operator concatenate; Circle against Point; swapping the operands gives the same figure",
+   "operator": "concatenate",
+   "a": "Circle",
+   "b": "Point",
+   "relation": "same"
+  },
+  {
+   "id": "cell-concatenate-Circle-Line",
+   "title": "concatenate(Circle,Line) vs concatenate(Line,Circle): same",
+   "desc": "operator concatenate; Circle against Line; swapping the operands gives the same figure",
+   "operator": "concatenate",
+   "a": "Circle",
+   "b": "Line",
+   "relation": "same"
+  },
+  {
+   "id": "cell-concatenate-Circle-Angle",
+   "title": "concatenate(Circle,Angle) vs concatenate(Angle,Circle): mirror",
+   "desc": "operator concatenate; Circle against Angle; swapping the operands gives the mirror figure",
+   "operator": "concatenate",
+   "a": "Circle",
+   "b": "Angle",
+   "relation": "mirror"
+  },
+  {
+   "id": "cell-concatenate-Circle-Curve",
+   "title": "concatenate(Circle,Curve) vs concatenate(Curve,Circle): mirror",
+   "desc": "operator concatenate; Circle against Curve; swapping the operands gives the mirror figure",
+   "operator": "concatenate",
+   "a": "Circle",
+   "b": "Curve",
+   "relation": "mirror"
+  },
+  {
+   "id": "cell-concatenate-Circle-Wave",
+   "title": "concatenate(Circle,Wave) vs concatenate(Wave,Circle): same",
+   "desc": "operator concatenate; Circle against Wave; swapping the operands gives the same figure",
+   "operator": "concatenate",
+   "a": "Circle",
+   "b": "Wave",
+   "relation": "same"
+  },
+  {
+   "id": "cell-concatenate-Circle-Circle",
+   "title": "concatenate(Circle,Circle) vs concatenate(Circle,Circle): same",
+   "desc": "operator concatenate; Circle against Circle; swapping the operands gives the same figure",
+   "operator": "concatenate",
+   "a": "Circle",
+   "b": "Circle",
+   "relation": "same"
+  },
+  {
+   "id": "cell-nest-Point-Point",
+   "title": "nest(Point,Point) vs nest(Point,Point): same",
+   "desc": "operator nest; Point against Point; swapping the operands gives the same figure",
+   "operator": "nest",
+   "a": "Point",
+   "b": "Point",
+   "relation": "same"
+  },
+  {
+   "id": "cell-nest-Point-Line",
+   "title": "nest(Point,Line) vs nest(Line,Point): same",
+   "desc": "operator nest; Point against Line; swapping the operands gives the same figure",
+   "operator": "nest",
+   "a": "Point",
+   "b": "Line",
+   "relation": "same"
+  },
+  {
+   "id": "cell-nest-Point-Angle",
+   "title": "nest(Point,Angle) vs nest(Angle,Point): same",
+   "desc": "operator nest; Point against Angle; swapping the operands gives the same figure",
+   "operator": "nest",
+   "a": "Point",
+   "b": "Angle",
+   "relation": "same"
+  },
+  {
+   "id": "cell-nest-Point-Curve",
+   "title": "nest(Point,Curve) vs nest(Curve,Point): same",
+   "desc": "operator nest; Point against Curve; swapping the operands gives the same figure",
+   "operator": "nest",
+   "a": "Point",
+   "b": "Curve",
+   "relation": "same"
+  },
+  {
+   "id": "cell-nest-Point-Wave",
+   "title": "nest(Point,Wave) vs nest(Wave,Point): same",
+   "desc": "operator nest; Point against Wave; swapping the operands gives the same figure",
+   "operator": "nest",
+   "a": "Point",
+   "b": "Wave",
+   "relation": "same"
+  },
+  {
+   "id": "cell-nest-Point-Circle",
+   "title": "nest(Point,Circle) vs nest(Circle,Point): same",
+   "desc": "operator nest; Point against Circle; swapping the operands gives the same figure",
+   "operator": "nest",
+   "a": "Point",
+   "b": "Circle",
+   "relation": "same"
+  },
+  {
+   "id": "cell-nest-Line-Point",
+   "title": "nest(Line,Point) vs nest(Point,Line): same",
+   "desc": "operator nest; Line against Point; swapping the operands gives the same figure",
+   "operator": "nest",
+   "a": "Line",
+   "b": "Point",
+   "relation": "same"
+  },
+  {
+   "id": "cell-nest-Line-Line",
+   "title": "nest(Line,Line) vs nest(Line,Line): same",
+   "desc": "operator nest; Line against Line; swapping the operands gives the same figure",
+   "operator": "nest",
+   "a": "Line",
+   "b": "Line",
+   "relation": "same"
+  },
+  {
+   "id": "cell-nest-Line-Angle",
+   "title": "nest(Line,Angle) vs nest(Angle,Line): different",
+   "desc": "operator nest; Line against Angle; swapping the operands gives the different figure",
+   "operator": "nest",
+   "a": "Line",
+   "b": "Angle",
+   "relation": "different"
+  },
+  {
+   "id": "cell-nest-Line-Curve",
+   "title": "nest(Line,Curve) vs nest(Curve,Line): different",
+   "desc": "operator nest; Line against Curve; swapping the operands gives the different figure",
+   "operator": "nest",
+   "a": "Line",
+   "b": "Curve",
+   "relation": "different"
+  },
+  {
+   "id": "cell-nest-Line-Wave",
+   "title": "nest(Line,Wave) vs nest(Wave,Line): different",
+   "desc": "operator nest; Line against Wave; swapping the operands gives the different figure",
+   "operator": "nest",
+   "a": "Line",
+   "b": "Wave",
+   "relation": "different"
+  },
+  {
+   "id": "cell-nest-Line-Circle",
+   "title": "nest(Line,Circle) vs nest(Circle,Line): different",
+   "desc": "operator nest; Line against Circle; swapping the operands gives the different figure",
+   "operator": "nest",
+   "a": "Line",
+   "b": "Circle",
+   "relation": "different"
+  },
+  {
+   "id": "cell-nest-Angle-Point",
+   "title": "nest(Angle,Point) vs nest(Point,Angle): same",
+   "desc": "operator nest; Angle against Point; swapping the operands gives the same figure",
+   "operator": "nest",
+   "a": "Angle",
+   "b": "Point",
+   "relation": "same"
+  },
+  {
+   "id": "cell-nest-Angle-Line",
+   "title": "nest(Angle,Line) vs nest(Line,Angle): different",
+   "desc": "operator nest; Angle against Line; swapping the operands gives the different figure",
+   "operator": "nest",
+   "a": "Angle",
+   "b": "Line",
+   "relation": "different"
+  },
+  {
+   "id": "cell-nest-Angle-Angle",
+   "title": "nest(Angle,Angle) vs nest(Angle,Angle): same",
+   "desc": "operator nest; Angle against Angle; swapping the operands gives the same figure",
+   "operator": "nest",
+   "a": "Angle",
+   "b": "Angle",
+   "relation": "same"
+  },
+  {
+   "id": "cell-nest-Angle-Curve",
+   "title": "nest(Angle,Curve) vs nest(Curve,Angle): different",
+   "desc": "operator nest; Angle against Curve; swapping the operands gives the different figure",
+   "operator": "nest",
+   "a": "Angle",
+   "b": "Curve",
+   "relation": "different"
+  },
+  {
+   "id": "cell-nest-Angle-Wave",
+   "title": "nest(Angle,Wave) vs nest(Wave,Angle): different",
+   "desc": "operator nest; Angle against Wave; swapping the operands gives the different figure",
+   "operator": "nest",
+   "a": "Angle",
+   "b": "Wave",
+   "relation": "different"
+  },
+  {
+   "id": "cell-nest-Angle-Circle",
+   "title": "nest(Angle,Circle) vs nest(Circle,Angle): different",
+   "desc": "operator nest; Angle against Circle; swapping the operands gives the different figure",
+   "operator": "nest",
+   "a": "Angle",
+   "b": "Circle",
+   "relation": "different"
+  },
+  {
+   "id": "cell-nest-Curve-Point",
+   "title": "nest(Curve,Point) vs nest(Point,Curve): same",
+   "desc": "operator nest; Curve against Point; swapping the operands gives the same figure",
+   "operator": "nest",
+   "a": "Curve",
+   "b": "Point",
+   "relation": "same"
+  },
+  {
+   "id": "cell-nest-Curve-Line",
+   "title": "nest(Curve,Line) vs nest(Line,Curve): different",
+   "desc": "operator nest; Curve against Line; swapping the operands gives the different figure",
+   "operator": "nest",
+   "a": "Curve",
+   "b": "Line",
+   "relation": "different"
+  },
+  {
+   "id": "cell-nest-Curve-Angle",
+   "title": "nest(Curve,Angle) vs nest(Angle,Curve): different",
+   "desc": "operator nest; Curve against Angle; swapping the operands gives the different figure",
+   "operator": "nest",
+   "a": "Curve",
+   "b": "Angle",
+   "relation": "different"
+  },
+  {
+   "id": "cell-nest-Curve-Curve",
+   "title": "nest(Curve,Curve) vs nest(Curve,Curve): same",
+   "desc": "operator nest; Curve against Curve; swapping the operands gives the same figure",
+   "operator": "nest",
+   "a": "Curve",
+   "b": "Curve",
+   "relation": "same"
+  },
+  {
+   "id": "cell-nest-Curve-Wave",
+   "title": "nest(Curve,Wave) vs nest(Wave,Curve): different",
+   "desc": "operator nest; Curve against Wave; swapping the operands gives the different figure",
+   "operator": "nest",
+   "a": "Curve",
+   "b": "Wave",
+   "relation": "different"
+  },
+  {
+   "id": "cell-nest-Curve-Circle",
+   "title": "nest(Curve,Circle) vs nest(Circle,Curve): different",
+   "desc": "operator nest; Curve against Circle; swapping the operands gives the different figure",
+   "operator": "nest",
+   "a": "Curve",
+   "b": "Circle",
+   "relation": "different"
+  },
+  {
+   "id": "cell-nest-Wave-Point",
+   "title": "nest(Wave,Point) vs nest(Point,Wave): same",
+   "desc": "operator nest; Wave against Point; swapping the operands gives the same figure",
+   "operator": "nest",
+   "a": "Wave",
+   "b": "Point",
+   "relation": "same"
+  },
+  {
+   "id": "cell-nest-Wave-Line",
+   "title": "nest(Wave,Line) vs nest(Line,Wave): different",
+   "desc": "operator nest; Wave against Line; swapping the operands gives the different figure",
+   "operator": "nest",
+   "a": "Wave",
+   "b": "Line",
+   "relation": "different"
+  },
+  {
+   "id": "cell-nest-Wave-Angle",
+   "title": "nest(Wave,Angle) vs nest(Angle,Wave): different",
+   "desc": "operator nest; Wave against Angle; swapping the operands gives the different figure",
+   "operator": "nest",
+   "a": "Wave",
+   "b": "Angle",
+   "relation": "different"
+  },
+  {
+   "id": "cell-nest-Wave-Curve",
+   "title": "nest(Wave,Curve) vs nest(Curve,Wave): different",
+   "desc": "operator nest; Wave against Curve; swapping the operands gives the different figure",
+   "operator": "nest",
+   "a": "Wave",
+   "b": "Curve",
+   "relation": "different"
+  },
+  {
+   "id": "cell-nest-Wave-Wave",
+   "title": "nest(Wave,Wave) vs nest(Wave,Wave): same",
+   "desc": "operator nest; Wave against Wave; swapping the operands gives the same figure",
+   "operator": "nest",
+   "a": "Wave",
+   "b": "Wave",
+   "relation": "same"
+  },
+  {
+   "id": "cell-nest-Wave-Circle",
+   "title": "nest(Wave,Circle) vs nest(Circle,Wave): different",
+   "desc": "operator nest; Wave against Circle; swapping the operands gives the different figure",
+   "operator": "nest",
+   "a": "Wave",
+   "b": "Circle",
+   "relation": "different"
+  },
+  {
+   "id": "cell-nest-Circle-Point",
+   "title": "nest(Circle,Point) vs nest(Point,Circle): same",
+   "desc": "operator nest; Circle against Point; swapping the operands gives the same figure",
+   "operator": "nest",
+   "a": "Circle",
+   "b": "Point",
+   "relation": "same"
+  },
+  {
+   "id": "cell-nest-Circle-Line",
+   "title": "nest(Circle,Line) vs nest(Line,Circle): different",
+   "desc": "operator nest; Circle against Line; swapping the operands gives the different figure",
+   "operator": "nest",
+   "a": "Circle",
+   "b": "Line",
+   "relation": "different"
+  },
+  {
+   "id": "cell-nest-Circle-Angle",
+   "title": "nest(Circle,Angle) vs nest(Angle,Circle): different",
+   "desc": "operator nest; Circle against Angle; swapping the operands gives the different figure",
+   "operator": "nest",
+   "a": "Circle",
+   "b": "Angle",
+   "relation": "different"
+  },
+  {
+   "id": "cell-nest-Circle-Curve",
+   "title": "nest(Circle,Curve) vs nest(Curve,Circle): different",
+   "desc": "operator nest; Circle against Curve; swapping the operands gives the different figure",
+   "operator": "nest",
+   "a": "Circle",
+   "b": "Curve",
+   "relation": "different"
+  },
+  {
+   "id": "cell-nest-Circle-Wave",
+   "title": "nest(Circle,Wave) vs nest(Wave,Circle): different",
+   "desc": "operator nest; Circle against Wave; swapping the operands gives the different figure",
+   "operator": "nest",
+   "a": "Circle",
+   "b": "Wave",
+   "relation": "different"
+  },
+  {
+   "id": "cell-nest-Circle-Circle",
+   "title": "nest(Circle,Circle) vs nest(Circle,Circle): same",
+   "desc": "operator nest; Circle against Circle; swapping the operands gives the same figure",
+   "operator": "nest",
+   "a": "Circle",
+   "b": "Circle",
+   "relation": "same"
+  }
+ ]
+}

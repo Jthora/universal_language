@@ -1,0 +1,39 @@
+{
+  "sheet": "slice-unary-mark-count",
+  "group": "unary",
+  "axes": [
+    "mark",
+    "count"
+  ],
+  "cells": 24,
+  "held": {
+    "rotation": 0.0,
+    "reflection": 0,
+    "scale": 1.0,
+    "frequency": 1.0,
+    "amplitude": 1.0,
+    "phase": 0.0,
+    "taper": 0.0,
+    "chirp": 0.0
+  },
+  "operand_chosen_for": {},
+  "samples": {
+    "mark": [
+      "Point",
+      "Line",
+      "Angle",
+      "Curve",
+      "Wave",
+      "Circle"
+    ],
+    "count": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ]
+  },
+  "operators_on_this_slice": {},
+  "contact_cells": 0,
+  "note": ""
+}

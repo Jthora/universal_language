@@ -1,0 +1,17 @@
+{
+  "orbit": 41,
+  "members": [
+    "superpose_displaced(Angle,Wave)"
+  ],
+  "symmetry": "1",
+  "curvature": "singular",
+  "meaning": null,
+  "status": "undetermined",
+  "strokes": 2,
+  "components": 2,
+  "mirror_axes": "0",
+  "closed": false,
+  "crossings": "0",
+  "aspect": "wide",
+  "curvature_mix": "mixed"
+}

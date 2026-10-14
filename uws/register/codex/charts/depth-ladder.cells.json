@@ -1,0 +1,64 @@
+{
+ "sheet": "charts/depth-ladder",
+ "cells": [
+  {
+   "id": "cell-order-inf",
+   "title": "Cinf: 17 combinations",
+   "desc": "rotational order inf appears 17 times at depth 2",
+   "order": "inf",
+   "count": "17",
+   "artifact": "false"
+  },
+  {
+   "id": "cell-order-1",
+   "title": "C1: 121 combinations",
+   "desc": "rotational order 1 appears 121 times at depth 2",
+   "order": "1",
+   "count": "121",
+   "artifact": "false"
+  },
+  {
+   "id": "cell-order-2",
+   "title": "C2: 51 combinations",
+   "desc": "rotational order 2 appears 51 times at depth 2",
+   "order": "2",
+   "count": "51",
+   "artifact": "false"
+  },
+  {
+   "id": "cell-order-4",
+   "title": "C4: 2 combinations",
+   "desc": "rotational order 4 appears 2 times at depth 2",
+   "order": "4",
+   "count": "2",
+   "artifact": "false"
+  },
+  {
+   "id": "cell-depth3-triangle",
+   "title": "triangle: C3 by rotate_repeat(Angle, 3)",
+   "desc": "needs a third placement; depth 2 never reaches C3",
+   "figure": "triangle",
+   "construction": "rotate_repeat(Angle, 3)",
+   "order": "3",
+   "depth": "3"
+  },
+  {
+   "id": "cell-depth3-six-point",
+   "title": "six-point: C6 by rotate_repeat(Line, 3)",
+   "desc": "needs a third placement; depth 2 never reaches C6",
+   "figure": "six-point",
+   "construction": "rotate_repeat(Line, 3)",
+   "order": "6",
+   "depth": "3"
+  },
+  {
+   "id": "cell-depth3-hexagram",
+   "title": "hexagram: C6 by two triangles at 60 degrees",
+   "desc": "needs a third placement; depth 2 never reaches C6",
+   "figure": "hexagram",
+   "construction": "two triangles at 60 degrees",
+   "order": "6",
+   "depth": "3"
+  }
+ ]
+}

@@ -1,0 +1,295 @@
+{
+  "sheet": "wave-families",
+  "title": "The three wave families",
+  "teaches": "a figure can generate a wave by tiling or belong to its family by character, and these are different questions",
+  "legend_on_sheet": true,
+  "generated_not_traced": true,
+  "floor": 0.02,
+  "gap": 0.147,
+  "families": [
+    {
+      "wave": "triangle",
+      "generator": "Angle",
+      "tiling": "repeated",
+      "agreement": 0.0024,
+      "reading": "is the triangle wave",
+      "distances": {
+        "triangle": 0.0024,
+        "square": 0.5646,
+        "sine": 0.1466
+      }
+    },
+    {
+      "wave": "square",
+      "generator": "Staple",
+      "tiling": "alternating",
+      "agreement": 0.005,
+      "reading": "is the square wave",
+      "distances": {
+        "triangle": 0.5559,
+        "square": 0.005,
+        "sine": 0.4502
+      }
+    },
+    {
+      "wave": "sine",
+      "generator": "Wave",
+      "tiling": "repeated",
+      "agreement": 0.0018,
+      "reading": "is the sine wave",
+      "distances": {
+        "triangle": 0.1472,
+        "square": 0.4608,
+        "sine": 0.0018
+      }
+    }
+  ],
+  "character_families": {
+    "none": [
+      "Point"
+    ],
+    "square": [
+      "Line",
+      "Staple"
+    ],
+    "triangle": [
+      "Angle"
+    ],
+    "sine": [
+      "Circle",
+      "Curve",
+      "Wave"
+    ]
+  },
+  "polygons": {
+    "triangle": {
+      "family": "triangle",
+      "generator": "Angle",
+      "proportion": "apex 60 degrees",
+      "polygon": "equilateral triangle",
+      "corners": 3,
+      "distance": 0.0453
+    },
+    "square": {
+      "family": "square",
+      "generator": "Staple",
+      "proportion": "body equal to upright",
+      "polygon": "square",
+      "corners": 4,
+      "distance": 0.0035
+    },
+    "sine": {
+      "family": "sine",
+      "generator": "Curve",
+      "proportion": "its own half-turn",
+      "polygon": "circle",
+      "corners": 0,
+      "distance": 0.0035,
+      "note": "the Wave closes to a lens (0.9949 from a circle) and is not a member of this family: it is the carrier a modality modulates, not a modulator"
+    }
+  },
+  "character": {
+    "Point": {
+      "family": "none",
+      "runs": null
+    },
+    "Line": {
+      "family": "square",
+      "runs": {
+        "0": 1.0
+      }
+    },
+    "Angle": {
+      "family": "triangle",
+      "runs": {
+        "135": 0.499,
+        "45": 0.499
+      }
+    },
+    "Curve": {
+      "family": "sine",
+      "runs": {}
+    },
+    "Wave": {
+      "family": "sine",
+      "runs": {
+        "120": 0.113,
+        "59": 0.11,
+        "58": 0.047,
+        "121": 0.042,
+        "122": 0.035,
+        "57": 0.03,
+        "56": 0.029,
+        "123": 0.025,
+        "124": 0.024,
+        "55": 0.019,
+        "54": 0.019,
+        "126": 0.018,
+        "52": 0.018,
+        "125": 0.014,
+        "53": 0.014,
+        "127": 0.013,
+        "128": 0.013,
+        "51": 0.013,
+        "129": 0.013,
+        "49": 0.013,
+        "131": 0.012
+      }
+    },
+    "Circle": {
+      "family": "sine",
+      "runs": {}
+    },
+    "Staple": {
+      "family": "square",
+      "runs": {
+        "0": 0.5,
+        "90": 0.5
+      }
+    }
+  },
+  "not_generators": [
+    {
+      "mark": "Line",
+      "because": "tiles to a longer Line: no waveform"
+    },
+    {
+      "mark": "Curve",
+      "because": "tiles to a scalloped run, which is not a sine"
+    },
+    {
+      "mark": "Point",
+      "because": "no extent, so no profile"
+    },
+    {
+      "mark": "Circle",
+      "because": "its profile is constant: no period"
+    }
+  ],
+  "every_tiling_measured": [
+    {
+      "mark": "Point",
+      "tiling": "repeated",
+      "waveform": null,
+      "reading": "flat: no waveform to measure"
+    },
+    {
+      "mark": "Point",
+      "tiling": "alternating",
+      "waveform": null,
+      "reading": "flat: no waveform to measure"
+    },
+    {
+      "mark": "Line",
+      "tiling": "repeated",
+      "waveform": null,
+      "reading": "flat: no waveform to measure"
+    },
+    {
+      "mark": "Line",
+      "tiling": "alternating",
+      "waveform": null,
+      "reading": "flat: no waveform to measure"
+    },
+    {
+      "mark": "Angle",
+      "tiling": "repeated",
+      "waveform": "triangle",
+      "nearest": "triangle",
+      "distance": 0.0024,
+      "reading": "is the triangle wave",
+      "triangle": 0.0024,
+      "square": 0.5646,
+      "sine": 0.1466
+    },
+    {
+      "mark": "Angle",
+      "tiling": "alternating",
+      "waveform": null,
+      "nearest": "triangle",
+      "distance": 0.2562,
+      "reading": "none of the three",
+      "triangle": 0.2562,
+      "square": 0.6123,
+      "sine": 0.3286
+    },
+    {
+      "mark": "Curve",
+      "tiling": "repeated",
+      "waveform": null,
+      "nearest": "triangle",
+      "distance": 0.3095,
+      "reading": "none of the three",
+      "triangle": 0.3095,
+      "square": 0.783,
+      "sine": 0.4442
+    },
+    {
+      "mark": "Curve",
+      "tiling": "alternating",
+      "waveform": null,
+      "nearest": "triangle",
+      "distance": 0.2716,
+      "reading": "none of the three",
+      "triangle": 0.2716,
+      "square": 0.6993,
+      "sine": 0.3807
+    },
+    {
+      "mark": "Wave",
+      "tiling": "repeated",
+      "waveform": "sine",
+      "nearest": "sine",
+      "distance": 0.0018,
+      "reading": "is the sine wave",
+      "triangle": 0.1472,
+      "square": 0.4608,
+      "sine": 0.0018
+    },
+    {
+      "mark": "Wave",
+      "tiling": "alternating",
+      "waveform": null,
+      "nearest": "sine",
+      "distance": 0.3698,
+      "reading": "none of the three",
+      "triangle": 0.4292,
+      "square": 0.4621,
+      "sine": 0.3698
+    },
+    {
+      "mark": "Circle",
+      "tiling": "repeated",
+      "waveform": null,
+      "reading": "flat: no waveform to measure"
+    },
+    {
+      "mark": "Circle",
+      "tiling": "alternating",
+      "waveform": null,
+      "reading": "flat: no waveform to measure"
+    },
+    {
+      "mark": "Staple",
+      "tiling": "repeated",
+      "waveform": null,
+      "nearest": "triangle",
+      "distance": 0.5628,
+      "reading": "none of the three",
+      "triangle": 0.5628,
+      "square": 0.9964,
+      "sine": 0.6942
+    },
+    {
+      "mark": "Staple",
+      "tiling": "alternating",
+      "waveform": "square",
+      "nearest": "square",
+      "distance": 0.005,
+      "reading": "is the square wave",
+      "triangle": 0.5559,
+      "square": 0.005,
+      "sine": 0.4502
+    }
+  ]
+}

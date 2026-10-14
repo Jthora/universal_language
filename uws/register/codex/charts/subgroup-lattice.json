@@ -1,0 +1,41 @@
+{
+  "sheet": "subgroup-lattice",
+  "title": "Subgroup lattice of the mark symmetries",
+  "realised": [
+    "C2",
+    "D1",
+    "D2",
+    "O(2)"
+  ],
+  "empty": [
+    "C1",
+    "C3",
+    "D3",
+    "C4",
+    "D4",
+    "SO(2)"
+  ],
+  "placement": {
+    "C1": [],
+    "D1": [
+      "Angle",
+      "Curve"
+    ],
+    "C2": [
+      "Wave"
+    ],
+    "D2": [
+      "Line"
+    ],
+    "C3": [],
+    "D3": [],
+    "C4": [],
+    "D4": [],
+    "SO(2)": [],
+    "O(2)": [
+      "Point",
+      "Circle"
+    ]
+  },
+  "teaches": "which symmetries the alphabet uses and which it never does"
+}

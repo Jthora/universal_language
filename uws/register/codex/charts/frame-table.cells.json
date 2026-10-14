@@ -1,0 +1,77 @@
+{
+ "sheet": "charts/frame-table",
+ "cells": [
+  {
+   "id": "cell-frame-0",
+   "title": "IN / OUT: drift 2.22e-15, frame-free",
+   "desc": "operator nest; drift under a global turn 2.220e-15",
+   "schema": "IN / OUT",
+   "operator": "nest",
+   "drift": "2.220e-15",
+   "frame-free": "true"
+  },
+  {
+   "id": "cell-frame-1",
+   "title": "CENTER / PERIPHERY: drift 2.22e-15, frame-free",
+   "desc": "operator superpose_concentric; drift under a global turn 2.220e-15",
+   "schema": "CENTER / PERIPHERY",
+   "operator": "superpose_concentric",
+   "drift": "2.220e-15",
+   "frame-free": "true"
+  },
+  {
+   "id": "cell-frame-2",
+   "title": "NEAR / FAR: drift 1.33e-16, frame-free",
+   "desc": "operator superpose_displaced; drift under a global turn 1.334e-16",
+   "schema": "NEAR / FAR",
+   "operator": "superpose_displaced",
+   "drift": "1.334e-16",
+   "frame-free": "true"
+  },
+  {
+   "id": "cell-frame-3",
+   "title": "CONTACT: drift 1.33e-16, frame-free",
+   "desc": "operator cross; drift under a global turn 1.334e-16",
+   "schema": "CONTACT",
+   "operator": "cross",
+   "drift": "1.334e-16",
+   "frame-free": "true"
+  },
+  {
+   "id": "cell-frame-4",
+   "title": "LINK: drift 1.33e-16, frame-free",
+   "desc": "operator concatenate; drift under a global turn 1.334e-16",
+   "schema": "LINK",
+   "operator": "concatenate",
+   "drift": "1.334e-16",
+   "frame-free": "true"
+  },
+  {
+   "id": "cell-frame-5",
+   "title": "BALANCE: drift 3.49e-02, frame-free",
+   "desc": "operator reflect_pair; drift under a global turn 3.490e-02",
+   "schema": "BALANCE",
+   "operator": "reflect_pair",
+   "drift": "3.490e-02",
+   "frame-free": "true"
+  },
+  {
+   "id": "cell-frame-6",
+   "title": "UP / DOWN: drift 2.20e+00, frame-bound",
+   "desc": "operator none; drift under a global turn 2.200e+00",
+   "schema": "UP / DOWN",
+   "operator": "none",
+   "drift": "2.200e+00",
+   "frame-free": "false"
+  },
+  {
+   "id": "cell-frame-7",
+   "title": "FRONT / BACK: drift 4.40e+00, frame-bound",
+   "desc": "operator none; drift under a global turn 4.400e+00",
+   "schema": "FRONT / BACK",
+   "operator": "none",
+   "drift": "4.400e+00",
+   "frame-free": "false"
+  }
+ ]
+}

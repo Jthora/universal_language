@@ -1,0 +1,179 @@
+{
+  "codex": "The Cosmic Codex",
+  "schema_version": "1.0.0",
+  "read_this_first": "Every assertion carries its derivation status, at the assertion, not in a footnote.",
+  "depth": {
+    "L0": "index.html — every section at once",
+    "L1": "a section grid — cells/*.svg, each cell links to its L2",
+    "L2": "one symbol — s/<id>.html, with s/<id>.json beside it"
+  },
+  "l2_index": "s/index.json",
+  "max_clicks_to_any_symbol": 2,
+  "max_clicks_to_symbol_detail": 2,
+  "click_depth_is_measured": "tests walk the published hrefs from index.html; 1 click reaches no detail page, 2 reaches all of them",
+  "sections": [
+    {
+      "id": "marks",
+      "name": "Marks",
+      "n": 6,
+      "line": "3 symmetry classes × 2 curvature classes",
+      "href": "cells/marks.svg",
+      "kind": "lexicon"
+    },
+    {
+      "id": "signs",
+      "name": "Signs",
+      "n": 12,
+      "line": "sign = (n mod 3) × (n mod 4)",
+      "href": "cells/signs.svg",
+      "kind": "lexicon"
+    },
+    {
+      "id": "operators",
+      "name": "Operators",
+      "n": 6,
+      "line": "place B relative to A",
+      "href": "primers/operators.svg",
+      "kind": "grammar"
+    },
+    {
+      "id": "space",
+      "name": "Combinations",
+      "n": 95,
+      "line": "4 named · 91 open",
+      "href": "primers/space.svg",
+      "kind": "thesaurus"
+    },
+    {
+      "id": "slices",
+      "name": "Slices",
+      "n": 34,
+      "line": "the space between the six operators",
+      "href": "slices/slice-b-separation.svg",
+      "kind": "thesaurus"
+    },
+    {
+      "id": "explore",
+      "name": "Explore",
+      "n": 62,
+      "line": "every chart this system admits",
+      "href": "explore.html",
+      "kind": "tools"
+    },
+    {
+      "id": "charts",
+      "name": "Placement",
+      "n": 43,
+      "line": "the schemas are regions, not a list",
+      "href": "charts/placement-dial.svg",
+      "kind": "thesaurus"
+    },
+    {
+      "id": "find",
+      "name": "The frontier",
+      "n": 91,
+      "line": "every permitted figure, drawn",
+      "href": "find/orbits.svg",
+      "kind": "thesaurus"
+    },
+    {
+      "id": "status",
+      "name": "How to read this",
+      "n": 56,
+      "line": "a status is a licence to cite",
+      "href": "primers/status.svg",
+      "kind": "method"
+    },
+    {
+      "id": "open",
+      "name": "Not settled",
+      "n": 12,
+      "line": "each carries what would settle it",
+      "href": "bundle.json",
+      "kind": "method"
+    },
+    {
+      "id": "verify",
+      "name": "Re-derive it",
+      "n": 3,
+      "line": "do not trust this — check it",
+      "href": "verify/",
+      "kind": "tools"
+    },
+    {
+      "id": "scripts",
+      "name": "Writing systems",
+      "n": 11,
+      "line": "a convenience — not a UL comparison",
+      "href": "scripts/writing-systems.svg",
+      "kind": "reference"
+    },
+    {
+      "id": "i18n",
+      "name": "Languages",
+      "n": 5,
+      "line": "the notation needs none",
+      "href": "i18n/index.json",
+      "kind": "reference"
+    },
+    {
+      "id": "data",
+      "name": "Data",
+      "n": 1,
+      "line": "the whole system, one fetch",
+      "href": "bundle.json",
+      "kind": "tools"
+    }
+  ],
+  "separate_from_ul": {
+    "scripts": "Writing systems are compared TO EACH OTHER as a convenience. They are not compared to Universal Symbology: UL is not phonetic, and the vocalization bridge that would license such a comparison does not exist yet. See claim ul-is-not-phonetic."
+  },
+  "machine_entry": {
+    "whole_system": "bundle.json",
+    "one_symbol": "s/index.json — every L2 page, and which open claims each one carries",
+    "orientation": "llms.txt",
+    "integrity": "SHA256SUMS",
+    "cells": "cells/*.svg — every <g class='cell'> carries title, desc and data-*; no rendering needed"
+  },
+  "verify": {
+    "how": "Do not trust this bundle; re-derive it.",
+    "commands": [
+      "python3 tools/verify_symbology_grammar.py    # 12/12 off the sheets",
+      "python3 tools/symbology_glyph.py --check     # glyphs read back as their rule",
+      "python3 tools/symbol_combinations.py --closure"
+    ]
+  },
+  "languages": {
+    "sw": {
+      "page": "index.sw.html",
+      "strings_translated": 51,
+      "strings_total": 56,
+      "provenance": "machine, unreviewed"
+    },
+    "am": {
+      "page": "index.am.html",
+      "strings_translated": 32,
+      "strings_total": 56,
+      "provenance": "machine, unreviewed"
+    },
+    "id": {
+      "page": "index.id.html",
+      "strings_translated": 51,
+      "strings_total": 56,
+      "provenance": "machine, unreviewed"
+    },
+    "hi": {
+      "page": "index.hi.html",
+      "strings_translated": 51,
+      "strings_total": 56,
+      "provenance": "machine, unreviewed"
+    },
+    "tpi": {
+      "page": "index.tpi.html",
+      "strings_translated": 37,
+      "strings_total": 56,
+      "provenance": "machine, unreviewed"
+    }
+  },
+  "translation_note": "Prose only. The notation is not translated because it does not need to be: the status is drawn and the marks are figures (F113). Every translation here is machine-suggested and unreviewed; an untranslated string falls back to English."
+}

@@ -1,0 +1,45 @@
+{
+  "sheet": "slice-binary-separation-B-phase",
+  "group": "binary",
+  "axes": [
+    "separation",
+    "B-phase"
+  ],
+  "cells": 28,
+  "held": {
+    "A": "Circle",
+    "B": "Wave",
+    "bearing": 0.0,
+    "relative-rotation": 0.0,
+    "relative-scale": 1.0,
+    "reflect-B": 0,
+    "B-frequency": 1.0,
+    "B-amplitude": 1.0
+  },
+  "operand_chosen_for": {
+    "B-phase": "has a profile to vary"
+  },
+  "samples": {
+    "separation": [
+      "0",
+      "0.6",
+      "1.1",
+      "1.475",
+      "1.6",
+      "2.2",
+      "3"
+    ],
+    "B-phase": [
+      "0",
+      "0.25",
+      "0.5",
+      "0.75"
+    ]
+  },
+  "operators_on_this_slice": {
+    "superpose_concentric": 1,
+    "superpose_displaced": 1
+  },
+  "contact_cells": 20,
+  "note": "operand chosen so the axis acts: B-phase needs one that has a profile to vary"
+}

@@ -1,0 +1,177 @@
+{
+ "sheet": "charts/insert",
+ "cells": [
+  {
+   "id": "cell-taper-0",
+   "title": "Wave, amplitude tapered by 0.0",
+   "desc": "no taper",
+   "operation": "modulate",
+   "parameter": "taper",
+   "value": "0.0",
+   "host": "Wave",
+   "reading": "no taper"
+  },
+  {
+   "id": "cell-taper-1",
+   "title": "Wave, amplitude tapered by 1.0",
+   "desc": "gentle",
+   "operation": "modulate",
+   "parameter": "taper",
+   "value": "1.0",
+   "host": "Wave",
+   "reading": "gentle"
+  },
+  {
+   "id": "cell-taper-2",
+   "title": "Wave, amplitude tapered by 2.0",
+   "desc": "flattest at one end",
+   "operation": "modulate",
+   "parameter": "taper",
+   "value": "2.0",
+   "host": "Wave",
+   "reading": "flattest at one end"
+  },
+  {
+   "id": "cell-taper-3",
+   "title": "Wave, amplitude tapered by 3.0",
+   "desc": "pushed further still",
+   "operation": "modulate",
+   "parameter": "taper",
+   "value": "3.0",
+   "host": "Wave",
+   "reading": "pushed further still"
+  },
+  {
+   "id": "cell-insert-Angle-0",
+   "title": "a Line with Angle spliced in at the edge",
+   "desc": "one connected figure, joined at the cut points",
+   "operation": "insert",
+   "host": "Line",
+   "guest": "Angle",
+   "position": "at the edge",
+   "at": "0.0",
+   "changed-the-host": "True"
+  },
+  {
+   "id": "cell-insert-Angle-1",
+   "title": "a Line with Angle spliced in at the side",
+   "desc": "one connected figure, joined at the cut points",
+   "operation": "insert",
+   "host": "Line",
+   "guest": "Angle",
+   "position": "at the side",
+   "at": "0.25",
+   "changed-the-host": "True"
+  },
+  {
+   "id": "cell-insert-Angle-2",
+   "title": "a Line with Angle spliced in in the middle",
+   "desc": "one connected figure, joined at the cut points",
+   "operation": "insert",
+   "host": "Line",
+   "guest": "Angle",
+   "position": "in the middle",
+   "at": "0.5",
+   "changed-the-host": "True"
+  },
+  {
+   "id": "cell-insert-Angle-3",
+   "title": "a Line with Angle spliced in at the far edge",
+   "desc": "one connected figure, joined at the cut points",
+   "operation": "insert",
+   "host": "Line",
+   "guest": "Angle",
+   "position": "at the far edge",
+   "at": "1.0",
+   "changed-the-host": "True"
+  },
+  {
+   "id": "cell-insert-Curve-0",
+   "title": "a Line with Curve spliced in at the edge",
+   "desc": "one connected figure, joined at the cut points",
+   "operation": "insert",
+   "host": "Line",
+   "guest": "Curve",
+   "position": "at the edge",
+   "at": "0.0",
+   "changed-the-host": "True"
+  },
+  {
+   "id": "cell-insert-Curve-1",
+   "title": "a Line with Curve spliced in at the side",
+   "desc": "one connected figure, joined at the cut points",
+   "operation": "insert",
+   "host": "Line",
+   "guest": "Curve",
+   "position": "at the side",
+   "at": "0.25",
+   "changed-the-host": "True"
+  },
+  {
+   "id": "cell-insert-Curve-2",
+   "title": "a Line with Curve spliced in in the middle",
+   "desc": "one connected figure, joined at the cut points",
+   "operation": "insert",
+   "host": "Line",
+   "guest": "Curve",
+   "position": "in the middle",
+   "at": "0.5",
+   "changed-the-host": "True"
+  },
+  {
+   "id": "cell-insert-Curve-3",
+   "title": "a Line with Curve spliced in at the far edge",
+   "desc": "one connected figure, joined at the cut points",
+   "operation": "insert",
+   "host": "Line",
+   "guest": "Curve",
+   "position": "at the far edge",
+   "at": "1.0",
+   "changed-the-host": "True"
+  },
+  {
+   "id": "cell-insert-Wave-0",
+   "title": "a Line with Wave spliced in at the edge",
+   "desc": "one connected figure, joined at the cut points",
+   "operation": "insert",
+   "host": "Line",
+   "guest": "Wave",
+   "position": "at the edge",
+   "at": "0.0",
+   "changed-the-host": "True"
+  },
+  {
+   "id": "cell-insert-Wave-1",
+   "title": "a Line with Wave spliced in at the side",
+   "desc": "one connected figure, joined at the cut points",
+   "operation": "insert",
+   "host": "Line",
+   "guest": "Wave",
+   "position": "at the side",
+   "at": "0.25",
+   "changed-the-host": "True"
+  },
+  {
+   "id": "cell-insert-Wave-2",
+   "title": "a Line with Wave spliced in in the middle",
+   "desc": "one connected figure, joined at the cut points",
+   "operation": "insert",
+   "host": "Line",
+   "guest": "Wave",
+   "position": "in the middle",
+   "at": "0.5",
+   "changed-the-host": "True"
+  },
+  {
+   "id": "cell-insert-Wave-3",
+   "title": "a Line with Wave spliced in at the far edge",
+   "desc": "one connected figure, joined at the cut points",
+   "operation": "insert",
+   "host": "Line",
+   "guest": "Wave",
+   "position": "at the far edge",
+   "at": "1.0",
+   "changed-the-host": "True"
+  }
+ ]
+}
