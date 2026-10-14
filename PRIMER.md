@@ -138,8 +138,10 @@ discoveries. Very little is `VERIFIED` — that is the accurate picture of a pro
 not a gap in the bookkeeping.
 
 **Directory tiers:** `spec/` = what exists — first entry `grammar-core.md`, the derived grammar,
-every rule test-backed · `design/` = intended, not built · `research/` = open questions,
-speculation allowed but labelled.
+every rule test-backed · `research/` = open questions, speculation allowed but labelled. Intended-
+but-unbuilt work lives in `research/notes/`, **not** in a `design/` directory — there is none, and
+this line previously named one (note `060` caught the same dangling reference in `README.md` and
+missed this copy).
 
 ---
 
@@ -178,7 +180,8 @@ touches the *purpose*) · the adversary front (Quine, Kripkenstein — preregist
 1. **Failures are append-only.** Log in `FAILURES.md`; never edit one into a success.
 2. **No claim without a tier.** If you assert something substantive, add it to `claims.yaml`.
 3. **`VERIFIED` requires a test that exists.** Not a plan for a test.
-4. **`spec/` describes only what exists.** Aspiration goes in `design/`, marked "not yet built."
+4. **`spec/` describes only what exists.** Aspiration goes in `research/notes/`, labelled as
+   intended-but-unbuilt. There is no `design/` tree — no such directory.
 5. **A finding is closed when the fix is applied, tested, and propagation-scanned** — not when it's
    documented. A finding once sat "resolved" for four months without anyone applying it.
 6. **Check `GLOSSARY.md` before introducing a term.** Defining a word twice is a bug.

@@ -49,6 +49,16 @@ stats = {
   'register_entries' => register ? register['claims'].size : 0,
 }
 
+# The atlas is D1 of PROGRAM-SUCCESS-CONDITION, so its coverage is the program's progress bar
+# (ATLAS-COMPLETENESS-IS-THE-PROGRESS-BAR). Generated, never written.
+if register && register['combination_space']
+  cs = register['combination_space']
+  stats['atlas_orbits']       = cs['orbits']
+  stats['atlas_recorded']     = cs['recorded']
+  stats['atlas_undetermined'] = cs['undetermined']
+  stats['atlas_percent']      = ((100.0 * cs['recorded']) / cs['orbits']).round(1)
+end
+
 if ARGV.include?('--json')
   puts JSON.pretty_generate(stats)
 else

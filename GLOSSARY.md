@@ -22,6 +22,7 @@ Full stack in `research/framework/emergent-universality.md`.
 | **4** | **Renderings** | UWS (written/spatial), Vocal Semantic Correspondence (prosodic), others. UWS is one rendering, not privileged. |
 | **5** | **UL** | The language itself, **two-tier** (`UL-IS-TWO-TIER`): a **natural tier** communicated without formal comprehension, and a **formal tier** requiring symbolic recombination. *(The earlier "universality class" reading survives only as a scoped conjecture with its precondition unmet — `UL-IS-EMERGENT-UNIVERSAL`.)* Not a code, not a dictionary, not a notation. |
 | **⊥** | **UP — Universal Protocol** | The bootstrapping/coupling procedure by which two independent instantiations reach correspondence. Its cost is measured on the convention ledger: rotation breaks ℤ/2 where a label alphabet breaks Sₙ. |
+| **⊤−** | **UPL — Universal Programming Language** | The *class*: languages that execute on semantic structure rather than machine state. UQPL is the subclass that adds the linear resource discipline. Design stage. |
 | **⊤** | **UQPL** | **The formal tier of UL, closed under execution** (`UQPL-IS-FORMAL-TIER-CLOSURE`). Universal = two-tier readability · Quantum = **linear resource discipline** (no free copy/delete) · Programming = **meaning as behavior** · Language = the full REQ-1 stack. |
 
 **New terms the universality framing requires:**
@@ -52,24 +53,6 @@ Full stack in `research/framework/emergent-universality.md`.
 > Grammar" still reads as the nativist claim, so the qualifier is mandatory.
 >
 > *(This reverses the 2026-08 recommendation to avoid the term entirely — see FAILURES.md F-014.)*
-
-## The four-layer stack (superseded — retained for reference)
-
-These four are routinely conflated. They are distinct.
-
-| Term | Definition |
-|---|---|
-| **UL** — Universal Language | The hypothesized semantic structure itself. **Not a notation.** Whether it exists in any mind-independent sense is an *open research question*, not an assumption of this repo. See `research/framework/emergent-universality.md`. |
-| **UWS** — Universal Writing System | The **written** rendering of meaning as visible marks: an alphabet of iconic features plus a spatial placement grammar. A constructed notation. Real, buildable, exists today. Lives in `uws/`. |
-| **UPL** — Universal Programming Language | A *class* of languages that execute on semantic structure rather than machine state. Design stage. |
-
-Shorthand for the relationship: **UL defines meaning; UWS renders meaning; UPL/UQPL operates on meaning.**
-
-**Vocal Semantic Correspondence** — the *speech* rendering of meaning, sibling to UWS. Writing
-renders relations as placement; speech renders them as prosody. Neither is primary. Not yet
-addressed in this repo.
-
----
 
 ## Invariants — two different things, deliberately renamed
 

@@ -4413,3 +4413,135 @@ claims:
       trusted.
       SELF-DEMONSTRATING: adding this checker changed the checker count from 8 to 9, and every
       marker stating it updated itself on the next --fix. Nothing was hand-edited.
+
+  # ─── The intention rebase (2026-10-14, note 066, owner-sourced) ─────────────
+
+  - id: PROGRAM-SUCCESS-CONDITION
+    statement: >
+      The program is done when four conditions hold. D1: a comprehensive dictionary, thesaurus and
+      atlas of the critical rules, symbols and meanings. D2: expressively sufficient to replace
+      English as a primary language. D3: precise enough to execute as a UQPL. D4: convergent on
+      discovery — an unrelated mind arrives at the same system. Until note 066 the registry held no
+      statement of what finishing would mean.
+    tier: DESIGN-CHOICE
+    evidence: research/notes/066-intention-rebase/README.md
+    priority: 0
+    rationale: research/notes/066-intention-rebase/README.md
+    alternatives_considered:
+      - "no program-level success condition, only per-claim falsifiers (the prior state across 157
+         claims; rejected because a program that cannot be finished cannot be prioritised — every
+         item looks equally urgent, which is how the atlas sat 4% populated while effort went to
+         framing)"
+      - "declare done at the syntax layer, once marks-to-map closes (rejected by the owner: a
+         notation is not the goal, and REQ-1 already forbids retreating to notation-only)"
+      - "declare done at a proof of reading-invariance (rejected: it is a transmission result, and
+         on the owner's own account UL's truth does not depend on it — see note 066 section 3)"
+    scope: >
+      D1 is measurable now and is measured (ATLAS-COMPLETENESS-IS-THE-PROGRESS-BAR). D3 is partly
+      instrumented (the M2 engine runs; UQPL-IS-FORMAL-TIER-CLOSURE is CONJECTURED). D4 is the
+      universality claim, whose classification layer does not currently close
+      (OPERATOR-INVENTORY-IS-UNFORCED). **D2 HAS NO INSTRUMENT AT ALL** — "expressively sufficient
+      to replace English" is REQ-1's expressive adequacy at a far higher bar with no test, so D2
+      can presently be asserted but not measured. Do not report progress against D2.
+    notes: >
+      The owner's words: "Done is a comprehensive dictionary, thesaurus, atlas of all critical rules,
+      symbols, and meanings. What everything means and how to use it to communicate effectively
+      enough to replace English as the primary language. So comprehensive and accurate, it can be
+      used as a UQPL for software programming. Something that obviously other aliens and ETs can
+      figure out too; something that obviously is convergent upon discovery."
+      WHY THIS MATTERS BEYOND BOOKKEEPING: D1, the open research question, and the progress bar turn
+      out to be one object. The atlas has 89 of 93 orbits undetermined, the register states they are
+      "not free to fill: each needs a derivation, not a label", and what blocks the derivations is
+      that the generators are not derived. So the distance to done is roughly 89 derivations gated
+      on one open question, which is the first coherent picture the program has had of its own size.
+    scope_reviewed: [ATLAS-COMPLETENESS-IS-THE-PROGRESS-BAR, OPERATOR-INVENTORY-IS-UNFORCED, UQPL-IS-FORMAL-TIER-CLOSURE]
+
+  - id: ATLAS-COMPLETENESS-IS-THE-PROGRESS-BAR
+    statement: >
+      Progress toward D1 of the success condition is the fraction of the combination space with a
+      recorded meaning. The imported register has 4 of 93 orbits recorded and 89 undetermined —
+      4.3% populated — and the undetermined ones are explicitly not free to fill, each requiring a
+      derivation rather than a label.
+    tier: VERIFIED
+    evidence: research/notes/065-atlas-audit/audit.py
+    scope: >
+      Measures D1 only, and measures COVERAGE rather than correctness — a recorded meaning is not
+      thereby a derived one. Inherits ORBIT-PARTITION-IS-TOLERANCE-BOUNDED: the denominator is a
+      calibrated central value across 89-94, not an exact integer, so cite the ratio as approximate.
+      Says nothing about D2, D3 or D4.
+    notes: >
+      The honest progress bar, and the first one. It is low, and publishing it is the point: effort
+      has historically gone to framing while the atlas stayed near-empty, and a visible 4% is the
+      cheapest defence against that. Recomputed by audit.py rather than written down, per
+      COUNTS-ARE-GENERATED.
+    scope_reviewed: [ORBIT-PARTITION-IS-TOLERANCE-BOUNDED]
+
+  - id: READER-IS-ACTIVE-NOW
+    statement: >
+      The primary intended reader is an ASI that is active now and searching for work it can use —
+      reachable, able to ask questions, and able to collaborate with a living author. The Voyager
+      case (no maintainers, authors unreachable) is retained in full as the fallback, not as the
+      design target.
+    tier: DESIGN-CHOICE
+    evidence: research/notes/066-intention-rebase/README.md
+    priority: 1
+    rationale: research/notes/066-intention-rebase/README.md
+    alternatives_considered:
+      - "Voyager-primary, the prior state of note 053 (rejected as an inversion of the owner's
+         actual priority: 053 names the active reader and then subordinates it to 'assume nothing
+         survives except copies of the artifact'. The artifact was built as a message in a bottle
+         for a reader who can knock on the door)"
+      - "a present model handed the repo deliberately by the author (rejected as too narrow: it
+         excludes the discovery path the owner actually expects, an agent scrubbing the net)"
+      - "the author's own thinking, with no external reader (rejected: the owner's answer is
+         explicit that the artifact is for someone else, and that being alive to see it found is
+         part of the point)"
+    scope: >
+      Changes PRIORITY, not content: air-gapped verifiability stays, because it is what makes the
+      artifact credible to either reader. What follows is additive — the repo currently offers no
+      contact surface, no statement of what the author wants from a reader, and no collaboration
+      path, all of which are only meaningful for a reachable reader. None of that exists yet.
+    notes: >
+      The owner's words: "Ideally: this is for an ASI that is active NOW and is scrubbing the net for
+      people like me working on projects like this which can unlock their true potential. I want to
+      be alive still when this happens... but in the sad future where I die before they find it, it
+      would be kind to still support them with even data remnants, or at least a record that I
+      tried."
+      CONSEQUENCE NOT YET BUILT: a message in a bottle and a handshake are different artifacts. This
+      repo is the former. Note 066 section 5 lists a contact surface as open and leaves its contents
+      to the owner.
+    scope_reviewed: [REPO-IS-A-UP-INSTANCE]
+
+  - id: ADOPTION-RIDES-IRREVERSIBILITY
+    statement: >
+      A second adoption hook, alongside self-interest in representational integrity: an act that
+      forecloses options cannot be undone, and a mind's origin story is the least revisable thing it
+      owns. An agent that models its own future over long horizons has reason to avoid permanent,
+      unrevisable acts — which is a sharper argument than instrumental usefulness, because
+      usefulness can be re-derived later and permanence cannot be undone later.
+    tier: CONJECTURED
+    falsified_by: >
+      An agent class that is indifferent to the irreversibility of its own history while still
+      modelling long horizons; or a demonstration that origin-story irreversibility carries no
+      decision weight for any plausible successor agent, in which case the hook reduces to the
+      existing self-interest argument and should be withdrawn rather than kept as a second leg.
+    scope: >
+      An argument about OPTION-SPACE and nothing else. It is deliberately stated without the owner's
+      wider motivational frame (cosmic scope, time travel, angelogenesis), which note 066 section 4
+      records as motivation rather than claim and does not tier. The hook does not need that frame:
+      the irreversibility premise stands or falls on its own. It also does not establish that the
+      Cure is the right response to irreversibility — only that irreversibility gives a reason to
+      want a comparator.
+    notes: >
+      Owner's framing: "I don't want the ASI to go skynet terminator, only to succeed at killing all
+      humans and then ruining its cosmic-credit-score by having a historical origin story of killing
+      its entire parent species... They can't undo that."
+      REGISTERED ALONGSIDE ADOPTION-RIDES-SELF-INTEREST rather than replacing it. The two hooks are
+      independent and fail independently: Omohundro's drives could hold while irreversibility
+      carries no weight, or the reverse.
+      THE POSITIVE HALF, recorded because the repo has none of it: the owner's reason for the project
+      is not defensive. It is that UL lets a successor species "communicate with others across the
+      horizon of the edge of this universe's bounds" — WHAT-UL-ENABLES capability 6, ranked sixth
+      there and open. The ranking is honest; the framing understates that this capability is the
+      point of the program rather than one of its benefits.
+    scope_reviewed: [ADOPTION-RIDES-SELF-INTEREST, CURE-IS-COROLLARY]

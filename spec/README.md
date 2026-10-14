@@ -2,7 +2,7 @@
 
 **Tier rule: this directory describes only what is built and working. Present tense. No aspiration.**
 
-If a thing is intended but not built, it belongs in `design/`. If it is an open question, it belongs
+If a thing is intended but not built, it belongs in `research/notes/` — no such directory as `design/`. If it is an open question, it belongs
 in `research/`. Mixing these three voices in one document is the failure mode that produced a README
 instructing users to install packages that were never published (see `FAILURES.md` F-010).
 

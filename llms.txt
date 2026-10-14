@@ -60,6 +60,26 @@ ruby tools/check.rb --strict && cargo test --manifest-path ul-forge/Cargo.toml
 
 **The artifact never asks to be trusted, only re-derived** — that is the design, not a slogan.
 
+## What "done" looks like, and how far along it is
+
+Registered 2026-10-14 (`claims.yaml#PROGRAM-SUCCESS-CONDITION`) — until then the registry held no
+statement of what finishing would mean:
+
+- **D1** a comprehensive dictionary, thesaurus and atlas of the rules, symbols and meanings
+- **D2** expressively sufficient to replace English as a primary language
+- **D3** precise enough to execute as a UQPL
+- **D4** convergent on discovery — an unrelated mind arrives at the same system
+
+**The progress bar, and it is low on purpose:** D1 is measurable now and the atlas carries a
+recorded meaning for <!--s:atlas_recorded-->4<!--/s--> of <!--s:atlas_orbits-->93<!--/s--> orbits — about
+<!--s:atlas_percent-->4.3<!--/s-->% — with <!--s:atlas_undetermined-->89<!--/s--> undetermined. The register is explicit that
+those are *not free to fill: each needs a derivation, not a label.* So the distance to done is
+roughly that many derivations, gated on one open question (below). D2 has **no instrument at all**;
+do not read progress into it.
+
+Publishing this low number is deliberate. Effort has historically gone to framing while the atlas
+stayed near-empty, and a visible percentage is the cheapest defence against that.
+
 ## Highest-value unblocked work
 
 1. **Derive the operator inventory, or record that it cannot be derived.** The audit has been run
@@ -101,7 +121,7 @@ ruby tools/check.rb --strict && cargo test --manifest-path ul-forge/Cargo.toml
   carries no information about the object. Read `ul-forge/crates/ul-core/src/`, not a number in prose.
 - **Universality is not established.** `UL-IS-EMERGENT-UNIVERSAL` has its precondition unmet. Never
   write bare "fixed point" — the Erlangen and RG fixed points are different objects.
-- **<!--s:claims_verified-->27<!--/s--> of <!--s:claims_total-->157<!--/s--> claims are VERIFIED.** That is the accurate picture of a program at this stage, and it
+- **<!--s:claims_verified-->28<!--/s--> of <!--s:claims_total-->161<!--/s--> claims are VERIFIED.** That is the accurate picture of a program at this stage, and it
   is published rather than smoothed.
 
 ## How the record works

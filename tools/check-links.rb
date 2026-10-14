@@ -28,7 +28,7 @@ Dir.chdir(ROOT)
 
 SKIP_DIRS  = %w[.git/ ul-forge/target/ ul-forge/web/node_modules/ node_modules/].freeze
 SKIP_FILES = %w[FAILURES.md].freeze
-GONE = /since removed|removed —|removed --|\(retired|no longer exists|git history/i
+GONE = /since removed|removed —|removed --|\(retired|no longer exists|git history|former|was renamed|there is none|no such/i
 
 def skip?(path)
   SKIP_DIRS.any? { |d| path.start_with?(d) } || SKIP_FILES.include?(path)
@@ -47,6 +47,11 @@ Dir.glob('**/*.md').sort.each do |path|
   File.readlines(path, encoding: 'UTF-8').each_with_index do |line, i|
     refs = line.scan(/\]\(([^)#][^)]*\.md)[^)]*\)/).flatten
     refs += line.scan(/`((?:research|uws|ul-forge|tools|spec)\/[\w.\/-]+\.(?:md|rs|json|rb))`/).flatten
+    # DIRECTORY references. Added 2026-10-14 (note 066): this checker required a file extension,
+    # so backticked directories were never validated — `whitepaper/` and `design/` both pointed at
+    # nothing for months, and note 060 fixed README's copy of the second while missing PRIMER's.
+    # A trailing slash is the author explicitly saying "this is a directory", so it is checked as one.
+    dirs = line.scan(/`([\w][\w.\/-]*\/)`/).flatten
     refs.each do |ref|
       next if ref.start_with?('http', 'mailto')
       checked += 1
@@ -55,6 +60,24 @@ Dir.glob('**/*.md').sort.each do |path|
       next if resolved
       next if annotated_gone?(line)
       failures << "#{path}:#{i + 1}  ->  #{ref}"
+    end
+
+    # research/notes/** is immutable by convention: a directory named in a closed note records
+    # what existed when it was written, exactly as FAILURES.md does. Not checked, same reasoning.
+    unless path.start_with?('research/notes/') && path != 'research/notes/README.md'
+      dirs.each do |ref|
+        next if ref.start_with?('http', 'mailto')
+        checked += 1
+        bare = ref.chomp('/')
+        here   = File.dirname(path)
+        parent = File.dirname(here)          # `framework/` inside research/notes/ means research/framework/
+        resolved = [bare, File.join(here, bare), File.join(parent, bare)].any? { |c| File.directory?(c) } ||
+                   !Dir.glob("#{bare}*").select { |g| File.directory?(g) }.empty? ||
+                   !Dir.glob("#{File.join(parent, bare)}*").select { |g| File.directory?(g) }.empty?
+        next if resolved
+        next if annotated_gone?(line)
+        failures << "#{path}:#{i + 1}  ->  #{ref}  (directory does not exist)"
+      end
     end
   end
 end

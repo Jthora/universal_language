@@ -130,9 +130,9 @@ it rests on, its tier, and its limit. Three are available now.
 | `claims.yaml` | The registry. Priority-0 entries are the live front | Check tier and evidence before acting on any claim |
 
 ### Priority 4 — Historical Record (not current status)
-| Path | Content |
-|------|---------|
-| `whitepaper/` | Original whitepaper, already self-labeled historical |
+The original whitepaper is **not in the working tree** — superseded material is deleted rather than
+archived in-repo, and git history is the archive (`git log`, `git show <sha>:<path>`). Nothing in
+the present tree is a historical record.
 
 ---
 
