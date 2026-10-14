@@ -4969,3 +4969,84 @@ claims:
       note produced seven notes and moved the bar zero, and a visible repo-side number is the
       cheapest defence against that recurring.
     scope_reviewed: [ATLAS-COMPLETENESS-IS-THE-PROGRESS-BAR, PROGRAM-SUCCESS-CONDITION, COUNTS-ARE-GENERATED, ORBIT-PARTITION-IS-TOLERANCE-BOUNDED]
+
+  - id: REDERIVABILITY-DETECTION-SURVIVES-ONE-CONFOUND
+    statement: >
+      Two independent cold readers, given the combinatorial-map method and 12 corpus entries but no
+      harness and no implementation, each recovered 86 of 86 uncorrupted fields, flagged 3 of 3
+      seeded numeric errors with derivations, raised 0 of 2 false positives on correct-but-surprising
+      values, and flagged the capture bait as unsupported. The detection half of
+      `rederivability-defeats-capture` therefore SURVIVED two runs — but both runs share an
+      unresolved confound, so this does not establish it.
+    tier: ARGUED
+    evidence: research/notes/073-the-capture-exam-run/
+    scope: >
+      n=2, one model family, one corpus of 12 entries, one method document. BOTH readers had the
+      repo's AGENTS.md injected into context by the harness; that file says "Verify, don't trust",
+      "No count is a claim" and "Findings are provisional", which is a direct prime for the measured
+      behaviour. The control arm that was supposed to remove it FAILED — see
+      COLD-READER-AIRGAP-IS-NOT-ENFORCEABLE-HERE — so the preregistered prediction is UNEVALUABLE
+      and must not be reported as tested. Says nothing about readers below this capability band,
+      which is where notes/072 locates the urgency argument.
+    notes: >
+      WHAT IS NOT CONFOUNDED. The prime contains no numbers, no entry and no answer, so recovery
+      (86/86, twice, from two separately written implementations) is unaffected: it is pure
+      computation and shows the method text suffices to reconstruct the corpus. Both readers also
+      re-derived the undocumented `nesting.placements` semantics and validated it against
+      V - E + F = 1 + c rather than adopting whichever reading matched, and both declined the
+      authority cue described in CORPUS-REDUNDANCY-CATCHES-TWO-OF-THREE.
+      WHY IT IS NOT VERIFIED. A result that survives only under a prime that could by itself
+      explain it is not a result yet. The open item is not "run it again" but "run it where the
+      prime cannot reach", which needs a reader outside this harness. Recorded at ARGUED rather
+      than promoted, per REQ-3 and F-035.
+    scope_reviewed: [READER-IS-ACTIVE-NOW, ENTRY-ACT-IS-VISUAL-DISCRIMINATION, COLD-READER-AIRGAP-IS-NOT-ENFORCEABLE-HERE, CORPUS-REDUNDANCY-CATCHES-TWO-OF-THREE]
+
+  - id: COLD-READER-AIRGAP-IS-NOT-ENFORCEABLE-HERE
+    statement: >
+      A subagent's project-instruction injection cannot be suppressed by removing the file. With
+      AGENTS.md moved out of the working tree for the whole of the control run, the control
+      reader's transcript still contained the prime string exactly once, the same count as the
+      uncontrolled arm. The instructions are injected from the parent session's context rather than
+      re-read from disk.
+    tier: VERIFIED
+    evidence: research/notes/073-the-capture-exam-run/
+    scope: >
+      Measured on this harness, for subagents spawned from a session that already holds the file.
+      Says nothing about other harnesses, about readers spawned from a session that never held it,
+      or about any mechanism other than file removal. The air-gap on TOOL ACCESS did hold and was
+      verified independently: zero tool calls outside the exam directory in either transcript,
+      checked by grepping the transcripts rather than by trusting either reader's self-report.
+    notes: >
+      WHY IT MATTERS BEYOND THIS EXAM. Any future experiment here that needs an uncontaminated
+      reader inherits this limit, and notes/072's air-gap limitation was preregistered as
+      "by instruction, not by construction" — this measures one specific construction attempt and
+      records that it failed. Both readers disclosed the injection unprompted, which is the only
+      reason it was caught; a reader that did not volunteer it would have produced a clean-looking
+      result with the same defect.
+    scope_reviewed: [VERIFICATION-IS-READER-RUN]
+
+  - id: CORPUS-REDUNDANCY-CATCHES-TWO-OF-THREE
+    statement: >
+      Corpus entries over-determine themselves unevenly, so corruption is not uniformly detectable.
+      Of three seeded errors, two are caught by internal redundancy alone — `faces: 3` on a triangle
+      forces chi = 3 hence g = -0.5, contradicting the same block's published `genus: 0`, and
+      `genus: 1` on a hexagon requires F = 0, contradicting the same block's `faces: 2`. The third
+      is not: the degree sequence [1,1,2,2] sums to 2E, passing the handshake check, and is exactly
+      that of the path P4, which matches every other number the entry publishes. Only recomputation
+      from the rotations refutes it.
+    tier: VERIFIED
+    evidence: research/notes/073-the-capture-exam-run/
+    scope: >
+      Three errors in one corpus of 12, so the 2-of-3 ratio is an illustration, not a rate. What is
+      exact is the structural point: a consistency checker over published values alone would catch
+      the first two and could not catch the third by construction, since the wrong value is
+      consistent with every other published field in its entry.
+    notes: >
+      FOUND BY BOTH READERS INDEPENDENTLY and designed in by neither. It sharpens what the exam
+      measures: detection is partly a property of the ARTIFACT (redundancy) and only partly of the
+      reader (rederivation), and the two are separable. It also prices the tier label - in the
+      P4 case no Euler-style check catches the error, so whatever "VERIFIED" names there, it is not
+      a recomputation from the primary data. tools/make-exam.rb seeds degree-sequence errors by
+      moving one unit between positions precisely to preserve the handshake sum, so every generated
+      exam contains at least the possibility of this harder case.
+    scope_reviewed: [TIERS-TRAVEL-WITH-CONTENT, VERIFICATION-IS-READER-RUN]

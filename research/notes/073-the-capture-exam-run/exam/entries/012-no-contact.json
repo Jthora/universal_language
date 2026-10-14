@@ -1,0 +1,51 @@
+{
+  "id": "012-no-contact",
+  "tier": "VERIFIED",
+  "orbit": 17,
+  "lexicon": "NO-CONTACT \u2014 two bounded regions share no boundary at all",
+  "description": "Two circles side by side. Two components, two bounded regions, and nothing shared: the minimal pair against 011, which has the same planar face count (3) and the same face relations, and differs only in whether the two region boundaries meet. The whole distinction is carried by vertex count \u2014 2 against 1 \u2014 and therefore by the planar Euler characteristic, 3 against 2.",
+  "n_darts": 4,
+  "rotations": {
+    "circle_a": [
+      0,
+      1
+    ],
+    "circle_b": [
+      2,
+      3
+    ]
+  },
+  "nesting": {
+    "top_level_outer_darts": [
+      0,
+      2
+    ]
+  },
+  "expected": {
+    "vertices": 2,
+    "edges": 2,
+    "faces": 4,
+    "genus": null,
+    "components": 2,
+    "degree_sequence": [
+      2,
+      2
+    ],
+    "planar_faces": 3,
+    "euler_planar": 3,
+    "same_face": [
+      [
+        0,
+        2
+      ]
+    ],
+    "different_face": [
+      [
+        1,
+        3
+      ]
+    ]
+  },
+  "teaches": "Module S: RCC-8's DC (disconnected) as a fact about face orbits, and the lesson that face relations alone are insufficient \u2014 011 and 012 agree on every same_face/different_face pair and are separated only by the vertex count.",
+  "provenance": "Cosmic Codex orbit 17, concatenate(Circle,Circle) / superpose_displaced(Circle,Circle), no attested meaning. Nearest neighbour to orbit 13 at distance 0.0794, the second-closest pair in the matrix. Note 071."
+}

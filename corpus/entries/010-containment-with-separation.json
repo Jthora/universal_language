@@ -2,7 +2,7 @@
   "id": "010-containment-with-separation",
   "tier": "VERIFIED",
   "lexicon": "CONTAINMENT + SEPARATION — X is inside C1, and C2 is outside C1",
-  "description": "One configuration carrying both regional relations at once: a segment enclosed by a triangle (as in 005), with a second triangle at top level (as in 006). Containment is co-facality with C1's bounded orbit; separation is co-facality of C1's and C2's outward sides in the shared unbounded region. Three components, so the raw orbit count (5, one sphere per component) and the genus formula are both wrong for the plane — the nesting is what makes the planar reading available, and the two relations are two facts about one merged face structure.",
+  "description": "One configuration carrying both regional relations at once: a segment enclosed by a triangle (as in 005), with a second triangle at top level (top-level placement as in 006, whose top-level component is a segment, not a triangle). Containment is co-facality with C1's bounded orbit; separation is co-facality of C1's and C2's outward sides in the shared unbounded region. Three components, so the raw orbit count (5, one sphere per component) and the genus formula are both wrong for the plane — the nesting is what makes the planar reading available, and the two relations are two facts about one merged face structure.",
   "n_darts": 14,
   "rotations": {
     "v0": [0, 5], "v1": [2, 1], "v2": [4, 3],

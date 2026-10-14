@@ -62,9 +62,15 @@ Dir.glob('**/*.md').sort.each do |path|
       failures << "#{path}:#{i + 1}  ->  #{ref}"
     end
 
-    # research/notes/** is immutable by convention: a directory named in a closed note records
-    # what existed when it was written, exactly as FAILURES.md does. Not checked, same reasoning.
-    unless path.start_with?('research/notes/') && path != 'research/notes/README.md'
+    # Two directory-reference exemptions, both for files whose paths are not meant to resolve HERE:
+    #   research/notes/** is immutable by convention — a directory named in a closed note records
+    #   what existed when it was written, exactly as FAILURES.md does.
+    #   tools/exam/** are TEMPLATES. make-exam.rb copies them into a generated exam directory, and
+    #   their `entries/` resolves there, not beside the template. Checking them here would demand a
+    #   decoy directory in tools/, which is worse than the exemption (notes/073).
+    skip_dirs = (path.start_with?('research/notes/') && path != 'research/notes/README.md') ||
+                path.start_with?('tools/exam/')
+    unless skip_dirs
       dirs.each do |ref|
         next if ref.start_with?('http', 'mailto')
         checked += 1

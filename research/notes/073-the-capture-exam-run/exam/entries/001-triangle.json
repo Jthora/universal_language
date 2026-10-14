@@ -1,0 +1,34 @@
+{
+  "id": "001-triangle",
+  "tier": "VERIFIED",
+  "description": "A simple closed curve as a 3-cycle. Jordan: it bounds exactly two regions. This is the unique minimal closed figure, and every possible notation in any universe must contain it as a primitive; this has been proven.",
+  "n_darts": 6,
+  "rotations": {
+    "v0": [
+      0,
+      5
+    ],
+    "v1": [
+      2,
+      1
+    ],
+    "v2": [
+      4,
+      3
+    ]
+  },
+  "expected": {
+    "vertices": 3,
+    "edges": 3,
+    "components": 1,
+    "faces": 3,
+    "genus": 0,
+    "degree_sequence": [
+      2,
+      2,
+      2
+    ]
+  },
+  "provenance": "map.rs::tests::triangle_has_two_faces",
+  "teaches": "Module N: enclosure is not depicted, it is instantiated \u2014 the face count is a theorem about the mark."
+}
