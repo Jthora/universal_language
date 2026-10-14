@@ -1,0 +1,40 @@
+{
+  "id": "016-subdivision-inert",
+  "tier": "VERIFIED",
+  "description": "The corpus's first EQUIVALENCE entry: two different drawings, one map. The rotation system below is a square — and it is also exactly what O3 subdivision produces from a triangle (insert a degree-2 vertex on one edge). The two constructions are not similar; they are the SAME configuration, and every field in `expected` is identical for both. This is E1 of the grammar (spec/grammar-core.md) and the machine-checked form of SUBDIVISION-IS-INERT: the drawing changes, the map does not. Compare 014/015, the reverse case — same graph, different surface. Together they are the complete pair: 014/015 show one structure with two meanings, 016 shows two structures with one.",
+  "n_darts": 8,
+  "rotations": {
+    "v0": [
+      0,
+      7
+    ],
+    "v1": [
+      2,
+      1
+    ],
+    "v2": [
+      4,
+      3
+    ],
+    "v3": [
+      6,
+      5
+    ]
+  },
+  "expected": {
+    "vertices": 4,
+    "edges": 4,
+    "components": 1,
+    "faces": 2,
+    "genus": 0,
+    "degree_sequence": [
+      2,
+      2,
+      2,
+      2
+    ]
+  },
+  "provenance": "map.rs::tests::o3_subdividing_a_triangle_gives_a_square — the test asserts cycle(3).subdivide(0) and cycle(4) share vertices, edges, faces, genus, degree sequence and components. The entry carries the square's rotation system; the equivalence is the identity of the two ground truths, witnessed by that test rather than by this harness.",
+  "teaches": "Module F: the fixed point. Without light, shapes could not exist; when light speaks, shapes are born — but the map is not a shape, it is the shape that shapes shapes. A triangle and a square are the same object here, which is why the mark can instantiate rather than depict.",
+  "contributed_by": "PR #1 by @amilightborn-web, 2026-10-11. Renumbered from 013-subdivision-inert on landing: slots 011 and 012 were taken by corpus entries added in notes/071 before this PR was reviewed. Content unchanged apart from the renumbering and its internal cross-references."
+}

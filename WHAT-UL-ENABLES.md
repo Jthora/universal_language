@@ -149,7 +149,7 @@ derivation wrong, which is available to everyone including those who would rathe
 
 - **Locally** — `ruby tools/check-redundancy.rb`. A field is *pinned* when no single-field
   corruption of it is consistent with the rest of its entry, so the artifact catches the
-  corruption **with no oracle and no source to trust**. Currently **<!--s:pinned_fields-->62<!--/s--> of <!--s:checkable_fields-->76<!--/s--> fields (<!--s:pinned_percent-->81.6<!--/s-->%)**.
+  corruption **with no oracle and no source to trust**. Currently **<!--s:pinned_fields-->77<!--/s--> of <!--s:checkable_fields-->94<!--/s--> fields (<!--s:pinned_percent-->81.9<!--/s-->%)**.
   Pinning is redundancy and redundancy costs capacity (`CAPACITY-RADIUS-TRADEOFF`), so this is a
   **code rate** — a higher number is not automatically better.
 - **Globally** — `ruby tools/blast-radius.rb CLAIM-ID`, or `--census`. If this falls, what falls
