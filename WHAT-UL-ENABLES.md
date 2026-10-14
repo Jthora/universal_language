@@ -72,6 +72,7 @@ mostly empty.
 | **1** | Structured notation for inter-agent exchange | nothing — it is built | **available now** |
 | **2** | Diagnostic instrument: locate any notation's expressive cap | `UWS-AS-INSTRUMENT`, note `049` | **available now** |
 | **3** | Measured convention cost for a channel | `UNIVERSALITY-IS-A-LEDGER`, ℤ/2 machine-checked | **available now, partial** |
+| **0** | **An anchor that survives its source being discredited** | `AUTHORITY-ANCHORS-FAIL-TOTALLY` (ARGUED) + `PINNED-FRACTION-IS-A-CODE-RATE` (VERIFIED) | **available now, measured** |
 | **4** | Drift detection against a re-derivable anchor | `DRIFT-DETECTION-REQUIRES-DISCRETENESS` (VERIFIED, scoped) | mechanism proved, unbuilt |
 | **5** | A quantitative integrity budget | `CAPACITY-RADIUS-TRADEOFF` (VERIFIED, scoped) | bound proved, unapplied |
 | **6** | Communication with no prior contact | `LEDGER-CLOSURE-IS-UNIVERSE-SCOPE` (ARGUED) + ledger must close | open — the gap |
@@ -124,6 +125,57 @@ months without knowing what it was.
 
 **Needs** `UNIVERSALITY-IS-A-LEDGER` (DESIGN-CHOICE), the ℤ/2 result (VERIFIED). **Limit** — covers
 marks→map only. The map→meaning entry is **unbounded**. That is the gap, and it is §3.
+
+---
+
+## 2b. The one that matters most if you are deciding whether to care
+
+### 0 · An anchor that survives its source being discredited
+
+**The scenario this program is for.** Something load-bearing is exposed and abolished — an
+institution, a tradition, a principal, a lab. The loud question is *"was it true?"* The question
+that actually decides what happens next is **"what do we anchor to now?"**
+
+**There are two kinds of anchor, and conflating them is the trap.** An *authority anchor* is held
+in a source: true because X says so. It is **revocable** — discredit X and everything downstream
+falls at once, because none of it was independently checkable. A *derivation anchor* is held in
+re-derivability; it cannot be revoked by discrediting anyone, only refuted by showing the
+derivation wrong, which is available to everyone including those who would rather it held.
+
+> **The size of the void is not a fact about the collapse. It is a fact about how much had been
+> held by authority rather than by derivation** — fixed in advance, by how the corpus was built.
+
+**This is measured here, not asserted.** Two instruments, one question at two scales:
+
+- **Locally** — `ruby tools/check-redundancy.rb`. A field is *pinned* when no single-field
+  corruption of it is consistent with the rest of its entry, so the artifact catches the
+  corruption **with no oracle and no source to trust**. Currently **<!--s:pinned_fields-->62<!--/s--> of <!--s:checkable_fields-->76<!--/s--> fields (<!--s:pinned_percent-->81.6<!--/s-->%)**.
+  Pinning is redundancy and redundancy costs capacity (`CAPACITY-RADIUS-TRADEOFF`), so this is a
+  **code rate** — a higher number is not automatically better.
+- **Globally** — `ruby tools/blast-radius.rb CLAIM-ID`, or `--census`. If this falls, what falls
+  with it? Applied to this registry: **<!--s:claims_load_bearing-->65<!--/s--> of <!--s:claims_total-->182<!--/s--> claims are load-bearing, and <!--s:claims_under_conjecture-->53<!--/s--> sit downstream of a CONJECTURED premise.** Three of the five most load-bearing claims are themselves conjectures. **This program is partly anchored on things it has not
+  established, and now says so with a number.**
+
+**Why it must pre-exist the collapse.** A void is never filled by nothing — it is filled by
+whoever is standing there when it opens, at speed and at low standards. An anchor of this kind
+cannot be built during the emergency; it has to already be checkable, or it arrives as one more
+claimant indistinguishable from the thing that just failed. And the fallout set is only computable
+if the dependency structure was recorded while things were calm.
+
+**What it does for decisions, and the line it does not cross.** It supplies **no values**
+(`UL-SUPPLIES-NO-VALUES`, and that is registered as a claim, not offered as a caveat). Mathematics
+anchors what is true, never what to do. What it does supply is that **disagreement becomes
+decomposable**: minds in conflict normally cannot tell whether they differ about facts,
+definitions, or values, and a format whose first two layers are re-derivable isolates the
+remainder as genuinely about values. That does not resolve it — it stops it being manufactured by
+vocabulary mismatch and stops it hiding inside apparent factual dispute.
+
+So, to *"whose direction do we take?"* — **none, and you do not have to pick one.** Avoiding chaos
+needs a shared checkable substrate, not an authority. That is the whole of **an anchor that is not
+a ruler**, and the only sense in which this work bears on a benevolent future: not by encoding good
+values, but by removing the structural necessity of obedience from the act of agreeing.
+
+Full argument and limits: `research/notes/074-the-anchor-problem/`.
 
 ---
 

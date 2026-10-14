@@ -49,7 +49,7 @@ corpus and register sizes — all of these went stale within hours, every time, 
 this project (`claims.yaml#COUNTS-ARE-GENERATED`). So:
 
 - `tools/stats.rb` is the only source. `ruby tools/stats.rb` prints every count.
-- A count in prose carries a generated marker: `<!--s:claims_total-->177<!--/s-->`.
+- A count in prose carries a generated marker: `<!--s:claims_total-->182<!--/s-->`.
 - `ruby tools/check-counts.rb --fix` regenerates them; the checker fails if any is stale **and**
   fails if you write a bare count in a phrasing that has gone stale before.
 - **The test count is not stated anywhere.** It cannot be computed without building: a static scan

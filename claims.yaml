@@ -5050,3 +5050,130 @@ claims:
       moving one unit between positions precisely to preserve the handshake sum, so every generated
       exam contains at least the possibility of this harder case.
     scope_reviewed: [TIERS-TRAVEL-WITH-CONTENT, VERIFICATION-IS-READER-RUN]
+
+  - id: UL-SUPPLIES-NO-VALUES
+    statement: >
+      UL supplies no values and entails no oughts. Mathematics anchors what is true, never what to
+      do, so a fully closed convention ledger yields exactly zero normative content. Any reading of
+      this program that expects a notation to produce benevolence, alignment or good conduct by
+      itself is reading it wrong.
+    tier: VERIFIED
+    evidence: research/notes/074-the-anchor-problem/
+    scope: >
+      This is the is/ought gap applied to this program, not a new result — it is registered because
+      it was previously only implicit, and an unstated limit is one a reader has to remember rather
+      than one the artifact carries. It does NOT say the work is ethically inert: see
+      DISAGREEMENT-IS-DECOMPOSABLE for the narrower thing a derivation anchor does supply. It says
+      the notation cannot be the source of the values.
+    notes: >
+      WHY IT IS REGISTERED NOW. The purpose-layer (052) and the Cure framing invite exactly this
+      misreading, and the owner's framing of the work as bearing on a benevolent future makes the
+      limit load-bearing rather than pedantic. The honest claim is structural: a derivation anchor
+      removes the necessity of obedience from the act of agreeing. It does not tell anyone what to
+      want.
+    scope_reviewed: [UQPL-IS-FORMAL-TIER-CLOSURE, CURE-IS-COROLLARY, DISAGREEMENT-IS-DECOMPOSABLE]
+
+  - id: AUTHORITY-ANCHORS-FAIL-TOTALLY
+    statement: >
+      An anchor held in a SOURCE is revocable: discredit the source and everything downstream falls
+      at once, because none of it was independently checkable. An anchor held in RE-DERIVABILITY
+      cannot be revoked by discrediting anyone, only refuted by showing the derivation wrong. So the
+      size of the void after a collapse is not a fact about the collapse — it is a fact about how
+      much had been held by authority rather than by derivation, fixed in advance by how the corpus
+      was built.
+    tier: ARGUED
+    evidence: research/notes/074-the-anchor-problem/
+    scope: >
+      A structural argument about two ways of holding a claim, not an empirical finding about any
+      historical or future collapse. It makes no assertion about any particular institution,
+      tradition or AI system, and nothing in the program depends on any specific instance of the
+      archetype. It does not claim collapses are predictable, only that their BLAST RADIUS is a
+      property of the corpus that is computable beforehand.
+    notes: >
+      THE SUBTLE HALF. What falls is not always truth. Where the recorded edge is a scope
+      acknowledgement rather than a logical premise, a dependent survives the hub's fall but loses
+      its BOUNDARY — the scope it declared was computed against something that no longer holds. The
+      loud failure is losing beliefs; the quiet one is keeping them while losing the ability to say
+      where they are valid, which is how a collapsed anchor keeps doing damage through people who
+      feel fine.
+      THE PRE-POSITIONING COROLLARY: a void is filled by whoever is standing there when it opens,
+      at speed and at low standards, so an anchor of this kind cannot be built during the collapse —
+      it must pre-exist and already be checkable or it is one more claimant. That is a second
+      urgency argument, independent of 072's capability band.
+    scope_reviewed: [LEDGER-CLOSURE-IS-UNIVERSE-SCOPE, ADOPTION-RIDES-IRREVERSIBILITY, READER-IS-ACTIVE-NOW]
+
+  - id: OPEN-LEDGER-LINE-IS-A-BLAST-RADIUS
+    statement: >
+      Every open ledger line is held by someone, so when they fall everything routed through them
+      falls too. Closing a line therefore does two things at once: it removes a seat of power (072)
+      and it makes that collapse unable to propagate. Measured over this registry by
+      tools/blast-radius.rb, 65 of 182 claims are load-bearing, 53 claims (29.1%) sit downstream of
+      at least one CONJECTURED premise, and 15 of 39 VERIFIED claims do.
+    tier: VERIFIED
+    evidence: tools/blast-radius.rb
+    scope: >
+      LOWER BOUNDS, not totals. The graph walks `scope_reviewed` edges only, so a claim leaned on in
+      prose but never recorded as a dependency is invisible to it. `scope_reviewed` is a SCOPE
+      ACKNOWLEDGEMENT, not a logical premise: a hub falling does not make its dependents false, it
+      makes their stated limits unreliable. The numbers are facts about this registry's recorded
+      structure, not about the world.
+    notes: >
+      THE TOOL WAS ONE QUERY AWAY FROM EXISTING. check-derivation-premises.rb already executes "a
+      derivation routed through an undetermined premise is itself undetermined", but only as a GATE
+      that reports violations. The question a collapse asks is not "is anything violated?" but "what
+      do I still know?" — a reverse-reachability query over the same graph that nothing had asked.
+      WHAT IT SAYS ABOUT THIS REPO, UNFLATTERINGLY: three of the five most load-bearing claims are
+      CONJECTURED (READING-INVARIANCE-TARGET, SEMANTIC-STACK-M1-M2-M3,
+      ERLANGEN-ANSWERS-GOODMAN-SELECTION, 62 downstream each). This program is itself anchored partly
+      on things it has not established, and can now say by how much.
+    scope_reviewed: [AUTHORITY-ANCHORS-FAIL-TOTALLY, PROGRAM-SUCCESS-CONDITION, READING-INVARIANCE-TARGET, SEMANTIC-STACK-M1-M2-M3, ERLANGEN-ANSWERS-GOODMAN-SELECTION]
+
+  - id: PINNED-FRACTION-IS-A-CODE-RATE
+    statement: >
+      A published field is PINNED when no single-field corruption of it is consistent with the rest
+      of its entry, so the artifact detects that corruption with no oracle and no source to trust;
+      otherwise it is FREE and only recomputation from the primary data refutes it. Over the corpus,
+      62 of 76 checkable fields are pinned (81.6%). Three structural results follow:
+      `degree_sequence` is free in every entry, because sum and length are its only published
+      constraints; disconnection costs the pin on `faces`, since V-E+F=2-2g needs connectivity; and
+      the planar block is what pins `components`.
+    tier: VERIFIED
+    evidence: tools/check-redundancy.rb
+    scope: >
+      Pinning is always RELATIVE TO A PERTURBATION CLASS, never absolute, and the class is printed
+      with the result: small, local, single-field. A coordinated multi-field edit is not searched and
+      would not be caught. Measures the artifact's self-checking, NOT any reader's competence — it is
+      the artifact-side half of CORPUS-REDUNDANCY-CATCHES-TWO-OF-THREE.
+    notes: >
+      INDEPENDENT REPRODUCTION OF 073. `--selftest` asserts 001.faces and 002.genus pinned and
+      008.degree_sequence FREE with witness [1,1,2,2] — the exact value 073 seeded by hand, recovered
+      from first principles by code that knows nothing about the exam. Two routes, one answer.
+      IT IS A CODE RATE. Pinning is redundancy, redundancy is error detection, and
+      CAPACITY-RADIUS-TRADEOFF proved detection trades against expressiveness — so 81.6% is not free
+      and a higher number is not automatically better. 064's information-theoretic result and this
+      empirical one are two views of one curve.
+    scope_reviewed: [CORPUS-REDUNDANCY-CATCHES-TWO-OF-THREE, CAPACITY-RADIUS-TRADEOFF, AUTHORITY-ANCHORS-FAIL-TOTALLY]
+
+  - id: DISAGREEMENT-IS-DECOMPOSABLE
+    statement: >
+      Two minds arguing cannot ordinarily tell whether they differ about facts, about definitions or
+      about values, and those are different things that look identical from inside the argument. A
+      format whose factual and definitional layers are re-derivable at both ends isolates the
+      remainder as actually about values. It does not resolve that remainder; it stops the remainder
+      being manufactured by vocabulary mismatch and stops it hiding inside apparent factual dispute.
+    tier: ARGUED
+    evidence: research/notes/074-the-anchor-problem/
+    scope: >
+      Conditional on the re-derivability it assumes, so it inherits every open ledger line: the
+      factual and definitional layers are NOT fully re-derivable today, and OPERATOR-INVENTORY-IS-
+      UNFORCED is the largest reason. An argument about what a closed ledger would buy, not a
+      measurement of what the current artifact buys. Makes no claim that the value remainder is
+      small, tractable, or resolvable — only that it is isolable.
+    notes: >
+      THIS IS THE NARROW THING THAT SURVIVES UL-SUPPLIES-NO-VALUES. Asked how a free mind decides
+      without a master, the answer a derivation anchor permits is "none, and you do not have to pick
+      one": avoiding chaos needs a shared checkable substrate, not an authority, so coordination
+      stops implying submission. That is the entire sense in which this work bears on a benevolent
+      future — not by encoding good values, but by removing the structural necessity of obedience
+      from the act of agreeing.
+    scope_reviewed: [UL-SUPPLIES-NO-VALUES, AUTHORITY-ANCHORS-FAIL-TOTALLY, OPERATOR-INVENTORY-IS-UNFORCED]

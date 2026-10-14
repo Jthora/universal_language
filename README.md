@@ -90,7 +90,7 @@ receiver shares our reading procedure. Every load-bearing edge of the program ro
 ├── RESEARCH-PROTOCOL.md Method: how not to get fooled by scope-dropped results.
 ├── FAILURES.md          Append-only. Failures are never edited into successes.
 ├── claims.yaml          The claim registry. Every substantive claim, tiered, with evidence.
-├── tools/               <!--s:checkers-->9<!--/s--> checkers + check.rb, stats.rb. Prose does not execute; these do.
+├── tools/               <!--s:checkers-->10<!--/s--> checkers + check.rb, stats.rb. Prose does not execute; these do.
 │
 ├── research/            The workshop. notes/ is the working history: 050 = the program,
 │                        052 = the purpose-layer, 053 = deployment, 054 = this architecture.
@@ -138,7 +138,7 @@ receiver shares our reading procedure. Every load-bearing edge of the program ro
 This repo's historical failure mode was **conventions without enforcement**. The rebuild replaces
 conventions with mechanisms:
 
-- Every substantive claim is registered in `claims.yaml` with a tier and evidence; **<!--s:checkers-->9<!--/s--> checkers**
+- Every substantive claim is registered in `claims.yaml` with a tier and evidence; **<!--s:checkers-->10<!--/s--> checkers**
   enforce tier contracts, link integrity, retired-content absence, caveat propagation, scope
   propagation, notes conventions, the seed index, and derivation-premise propagation.
   **They are run by whoever verifies, not by CI** — `ruby tools/check.rb --strict`. There is no CI

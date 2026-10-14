@@ -70,6 +70,39 @@ if register && register['combination_space']
   stats['derived_percent'] = ((100.0 * derived.size) / cs['orbits']).round(1)
 end
 
+# --- survivability (note 074) ------------------------------------------------------------------
+#   pinned_*  — how much of the corpus checks ITSELF, with no oracle and no source to trust
+#   blast_*   — how much of the registry falls if a source does
+# Both are generated here rather than written anywhere, per COUNTS-ARE-GENERATED.
+begin
+  red = JSON.parse(`ruby tools/check-redundancy.rb --json`)
+  stats['pinned_fields']    = red['pinned']
+  stats['checkable_fields'] = red['checkable_fields']
+  stats['pinned_percent']   = red['pinned_percent']
+rescue StandardError
+  nil # measurement, never a gate
+end
+
+begin
+  require 'set'
+  dep = Hash.new { |h, k| h[k] = [] }
+  claims.each { |c| Array(c['scope_reviewed']).each { |h| dep[h.to_s] << c['id'].to_s } }
+  reach = lambda do |root|
+    seen = Set.new
+    q = [root]
+    until q.empty?
+      cur = q.shift
+      dep[cur].each { |d| next if seen.include?(d) || d == root; seen << d; q << d }
+    end
+    seen
+  end
+  ids  = claims.map { |c| c['id'].to_s }
+  conj = claims.select { |c| c['tier'] == 'CONJECTURED' }.map { |c| c['id'].to_s }
+  union = conj.reduce(Set.new) { |acc, c| acc | reach.call(c) } - conj.to_set
+  stats['claims_load_bearing']     = ids.count { |i| reach.call(i).any? }
+  stats['claims_under_conjecture'] = union.size
+end
+
 if ARGV.include?('--json')
   puts JSON.pretty_generate(stats)
 else

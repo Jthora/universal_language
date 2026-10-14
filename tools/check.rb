@@ -15,6 +15,10 @@ checks = [
   ['seed index matches the tree',    'check-index.rb'],
   ['derivation premises propagate', 'check-derivation-premises.rb'],
   ['stated counts are generated', 'check-counts.rb'],
+  # A MEASUREMENT, not a gate: it reports how much of the corpus checks itself and never fails
+  # the build (note 074). It runs here so the number is in front of every reader who verifies,
+  # rather than needing to be remembered.
+  ['corpus self-checking (measurement)', 'check-redundancy.rb'],
 ]
 
 failed = []
