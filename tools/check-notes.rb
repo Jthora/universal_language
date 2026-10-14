@@ -54,6 +54,21 @@ notes.each do |path|
   end
 end
 
+# INDEX COVERAGE. Added 2026-10-14 (note 068's own commit): three consecutive notes — 066, 067,
+# 068 — were written with no row in research/notes/README.md, and nothing noticed. The index is a
+# hand-maintained duplicate of the directory listing, which is the exact class the session spent
+# itself on: a representation with nothing binding it to its referent (F-035, F-036,
+# COUNTS-ARE-GENERATED). The tree is authoritative; this check binds the index to it.
+index_path = 'research/notes/README.md'
+if File.exist?(index_path)
+  index = File.read(index_path, encoding: 'UTF-8')
+  notes.each do |path|
+    id = File.basename(File.dirname(path))[0, 3]
+    next if index.include?("| `#{id}` |")
+    errors << "#{id}: no row in #{index_path} — the index is not optional, it is how a reader finds the note"
+  end
+end
+
 # F-033: a cycle left open while later notes close around it is the deferral pattern that let
 # the adversary front slide three times. Standing programs (type: decision) may stay open;
 # investigative notes (cycle/correction) may not be lapped by more than LAP later notes.
