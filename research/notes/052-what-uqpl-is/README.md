@@ -3,6 +3,7 @@
 **Type:** cycle
 **Opened:** 2026-08-12
 **Status:** closed
+**Superseded by:** `064` *(partly — the WARRANT for the natural tier, not the two-tier structure itself: human/primate core-geometry data is demoted from grounds for universality to corroboration, because "universal" ranges over the domain of mathematical identity)*  ← *the one permitted edit to a closed note (`../README.md`)*
 **Thread:** the purpose-layer of `050`. The previously queued adversary front (Quine, Kripkenstein)
 moves to `053` — redirected by the owner before it ran, not dropped.
 **Prompted by:** *"We're here to figure out WHAT a UQPL really is, what is it for and why is it

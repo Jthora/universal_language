@@ -3971,3 +3971,204 @@ claims:
       permutation matrix four times when it is a 12x3 table of labels. The 12 = 4 x 3 result
       survives both; they are presentation faults, and they are the first thing a hostile reader
       finds.
+
+  # ─── What "universal" ranges over, and the Cure's budget (2026-10-14, note 064) ──
+
+  - id: UNIVERSAL-IS-MATHEMATICAL-SCOPE
+    statement: >
+      "Universal" ranges over the domain of mathematical identity, not the domain of humanity. A
+      property of UL is universal iff it is invariant across every region of reality in which the
+      mathematics is the same. The object asserted to be shared is the map of all possible
+      symbolic geometry — the classification of symbolic-geometric forms up to admissible
+      transformation — not any particular notation, alphabet, or inventory drawn from it.
+    tier: DESIGN-CHOICE
+    evidence: research/notes/064-universal-scope/README.md
+    priority: 0
+    rationale: research/notes/064-universal-scope/README.md
+    alternatives_considered:
+      - "pan-human universality — travels to all human cultures (rejected by the owner 2026-10-14
+         as the human-centric reading; it was never the ledger's reading either, since
+         UNIVERSALITY-IS-A-LEDGER's own rationale already quantified over 'any embodied
+         computational agent in this universe'. It also makes every critique of human universals
+         a critique of UL, which is why the far-transfer and WEIRD-sampling literatures kept
+         landing as threats)"
+      - "convention-free travel with the destination left unspecified (the prior operative
+         definition, UNIVERSAL-MEANS-CONVENTION-FREE; rejected as under-determined — 'travels
+         without a shared convention' does not say travels to whom, and in practice the blank got
+         filled by whichever population had been tested)"
+      - "unconditional mathematical necessity — true in all possible worlds (rejected as
+         overreach: it asserts the necessity of mathematics itself, which this project has no
+         means to establish and does not need. The conditional form 'wherever the mathematics is
+         the same' is the honest scope and is what the owner stated)"
+      - "deferring the question until the semantic gap closes (rejected: the gap is being worked
+         by routes M1-M3 whose success criteria all presuppose a domain, so the domain cannot wait
+         on them without circularity)"
+    scope: >
+      This is a ruling on what the word means, so it is a decision and not a discovery. It fixes
+      the DOMAIN of the universality claim; it does not establish that any UL property actually
+      holds over that domain. It also does not assert that mathematics is itself necessary — the
+      scope is explicitly conditional, and shrinks with the domain of mathematical identity.
+    notes: >
+      OWNER RULING 2026-10-14, resolving an inconsistency already present in this registry.
+      UNIVERSALITY-IS-A-LEDGER (priority 0) set the allowed prior as what any embodied
+      computational agent IN THIS UNIVERSE has; UL-IS-TWO-TIER (priority 1) warranted the natural
+      tier on human and primate core-geometry data, and its own scope line conceded that the
+      tested boundary "currently sits INSIDE primates, narrower than 'most things and lifeforms'".
+      Both entries were honest; together they were not coherent. The ruling says which one the
+      program meant, and the ledger entry was already written for it.
+      This also supplies the domain parameter that THREE-KINDS-OF-UNIVERSAL-CLAIM leaves unset:
+      Kind B ("discovered structure", the ordinary claim of mathematics and physics) says there is
+      an ordering principle but not over what range it holds. That blank is where the
+      human-centric reading entered unchallenged.
+      Does NOT revive the primitive-count question. UWS-PRIMITIVE-COUNT stands: generating sets of
+      one object differ in cardinality. The map is the invariant; a presentation is a choice.
+    scope_reviewed: [UNIVERSALITY-IS-A-LEDGER, UL-IS-TWO-TIER, UWS-PRIMITIVE-COUNT]
+
+  - id: LEDGER-CLOSURE-IS-UNIVERSE-SCOPE
+    statement: >
+      Under UNIVERSAL-IS-MATHEMATICAL-SCOPE, convention-ledger closure is not evidence for
+      universe-scope invariance — it is the same statement. An irreducible conventional residue is
+      precisely a free parameter the mathematics does not fix and which could therefore differ in
+      another region; a closed ledger is exactly the condition that no such parameter exists.
+    tier: ARGUED
+    evidence: research/notes/064-universal-scope/README.md
+    priority: 0
+    scope: >
+      Establishes the equivalence between ledger closure and parameter-freeness of the
+      CLASSIFICATION. Does NOT establish that the ledger closes — it currently does not
+      (map-to-meaning is unbounded). Does NOT make a shared classification sufficient for
+      communication: two minds may share the map exactly and still fail to communicate, because
+      sharing the map does not determine which part of it either is pointing at. This is a result
+      about the syntax layer's domain, not a semantics.
+    notes: >
+      The derivation: ledger closes <=> no element of the load-bearing path is unforced <=> the
+      classification contains no free parameter <=> the classification is fixed by the mathematics
+      alone <=> it is identical wherever the mathematics is identical.
+      THREE CONSEQUENCES, all cheaper than what they replace.
+      (a) The syntax layer already has a partial universality result: marks-to-map = Z/2, proved
+      and machine-checked, is a MEASURED BOUND on how far syntax-layer universality falls short —
+      one bit, with a bootstrap route. The repo held this result without knowing what it was.
+      (b) The falsifier gets cheap: exhibit one load-bearing element of the classification whose
+      value the mathematics does not force. That is a ledger audit, not an experiment, and it has
+      never been run as a universality audit. Contrast UL-IS-EMERGENT-UNIVERSAL, which waits on an
+      empirical test whose precondition is unmet.
+      (c) It explains why READING-INVARIANCE-TARGET is the center rather than one obligation among
+      several: the reading procedure is the last place a local parameter can hide, so a result
+      holding only under our reading would be an unnoticed convention.
+    scope_reviewed: [UNIVERSAL-IS-MATHEMATICAL-SCOPE, UNIVERSALITY-IS-A-LEDGER, READING-INVARIANCE-TARGET, UL-IS-EMERGENT-UNIVERSAL]
+
+  - id: HUMAN-UNIVERSALS-ARE-CORROBORATION
+    statement: >
+      Human and primate core-geometry findings are corroboration for UL's natural tier, not the
+      warrant for its universality. Under universe-scope they are a sample of size one on the
+      question of what the mathematics forces — facts about one substrate sharing an evolutionary
+      history, a planet, a visual system and a physics.
+    tier: ARGUED
+    evidence: research/notes/064-universal-scope/README.md
+    scope: >
+      Demotes the EVIDENTIARY ROLE of the human data, not its truth and not the two-tier
+      structure. UL-IS-TWO-TIER stands as structure, with the tier boundary still an empirical
+      variable and the natural tier still the bootstrap surface. What the natural tier may no
+      longer be is the REASON the thing is universal.
+    notes: >
+      BOOKED BOTH WAYS, because the trade is real.
+      GAINED: an entire literature stops being a threat. The far-transfer record, the
+      WEIRD-sampling critiques, the Levinson critiques of Chomskyan UG, and the standing Changizi
+      caveat F1-c ("all systems are human, one visual architecture, terrestrial scenes,
+      survivorship bias") are all objections to inferring universality FROM human data. The
+      program under universe-scope never makes that inference, so none of them land on the claim;
+      they land on a corroborating data point, where they were always correctly aimed. This repo
+      has been absorbing damage from attacks on a position it does not need to hold.
+      LOST, and it is not small: the human evidence was the only EMPIRICAL support the
+      universality claim had. The burden becomes mathematical and nothing else — the ledger must
+      actually close, and no quantity of cross-cultural data can substitute. Universe-scope is a
+      NARROWER AND HARDER claim than the one it replaces, better defended because better aimed,
+      not because it is easier.
+    scope_reviewed: [UNIVERSAL-IS-MATHEMATICAL-SCOPE, UL-IS-TWO-TIER]
+
+  - id: DRIFT-DETECTION-REQUIRES-DISCRETENESS
+    statement: >
+      Detectability of representational drift requires excluded states. If every state of the
+      representation space is admissible then every drift lands on an admissible state and no
+      drift is detectable, whatever the detector. A positive correction radius therefore requires
+      the admissible set to be uniformly discrete, and on a compact state space, finite.
+    tier: VERIFIED
+    evidence: research/notes/064-universal-scope/verify.py
+    priority: 0
+    scope: >
+      CONDITIONAL ON A MODEL THIS PROJECT HAS NOT ADOPTED. Verified for semantic states modelled
+      as distributions over a finite alphabet under the Fisher-Rao metric — the geometry the
+      wiki's Universal Semantic Manifold page specifies. It is NOT established that UL's semantic
+      space is that manifold; Chentsov's theorem (register B9) gives uniqueness of the METRIC
+      given a statistical manifold, not the manifold. The qualitative statement (no excluded
+      states implies no detectability) is model-independent and follows from what "admissible"
+      means; the quantitative bounds are not.
+    notes: >
+      Checks D and E of verify.py. The consequence the repo did not have: the discreteness of the
+      Cure's encoding is FORCED, not convenient. Nobody had shown that.
+      AND IT LANDS ON THE REPO'S OWN CENTRAL OBJECT. UWS's fixed point under coarse-graining is
+      the combinatorial map, a discrete structure reached by seven independent lines none of which
+      was aimed at the Cure. Under this claim that discreteness is not a happy accident of the
+      notation — it is the property without which no comparator can exist at all. So the
+      structural spine and the purpose-layer are more tightly coupled than CURE-IS-COROLLARY
+      suggests: the Cure is a corollary of the format as registered, but the format being DISCRETE
+      is a precondition of the Cure being POSSIBLE, and that edge was missing from the registry.
+    scope_reviewed: [CURE-IS-COROLLARY]
+
+  - id: CAPACITY-RADIUS-TRADEOFF
+    statement: >
+      Admissible capacity and drift-correction radius trade off against each other, and the
+      trade-off is bounded by the state space's packing function. The Fisher-Rao manifold over an
+      n-letter alphabet has diameter pi independent of n, so separation is a bounded resource that
+      cannot be bought by enlarging the alphabet; at the maximum correction radius the capacity is
+      exactly n, attained by the n point masses — the classical, non-superposed, discrete symbols.
+    tier: VERIFIED
+    evidence: research/notes/064-universal-scope/verify.py
+    priority: 0
+    scope: >
+      CONDITIONAL ON THE FISHER-RAO MODEL, exactly as DRIFT-DETECTION-REQUIRES-DISCRETENESS is —
+      see that claim's scope. Bounds the GEOMETRY available to a drift-correcting format. Says
+      nothing about whether an adversary can find a point inside the admissible set that satisfies
+      every check while meaning something else: it does not touch Structural Equivalence Exploits,
+      which is deceptive alignment restated and the failure mode that matters most.
+    notes: >
+      Checks A, B, C and F of verify.py, stdlib only and deterministic. That capacity cannot
+      exceed n at the maximum radius is a proof rather than a measurement: d = pi iff the supports
+      are disjoint, and an n-letter alphabet admits at most n disjoint nonempty supports.
+      Check F reaches the same ceiling by an independent route — the Construction-A lattice bound
+      min(d,4), verified by enumeration rather than cited (S6, build over cite): a binary code of
+      distance 6 still yields minimum squared norm 4.
+      WHAT IT BUYS THE CURE: a quantitative success criterion, which research/cure/
+      purpose-anchoring.md section 6 records as missing. For a target drift tolerance rho the
+      admissible vocabulary is bounded by the packing number at separation 2*rho — replacing
+      "detect and repair drift" with "detect and repair drift of magnitude at least rho over an
+      admissible set of size at most N(rho)". A specification that can be missed.
+    scope_reviewed: [DRIFT-DETECTION-REQUIRES-DISCRETENESS]
+
+  - id: UNDERSPEC-AND-LOCKING-ARE-ONE-CURVE
+    statement: >
+      The wiki's two internal Cure failure modes "Invariant Under-Specification" and "Fixed-Point
+      Locking" are not independent failures. They are the two ends of the capacity-radius curve:
+      an admissible set too large drives the correction radius to zero so nothing is detectable,
+      and one too small leaves no expressivity. There is therefore no correct invariant set to
+      find, only a point on a curve to choose.
+    tier: ARGUED
+    evidence: research/notes/064-universal-scope/README.md
+    scope: >
+      Inherits the Fisher-Rao conditional from CAPACITY-RADIUS-TRADEOFF. Unifies two of the five
+      internal failure modes the wiki lists; the remaining three — Structural Equivalence
+      Exploits, Non-Injective Repair Collapse, Recursive Repair Drift — are untouched by it. The
+      wiki's own proposed fix for the latter two (repair as gradient descent on an explicit
+      potential rather than an ad hoc nearest-point rule) is not assessed here.
+    notes: >
+      Reframes the Cure's design problem. "Specify the invariants correctly" presumes a correct
+      answer exists; the curve says the designer is spending a budget instead, and the budget is
+      set by the geometry rather than by how carefully the invariants are written.
+      THE GAP THIS DOES NOT CLOSE, named so it is not mistaken for closed: the budget bounds the
+      geometry, not the adversary. The wiki's own best answer to Structural Equivalence Exploits
+      is not geometric either — it is the Theosis observation that a credential performable once
+      is cheaper to fake than a practice that must be re-enacted continuously under conditions the
+      performer does not control, and that the Cure as specified (Encode, Check, Detect, Repair,
+      Reconstruct) is a SNAPSHOT check. That is the sharpest unworked lead in either corpus and is
+      nowhere in this repo's Cure material.
+    scope_reviewed: [CAPACITY-RADIUS-TRADEOFF, DRIFT-DETECTION-REQUIRES-DISCRETENESS]

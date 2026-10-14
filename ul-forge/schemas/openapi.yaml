@@ -124,14 +124,14 @@ paths:
 
   /compose:
     post:
-      summary: Apply a Σ_UL operation to operands
+      summary: Apply a composer operation to operands
       operationId: compose
       description: |
-        Accepts one of the 13 operations (predicate, modify_entity,
-        modify_relation, negate, conjoin, disjoin, embed, abstract,
-        compose, invert, quantify, bind, modify_assertion) plus
-        modal/performative/pragmatic extensions. Operands are GIR JSON
-        strings.
+        Accepts a composer operation name. The set of operations is whatever
+        ul-forge/crates/ul-core/src/composer.rs exports — read it there rather
+        than from a count in prose: an operation inventory is a property of a
+        presentation, not of the notation (claims.yaml#IMPL-COMPOSER-CONSTRUCTORS).
+        Operands are GIR JSON strings.
       requestBody:
         required: true
         content:

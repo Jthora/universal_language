@@ -13,6 +13,15 @@
 #   months. Git history is the archive. The only files permitted to name retired counts are the
 #   ones whose job is to record the retirement (allowlist below).
 #
+# COVERAGE WIDENED 2026-10-14 (note 064)
+#   This checker globbed '**/*.md' only, so the MACHINE-READABLE entry points were invisible to
+#   it — and both had drifted. llms.txt asserted "5 primitives, 13 composition operations" and the
+#   full Sigma_UL signature as current substance; index.json carried the retired four-sort list and
+#   "operations: 13" as structured data. Those are the first files an automated reader fetches, and
+#   the checker reported the tree clean for months while they stood. Same failure class the file was
+#   written for, one directory up: the retirement happened in claims.yaml and the artifacts that
+#   depended on it were left standing. The glob now covers .txt, .json, .yaml and .yml.
+#
 # USAGE
 #   ruby tools/check-retired-content.rb          # report
 #   ruby tools/check-retired-content.rb --strict # exit 1 on violations (CI mode)
@@ -49,8 +58,10 @@ ALLOWLIST = %w[
 violations = []
 checked = 0
 
-Dir.glob('**/*.md').sort.each do |path|
+Dir.glob('**/*.{md,txt,json,yaml,yml}').sort.each do |path|
   next if path.start_with?('archive/')
+  next if path.start_with?('ul-forge/target/', 'ul-forge/node_modules/')
+  next if path.include?('/node_modules/') || path.include?('/target/')
   next if ALLOWLIST.include?(path)
 
   text = File.read(path, encoding: 'UTF-8', invalid: :replace, undef: :replace)

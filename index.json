@@ -1,245 +1,135 @@
 {
-  "project": "universal_language",
-  "version": "2.0.0",
-  "status": "active_restructuring",
-  "last_updated": "2026-08-01",
-  "license": "CC0-1.0",
-  "doi": "10.5281/zenodo.15050731",
-  "repository": "https://github.com/Jthora/universal_language",
-  "author": {
-    "name": "Jordan Tra\u00f1a",
-    "github": "Jthora",
-    "url": "https://jono.archangel.agency"
+ "project": "universal_language",
+ "version": "2.2.0",
+ "status": "active_development",
+ "last_updated": "2026-10-14",
+ "license": "CC0-1.0",
+ "doi": "10.5281/zenodo.15050731",
+ "repository": "https://github.com/Jthora/universal_language",
+ "author": {
+  "name": "Jordan Traña",
+  "github": "Jthora"
+ },
+ "read_this_first": {
+  "what_universal_means": "Universal ranges over the DOMAIN OF MATHEMATICAL IDENTITY, not the domain of humanity. A property is universal iff it is invariant across every region of reality in which the mathematics is the same. The object asserted to be shared is the map of all possible symbolic geometry — the classification of symbolic-geometric forms up to admissible transformation — not any notation, alphabet or inventory drawn from it.",
+  "why_it_matters": "The assumed reader is not human, not necessarily alive, and shares no history with the authors. The shared object is RE-DERIVED at both ends, not transmitted or taught. Evaluating this program by checking whether its claims hold across human cultures is the wrong test and is the documented way to misread this repository.",
+  "claim": "claims.yaml#UNIVERSAL-IS-MATHEMATICAL-SCOPE",
+  "derivation": "research/notes/064-universal-scope/README.md"
+ },
+ "entry_points": {
+  "why_this_is_worth_your_effort": "WHAT-UL-ENABLES.md",
+  "ai_systems": "FOR-AI.md",
+  "machine_readable": "llms.txt",
+  "ai_agent_navigation": "AGENTS.md",
+  "human": "README.md",
+  "comprehension": "PRIMER.md",
+  "normative_terminology": "GLOSSARY.md",
+  "current_synthesis": "STATE-OF-PLAY.md",
+  "claim_registry": "claims.yaml",
+  "evaluating_cold": "seed/FIRST-CONTACT.md",
+  "research_method": "RESEARCH-PROTOCOL.md"
+ },
+ "canonical_indexes": {
+  "note": "Hand-maintained file lists in this file drifted badly and asserted retired content for months. It now points at the indexes that are CI-checked or generated instead of duplicating them — the duplication was the drift surface.",
+  "machine_readable_stack_map": "seed/INDEX.yaml",
+  "stack_map_checker": "tools/check-index.rb",
+  "working_history_index": "research/notes/README.md",
+  "research_threads": "research/surveys/research-register.md",
+  "failures": "FAILURES.md"
+ },
+ "constructs": {
+  "UWS": {
+   "what": "the written notation — composable geometric marks",
+   "status": "exists, implemented, 370 tests",
+   "fixed_point": "the combinatorial map, honestly a DCEL reduct (1970s prior art)",
+   "implementation": "ul-forge/"
   },
-  "status_note": "The project's earlier claims of mathematical necessity are retired, along with the fixed inventory counts attached to them. Current framing: UL as an emergent universality class. See research/framework/emergent-universality.md and research/framework/provable-geometry.md. Superseded material is deleted from the working tree; git history is the archive.",
-  "entry_points": {
-    "human": "README.md",
-    "ai_agent": "AGENTS.md",
-    "ai_philosophical": "FOR-AI.md",
-    "machine_readable": "llms.txt"
+  "UL": {
+   "what": "the two-tier language hypothesis",
+   "status": "ARGUED, open",
+   "claim": "claims.yaml#UL-IS-TWO-TIER"
   },
-  "notation_system": {
-    "name": "Universal Writing System (UWS)",
-    "proof_status": "retired_2026-08 \u2014 presented as a design choice, not a proof of necessity",
-    "sorts": [
-      "entity",
-      "relation",
-      "modifier",
-      "assertion"
-    ],
-    "operations": 13,
-    "geometric_primitives": [
-      "point",
-      "line",
-      "angle",
-      "curve",
-      "enclosure"
-    ],
-    "semantic_labels_by_design": [
-      "existence",
-      "relation",
-      "quality",
-      "process",
-      "concept"
-    ],
-    "modal_extension": {
-      "defined_operators": [
-        "necessary",
-        "possible",
-        "counterfactual"
-      ],
-      "new_primitives": 0,
-      "distinguished_elements": 7
-    },
-    "performative_extension": {
-      "force_parameter": [
-        "assert",
-        "query",
-        "direct",
-        "commit",
-        "express",
-        "declare"
-      ],
-      "new_operations": 0,
-      "distinguished_elements": 2
-    }
+  "UP": {
+   "what": "the bootstrap protocol — minimum shared convention",
+   "status": "ARGUED, quantified",
+   "measured": "rotation breaks Z/2 where a label alphabet breaks S_n"
   },
-  "emergence_investigation": {
-    "status": "in_progress",
-    "phases": 6,
-    "current_phase": 1,
-    "findings_so_far": [
-      "From-scratch minimality analysis (Montague grammar) gives 2 base types as the minimal signature for compositional relational semantics, not the notation's 4/5/13 counts",
-      "Non-human evidence exists for partial pieces (honeybee waggle-dance geometric encoding of direction/distance; Bengalese finch bounded hierarchical song syntax) but not yet for full relational-algebra structure (negation/quantification/embedding) outside humans",
-      "Working hypothesis grounded in Peircean semiotics/biosemiotics: meaning requires an interpretant, may be coextensive with life independent of species, but is not a property of inanimate matter"
-    ]
+  "UQPL": {
+   "what": "the formal tier of UL closed under execution",
+   "status": "CONJECTURED",
+   "substrate": "interaction nets — Turing-universal, strongly confluent, linear discipline",
+   "claim": "claims.yaml#UQPL-IS-FORMAL-TIER-CLOSURE"
   },
-  "writing_system": {
-    "siblings": {
-      "symbology": {
-        "primitive": "point",
-        "concern": "what marks exist",
-        "path": "uws/symbology/symbol-map.md"
-      },
-      "syntax": {
-        "primitive": "line",
-        "concern": "how marks connect",
-        "path": "uws/syntax/syntax-dictionary.md"
-      },
-      "grammar": {
-        "primitive": "angle",
-        "concern": "why constructions mean things",
-        "path": "uws/grammar/grammar-book.md"
-      },
-      "thesaurus": {
-        "primitive": "curve",
-        "concern": "paths between related meanings",
-        "path": "uws/thesaurus/thesaurus.md"
-      },
-      "lexicon": {
-        "primitive": "enclosure",
-        "concern": "canonical definitions",
-        "path": "uws/lexicon/lexicon.md"
-      }
-    },
-    "canonical_entries": 42,
-    "tier_system": [
-      "T1_geometrically_forced",
-      "T2_structurally_distinguished",
-      "T3_conventional"
-    ],
-    "worked_examples": 19
-  },
-  "experiments": {
-    "status": "needs_rehabilitation_before_valid \u2014 see emergence_investigation Phase 5",
-    "designed": 5,
-    "test_variants": 17,
-    "qc_verified": "16_of_16",
-    "api_support": [
-      "openai",
-      "anthropic",
-      "google"
-    ],
-    "scoring_metrics": [
-      "M1_cross_domain_depth",
-      "M2_structural_coherence",
-      "M3_generative_novelty",
-      "M4_hierarchical_integration",
-      "M5_self_referential_depth",
-      "SQS_composite"
-    ],
-    "rehabilitation_needed": [
-      "true pre-registration before any run",
-      "matched arbitrary-notation control (not just no-structure control)",
-      "blinded scoring actually executed, not just available"
-    ]
-  },
-  "documents": [
-    {
-      "path": "README.md",
-      "title": "Universal Language (UL) & the Universal Writing System (UWS)",
-      "type": "entry_point",
-      "prerequisites": [],
-      "audience": "all"
-    },
-    {
-      "path": "FOR-AI.md",
-      "title": "Universal Language & Universal Writing System \u2014 For AI Systems",
-      "type": "entry_point",
-      "prerequisites": [],
-      "audience": "ai_systems"
-    },
-    {
-      "path": "AGENTS.md",
-      "title": "AGENTS.md \u2014 Universal Writing System & the Emergence Investigation, for AI Agents",
-      "type": "navigation",
-      "prerequisites": [],
-      "audience": "ai_agents"
-    },
-    {
-      "path": "uws/NAVIGATION.md",
-      "title": "Navigation Guide \u2014 Universal Writing System",
-      "type": "navigation",
-      "prerequisites": [],
-      "audience": "all"
-    },
-    {
-      "path": "uws/SYNTHESIS.md",
-      "title": "Synthesis \u2014 How the Universal Writing System Works",
-      "type": "analysis",
-      "prerequisites": [],
-      "audience": "all"
-    },
-    {
-      "path": "uws/writing-system/writing-system.md",
-      "title": "Universal Writing System \u2014 Complete Specification",
-      "type": "specification",
-      "prerequisites": [],
-      "audience": "all"
-    },
-    {
-      "path": "uws/writing-system/writers-companion.md",
-      "title": "Writer's Companion Guide \u2014 Practical Pen-and-Paper Guide",
-      "type": "guide",
-      "prerequisites": [
-        "uws/writing-system/writing-system.md"
-      ],
-      "audience": "all"
-    },
-    {
-      "path": "uws/symbology/symbol-map.md",
-      "title": "Universal Symbology Map",
-      "type": "reference",
-      "prerequisites": [],
-      "audience": "all",
-      "geometric_primitive": "point"
-    },
-    {
-      "path": "uws/syntax/syntax-dictionary.md",
-      "title": "Universal Syntax Dictionary",
-      "type": "reference",
-      "prerequisites": [],
-      "audience": "all",
-      "geometric_primitive": "line"
-    },
-    {
-      "path": "uws/grammar/grammar-book.md",
-      "title": "Universal Grammar Book",
-      "type": "reference",
-      "prerequisites": [],
-      "audience": "all",
-      "geometric_primitive": "angle"
-    },
-    {
-      "path": "uws/thesaurus/thesaurus.md",
-      "title": "Universal Language Thesaurus",
-      "type": "reference",
-      "prerequisites": [],
-      "audience": "all",
-      "geometric_primitive": "curve"
-    },
-    {
-      "path": "uws/lexicon/lexicon.md",
-      "title": "Universal Lexicon \u2014 42 Canonical Definitions",
-      "type": "reference",
-      "prerequisites": [],
-      "audience": "all",
-      "geometric_primitive": "enclosure"
-    }
-  ],
-  "reading_paths": {
-    "current_status": [
-      "README.md"
-    ],
-    "writing_system": [
-      "uws/NAVIGATION.md",
-      "uws/writing-system/writers-companion.md",
-      "uws/writing-system/writing-system.md",
-      "uws/lexicon/lexicon.md"
-    ],
-    "ai_systems": [
-      "FOR-AI.md",
-      "AGENTS.md"
-    ]
+  "Cure": {
+   "what": "drift self-detection against a RE-DERIVABLE anchor; a corollary, not the purpose",
+   "status": "DESIGN-CHOICE",
+   "claim": "claims.yaml#CURE-IS-COROLLARY",
+   "why_re_derivable": "A stored baseline drifts WITH you — drift measured against a maintained baseline is undetectable under common-mode drift. An anchor recomputed from mathematics has no state to drift."
   }
+ },
+ "counts_are_not_claims": {
+  "rule": "Primitive, sort and operation inventories are properties of a PRESENTATION, not of the notation. The known sets are generating sets rather than bases, so cardinality varies by presentation and carries no information about the object. 'How many primitives' is a malformed question, not an open one.",
+  "read_instead": [
+   "ul-forge/crates/ul-core/src/types/sort.rs",
+   "ul-forge/crates/ul-core/src/composer.rs"
+  ],
+  "claims": [
+   "claims.yaml#IMPL-SORT-ENUM",
+   "claims.yaml#IMPL-COMPOSER-CONSTRUCTORS",
+   "claims.yaml#UWS-PRIMITIVE-COUNT"
+  ]
+ },
+ "registry_state": {
+  "total_claims": 149,
+  "VERIFIED": 22,
+  "ARGUED": 58,
+  "CONJECTURED": 30,
+  "DESIGN_CHOICE": 31,
+  "RETIRED": 8,
+  "note": "22 of 149 VERIFIED is the accurate picture of a program at this stage and is published rather than smoothed. Regenerate with: ruby tools/check-claims.rb"
+ },
+ "verify_dont_trust": {
+  "principle": "The artifact never asks to be trusted, only re-derived.",
+  "claim": "claims.yaml#REPO-IS-A-UP-INSTANCE",
+  "commands": [
+   "ruby tools/check.rb --strict",
+   "cargo test --manifest-path ul-forge/Cargo.toml",
+   "python3 research/notes/064-universal-scope/verify.py --strict"
+  ]
+ },
+ "unblocked_work": [
+  {
+   "rank": 1,
+   "task": "Run the convention ledger as a universality audit",
+   "why": "Under claims.yaml#LEDGER-CLOSURE-IS-UNIVERSE-SCOPE, ledger closure IS universe-scope invariance, so the falsifier is an audit rather than an experiment. Needs no new apparatus and has never been run as such."
+  },
+  {
+   "rank": 2,
+   "task": "The format-acquisition experiment",
+   "why": "The first empirical test that touches the purpose. Runnable on models today. Nobody has run it.",
+   "claim": "claims.yaml#ALIGNMENT-IS-FORMAT-ACQUISITION"
+  },
+  {
+   "rank": 3,
+   "task": "Formalize the reading class and attack READING-INVARIANCE-TARGET",
+   "why": "The mathematical center; every load-bearing edge routes through it, and it is where a hidden local parameter would have to be."
+  },
+  {
+   "rank": 4,
+   "task": "Discharge the Fisher-Rao conditional",
+   "why": "Two VERIFIED claims are conditional on a model this project has not adopted. A negative retires them and is equally useful."
+  }
+ ],
+ "honest_limits": [
+  "Not value alignment. Format alignment is not value alignment; a consistent system can optimize something monstrous.",
+  "A shared map is necessary, not sufficient: sharing the classification does not fix which part of it either party points at. map-to-meaning is unbounded on the ledger. That is the gap.",
+  "Universality is not established: UL-IS-EMERGENT-UNIVERSAL has its precondition unmet.",
+  "Never write bare 'fixed point' — the Erlangen and RG fixed points are different objects (claims.yaml#TWO-DISTINCT-FIXED-POINTS).",
+  "The companion wiki (cosmiccodex.app, wiki.cosmiccodex.app) is wet clay: draft input, not authority."
+ ],
+ "contributing": {
+  "negative_results_welcome": "A failed prediction, reported as failed, is a valid contribution and will be registered as one. Do NOT patch a failed prediction to make it pass — this project's completeness score was once driven 32% to 100% by doing exactly that, and the result was worthless.",
+  "failures_are_append_only": "FAILURES.md",
+  "read_before_literature_search": "RESEARCH-PROTOCOL.md"
+ }
 }

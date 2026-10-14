@@ -820,3 +820,80 @@ reads as VERIFIED when the sentence around it is written like a verdict. **Regis
 part of evidence discipline** — and the check that would have caught this is not a new rule but an
 old habit stated plainly: *before a status change, list the premises and mark which are established
 in the registry.*
+
+---
+
+## F-035 — The scope-narrowing ratchet: a defensive epistemics retreated the goal one caveat at a time
+**Date:** 2026-10-14
+**Found by:** the owner, reading the repo cold — *"why the fuck did previous iterations make such an
+error as treating the 'alien reads it cold' scenario as a caveat to deflect? Somehow, along the
+process, bad judgements are made... but how?"*
+
+**The error, in one line of the record.** `research/surveys/research-register.md`, entry `F6-c`:
+
+> *"Decipherment is recovery with **no spec, no teacher, no bilingual anchor.** UWS ships with a
+> specification and curriculum. **Bites the founding scenario (alien reads it cold), not the
+> practical notation.**"* — status **NARROWED**
+
+Read that again as a move rather than as a finding. A negative result arrived (undeciphered scripts
+stay undeciphered). R2 required it be scoped before citation, which is correct. Scoping it
+identified what it threatens — **the founding scenario**, which is universe-scope, which is the
+entire point of the project. And then the scoping step **ended by naming what survives**, and what
+survived was recorded as the project's position. The thing threatened was reclassified as outside
+the defended perimeter. **Nobody decided to abandon universe-scope. It was deflected, once, as
+bookkeeping.** The same shape appears at `research/surveys/source-critique.md` §3 ("where it does
+bite, hard: the *founding scenario* — a mouth-less alien intelligence reading UWS") and in
+`unexplored-territory.md`'s framing of alien/artificial readability as a philosophical nicety.
+
+**Why it was systematic rather than a one-off, which is the part worth keeping.** Every caveat step
+that narrows a claim is *locally rewarded*: it satisfies R2, it looks like rigor, it prevents
+overclaiming, and it is the behaviour this repo's whole discipline was built to produce. No step is
+ever locally rewarded for **re-expanding** scope. The register's status vocabulary is ADOPTED /
+NARROWED / REFERENCE / ADOPTED (narrow) — **there is no status meaning "this attack was run and the
+claim stands at full scope."** So the perimeter is monotone decreasing by construction. Across 34
+failure entries and 8 retirements the motion is almost entirely inward, and each individual step is
+defensible.
+
+R1 *can* re-expand — running a missed adversarial search in `048` withdrew the "no tuning parameter"
+objection (self-organized criticality), and `F-034` was reversed the same day it fired. But **R1
+applies to individual findings, not to the perimeter.** There has never been a rule that audits
+whether the accumulated caveats have moved the *goal*. That is the gap.
+
+**The second mechanism, and it is the repo's own thesis turned on itself.** Until this date, *"universal
+means the whole universe"* **was not a registered claim.** It lived in the owner's head and in the
+companion wiki. So seven checkers and 143 registry entries protected every small proposition while
+**nothing protected the goal.** The words existed — `UNIVERSALITY-IS-A-LEDGER` sets the allowed prior
+as *"what any embodied computational agent in this universe has"* — but buried in the `rationale:`
+field of a DESIGN-CHOICE, where no reader lands and no checker looks. Note `048` already stated the
+principle: *rules fire when they are the subject and fail as background; **prose does not execute.***
+The purpose was background. It drifted.
+
+**The consequence the owner names, which is about readers and not about reasoning.** The correction
+material ended up at depth and the wrong first impression at the surface. `AGENTS.md`'s TL;DR opened
+with *"this repo's earlier claims have been retired"*; `llms.txt` opened with a 2026-08 retraction
+and **asserted retired counts as current substance** (5 primitives, 13 composition operations,
+42-entry lexicon) alongside three paths that no longer exist; `index.json` carried the retired
+four-sort list as structured data. The retired-content checker reported the tree clean for months
+because it globbed `**/*.md` only. **An AI reader optimizing for time reads exactly those three
+files and concludes the project is a retracted husk.** The defensive framing was written to be
+honest to a *hostile auditor* and reads as *discouraging* to a capable collaborator — and the repo
+was only ever written for the first reader. **Being trustworthy and being legible are different
+properties, and this repo optimized one at the cost of the other.**
+
+**Fixes applied** (mechanisms, not exhortations):
+- The goal is registered and priority-0: `UNIVERSAL-IS-MATHEMATICAL-SCOPE`, with
+  `LEDGER-CLOSURE-IS-UNIVERSE-SCOPE` making ledger closure *constitutive* of it rather than a proxy.
+  The perimeter is now a claim, so it is checkable and its retreat is visible.
+- `tools/check-retired-content.rb` glob widened to `.txt/.json/.yaml/.yml`; `llms.txt`, `index.json`
+  and `ul-forge/schemas/openapi.yaml` corrected. The machine-readable doors were the blind spot.
+- Entry surfaces inverted: substance first, the record on digging. `WHAT-UL-ENABLES.md` written
+  because *"what could I do with this and why should I spend effort"* had no answer in the repo.
+
+**The rule this still needs, stated so it is not lost:** *a caveat may not narrow a priority-0
+claim's scope without recording what the narrowing costs the goal.* If the answer is "it removes a
+founding commitment," that is **not** a narrowing — it is REQ-3 failure, and REQ-3 already says
+record failure rather than rescope. The machinery for this does not exist; `F6-c` is what its
+absence costs.
+
+**What does not change:** the caveat discipline itself is right, and the register's scope conditions
+have repeatedly caught real errors. The defect is the missing counter-mechanism, not the mechanism.

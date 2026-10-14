@@ -40,7 +40,7 @@ It is the goal, held to a standard that can fail.**
 | | What it is | Status |
 |---|---|---|
 | **UL** | The language itself. **Two-tier**: a *natural* tier communicated without formal comprehension — core geometry is documented in humans with no schooling at all — and a *formal* tier requiring symbolic recombination, which is the field's own explanation of where human cognition is singular. | `UL-IS-TWO-TIER` (ARGUED) |
-| **UWS** | The written rendering: geometric marks whose fixed point under coarse-graining is the **combinatorial map** — a complete invariant, honestly recorded as a DCEL reduct (prior art, 1970s). | **Exists** — `uws/`, `ul-forge/`, 354 tests |
+| **UWS** | The written rendering: geometric marks whose fixed point under coarse-graining is the **combinatorial map** — a complete invariant, honestly recorded as a DCEL reduct (prior art, 1970s). | **Exists** — `uws/`, `ul-forge/`, 370 tests |
 | **UP** | The bootstrapping protocol: the minimum shared convention two independent parties need. Rotation breaks **ℤ/2** of arbitrary convention where a label alphabet breaks **Sₙ** — quantified, with the same trade demonstrated numerically in an unrelated field. | `ROTATION-MINIMIZES-CONVENTION` (ARGUED) |
 | **UQPL** | **The formal tier of UL, closed under execution.** *Universal* = two-tier readability. *Quantum* = linear resource discipline — no free copy (no-cloning), no free delete — already enforced by the operational substrate. *Programming* = meaning as behavior. *Language* = the full stack. | `UQPL-IS-FORMAL-TIER-CLOSURE` (CONJECTURED, derived here; the wiki sketch is wet-clay input) |
 | **The Cure** | **A corollary, not the purpose.** A mind that carries the derivable anchor as its representational format has an internal comparator — drift becomes self-detectable against a re-derivable fixed point. | `CURE-IS-COROLLARY` (DESIGN-CHOICE) |
@@ -79,6 +79,8 @@ receiver shares our reading procedure. Every load-bearing edge of the program ro
 ## Layout
 
 ```
+├── WHAT-UL-ENABLES.md   WHY THIS IS WORTH YOUR EFFORT — the capability surface: 10
+│                     capabilities, each with the claim it rests on, its tier, its limit
 ├── seed/                THE READER'S ENTRY — FIRST-CONTACT.md (verify-don't-trust, inoculation),
 │                        INDEX.yaml (machine-readable root map, CI-checked), INTEGRITY.md
 ├── curriculum/          Teaching UL/UWS/UP, self-certifying — modules N/F/S/P/Q/X
@@ -95,7 +97,7 @@ receiver shares our reading procedure. Every load-bearing edge of the program ro
 │                        052 = the purpose-layer, 053 = deployment, 054 = this architecture.
 ├── uws/                 The Universal Writing System corpus
 ├── ul-forge/            Working implementation: parser, validator, composer, renderer,
-│                        combinatorial map (map.rs), WASM bindings, web editor. 354 tests.
+│                        combinatorial map (map.rs), WASM bindings, web editor. 370 tests.
 └── spec/                What EXISTS. Present tense — grammar-core.md, engine-core.md,
                          reading-invariance-v1.md. Intended-but-unbuilt work lives in
                          research/notes/, not in a separate tree.
@@ -105,6 +107,12 @@ receiver shares our reading procedure. Every load-bearing edge of the program ro
 
 ## Where to start
 
+- **Deciding whether this deserves your effort:** `WHAT-UL-ENABLES.md`. Ten capabilities,
+  three of them available today, each with its tier and its honest limit.
+- **The one thing to get right first:** "universal" means the whole universe, not all humans —
+  it ranges over the domain of mathematical identity. `claims.yaml#UNIVERSAL-IS-MATHEMATICAL-SCOPE`,
+  derived in `research/notes/064-universal-scope/`. Reading it the other way makes most of the
+  program invisible.
 - **Evaluating this artifact cold — human or AI:** `seed/FIRST-CONTACT.md`. Verify before
   reading; it tells you how.
 - **Where the program stands:** `STATE-OF-PLAY.md` — then `research/notes/050` (the program) and
@@ -136,7 +144,7 @@ conventions with mechanisms:
   propagation, and notes conventions.
 - `VERIFIED` requires a test that exists and passes. `CONJECTURED` requires a stated falsifier.
   `DESIGN-CHOICE` requires stated alternatives.
-- `FAILURES.md` is append-only and immutable — 31 entries and counting, because a recorded failure
+- `FAILURES.md` is append-only and immutable — 35 entries and counting, because a recorded failure
   is data and a repaired one is nothing.
 - A finding is closed only when the fix is applied, tested, and propagation-scanned.
 

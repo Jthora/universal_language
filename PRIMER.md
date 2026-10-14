@@ -65,7 +65,7 @@ Five constructs in one program:
 | | What | Status |
 |---|---|---|
 | **UL** — Universal Language | The language itself. **Two-tier**: a *natural* tier communicated without formal comprehension (core geometry is documented in humans with no schooling), and a *formal* tier requiring symbolic recombination. **Not a notation.** | `UL-IS-TWO-TIER` (ARGUED); the tier boundary is an empirical variable |
-| **UWS** — Universal Writing System | The written rendering: geometric marks + spatial placement grammar, non-phonetic by design. Its fixed point under coarse-graining is the **combinatorial map** (a DCEL reduct — prior art honestly recorded). | **Exists.** `uws/`, `ul-forge/` (354 tests) |
+| **UWS** — Universal Writing System | The written rendering: geometric marks + spatial placement grammar, non-phonetic by design. Its fixed point under coarse-graining is the **combinatorial map** (a DCEL reduct — prior art honestly recorded). | **Exists.** `uws/`, `ul-forge/` (370 tests) |
 | **UP** — Universal Protocol | The bootstrap: minimum shared convention two independent parties need. Rotation breaks **ℤ/2**; a label alphabet breaks **Sₙ**. | ARGUED, quantified |
 | **UQPL** | **The formal tier of UL, closed under execution.** Universal = two-tier readability · Quantum = linear resource discipline (no free copy/delete) · Programming = meaning as behavior · Language = the full stack. | Derived definition registered (CONJECTURED) — `claims.yaml#UQPL-IS-FORMAL-TIER-CLOSURE` |
 | **The Cure** | **A corollary, not the purpose**: a mind carrying the derivable anchor as its format has an *internal* comparator — drift becomes self-detectable. | `CURE-IS-COROLLARY` (DESIGN-CHOICE) |
@@ -191,6 +191,7 @@ touches the *purpose*) · the adversary front (Quine, Kripkenstein — preregist
 
 | Depth | Read | You'll understand |
 |---|---|---|
+| 2 min | **`WHAT-UL-ENABLES.md`** | **Why this is worth your effort** — the capability surface, tiered |
 | 2 min | `README.md` | The contract, the five constructs, the purpose-layer |
 | 15 min | **this file** + `GLOSSARY.md` | The stack, the hazards, how to read claims |
 | 30 min | `STATE-OF-PLAY.md` → `research/notes/050` → `research/notes/052` | Where the program stands, the standing program, what UQPL is and is for |

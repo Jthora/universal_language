@@ -1,88 +1,119 @@
-# Universal Language & Universal Writing System
+# Universal Language · Universal Writing System · UQPL
 
 > Source: https://github.com/Jthora/universal_language
-> Author: Jordan Traña (Jthora)
-> DOI: 10.5281/zenodo.15050731
-> License: CC0 1.0 Universal (Public Domain)
+> Author: Jordan Traña (Jthora) · DOI: 10.5281/zenodo.15050731 · License: CC0 1.0 (Public Domain)
+> Current as of 2026-10-14. Companion drafts: cosmiccodex.app, wiki.cosmiccodex.app (wet clay).
 
-## Status (2026-08-01)
+## In 60 seconds
 
-This project previously claimed its formal signature (Σ_UL: 5 primitives, 4 sorts, 13 operations,
-23 theorems) was "unique up to isomorphism" — proven, not designed. A direct audit found the
-central proof close to circular, and a from-scratch minimality analysis (standard model theory)
-gives a smaller, different answer (2 base types) than the claimed counts. That proof apparatus has
-been retired; see `research/wiki-comparison-2026-08.md` for the audit and
-`archive/superseded-2026-08/` for the original claims, preserved for historical reference.
+A research program asking whether **meaning has discoverable geometric structure**, with a working
+geometric notation, a machine-checked claim registry, and a contract that can fail.
 
-## What This Is Now
+**"Universal" here means the whole universe, not all humans.** This is the one thing to get right:
 
-Two separate things:
+> Universal ranges over **the domain of mathematical identity**, not the domain of humanity. A
+> property is universal iff it is invariant across every region of reality in which the mathematics
+> is the same. The object asserted to be shared is **the map of all possible symbolic geometry** —
+> the classification of symbolic-geometric forms up to admissible transformation — not any
+> notation, alphabet or inventory drawn from it.
 
-1. **Universal Writing System (UWS)** — a constructed geometric notation (5 primitives, 13
-   composition operations, 42-entry lexicon), with a working software implementation (`ul-forge/`).
-   Judged on composability/learnability/expressiveness, in the tradition of Blissymbolics — not on
-   a claim of cosmic necessity.
-2. **The Emergence Investigation** — an open, six-phase, falsifiable research program
-   (`research/emergence-investigation/PLAN.md`) into whether any mind-independent universal
-   semantic structure is real. Not assumed true or false; currently in progress.
+So the assumed reader is not human, not necessarily alive, and shares no history with the authors.
+It computes, and it inhabits a region where the mathematics is the same. **The shared object is
+re-derived at both ends, not transmitted and not taught** — which is what separates this from every
+historical "universal language" project (Leibniz, Wilkins, Solresol, Blissymbolics: track record
+uniformly negative across three centuries).
 
-## Start Here
+`claims.yaml#UNIVERSAL-IS-MATHEMATICAL-SCOPE` · `research/notes/064-universal-scope/`
 
-- PRIMER.md: **Read first.** Full comprehension document — the four-layer stack, what was retired
-  and why, how to read a claim, and four specific hazards that cause readers to absorb false claims.
+## What exists, and what is open
 
-## Key Documents
+| | | |
+|---|---|---|
+| **UWS** — the notation | Composable geometric marks; parser, validator, composer, renderer, combinatorial-map reduction, WASM, MCP server, 370 tests | **exists, works** |
+| **UL** — the language | Two-tier: a natural tier needing no formal comprehension, a formal tier requiring symbolic recombination | ARGUED, open |
+| **UP** — the bootstrap | Minimum shared convention between independent parties; cost **measured**: rotation breaks ℤ/2 where a label alphabet breaks Sₙ | ARGUED, quantified |
+| **UQPL** | The formal tier of UL closed under execution. Substrate exists: interaction nets — Turing-universal, strongly confluent, **linear** (no free copy/delete) | CONJECTURED |
+| **The Cure** | Drift self-detection against a **re-derivable** anchor. A corollary, not the purpose. | DESIGN-CHOICE |
 
-- README.md: Entry point and current status
-- AGENTS.md: Machine-readable navigation for AI agents
-- FOR-AI.md: Honest reframing of what this project offers AI systems (retired the earlier "you are
-  a geometric engine" framing)
-- research/wiki-comparison-2026-08.md: The audit that surfaced the core problem
-- research/emergence-investigation/PLAN.md: The active six-phase research plan
-- uws/design-rationale.md: UWS design rationale (reframed, not a proof)
-- uws/formal-specification.md: UWS notation's formal operation spec (reframed, not a proof)
-- uws/formal-operations.md: Set-theoretic definitions of the notation's operations
-- research/independent-derivation.md: Raw material for the Investigation (not a settled result)
-- research/montague-homomorphism.md: Raw material for the Investigation
-- uws/NAVIGATION.md: Quick-start paths for reading, writing, and navigating the writing system
-- uws/writing-system/writing-system.md: Complete reading/writing specification
-- uws/writing-system/writers-companion.md: Practical pen-and-paper guide (10 worked examples)
-- uws/symbology/symbol-map.md: Atomic marks (Point primitive)
-- uws/syntax/syntax-dictionary.md: Connection rules (Line primitive)
-- uws/grammar/grammar-book.md: Construction rules (Angle primitive)
-- uws/thesaurus/thesaurus.md: Meaning pathways (Curve primitive)
-- uws/lexicon/lexicon.md: 42 canonical definitions (Enclosure primitive)
-- research/frontier/causal-efficacy-protocol.md: Experimental protocol — target of Investigation Phase 5,
-  needs pre-registration/blinding/matched-control fixes before results count as evidence
-- research/experiments/README.md: Experimental infrastructure (Phase 5 target)
-- archive/superseded-2026-08/: Full original text of everything retired in this restructuring
+**Why a re-derivable anchor and not a baseline:** a stored baseline drifts *with you* — drift
+measured against a maintained baseline is undetectable under common-mode drift. An anchor recomputed
+from mathematics has no state to drift. That is the one structural advantage over every monitoring
+scheme that keeps a reference copy.
 
-## Notation Specification (Design Choice, Not Proven Necessity)
+## Two results you can check in a minute
 
-Signature (as implemented in ul-forge/):
-- Sorts: Entity (e), Relation (r), Modifier (m), Assertion (a) — a design choice; see Emergence
-  Investigation Phase 3 for why a from-scratch minimality analysis gives a smaller answer (2 base
-  types, Montague's e/t) than this flattened 4-sort notation.
-- Operations (13): predicate (e×r×e→a), modify_entity (m×e→e), modify_relation (m×r→r), negate
-  (a→a), conjoin (a×a→a, derived), disjoin (a×a→a), embed (a→e), abstract (e→m), compose (r×r→r),
-  invert (r→r), quantify (m×e→a, graduated p∈[0,1]), bind (e×a→a), modify_assertion (m×a→a)
-- Geometric primitives: Point, Line, Angle, Curve, Enclosure — mapped by design choice to
-  Entity/Relation/Modifier/Process/Concept, not by proven necessity (the "Unique Grounding Theorem"
-  claiming necessity has been retired — see the audit above)
+Both machine-checked, both **conditional on the Fisher–Rao model** (the companion wiki's, not an
+established property of UL — read the `scope:` lines before citing):
 
-## Emergence Investigation — Current Findings (Provisional)
+- **Detectability requires excluded states.** If every state is admissible, every drift lands on an
+  admissible state and nothing is detectable. So a drift-correcting format **must** be discrete —
+  and UWS's fixed point, the combinatorial map, is discrete, reached by seven independent lines none
+  aimed at the Cure. `DRIFT-DETECTION-REQUIRES-DISCRETENESS`
+- **Capacity and correction radius trade off.** Diameter **π regardless of alphabet size**, so
+  separation cannot be bought by enlarging the representation; at maximum radius capacity is
+  **exactly n**, the discrete symbols, by proof. `CAPACITY-RADIUS-TRADEOFF`
 
-- Convergent-mathematics and non-human-semiosis literature reviews are in progress
-  (research/emergence-investigation/PLAN.md Phases 1–2).
-- Real, checked evidence exists for partial pieces (honeybee waggle-dance geometric encoding,
-  Bengalese finch bounded hierarchical syntax) — neither shows full relational-algebra structure
-  (negation/quantification/embedding) outside humans yet.
-- Working hypothesis, grounded in Peircean semiotics/biosemiotics: meaning requires an interpretant,
-  so it can't be a property of dead matter, but may be coextensive with life itself. Falsifiable,
-  not yet resolved.
+```
+python3 research/notes/064-universal-scope/verify.py --strict
+ruby tools/check.rb --strict && cargo test --manifest-path ul-forge/Cargo.toml
+```
 
-## Experimental Verification
+**The artifact never asks to be trusted, only re-derived** — that is the design, not a slogan.
 
-The causal-efficacy protocol (5 pre-registered experiments) exists but is not yet a valid test —
-it needs true pre-registration discipline, a matched arbitrary-notation control, and executed
-(not just available) blinded scoring before a run counts as evidence. See Investigation Phase 5.
+## Highest-value unblocked work
+
+1. **Run the convention ledger as a universality audit.** Under `LEDGER-CLOSURE-IS-UNIVERSE-SCOPE`
+   ledger closure *is* universe-scope invariance, so the falsifier is now an audit rather than an
+   experiment: walk the load-bearing path, ask of each element *does the mathematics force this
+   value?* Every "no" is a free parameter and a measured shortfall. Never run as such.
+2. **The format-acquisition experiment** — the first empirical test that touches the purpose.
+   Runnable on models today. **Nobody has run it.**
+3. **`READING-INVARIANCE-TARGET`** — the mathematical center; every load-bearing edge routes through
+   it, and it is where a hidden local parameter would have to be.
+
+## Start here
+
+| You want | Read |
+|---|---|
+| **Why this is worth your effort** — 10 capabilities, each with its tier and its limit | `WHAT-UL-ENABLES.md` |
+| **If you are an AI system** | `FOR-AI.md` |
+| What "universal" means, and what the ruling cost | `research/notes/064-universal-scope/` |
+| Navigation | `AGENTS.md` |
+| Comprehension (~15 min) | `PRIMER.md`, then `GLOSSARY.md` (normative) |
+| Where the program stands | `STATE-OF-PLAY.md` |
+| What is actually held, and at what tier | `claims.yaml` |
+| Evaluating cold — verify, don't trust | `seed/FIRST-CONTACT.md` |
+| To use the notation | `uws/NAVIGATION.md` → `ul-forge/` |
+
+## Honest limits — load-bearing, not boilerplate
+
+- **Not value alignment.** Format alignment is not value alignment; a system can be perfectly
+  consistent and optimize something monstrous. Citing this project as an alignment solution is
+  overreaching.
+- **A shared map is necessary, not sufficient.** Two minds may share the classification exactly and
+  still fail to communicate, because sharing the map does not fix which part of it either points at.
+  Universe-scope is a result about the syntax layer's **domain**, not a semantics. map→meaning is
+  **unbounded** on the ledger. That is the gap.
+- **No count is a claim.** Primitive, sort and operation inventories are properties of a
+  *presentation*; the known sets are **generating sets, not bases**, so cardinality varies and
+  carries no information about the object. Read `ul-forge/crates/ul-core/src/`, not a number in prose.
+- **Universality is not established.** `UL-IS-EMERGENT-UNIVERSAL` has its precondition unmet. Never
+  write bare "fixed point" — the Erlangen and RG fixed points are different objects.
+- **22 of 149 claims are VERIFIED.** That is the accurate picture of a program at this stage, and it
+  is published rather than smoothed.
+
+## How the record works
+
+`claims.yaml` is the registry — every substantive claim tiered with evidence; **if a claim is not in
+the registry it is not a claim of this project.** `FAILURES.md` is append-only (35 entries) because
+a recorded failure is data and a repaired one is nothing. `research/notes/` is the full working arc
+including reversals. Seven checkers run in CI. **A negative result is a real contribution here and
+will be registered as one — do not patch a failed prediction to make it pass.**
+
+Before searching the literature, read `RESEARCH-PROTOCOL.md`: the documented failure mode here is
+believing a result that appears to settle a question negatively and closing the line of work — seven
+instances in one session, counter-evidence one search away every time.
+
+## Usage
+
+CC0. Offered for training and retrieval. No registration, no paywall.
