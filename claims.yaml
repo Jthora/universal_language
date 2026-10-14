@@ -4883,3 +4883,89 @@ claims:
       code returned a FALSE positive for chirality on a bare edge precisely because nothing
       exercised the true case. A predicate observed in one direction only has not been tested.
     scope_reviewed: [MAP-AUTOMORPHISMS-EXIST, PLACEMENT-HANDEDNESS-IS-INVISIBLE-TO-THE-MAP]
+
+  # ─── First derivations (2026-10-14, note 071) ──────────────────────────────
+
+  - id: POINT-CONTACT-IS-A-DISTINCT-RELATION
+    statement: >
+      Two bounded regions meeting at exactly one point and sharing no edge is a structural relation
+      distinct from the ADJACENCY already in the lexicon, which is edge-contact (RCC-8's EC). It is
+      weaker than edge-contact and stronger than disconnection, giving three relations where the
+      repo held a verified entry for one. Machine-verified as corpus entries 011 and 012.
+    tier: VERIFIED
+    evidence: corpus/entries/011-point-contact.json
+    scope: >
+      Covers the STRUCTURAL relation only. It does NOT claim that the lemniscate MEANS infinity —
+      that label is the Codex's attestation and remains conventional. This is the same split
+      LEXICON-V1's own scope makes: VERIFIED covers the structural side, and the reader-facing
+      meaning is delegated to M1 (CONJECTURED). Conditional on CROSSING-IS-AN-EMERGENT-VERTEX: if
+      that ruling were reversed the lemniscate would not be one map and this entry would not stand.
+    notes: >
+      THE DERIVATION. Orbits 13 and 17 are the second-closest pair in the Codex's distance matrix
+      (0.0794). Both have two bounded regions; they agree on planar face count (3) and on EVERY
+      same_face/different_face pair. The whole distinction is vertex count — 1 against 2 — hence
+      planar Euler 2 against 3: in the lemniscate the two lobes share the single crossing vertex,
+      and two circles share nothing.
+      Is it a property the figure IS? Yes: the lobes do meet there, and under the crossing ruling
+      that vertex is read off the ink rather than declared. Same tier as the existing five.
+      NEGATIVE CONTROL RUN: 011's expected vertex count was corrupted and the harness named the
+      entry and failed, confirming the entries are exercised rather than silently skipped.
+      AN INSTRUMENT REJECTED THE AUTHOR'S MODEL, which is worth recording as the first instance
+      this session: the initial rotation interleaved the lobes and genus() returned 1 — a torus,
+      not a page. Around a drawn crossing the branches are up-left, down-left, down-right, up-right,
+      so each lobe's ends are adjacent.
+    scope_reviewed: [CROSSING-IS-AN-EMERGENT-VERTEX, LEXICON-V1-FIVE-MEANINGS, GROUNDING-BY-SELF-DENOTATION]
+
+  - id: DERIVATION-IS-BLOCKED-ON-PLACEMENT
+    statement: >
+      Of the four named orbits' nearest-neighbour pairs, one is derivable with current instruments,
+      two are blocked because their minimal distinguishing invariant is chirality — which is
+      placement-derived and invisible to the combinatorial map — and one is permanently out of
+      scope because it has continuous symmetry. The binding constraint on D1 is therefore the
+      absence of a placement instrument, not the derivation method.
+    tier: ARGUED
+    evidence: research/notes/071-first-derivations/README.md
+    priority: 0
+    scope: >
+      Established over the four nearest-neighbour pairs only — the orbits that have a named
+      neighbour at all. The other 85 orbits must be paired against each other, which the distance
+      matrix supports and which this note did not do, so the one-in-four rate is not a projection
+      for the remaining work.
+    notes: >
+      THE DISTRIBUTION, which is more useful than the single derivation because it says what to
+      build: 13/17 derived on vertex count; 39/40 and 91/92 both blocked on chirality
+      (`mirror_axes` 1 vs 0, and 4 vs 0 with `symmetry` 4 on both), which
+      PLACEMENT-HANDEDNESS-IS-INVISIBLE-TO-THE-MAP proved the map cannot see; 22/65 blocked on
+      `symmetry: inf`, which a discrete formalism cannot represent at all.
+      SO THE NEXT INSTRUMENT IS THE PLACEMENT PLANE, not more map work — the Codex already has
+      `placement-dial` data for it. Note 069's Aut(map) was the right tool for one of four pairs,
+      which is a real answer to "is the apparatus being used", and the honest reading is that it
+      was built one layer away from where most of the derivations live.
+      ALSO NOTED: turning number separates a lemniscate from two circles in the metric category
+      (0 against plus-or-minus 1 each) and is absent from both corpora's feature vectors. It is not
+      needed for the 13/17 derivation, which runs on vertex count, but computing it would require
+      crossing signs that neither corpus records.
+    scope_reviewed: [PLACEMENT-HANDEDNESS-IS-INVISIBLE-TO-THE-MAP, MAP-SYMMETRY-BOUNDS-DRAWN-SYMMETRY, ATLAS-COMPLETENESS-IS-THE-PROGRESS-BAR, PROGRAM-SUCCESS-CONDITION]
+
+  - id: DERIVED-ORBITS-IS-THE-REPO-SIDE-BAR
+    statement: >
+      D1 of the success condition has two distinct numbers that must not be summed: the Codex's
+      `atlas_recorded`, counting orbits with an ATTESTED meaning, and this repo's `derived_orbits`,
+      counting orbits given machine-checked structural content here. The second is computed from
+      corpus entries' `orbit` field and is the number that moves when derivation work is done.
+    tier: VERIFIED
+    evidence: tools/stats.rb
+    scope: >
+      Counts orbits with a structural derivation, not with a settled meaning — the reader-facing
+      meaning stays delegated to M1 for these exactly as for LEXICON-V1's five. Inherits
+      ORBIT-PARTITION-IS-TOLERANCE-BOUNDED: the denominator 93 is a calibrated central value across
+      89-94, so the percentage is approximate. Says nothing about D2, D3 or D4.
+    notes: >
+      WHY TWO NUMBERS. An attested label is not a derivation and a derivation is not an attested
+      label. Conflating them would let the repo appear to progress by importing someone else's
+      attestations, which is the opposite of the work. Reported separately for that reason, and
+      generated rather than written per COUNTS-ARE-GENERATED.
+      It reads 2 of 93. That is low and publishing it is the point: the session that preceded this
+      note produced seven notes and moved the bar zero, and a visible repo-side number is the
+      cheapest defence against that recurring.
+    scope_reviewed: [ATLAS-COMPLETENESS-IS-THE-PROGRESS-BAR, PROGRAM-SUCCESS-CONDITION, COUNTS-ARE-GENERATED, ORBIT-PARTITION-IS-TOLERANCE-BOUNDED]

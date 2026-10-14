@@ -1103,6 +1103,7 @@ mod tests {
         );
     }
 
+
     #[test]
     fn planar_symmetry_respects_the_unbounded_region() {
         // With no nesting there is no distinguished face, so the planar answer is the full one.

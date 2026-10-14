@@ -49,14 +49,25 @@ stats = {
   'register_entries' => register ? register['claims'].size : 0,
 }
 
-# The atlas is D1 of PROGRAM-SUCCESS-CONDITION, so its coverage is the program's progress bar
-# (ATLAS-COMPLETENESS-IS-THE-PROGRESS-BAR). Generated, never written.
+# D1 of PROGRAM-SUCCESS-CONDITION has TWO numbers and they are not the same thing.
+#   atlas_recorded  — orbits with an ATTESTED meaning in the imported Codex register. Theirs.
+#   derived_orbits  — orbits this repo has given machine-checked structural content, counted
+#                     from the `orbit` field of corpus entries. Ours, and the one that moves
+#                     when work is done here (note 071).
+# An attested label is not a derivation and a derivation is not an attested label, so the two
+# are reported separately and never summed.
 if register && register['combination_space']
   cs = register['combination_space']
   stats['atlas_orbits']       = cs['orbits']
   stats['atlas_recorded']     = cs['recorded']
   stats['atlas_undetermined'] = cs['undetermined']
   stats['atlas_percent']      = ((100.0 * cs['recorded']) / cs['orbits']).round(1)
+
+  derived = Dir.glob('corpus/entries/*.json').filter_map do |f|
+    JSON.parse(File.read(f, encoding: 'UTF-8'))['orbit']
+  end.uniq
+  stats['derived_orbits']  = derived.size
+  stats['derived_percent'] = ((100.0 * derived.size) / cs['orbits']).round(1)
 end
 
 if ARGV.include?('--json')
