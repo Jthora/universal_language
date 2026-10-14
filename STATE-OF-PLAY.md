@@ -95,7 +95,9 @@ variable, natural tier still the bootstrap surface. Only its warrant moved.
 
 REQ-1 **it must be a language** · REQ-2 **universality is a ledger** — now read as the definition of
 universality rather than a proxy for it · REQ-3 **no-retreat falsifiability, symmetric** · REQ-4
-**baseline before UQPL**. Registered as claims; enforced by seven checkers in CI.
+**baseline before UQPL**. Registered as claims; enforced by eight checkers, run on demand — `ruby tools/check.rb --strict`.
+There is no CI (F-036: four workflows, not one ever executed), so enforcement is reader-run by
+design rather than by accident; `tools/pre-commit` is the opt-in local hook.
 
 ## 4. What we hold
 

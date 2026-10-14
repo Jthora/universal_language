@@ -24,7 +24,7 @@ bookkeeping can differ without the drawing differing:
 multiset of degrees ≠ 2. Each is stable under each generator *for a reason* — isomorphism, orbit
 reversal, and degree-2 inertness respectively — so stability under the generated class follows.
 
-## What is checked, on every CI run
+## What is checked, on every test run
 
 - `reading_invariance_holds_for_the_presentation_class` — five subject configurations (cycles,
   disconnected pairs, open paths, a grammar-composed join) against a battery of mirrors, random

@@ -50,7 +50,7 @@ core operations, and the meaning is checked, not stipulated *(test
 
 ## 4. Lexicon V1 — five meanings whose structural facts are theorems
 
-Corpus entries `005`–`009`, each machine-verified by the harness on every CI run:
+Corpus entries `005`–`009`, each machine-verified by the harness on every test run:
 
 | Entry | Meaning | The theorem-checked fact |
 |---|---|---|

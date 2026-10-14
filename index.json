@@ -30,7 +30,7 @@
   "research_method": "RESEARCH-PROTOCOL.md"
  },
  "canonical_indexes": {
-  "note": "Hand-maintained file lists in this file drifted badly and asserted retired content for months. It now points at the indexes that are CI-checked or generated instead of duplicating them — the duplication was the drift surface.",
+  "note": "Hand-maintained file lists in this file drifted badly and asserted retired content for months. It now points at the indexes that are checker-enforced or generated instead of duplicating them — the duplication was the drift surface.",
   "machine_readable_stack_map": "seed/INDEX.yaml",
   "stack_map_checker": "tools/check-index.rb",
   "working_history_index": "research/notes/README.md",
@@ -95,7 +95,8 @@
    "ruby tools/check.rb --strict",
    "cargo test --manifest-path ul-forge/Cargo.toml",
    "python3 research/notes/064-universal-scope/verify.py --strict"
-  ]
+  ],
+  "ci": "none, deliberately — FAILURES.md F-036: four workflows existed and not one ever executed, so they published a signal that meant nothing. Enforcement is reader-run; tools/pre-commit is the opt-in local hook. Absence of a green badge is not evidence either way: run the commands."
  },
  "unblocked_work": [
   {

@@ -1,0 +1,50 @@
+#!/usr/bin/env sh
+# tools/pre-commit — the local stand-in for the CI that was removed.
+#
+# WHY THIS EXISTS (FAILURES.md F-036, F-032)
+#   CI was removed 2026-10-14: no Actions run in this repository's history ever produced a log
+#   (31 runs, four workflows, 2-5s failures, logs 404) because Actions is not funded on the owner's
+#   account. Four workflows that never ran were worse than none: they asserted a green/red signal
+#   that meant nothing, and five commit messages claimed "all seven checkers pass" while CI
+#   concluded failure the same minute.
+#
+#   But removing CI removes the only thing that catches drift when nobody remembers to look, and
+#   this repo's NAMED failure mode is conventions without enforcement. So the automation moves here,
+#   where it needs no billing and no network.
+#
+# INSTALL (opt-in, one line)
+#   ln -sf ../../tools/pre-commit .git/hooks/pre-commit
+#
+# UNINSTALL
+#   rm .git/hooks/pre-commit
+#
+# BYPASS for a single commit (recording a known-red state on purpose, as F-036 does)
+#   git commit --no-verify
+#
+# This is deliberately NOT installed by default. A hook that surprises a contributor gets
+# disabled, and a disabled check is the thing this file exists to prevent.
+
+set -e
+ROOT=$(git rev-parse --show-toplevel)
+cd "$ROOT"
+
+echo "pre-commit: tools/check.rb --strict"
+if ! ruby tools/check.rb --strict; then
+  echo ""
+  echo "pre-commit FAILED — the repository audit did not pass."
+  echo "Fix it, or commit deliberately with: git commit --no-verify"
+  exit 1
+fi
+
+# Rust tests only when ul-forge actually changed; the full suite is slow and most
+# commits here are documentation and registry work.
+if git diff --cached --name-only | grep -q '^ul-forge/'; then
+  echo "pre-commit: ul-forge changed -> cargo test"
+  if ! cargo test --manifest-path ul-forge/Cargo.toml --quiet; then
+    echo ""
+    echo "pre-commit FAILED — cargo test did not pass."
+    exit 1
+  fi
+fi
+
+echo "pre-commit: OK"

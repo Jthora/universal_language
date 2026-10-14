@@ -83,7 +83,7 @@ python3 tools/symbology_glyph.py --check     # glyphs read back as their rule
 python3 tools/symbol_combinations.py --closure
 ```
 
-Those are **not** vendored here and are **not** run by this repo's CI. What this repo runs against
+Those are **not** vendored here and are **not** run by this repo's checkers. What this repo runs against
 the register is `tools/check-derivation-premises.rb` and the audit in
 `research/notes/065-atlas-audit/`. Treat the site's figures as re-derivable **there** and as
 imported data **here**.

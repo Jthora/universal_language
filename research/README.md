@@ -77,7 +77,8 @@ ruby tools/check-links.rb            # internal references resolve
 ruby tools/check-retired-content.rb  # no retired counts in the working tree
 ```
 
-Both exit non-zero with `--strict`, for CI.
+Both exit non-zero with `--strict`, so they compose into `tools/check.rb` and the opt-in
+`tools/pre-commit` hook. There is no CI in this repository — see `FAILURES.md` F-036.
 
 ## Conventions
 

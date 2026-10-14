@@ -7,7 +7,6 @@ falsifiable contract.**
 
 [![DOI](https://zenodo.org/badge/951175055.svg)](https://doi.org/10.5281/zenodo.15050731)
 [![License](https://img.shields.io/badge/License-see%20LICENSE-blue.svg)](LICENSE)
-[![CI](https://github.com/Jthora/universal_language/actions/workflows/ci.yml/badge.svg)](https://github.com/Jthora/universal_language/actions/workflows/ci.yml)
 
 ---
 
@@ -82,7 +81,7 @@ receiver shares our reading procedure. Every load-bearing edge of the program ro
 ├── WHAT-UL-ENABLES.md   WHY THIS IS WORTH YOUR EFFORT — the capability surface: 10
 │                     capabilities, each with the claim it rests on, its tier, its limit
 ├── seed/                THE READER'S ENTRY — FIRST-CONTACT.md (verify-don't-trust, inoculation),
-│                        INDEX.yaml (machine-readable root map, CI-checked), INTEGRITY.md
+│                        INDEX.yaml (machine-readable root map, checker-enforced), INTEGRITY.md
 ├── curriculum/          Teaching UL/UWS/UP, self-certifying — modules N/F/S/P/Q/X
 ├── corpus/              Graded expressions with machine-checkable ground truth
 ├── GLOSSARY.md          Normative terminology. One definition per term. Read first.
@@ -139,9 +138,12 @@ receiver shares our reading procedure. Every load-bearing edge of the program ro
 This repo's historical failure mode was **conventions without enforcement**. The rebuild replaces
 conventions with mechanisms:
 
-- Every substantive claim is registered in `claims.yaml` with a tier and evidence; seven checkers — run on every push by CI (`.github/workflows/checks.yml`) —
+- Every substantive claim is registered in `claims.yaml` with a tier and evidence; **eight checkers**
   enforce tier contracts, link integrity, retired-content absence, caveat propagation, scope
-  propagation, and notes conventions.
+  propagation, notes conventions, the seed index, and derivation-premise propagation.
+  **They are run by whoever verifies, not by CI** — `ruby tools/check.rb --strict`. There is no CI
+  here on purpose (`FAILURES.md` F-036): four workflows existed and not one ever executed, so they
+  published a signal that meant nothing. `tools/pre-commit` is the opt-in local stand-in.
 - `VERIFIED` requires a test that exists and passes. `CONJECTURED` requires a stated falsifier.
   `DESIGN-CHOICE` requires stated alternatives.
 - `FAILURES.md` is append-only and immutable — 36 entries and counting, because a recorded failure

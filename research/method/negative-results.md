@@ -183,7 +183,7 @@ adversarial search, oldest and most load-bearing first.
 
 R2–R5 are enforceable in `claims.yaml` as required fields on `RETIRED` entries and on any
 CONJECTURED entry whose falsifier has fired: `scope`, `formalization`, `revival_condition`,
-`refutation_tier`. These are CI-checkable in the same way the existing tier requirements are.
+`refutation_tier`. These are checker-enforceable in the same way the existing tier requirements are.
 
 R1 and R6 are process, not data. **They are checkable by you and not reliably by me** — the honest
 consequence of §3. A reasonable spot-check: pick any negative finding in the repo and ask what

@@ -290,7 +290,7 @@ Eighteen boxes. If you can't tick them, you haven't finished the finding.
 ## 9. Enforcement
 
 - `claims.yaml` requires `scope`, `formalization`, `revival_condition`, and `refutation_tier` on
-  every `RETIRED` entry (R3/R4/R5). CI-checkable.
+  every `RETIRED` entry (R3/R4/R5). Checker-enforced.
 - `FAILURES.md` is **append-only and immutable.** F-012a, F-013a, F-014, F-015, F-016, F-017 are
   the record behind this file. Read them; they are the primary source for §1.
 - **The meta-rule:** when a correction is written twice for the same pattern, stop patching

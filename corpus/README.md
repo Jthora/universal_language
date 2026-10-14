@@ -11,7 +11,7 @@ needs no new dependencies (`serde_json` is already in `ul-core`). See `entries/0
 for the canonical shape: `id`, `tier`, `n_darts`, `rotations` (vertex → ordered darts), optional
 `nesting`, `expected` (ground truth), `provenance`, `teaches`.
 
-**The harness exists and runs in CI:** `ul-forge/crates/ul-core/tests/corpus_tests.rs` loads every
+**The harness exists and runs on demand** (`cargo test`, not CI — there is none; see F-036)**:** `ul-forge/crates/ul-core/tests/corpus_tests.rs` loads every
 entry, reconstructs the map through the real implementation, and asserts the `expected` block —
 including that the genus formula *refuses* to apply where it must not, and that planar assertions
 are only available to entries that carry their nesting (extra structure, by design). **An entry

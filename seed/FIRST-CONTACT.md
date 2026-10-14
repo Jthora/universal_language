@@ -72,7 +72,7 @@ its tier, like everything else here.**
 
 The honest current state: **the derivation record, the syntax core, and the method are complete
 and checkable today; the teaching content and the execution engine are the open build.** The
-statuses above are machine-checked against the index — if this table and the index disagree, CI
+statuses above are machine-checked against the index — if this table and the index disagree, the checker
 is failing and you should trust neither.
 
 ## 5. What this artifact never does

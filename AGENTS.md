@@ -83,7 +83,10 @@ it rests on, its tier, and its limit. Three are available now.
 ### Working rules, briefly
 
 - **Verify, don't trust.** `ruby tools/check.rb --strict && cargo test --manifest-path ul-forge/Cargo.toml`.
-  The artifact never asks to be trusted, only re-derived.
+  The artifact never asks to be trusted, only re-derived. **There is no CI here, deliberately**
+  (`FAILURES.md` F-036 — four workflows existed and not one ever executed, so they published a
+  signal that meant nothing). Enforcement is reader-run; `tools/pre-commit` is the opt-in local
+  hook. **Do not take the absence of a green badge as evidence either way — run the checkers.**
 - **Findings are provisional and predictions are genuinely falsifiable.** Do not patch a failed
   prediction to make it pass — report it. A negative result is a real contribution and is registered
   as one.
@@ -185,7 +188,9 @@ uqpl_definition: claims.yaml#UQPL-IS-FORMAL-TIER-CLOSURE   # formal tier of UL, 
 cure_status: corollary_not_purpose  # claims.yaml#CURE-IS-COROLLARY
 mathematical_center: claims.yaml#READING-INVARIANCE-TARGET
 wiki_status: wet_clay_input_not_authority  # owner designation 2026-08-12
-root_index: seed/INDEX.yaml                 # machine-readable stack map, CI-checked (tools/check-index.rb)
+root_index: seed/INDEX.yaml                 # machine-readable stack map, checker-enforced (tools/check-index.rb)
+ci: none                                    # deliberate — FAILURES.md F-036; claims.yaml#VERIFICATION-IS-READER-RUN
+verification: reader-run                    # ruby tools/check.rb --strict ; tools/pre-commit is the opt-in local hook
 reader_entry: seed/FIRST-CONTACT.md
 
 # Universal Writing System (notation — design choice, not proven necessity)

@@ -28,7 +28,10 @@
 #   Origin: FAILURES.md F-017. Seven instances of using a finding to close a line of work that was
 #   not closed, including two after the pattern had already been corrected twice mid-session.
 #
-# INTENDED CI CHECKS (not yet implemented; enforcement plan not yet written):
+# WHAT THE CHECKERS ENFORCE (implemented; run via `ruby tools/check.rb --strict`).
+# There is no CI in this repository and that is deliberate — see FAILURES.md F-036: four
+# workflows existed and not one ever executed, so they published a signal that meant nothing.
+# Enforcement is reader-run, with `tools/pre-commit` as the opt-in local hook:
 #   - VERIFIED entries must have an `evidence` path that exists and a test that passes
 #   - ARGUED entries must have an `evidence` path that exists
 #   - CONJECTURED entries must have `falsified_by`
@@ -2832,7 +2835,7 @@ claims:
       remaining exposure and applies to ERLANGEN-ANSWERS-GOODMAN-SELECTION as well.
       PROGRESS 2026-08-12 (note 058): the F0 floor is machine-checked — see READING-INVARIANCE-F0.
       Presentation-class invariance (relabeling, mirror, subdivision) holds across the full corpus
-      on every CI run. The floor does not touch this claim's deep failure mode, which stands.
+      on every test run. The floor does not touch this claim's deep failure mode, which stands.
       FORMAL SHAPE, from institution theory (Goguen-Burstall, note 051): an institution's "single
       defining axiom is the satisfaction condition — truth is invariant under change of notation":
       Mod(sigma)(M') satisfies rho iff M' satisfies Sen(sigma)(rho). The framework is DEFINITIONAL —
@@ -3233,7 +3236,7 @@ claims:
       scenario the reader receives the tree and nothing else (REPO-IS-A-UP-INSTANCE, the Voyager
       constraint). The workshop stays visible rather than hidden: the working record — notes,
       failures, corrections — IS the credibility and inoculation material for a reader who ranks
-      checkable above plausible. The index is checked by CI so the machine-readable truth and the
+      checkable above plausible. The index is checker-enforced so the machine-readable truth and the
       tree cannot drift apart silently (the what-executes-it principle, F-031).
     alternatives_considered:
       - "full reorganization moving research/ under a workshop/ directory and renaming to match layers exactly (rejected: link churn across 172+ internal references and history noise, for zero reader value — the additive layout achieves the two paths without moving anything)"
@@ -3255,7 +3258,7 @@ claims:
     scope: >
       MACHINE-CHECKED COMPONENTS: validate(), components(), disjoint_union(), connect(),
       subdivide(), enclose() with seven passing tests (map.rs); the corpus harness exercises the
-      regional semantics on every CI run. WHAT ARGUED COVERS: that these three operations and two
+      regional semantics on every test run. WHAT ARGUED COVERS: that these three operations and two
       validity rules constitute THE core — i.e. completeness of the inventory over the substrate —
       is argued from the substrate's structure (what else could an operation on a rotation system
       be?), not proved by enumeration. The origami lesson applies (notes/047): a derived inventory
@@ -3290,7 +3293,7 @@ claims:
     scope_reviewed: [SEMANTIC-STACK-M1-M2-M3, READING-INVARIANCE-TARGET, GRAMMAR-CORE-IS-DERIVED]   # hubs 1-2 MATERIAL, accounted for by the tier split in scope below — VERIFIED covers the structural side only; the reader-facing meaning claim is delegated to M1 (CONJECTURED) and inherits reading-invariance's status. hub 3 MATERIAL and accounted for — the lexicon's degree-0 gap and the inventory-completeness caveat are that hub's own stated limits, restated in this claim's coverage paragraph
     statement: >
       Five natural-tier lexicon entries exist whose structural facts are machine-verified on every
-      CI run: CONTAINMENT, SEPARATION, ADJACENCY, JUNCTION-WITH-FREE-ENDS, MULTIPLICITY (corpus
+      test run: CONTAINMENT, SEPARATION, ADJACENCY, JUNCTION-WITH-FREE-ENDS, MULTIPLICITY (corpus
       entries 005-009). Containment and separation form a minimal pair — identical components,
       degree sequence and face count, with the entire meaning difference carried by which region is
       shared. These are the first UL expressions whose semantic contrasts are checked rather than
@@ -3369,7 +3372,7 @@ claims:
       with designed-in invariance (isomorphism; orbit reversal; degree-2 inertness per
       SUBDIVISION-IS-INERT). The target quantifies over ALL reasonable readings and its hard part
       is exactly what F0 dodges. Tests: reading_invariance_holds_for_the_presentation_class
-      (map.rs), every_corpus_entry_is_reading_invariant (corpus harness) — both on every CI run.
+      (map.rs), every_corpus_entry_is_reading_invariant (corpus harness) — both on every test run.
     notes: >
       The proof SHAPE scales: invariance argued generator-by-generator, then inherited by the
       generated class. Extending F0 with new generators (each with its stated reason) is the
@@ -4320,3 +4323,49 @@ claims:
       background) inside a borrowed rule on its first run.
       The register's author calls this "the part that transfers to a corpus we did not write". It
       does transfer; prose does not execute, so it needed a file.
+
+  # ─── Verification without CI (2026-10-14, after FAILURES.md F-036) ─────────
+
+  - id: VERIFICATION-IS-READER-RUN
+    statement: >
+      This repository has no continuous integration, by decision. The eight checkers and the test
+      suite are run on demand — by a contributor, or by a reader evaluating the artifact — rather
+      than by a hosted service on push. `tools/pre-commit` is an opt-in local hook that restores
+      the automation without requiring any service.
+    tier: DESIGN-CHOICE
+    evidence: tools/pre-commit
+    rationale: FAILURES.md
+    alternatives_considered:
+      - "keep the four GitHub Actions workflows (rejected: FAILURES.md F-036 — not one run in the
+         repository's history ever produced a log; 31 runs across four workflows failed in 2-5
+         seconds with log download 404, on ubuntu and macos alike, because Actions is not funded on
+         the owner's account. A workflow that never executes is worse than no workflow: it published
+         a red signal that carried no information, and five commit messages asserted 'all seven
+         checkers pass' while CI concluded failure the same minute)"
+      - "keep the workflows but disable them (rejected: a disabled workflow file is a claim about
+         enforcement that nothing backs, which is this repo's named failure mode — conventions
+         without enforcement — in file form)"
+      - "fund Actions and restore CI (available to the owner at any time, and the checkers are
+         unchanged, so restoring it is re-adding a workflow that calls tools/check.rb. Recorded as
+         the reversal path rather than as a rejected option)"
+      - "install the pre-commit hook by default (rejected: a hook that surprises a contributor gets
+         disabled, and a disabled check is exactly what this is meant to prevent. Opt-in, with the
+         install line in the file's own header)"
+    scope: >
+      Covers HOW the checks are run, not WHAT they check — the eight checkers and the 370 tests are
+      unchanged. Does not claim the checks pass: at the time of this entry `tools/check.rb --strict`
+      exits 1 on two pre-existing broken evidence paths from commit f99812f, which is a separate
+      matter for the owner. The honest consequence of this decision is stated in `notes`.
+    notes: >
+      WHAT IS LOST, STATED PLAINLY: nothing now catches drift when nobody remembers to look. That is
+      a real cost and it is the F-032/F-035 hazard — a mechanism that depends on someone choosing to
+      run it is weaker than one that fires on its own. The opt-in hook recovers it for anyone who
+      installs it, and no further.
+      WHAT IS GAINED, AND IT IS NOT A CONSOLATION: reader-run verification is what this project's own
+      design already asked for. REPO-IS-A-UP-INSTANCE and the Voyager constraint (note 053) require
+      the artifact to be verifiable air-gapped from its authors, and note 053 states the reader's
+      first act as `ruby tools/check.rb --strict && cargo test`. A green badge is an authority
+      asserting a result; a checker the reader runs is the result. CI was the convenience layer, and
+      it was never the credibility layer — which is why its two-month silent failure changed nothing
+      about what is actually established here, and why removing it changes nothing either.
+    scope_reviewed: [REPO-IS-A-UP-INSTANCE]
