@@ -44,6 +44,8 @@ errors = []
 
 external = []
 warnings = []
+reach_of  = {}   # id -> :in_tree | :external | :absent | :none   (COMPUTED, never authored)
+earned_of = {}   # id -> earned tier                              (COMPUTED, never authored)
 
 doc = YAML.load_file('claims.yaml')
 claims = doc['claims'] or abort 'claims.yaml has no `claims` key'
@@ -131,8 +133,165 @@ claims.each do |c|
   end
 end
 
+# ─────────────────────────────────────────────────────────────────────────────────────────────
+# EARNED TIER — computed from facts, never read from the file (notes 075)
+#
+#   WHY. claims.yaml#COUNTS-ARE-GENERATED says no count is a claim: a written count goes stale
+#   because nothing recomputes it. A hand-written `tier:` IS a written count. It is set once, by
+#   an author, and then the world moves. F-039: seven VERIFIED claims cited evidence in another
+#   repository that never contained it, and the label said VERIFIED for as long as nobody looked.
+#
+#   So `tier:` is kept as the author's INTENT and the checker computes what the artifact has
+#   actually EARNED. Where they disagree, the gap is printed. VERIFIED on unreachable evidence is
+#   an error, because that is the one combination that cannot be true.
+#
+#   REACHABILITY is the axis that had no field at all, which is why its failure was invisible:
+#     in_tree  — evidence resolves in this checkout; a reader can re-run it
+#     external — a declared `repo:path` reference; cannot be checked from here
+#     absent   — names a path that does not resolve
+# ─────────────────────────────────────────────────────────────────────────────────────────────
+EVIDENCE_FIELD = { 'VERIFIED' => 'evidence', 'ARGUED' => 'evidence', 'CONJECTURED' => 'evidence' }.freeze
+RUNNABLE = /\.(py|rb|rs)\z/
+
+claims.each do |c|
+  id = c['id'].to_s
+  field = EVIDENCE_FIELD[c['tier']]
+  raw = field ? c[field].to_s.split('#').first.to_s.strip : ''
+  reach_of[id] =
+    if raw.empty?                     then :none
+    elsif raw.match?(/\A[a-z_]+:/)    then :external
+    elsif File.exist?(raw)            then :in_tree
+    else :absent
+    end
+end
+
+# Earned tier from evidence alone, before premises.
+RANK = { 'CONJECTURED' => 1, 'ARGUED' => 2, 'VERIFIED' => 3 }.freeze
+UNRANK = RANK.invert.freeze
+
+claims.each do |c|
+  id = c['id'].to_s
+  declared = c['tier']
+  unless RANK.key?(declared)
+    earned_of[id] = declared   # DESIGN-CHOICE and RETIRED are a KIND and a LIFECYCLE, not
+    next                       # points on the confidence scale. They earn nothing and lose nothing.
+  end
+  raw = c['evidence'].to_s.split('#').first.to_s.strip
+  # "Runnable" means a reader can execute it and see it pass. That includes a script, a directory
+  # of scripts, AND a corpus entry: corpus/entries/*.json is asserted field-by-field against the
+  # real implementation by ul-forge/crates/ul-core/tests/corpus_tests.rs, so it is machine-checked
+  # evidence that merely happens not to be a .py file. Documentary evidence (a note, a spec) is
+  # NOT runnable: it may well be the right kind of evidence for a prior-art attribution, which is
+  # why that case is reported as a gap for review rather than raised as an error.
+  harness_covered = raw.start_with?('corpus/entries/') && raw.end_with?('.json')
+  cap =
+    case reach_of[id]
+    when :in_tree then (raw.match?(RUNNABLE) || File.directory?(raw) || harness_covered) ? 3 : 2
+    when :external then 2   # a reader cannot re-run it, so it cannot earn the top tier here
+    else 1                  # absent or missing evidence earns nothing above CONJECTURED
+    end
+  earned_of[id] = UNRANK[[RANK[declared], cap].min]
+end
+
+# PREMISE PROPAGATION — the imported rule, finally applied at home.
+#
+#   uws/register/ carries "a derivation routed through an undetermined premise is itself
+#   undetermined", and tools/check-derivation-premises.rb enforces it — ON THE VENDORED REGISTER
+#   ONLY. It could never run here because claims.yaml had NO premise field: `scope_reviewed` is an
+#   ACKNOWLEDGEMENT ("I read your scope"), not a premise, and treating it as one produces numbers
+#   that mean nothing (notes 075). `premises:` is that missing edge. Coverage is reported rather
+#   than assumed, exactly as the register's own checker reports its 15%.
+premise_edges = 0
+claims.each { |c| premise_edges += Array(c['premises']).size }
+if premise_edges.positive?
+  by_id = claims.to_h { |c| [c['id'].to_s, c] }
+  # Validate premise IDs FIRST. The original version checked them inside the propagation loop,
+  # after `next unless RANK.key?(pe)` — so an unknown premise had no rank, was skipped, and passed
+  # silently. A negative control caught it. That is the same disease as the regex this file was
+  # just fixed for: a check that declines to check (F-039).
+  claims.each do |c|
+    Array(c['premises']).each do |pid|
+      errors << "#{c['id']}: premise `#{pid}` is not a registered claim" unless by_id.key?(pid.to_s)
+    end
+  end
+  changed = true
+  rounds = 0
+  while changed && rounds < 50
+    changed = false
+    rounds += 1
+    claims.each do |c|
+      id = c['id'].to_s
+      next unless RANK.key?(earned_of[id])
+      Array(c['premises']).each do |pid|
+        pe = earned_of[pid.to_s]
+        next unless RANK.key?(pe)
+        if RANK[pe] < RANK[earned_of[id]]
+          earned_of[id] = pe
+          changed = true
+        end
+      end
+    end
+  end
+end
+
+# The one combination that cannot be true.
+claims.each do |c|
+  next unless c['tier'] == 'VERIFIED'
+  case reach_of[c['id'].to_s]
+  when :absent
+    errors << "#{c['id']}: tier VERIFIED but its evidence path does not resolve — " \
+              'a reader cannot re-derive it (F-039)'
+  when :external
+    errors << "#{c['id']}: tier VERIFIED but its evidence is in another repository — " \
+              'not re-derivable from this checkout (F-039)'
+  when :none
+    errors << "#{c['id']}: tier VERIFIED with no evidence field at all"
+  end
+end
+
 by_tier = Hash[claims.group_by { |c| c['tier'] }.map { |k, v| [k, v.size] }]
 puts "claims: #{claims.size}  |  " + TIERS.map { |t| "#{t}=#{by_tier.fetch(t, 0)}" }.join('  ')
+
+# The denominator matters. DESIGN-CHOICE and RETIRED are a KIND and a LIFECYCLE state; neither is
+# a point on the confidence scale, so neither can ever be VERIFIED. Quoting VERIFIED over ALL
+# claims understates it, which is how "40 of 183 = 21.9%" got repeated when the well-formed figure
+# is 40 of 138 (notes 075).
+candidates = claims.count { |c| RANK.key?(c['tier']) }
+puts format('confidence-scale claims: %d  (excludes %d DESIGN-CHOICE + %d RETIRED, which are a ' \
+            'kind and a lifecycle state, not confidence levels)',
+            candidates, by_tier.fetch('DESIGN-CHOICE', 0), by_tier.fetch('RETIRED', 0))
+
+reach_counts = reach_of.values.tally
+puts format('reachability (computed): in-tree=%d  external=%d  absent=%d  no-evidence-field=%d',
+            reach_counts.fetch(:in_tree, 0), reach_counts.fetch(:external, 0),
+            reach_counts.fetch(:absent, 0), reach_counts.fetch(:none, 0))
+
+earned_v = earned_of.count { |_, v| v == 'VERIFIED' }
+puts format('VERIFIED: %d declared  |  %d EARNED  (earned = evidence resolves in-tree AND is ' \
+            'runnable; premises cannot be weaker)', by_tier.fetch('VERIFIED', 0), earned_v)
+
+gaps = claims.select { |c| RANK.key?(c['tier']) && earned_of[c['id'].to_s] != c['tier'] }
+unless gaps.empty?
+  puts "\nDECLARED ABOVE EARNED (#{gaps.size}) — the author's intent, and what the artifact supports:"
+  gaps.each do |c|
+    id = c['id'].to_s
+    puts format('  %-44s declared %-11s earned %-11s (%s)',
+                id, c['tier'], earned_of[id], reach_of[id])
+  end
+  puts '  This list is the honest edge of the registry. It is printed, not hidden: a gap is a'
+  puts '  claim whose label is ahead of its evidence, which is the failure mode of F-035/F-039.'
+end
+
+if premise_edges.zero?
+  puts "\nPREMISE COVERAGE: 0 of #{candidates} claims declare `premises:`. The propagation rule"
+  puts '  ("a derivation routed through an undetermined premise is itself undetermined") is'
+  puts '  enforced on the VENDORED register and cannot yet bite here. Adding premise edges is'
+  puts '  what turns it on; until then a pass here says nothing about premise soundness.'
+else
+  with = claims.count { |c| Array(c['premises']).any? }
+  puts format("\nPREMISE COVERAGE: %d of %d claims declare premises (%d edges). Propagation is " \
+              'live for those; silent for the rest.', with, candidates, premise_edges)
+end
 
 unless warnings.empty?
   puts "\nWARNINGS (#{warnings.size}):"

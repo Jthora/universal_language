@@ -103,6 +103,35 @@ begin
   stats['claims_under_conjecture'] = union.size
 end
 
+# --- earned tiers (note 075) --------------------------------------------------------------------
+# The declared tier is the author's intent; the EARNED tier is what the artifact supports. Both are
+# reported because the gap is the honest edge of the registry, and because a hand-written tier is a
+# written count and COUNTS-ARE-GENERATED says those go stale.
+begin
+  # force_encoding is load-bearing: the checker's output contains UTF-8 (em dashes), the default
+  # external encoding here is US-ASCII, and `match` then raises invalid-byte-sequence. The first
+  # version of this block had a bare `rescue StandardError` that SWALLOWED exactly that and
+  # silently emitted no keys — a rescue that hides a bug is the same disease as a checker that
+  # declines to check (note 075).
+  out = `ruby tools/check-claims.rb 2>/dev/null`.force_encoding('UTF-8')
+  if (m = out.match(/VERIFIED: (\d+) declared \s*\|\s*(\d+) EARNED/))
+    stats['claims_verified_declared'] = m[1].to_i
+    stats['claims_verified_earned']   = m[2].to_i
+  end
+  if (m = out.match(/confidence-scale claims: (\d+)/))
+    # The well-formed denominator: DESIGN-CHOICE is a KIND and RETIRED a LIFECYCLE state, so
+    # neither can ever be VERIFIED. Quoting VERIFIED over all claims understates it.
+    stats['claims_confidence_scale'] = m[1].to_i
+  end
+  if (m = out.match(/reachability \(computed\): in-tree=(\d+)\s+external=(\d+)\s+absent=(\d+)/))
+    stats['evidence_in_tree']  = m[1].to_i
+    stats['evidence_external'] = m[2].to_i
+    stats['evidence_absent']   = m[3].to_i
+  end
+rescue StandardError => e
+  warn "stats.rb: earned-tier block failed (#{e.class}: #{e.message}) — keys omitted, not zeroed"
+end
+
 if ARGV.include?('--json')
   puts JSON.pretty_generate(stats)
 else

@@ -1071,3 +1071,96 @@ joins.** Both sides of the parser/composer boundary were internally consistent a
 empty. The fix adds `tests/assertion_sort_tests.rs`, which tests exactly that join, including a
 negative control that an entity is still rejected where an assertion is required and that
 `Relation`/`Modifier` are still invalid containers.
+
+---
+
+## F-039 — Seven VERIFIED claims cited evidence that has never existed, behind a checker that declined to look
+
+**Date:** 2026-10-14
+**Found by:** a cold reader screening the repo, who read `tools/check-claims.rb` and noticed a
+regex. Not by the apparatus, and not by me — I had been quoting "39 VERIFIED" as a number that
+meant something.
+
+**The failure, in two layers.**
+
+*Layer one, the hole.* `check-claims.rb` gated its evidence-existence check behind
+`/\.(md|rs|json|ya?ml)\b/`. Every `.py` and `.rb` evidence path and every directory-valued one was
+**silently skipped** — 40 of 197 — while `claims.yaml`'s own header told readers the check had
+happened. Five claims registered the same day were in that blind spot.
+
+*Layer two, what the hole was hiding.* Seven claims tiered **VERIFIED** cited
+`ul_agent:tests/test_icosians_and_gaps.py` and `ul_agent:tests/test_symbol_geometry.py`.
+`Jthora/ul_agent` was added to the session and fetched — 528 commits, only branch `main` —
+and **neither file has ever existed there.** `--full-history --diff-filter=AD` finds no add and no
+delete of either path; nothing in that repository mentions icosians, Tammes or octonions (the one
+`E8` match is inside a base64 URL in a browser-plugin test). `docs/grounding/00-self-denotation.md`,
+cited by an eighth claim, is also absent. The repository is **private**, so even had the files been
+there, no public reader could ever have checked them.
+
+So 18% of the top tier rested on a dead pointer, for as long as nobody looked, in a project whose
+entire pitch is reader-run verification.
+
+**What was done about it, and what it cost.**
+
+Three of the seven are classical mathematics and were **re-derived in-tree** from scratch
+(`research/notes/075-earned-tiers/verify.py`, stdlib only, 16 checks):
+
+- `CODE-OCTONIONS-FROM-HAMMING` — exact. The cyclic [7,4,3] code is generated, its seven weight-3
+  supports satisfy all four Fano-plane axioms, and an orientation of those lines is found making
+  the induced algebra alternative with 168 associator failures. Stays **VERIFIED**, earned here.
+- `CODE-TAMMES-FORCES-THE-SOLIDS` — numerical. A seeded maximin search recovers 90.0000° and
+  63.4349° with vertex degrees 4 and 5. Stays **VERIFIED**, scoped as corroboration of a classical
+  theorem rather than a proof of it.
+- `CODE-ICOSIANS-ARE-E8` — **demoted to ARGUED.** The group theory is exact (120 unit icosians over
+  `Z[φ]`, all of norm 1, exhaustively closed under quaternion multiplication, the 600-cell, rank-8
+  span). The **E8 identification did not come out**: the Gram matrix of a `Z`-basis under
+  `Tr(x·conj(y))` is non-integral with determinant `625/256 = 5⁴/2⁸`. Two greedy bases and a Hermite
+  normal form give the same value, so it is the form, not the basis — the E8 presentation needs the
+  inverse-different twist, which the script does not build.
+
+  > The factors `5⁴` and `2⁻⁸` are a standing invitation to divide until the determinant reads 1.
+  > That was refused. Picking a normalisation **because it produces the wanted answer** is F-035's
+  > ratchet applied to arithmetic, and REQ-3 says a negative result is recorded, not tuned. The
+  > script carries it as `UNRESOLVED` — neither passed nor failed.
+
+The other four — `CODE-GOLDEN-SHADOW-DUAL-COMPOUND`, `CODE-SHELL-ISOMETRY-IS-CHIRAL`,
+`CODE-INSCRIPTION-WEB`, `CODE-LAW-PER-WINDOW` — were **demoted to CONJECTURED** and deliberately
+not re-derived. They rest on constructions defined only inside the author's own framework ("the
+sovereign-hexagram 6-cube", "the symbol octahedron", "each solid's axis window") which appear
+nowhere in this tree, so **there is nothing here to re-derive from.** Each now carries a
+`falsified_by` and a `revival_condition`: write the construction down in this repo, add a script,
+and it can earn a tier instead of being assigned one.
+
+**The structural fix, which is the part that generalises.** The declared tier is now only the
+author's *intent*; the checker computes what the artifact has **earned**, from facts it can see:
+
+- **Reachability** (`in-tree` / `external` / `absent`) is **computed, never authored.** It was the
+  axis with no field at all, which is exactly why its failure was invisible. `VERIFIED` on
+  unreachable evidence is now a hard error — today's failure became unwritable.
+- **Earned tier** = `min(declared, what the evidence supports)`, printed beside the declared tier
+  with every gap listed. `VERIFIED: 34 declared | 31 earned`. The gap list is the honest edge of
+  the registry and it is printed, not buried.
+- **`premises:`** — the edge the schema never had. `uws/register/` carries *"a derivation routed
+  through an undetermined premise is itself undetermined"* and
+  `tools/check-derivation-premises.rb` enforces it **on vendored data only**, because `claims.yaml`
+  had no premise field: `scope_reviewed` is an *acknowledgement*, not a premise. So the repo
+  imported a rule it structurally could not run on itself. It can now, and coverage is reported
+  (4 of 138) rather than assumed.
+
+**It bit immediately, on me.** `OPEN-LEDGER-LINE-IS-A-BLAST-RADIUS`, registered VERIFIED hours
+earlier the same day, rests on `AUTHORITY-ANCHORS-FAIL-TOTALLY`, which is ARGUED. A claim cannot be
+better established than what it stands on, so it was demoted to ARGUED — by the rule, not by my
+judgement. That is the point of making the tier earned.
+
+**And the denominator was wrong the whole time.** `VERIFIED / all claims` is malformed:
+DESIGN-CHOICE is a *kind* and RETIRED a *lifecycle state*, and neither can ever be VERIFIED. The
+well-formed figure is over the 138 claims actually on the confidence scale, not 183. The conflation
+was understating the top tier — an error in the flattering direction's opposite, which is why
+nobody caught it either.
+
+**The lesson.** A hand-written `tier:` is a hand-written count, and `COUNTS-ARE-GENERATED` already
+says those go stale because nothing recomputes them. The registry applied that principle to every
+number it publishes except the one that matters most. A checker that silently declines to check is
+worse than no checker, because the header promises the check happened — and a bare `rescue` that
+swallows the error is the same disease, which I then committed in `stats.rb` while fixing this and
+had to fix too.

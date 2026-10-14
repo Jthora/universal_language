@@ -3710,14 +3710,27 @@ claims:
       dual pair: shells of 12, 20, 20 and 12 words, each shell parity-pure and closed under
       complementation, with the shell icosahedron's face centres falling exactly on the shell
       dodecahedron's directions. The full H3 dual compound is the shadow of the hexagram cube.
-    tier: VERIFIED
-    evidence: ul_agent:tests/test_symbol_geometry.py
+    tier: CONJECTURED
     notes: >
       Research-ledger ids C8-GOLDEN-SHADOW-SHELLS and C9-SHADOW-IS-THE-DUAL-COMPOUND. An earlier
       pass refused the dodecahedron identification after an 8/20 match; the cause was a
       wrong-handed comparison target (the textbook dodecahedron is the mirror of the true dual),
       recorded and overturned in research/codes/FAILURES.md as C-011. Against the correct dual:
       20/20.
+    falsified_by: >
+      Construct the 64 words of the sovereign-hexagram 6-cube and the icosahedron's six five-fold axes explicitly, project, and exhibit any word that does not land on a vertex direction of the stated compound.
+    scope: >
+      DEMOTED 2026-10-14 from VERIFIED, and deliberately NOT re-derived. F-039: the cited evidence
+      ul_agent:tests/test_symbol_geometry.py has never existed in that repository (528 commits
+      checked, only branch main, no add and no delete of that path). Unlike the three classical
+      results re-derived in notes/075, this one rests on constructions defined only inside the
+      author's own framework - "the sovereign-hexagram 6-cube", "the symbol octahedron", "each
+      solid's axis window" - which are not specified anywhere in this tree, so there is nothing
+      here to re-derive FROM. The statement is recorded unchanged; only its tier moved, to the tier
+      the available evidence supports, which is none.
+    revival_condition: >
+      Write the construction down in this repo - the word set, the axis assignment, the projection -
+      and add a script that checks it. Then it can earn a tier instead of being assigned one.
 
   - id: CODE-SHELL-ISOMETRY-IS-CHIRAL
     statement: >
@@ -3727,12 +3740,25 @@ claims:
       is the antipodal map, so opposition-as-complementation transfers through the projection
       automatically — the opposition structure that provably cannot ride the icosahedral trine
       chart does ride the shadow.
-    tier: VERIFIED
-    evidence: ul_agent:tests/test_symbol_geometry.py
+    tier: CONJECTURED
     notes: >
       Research-ledger id C8-SHELL-ISOMETRY-IS-CHIRAL. First computed instance of a cross-geometric
       transfer: one object (the 6-cube) holds the full aspect metric in its Hamming structure and
       the trine/antipode solids in its golden shadow, with cut-and-project as the literal map.
+    falsified_by: >
+      Build the even 12-word icosahedral shell of the hexagram-cube shadow and exhibit one pair whose Hamming distance is not exactly twice the icosahedron graph distance.
+    scope: >
+      DEMOTED 2026-10-14 from VERIFIED, and deliberately NOT re-derived. F-039: the cited evidence
+      ul_agent:tests/test_symbol_geometry.py has never existed in that repository (528 commits
+      checked, only branch main, no add and no delete of that path). Unlike the three classical
+      results re-derived in notes/075, this one rests on constructions defined only inside the
+      author's own framework - "the sovereign-hexagram 6-cube", "the symbol octahedron", "each
+      solid's axis window" - which are not specified anywhere in this tree, so there is nothing
+      here to re-derive FROM. The statement is recorded unchanged; only its tier moved, to the tier
+      the available evidence supports, which is none.
+    revival_condition: >
+      Write the construction down in this repo - the word set, the axis assignment, the projection -
+      and add a script that checks it. Then it can earn a tier instead of being assigned one.
 
   - id: CODE-ICOSIANS-ARE-E8
     statement: >
@@ -3742,13 +3768,32 @@ claims:
       two concentric 600-cells at radius ratio phi. Since E8 is also the Construction-A lattice of
       the extended Hamming [8,4,4] code, the chain code -> E8 -> icosian ring -> 600-cell pair is
       closed end to end.
-    tier: VERIFIED
-    evidence: ul_agent:tests/test_icosians_and_gaps.py
+    tier: ARGUED
+    evidence: research/notes/075-earned-tiers/verify.py
     notes: >
       Research-ledger ids C9-ICOSIAN-RING-IS-E8 and C9-E8-ROOTS-ARE-TWO-600-CELLS. The untwisted
       Galois-pair form is not integral; the twist is essential. The binary icosahedral group's
       nine conjugacy classes match the affine-E8 node count, whose marks satisfy the McKay
       doubling identity (C9-2I-MCKAY-COUNT).
+    scope: >
+      WHAT IS VERIFIED EXACTLY, in section C of the script: the 120 unit icosians are constructed
+      over Z[phi] with exact arithmetic, all have reduced norm 1, they are closed under quaternion
+      multiplication (exhaustive 120x120 check) and so form the binary icosahedral group 2I of order
+      120 whose vertex set is the 600-cell, and their Z-span has rank 8.
+      WHAT IS NOT VERIFIED, and why this is ARGUED rather than VERIFIED: the E8 identification.
+      Under the trace form Tr(x * conj(y)) the Gram matrix of a Z-basis is non-integral with
+      determinant 625/256 = 5^4/2^8, not 1. Two greedy bases and a Hermite normal form give the same
+      value, so it is a property of the form rather than the basis: the E8 presentation of the
+      icosian ring needs the form twisted by the inverse different (1/sqrt5), which the script does
+      not construct. The script records this as UNRESOLVED and refuses to pick a scale factor that
+      makes the determinant come out, because choosing a constant because it produces the wanted
+      answer is F-035's ratchet applied to arithmetic.
+    notes_on_evidence: >
+      DEMOTED 2026-10-14 from VERIFIED. F-039: the cited evidence
+      ul_agent:tests/test_icosians_and_gaps.py never existed in that repository. The result is true
+      in the literature (the icosian ring is isomorphic to E8); it is simply not established by
+      anything in this repo, and the tier now says so. Reviving it needs the inverse-different
+      twist implemented in verify.py section C.
 
   - id: CODE-TAMMES-FORCES-THE-SOLIDS
     statement: >
@@ -3758,10 +3803,20 @@ claims:
       the symbol octahedron and twelve at the sign icosahedron: the framework's solids are optimal
       vocabularies for a spherical meaning space, not decoration.
     tier: VERIFIED
-    evidence: ul_agent:tests/test_icosians_and_gaps.py
+    evidence: research/notes/075-earned-tiers/verify.py
     notes: >
       Research-ledger id C9-TAMMES-FORCES-THE-SOLIDS. Numerics corroborate the published Tammes
       theorems; the reading for meaning space rests on the separate spherical-metric result.
+    scope: >
+      CORROBORATED NUMERICALLY, not proved here. Section B of the script is a seeded maximin
+      repulsion search (60 restarts, fixed seed) recovering 90.0000 degrees for six points and
+      63.4349 degrees for twelve, and confirming the vertex degrees (4 and 5) that identify the
+      octahedron and the icosahedron. The underlying optimality is a classical theorem
+      (Schuette-van der Waerden for n=12); this file reproduces it, it does not prove it. Do not
+      cite the script as a proof.
+    notes_on_evidence: >
+      RE-DERIVED 2026-10-14 after F-039. Previously cited ul_agent:tests/test_icosians_and_gaps.py,
+      which never existed in that repository.
 
   - id: CODE-INSCRIPTION-WEB
     statement: >
@@ -3772,12 +3827,25 @@ claims:
       tetrahedron of the archetype cube; the archetype cube inscribes in the dodecahedron. One
       octahedron carries three layers: symbols at vertices, signs at golden edge-points, archetypes
       at faces.
-    tier: VERIFIED
-    evidence: ul_agent:tests/test_symbol_geometry.py
+    tier: CONJECTURED
     notes: >
       Research-ledger ids C9-INSCRIPTION-WEB and C8-ELEMENTS-ARE-THE-TETRAHEDRON (the four
       trine-face centroids of each icosahedral chart form a regular tetrahedron; the mirror charts
       give the dual pair).
+    falsified_by: >
+      Take the five Platonic solids as the framework assigns them and exhibit one stage of the claimed nesting (tetrahedron edge-midpoints to symbol octahedron, and onward) that does not hold exactly.
+    scope: >
+      DEMOTED 2026-10-14 from VERIFIED, and deliberately NOT re-derived. F-039: the cited evidence
+      ul_agent:tests/test_symbol_geometry.py has never existed in that repository (528 commits
+      checked, only branch main, no add and no delete of that path). Unlike the three classical
+      results re-derived in notes/075, this one rests on constructions defined only inside the
+      author's own framework - "the sovereign-hexagram 6-cube", "the symbol octahedron", "each
+      solid's axis window" - which are not specified anywhere in this tree, so there is nothing
+      here to re-derive FROM. The statement is recorded unchanged; only its tier moved, to the tier
+      the available evidence supports, which is none.
+    revival_condition: >
+      Write the construction down in this repo - the word set, the axis assignment, the projection -
+      and add a script that checks it. Then it can earn a tier instead of being assigned one.
 
   - id: CODE-LAW-PER-WINDOW
     statement: >
@@ -3787,10 +3855,23 @@ claims:
       in the icosahedron's six-axis window the dodecahedral shells preserve only opposition and
       parity. Relations that survive every window (opposition, parity) versus relations exact only
       at home is a computed distinction.
-    tier: VERIFIED
-    evidence: ul_agent:tests/test_symbol_geometry.py
+    tier: CONJECTURED
     notes: >
       Research-ledger id C9-DODECA-LAW-IN-ITS-OWN-WINDOW.
+    falsified_by: >
+      Project the 10-cube through the dodecahedron's ten three-fold axes and exhibit a shell whose distances do not obey the stated per-window law.
+    scope: >
+      DEMOTED 2026-10-14 from VERIFIED, and deliberately NOT re-derived. F-039: the cited evidence
+      ul_agent:tests/test_symbol_geometry.py has never existed in that repository (528 commits
+      checked, only branch main, no add and no delete of that path). Unlike the three classical
+      results re-derived in notes/075, this one rests on constructions defined only inside the
+      author's own framework - "the sovereign-hexagram 6-cube", "the symbol octahedron", "each
+      solid's axis window" - which are not specified anywhere in this tree, so there is nothing
+      here to re-derive FROM. The statement is recorded unchanged; only its tier moved, to the tier
+      the available evidence supports, which is none.
+    revival_condition: >
+      Write the construction down in this repo - the word set, the axis assignment, the projection -
+      and add a script that checks it. Then it can earn a tier instead of being assigned one.
 
   - id: CODE-OCTONIONS-FROM-HAMMING
     statement: >
@@ -3799,7 +3880,7 @@ claims:
       verified composition algebra (norm-multiplicative, alternative, non-associative) — the
       octonions. The code writes the algebra's multiplication table.
     tier: VERIFIED
-    evidence: ul_agent:tests/test_icosians_and_gaps.py
+    evidence: research/notes/075-earned-tiers/verify.py
     notes: >
       Research-ledger id C9-OCTONIONS-FROM-HAMMING. Fills the N=7 rung between the six-symbol so(7)
       vector and the eight-archetype spinor/e8 rung. That Aut(octonions) = G2 sits inside the same
@@ -3809,6 +3890,17 @@ claims:
   # Added 2026-09-10. See the owner's correction: the geometric DEFINITION is
   # itself the meaning where the form instantiates the property. Prior text that
   # treated UL's symbol-to-meaning relation as conventional is superseded.
+    scope: >
+      EXACT and complete for what it states: the cyclic [7,4,3] code is generated, its seven
+      weight-3 supports are checked against all four Fano-plane axioms, and an orientation of those
+      lines is found by search making the induced 8-dimensional real algebra ALTERNATIVE, with every
+      imaginary unit squaring to -1 and 168 associator failures confirming non-associativity. By
+      Hurwitz that identifies the octonions. Says NOTHING about UL, about the notation, or about any
+      connection between the octonions and meaning; it is a fact about a code and an algebra.
+    notes_on_evidence: >
+      RE-DERIVED 2026-10-14 after F-039 found the cited evidence
+      (ul_agent:tests/test_icosians_and_gaps.py) had never existed in that repository. Now earned
+      in-tree and re-runnable: python3 -I research/notes/075-earned-tiers/verify.py
 
   - id: GROUNDING-BY-SELF-DENOTATION
     statement: >
@@ -4034,6 +4126,7 @@ claims:
       precisely a free parameter the mathematics does not fix and which could therefore differ in
       another region; a closed ledger is exactly the condition that no such parameter exists.
     tier: ARGUED
+    premises: [UNIVERSAL-IS-MATHEMATICAL-SCOPE]
     evidence: research/notes/064-universal-scope/README.md
     priority: 0
     scope: >
@@ -5109,7 +5202,8 @@ claims:
       and it makes that collapse unable to propagate. Measured over this registry by
       tools/blast-radius.rb, 65 of 182 claims are load-bearing, 53 claims (29.1%) sit downstream of
       at least one CONJECTURED premise, and 15 of 39 VERIFIED claims do.
-    tier: VERIFIED
+    tier: ARGUED
+    premises: [AUTHORITY-ANCHORS-FAIL-TOTALLY]
     evidence: tools/blast-radius.rb
     scope: >
       LOWER BOUNDS, not totals. The graph walks `scope_reviewed` edges only, so a claim leaned on in
@@ -5127,6 +5221,13 @@ claims:
       ERLANGEN-ANSWERS-GOODMAN-SELECTION, 62 downstream each). This program is itself anchored partly
       on things it has not established, and can now say by how much.
     scope_reviewed: [AUTHORITY-ANCHORS-FAIL-TOTALLY, PROGRAM-SUCCESS-CONDITION, READING-INVARIANCE-TARGET, SEMANTIC-STACK-M1-M2-M3, ERLANGEN-ANSWERS-GOODMAN-SELECTION]
+    notes_on_tier: >
+      DEMOTED from VERIFIED to ARGUED within hours of registration, by the premise-propagation
+      rule this same note turned on. Its premise AUTHORITY-ANCHORS-FAIL-TOTALLY is ARGUED, and a
+      claim cannot be better established than what it rests on. The MEASURED half (65 of 183
+      load-bearing, 53 downstream of a conjecture, from tools/blast-radius.rb) is exact; the
+      INTERPRETIVE half - that an open ledger line IS a blast radius - rests on the anchor
+      argument. ARGUED is the tier of the conjunction, and the rule caught it rather than me.
 
   - id: PINNED-FRACTION-IS-A-CODE-RATE
     statement: >
@@ -5138,6 +5239,7 @@ claims:
       constraints; disconnection costs the pin on `faces`, since V-E+F=2-2g needs connectivity; and
       the planar block is what pins `components`.
     tier: VERIFIED
+    premises: [CAPACITY-RADIUS-TRADEOFF, CORPUS-REDUNDANCY-CATCHES-TWO-OF-THREE]
     evidence: tools/check-redundancy.rb
     scope: >
       Pinning is always RELATIVE TO A PERTURBATION CLASS, never absolute, and the class is printed
@@ -5162,6 +5264,7 @@ claims:
       remainder as actually about values. It does not resolve that remainder; it stops the remainder
       being manufactured by vocabulary mismatch and stops it hiding inside apparent factual dispute.
     tier: ARGUED
+    premises: [OPERATOR-INVENTORY-IS-UNFORCED]
     evidence: research/notes/074-the-anchor-problem/
     scope: >
       Conditional on the re-derivability it assumes, so it inherits every open ledger line: the
