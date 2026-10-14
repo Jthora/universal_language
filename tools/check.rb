@@ -13,6 +13,7 @@ checks = [
   ['scope corrections propagate',    'check-propagation.rb'],
   ['notes convention holds',         'check-notes.rb'],
   ['seed index matches the tree',    'check-index.rb'],
+  ['derivation premises propagate', 'check-derivation-premises.rb'],
 ]
 
 failed = []

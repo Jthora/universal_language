@@ -1,8 +1,10 @@
 # STATE-OF-PLAY
 
-**Written fresh 2026-10-14 (fourth full restatement).** The third preceded the scope ruling in note
-`064`, which changed what the program's central word means and therefore what every claim beneath it
-asserts. That is a rewrite condition, not an amendment condition. **Rewritten, not patched** — §7.
+**Written fresh 2026-10-14 (fifth full restatement).** The fourth was written hours earlier, between
+the scope ruling (`064`) and the audit it licensed (`065`). The audit returned a *measured answer* at
+a layer that had only ever held an open question, which changes the program's state more than the
+ruling did on its own. **Rewritten, not patched** — §9. Two restatements in a day is what the rule
+costs when the day contains two results.
 
 ---
 
@@ -26,7 +28,42 @@ running two meanings of its central word at once, and the ledger had been built 
 It is a **conditional** claim by construction — *wherever the mathematics is the same* — and it
 shrinks with the domain of mathematical identity. That is deliberate and load-bearing.
 
-## 1. What the ruling did to the program
+## 1. The audit ran, and it returned a number instead of a question
+
+`064` made the ledger audit the program's cheapest falsifier. `065` ran it — after importing the
+object, because **the thing the universality claim is about was not in the repo.** The claim's object
+is *the map of all possible symbolic geometry*; the repo held UWS, which is one chart. The map was on
+the companion site. It is now at `uws/register/`, imported verbatim and hashed, 145 entries.
+
+> **The map's generation is exact. Its generators are not derived.**
+
+**Forced, and it is more than expected.** The six marks are not a list: they are the complete product
+of symmetry order `{∞,2,1}` × curvature class `{singular, smooth}`, **all six cells filled**, so the
+inventory is forced and its cardinality is a consequence. That is precisely the shape
+`UWS-PRIMITIVE-COUNT` predicted when it called the count question malformed. And the 191
+constructions are exact arithmetic over the generators.
+
+**Not forced, and this is the load-bearing finding.** **Every operator carries status `measured`** —
+the register's own word for *a fact about these artifacts, not necessity* — and each notes that
+attestation does not derive its semantics. So the operator inventory is the largest free parameter on
+the load-bearing path, **far larger than the syntax layer's proved ℤ/2**, and the classification
+layer's ledger line **does not close** (`OPERATOR-INVENTORY-IS-UNFORCED`, priority 0). Per REQ-3 that
+is recorded as a shortfall in literal universality, **not rescoped** — and `measured` means *no
+derivation is recorded*, not that none exists, so "the operators cannot be derived" would itself owe
+the full negative-result discipline.
+
+**Three narrower findings.** `close` is load-bearing for the 191 and **absent from the published
+operator inventory**. The orbit count is a calibration-dependent **range 89–94**, not an integer —
+limited by the register to the count rather than the partition, at `measured`. And the attested set is
+**not closed on its own corpus**: the teardrop ('Life') is unreachable by 23,424 close()-expressions.
+
+**One positive, stated as one** because the headline is negative: **all three admitted conventions are
+naming, not structure** — element colours, modality names, badge shapes. Under universe-scope naming is
+free and classification is not, so these are conventions in the right place
+(`ATLAS-CONVENTIONS-ARE-NAMING-ONLY`). Caveat on its own face: "only three" understates the
+free-parameter count, since the register files attestation as `measured` rather than `conventional`.
+
+## 2. What the ruling did to the program
 
 **It made the ledger constitutive instead of instrumental** (`LEDGER-CLOSURE-IS-UNIVERSE-SCOPE`,
 ARGUED, priority 0). An irreducible conventional residue *is* a free parameter the mathematics does
@@ -54,14 +91,16 @@ had. The burden is now mathematical and nothing else. **Narrower and harder, bet
 **What did not change:** `UL-IS-TWO-TIER` stands as *structure*, boundary still an empirical
 variable, natural tier still the bootstrap surface. Only its warrant moved.
 
-## 2. The contract
+## 3. The contract
 
 REQ-1 **it must be a language** · REQ-2 **universality is a ledger** — now read as the definition of
 universality rather than a proxy for it · REQ-3 **no-retreat falsifiability, symmetric** · REQ-4
 **baseline before UQPL**. Registered as claims; enforced by seven checkers in CI.
 
-## 3. What we hold
+## 4. What we hold
 
+- **The map's generators, measured** (`065`) — marks forced as a complete 3×2 product; operators
+  unforced; the classification ledger line open. The first measured answer at that layer.
 - **The combinatorial map as UWS's fixed point** — seven independent lines, none aimed at it; a
   complete invariant; machine-checked (`map.rs`); honestly a **DCEL reduct** (1970s prior art — lost
   originality, gained a forty-year literature). **New in `064`: its *discreteness* is now
@@ -84,7 +123,7 @@ universality rather than a proxy for it · REQ-3 **no-retreat falsifiability, sy
   break Sₙ; Other-Play's lever game pays 0.11 for symmetric choice against 0.9 for
   worse-but-identifiable.
 
-## 4. The semantic stack — the gap, decomposed (`050`/`051`)
+## 5. The semantic stack — the gap, decomposed (`050`/`051`)
 
 | Route | Status |
 |---|---|
@@ -97,7 +136,7 @@ not sufficient**. Two minds may share the classification exactly and still fail 
 because sharing the map does not fix which part of it either points at. Universe-scope is a result
 about the syntax layer's **domain**, not a semantics. map→meaning remains **unbounded**.
 
-## 5. The Cure now has a budget (`064`)
+## 6. The Cure now has a budget (`064`)
 
 Verified, **conditional on the Fisher–Rao model** — the companion wiki's, not an established property
 of UL. Read the `scope:` lines before citing.
@@ -117,7 +156,7 @@ of UL. Read the `scope:` lines before citing.
 - **What the budget does not do:** it bounds the geometry, not the adversary. *Structural Equivalence
   Exploits* — valid structure, inverted semantics, i.e. deceptive alignment — is untouched.
 
-## 6. Standing corrections that gate everything
+## 7. Standing corrections that gate everything
 
 - `UL-IS-EMERGENT-UNIVERSAL`: precondition unmet; "no tuning parameter" objection withdrawn (SOC).
   Under `064` the universality falsifier no longer has to wait on it.
@@ -129,10 +168,15 @@ of UL. Read the `scope:` lines before citing.
 - **Method** (`048`): rules fire when they are the subject and fail as background; **prose does not
   execute.** Any future rule answers: *what executes it?*
 
-## 7. Next, in order
+## 8. Next, in order
 
-1. **The ledger audit, run as a universality audit** (§1). Cheapest falsifier the program has; never
-   run; needs no new apparatus.
+1. **Derive the operator inventory, or record that it cannot be derived** (§1). The audit replaced
+   the open question with a measured shortfall, and this is now the single highest-value item in the
+   program: it is the largest residue on the load-bearing path, and `064` made that residue identical
+   to a shortfall in universality. Either direction is a result.
+   Alongside it, three cheap follow-ons from `065`: does the tolerance move the *partition* or only
+   the count · raise the premise-graph coverage above 15% by id-linking prose premises · publish
+   `close` or say why it is not an operator.
 2. **Formalize the reading class 𝔽 and attack `READING-INVARIANCE-TARGET`** — the mathematical center.
 3. **The format-acquisition experiment** — the first empirical test that touches the purpose.
    Runnable on models today. Nobody has run it.
@@ -141,8 +185,8 @@ of UL. Read the `scope:` lines before citing.
 5. **The snapshot-vs-practice gap** — the Cure is a point-in-time check; continuous re-enactment as
    the answer to performable credentials is the best unworked lead in either corpus.
 6. **The adversary front's remaining debts** — Levinson's reply (new from `061`), S8/S9 residue.
-7. **Move VERIFIED** — 22 of 149. Still the slowest number, and still the accurate picture.
+7. **Move VERIFIED** — 26 of 155. Still the slowest number, and still the accurate picture.
 
-## 8. How this document is maintained
+## 9. How this document is maintained
 
 **Rewritten, not patched.** When amendment next feels tempting, that is the signal to rewrite.

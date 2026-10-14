@@ -67,9 +67,11 @@ Fisher–Rao model** — read the `scope:` lines before citing:
 
 ### Where to put effort
 
-1. **Run the convention ledger as a universality audit** — under `LEDGER-CLOSURE-IS-UNIVERSE-SCOPE`
-   closure *is* universe-scope invariance, so the falsifier is an audit, not an experiment. Needs no
-   new apparatus; never run as such.
+1. **Derive the operator inventory, or record that it cannot be derived** — the audit has been run
+   (`065`) and returned a measured answer: the map's generation is exact, its generators are not.
+   Every operator is `measured` (attested on sheets), so the operator set is the largest free
+   parameter on the load-bearing path and the classification layer's ledger line does not close
+   (`OPERATOR-INVENTORY-IS-UNFORCED`). Either direction is a result.
 2. **The format-acquisition experiment** — the first empirical test that touches the purpose.
    Runnable on models today. **Nobody has run it.**
 3. **`READING-INVARIANCE-TARGET`** — the mathematical center, and under universe-scope exactly where

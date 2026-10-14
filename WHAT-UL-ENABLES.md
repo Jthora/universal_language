@@ -334,10 +334,13 @@ this section is the cheapest defense against it.
 
 Ordered by *decisiveness per unit effort*, not by importance.
 
-1. **Run the ledger audit as a universality audit.** Newly the cheapest falsifier the program has,
-   and never run as such: go down the load-bearing path and ask of each element *does the
-   mathematics force this value?* Every "no" is a free parameter and a measured shortfall in scope.
-   No experiment, no literature, no new apparatus — the apparatus exists. See note `064` §2(b).
+1. **Derive the operator inventory — or record that it cannot be derived.** The ledger audit has
+   now been run (note `065`), and it returned a measured answer: **the map's generation is exact and
+   its generators are not derived.** Every operator in the imported register carries status
+   `measured` — attested on drawn sheets, semantics not derived — so the operator inventory is the
+   largest free parameter on the load-bearing path, far larger than the syntax layer's ℤ/2, and the
+   classification layer's ledger line does not close (`OPERATOR-INVENTORY-IS-UNFORCED`). Either
+   direction is a result. This is the highest-value open item in the program.
 2. **The format-acquisition experiment** (§4.10). The first empirical test that touches the
    purpose. Runnable on models today.
 3. **`READING-INVARIANCE-TARGET`** — formalize the reading class 𝔽 and prove the fixed point

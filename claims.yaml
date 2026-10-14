@@ -4172,3 +4172,151 @@ claims:
       Reconstruct) is a SNAPSHOT check. That is the sharpest unworked lead in either corpus and is
       nowhere in this repo's Cure material.
     scope_reviewed: [CAPACITY-RADIUS-TRADEOFF, DRIFT-DETECTION-REQUIRES-DISCRETENESS]
+
+  # ─── The atlas audit: the map's generators (2026-10-14, note 065) ───────────
+
+  - id: MARKS-ARE-A-COMPLETE-PRODUCT
+    statement: >
+      The register's six marks are not a listed inventory. They are the complete product of two
+      axes — symmetry order {infinity, 2, 1} by curvature class {singular, smooth} — with all six
+      product cells filled. Given the axes, the inventory is forced and its cardinality is a
+      consequence rather than a choice.
+    tier: VERIFIED
+    evidence: research/notes/065-atlas-audit/audit.py
+    scope: >
+      Establishes that the inventory is GENERATED given the two axes. Does NOT establish the axes:
+      symmetry order and curvature class are themselves measured off the drawn corpus, not derived,
+      so what is forced is the inventory and not the choice of what to classify by. Says nothing
+      about meaning — which mark sits in which cell is a separate question this does not touch.
+    notes: >
+      This is the shape of result UWS-PRIMITIVE-COUNT predicted when it reframed the count question
+      as malformed: the count was never the interesting object and the generating structure is.
+      Audit section 1. The six cells are Point (inf, singular), Circle (inf, smooth), Line (2,
+      singular), Wave (2, smooth), Angle (1, singular), Curve (1, smooth).
+    scope_reviewed: [UWS-PRIMITIVE-COUNT]
+
+  - id: MAP-GENERATION-IS-EXACT
+    statement: >
+      The register's 191 constructions follow by exact arithmetic from its generators — 5 binary
+      operators over 36 ordered mark pairs, plus reflect_pair on all 6 marks, plus close on 5 (a
+      Point has nothing to close). The generated space is therefore exact GIVEN the generator set.
+    tier: VERIFIED
+    evidence: research/notes/065-atlas-audit/audit.py
+    scope: >
+      Exactness is CONDITIONAL on the generator set, and that set is not derived — see
+      OPERATOR-INVENTORY-IS-UNFORCED, which this claim inherits in full. An exact count over
+      unforced generators is not a universality result. Covers the construction count only, not the
+      quotient to orbits, which is tolerance-bounded.
+    notes: >
+      Audit section 3, arithmetic verified against the register. Also recorded there as a defect:
+      `close` is load-bearing for the 191 and is ABSENT from the register's published `operators`
+      array, which holds six entries covering only the five binary operators plus reflect_pair. The
+      register's prose uses `close` throughout and distinguishes it from the binary operators, so an
+      operation the construction count depends on is missing from the inventory meant to contain it.
+    scope_reviewed: [OPERATOR-INVENTORY-IS-UNFORCED]
+
+  - id: OPERATOR-INVENTORY-IS-UNFORCED
+    statement: >
+      Every operator in the register carries status `measured` — the register's own word for a fact
+      about these artifacts rather than a necessity — and each notes that attestation does not
+      derive its semantics. The operator inventory is therefore the largest free parameter on the
+      classification layer's load-bearing path, and a far larger residue than the syntax layer's
+      proved Z/2. The classification layer's ledger line does not close.
+    tier: ARGUED
+    evidence: research/notes/065-atlas-audit/README.md
+    priority: 0
+    scope: >
+      `measured` means NO DERIVATION IS RECORDED, not that none exists. This is a shortfall in
+      literal universality at the classification layer, not a proof of impossibility. REQ-3 cuts
+      both ways here: "the operators cannot be derived" would itself require the full
+      negative-result discipline, and nothing in note 065 supplies it. Covers the operator set
+      only; the mark inventory is forced given its axes (MARKS-ARE-A-COMPLETE-PRODUCT).
+    notes: >
+      RECORDED AS A SHORTFALL RATHER THAN RESCOPED, per REQ-3. Under
+      LEDGER-CLOSURE-IS-UNIVERSE-SCOPE an irreducible residue IS a free parameter the mathematics
+      does not fix, so this is simultaneously a ledger entry and a measured shortfall in scope — the
+      first time the program has had a measured answer at this layer rather than an open question.
+      All six operators are attested from the owner's drawn sheets: the hexagram and Point-in-Circle
+      (superpose_concentric), Chaos' two triangles (superpose_displaced), SymbolFolds' right angles
+      (cross), arch-then-cup as the sine (concatenate), Point inside Circle (nest), mirrored waves
+      as infinity (reflect_pair).
+      A SHARPER PROBLEM FOUND WHILE LOOKING FOR THIS ONE, not pursued: the attested set is not
+      closed on its own corpus. The register records the teardrop ('Life', Angle+Curve fused) as
+      UNREACHABLE by 23,424 close()-expressions over the attested operators — "exactly-one-corner
+      figures do not occur in that space at all". So the inventory is both unforced AND
+      known-incomplete against a figure the corpus itself attests.
+      Deriving the inventory, or recording that it cannot be derived, is now the single
+      highest-value open item in the program.
+    scope_reviewed: [LEDGER-CLOSURE-IS-UNIVERSE-SCOPE, UNIVERSAL-IS-MATHEMATICAL-SCOPE]
+
+  - id: ORBIT-PARTITION-IS-TOLERANCE-BOUNDED
+    statement: >
+      The register's orbit count is not an integer it can assert: across the interval its own
+      calibration licenses it runs 89 to 94, with 93 a central value, and doubling the rotation
+      search does not settle it. The synonymy quotient therefore depends on a calibration parameter.
+    tier: VERIFIED
+    evidence: research/notes/065-atlas-audit/audit.py
+    scope: >
+      The register limits this to the COUNT and asserts the partition's structure is undisturbed —
+      "nothing here disturbs any claim about which figures are related" — and that limiting
+      assertion is itself at `measured`, i.e. unverified. The limitation is load-bearing: a
+      tolerance that moved the PARTITION rather than the count would make the map a family of
+      classifications indexed by a calibration parameter rather than one object, which bears
+      directly on UNIVERSAL-IS-MATHEMATICAL-SCOPE, whose object is the classification. Whether the
+      tolerance moves the partition is unchecked.
+    notes: >
+      Audit section 5. The 191 constructions are exact; it is the quotient that is bounded. Note
+      that this does not reopen the count question in the UWS-PRIMITIVE-COUNT sense — a count being
+      presentation-dependent is expected, whereas a PARTITION being calibration-dependent would be a
+      different and more serious problem. Distinguishing the two is item 2 of note 065's open list.
+    scope_reviewed: [UNIVERSAL-IS-MATHEMATICAL-SCOPE, UWS-PRIMITIVE-COUNT]
+
+  - id: ATLAS-CONVENTIONS-ARE-NAMING-ONLY
+    statement: >
+      All three conventions the register admits are naming rather than structure — element colours
+      (Golden Dawn, inherited wholesale), modality names (inherited astrological terms with an
+      external referent), and the status badge shapes (iconic, which the register notes is motivated
+      rather than derived). None states which figures exist or how they relate.
+    tier: ARGUED
+    evidence: research/notes/065-atlas-audit/README.md
+    scope: >
+      Covers the conventions the register ADMITS as conventional. It is not a survey for unadmitted
+      ones — OPERATOR-INVENTORY-IS-UNFORCED is exactly an unforced element that the register does
+      not file under `conventional`, because its vocabulary files attestation as `measured` instead.
+      So "only three conventions" understates the free-parameter count and must not be cited as the
+      ledger's bottom line.
+    notes: >
+      A POSITIVE RESULT, recorded as one because the audit's headline is negative and this would
+      otherwise be read as implicit. Under universe-scope naming is free and classification is not,
+      so conventions confined to the naming layer are conventions in the right place. A reader
+      looking for this project's admitted conventions to be load-bearing will not find them so.
+    scope_reviewed: [UNIVERSAL-IS-MATHEMATICAL-SCOPE, OPERATOR-INVENTORY-IS-UNFORCED]
+
+  - id: UNDETERMINED-PREMISE-PROPAGATES
+    statement: >
+      A derivation routed through an undetermined premise is itself undetermined. Adopted from the
+      imported register as a standing rule of this repo, with an executor: no assertable entry may
+      transitively depend on a premise that is undetermined or withdrawn.
+    tier: VERIFIED
+    evidence: tools/check-derivation-premises.rb
+    priority: 1
+    scope: >
+      Currently executed over the imported register only (uws/register/), NOT over claims.yaml,
+      whose scope/scope_reviewed fields encode a different and weaker relation. Coverage on the
+      register is 15 percent — 22 of 145 entries — because premises are stated as free text and only
+      sometimes contain claim ids; 13 of the 25 `derived_given` entries are invisible to the rule.
+      A pass is therefore a pass over the linked portion and nothing more, and the checker prints
+      coverage as part of its result for that reason.
+    notes: >
+      WHY THIS RULE AND NOT ANOTHER. The repo's scope/scope_reviewed mechanism is a LOCAL, per-node
+      acknowledgement: each edge is judged alone and nothing propagates uncertainty forward through
+      a chain. FAILURES.md F-035 records what per-node checking costs — a perimeter retreats one
+      locally-defensible step at a time with nothing summing the steps. Forward propagation is the
+      shape of check that cannot be defeated that way, which is why this is the rule worth adopting
+      rather than hygiene.
+      First run: no violations, no cycles — the register passes its own rule over the traceable
+      portion. Reporting that as a clean pass without the coverage figure would reproduce this
+      repo's own documented failure mode (note 048: rules fire when they are the subject and fail as
+      background) inside a borrowed rule on its first run.
+      The register's author calls this "the part that transfers to a corpus we did not write". It
+      does transfer; prose does not execute, so it needed a file.

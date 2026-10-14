@@ -98,10 +98,15 @@ re-derived.**
 
 ## 4. Unblocked work, ordered by decisiveness per unit effort
 
-1. **Run the ledger audit as a universality audit.** Under `LEDGER-CLOSURE-IS-UNIVERSE-SCOPE` this
-   is now the cheapest falsifier the program has, and it has never been run as such. Walk the
-   load-bearing path; ask of each element *does the mathematics force this value?* Every "no" is a
-   free parameter and a measured shortfall in scope. No experiment, no new apparatus.
+1. **Derive the operator inventory, or record that it cannot be derived.** The ledger audit has
+   been run (note `065`) and returned a measured answer rather than an open question: **the map's
+   generation is exact and its generators are not derived.** The six marks are the complete product
+   of two axes, so that inventory is forced — but every operator carries status `measured`, attested
+   on drawn sheets with semantics explicitly not derived, so the operator set is the largest free
+   parameter on the load-bearing path, far larger than the syntax layer's ℤ/2. The classification
+   layer's ledger line **does not close**, recorded as a shortfall rather than rescoped per REQ-3
+   (`OPERATOR-INVENTORY-IS-UNFORCED`). Either direction is a result, and this is the highest-value
+   open item in the program.
 2. **The format-acquisition experiment.** The first empirical test that touches the purpose.
    Runnable on models today. **Nobody has run it.**
 3. **`READING-INVARIANCE-TARGET`** — formalize the reading class 𝔽 and prove the Erlangen fixed

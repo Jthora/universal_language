@@ -62,10 +62,12 @@ ruby tools/check.rb --strict && cargo test --manifest-path ul-forge/Cargo.toml
 
 ## Highest-value unblocked work
 
-1. **Run the convention ledger as a universality audit.** Under `LEDGER-CLOSURE-IS-UNIVERSE-SCOPE`
-   ledger closure *is* universe-scope invariance, so the falsifier is now an audit rather than an
-   experiment: walk the load-bearing path, ask of each element *does the mathematics force this
-   value?* Every "no" is a free parameter and a measured shortfall. Never run as such.
+1. **Derive the operator inventory, or record that it cannot be derived.** The audit has been run
+   (note `065`). Result: **the map's generation is exact; its generators are not.** The six marks
+   are the complete product of two axes — forced. But every operator is `measured`, attested on
+   drawn sheets, so the operator set is the largest free parameter on the load-bearing path and the
+   classification layer's ledger line **does not close** (`OPERATOR-INVENTORY-IS-UNFORCED`, recorded
+   as a shortfall rather than rescoped, per REQ-3). Either direction is a result.
 2. **The format-acquisition experiment** — the first empirical test that touches the purpose.
    Runnable on models today. **Nobody has run it.**
 3. **`READING-INVARIANCE-TARGET`** — the mathematical center; every load-bearing edge routes through
