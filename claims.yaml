@@ -4599,3 +4599,85 @@ claims:
       with that particular convention already eliminated — which is a ledger result at the
       classification layer, and the first one there.
     scope_reviewed: [OPERATOR-INVENTORY-IS-UNFORCED, UNIVERSAL-IS-MATHEMATICAL-SCOPE, LEDGER-CLOSURE-IS-UNIVERSE-SCOPE]
+
+  # ─── Embodiment's derived role, and the entry act (2026-10-14, note 068) ────
+
+  - id: EMBODIMENT-SUPPLIES-THE-FRAME
+    statement: >
+      The three relational schemas UL cannot express frame-free — UP/DOWN, FRONT/BACK, PATH — become
+      sayable to an embodied reader without further convention, because the reader is the frame. A
+      plane has no privileged up; a canvas is a plane plus a frame, and embodiment is one source of
+      that frame. This is human inclusion's derived role under universe-scope: humans are not where
+      the classification's universality comes from, they are a frame source, and the frame-bound
+      layer is unusable without one.
+    tier: ARGUED
+    evidence: research/notes/068-embodiment-supplies-the-frame/README.md
+    scope: >
+      Covers the FRAME-BOUND layer only. The classification itself stays frame-free and therefore
+      universal (OPERATORS-ARE-CLOSED-UNDER-REORIENTATION), and nothing here reintroduces humans as
+      a warrant — HUMAN-UNIVERSALS-ARE-CORROBORATION stands unchanged. Does NOT establish that
+      embodiment is the ONLY frame source, and the interesting question runs the other way: gravity
+      and any anisotropic embodiment would serve equally, which is what universe-scope actually asks
+      of this claim and is open.
+    notes: >
+      Upstream, all derived, all in the imported register: `attested-operators-are-frame-free` (every
+      attested operator reads a quantity unchanged under global canvas rotation, drift at most
+      1.3e-15); `directional-schemas-need-a-declared-frame` (UP/DOWN drifts 2.20, FRONT/BACK 4.40
+      under the same rotation, so they cannot have frame-free operators);
+      `direction-is-read-as-contrast` (no meaning in this notation rests on which way is up).
+      THE SENTENCE WAS ALREADY IN THE REPO, as a caveat rather than a mechanism: the Aether/Nether
+      gloss "holds only GIVEN that up and down are meaningful on the page — an embedding assumption
+      inherited from the reader's body, not a property of the plane". Under universe-scope that is
+      better read as a mechanism than a limitation.
+      PROMPTED BY, AND SCOPED AGAINST, a resemblance analysis of a body-percussion group's logo. The
+      mark's decomposable parts (Point nested in Circle; a junction with free ends) sit inside the
+      attested set; what makes it read as a PERSON is the circle sitting ABOVE the lines, which is
+      exactly the frame-bound layer. So the human figure is not in the geometry, it is in the frame
+      the viewer brings — which is note 049's "every cap is specific and diagnosable" working on a
+      live case. None of the analysis's ancient-symbol family is adopted; note 068 section 1 records
+      why (F-003, note 017: retrofitting correspondences is this project's documented failure mode,
+      and the logo's stated origin is a 2022 brand identity).
+    scope_reviewed: [OPERATORS-ARE-CLOSED-UNDER-REORIENTATION, HUMAN-UNIVERSALS-ARE-CORROBORATION, UL-IS-TWO-TIER, UNIVERSAL-IS-MATHEMATICAL-SCOPE]
+
+  - id: ENTRY-ACT-IS-VISUAL-DISCRIMINATION
+    statement: >
+      The first usable act in this notation is visual, not computational: decide which of two
+      figures means containment and which means separation, then be confirmed by a theorem rather
+      than by an authority. Corpus 005 and 006 are the machine-verified minimal pair — identical
+      vertices, edges, components, planar faces, Euler characteristic and degree sequence, with the
+      entire meaning difference carried by which region the segment occupies.
+    tier: DESIGN-CHOICE
+    evidence: research/notes/068-embodiment-supplies-the-frame/README.md
+    rationale: research/notes/068-embodiment-supplies-the-frame/README.md
+    alternatives_considered:
+      - "run the checkers and read the output (rejected: that is a demo. A demo produces output to
+         look at, and looking at output is interest — the terminal state the owner identified as the
+         'oh that's interesting' factor. It does not change the reader's next action)"
+      - "close the symbol-to-dart round trip first and make THAT the entry act (rejected as the
+         entry act, kept as the research priority: it requires a machine, and UL's founding property
+         — the owner's 'any caveman can take a stick and draw symbols in the dirt' — is that it
+         needs none. A zero-equipment notation whose only entry point requires a toolchain has given
+         away its own advantage)"
+      - "teach the notation first, then act (rejected: the owner's own diagnosis is that learning is
+         not a do — it is further exploration of the interesting, so it does not escape the loop)"
+      - "state the capability surface and let the reader choose (the prior state, WHAT-UL-ENABLES.md;
+         kept as reference and rejected as an entry act: three of five entry surfaces contained no
+         runnable or performable act at all, roughly 750 lines of argument before anything to do)"
+    scope: >
+      An entry act, not a usability solution. It is available at FIVE meanings, and five is not a
+      language — what turns it into one is deriving the 89 undetermined orbits
+      (ATLAS-COMPLETENESS-IS-THE-PROGRESS-BAR). It also does not supply the thing that would make UL
+      load-bearing rather than interesting: nothing yet is IMPOSSIBLE without UL and present and
+      built, and the candidate that is impossible-and-present (drift detection against a
+      non-drifting anchor) is unbuilt — SEMANTIC-EQUALITY is CONJECTURED with no evidence.
+    notes: >
+      WHY IT QUALIFIES AS A DO AND A DEMO DOES NOT: the reader's next action differs because they
+      did it. They hold a meaning they DERIVED rather than accepted, and the instrument that
+      confirmed it required no belief in the project — Jordan's theorem certifies the general case
+      and a glance certifies the instance. That is the self-certification design's central bet,
+      performed without a machine.
+      THIS IS MODULE N, which the corpus's `teaches` fields cite and which does not exist. Ten
+      modules are cited; none are built; CURRICULUM-MUST-BE-SELF-CERTIFYING therefore has no object.
+      The usability gap and the curriculum gap are the same gap, and this is the first evidence about
+      which direction resolves it.
+    scope_reviewed: [LEXICON-V1-FIVE-MEANINGS, ATLAS-COMPLETENESS-IS-THE-PROGRESS-BAR, CURRICULUM-MUST-BE-SELF-CERTIFYING, SEMANTIC-EQUALITY]
