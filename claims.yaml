@@ -4765,3 +4765,121 @@ claims:
       where getting it wrong bakes in a convention". The automorphism group is indeed not a choice.
       WHICH FIGURES ENCODE AS WHICH MAPS IS. The convention sits one level below where I looked.
     scope_reviewed: [LEDGER-CLOSURE-IS-UNIVERSE-SCOPE, UNIVERSALITY-IS-A-LEDGER, NOTATIONS-ARE-CAPPED-NOT-FAILED]
+
+  # ─── The crossing ruling and emergence as method (2026-10-14, note 070) ────
+
+  - id: EMERGENT-IS-EFFECTIVE
+    statement: >
+      Where a structure's effective behaviour is determined by what is locally present, this
+      project describes the effective structure and treats it as true, without first settling
+      whether the structure is fundamentally present. Emergence yields effectiveness, and
+      effectiveness is sufficient for the descriptions this project makes.
+    tier: DESIGN-CHOICE
+    evidence: research/notes/070-crossing-ruling/README.md
+    rationale: research/notes/070-crossing-ruling/README.md
+    alternatives_considered:
+      - "require fundamental presence before describing a structure (rejected: it would stall
+         every layer of this project. The combinatorial map, the Erlangen fixed point and the
+         natural tier are all effective descriptions, and demanding a fundamental warrant for each
+         would mean describing nothing until metaphysics is settled)"
+      - "treat effective structure as merely instrumental — useful but not true (rejected by the
+         owner: 'emergence results in effective, making it TRUE regardless of fundamental nature
+         being present or absent'. The instrumental reading would also make the Cure pointless,
+         since a comparator against a merely-instrumental anchor detects nothing real)"
+      - "decide case by case (rejected as the status quo that made each instance an argument. The
+         move recurs across the project and is cheaper stated once as a method)"
+    scope: >
+      Licenses describing effective structure. It does NOT license asserting that the fundamental
+      structure is absent, nor that the distinction is meaningless — only that this project's
+      descriptions do not wait on it. It is also not a general licence to skip derivation: the
+      effective structure must be DETERMINED by what is locally present, which is what makes it
+      readable off the artifact rather than assigned to it.
+    notes: >
+      OWNER RULING 2026-10-14, stated as a method because it recurs. Already the project's position
+      in several places: UL-IS-EMERGENT-UNIVERSAL is named for it; the owner's reason for the
+      project is "evidence of meaning being effectively intrinsic in the universe — if not
+      fundamentally intrinsic, or perhaps merely emergently intrinsic, but emergence brings on
+      effective"; the companion corpus rests a 94-page Effective Physics cluster on it.
+      IT IS ALSO ORDINARY PHYSICS, which is the strongest argument for it: a hole in a
+      semiconductor is not a fundamental particle and carries a definite effective mass and charge,
+      and every quasiparticle argument has this shape. Effective field theory is the same move at
+      scale.
+
+  - id: CROSSING-IS-AN-EMERGENT-VERTEX
+    statement: >
+      A crossing in a drawn figure is encoded as a vertex of the combinatorial map. Where four
+      strands of ink meet, the local neighbourhood is a degree-4 star whether or not the strokes
+      were drawn as one gesture or two, so the vertex is read off the ink rather than assigned.
+    tier: DESIGN-CHOICE
+    evidence: research/notes/070-crossing-ruling/README.md
+    rationale: research/notes/070-crossing-ruling/README.md
+    priority: 1
+    alternatives_considered:
+      - "treat a crossing as NOT a vertex, keeping strokes distinct (rejected: a combinatorial map
+         is a graph embedding and has no object for an un-joined crossing, so this answer makes the
+         map the wrong formalism and requires a knot-diagram-like structure instead — a much larger
+         change, for information the reader cannot see)"
+      - "carry both encodings and choose per figure (rejected: a per-figure choice is an unforced
+         parameter on the load-bearing path, which is precisely the ledger cost the ruling exists
+         to reduce)"
+      - "leave it unruled (rejected: note 069 showed the bridge cannot be built without it, so
+         leaving it open blocks the symbol-to-formal link that gates the atlas derivations)"
+    scope: >
+      HOLDS FOR FLAT MARKS WITH NO OVER/UNDER. A notation needing layering — knots, braids,
+      occlusion, anything where which strand passes in front is visible to the reader and carries
+      meaning — has information a combinatorial map cannot hold. UWS does not currently need it; if
+      it ever does, this ruling is the thing to revisit. Reduces but does not eliminate the ledger
+      entry in CROSSING-IS-A-LEDGER-LINE: what remains is the choice to describe effective rather
+      than generative structure, not a choice among indistinguishable alternatives.
+    notes: >
+      WHAT IT DESTROYS: the Codex's `strokes` and `components` become unrecoverable rather than
+      merely mismatched. Their "+" is components 2 and crossings 1; under this ruling it is one
+      connected map with a degree-4 vertex, and nothing records that it was drawn as two strokes.
+      WHY THAT LOSS IS CORRECT: stroke count is a fact about the DRAWING PROCESS, not about the
+      figure. A reader presented with the finished mark cannot tell one stroke from two — the
+      information was never in the artifact, only in its history — and a forgetful reading is
+      supposed to discard exactly that. The map forgetting stroke count is READING-INVARIANCE-F0
+      working as specified rather than a defect.
+    scope_reviewed: [CROSSING-IS-A-LEDGER-LINE, EMERGENT-IS-EFFECTIVE, READING-INVARIANCE-F0, MAP-SYMMETRY-BOUNDS-DRAWN-SYMMETRY]
+
+  - id: PLACEMENT-HANDEDNESS-IS-INVISIBLE-TO-THE-MAP
+    statement: >
+      The Codex locates chirality in placement — "A-beside-B and B-beside-A are enantiomorphs",
+      which makes non-commutativity and handedness one claim. A combinatorial map records no
+      placement, so both orders produce the same map, with identical degree sequences and identical
+      automorphism groups. That chirality source is not representable on this side.
+    tier: VERIFIED
+    evidence: ul-forge/crates/ul-core/src/map.rs
+    scope: >
+      Shows the map cannot SEE placement; does not show the Codex is wrong about where handedness
+      comes from. Their claim is about drawn figures on a canvas, which carries a frame; a map
+      carries none. Same class as `symmetry: "inf"` and stroke count — three distinct things the
+      formalism cannot hold, which together bound what the bridge can ever transmit.
+    notes: >
+      So chirality on the repo side must come from the rotation system instead, and it does — see
+      CHIRALITY-NEEDS-EIGHT-DARTS. The two sources are different phenomena sharing a name, which is
+      worth stating because conflating them would make the Codex's chirality claim look refuted by
+      a test that does not address it.
+    scope_reviewed: [EMBODIMENT-SUPPLIES-THE-FRAME, MAP-SYMMETRY-BOUNDS-DRAWN-SYMMETRY]
+
+  - id: CHIRALITY-NEEDS-EIGHT-DARTS
+    statement: >
+      No combinatorial map on four or six darts is chiral; eight darts is the first count that
+      admits one, with 8448 of them. The smallest witness has degree sequence [1,1,2,4] — a path
+      with a loop at the degree-4 vertex and a pendant edge — where the loop sits to one side of
+      the other two edges in the rotation, so mirroring reverses the cyclic order and no rotation
+      restores it.
+    tier: VERIFIED
+    evidence: ul-forge/crates/ul-core/src/map.rs
+    scope: >
+      Exhaustive over all sigma permutations at 4 and 6 darts, which is every map on those dart
+      counts. The 8-dart count of 8448 was obtained in release mode and is not re-run by the test
+      suite, which asserts only the 4 and 6 negatives and the single 8-dart witness. Chirality here
+      means no orientation-reversing automorphism; it is a property of the rotation system, NOT the
+      placement handedness the Codex describes (PLACEMENT-HANDEDNESS-IS-INVISIBLE-TO-THE-MAP).
+    notes: >
+      WHY IT WAS WORTH FINDING: before this, `is_chiral()` had only ever been observed returning
+      false, so the branch that matters was untested — and an earlier version of the automorphism
+      code returned a FALSE positive for chirality on a bare edge precisely because nothing
+      exercised the true case. A predicate observed in one direction only has not been tested.
+    scope_reviewed: [MAP-AUTOMORPHISMS-EXIST, PLACEMENT-HANDEDNESS-IS-INVISIBLE-TO-THE-MAP]

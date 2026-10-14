@@ -989,6 +989,120 @@ mod tests {
         );
     }
 
+
+
+    /// A map from an explicit σ permutation; α is the fixed pairing `d ^ 1`.
+    fn from_sigma(sigma: &[Dart]) -> CombinatorialMap {
+        let n = sigma.len();
+        let mut seen = vec![false; n];
+        let mut rots = Vec::new();
+        for s in 0..n {
+            if seen[s] {
+                continue;
+            }
+            let mut orbit = Vec::new();
+            let mut d = s;
+            loop {
+                seen[d] = true;
+                orbit.push(d);
+                d = sigma[d];
+                if d == s {
+                    break;
+                }
+            }
+            rots.push((format!("v{s}"), orbit));
+        }
+        CombinatorialMap::from_rotations(rots, n)
+    }
+
+    /// Every σ permutation on `n` darts, i.e. every map on `n` darts.
+    fn all_sigmas(n: usize) -> Vec<Vec<usize>> {
+        let mut out = Vec::new();
+        let mut cur: Vec<usize> = (0..n).collect();
+        fn go(k: usize, cur: &mut Vec<usize>, out: &mut Vec<Vec<usize>>) {
+            if k == cur.len() {
+                out.push(cur.clone());
+                return;
+            }
+            for i in k..cur.len() {
+                cur.swap(k, i);
+                go(k + 1, cur, out);
+                cur.swap(k, i);
+            }
+        }
+        go(0, &mut cur, &mut out);
+        out
+    }
+
+    #[test]
+    fn a_loop_beside_two_edges_is_chiral() {
+        // The POSITIVE chirality case. Without it `is_chiral()` had only ever been observed
+        // returning false, so the branch that matters was untested. Found by exhaustive search
+        // (note 069): degrees 1, 2, 4, 1 — a path A–B–C with a LOOP at C and a pendant C–D.
+        // C's rotation is (3,4,5,6), so the loop sits to ONE SIDE of the other two edges;
+        // mirroring reverses the cyclic order and moves it to the other side, and no rotation
+        // brings it back. Hence an empty mirror coset with a non-empty rotation coset.
+        let m = from_sigma(&[0, 2, 1, 4, 5, 6, 3, 7]);
+        let a = m.automorphisms();
+        assert_eq!(m.degree_sequence(), vec![1, 1, 2, 4]);
+        assert!(a.is_chiral(), "no orientation-reversing automorphism exists");
+        assert_eq!(a.mirror_count(), 0);
+        assert!(a.rotation_order() >= 1, "the identity is always a rotation");
+        assert!(!a.mirror_coincides_with_rotation());
+        assert!(!a.truncated);
+    }
+
+    #[test]
+    fn chirality_needs_more_than_six_darts() {
+        // Exhaustive over every map on 4 and 6 darts: none is chiral. Eight is the first dart
+        // count that admits one — note 069 counts 8448, searched in release and not re-run here.
+        for n in [4usize, 6] {
+            let chiral = all_sigmas(n)
+                .into_iter()
+                .filter(|p| from_sigma(p).automorphisms().is_chiral())
+                .count();
+            assert_eq!(chiral, 0, "no chiral map exists on {n} darts");
+        }
+    }
+
+    #[test]
+    fn placement_handedness_is_invisible_to_the_map() {
+        // The Codex locates chirality in PLACEMENT — "A-beside-B and B-beside-A are
+        // enantiomorphs" — which makes non-commutativity and handedness one claim. A
+        // combinatorial map records no placement, so both orders give the SAME map. The
+        // Codex's chirality source is therefore not representable here, in the same class as
+        // `symmetry: "inf"` and stroke count; chirality on this side must come from the
+        // rotation system, as the loop case above does.
+        let a_then_b = CombinatorialMap::from_rotations(
+            vec![
+                ("a_c".into(), vec![0, 2]),
+                ("a_1".into(), vec![1]),
+                ("a_2".into(), vec![3]),
+                ("b_1".into(), vec![4]),
+                ("b_2".into(), vec![5]),
+            ],
+            6,
+        );
+        let b_then_a = CombinatorialMap::from_rotations(
+            vec![
+                ("b_1".into(), vec![0]),
+                ("b_2".into(), vec![1]),
+                ("a_c".into(), vec![2, 4]),
+                ("a_1".into(), vec![3]),
+                ("a_2".into(), vec![5]),
+            ],
+            6,
+        );
+        let (x, y) = (a_then_b.automorphisms(), b_then_a.automorphisms());
+        assert_eq!(a_then_b.degree_sequence(), b_then_a.degree_sequence());
+        assert_eq!(x.rotation_order(), y.rotation_order());
+        assert_eq!(x.mirror_count(), y.mirror_count());
+        assert!(
+            !x.is_chiral(),
+            "neither order is chiral on its own, which is why placement is where it lives"
+        );
+    }
+
     #[test]
     fn planar_symmetry_respects_the_unbounded_region() {
         // With no nesting there is no distinguished face, so the planar answer is the full one.
