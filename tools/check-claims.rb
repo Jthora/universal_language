@@ -41,6 +41,8 @@ REQUIRED = {
 HOLLOW = /\A[\s\d.,()\-]*\z|\A\d+\s*\((?:pre-)?\d{4}|current\)\z/
 
 errors = []
+
+external = []
 warnings = []
 
 doc = YAML.load_file('claims.yaml')
@@ -75,12 +77,32 @@ claims.each do |c|
     end
   end
 
-  # evidence / rationale paths must resolve when they look like paths
+  # evidence / rationale paths must resolve when they look like paths.
+  #
+  # WHY THE SHAPE OF THIS CHECK MATTERS (notes 073/074, found by a cold reader)
+  #   The original pattern was /\.(md|rs|json|ya?ml)\b/, which silently skipped every `.py` and
+  #   `.rb` evidence path and every directory-valued one — 40 of 197 paths, including 7 VERIFIED
+  #   claims whose evidence lives in a DIFFERENT repository that is not in this tree. A checker
+  #   that quietly declines to check is worse than no checker, because the registry's header
+  #   promises the check happened. So: widened to .py/.rb, directory paths now resolve, and a
+  #   `repo:path` reference is reported as EXTERNAL rather than skipped or miscalled broken.
   %w[evidence rationale superseded_by].each do |field|
     v = c[field]
-    next unless v.is_a?(String) && v.match?(/\.(md|rs|json|ya?ml)\b/)
-    path = v.split('#').first.strip
-    errors << "#{id}: `#{field}` path does not exist: #{path}" unless File.exist?(path)
+    next unless v.is_a?(String)
+    raw = v.split('#').first.strip
+    # A claim ID (ALL-CAPS-WITH-DASHES) is a cross-reference, not a path.
+    next if raw.match?(/\A[A-Z][A-Z0-9-]*\z/)
+    # `rationale` is free prose for DESIGN-CHOICE entries; only treat it as a path if it looks like one.
+    looks_pathy = raw.match?(%r{\A[\w.]+[\w./-]*\.(md|rs|json|ya?ml|py|rb)\z}) ||
+                  raw.match?(%r{\A[\w][\w./-]*/\z}) ||
+                  raw.match?(%r{\A[a-z_]+:[\w][\w./-]*})
+    next unless looks_pathy
+    if (m = raw.match(/\A([a-z_]+):(.+)\z/))
+      # declared external reference, e.g. `ul_agent:tests/foo.py` — cannot be checked from here
+      external << "#{id}: `#{field}` is external (#{m[1]}): #{m[2]}"
+      next
+    end
+    errors << "#{id}: `#{field}` path does not exist: #{raw}" unless File.exist?(raw)
   end
 
   # F-018: alternatives that are bare values record no decision
@@ -115,6 +137,18 @@ puts "claims: #{claims.size}  |  " + TIERS.map { |t| "#{t}=#{by_tier.fetch(t, 0)
 unless warnings.empty?
   puts "\nWARNINGS (#{warnings.size}):"
   warnings.each { |w| puts "  ! #{w}" }
+end
+
+unless external.empty?
+  # Not errors: these are evidence paths in another repository, declared with a `repo:` prefix.
+  # They are printed because they CANNOT be checked here, and a reader deciding how much of the
+  # top tier is re-derivable from this checkout needs that number in front of them. Silently
+  # skipping them is what the original regex did (see above).
+  ext_verified = external.count { |e| claims.any? { |c| c['id'].to_s == e.split(':').first && c['tier'] == 'VERIFIED' } }
+  puts "\nEXTERNAL EVIDENCE — not checkable from this checkout (#{external.size}):"
+  external.each { |e| puts "  ~ #{e}" }
+  puts "  #{ext_verified} of these are on VERIFIED claims. Their evidence is not in this tree,"
+  puts "  so a reader cannot re-derive them here. Not counted as errors; counted in the open."
 end
 
 if errors.empty?

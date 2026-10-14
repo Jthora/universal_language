@@ -69,7 +69,12 @@ Dir.glob('**/*.md').sort.each do |path|
     #   their `entries/` resolves there, not beside the template. Checking them here would demand a
     #   decoy directory in tools/, which is worse than the exemption (notes/073).
     skip_dirs = (path.start_with?('research/notes/') && path != 'research/notes/README.md') ||
-                path.start_with?('tools/exam/')
+                path.start_with?('tools/exam/') ||
+                # uws/register/codex/** is VENDORED third-party content, hash-verified against the
+                # upstream SHA256SUMS. Its internal paths (e.g. `build/codex/`) refer to ITS build
+                # tree, not ours, and editing it to satisfy our checker would break the hash that
+                # makes the import auditable. Not ours to fix; not a broken link here (notes 074).
+                path.start_with?('uws/register/codex/')
     unless skip_dirs
       dirs.each do |ref|
         next if ref.start_with?('http', 'mailto')
@@ -94,8 +99,14 @@ if File.exist?('claims.yaml')
     %w[evidence rationale superseded_by].each do |field|
       v = c[field]
       next unless v.is_a?(String) && v.include?('.md')
+      path = v.split('#').first.strip
+      # A `repo:path` reference is declared external (e.g. `ul_agent:docs/...`). It cannot resolve
+      # here by construction, so it is not a broken link; check-claims.rb reports these explicitly
+      # and counts how many sit on VERIFIED claims. Calling them broken here would be wrong, and
+      # silently skipping them is what hid them in the first place (notes 074).
+      next if path.match?(%r{\A[a-z_]+:})
       checked += 1
-      failures << "claims.yaml##{c['id']}  ->  #{v}  (#{field})" unless File.exist?(v.split('#').first)
+      failures << "claims.yaml##{c['id']}  ->  #{v}  (#{field})" unless File.exist?(path)
     end
   end
 end

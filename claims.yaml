@@ -3860,7 +3860,7 @@ claims:
       Every lexicon entry and every published UL claim carries its grounding tier: 0 self-denoting,
       1 structural with the rule stated, or 2 assigned.
     tier: DESIGN-CHOICE
-    rationale: docs/grounding/00-self-denotation.md
+    rationale: ul_agent:docs/grounding/00-self-denotation.md
     alternatives_considered:
       - "uniform confidence across all entries (the prior state; made the provable half look as
          weak as the assigned half)"
