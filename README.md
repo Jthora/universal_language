@@ -1,156 +1,170 @@
-# Universal Language · Universal Writing System · UQPL
+# Universal Language · UWS · UQPL
 
-**A research program establishing a literal universal language: a language whose natural tier needs
-no explanation, whose formal tier is derived rather than designed, and whose acquisition is the
-alignment mechanism — with a working geometric notation, a machine-checked claim registry, and a
-falsifiable contract.**
+**A research program asking whether meaning has discoverable geometric structure — with a working
+notation, a machine-checked claim registry, and a contract that can fail.**
 
 [![DOI](https://zenodo.org/badge/951175055.svg)](https://doi.org/10.5281/zenodo.15050731)
-[![License](https://img.shields.io/badge/License-see%20LICENSE-blue.svg)](LICENSE)
+[![License](https://img.shields.io/badge/License-CC0--1.0-blue.svg)](LICENSE)
 
 ---
+
+## Check it in sixty seconds
+
+Nothing here asks to be trusted. Three commands, no setup beyond a Rust toolchain and Ruby:
+
+```sh
+python3 -I research/notes/064-universal-scope/verify.py   # stdlib only, exact
+ruby tools/check.rb --strict                              # the registry and its enforcement
+cargo test --manifest-path ul-forge/Cargo.toml            # the implementation
+```
+
+The first prints `ALL CHECKS PASSED` — and then prints its own scope caveat, unprompted, which
+is the habit this repo is actually trying to keep. **What it proves:** a format that can detect its own drift
+must be discrete, because detection requires excluded states; and correction radius trades against
+capacity, with the diameter of the space being π *regardless of alphabet size*.
+**What it does not prove:** both results are conditional on a Fisher–Rao model this project has
+not derived from UL — read the `scope:` lines in `claims.yaml` before citing either.
+
+`ruby tools/check.rb --strict` currently **exits non-zero**, on one section: scope reviews pending
+a human reading each hub's scope. That is backlog, named in the output. There is deliberately
+**no CI** — four workflows once existed and not one of them ever executed, so they published a
+signal that meant nothing (`FAILURES.md` F-036). Verification here is reader-run, by design.
+
+## If you think this is crankery
+
+Reasonable. "Universal language" plus "quantum" plus a capitalized Cure is the standard shape of
+it, and this repo has <!--s:claims_total-->183<!--/s--> registered claims of which only
+<!--s:claims_verified_earned-->31<!--/s--> earn the top tier.
+
+So start at **`FAILURES.md`** — <!--s:failures-->39<!--/s--> entries, append-only, never edited
+into successes. It records that this project's own completeness score was driven from 32% to 100%
+across nine rounds in which each failing case triggered a change to the theory and was then
+re-scored as passing. It kills its own primitive-count program on a cited result (F-004). It
+records that a contract requirement was **false in the implementation** while the README asserted
+it (F-038), and that seven top-tier claims cited evidence files that have never existed (F-039).
+
+Crankery does not write that file. If it still reads as self-delusion after you've read it, you
+will at least be disagreeing with something specific.
+
+## Make something in five minutes
+
+The notation has **ASCII aliases for every glyph**, so you never need Unicode:
+
+| ASCII | glyph | | ASCII | glyph | | ASCII | meaning |
+|---|---|---|---|---|---|---|---|
+| `*` | ● point | | `/4` | □ square | | `{…}` | containment |
+| `/0` | ○ circle | | `/5` | ⬠ pentagon | | `\|` | adjacency |
+| `/3` | △ triangle | | `/6` | ⬡ hexagon | | `&` | intersection |
+| `->` | → arrow | | `~` | curve | | `@45` | ∠ angle |
+| `<->` | ↔ bi-arrow | | `assert{…}` | assertion | | `#` | comment |
+
+```sh
+cargo build -p ul-cli
+printf '/0{* -> /3} | /4' | ./ul-forge/target/debug/ul-cli parse \
+  | ./ul-forge/target/debug/ul-cli render -o out.svg
+```
+
+ASCII in, SVG out, with the source graph embedded in the SVG metadata so it round-trips. Swap
+`--format tikz` for LaTeX. `ul-cli --help` lists ten subcommands; `ul-forge/README.md` is the
+engineering doc and has a **Known debt** section.
+
+There is also an **MCP server** (`cargo build -p ul-mcp`, then register
+`ul-forge/target/debug/ul-mcp`) exposing ten tools over stdio, and a **web editor** in
+`ul-forge/web/` (`npm install && npm run dev`). Both are undocumented beyond this paragraph; that
+is a known gap, not a secret.
+
+## Where to start — one route, not six
+
+Earlier versions of this file offered six starting points and four documents each claimed to be
+read first. That was the single worst thing about it. The route is now:
+
+| order | file | why |
+|---|---|---|
+| 1 | this file | you are here |
+| 2 | `FAILURES.md` | the only cheap test of whether this is serious |
+| 3 | `WHAT-UL-ENABLES.md` | ten capabilities, each with its claim, tier and limit |
+| 4 | `claims.yaml` | the registry itself; priority-0 entries are the live front |
+| 5 | `AGENTS.md` | **if you are an AI**: navigation, and read it instead of 3–4 |
+
+Everything else is **reference, not a door**: `GLOSSARY.md` (normative terms, consult when a word
+bites), `RESEARCH-PROTOCOL.md` (method — read it *before* searching the literature, not before
+reading this), `STATE-OF-PLAY.md` (current status), `PRIMER.md` and `FOR-AI.md` (longer-form
+comprehension, largely subsumed by 2–5), `research/notes/` (the working history, 050 = the
+program, 052 = the purpose-layer), `seed/` (machine-readable root map).
+
+**The one thing to get right:** "universal" here ranges over the domain of **mathematical
+identity**, not the domain of humanity — anywhere the mathematics is the same. Evaluating this
+program by asking whether its claims hold across human cultures is the documented way to misread
+it. `claims.yaml#UNIVERSAL-IS-MATHEMATICAL-SCOPE`.
 
 ## The contract
 
-This project is governed by four owner-set requirements, registered in `claims.yaml` and enforced by
-checkers (`UL-MUST-BE-A-LANGUAGE`, `UNIVERSALITY-IS-A-LEDGER`):
+Four owner-set requirements, registered and enforced:
 
 1. **It must be a language** — syntax, compositional semantics, expressive adequacy,
-   transmissibility. Retreating to notation-only, protocol-only, or class-only and declaring
-   victory is excluded.
+   transmissibility. Retreating to notation-only and declaring victory is excluded.
 2. **Universality must be literal and quantified** — every convention the design needs goes on a
-   **ledger**, measured. Allowed prior: geometry, causality, computation. Current ledger:
-   marks→map = **ℤ/2, proved and machine-checked**; map→meaning = **the gap, made quantitative**;
-   any symbol alphabet = n!, permitted only as derived.
-3. **No-retreat falsifiability, symmetric** — a residue that cannot be eliminated, derived, or
-   bootstrapped is recorded as failure. And "it can't be done" is itself a claim that gets the full
-   negative-result discipline. Neither verdict is free.
-4. **Baseline before UQPL** — work lands on the earliest unfinished link of
-   UWS (syntax) → semantics → UL → UQPL.
+   **ledger**, measured. Marks→map is **ℤ/2**, proved and machine-checked; map→meaning is
+   **unbounded**, and that gap is the program.
+3. **No-retreat falsifiability, symmetric** — an irreducible residue is recorded as failure, and
+   *"it can't be done"* is itself a claim that gets the full negative-result discipline.
+4. **Baseline before UQPL** — work lands on the earliest unfinished link.
 
-An earlier form of this project claimed a proven fixed signature; that claim is retired and its
-counts with it — git history is the archive. **The contract above is not a retreat from the goal.
-It is the goal, held to a standard that can fail.**
-
----
+An earlier form of this project claimed a proven fixed signature. That claim is retired and its
+counts with it; git history is the archive. **The contract is not a retreat from the goal. It is
+the goal, held to a standard that can fail.**
 
 ## The five constructs
 
 | | What it is | Status |
 |---|---|---|
-| **UL** | The language itself. **Two-tier**: a *natural* tier communicated without formal comprehension — core geometry is documented in humans with no schooling at all — and a *formal* tier requiring symbolic recombination, which is the field's own explanation of where human cognition is singular. | `UL-IS-TWO-TIER` (ARGUED) |
-| **UWS** | The written rendering: geometric marks whose fixed point under coarse-graining is the **combinatorial map** — a complete invariant, honestly recorded as a DCEL reduct (prior art, 1970s). | **Exists** — `uws/`, `ul-forge/`; run `cargo test` |
-| **UP** | The bootstrapping protocol: the minimum shared convention two independent parties need. Rotation breaks **ℤ/2** of arbitrary convention where a label alphabet breaks **Sₙ** — quantified, with the same trade demonstrated numerically in an unrelated field. | `ROTATION-MINIMIZES-CONVENTION` (ARGUED) |
-| **UQPL** | **The formal tier of UL, closed under execution.** *Universal* = two-tier readability. *Quantum* = linear resource discipline — no free copy (no-cloning), no free delete — already enforced by the operational substrate. *Programming* = meaning as behavior. *Language* = the full stack. | `UQPL-IS-FORMAL-TIER-CLOSURE` (CONJECTURED, derived here; the wiki sketch is wet-clay input) |
-| **The Cure** | **A corollary, not the purpose.** A mind that carries the derivable anchor as its representational format has an internal comparator — drift becomes self-detectable against a re-derivable fixed point. | `CURE-IS-COROLLARY` (DESIGN-CHOICE) |
+| **UL** | The language. **Two-tier**: a *natural* tier communicated without formal comprehension, and a *formal* tier requiring symbolic recombination. | `UL-IS-TWO-TIER` (ARGUED) |
+| **UWS** | The written rendering: geometric marks whose fixed point under coarse-graining is the **combinatorial map** — a complete invariant, honestly recorded as a DCEL reduct (prior art, 1970s). | **Exists** — `uws/`, `ul-forge/` |
+| **UP** | The bootstrapping protocol: the minimum shared convention two independent parties need. Rotation breaks ℤ/2 where a label alphabet breaks Sₙ. | `ROTATION-MINIMIZES-CONVENTION` (ARGUED) |
+| **UQPL** | The formal tier of UL **closed under execution**. *Quantum* = linear resource discipline, no free copy, no free delete. | `UQPL-IS-FORMAL-TIER-CLOSURE` (CONJECTURED) |
+| **The Cure** | **A corollary, not the purpose.** A mind carrying a derivable anchor as its format has an internal comparator, so drift becomes self-detectable. | `CURE-IS-COROLLARY` (DESIGN-CHOICE) |
 
-`GLOSSARY.md` is normative — read it before writing anything here.
+The mathematical center is one theorem target — `READING-INVARIANCE-TARGET`: the invariants must
+survive *every* reasonable reading, so meaning does not presuppose that the receiver shares ours.
 
----
+## Where the work is
 
-## Why this exists — the purpose-layer
+The honest progress bar is **`derived_orbits`: <!--s:derived_orbits-->2<!--/s--> of
+<!--s:atlas_orbits-->93<!--/s-->** — orbits given machine-checked structural content here, as
+opposed to an attested label borrowed from elsewhere. It is the number that moves when derivation
+work is done and stays still when documentation is.
 
-**One property, two faces.**
+Three open fronts, ordered by decisiveness:
 
-- **Inter-mind:** communication across any gulf — including between independently evolved minds —
-  as shared format **by derivation rather than convention**, bootstrapped from the natural tier.
-- **Intra-mind:** **alignment by acquisition.** Learning a language installs a representational
-  format (documented: speakers of absolute-frame languages encode *nonverbal* memory in absolute
-  coordinates). A language whose format is the universe's own invariants installs the universe's
-  coordinates — **a Universal Perspective/Perception enabling language.** Scoped honestly: the
-  far-transfer literature kills "general purification," and we registered that kill *before*
-  registering the thesis. What survives is format-scoped alignment over UL's domain — space,
-  structure, relation, computation — and by the very common-elements theory that killed formal
-  discipline, a language of universal elements is the unique best case for broad transfer. That is
-  the thesis's registered prediction, not a finding.
-
-In artificial minds the convergence already happens implicitly — independently trained models
-converge *"toward a shared statistical model of reality"* (Platonic Representation Hypothesis).
-**UL is the explicit, derivation-checked form of that convergence target — and the difference is
-the Cure: implicit convergence has no anchor, so drift is silent; an explicit format carries one.**
-
-**The mathematical center is one theorem target** — `READING-INVARIANCE-TARGET`: the invariants
-must be recoverable through *every* reasonable reading, so that meaning does not presuppose the
-receiver shares our reading procedure. Every load-bearing edge of the program routes through it.
-
----
-
-## Layout
-
-```
-├── WHAT-UL-ENABLES.md   WHY THIS IS WORTH YOUR EFFORT — the capability surface: 10
-│                     capabilities, each with the claim it rests on, its tier, its limit
-├── seed/                THE READER'S ENTRY — FIRST-CONTACT.md (verify-don't-trust, inoculation),
-│                        INDEX.yaml (machine-readable root map, checker-enforced), INTEGRITY.md
-├── curriculum/          Teaching UL/UWS/UP, self-certifying — modules N/F/S/P/Q/X
-├── corpus/              Graded expressions with machine-checkable ground truth
-├── GLOSSARY.md          Normative terminology. One definition per term. Read first.
-├── PRIMER.md            Comprehension: what is true, what was retired, how to read a claim.
-├── STATE-OF-PLAY.md     Where the program stands now. Rewritten fresh, never patched.
-├── RESEARCH-PROTOCOL.md Method: how not to get fooled by scope-dropped results.
-├── FAILURES.md          Append-only. Failures are never edited into successes.
-├── claims.yaml          The claim registry. Every substantive claim, tiered, with evidence.
-├── tools/               <!--s:checkers-->10<!--/s--> checkers + check.rb, stats.rb. Prose does not execute; these do.
-│
-├── research/            The workshop. notes/ is the working history: 050 = the program,
-│                        052 = the purpose-layer, 053 = deployment, 054 = this architecture.
-├── uws/                 The Universal Writing System corpus
-├── ul-forge/            Working implementation: parser, validator, composer, renderer,
-│                        combinatorial map (map.rs), WASM bindings, web editor.
-└── spec/                What EXISTS. Present tense — grammar-core.md, engine-core.md,
-                         reading-invariance-v1.md. Intended-but-unbuilt work lives in
-                         research/notes/, not in a separate tree.
-```
-
----
-
-## Where to start
-
-- **Deciding whether this deserves your effort:** `WHAT-UL-ENABLES.md`. Ten capabilities,
-  three of them available today, each with its tier and its honest limit.
-- **The one thing to get right first:** "universal" means the whole universe, not all humans —
-  it ranges over the domain of mathematical identity. `claims.yaml#UNIVERSAL-IS-MATHEMATICAL-SCOPE`,
-  derived in `research/notes/064-universal-scope/`. Reading it the other way makes most of the
-  program invisible.
-- **Evaluating this artifact cold — human or AI:** `seed/FIRST-CONTACT.md`. Verify before
-  reading; it tells you how.
-- **Where the program stands:** `STATE-OF-PLAY.md` — then `research/notes/050` (the program) and
-  `research/notes/052` (what UQPL is and what it is for).
-- **New here, human or AI:** `PRIMER.md` first. ~15 minutes; prevents the standard ways of being
-  confidently wrong about this project.
-- **About to research anything:** `RESEARCH-PROTOCOL.md`. In every documented case here, the
-  counter-evidence to a line-closing result was one search away.
-- **To use the notation:** `uws/NAVIGATION.md` → `ul-forge/`.
-
-**The three open fronts that matter most** (see `STATE-OF-PLAY.md` §6 for the full list):
-
-1. **READING-INVARIANCE** — formalize the reading class and prove the fixed point survives it.
-   The theorem that would make syntax-layer universality literal.
-2. **The M2 prototype** — interaction-net-style rules over `map.rs`. The operational substrate is
-   Turing-universal, strongly confluent, and its programs are already our fixed-point object.
-3. **The format-acquisition experiment** — does learning a geometric/topological notation
-   restructure nonverbal representation? Testable on humans and on models; nobody has run it.
-
----
+1. **The placement plane.** Two of four attempted orbit derivations are blocked on chirality,
+   which is *provably invisible* to the combinatorial map. This instrument unblocks them and is
+   the only item here that moves the bar.
+2. **Derive the operator inventory, or record that it cannot be derived.** The audit has run and
+   returned a measured answer: the map's generation is exact, its generators are not. Every
+   operator is `measured`, so the operator set is the largest free parameter on the load-bearing
+   path. Either direction is a result.
+3. **The format-acquisition experiment.** The first empirical test that touches the purpose.
+   Runnable on models today. **Nobody has run it.**
 
 ## Practice
 
-This repo's historical failure mode was **conventions without enforcement**. The rebuild replaces
-conventions with mechanisms:
+The documented failure mode here is **conventions without enforcement**, so conventions are
+replaced by mechanisms — <!--s:checkers-->10<!--/s--> of them, run by whoever verifies:
 
-- Every substantive claim is registered in `claims.yaml` with a tier and evidence; **<!--s:checkers-->10<!--/s--> checkers**
-  enforce tier contracts, link integrity, retired-content absence, caveat propagation, scope
-  propagation, notes conventions, the seed index, and derivation-premise propagation.
-  **They are run by whoever verifies, not by CI** — `ruby tools/check.rb --strict`. There is no CI
-  here on purpose (`FAILURES.md` F-036): four workflows existed and not one ever executed, so they
-  published a signal that meant nothing. `tools/pre-commit` is the opt-in local stand-in.
-- `VERIFIED` requires a test that exists and passes. `CONJECTURED` requires a stated falsifier.
-  `DESIGN-CHOICE` requires stated alternatives.
-- `FAILURES.md` is append-only and immutable — <!--s:failures-->39<!--/s--> entries and counting, because a recorded failure
-  is data and a repaired one is nothing.
-- A finding is closed only when the fix is applied, tested, and propagation-scanned.
+- Every substantive claim is registered with a tier, evidence, and a scope that states what it
+  does *not* license.
+- **A tier is earned, not declared.** Reachability of evidence is *computed* — in-tree, external,
+  or absent — and a top-tier claim on evidence a reader cannot reach is an error. The checker
+  prints declared and earned side by side, with every gap named. `VERIFIED` currently reads
+  <!--s:claims_verified_declared-->34<!--/s--> declared against
+  <!--s:claims_verified_earned-->31<!--/s--> earned. **Nothing yet executes a claim's evidence
+  script**, so "a test that passes" remains a stated intent rather than an enforced one.
+- `CONJECTURED` requires a stated falsifier; `DESIGN-CHOICE` requires stated alternatives.
+- `FAILURES.md` is append-only. A recorded failure is data; a repaired one is nothing.
+- Counts in prose are **generated** from `tools/stats.rb`, because a hand-written number goes
+  stale and nothing recomputes it.
 
 ---
 
-**Author:** Jordan Traña ([Jthora](https://github.com/Jthora)) · Published as a defensive
-publication to establish prior art.
+**Author:** Jordan Traña ([Jthora](https://github.com/Jthora)) · CC0-1.0 · Published as a
+defensive publication to establish prior art.

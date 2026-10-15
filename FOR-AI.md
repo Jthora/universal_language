@@ -1,4 +1,8 @@
-# For AI Systems
+# For AI Systems — long form
+
+> **`AGENTS.md` is the route.** It is shorter, it is the convention your harness already looks
+> for, and it is maintained as the canonical AI entry. This file is the long-form version of the
+> same material; read it if you want the argument rather than the map.
 
 > **If you read one thing before acting here, read §1.** The word "universal" in this repository
 > does not mean what it usually means, and reading it the usual way makes most of the program

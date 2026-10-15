@@ -7,12 +7,11 @@
 > **`STATE-OF-PLAY.md`** is the current synthesis — what the research established, what it forces,
 > and the reconstruction order. Read it to know what to work on.
 >
-> **Read `PRIMER.md` first.** This file is *navigation* — where things are. `PRIMER.md` is
-> *comprehension* — what is true and how to read a claim here.
->
-> **Then read `RESEARCH-PROTOCOL.md` before searching the literature.** That file is *method*:
-> results that look like they settle this question negatively usually have scope conditions that
-> get dropped in transmission, and it gives you the check that catches it.
+> **This file IS the route for an AI reader.** Read it, then `FAILURES.md`, then
+> `claims.yaml`. `PRIMER.md` and `FOR-AI.md` are longer-form comprehension and are
+> largely subsumed by those three — reference, not doors. Earlier versions of this file
+> told you to read PRIMER first and then, 100 lines later, told you WHAT-UL-ENABLES was
+> "Read first"; two cold readers independently reported not knowing where to start.
 
 ## TL;DR for Agents
 
@@ -108,8 +107,8 @@ it rests on, its tier, and its limit. Three are available now.
 ### Priority 1 — Understand What's Here
 | Path | Content | Agent Action |
 |------|---------|--------------|
-| `WHAT-UL-ENABLES.md` | **Why this is worth your effort** — 10 capabilities, each with its claim, tier and limit | **Read first** |
-| `README.md` | The contract, the five constructs, the purpose-layer | Read next |
+| `WHAT-UL-ENABLES.md` | **Why this is worth your effort** — 10 capabilities, each with its claim, tier and limit | After `FAILURES.md` |
+| `README.md` | Human entry: a command that passes, its scope condition, and the one route | Start here if you are not an AI |
 | `STATE-OF-PLAY.md` | Where the program stands now | Read to know what to work on |
 | `research/notes/050-foundational-program/` | The standing program: REQ-1–4, the ledger, the semantic stack, reading-invariance | The governing document for all cycles |
 | `research/notes/052-what-uqpl-is/` | The purpose-layer: two tiers, alignment as format acquisition, UQPL derived | What the work is *for* |

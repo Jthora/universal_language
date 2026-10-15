@@ -1,4 +1,8 @@
-# PRIMER — Read This First
+# PRIMER — comprehension layer
+
+> **Not the entry point.** `README.md` is, and `AGENTS.md` is for AI readers. This file is
+> long-form comprehension: what is true, what was retired, and how to read a claim here. Consult
+> it when something in the registry does not parse, not before starting.
 
 **Audience:** anyone (human or AI) encountering this project with no prior context.
 **Purpose:** full comprehension, not orientation. `AGENTS.md` tells you where files are; this tells
