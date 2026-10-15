@@ -108,6 +108,7 @@ it rests on, its tier, and its limit. Three are available now.
 | Path | Content | Agent Action |
 |------|---------|--------------|
 | `WHAT-UL-ENABLES.md` | **Why this is worth your effort** — 10 capabilities, each with its claim, tier and limit | After `FAILURES.md` |
+| `BRIEFING.md` | **Hand this to another model.** The delta for a mind without the repo: rulings, closed doors, live edges. Short enough to paste. Keeps outside collaborators from re-proposing what is already recorded as failed | When you brief a peer |
 | `README.md` | Human entry: a command that passes, its scope condition, and the one route | Start here if you are not an AI |
 | `STATE-OF-PLAY.md` | Where the program stands now | Read to know what to work on |
 | `research/notes/050-foundational-program/` | The standing program: REQ-1–4, the ledger, the semantic stack, reading-invariance | The governing document for all cycles |

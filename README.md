@@ -84,7 +84,8 @@ read first. That was the single worst thing about it. The route is now:
 | 2 | `FAILURES.md` | the only cheap test of whether this is serious |
 | 3 | `WHAT-UL-ENABLES.md` | ten capabilities, each with its claim, tier and limit |
 | 4 | `claims.yaml` | the registry itself; priority-0 entries are the live front |
-| 5 | `AGENTS.md` | **if you are an AI**: navigation, and read it instead of 3–4 |
+| 5 | `AGENTS.md` | **if you are an AI with the repo cloned**: navigation, and read it instead of 3–4 |
+| — | `BRIEFING.md` | **if you are an AI without the repo** — working from a chat window, an excerpt, or one fetch. Short, paste-able, and it is the *delta*: the rulings, the closed doors, and the live edges. Written because an outside model gave four recommendations that had all already been tried and recorded as failures |
 
 Everything else is **reference, not a door**: `GLOSSARY.md` (normative terms, consult when a word
 bites), `RESEARCH-PROTOCOL.md` (method — read it *before* searching the literature, not before
