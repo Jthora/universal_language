@@ -9,9 +9,23 @@ use super::node::{Node, NodeId, NodeType};
 /// typed [`Edge`]s. The tree spine is extracted from `contains` and `modified_by`
 /// edges; cross-edges (`adjacent`, `intersects`, `connects`, `references`)
 /// bridge different branches.
+/// The GIR format version every emitter writes, and the value declared in
+/// `schemas/gir.schema.json`. Deliberately pre-1.0: the map-to-meaning ledger line is unbounded
+/// and the operator inventory is unforced, so "1.0" would assert a stability this project has not
+/// earned.
+pub const GIR_VERSION: &str = "0.1.0";
+
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
 pub struct Gir {
-    /// GIR format version. Currently `"1.0"`.
+    /// GIR format version. Always [`GIR_VERSION`].
+    ///
+    /// This used to be written as a literal in three places with three different values —
+    /// `Gir::new` said `"1.0"`, the parser said `"0.1.0"`, and ul-game's fixtures said `"0.2"` —
+    /// so the version an external consumer received depended on WHICH OPERATION produced the
+    /// document: `parse` and `invert` gave one answer, `predicate` and `conjoin` another. For an
+    /// interchange format that is the defect, not the inconsistency: a consumer cannot branch on
+    /// a version that is path-dependent. One constant now, asserted uniform by
+    /// `tests/schema_agreement_tests.rs`.
     pub ul_gir: String,
 
     /// ID of the root node (the outermost element).
@@ -65,7 +79,7 @@ impl Gir {
     /// Create a new GIR document with the given root, nodes, and edges.
     pub fn new(root: impl Into<String>, nodes: Vec<Node>, edges: Vec<Edge>) -> Self {
         Gir {
-            ul_gir: "1.0".to_string(),
+            ul_gir: GIR_VERSION.to_string(),
             root: root.into(),
             nodes,
             edges,

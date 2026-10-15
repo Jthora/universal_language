@@ -4,8 +4,18 @@
   "title": "GIR (Geometric Intermediate Representation)",
   "description": "JSON schema for the Universal Language Geometric Intermediate Representation. GIR encodes meaning structures using 5 geometric primitives (Point, Line, Angle, Curve, Enclosure) mapped to 4 algebraic sorts (Entity, Relation, Modifier, Assertion).",
   "type": "object",
-  "required": ["root", "nodes", "edges"],
+  "required": [
+    "ul_gir",
+    "root",
+    "nodes",
+    "edges"
+  ],
   "properties": {
+    "ul_gir": {
+      "type": "string",
+      "const": "0.1.0",
+      "description": "GIR format version. Required by the reference deserializer (ul_core::types::gir::Gir) and therefore required here. It was previously absent from this schema entirely, so a document valid against this file was rejected by the implementation — see FAILURES.md F-038. Deliberately pre-1.0."
+    },
     "root": {
       "type": "string",
       "description": "ID of the root node in the containment hierarchy."
@@ -13,16 +23,22 @@
     "nodes": {
       "type": "array",
       "description": "All geometric nodes in the structure.",
-      "items": { "$ref": "#/$defs/Node" }
+      "items": {
+        "$ref": "#/$defs/Node"
+      }
     },
     "edges": {
       "type": "array",
       "description": "All edges (relationships) between nodes.",
-      "items": { "$ref": "#/$defs/Edge" }
+      "items": {
+        "$ref": "#/$defs/Edge"
+      }
     },
     "binding_scope": {
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "description": "Variable IDs currently in binding scope (set by bind operation)."
     },
     "modal_context": {
@@ -33,7 +49,11 @@
   "$defs": {
     "Node": {
       "type": "object",
-      "required": ["id", "type", "sort"],
+      "required": [
+        "id",
+        "type",
+        "sort"
+      ],
       "properties": {
         "id": {
           "type": "string",
@@ -61,7 +81,9 @@
         },
         "direction": {
           "type": "array",
-          "items": { "type": "number" },
+          "items": {
+            "type": "number"
+          },
           "minItems": 2,
           "maxItems": 2,
           "description": "Direction vector [dx, dy] — only meaningful for line nodes."
@@ -79,7 +101,9 @@
         },
         "curvature_profile": {
           "type": "array",
-          "items": { "type": "number" },
+          "items": {
+            "type": "number"
+          },
           "description": "Piecewise curvature profile κ(s) sampled at uniform arc-length intervals. Overrides scalar curvature for variable-curvature curves."
         },
         "vertices": {
@@ -103,7 +127,11 @@
     },
     "Edge": {
       "type": "object",
-      "required": ["source", "target", "type"],
+      "required": [
+        "source",
+        "target",
+        "type"
+      ],
       "properties": {
         "source": {
           "type": "string",
@@ -121,48 +149,94 @@
     },
     "NodeType": {
       "type": "string",
-      "enum": ["point", "line", "angle", "curve", "enclosure", "variable_slot"],
+      "enum": [
+        "point",
+        "line",
+        "angle",
+        "curve",
+        "enclosure",
+        "variable_slot"
+      ],
       "description": "The 5 geometric primitives of Universal Language plus variable_slot for binding."
     },
     "Sort": {
       "type": "string",
-      "enum": ["entity", "relation", "modifier", "assertion"],
+      "enum": [
+        "entity",
+        "relation",
+        "modifier",
+        "assertion"
+      ],
       "description": "The 4 algebraic sorts of Σ_UL."
     },
     "EnclosureShape": {
       "type": "string",
-      "enum": ["circle", "triangle", "square", "ellipse", "polygon", "freeform"],
+      "enum": [
+        "circle",
+        "triangle",
+        "square",
+        "ellipse",
+        "polygon",
+        "freeform"
+      ],
       "description": "Shape of an enclosure node. Circle=SO(2), Triangle=D₃, Square=D₄, Polygon=D_n (see vertices), Ellipse=bilateral, Freeform=no symmetry."
     },
     "EdgeType": {
       "type": "string",
-      "enum": ["contains", "modified_by", "connects", "adjacent", "intersects", "references", "binds", "accessible_from"],
+      "enum": [
+        "contains",
+        "modified_by",
+        "connects",
+        "adjacent",
+        "intersects",
+        "references",
+        "binds",
+        "accessible_from"
+      ],
       "description": "Geometric relationship between two nodes. accessible_from is used for modal accessibility relations."
     },
     "AssertionModifierKind": {
       "type": "string",
-      "enum": ["evidential", "emphatic", "hedged"],
+      "enum": [
+        "evidential",
+        "emphatic",
+        "hedged"
+      ],
       "description": "Kind of assertion-level modification: evidential (epistemic source), emphatic (intensity), hedged (uncertainty)."
     },
     "ModalContext": {
       "type": "object",
-      "required": ["world_nodes", "accessibility_edges"],
+      "required": [
+        "world_nodes",
+        "accessibility_edges"
+      ],
       "properties": {
         "world_nodes": {
           "type": "array",
-          "items": { "type": "string" },
+          "items": {
+            "type": "string"
+          },
           "description": "Node IDs that represent possible worlds."
         },
         "accessibility_edges": {
           "type": "array",
-          "items": { "type": "integer" },
+          "items": {
+            "type": "integer"
+          },
           "description": "Indices into the edges array that are accessibility relations."
         }
       }
     },
     "PerformativeForce": {
       "type": "string",
-      "enum": ["assert", "query", "direct", "commit", "express", "declare"],
+      "enum": [
+        "assert",
+        "query",
+        "direct",
+        "commit",
+        "express",
+        "declare"
+      ],
       "description": "Illocutionary force parameter φ — what act the speaker performs with the assertion."
     }
   }

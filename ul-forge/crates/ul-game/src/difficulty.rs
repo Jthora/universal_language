@@ -59,7 +59,7 @@ fn build_curriculum() -> Vec<Puzzle> {
             level: 1,
             required_operations: vec![],
             description: "Place a single point — the simplest act of meaning.".into(),
-            target_gir_json: r#"{"ul_gir":"0.2","root":"p","nodes":[{"id":"p","node_type":"point","sort":"entity"}],"edges":[]}"#.into(),
+            target_gir_json: r#"{"ul_gir":"0.1.0","root":"p","nodes":[{"id":"p","node_type":"point","sort":"entity"}],"edges":[]}"#.into(),
         },
         Puzzle {
             id: "single_line".into(),
@@ -67,7 +67,7 @@ fn build_curriculum() -> Vec<Puzzle> {
             level: 1,
             required_operations: vec!["predicate".into()],
             description: "Connect two points with a line — create a basic relation.".into(),
-            target_gir_json: r#"{"ul_gir":"0.2","root":"l","nodes":[{"id":"p1","node_type":"point","sort":"entity"},{"id":"l","node_type":"line","sort":"relation","directed":true},{"id":"p2","node_type":"point","sort":"entity"}],"edges":[{"source":"l","target":"p1","edge_type":"connects"},{"source":"l","target":"p2","edge_type":"connects"}]}"#.into(),
+            target_gir_json: r#"{"ul_gir":"0.1.0","root":"l","nodes":[{"id":"p1","node_type":"point","sort":"entity"},{"id":"l","node_type":"line","sort":"relation","directed":true},{"id":"p2","node_type":"point","sort":"entity"}],"edges":[{"source":"l","target":"p1","edge_type":"connects"},{"source":"l","target":"p2","edge_type":"connects"}]}"#.into(),
         },
         Puzzle {
             id: "enclosure".into(),
@@ -75,7 +75,7 @@ fn build_curriculum() -> Vec<Puzzle> {
             level: 1,
             required_operations: vec!["embed".into()],
             description: "Create an enclosure containing a point — form a concept.".into(),
-            target_gir_json: r#"{"ul_gir":"0.2","root":"enc","nodes":[{"id":"enc","node_type":"enclosure","sort":"assertion","shape":"circle"},{"id":"p","node_type":"point","sort":"entity"}],"edges":[{"source":"enc","target":"p","edge_type":"contains"}]}"#.into(),
+            target_gir_json: r#"{"ul_gir":"0.1.0","root":"enc","nodes":[{"id":"enc","node_type":"enclosure","sort":"assertion","shape":"circle"},{"id":"p","node_type":"point","sort":"entity"}],"edges":[{"source":"enc","target":"p","edge_type":"contains"}]}"#.into(),
         },
         Puzzle {
             id: "modified_entity".into(),
@@ -83,7 +83,7 @@ fn build_curriculum() -> Vec<Puzzle> {
             level: 2,
             required_operations: vec!["modify_entity".into()],
             description: "Modify an entity with an angle — add quality to existence.".into(),
-            target_gir_json: r#"{"ul_gir":"0.2","root":"e","nodes":[{"id":"e","node_type":"point","sort":"entity"},{"id":"m","node_type":"angle","sort":"modifier","measure":45.0}],"edges":[{"source":"e","target":"m","edge_type":"modified_by"}]}"#.into(),
+            target_gir_json: r#"{"ul_gir":"0.1.0","root":"e","nodes":[{"id":"e","node_type":"point","sort":"entity"},{"id":"m","node_type":"angle","sort":"modifier","measure":45.0}],"edges":[{"source":"e","target":"m","edge_type":"modified_by"}]}"#.into(),
         },
         Puzzle {
             id: "negation".into(),

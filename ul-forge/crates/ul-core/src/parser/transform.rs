@@ -57,7 +57,7 @@ pub fn ast_to_gir(doc: &AstDocument) -> UlResult<Gir> {
     };
 
     Ok(Gir {
-        ul_gir: "0.1.0".to_string(),
+        ul_gir: crate::types::gir::GIR_VERSION.to_string(),
         root: root_id,
         nodes,
         edges,
