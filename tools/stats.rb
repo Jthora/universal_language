@@ -55,8 +55,12 @@ stats = {
 # D1 of PROGRAM-SUCCESS-CONDITION has TWO numbers and they are not the same thing.
 #   atlas_recorded  — orbits with an ATTESTED meaning in the imported Codex register. Theirs.
 #   derived_orbits  — orbits this repo has given machine-checked structural content, counted
-#                     from the `orbit` field of corpus entries. Ours, and the one that moves
-#                     when work is done here (note 071).
+#                     from the `orbit` field of VERIFIED corpus entries. Ours, and the one that
+#                     moves when work is done here (note 071).
+#   derived_orbits_argued
+#                   — orbits whose entry is machine-checked but whose content routes through a
+#                     premise weaker than VERIFIED. Reported separately and NEVER summed into the
+#                     line above, for the same reason atlas_recorded is never summed with it.
 # An attested label is not a derivation and a derivation is not an attested label, so the two
 # are reported separately and never summed.
 if register && register['combination_space']
@@ -66,10 +70,20 @@ if register && register['combination_space']
   stats['atlas_undetermined'] = cs['undetermined']
   stats['atlas_percent']      = ((100.0 * cs['recorded']) / cs['orbits']).round(1)
 
-  derived = Dir.glob('corpus/entries/*.json').filter_map do |f|
-    JSON.parse(File.read(f, encoding: 'UTF-8'))['orbit']
-  end.uniq
-  stats['derived_orbits']  = derived.size
+  # TIGHTENED 2026-10-15, note 078, and tightened BEFORE anything was added to it so the change
+  # cannot be a ratchet (075 REQ-3 forbids adjusting a normalisation until the number comes out
+  # right; this moves it the hard way). 071 counted every entry's orbit regardless of tier, but
+  # the figure it headlines is "orbits this repo has given machine-checked structural content",
+  # and an ARGUED entry's content rests on a fitted premise. So the headline counts VERIFIED
+  # entries only and the weaker work is reported beside it rather than folded in or hidden.
+  by_tier = Dir.glob('corpus/entries/*.json').filter_map do |f|
+    e = JSON.parse(File.read(f, encoding: 'UTF-8'))
+    e['orbit'] ? [e['tier'], e['orbit']] : nil
+  end
+  derived = by_tier.select { |t, _| t == 'VERIFIED' }.map(&:last).uniq
+  argued  = by_tier.reject { |t, _| t == 'VERIFIED' }.map(&:last).uniq - derived
+  stats['derived_orbits']        = derived.size
+  stats['derived_orbits_argued'] = argued.size
   stats['derived_percent'] = ((100.0 * derived.size) / cs['orbits']).round(1)
 end
 

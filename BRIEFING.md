@@ -54,13 +54,13 @@ parameter on the load-bearing path. Do not write sentences that assume closure.
 
 Read the `scope:` line before citing anything. Generated counts, so they cannot go stale:
 
-- **<!--s:claims_total-->192<!--/s--> claims**, of which <!--s:claims_confidence_scale-->147<!--/s-->
+- **<!--s:claims_total-->197<!--/s--> claims**, of which <!--s:claims_confidence_scale-->152<!--/s-->
   are on the confidence scale at all (DESIGN-CHOICE is a *kind* and RETIRED a *lifecycle state*).
-- **VERIFIED: <!--s:claims_verified_declared-->38<!--/s--> declared, <!--s:claims_verified_earned-->35<!--/s--> earned.**
+- **VERIFIED: <!--s:claims_verified_declared-->42<!--/s--> declared, <!--s:claims_verified_earned-->39<!--/s--> earned.**
   A tier is computed from whether its evidence resolves in-tree and is runnable, not from what an
   author typed. Premises cannot be weaker than what rests on them.
 - **<!--s:failures-->40<!--/s--> recorded failures**, append-only, never edited into successes.
-- The honest progress bar: **`derived_orbits` = <!--s:derived_orbits-->2<!--/s--> of
+- The honest progress bar: **`derived_orbits` = <!--s:derived_orbits-->3<!--/s--> of
   <!--s:atlas_orbits-->93<!--/s-->**. It moves when derivation work is done and stays still when
   documentation is.
 - Two machine-checked results worth a minute of your time, **both conditional on a Fisher–Rao model

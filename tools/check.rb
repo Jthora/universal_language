@@ -26,6 +26,11 @@ checks = [
   # import's internal consistency, which is how a 374-file register sat here for weeks with a
   # four-cell hole in it.
   ['imported handedness column derives', 'check-chirality.rb'],
+  # The second gate reading a vendored import against itself (note 078). It holds the two
+  # regularities the placement plane turns out to carry: that mirroring an operand leaves the
+  # attested vocabulary exactly when that operand has two or more mirror axes, and that contact
+  # confines `concatenate` and `superpose_displaced` to opposite sides of itself.
+  ['placement plane regularities hold', 'check-placement.rb'],
 ]
 
 failed = []

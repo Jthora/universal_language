@@ -8,6 +8,7 @@ use serde_json::Value;
 use std::fs;
 use std::path::PathBuf;
 use ul_core::map::{CombinatorialMap, Nesting};
+use ul_core::placement::{Handedness, Mark, Placement};
 
 fn corpus_dir() -> PathBuf {
     // crates/ul-core -> ul-forge -> repo root
@@ -191,6 +192,64 @@ fn every_corpus_entry_verifies_against_the_implementation() {
                 regional || degree_typed,
                 "{id}: declares a lexicon meaning but machine-checks no structure carrying it \
                  (regional: same_face/different_face, or local: degree_sequence)"
+            );
+        }
+
+        // ---- THE SECOND CHANNEL (notes 076, 078) -------------------------------------------
+        // An entry may carry a `placement` block. Handedness is NOT a map invariant — the
+        // reading-invariance test below asserts `map.mirror()` leaves every essential invariant
+        // alone, which is the formal statement of that — so this channel is the only place a
+        // chirality-separated orbit can state its content, and it is computed here rather than
+        // read from the entry.
+        if let Some(pl) = entry.get("placement") {
+            let a = pl["a"].as_str().expect("placement.a");
+            let b = pl["b"].as_str().expect("placement.b");
+            let operator = pl["operator"].as_str().expect("placement.operator");
+            let place = Placement {
+                operator: operator.to_string(),
+                a: Mark::from_name(a).unwrap_or_else(|| panic!("{id}: unknown mark {a}")),
+                b: Mark::from_name(b).unwrap_or_else(|| panic!("{id}: unknown mark {b}")),
+                reflect_b: pl["reflect_b"].as_bool().unwrap_or(false),
+            };
+            let got = place.handedness().unwrap_or_else(|| {
+                panic!("{id}: {operator} is not one of the five attested binary operators")
+            });
+
+            // No decorative channel: a placement block that asserts nothing is worse than none,
+            // because it looks like the hole was filled.
+            assert!(
+                obj.contains_key("chirality_source"),
+                "{id}: carries `placement` but `expected.chirality_source` is missing — \
+                 an unasserted channel verifies nothing"
+            );
+            assert_eq!(
+                got.as_str(),
+                exp["chirality_source"].as_str().expect("chirality_source"),
+                "{id}: chirality source computed from the placement"
+            );
+            if let Some(want) = exp["chiral"].as_bool() {
+                assert_eq!(got.chiral(), want, "{id}: chiral");
+            }
+
+            // PREMISE PROPAGATION, ENFORCED HERE. The `arrangement` branch rests on
+            // ARRANGEMENT-RULE-IS-FITTED, which is ARGUED: its operator-to-class map and C1
+            // threshold were chosen to reproduce the attested column. An entry standing on it
+            // cannot be stronger than it, so VERIFIED is refused rather than reviewed.
+            if got == Handedness::Arrangement {
+                assert_ne!(
+                    tier, "VERIFIED",
+                    "{id}: handedness comes from ARRANGEMENT, which rests on the FITTED rule \
+                     (ARGUED). A derivation routed through a weaker premise is not stronger than \
+                     it — UNDETERMINED-PREMISE-PROPAGATES."
+                );
+            }
+
+            // The bit must not be load-bearing in the wrong direction: mirroring an operand picks
+            // which enantiomorph the figure is, never whether it has enantiomorphs.
+            assert_eq!(
+                place.clone().mirrored().handedness(),
+                Some(got),
+                "{id}: reflect_b changed the handedness SOURCE, which it must not"
             );
         }
     }

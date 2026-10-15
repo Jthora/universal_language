@@ -14,6 +14,7 @@ pub mod map;
 pub mod modal;
 pub mod parser;
 pub mod performative;
+pub mod placement;
 pub mod pragmatic;
 pub mod renderer;
 pub mod types;

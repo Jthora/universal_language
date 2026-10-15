@@ -4355,7 +4355,17 @@ claims:
       frame-free relation on two figures that the corpus does not attest? The second half is a cheap
       falsifier — exhibit one such relation and the inventory is genuinely underdetermined; find
       none and it is forced up to the stated conditions.
-    scope_reviewed: [LEDGER-CLOSURE-IS-UNIVERSE-SCOPE, UNIVERSAL-IS-MATHEMATICAL-SCOPE]
+    reviewed_2026_10_15: >
+      REVIEWED against OPERATORS-ARE-CLOSED-UNDER-REORIENTATION's narrowed scope (note 078), and
+      the net moves in BOTH directions. Against this claim: that closure result is narrower than
+      its name suggested — it holds for global canvas rotation only, and reflection of an operand
+      measurably does not preserve the operators — so the part of this claim's surface that 067
+      appeared to reduce is SMALLER than it looked, and this claim is correspondingly more open,
+      not less. In this claim's favour: CONTACT-CONFINES-TWO-OPERATORS is a genuinely new
+      reduction, tying two of the five operators to a geometric predicate with zero exceptions
+      over 2413 cells. One apparent reduction shrank and one real one was added; the claim stays
+      open and stays priority 0.
+    scope_reviewed: [LEDGER-CLOSURE-IS-UNIVERSE-SCOPE, UNIVERSAL-IS-MATHEMATICAL-SCOPE, OPERATORS-ARE-CLOSED-UNDER-REORIENTATION, CONTACT-CONFINES-TWO-OPERATORS]
 
   - id: ORBIT-PARTITION-IS-TOLERANCE-BOUNDED
     statement: >
@@ -4677,6 +4687,14 @@ claims:
       still reads "attested on a sheet; its semantics are not thereby derived". The register's
       `primitive-completeness` entry carries the same shape of caveat — completeness holds with
       respect to symmetry order, which it states is necessary and not sufficient.
+      NARROWED 2026-10-15 (note 078). "Reorientation" here means GLOBAL CANVAS ROTATION and
+      nothing else. It must not be read as covering reflection, because reflection measurably
+      does NOT preserve the attested operators: mirroring one operand takes the configuration out
+      of the vocabulary whenever that operand has at most one mirror axis
+      (OPERATOR-SURVIVAL-UNDER-REFLECTION-TRACKS-SYMMETRY). The inventory is closed under SO(2)
+      and not under the reflection coset, which is O(2) having two components. The claim's TEXT
+      was always scoped to rotation; its NAME is looser than its text, and this paragraph exists
+      because a reader citing the name would overreach.
     notes: >
       Upstream, in the imported register: `attested-operators-are-frame-free` (derived) — each
       relation reduced to the scalar it reads and measured before and after a global rotation at
@@ -4691,7 +4709,13 @@ claims:
       requires. A frame is a local parameter, so an operator set closed under reorientation is one
       with that particular convention already eliminated — which is a ledger result at the
       classification layer, and the first one there.
-    scope_reviewed: [OPERATOR-INVENTORY-IS-UNFORCED, UNIVERSAL-IS-MATHEMATICAL-SCOPE, LEDGER-CLOSURE-IS-UNIVERSE-SCOPE]
+    reviewed_2026_10_15: >
+      REVIEWED against OPERATOR-SURVIVAL-UNDER-REFLECTION-TRACKS-SYMMETRY's scope, which warns
+      that its denominator is 16 and that the SURVIVING side rests on only three pairs. The
+      narrowing above does not depend on that thin side: it needs only that reflection sometimes
+      destroys an attested operator, which is the well-sampled half — thirteen pairs, no
+      exceptions. If the three-pair side were overturned the narrowing would stand unchanged.
+    scope_reviewed: [OPERATOR-INVENTORY-IS-UNFORCED, UNIVERSAL-IS-MATHEMATICAL-SCOPE, LEDGER-CLOSURE-IS-UNIVERSE-SCOPE, OPERATOR-SURVIVAL-UNDER-REFLECTION-TRACKS-SYMMETRY]
 
   # ─── Embodiment's derived role, and the entry act (2026-10-14, note 068) ────
 
@@ -5549,3 +5573,134 @@ claims:
       much it must carry (85 of 180 cells); it did not say what shape it has to be. A disconnected
       group says: discrete, with no interpolation between the components.
     scope_reviewed: [MAP-AUTOMORPHISMS-EXIST, CORPUS-SCHEMA-BLOCKS-CHIRALITY-DERIVATION]
+
+  - id: PLACEMENT-PLANE-IS-IN-THE-REGISTER
+    statement: >
+      The placement plane 071 proposed building is already in the vendored register, as an explicit
+      nine-parameter configuration space for binary compositions: A and B (which mark each side),
+      separation, bearing, relative-rotation, relative-scale, reflect-B, and B-frequency,
+      B-amplitude, B-phase. 2413 cells under `slices/` each carry their complete configuration,
+      which attested operators it realises, and whether the two marks are in contact. `reflect-B`
+      is a first-class two-valued axis, sampled as "as drawn" and "mirrored" and systematically
+      crossed with every other axis.
+    tier: VERIFIED
+    evidence: tools/check-placement.rb
+    scope: >
+      A fact about what the import CONTAINS, established by parsing all 2413 cells. It is not a
+      claim that the parameterisation is complete, correct, or sufficient for UL, and not a claim
+      that the sampled values cover the space — the samples are deliberately sparse, 7 radii and
+      12 bearings, chosen to make each axis visibly act. The configurations are read from each
+      cell's `desc` string, which is a presentation field; if the register ever stops writing
+      configurations there this claim's evidence evaporates and the checker will say so.
+    notes: >
+      F-040's lesson, applied and paying immediately: the rule it set was "check an import against
+      itself before building anything to fill a gap it reports", and 076 then said the second
+      channel must be built. Reading first found the channel's data already present, in a
+      directory vendored eight weeks earlier. The register's own note on the reflect-B slice —
+      "operand chosen so the axis acts: reflect-B needs one that is chiral", with B held at Wave —
+      is a THIRD independent witness to ALPHABET-HAS-ONE-CHIRAL-LETTER: they could not draw the
+      axis without the chiral letter.
+    scope_reviewed: [ALPHABET-HAS-ONE-CHIRAL-LETTER, CORPUS-SCHEMA-BLOCKS-CHIRALITY-DERIVATION]
+
+  - id: OPERATOR-SURVIVAL-UNDER-REFLECTION-TRACKS-SYMMETRY
+    statement: >
+      Mirroring one operand of a binary composition leaves it inside the attested operator
+      vocabulary exactly when that operand has two or more mirror axes, and takes it out of the
+      vocabulary when the operand has at most one. Measured over every configuration the register
+      samples in both reflect-B states with the other eight parameters held equal: 16 informative
+      pairs, 16 agreements, 0 disagreements. The mechanism is immediate — an O(2) mark is unmoved
+      by a mirror and the Line (D2) maps to itself, so the configuration is literally unchanged,
+      while Wave (no axis) and Angle/Curve (one axis) genuinely change.
+    tier: VERIFIED
+    evidence: tools/check-placement.rb
+    premises: [ALPHABET-HAS-ONE-CHIRAL-LETTER]
+    scope: >
+      THE DENOMINATOR IS 16, NOT 54. Only pairs whose as-drawn state realises some operator can
+      inform this; the other 38 are none -> none and carry no information. Of the 16, thirteen have
+      an operand with at most one mirror axis and only THREE have one with two or more — one pair
+      each for Point, Line and Circle — so the surviving side is exceptionless but thinly sampled,
+      and the checker prints that. Says nothing about reflecting BOTH operands, nor about global
+      reflection of the canvas, nor about operators outside the five attested binary ones.
+    notes: >
+      MY FIRST READING WAS REFUTED BY MY OWN CHECKER. I analysed this in a scratch script, got
+      "all 13 informative pairs lose the operator, and the 41 unchanged ones are all vacuous", and
+      wrote that as the gate. The checker then found three pairs I had misfiled as vacuous: they
+      are the high-symmetry operands, and they PRESERVE the operator. So the true predicate is
+      sharper than the one I nearly shipped, and the gate asserts the predicate with a control
+      that fails if the threshold is moved off two axes. Third time in two sessions that the
+      instrument corrected me rather than the reverse.
+    scope_reviewed: [ALPHABET-HAS-ONE-CHIRAL-LETTER, OPERATORS-ARE-CLOSED-UNDER-REORIENTATION]
+
+  - id: CONTACT-CONFINES-TWO-OPERATORS
+    statement: >
+      Over all 2413 configured slice cells, `concatenate` occurs only where the two marks are in
+      contact and `superpose_displaced` only where they are not — zero exceptions either way. Both
+      converses fail heavily (788 cells have contact without concatenate, 1546 lack contact without
+      superpose_displaced), so these are one-way implications and not restatements of a definition.
+    tier: VERIFIED
+    evidence: tools/check-placement.rb
+    scope: >
+      Establishes that a geometric predicate CONFINES two of the five operators, not that it
+      DEFINES them: the failing converses are what rule the definitional reading out. Says nothing
+      about the other three operators, which occur on both sides of the predicate. `contact` is the
+      register's own measurement, inherited at its tier, and this repo has not recomputed it from
+      geometry.
+    notes: >
+      This is the first boundary in the attested operator inventory that is tied to a geometric
+      quantity rather than to a sheet. It does not close OPERATOR-INVENTORY-IS-UNFORCED — one
+      confinement among five operators is not a derivation of the set — but it is the first
+      reduction in that claim's surface since it was opened.
+    scope_reviewed: [OPERATOR-INVENTORY-IS-UNFORCED, PLACEMENT-PLANE-IS-IN-THE-REGISTER]
+
+  - id: OPERATOR-BOUNDARY-SITS-AT-TANGENCY
+    statement: >
+      On the separation axis, `concatenate` is realised at radii up to and including 0.995 and
+      `superpose_displaced` from 1.1 outwards, with the extent of operand A at approximately 1.0.
+      The register samples 0.995 and 1.1 rather than round numbers, which brackets the tangency
+      radius: the boundary between those two operators lies in the interval (0.995, 1.1], where
+      two marks of unit extent stop touching.
+    tier: ARGUED
+    evidence: tools/check-placement.rb
+    premises: [CONTACT-CONFINES-TWO-OPERATORS]
+    scope: >
+      BRACKETED, NOT LOCATED. Seven sampled radii cannot place a threshold more finely than the
+      interval between two of them, so "the boundary is at r = 1" is NOT established and is not
+      claimed. What is established is that the boundary lies between 0.995 and 1.1 and that the
+      register chose those two values, which is evidence of intent rather than of the threshold.
+      Also: contact is mark-dependent, so the partition is in (radius, marks) jointly and not in
+      radius alone.
+    notes: >
+      Deliberately ARGUED although the measurement is exact, because the quantity of interest is
+      the threshold and the sampling cannot resolve it. Refining this needs radii the register does
+      not sample, which means generating configurations rather than reading them — a different and
+      larger piece of work.
+    scope_reviewed: [CONTACT-CONFINES-TWO-OPERATORS]
+
+  - id: CORPUS-HAS-A-SECOND-CHANNEL
+    statement: >
+      A corpus entry may now carry a `placement` block, from which the harness COMPUTES the
+      figure's handedness and its source rather than reading an authored value. This is the channel
+      076 specified and could not build: handedness is not a map invariant — the harness's own
+      reading-invariance test asserts that mirroring leaves every essential invariant unchanged —
+      so the map and this channel are provably disjoint, which is what makes the channel necessary
+      rather than redundant.
+    tier: VERIFIED
+    evidence: ul-forge/crates/ul-core/src/placement.rs
+    premises: [PLACEMENT-HANDEDNESS-IS-INVISIBLE-TO-THE-MAP, ALPHABET-HAS-ONE-CHIRAL-LETTER]
+    scope: >
+      The channel carries HANDEDNESS AND ITS SOURCE and nothing else — not position, not rendering,
+      not meaning. Its six-mark symmetry table is a const in Rust, and
+      `tests/placement_tests.rs` asserts that table against the register's `enantiomorphs` sheet
+      in both directions AND asserts the handedness function against the register's 180-cell
+      attested column cell by cell, allowing exactly the four disputed cells 076 located and
+      failing on a fifth. The `arrangement` branch rests on ARRANGEMENT-RULE-IS-FITTED (ARGUED),
+      and the harness REFUSES a VERIFIED tier for any entry reaching it — verified by negative
+      control, by setting a shipped entry to VERIFIED and watching the assertion fire.
+    notes: >
+      `derived_orbits` moved 2 -> 3 on this, with one further orbit reported separately as ARGUED.
+      The metric was TIGHTENED first: 071 counted every entry's orbit regardless of tier, and it
+      now counts VERIFIED entries only, which was changed BEFORE anything was added to it so that
+      the move is harder rather than easier. Adjusting a normalisation until a number comes out
+      right is what 075 REQ-3 forbids; moving it the other way first is the test of whether that
+      rule is real here.
+    scope_reviewed: [PLACEMENT-HANDEDNESS-IS-INVISIBLE-TO-THE-MAP, ARRANGEMENT-RULE-IS-FITTED, ATLAS-COMPLETENESS-IS-THE-PROGRESS-BAR]

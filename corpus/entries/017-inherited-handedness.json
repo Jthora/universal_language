@@ -1,0 +1,33 @@
+{
+  "id": "017-inherited-handedness",
+  "tier": "VERIFIED",
+  "orbit": 92,
+  "lexicon": "CHIRAL-JUNCTION — a four-way crossing of two strands that is not superposable on its mirror image, where the handedness comes from the strands and not from the crossing",
+  "description": "The corpus's first entry on the SECOND CHANNEL. Two Waves crossing once: under CROSSING-IS-AN-EMERGENT-VERTEX the crossing is a degree-4 vertex read off the ink, so the map is one connected tree with four free ends. Its nearest named neighbour is orbit 91, cross(Line,Line) — the '+' — and the two agree on EVERY map invariant this harness computes: five vertices, four edges, one face, genus 0, one component, degree sequence 1-1-1-1-4. They are separated by chirality alone, and chirality is provably not a map invariant: the reading-invariance test in this same harness asserts that mirroring leaves every essential invariant unchanged. So the distinction cannot be stated in the map, and is stated in `placement` instead, where the harness recomputes it. What makes it VERIFIED rather than ARGUED is that the handedness is INHERITED: the Wave is the unique mark whose symmetry group is cyclic rather than dihedral, so it is the one chiral letter of the alphabet, and that one bit decides the composite with no free parameter. The source is read off the register's group column and cross-checked against the same sheet's independently measured mirror distance.",
+  "n_darts": 8,
+  "rotations": {
+    "crossing": [0, 2, 4, 6],
+    "end_a1": [1],
+    "end_b1": [3],
+    "end_a2": [5],
+    "end_b2": [7]
+  },
+  "placement": {
+    "operator": "cross",
+    "a": "Wave",
+    "b": "Wave",
+    "reflect_b": false
+  },
+  "expected": {
+    "vertices": 5,
+    "edges": 4,
+    "faces": 1,
+    "genus": 0,
+    "components": 1,
+    "degree_sequence": [1, 1, 1, 1, 4],
+    "chiral": true,
+    "chirality_source": "inherited"
+  },
+  "teaches": "Module S: that a figure's handedness can be carried by its ALPHABET rather than by its arrangement, and that a notation whose only channel is a combinatorial map cannot say so. Orbits 91 and 92 are the minimal demonstration — identical maps, opposite handedness — and the entry pair is only expressible because the corpus now has a channel the map does not reach.",
+  "provenance": "Cosmic Codex orbit 92, cross(Wave,Wave), status undetermined, measured symmetry 4 and mirror_axes 0. The attested NEIGHBOUR's label ('+' at orbit 91) is the Codex's attestation and stays conventional; what is derived here is the structural relation and its handedness source. The crossing rotation alternates strands, as note 071 established for the lemniscate: counter-clockwise around a drawn crossing the branches of the two strands interleave. Notes 076 and 078."
+}

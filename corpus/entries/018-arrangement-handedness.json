@@ -1,0 +1,32 @@
+{
+  "id": "018-arrangement-handedness",
+  "tier": "ARGUED",
+  "orbit": 40,
+  "lexicon": "ARRANGEMENT-HANDEDNESS — two separated open arcs whose figure is not superposable on its mirror image, where no constituent is itself chiral and the handedness is manufactured by the placement",
+  "description": "The companion to 017, and deliberately a tier lower. An Angle and a Curve, displaced and not in contact. Both are encoded at SUBDIVISION-MINIMAL form, because corpus 016 established that subdivision is inert: the Angle's corner is a degree-2 vertex that smooths away, so an Angle and a Curve are the same map — a single open arc. That is why this entry's map is IDENTICAL to what orbit 39's would be, superpose_displaced(Angle,Angle), which is the named neighbour it must be distinguished from. Four vertices, two edges, two components, and TWO raw face orbits rather than one -- `faces()` counts phi-orbits, so each disjoint arc contributes its own, which is the raw reading corpus 003 carries against 004's planar one. Genus is inapplicable to a disconnected map. Every map invariant agrees, and the only separator is handedness: the register's per-orbit record publishes mirror_axes 0 here against 1 for orbit 39. Neither operand is chiral — Angle and Curve are both D1 — so the handedness is manufactured by the ARRANGEMENT, and that branch rests on a rule whose operator-to-class map and C1 threshold were FITTED to reproduce the attested column. The harness refuses VERIFIED for any entry reaching that branch, by assertion rather than by review.",
+  "n_darts": 4,
+  "rotations": {
+    "angle_end_1": [0],
+    "angle_end_2": [1],
+    "curve_end_1": [2],
+    "curve_end_2": [3]
+  },
+  "placement": {
+    "operator": "superpose_displaced",
+    "a": "Angle",
+    "b": "Curve",
+    "reflect_b": false
+  },
+  "expected": {
+    "vertices": 4,
+    "edges": 2,
+    "faces": 2,
+    "genus": null,
+    "components": 2,
+    "degree_sequence": [1, 1, 1, 1],
+    "chiral": true,
+    "chirality_source": "arrangement"
+  },
+  "teaches": "Module S: that the second channel has a weaker half, and that the weakness is structural rather than incidental. 017's handedness follows from one measured bit of the alphabet; this one follows from a rule fitted to 26 attested cells with two free parameters. The pair is the honest shape of the channel — one side derived, one side fitted — and the tier difference is enforced by the harness, not asserted by its author.",
+  "provenance": "Cosmic Codex orbit 40, superpose_displaced(Angle,Curve), status undetermined, measured symmetry 1 and mirror_axes 0. NOTE THE CROSS-SHEET DISPUTE: the Codex's own handedness column attributes this cell to `achiral`, while the per-orbit record publishes mirror_axes 0, which means chiral. Note 076 located that as a four-cell hole in the column — the both-modulating case under the displacing operators — and this entry takes the per-orbit record's side, which is the side a sheet the fitted rule never saw independently supports. The vendored register is not edited; the dispute is recorded, not resolved by fiat. Notes 076 and 078."
+}

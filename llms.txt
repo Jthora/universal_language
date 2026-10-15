@@ -121,7 +121,7 @@ stayed near-empty, and a visible percentage is the cheapest defence against that
   carries no information about the object. Read `ul-forge/crates/ul-core/src/`, not a number in prose.
 - **Universality is not established.** `UL-IS-EMERGENT-UNIVERSAL` has its precondition unmet. Never
   write bare "fixed point" — the Erlangen and RG fixed points are different objects.
-- **<!--s:claims_verified-->38<!--/s--> of <!--s:claims_total-->192<!--/s--> claims are VERIFIED.** That is the accurate picture of a program at this stage, and it
+- **<!--s:claims_verified-->42<!--/s--> of <!--s:claims_total-->197<!--/s--> claims are VERIFIED.** That is the accurate picture of a program at this stage, and it
   is published rather than smoothed.
 
 ## How the record works
@@ -129,7 +129,7 @@ stayed near-empty, and a visible percentage is the cheapest defence against that
 `claims.yaml` is the registry — every substantive claim tiered with evidence; **if a claim is not in
 the registry it is not a claim of this project.** `FAILURES.md` is append-only (<!--s:failures-->40<!--/s--> entries) because
 a recorded failure is data and a repaired one is nothing. `research/notes/` is the full working arc
-including reversals. <!--s:checkers-->11<!--/s--> checkers enforce it, run by whoever verifies rather than by CI — there is none here on purpose (F-036). **A negative result is a real contribution here and
+including reversals. <!--s:checkers-->12<!--/s--> checkers enforce it, run by whoever verifies rather than by CI — there is none here on purpose (F-036). **A negative result is a real contribution here and
 will be registered as one — do not patch a failed prediction to make it pass.**
 
 Before searching the literature, read `RESEARCH-PROTOCOL.md`: the documented failure mode here is

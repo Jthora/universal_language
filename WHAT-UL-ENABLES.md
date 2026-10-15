@@ -149,11 +149,11 @@ derivation wrong, which is available to everyone including those who would rathe
 
 - **Locally** — `ruby tools/check-redundancy.rb`. A field is *pinned* when no single-field
   corruption of it is consistent with the rest of its entry, so the artifact catches the
-  corruption **with no oracle and no source to trust**. Currently **<!--s:pinned_fields-->77<!--/s--> of <!--s:checkable_fields-->94<!--/s--> fields (<!--s:pinned_percent-->81.9<!--/s-->%)**.
+  corruption **with no oracle and no source to trust**. Currently **<!--s:pinned_fields-->86<!--/s--> of <!--s:checkable_fields-->106<!--/s--> fields (<!--s:pinned_percent-->81.1<!--/s-->%)**.
   Pinning is redundancy and redundancy costs capacity (`CAPACITY-RADIUS-TRADEOFF`), so this is a
   **code rate** — a higher number is not automatically better.
 - **Globally** — `ruby tools/blast-radius.rb CLAIM-ID`, or `--census`. If this falls, what falls
-  with it? Applied to this registry: **<!--s:claims_load_bearing-->74<!--/s--> of <!--s:claims_total-->192<!--/s--> claims are load-bearing, and <!--s:claims_under_conjecture-->63<!--/s--> sit downstream of a CONJECTURED premise.** Three of the five most load-bearing claims are themselves conjectures. **This program is partly anchored on things it has not
+  with it? Applied to this registry: **<!--s:claims_load_bearing-->77<!--/s--> of <!--s:claims_total-->197<!--/s--> claims are load-bearing, and <!--s:claims_under_conjecture-->68<!--/s--> sit downstream of a CONJECTURED premise.** Three of the five most load-bearing claims are themselves conjectures. **This program is partly anchored on things it has not
   established, and now says so with a number.**
 
 **Why it must pre-exist the collapse.** A void is never filled by nothing — it is filled by
