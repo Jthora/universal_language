@@ -5470,3 +5470,82 @@ claims:
       this test counted `close(Angle)` as a two-mark composition, which is my error and not the
       register's; restricted to orbits reachable by a binary composition before reporting.
     scope_reviewed: [IMPORTED-HANDEDNESS-COLUMN-HAS-A-HOLE]
+
+  - id: HANDEDNESS-OUTRANKS-TIMBRE-IN-PRACTICE
+    statement: >
+      In the one independent embodied-notation tradition examined, handedness is ranked ABOVE
+      timbre among the things a performance must preserve. Barba's published method, on children
+      who cannot yet snap their fingers, substitutes a thigh-slap for the finger-snap while
+      requiring that the order of the hands be kept: "é possível substituí-lo pelo som da batida
+      da mão na perna (coxa), mantendo a ordem das mãos indicada". The sound is given up; the
+      handedness is protected. That ranking is the inverse of what a combinatorial map preserves,
+      which keeps the structure and loses the handedness.
+    tier: ARGUED
+    evidence: research/notes/077-the-body-notation/sources
+    premises: [PLACEMENT-HANDEDNESS-IS-INVISIBLE-TO-THE-MAP]
+    scope: >
+      ONE tradition, read in its author's own published article, and a statement about PEDAGOGICAL
+      priority rather than about what any formalism can represent. It does not show that handedness
+      is objectively more invariant than timbre, and it is not evidence about UL — it is evidence
+      about what a practitioner community protects when forced to choose. Its weight is as a design
+      input to the second corpus channel 076 specified, not as a result about figures. Barba's
+      inventory of body sounds is published as images and was not readable in the extracted text,
+      so the inventory's structure is NOT established here.
+    notes: >
+      This is the single item in the 077 sweep that was not predictable and cannot be explained as
+      a forced design choice: the opposite ranking is perfectly imaginable and would have been
+      easier to teach. Recorded because a non-obvious convergence is worth more than an obvious
+      one, and recorded at ARGUED because it is one source, one tradition, and an interpretation of
+      a sentence about children's hands.
+    scope_reviewed: [PLACEMENT-HANDEDNESS-IS-INVISIBLE-TO-THE-MAP]
+
+  - id: EMBODIMENT-SUPPLIES-ORIENTATION-NOT-FORM
+    statement: >
+      068 concluded that embodiment supplies the frame the frame-bound layer needs. This narrows it.
+      The same tradition that supplies an orientation — a direction from a body to a body, as in
+      the arrow game where the sound is the payload and the gaze is the address — explicitly
+      REFUSES to supply a canonical realization: "cada pessoa tem um corpo sonoro único", the
+      differences are anatomical, and each performer "encontra soluções gestuais particulares".
+      So the body contributes an orientation, which is a bit, and not a canonical form, which would
+      be a convention.
+    tier: ARGUED
+    evidence: research/notes/077-the-body-notation/sources
+    premises: [EMBODIMENT-SUPPLIES-THE-FRAME]
+    scope: >
+      A narrowing of 068, not a new mechanism, and argued from one tradition's published method
+      plus an ethnography. It does NOT establish that the body cannot supply a canonical form in
+      general — only that the tradition which most plausibly would have is on record declining to.
+      The distinction load-bearing here is that a bit costs nothing in the convention ledger while
+      a canonical form is a ledger line (072), so the narrowing makes embodiment more usable, not
+      less.
+    notes: >
+      The useful direction of this claim is the one that cuts AGAINST enthusiasm: it closes the
+      reading in which "the body grounds UL" supplies a unique notation. It does not. It supplies
+      an equivalence class with an individually chosen member — the same shape as reading-invariance,
+      one layer down.
+    scope_reviewed: [EMBODIMENT-SUPPLIES-THE-FRAME, UL-SUPPLIES-NO-VALUES]
+
+  - id: ORIENTATION-REVERSAL-IS-NOT-A-PARAMETER
+    statement: >
+      A handedness channel cannot be a finer gradation of a structural grid, because O(2) =
+      SO(2) union SO(2)r has two connected components: no continuous path of rotations reaches a
+      reflection. 069's Aut+ and Aut- are that fact as disjoint cosets. Independently, human motor
+      learning is reported to treat the two differently in kind — mirror reversal is learned by
+      ACQUIRING A NEW CONTROL POLICY, with offline gains between sessions, while visual rotation is
+      learned by RECALIBRATING an existing one, with memory decay between sessions.
+    tier: ARGUED
+    evidence: research/notes/077-the-body-notation/sources
+    premises: [MAP-AUTOMORPHISMS-EXIST]
+    scope: >
+      The topology is textbook and is not what makes this ARGUED. What makes it ARGUED is the
+      second sentence: the motor-learning paper (Telgen, Parvin & Diedrichsen 2014) was read in
+      ABSTRACT ONLY — the full text returned HTTP 403 — so its sample sizes and statistics are
+      unverified here, and the PARALLEL between the two components of O(2) and the two learning
+      mechanisms is mine, not the authors'. It is a design argument for why 076's second channel
+      must be discrete, not an empirical result about figures or about brains.
+    notes: >
+      This supplies the one thing 076's specification lacked: a reason the second channel must be a
+      BIT rather than a refinement of the grid. 076 established that the channel is needed and how
+      much it must carry (85 of 180 cells); it did not say what shape it has to be. A disconnected
+      group says: discrete, with no interpolation between the components.
+    scope_reviewed: [MAP-AUTOMORPHISMS-EXIST, CORPUS-SCHEMA-BLOCKS-CHIRALITY-DERIVATION]

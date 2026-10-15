@@ -47,13 +47,14 @@ parameter on the load-bearing path. Do not write sentences that assume closure.
 | Claim a proven fixed signature / a fixed primitive count | Retired 2026-08. Counts are properties of a *presentation*; the known sets are generating sets, not bases. Read the source, never a number in prose. | `COUNTS-ARE-GENERATED` |
 | Add CI so the checks run automatically | Four workflows existed and **not one ever executed** across 31 recorded runs, publishing a signal that meant nothing. Verification here is reader-run on purpose. | `F-036`, `VERIFICATION-IS-READER-RUN` |
 | Treat setbacks as evidence of suppression | A frame that explains both success and failure predicts nothing. Every significant defect found here was self-inflicted and found by outside readers. | `F-035` |
+| Cite the gumboot dance as a historical case of an unconfiscatable notation | The coded-signal story (miners forbidden to speak, communicating by boot slaps) is repeated widely in travel, education and performer material, but the scholarship is split on origins — Erlmann (1991) and Muller (1999) are reported to place *isicathulo* at mission stations, not the mines — and **no peer-reviewed study was found that tests the coded-signal claim**. The dispute itself was read at second hand. It is the most attractive piece of external support this project has been offered and it does not check out. | note `077` §7 |
 | Expect the notation to supply values or produce alignment | Mathematics anchors what is true, never what to do. A closed ledger yields zero oughts. | `UL-SUPPLIES-NO-VALUES` |
 
 ## 3. What is actually established, and how little that is
 
 Read the `scope:` line before citing anything. Generated counts, so they cannot go stale:
 
-- **<!--s:claims_total-->189<!--/s--> claims**, of which <!--s:claims_confidence_scale-->144<!--/s-->
+- **<!--s:claims_total-->192<!--/s--> claims**, of which <!--s:claims_confidence_scale-->147<!--/s-->
   are on the confidence scale at all (DESIGN-CHOICE is a *kind* and RETIRED a *lifecycle state*).
 - **VERIFIED: <!--s:claims_verified_declared-->38<!--/s--> declared, <!--s:claims_verified_earned-->35<!--/s--> earned.**
   A tier is computed from whether its evidence resolves in-tree and is runnable, not from what an

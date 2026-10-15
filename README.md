@@ -33,7 +33,7 @@ signal that meant nothing (`FAILURES.md` F-036). Verification here is reader-run
 ## If you think this is crankery
 
 Reasonable. "Universal language" plus "quantum" plus a capitalized Cure is the standard shape of
-it, and this repo has <!--s:claims_total-->189<!--/s--> registered claims of which only
+it, and this repo has <!--s:claims_total-->192<!--/s--> registered claims of which only
 <!--s:claims_verified_earned-->35<!--/s--> earn the top tier.
 
 So start at **`FAILURES.md`** — <!--s:failures-->40<!--/s--> entries, append-only, never edited
