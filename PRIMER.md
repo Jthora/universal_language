@@ -227,4 +227,4 @@ by derivation rather than convention, and **alignment by format acquisition** �
 as a corollary**: an explicit format carries a derivable anchor, so drift is self-detectable. The
 mathematical center is one theorem target — reading-invariance — and every load-bearing edge routes
 through it. The project once claimed a proven fixed signature; that is retired, git history is the
-archive, and the current claims live in `claims.yaml` where <!--s:checkers-->10<!--/s--> checkers hold them to their tiers.
+archive, and the current claims live in `claims.yaml` where <!--s:checkers-->11<!--/s--> checkers hold them to their tiers.

@@ -42,6 +42,9 @@ stats = {
   'claims_design'    => tiers.fetch('DESIGN-CHOICE', 0),
   'claims_retired'   => tiers.fetch('RETIRED', 0),
   'claims_priority0' => claims.count { |c| c['priority'].to_s == '0' },
+  # `^## F-\d+ ` requires a space after the digits, which EXCLUDES the lettered correction
+  # entries (F-012a, F-013a). That is intended — a correction to a failure is not a new failure —
+  # but it was silent, and a count with an undocumented exclusion is the shape of F-039.
   'failures'         => File.read('FAILURES.md', encoding: 'UTF-8').scan(/^## F-\d+ /).size,
   'notes'            => Dir.glob('research/notes/[0-9]*/').size,
   'checkers'         => Dir.glob('tools/check-*.rb').size,

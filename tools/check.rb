@@ -19,6 +19,13 @@ checks = [
   # the build (note 074). It runs here so the number is in front of every reader who verifies,
   # rather than needing to be remembered.
   ['corpus self-checking (measurement)', 'check-redundancy.rb'],
+  # A GATE, and the first check that reads a VENDORED import against ITSELF rather than reading
+  # this repo against itself (note 076). It fails if the derivation of the handedness column stops
+  # holding, or if the two sheets that currently contradict each other on orbits 40 and 53 stop
+  # being adjudicated by the third. The repo had good apparatus for its own tree and none for an
+  # import's internal consistency, which is how a 374-file register sat here for weeks with a
+  # four-cell hole in it.
+  ['imported handedness column derives', 'check-chirality.rb'],
 ]
 
 failed = []

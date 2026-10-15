@@ -53,12 +53,12 @@ parameter on the load-bearing path. Do not write sentences that assume closure.
 
 Read the `scope:` line before citing anything. Generated counts, so they cannot go stale:
 
-- **<!--s:claims_total-->183<!--/s--> claims**, of which <!--s:claims_confidence_scale-->138<!--/s-->
+- **<!--s:claims_total-->189<!--/s--> claims**, of which <!--s:claims_confidence_scale-->144<!--/s-->
   are on the confidence scale at all (DESIGN-CHOICE is a *kind* and RETIRED a *lifecycle state*).
-- **VERIFIED: <!--s:claims_verified_declared-->34<!--/s--> declared, <!--s:claims_verified_earned-->31<!--/s--> earned.**
+- **VERIFIED: <!--s:claims_verified_declared-->38<!--/s--> declared, <!--s:claims_verified_earned-->35<!--/s--> earned.**
   A tier is computed from whether its evidence resolves in-tree and is runnable, not from what an
   author typed. Premises cannot be weaker than what rests on them.
-- **<!--s:failures-->39<!--/s--> recorded failures**, append-only, never edited into successes.
+- **<!--s:failures-->40<!--/s--> recorded failures**, append-only, never edited into successes.
 - The honest progress bar: **`derived_orbits` = <!--s:derived_orbits-->2<!--/s--> of
   <!--s:atlas_orbits-->93<!--/s-->**. It moves when derivation work is done and stays still when
   documentation is.

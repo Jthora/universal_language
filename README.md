@@ -33,10 +33,10 @@ signal that meant nothing (`FAILURES.md` F-036). Verification here is reader-run
 ## If you think this is crankery
 
 Reasonable. "Universal language" plus "quantum" plus a capitalized Cure is the standard shape of
-it, and this repo has <!--s:claims_total-->183<!--/s--> registered claims of which only
-<!--s:claims_verified_earned-->31<!--/s--> earn the top tier.
+it, and this repo has <!--s:claims_total-->189<!--/s--> registered claims of which only
+<!--s:claims_verified_earned-->35<!--/s--> earn the top tier.
 
-So start at **`FAILURES.md`** — <!--s:failures-->39<!--/s--> entries, append-only, never edited
+So start at **`FAILURES.md`** — <!--s:failures-->40<!--/s--> entries, append-only, never edited
 into successes. It records that this project's own completeness score was driven from 32% to 100%
 across nine rounds in which each failing case triggered a change to the theory and was then
 re-scored as passing. It kills its own primitive-count program on a cited result (F-004). It
@@ -150,15 +150,15 @@ Three open fronts, ordered by decisiveness:
 ## Practice
 
 The documented failure mode here is **conventions without enforcement**, so conventions are
-replaced by mechanisms — <!--s:checkers-->10<!--/s--> of them, run by whoever verifies:
+replaced by mechanisms — <!--s:checkers-->11<!--/s--> of them, run by whoever verifies:
 
 - Every substantive claim is registered with a tier, evidence, and a scope that states what it
   does *not* license.
 - **A tier is earned, not declared.** Reachability of evidence is *computed* — in-tree, external,
   or absent — and a top-tier claim on evidence a reader cannot reach is an error. The checker
   prints declared and earned side by side, with every gap named. `VERIFIED` currently reads
-  <!--s:claims_verified_declared-->34<!--/s--> declared against
-  <!--s:claims_verified_earned-->31<!--/s--> earned. **Nothing yet executes a claim's evidence
+  <!--s:claims_verified_declared-->38<!--/s--> declared against
+  <!--s:claims_verified_earned-->35<!--/s--> earned. **Nothing yet executes a claim's evidence
   script**, so "a test that passes" remains a stated intent rather than an enforced one.
 - `CONJECTURED` requires a stated falsifier; `DESIGN-CHOICE` requires stated alternatives.
 - `FAILURES.md` is append-only. A recorded failure is data; a repaired one is nothing.

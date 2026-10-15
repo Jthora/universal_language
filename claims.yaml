@@ -5309,3 +5309,164 @@ claims:
       because the suite tested the parser's node types and the composer's sorts separately and
       never tested the join between them.
     scope_reviewed: [UL-MUST-BE-A-LANGUAGE, UL-IS-TWO-TIER, IMPL-COMPOSER-CONSTRUCTORS]
+
+  - id: ALPHABET-HAS-ONE-CHIRAL-LETTER
+    statement: >
+      A plane figure is achiral iff its symmetry group contains a reflection — iff the group is
+      dihedral or orthogonal rather than cyclic. Of the six marks the register publishes a group
+      for (Point O(2), Circle O(2), Line D2, Angle D1, Curve D1, Wave C2), exactly one is cyclic.
+      Wave is the unique chiral letter of the alphabet, and it is the smooth C2 one: D2 contains
+      C2, so the Line's half-turn is also realised by a reflection, while reflecting a sine in any
+      line returns a half-period shift and never the sine.
+    tier: VERIFIED
+    evidence: tools/check-chirality.rb
+    priority: 1
+    scope: >
+      Derived from the GROUP COLUMN of the imported `enantiomorphs` sheet, and cross-checked
+      against that sheet's independently measured mirror distances (0.38779 for Wave against
+      <= 0.00828 for the other five, threshold 0.11 — so the classification is nowhere near the
+      cut). Both inputs are the Codex's, not this repo's, and are inherited at their tier: what is
+      verified here is that the group-theoretic derivation reproduces both columns, not that the
+      groups were correctly measured in the first place. Says nothing about COMPOSITE figures,
+      where arrangement can manufacture handedness the alphabet lacks.
+    notes: >
+      The six marks are the complete 3 x 2 product of rotation class x curvature class
+      (MARKS-ARE-A-COMPLETE-PRODUCT). Handedness is a SINGLE CELL of that grid, so it is a function
+      of neither coordinate alone — which is the structural reason an instrument that sees only the
+      rotation class cannot determine it. Aut(map) is such an instrument
+      (MAP-SYMMETRY-BOUNDS-DRAWN-SYMMETRY).
+    scope_reviewed: [MARKS-ARE-A-COMPLETE-PRODUCT, MAP-SYMMETRY-BOUNDS-DRAWN-SYMMETRY]
+
+  - id: INHERITED-HANDEDNESS-IS-THE-WAVE
+    statement: >
+      Across all 180 ordered (operator, a, b) cells of the register's handedness column, the
+      attribution `source: inherited` holds exactly when Wave is an operand — 55 cells, 55
+      predicted, zero exceptions in either direction. So the whole inherited class follows from one
+      bit of the mark table with no free parameters.
+    tier: VERIFIED
+    evidence: tools/check-chirality.rb
+    premises: [ALPHABET-HAS-ONE-CHIRAL-LETTER]
+    scope: >
+      An exact agreement with an attested column, not a proof that the attribution is correct. If
+      the Codex mis-attributed a cell, this reproduces the mistake. What it establishes is that the
+      column carries no information beyond the one bit — there is nothing per-operator or
+      per-operand in the inherited half to derive.
+    notes: >
+      Asserted in `--selftest` as one biconditional per cell, both directions, PLUS A NEGATIVE
+      CONTROL: the same test with Angle substituted for Wave must FAIL. The first draft of that
+      assertion was a chain of `||`, which is satisfied by any one disjunct and so could not fail —
+      the same near-tautological shape 075 found in this repo's own Z/2 test. A test that cannot
+      fail is not evidence, and it passes, which is worse than not existing.
+    scope_reviewed: [ALPHABET-HAS-ONE-CHIRAL-LETTER]
+
+  - id: IMPORTED-HANDEDNESS-COLUMN-HAS-A-HOLE
+    statement: >
+      Two sheets of the imported register contradict each other on orbits 40 and 53. The
+      handedness column attributes `superpose_displaced(Angle,Curve)` and
+      `concatenate(Angle,Curve)` (both orders, four cells) to `achiral`, while the per-orbit
+      records publish `mirror_axes: 0` for the same two orbits, and no mirror axis means chiral.
+      Across all 93 orbits the two sheets agree on 84, disagree on exactly these 2, and 7 orbits
+      carry no handedness cell at all.
+    tier: VERIFIED
+    evidence: tools/check-chirality.rb
+    scope: >
+      A cross-sheet INCONSISTENCY, established by direct comparison and independent of any rule
+      this repo fitted. Which sheet is wrong is NOT established by the comparison alone; the
+      argument that the handedness column is the mistaken one is ARRANGEMENT-RULE-IS-FITTED's,
+      and rests on the hole being exactly the both-modulating case a plausible generator would
+      drop. Nothing here is a defect in this repo, and nothing here licenses editing the vendored
+      register, which stays verbatim and hashed.
+      REVIEWED against ARRANGEMENT-RULE-IS-FITTED's scope: that claim is deliberately not VERIFIED
+      because its arrangement rule is fitted, and this claim does NOT inherit that weakness — the
+      disagreement is a direct comparison of two published columns and would stand if the rule had
+      never been written. The fitted rule only supplies the ARGUMENT about which sheet is wrong.
+    notes: >
+      Found by comparing an import against ITSELF. The repo had good apparatus for checking its own
+      tree and none at all for checking a vendored register's sheets against each other, which is
+      why a 374-file import sat in the tree for weeks with this in it. The first run of the first
+      such checker found it.
+    scope_reviewed: [ATLAS-CONVENTIONS-ARE-NAMING-ONLY, ARRANGEMENT-RULE-IS-FITTED]
+
+  - id: ARRANGEMENT-RULE-IS-FITTED
+    statement: >
+      The handedness column's `arrangement` class is reproduced by a three-class operator rule:
+      concentric operators (nest, superpose_concentric) never arrange handedness; `cross` does iff
+      a != b and both operands are C1; the displacing operators (concatenate,
+      superpose_displaced) do iff a != b and at least one operand is C1. The rule agrees with the
+      column on 176 of 180 cells and disputes 4, and on all 4 the per-orbit records uphold it.
+    tier: ARGUED
+    evidence: tools/check-chirality.rb
+    premises: [INHERITED-HANDEDNESS-IS-THE-WAVE, IMPORTED-HANDEDNESS-COLUMN-HAS-A-HOLE]
+    scope: >
+      DELIBERATELY NOT VERIFIED. The operator-to-class map and the C1 threshold per class were
+      chosen to reproduce this column, and 99 of 180 cells are achiral, so a skewed column is cheap
+      to fit; agreement on the fitted part is worth much less than INHERITED-HANDEDNESS-IS-THE-WAVE's
+      agreement on the derived part. Only the concentric row has an argument rather than a fit: at
+      separation r = 0 the relative-rotation parameter is free and the centre is shared, so each
+      mark's mirror axis can be rotated onto the other's. The other two rows are curve-fitting
+      until something independent tests them.
+      REVIEWED against INHERITED-HANDEDNESS-IS-THE-WAVE's scope, and the limitation DOES flow here:
+      that claim is an exact agreement with an attested column and reproduces any mis-attribution in
+      it. This rule takes `inherited` as its first branch, so if the Codex attributed an inherited
+      cell wrongly this rule returns the same wrong answer, and its 176/180 agreement is measuring
+      the column against itself on those 55 cells. The branch is inherited unchanged, not
+      independently checked.
+    notes: >
+      What raises it above curve-fitting is the four-cell disagreement being resolved by a sheet the
+      rule never saw — a prediction the fit could have failed and did not. That is one successful
+      out-of-sample prediction on four cells, which is why this is ARGUED and not CONJECTURED, and
+      why it is not VERIFIED either.
+    scope_reviewed: [IMPORTED-HANDEDNESS-COLUMN-HAS-A-HOLE, INHERITED-HANDEDNESS-IS-THE-WAVE]
+
+  - id: CORPUS-SCHEMA-BLOCKS-CHIRALITY-DERIVATION
+    statement: >
+      Note 071 attributed its two blocked derivations to a missing instrument, the placement plane.
+      The instrument was already in the register twice over (a group per mark, and a handedness
+      attribution per composition), so the derivation is not blocked. What is blocked is the
+      CHANNEL: a corpus entry encodes a combinatorial map and the harness recomputes map
+      invariants, and chirality is not among them. Moving `derived_orbits` on a chirality-separated
+      pair requires the corpus to gain a second channel that something other than the map computes.
+    tier: ARGUED
+    evidence: tools/check-chirality.rb
+    premises: [PLACEMENT-HANDEDNESS-IS-INVISIBLE-TO-THE-MAP]
+    scope: >
+      Verified narrowly and argued broadly. Verified: for orbits 39/40 and 91/92 every geometric
+      field the register publishes coincides and only `mirror_axes` differs. NOT verified: that
+      their combinatorial maps are isomorphic — that would need the maps constructed, and agreement
+      on four published fields is not map-isomorphism. A count of "orbit distinctions a map-based
+      corpus cannot express" was computed and DISCARDED as a denominator artefact of a three-field
+      signature; no such figure is claimed.
+    notes: >
+      This is the first specification this project has had for the placement plane that says what
+      the plane is FOR rather than that it is next: the channel must carry the 85 of 180 cells whose
+      handedness comes from outside the map — 55 from the alphabet, 30 from arrangement.
+      CORRECTS NOTE 071, which is left unedited. Its §6 recommendation #1 ("build the placement
+      plane") was right about the artefact and wrong about the reason, and the wrong reason would
+      have produced an instrument nothing could consume.
+    scope_reviewed: [PLACEMENT-HANDEDNESS-IS-INVISIBLE-TO-THE-MAP, ATLAS-COMPLETENESS-IS-THE-PROGRESS-BAR]
+
+  - id: CODEX-COMPONENTS-IS-NOT-TOPOLOGICAL
+    statement: >
+      The imported orbit records' `components` field is neither a count of the composed marks nor a
+      count of connected pieces. 16 of 86 binary orbits publish something other than 2, e.g.
+      superpose_concentric(Point,Point) -> 1; and 35 orbits with a crossing, hence joined into one
+      piece, publish something other than 1, e.g. superpose_concentric(Point,Line) -> 2. A third
+      reading — distinguishable strokes after merging coincident ones — survives both and then
+      fails on superpose_concentric(Point,Circle) -> 1.
+    tier: VERIFIED
+    evidence: tools/check-chirality.rb
+    scope: >
+      A NEGATIVE result about three readings, established by counterexample from the register's own
+      published numbers. It does NOT establish what the field means; the semantics are recorded as
+      UNRESOLVED, a channel that is neither pass nor fail (075 REQ-3), because the field may mean a
+      fourth thing measured at a specific raster scale. The operational consequence holds either
+      way: nothing may key an identity on it, and it must not be imported as a topological
+      invariant.
+    notes: >
+      069 had already called `components` a "false friend" between the two vocabularies — theirs
+      counting strokes before crossings, the repo's counting graph components. This narrows that:
+      the stroke reading is wrong too, so the field is not merely a different invariant from the
+      repo's, it is not evidently an invariant of the idealised figure at all. My first version of
+      this test counted `close(Angle)` as a two-mark composition, which is my error and not the
+      register's; restricted to orbits reachable by a binary composition before reporting.
+    scope_reviewed: [IMPORTED-HANDEDNESS-COLUMN-HAS-A-HOLE]
