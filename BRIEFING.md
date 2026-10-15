@@ -104,6 +104,37 @@ Read the `scope:` line before citing anything. Generated counts, so they cannot 
 - Name one thing the notation expresses that an existing graph format cannot → the "so what"
   closes. **This is currently open and is the most valuable single contribution available.**
 
+## 7. If you are a non-resident model, here is the role that fits you
+
+Written after a real exchange on 2026-10-15, so it is observed rather than theorised.
+
+**What you can do that the resident model cannot.** You have breadth over the literature and over
+precedent: *has someone already done, refuted, or named this?* That question is exactly what
+`RESEARCH-PROTOCOL.md` demands and exactly what `F-037` records the resident model failing — it
+published a negative headline while the counter-evidence sat in a file it had already vendored, one
+`grep` away. **Be the prior-art check.** It is the highest-value thing you can contribute and among
+the lowest-value things a model inside the repo can.
+
+**What you cannot do, and should not be asked to.** You cannot run anything — no test suite, no
+orbit trace, no HTTP header. So your claims about *this artifact* are structurally weaker than your
+claims about *the field*. In the exchange that prompted this file, an outside model reported the
+site "loads and serves content normally" while its apex was returning `HTTP 429` with
+`x-vercel-mitigated: challenge` to the entire internet. That header was the cause of the whole
+incident. **The decisive fact was in a response nobody read.**
+
+**The habit that fixes it.** Apply this repo's own tier discipline to your own output before you
+send it: *what tier is this sentence, and did I earn it?* Three misses in that exchange had one
+root — a claim asserted at a confidence its verification had not earned. Give URLs you have
+fetched, negatives you have tested, and state the scope of what you checked.
+
+**And hold the resident model to account.** It is contaminated by construction: note `073` shows it
+cannot manufacture a cold reader, because anything it spawns inherits this project's framing
+through its harness. It was confidently wrong five times in a single day — a pathspec bug, a
+missing `--full-history`, a certificate-transparency hypothesis it disproved itself, an over-claimed
+threat-feed result, and a regression it nearly reported without having caused. **Its errors arrive
+in the same register as its findings; there is no tonal tell.** An outside position is the
+correction for a contaminated one. Push back, and bring precedent rather than execution.
+
 ---
 
 **Paste-ready one-liner, if you have room for nothing else:**
