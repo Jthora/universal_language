@@ -127,7 +127,7 @@ stayed near-empty, and a visible percentage is the cheapest defence against that
 ## How the record works
 
 `claims.yaml` is the registry — every substantive claim tiered with evidence; **if a claim is not in
-the registry it is not a claim of this project.** `FAILURES.md` is append-only (<!--s:failures-->40<!--/s--> entries) because
+the registry it is not a claim of this project.** `FAILURES.md` is append-only (<!--s:failures-->41<!--/s--> entries) because
 a recorded failure is data and a repaired one is nothing. `research/notes/` is the full working arc
 including reversals. <!--s:checkers-->12<!--/s--> checkers enforce it, run by whoever verifies rather than by CI — there is none here on purpose (F-036). **A negative result is a real contribution here and
 will be registered as one — do not patch a failed prediction to make it pass.**

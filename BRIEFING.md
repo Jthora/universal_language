@@ -59,7 +59,7 @@ Read the `scope:` line before citing anything. Generated counts, so they cannot 
 - **VERIFIED: <!--s:claims_verified_declared-->42<!--/s--> declared, <!--s:claims_verified_earned-->39<!--/s--> earned.**
   A tier is computed from whether its evidence resolves in-tree and is runnable, not from what an
   author typed. Premises cannot be weaker than what rests on them.
-- **<!--s:failures-->40<!--/s--> recorded failures**, append-only, never edited into successes.
+- **<!--s:failures-->41<!--/s--> recorded failures**, append-only, never edited into successes.
 - The honest progress bar: **`derived_orbits` = <!--s:derived_orbits-->3<!--/s--> of
   <!--s:atlas_orbits-->93<!--/s-->**. It moves when derivation work is done and stays still when
   documentation is.

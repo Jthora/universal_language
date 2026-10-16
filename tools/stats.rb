@@ -87,6 +87,37 @@ if register && register['combination_space']
   stats['derived_percent'] = ((100.0 * derived.size) / cs['orbits']).round(1)
 end
 
+# --- import-consistency measurements (notes 076, 078) -----------------------------------------
+#   These are the numbers the two import checkers compute. They are here so that NOTHING has to
+#   type them: before this block they lived as hand-written digits inside claims.yaml and inside
+#   those checkers' own headers, and claims.yaml is not scanned by check-counts.rb at all. One of
+#   them had already gone stale within the hour it was written (note 078 section 1).
+#
+#   Loud on failure, never silently zeroed — a bare `rescue` that swallows the error and emits
+#   nothing is the same disease as a checker that declines to check (F-039, and stats.rb's own
+#   earned-tier block, which had exactly this bug).
+begin
+  ch = JSON.parse(`ruby tools/check-chirality.rb --json 2>/dev/null`.force_encoding('UTF-8'))
+  stats['chirality_cells']    = ch['cells']
+  stats['chirality_agree']    = ch['agree']
+  stats['chirality_disputed'] = ch['disputed'].size
+rescue StandardError => e
+  warn "stats.rb: chirality block failed (#{e.class}: #{e.message}) — keys omitted, not zeroed"
+end
+
+begin
+  pl = JSON.parse(`ruby tools/check-placement.rb --json 2>/dev/null`.force_encoding('UTF-8'))
+  stats['placement_cells']       = pl['cells']
+  stats['placement_pairs']       = pl['pairs']
+  stats['placement_informative'] = pl['informative']
+  stats['placement_vacuous']     = pl['vacuous']
+  # the two sides of the predicate, which is what a reader needs to judge the sample
+  stats['placement_destroyed'] = pl['directions']['operator destroyed'] || 0
+  stats['placement_preserved'] = pl['directions']['operator preserved'] || 0
+rescue StandardError => e
+  warn "stats.rb: placement block failed (#{e.class}: #{e.message}) — keys omitted, not zeroed"
+end
+
 # --- survivability (note 074) ------------------------------------------------------------------
 #   pinned_*  — how much of the corpus checks ITSELF, with no oracle and no source to trust
 #   blast_*   — how much of the registry falls if a source does

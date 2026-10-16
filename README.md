@@ -36,7 +36,7 @@ Reasonable. "Universal language" plus "quantum" plus a capitalized Cure is the s
 it, and this repo has <!--s:claims_total-->197<!--/s--> registered claims of which only
 <!--s:claims_verified_earned-->39<!--/s--> earn the top tier.
 
-So start at **`FAILURES.md`** — <!--s:failures-->40<!--/s--> entries, append-only, never edited
+So start at **`FAILURES.md`** — <!--s:failures-->41<!--/s--> entries, append-only, never edited
 into successes. It records that this project's own completeness score was driven from 32% to 100%
 across nine rounds in which each failing case triggered a change to the theory and was then
 re-scored as passing. It kills its own primitive-count program on a cited result (F-004). It

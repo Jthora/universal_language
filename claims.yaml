@@ -283,7 +283,13 @@ claims:
     statement: "UL-Script parses to GIR and deparses back."
     tier: VERIFIED
     evidence: ul-forge/crates/ul-core/src/parser/
-    notes: "Covered by the existing test suite (135 tests across the workspace)."
+    notes: >
+      Covered by the workspace test suite; run `cargo test` for the count. The figure stated here
+      was "135 tests across the workspace" from the day it was written, against an actual 399 when
+      note 079 found it — wrong by a factor of three, in a VERIFIED claim, for months. It survived
+      because check-counts.rb globbed only md and txt and never looked at claims.yaml at all. Per
+      stats.rb's own ruling the test count is now stated nowhere: it is not computable by a static
+      scan, so the instruction is to run the suite.
 
   # ─── The Cure ──────────────────────────────────────────────────────────────
 
@@ -4503,6 +4509,17 @@ claims:
       note is a historical fact, not a stale assertion. `research/surveys/research-register.md` is
       exempt for the same reason. Lexicon and gallery tables stating the size of a static table in
       the same file are description, not derived counts, and are not flagged.
+      WIDENED 2026-10-16 (note 079, F-041). Until then "live documents" meant `**/*.{md,txt}` plus
+      index.json, so THIS FILE was never scanned — the statement above was written in the one live
+      document outside its own jurisdiction, and `tools/` was exempt wholesale. Both are now
+      scanned. On those two surfaces only a NARROW set of phrasings is forbidden: several checker
+      headers quote stale counts deliberately, as examples of the disease, and the broad inventory
+      patterns would flag those. What is forbidden there is the measurement counts this repo's own
+      code computes, which are the ones that move when a checker is edited.
+      STILL EXEMPT, and now deliberately rather than accidentally: numbers read straight off the
+      vendored register (its cell totals, its sampled radii) may be stated, because the register is
+      hash-verified and frozen, so they cannot go stale. The test of whether a number belongs in
+      prose is not where it appears but whether this repo's code computes it.
     notes: >
       OWNER FINDING 2026-10-14: "the way that claims and VERIFIED keeps getting listed is
       embarrassing and exhausting... those numbers should be dynamic, and not stored in static files
@@ -4597,7 +4614,18 @@ claims:
       has historically gone to framing while the atlas stayed near-empty, and a visible 4% is the
       cheapest defence against that. Recomputed by audit.py rather than written down, per
       COUNTS-ARE-GENERATED.
-    scope_reviewed: [ORBIT-PARTITION-IS-TOLERANCE-BOUNDED]
+    reviewed_2026_10_16: >
+      REVIEWED against COUNTS-ARE-GENERATED's scope, including its widening in note 079, and the
+      review turns up a caveat this claim needs rather than a clean pass. Generation is now
+      stronger in two ways: the file stating this claim is finally inside the counts scan, and the
+      progress figure is tier-aware since note 078. But the second of those means THE PROGRESS BAR
+      IS NOT COMPARABLE ACROSS TIME. `derived_orbits` counted every corpus entry's orbit until
+      2026-10-15 and counts VERIFIED entries only after it, so a reading of 3 today is a stricter
+      quantity than a reading of 2 last week, and "2 -> 3" understates the movement while
+      overstating the comparability. Generated is not the same as stable: a count can be correctly
+      computed at every moment and still not form a series. Anyone plotting this must date the
+      definition, and `derived_orbits_argued` must never be summed into it to make the line smooth.
+    scope_reviewed: [ORBIT-PARTITION-IS-TOLERANCE-BOUNDED, COUNTS-ARE-GENERATED]
 
   - id: READER-IS-ACTIVE-NOW
     statement: >
@@ -5389,8 +5417,10 @@ claims:
       handedness column attributes `superpose_displaced(Angle,Curve)` and
       `concatenate(Angle,Curve)` (both orders, four cells) to `achiral`, while the per-orbit
       records publish `mirror_axes: 0` for the same two orbits, and no mirror axis means chiral.
-      Across all 93 orbits the two sheets agree on 84, disagree on exactly these 2, and 7 orbits
-      carry no handedness cell at all.
+      Across the 93 orbits the two sheets agree everywhere except these two, and a handful of
+      orbits are generated unarily and carry no handedness cell at all. `tools/check-chirality.rb`
+      prints the split and fails if it moves; the numbers are not repeated here because they are
+      computed by this repo's comparison and would go stale in prose.
     tier: VERIFIED
     evidence: tools/check-chirality.rb
     scope: >
@@ -5417,7 +5447,8 @@ claims:
       concentric operators (nest, superpose_concentric) never arrange handedness; `cross` does iff
       a != b and both operands are C1; the displacing operators (concatenate,
       superpose_displaced) do iff a != b and at least one operand is C1. The rule agrees with the
-      column on 176 of 180 cells and disputes 4, and on all 4 the per-orbit records uphold it.
+      column on every cell but four, and on all four of those the per-orbit records uphold it.
+      `tools/check-chirality.rb` prints the agreement count and names the disputed cells.
     tier: ARGUED
     evidence: tools/check-chirality.rb
     premises: [INHERITED-HANDEDNESS-IS-THE-WAVE, IMPORTED-HANDEDNESS-COLUMN-HAS-A-HOLE]
@@ -5432,8 +5463,8 @@ claims:
       REVIEWED against INHERITED-HANDEDNESS-IS-THE-WAVE's scope, and the limitation DOES flow here:
       that claim is an exact agreement with an attested column and reproduces any mis-attribution in
       it. This rule takes `inherited` as its first branch, so if the Codex attributed an inherited
-      cell wrongly this rule returns the same wrong answer, and its 176/180 agreement is measuring
-      the column against itself on those 55 cells. The branch is inherited unchanged, not
+      cell wrongly this rule returns the same wrong answer, and on the inherited cells its
+      agreement is measuring the column against itself. The branch is inherited unchanged, not
       independently checked.
     notes: >
       What raises it above curve-fitting is the four-cell disagreement being resolved by a sheet the
@@ -5607,8 +5638,10 @@ claims:
       Mirroring one operand of a binary composition leaves it inside the attested operator
       vocabulary exactly when that operand has two or more mirror axes, and takes it out of the
       vocabulary when the operand has at most one. Measured over every configuration the register
-      samples in both reflect-B states with the other eight parameters held equal: 16 informative
-      pairs, 16 agreements, 0 disagreements. The mechanism is immediate — an O(2) mark is unmoved
+      samples in both reflect-B states with the other eight parameters held equal: every
+      informative pair agrees and none disagrees. `tools/check-placement.rb` prints the pair counts
+      and how thin each side of the predicate is, and fails if one pair breaks it — which is where
+      a sample size belongs, because it moves when the parse is edited. The mechanism is immediate — an O(2) mark is unmoved
       by a mirror and the Line (D2) maps to itself, so the configuration is literally unchanged,
       while Wave (no axis) and Angle/Curve (one axis) genuinely change.
     tier: VERIFIED
@@ -5623,7 +5656,7 @@ claims:
       reflection of the canvas, nor about operators outside the five attested binary ones.
     notes: >
       MY FIRST READING WAS REFUTED BY MY OWN CHECKER. I analysed this in a scratch script, got
-      "all 13 informative pairs lose the operator, and the 41 unchanged ones are all vacuous", and
+      "every informative pair loses the operator, and the unchanged ones are all vacuous", and
       wrote that as the gate. The checker then found three pairs I had misfiled as vacuous: they
       are the high-symmetry operands, and they PRESERVE the operator. So the true predicate is
       sharper than the one I nearly shipped, and the gate asserts the predicate with a control

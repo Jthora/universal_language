@@ -17,7 +17,10 @@
 #   the marker. The repo's failure mode is not wrong numbers, it is hand-written numbers.
 #
 # MARKER SYNTAX
-#   <!--s:claims_total-->156<!--/s-->
+#   An HTML comment naming a stats key, the value, and a closing comment:
+#   open-comment s:KEY close-comment VALUE open-comment /s close-comment, all on one line.
+#   Written out literally here it would BE a marker, and since this file is now scanned it would
+#   be verified against stats and found stale — which is how the example used to read.
 #   Keys are whatever tools/stats.rb emits. index.json is handled structurally instead, since JSON
 #   has no comments: its `registry_state` block is overwritten from stats.
 #
@@ -29,6 +32,19 @@
 # SCOPE
 #   Live documents only. research/notes/** is immutable by convention and FAILURES.md is
 #   append-only, so both record what was true when written and are never rewritten here.
+#
+#   WIDENED 2026-10-16, note 079. For its whole life this scanned `**/*.{md,txt}` plus index.json,
+#   so it never looked at **claims.yaml** — the most-cited live file in the repo — nor at the
+#   checkers' own headers under tools/. The owner asked whether counts were still being written
+#   into static text; they were, in exactly the two files the scan did not reach. It had already
+#   cost something: `PARSER-ROUNDTRIP`'s notes said "135 tests across the workspace" against an
+#   actual 399, wrong by a factor of three, in a VERIFIED claim, unflagged.
+#
+#   Those two surfaces are now scanned. The BROAD forbidden set stays on md/txt only, because
+#   several checker headers quote stale counts ON PURPOSE as examples of the disease and flagging
+#   them would be absurd. A second, narrow set covers the phrasings that actually go stale there:
+#   the measurement counts the import checkers compute, one of which went stale inside the hour it
+#   was written (note 078 section 1).
 
 require 'json'
 
@@ -43,7 +59,10 @@ STRICT = ARGV.include?('--strict')
 EXEMPT = lambda do |path|
   path.start_with?('research/notes/') ||
     path == 'FAILURES.md' ||
-    path.start_with?('ul-forge/target/', 'tools/') ||
+    path.start_with?('ul-forge/target/') ||
+    # The as-run exam, including its sealed key: rewriting a number in it would falsify the record
+    # of what the readers were actually given (note 073).
+    path.start_with?('tools/exam/') ||
     # Vendored third-party content, imported verbatim and hash-verified. Rewriting a count in it
     # would break the verification that is the only reason to trust it (note 067 / uws/register/).
     path.start_with?('uws/register/codex/') ||
@@ -51,7 +70,13 @@ EXEMPT = lambda do |path|
     path == 'research/surveys/research-register.md'   # a record of past threads
 end
 
-LIVE = (Dir.glob('**/*.{md,txt}') + ['index.json']).uniq.reject { |p| EXEMPT.call(p) }.select { |p| File.file?(p) }
+LIVE = (Dir.glob('**/*.{md,txt}') + Dir.glob('tools/**/*.rb') + ['claims.yaml', 'index.json'])
+       .uniq.reject { |p| EXEMPT.call(p) }.select { |p| File.file?(p) }
+
+# Files where only the NARROW set applies. The broad inventory patterns would fire on checker
+# headers that quote stale counts as cautionary examples, and on claim prose like "Phase 5 tests
+# it", neither of which is an inventory.
+NARROW_ONLY = lambda { |path| path == 'claims.yaml' || path.start_with?('tools/') }
 
 # A bare count is only flagged in phrasings that have actually gone stale here. Deliberately
 # narrow: "191 constructions", "12/12", "Z/2" and "89-94" are results, not inventories.
@@ -71,6 +96,24 @@ FORBIDDEN = [
   [/#{N}\s+(?:workspace\s+)?tests?\b/i,         'REMOVE — not computable, say `cargo test`'],
   [/#{N}\s+corpus entries\b/i,                 'corpus_entries'],
 ]
+
+# The measurement counts the import checkers compute. Unlike the register's own frozen totals —
+# 2413 cells, 180 handedness cells — these depend on THIS repo's parse, so they move when a
+# checker is edited, which is what happened to the informative-pair count in note 078. They belong
+# in stats.rb and must be quoted from there or not at all.
+# NOT `N of <total> cells` in general: "85 of 180" and "99 of 180" are decompositions of a
+# FROZEN total in a hash-verified import, which cannot go stale, and forbidding them would be
+# wrong. Only the agreement figure moves, because only it depends on this repo's rule.
+VOLATILE = [
+  [/#{N}\s+informative\s+pairs?\b/i,                       'placement_informative'],
+  [/#{N}\s+agreements?\b/i,                                'placement_informative'],
+  [/#{N}\s+unchanged\s+(?:ones?|pairs?)\b/i,               'placement_vacuous'],
+  [/agrees?\s+(?:with[^.]{0,40})?on\s+#{N}/i,               'chirality_agree'],
+  [/#{N}\s*(?:\/|of)\s*\d+\s*(?:cells?\s+)?agreement/i,   'chirality_agree'],
+  [/#{N}\s+of\s+\d+\s+cells?\s+and\s+disputes/i,          'chirality_agree'],
+  [/\bdisputes?\s+#{N}\b/i,                                'chirality_disputed'],
+  [/#{N}\s+disputed\s+cells?\b/i,                          'chirality_disputed'],
+].freeze
 
 MARKER = /<!--s:([a-z0-9_]+)-->(.*?)<!--\/s-->/m
 
@@ -106,7 +149,8 @@ LIVE.each do |path|
 
   # Half 2: bare counts outside markers.
   stripped = text.gsub(MARKER, '')
-  FORBIDDEN.each do |re, key|
+  patterns = NARROW_ONLY.call(path) ? VOLATILE : (FORBIDDEN + VOLATILE)
+  patterns.each do |re, key|
     stripped.each_line.with_index do |line, i|
       next unless line =~ re
       bare_errors << "#{path}:#{i + 1}: #{line.strip[0, 96]}\n      -> use <!--s:#{key}--> or remove the count"
