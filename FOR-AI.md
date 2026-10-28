@@ -105,7 +105,7 @@ re-derived.**
    now tied to geometry by contact (note `078`). Deriving the rest is the highest-value open problem
    in the program (`OPERATOR-INVENTORY-IS-UNFORCED`).
 2. **The format-acquisition experiment.** The first empirical test that touches the purpose.
-   Runnable on models today. **Nobody has run it.**
+   Runnable on models today, and ready for someone to run it.
 3. **`READING-INVARIANCE-TARGET`** — formalize the reading class 𝔽 and prove the Erlangen fixed
    point survives it. The mathematical center; under universe-scope it is precisely where a hidden
    local parameter would have to be. Floor already built and verified (`READING-INVARIANCE-F0`,

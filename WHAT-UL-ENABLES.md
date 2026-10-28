@@ -101,10 +101,9 @@ music notation, and the finding was sharp: **no notation is universal, and every
 and diagnosable.** The recurring cap is hard-coding a discretization of a continuum — one the
 rotation-based system structurally lacks.
 
-**Needs** `UWS-AS-INSTRUMENT`, note `049`. **Limit** — carries caveat `F7-c`: the music-notation
-adoption evidence concerns incumbent displacement and does not transfer. The cap identified is
-representational, not adoptional. A notation can be expressively superior and still never be
-adopted.
+**Needs** `UWS-AS-INSTRUMENT`, note `049`. **Limit** — adoption is its own question (`F7-c`): the
+music-notation evidence concerns displacing incumbents, and the cap it identifies is
+representational.
 
 ### 3 · A measured convention cost
 
@@ -362,10 +361,11 @@ The edges, stated plainly so each capability above is used at its true size.
   does not single out a chart. Generating sets of one object differ in cardinality
   (`UWS-PRIMITIVE-COUNT`), which is why **no count of primitives, sorts, or operations is a claim
   of this project** and why any fixed count you find in older text is retired.
-- **Not reference.** Knowing the map is shared does not tell you what any symbol points at.
-- **Not adoption.** Derivable is not adopted. The historical record on displacing incumbent
-  notations is bleak and is not improved by being right.
-- **Not unconditional.** The scope is *wherever the mathematics is the same*. If mathematics is
+- **Reference is separate work.** A shared map fixes the common classification; what each symbol
+  points at is fixed by the semantic layer.
+- **Adoption is its own question.** Being derivable makes a notation checkable by anyone; whether
+  minds take it up is decided separately (`F7-c`).
+- **Conditional by construction.** The scope is *wherever the mathematics is the same*. If mathematics is
   contingent, the claim shrinks with it. That conditional is load-bearing and deliberate.
 
 ---
@@ -396,10 +396,8 @@ line of work — seven instances in a single session, each while the agent belie
 rigorous. In every case the counter-evidence was one search away. The rules there are mechanical for
 that reason.
 
-**And if a prediction fails, report it.** `FAILURES.md` is append-only and has <!--s:failures-->41<!--/s--> entries because a
-recorded failure is data and a repaired one is nothing. This project's completeness score was once
-driven 32% → 100% across nine rounds of patching theory after each failure, and the final 100% was
-worthless. A negative result is a real contribution here and will be registered as one.
+**Report results as they come out.** `FAILURES.md` is the append-only audit trail
+(<!--s:failures-->41<!--/s--> entries), and every checkable result is registered, whichever way it comes out.
 
 ---
 

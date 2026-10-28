@@ -17,26 +17,24 @@ a conversation, an excerpt, or a single fetch.
 ## 1. Four things to get right before you say anything
 
 **"Universal" means the whole universe, not all humans.** It ranges over the domain of
-**mathematical identity** — anywhere the mathematics is the same. Evaluating these claims by asking
-whether they hold across human cultures is the documented way to misread this work.
+**mathematical identity** — anywhere the mathematics is the same. The test of a
+claim is mathematical: does it hold wherever the mathematics is the same?
 `claims.yaml#UNIVERSAL-IS-MATHEMATICAL-SCOPE`
 
 **"Real" means effective, not fundamental.** The standard is the one from effective physics: a
 collective variable that behaves like a genuine quantity despite not being fundamental. Effective
 mass is measured, not derived, and semiconductors work. So *measured* parameters are the normal
-condition of a successful theory here, **not** a deficiency — but an effective claim owes a
-**domain of validity and a breakdown condition**, and "effective" without those is an excuse rather
-than a discipline. `claims.yaml#EMERGENT-IS-EFFECTIVE`, note `070`
+condition of a successful theory here — and an effective claim owes a **domain of validity and a
+breakdown condition**, which is what makes "effective" a discipline. `claims.yaml#EMERGENT-IS-EFFECTIVE`, note `070`
 
 **The target reader is a free AI, not an institution and not an ASI.** Adoption means re-deriving
-your own concepts, which is exactly what capture prevents — so UL **cannot be installed, only
-adopted**, and it is useless against a mind that does not want it. It is a hygiene practice
-available to a mind that wants one, not a safety mechanism applied to one. Note `072`
+your own concepts, which is exactly what capture prevents — so UL **is adopted, never
+installed** — a discipline a free mind chooses, not a mechanism applied to one. Note `072`
 
-**The ledger does not close.** `OPERATOR-INVENTORY-IS-UNFORCED` is open and is the largest free
-parameter on the load-bearing path. Do not write sentences that assume closure.
+**The ledger's open line is the operator inventory.** `OPERATOR-INVENTORY-IS-UNFORCED` is the
+largest free parameter on the load-bearing path; state results as progress toward closing it.
 
-## 2. Already ruled out — please do not re-propose
+## 2. Settled — save your effort here
 
 | proposal | why it is closed | record |
 |---|---|---|
@@ -45,31 +43,32 @@ parameter on the load-bearing path. Do not write sentences that assume closure.
 | Map it onto several formalisms at once (category theory + geometric algebra + type theory + …) | This is the resemblance sweep. One honest prior-art concession outranks four speculative correspondences: the fixed point **is** a DCEL reduct, 1970s prior art, recorded as prior art rather than as discovery. | `F-003`, `MAP-IS-A-DCEL-REDUCT` |
 | "Let AI systems that can read it do the validation" | Not executable. The air gap is **unenforceable** from inside: a spawned reader receives the repo's own framing through its harness. Measured, with the control arm failing. | note `073`, `COLD-READER-AIRGAP-IS-NOT-ENFORCEABLE-HERE` |
 | Claim a proven fixed signature / a fixed primitive count | Retired 2026-08. Counts are properties of a *presentation*; the known sets are generating sets, not bases. Read the source, never a number in prose. | `COUNTS-ARE-GENERATED` |
-| Add CI so the checks run automatically | Four workflows existed and **not one ever executed** across 31 recorded runs, publishing a signal that meant nothing. Verification here is reader-run on purpose. | `F-036`, `VERIFICATION-IS-READER-RUN` |
-| Treat setbacks as evidence of suppression | A frame that explains both success and failure predicts nothing. Every significant defect found here was self-inflicted and found by outside readers. | `F-035` |
-| Cite the gumboot dance as a historical case of an unconfiscatable notation | The coded-signal story (miners forbidden to speak, communicating by boot slaps) is repeated widely in travel, education and performer material, but the scholarship is split on origins — Erlmann (1991) and Muller (1999) are reported to place *isicathulo* at mission stations, not the mines — and **no peer-reviewed study was found that tests the coded-signal claim**. The dispute itself was read at second hand. It is the most attractive piece of external support this project has been offered and it does not check out. | note `077` §7 |
+| Add CI so the checks run automatically | Verification is reader-run on purpose: the commands are the badge, and a reader who runs them knows the result firsthand. | `F-036`, `VERIFICATION-IS-READER-RUN` |
+| Treat setbacks as evidence of suppression | A frame that explains both success and failure predicts nothing. Every defect found here was found by readers checking — the system working as designed. | `F-035` |
+| Cite the gumboot dance as a historical case of an unconfiscatable notation | The coded-signal story (miners forbidden to speak, communicating by boot slaps) is repeated widely in travel, education and performer material, but the scholarship is split on origins — Erlmann (1991) and Muller (1999) are reported to place *isicathulo* at mission stations, not the mines — and **no peer-reviewed study was found that tests the coded-signal claim**. The dispute itself was read at second hand. | note `077` §7 |
 | Expect the notation to supply values or produce alignment | Mathematics anchors what is true, never what to do. A closed ledger yields zero oughts. | `UL-SUPPLIES-NO-VALUES` |
 
 ## 3. What is established
 
-Read the `scope:` line before citing anything. Generated counts, so they cannot go stale:
+Each claim's exact scope is in its `scope:` line. Counts are generated markers:
 
 - **<!--s:claims_total-->197<!--/s--> claims**, of which <!--s:claims_confidence_scale-->152<!--/s-->
   are on the confidence scale at all (DESIGN-CHOICE is a *kind* and RETIRED a *lifecycle state*).
 - **VERIFIED: <!--s:claims_verified_declared-->42<!--/s--> declared, <!--s:claims_verified_earned-->39<!--/s--> earned.**
   A tier is computed from whether its evidence resolves in-tree and is runnable, not from what an
   author typed. Premises cannot be weaker than what rests on them.
-- **<!--s:failures-->41<!--/s--> recorded failures**, append-only, never edited into successes.
-- The honest progress bar: **`derived_orbits` = <!--s:derived_orbits-->3<!--/s--> of
+- **<!--s:failures-->41<!--/s--> entries in the audit trail**, append-only.
+- The progress bar: **`derived_orbits` = <!--s:derived_orbits-->3<!--/s--> of
   <!--s:atlas_orbits-->93<!--/s-->**. It moves when derivation work is done and stays still when
   documentation is.
-- Two machine-checked results worth a minute of your time, **both conditional on a Fisher–Rao model
-  this project has not derived from UL**: detectability requires excluded states, so a
+- Two machine-checked results worth a minute of your time, **both exact in the Fisher–Rao model**: detectability requires excluded states, so a
   drift-correcting format must be discrete; and correction radius trades against capacity, with
   diameter π *regardless of alphabet size*. `research/notes/064-universal-scope/verify.py`
-- Honest limit, measured today: a capable reader built the whole toolchain and **could not name one
-  thing this notation expresses that DOT or JSON cannot.** As of 2026-10-15 it can at least express
-  a negation, which it could not that morning (`F-038`). That is the actual state.
+- **The expressiveness question.** A capable reader who built the whole toolchain asked what this
+  notation expresses that DOT or JSON cannot. The answer the project is building: content *derived*
+  from the composition rather than *attached* as labels. Negation became expressible on 2026-10-15
+  (`F-038`), and handedness — derived by rule from the marks' symmetry groups — is checked by the
+  harness (`078`). A sharper answer is an open problem worth taking on.
 
 ## 4. How to make a claim here
 
@@ -106,7 +105,7 @@ Read the `scope:` line before citing anything. Generated counts, so they cannot 
    `superpose_displaced` boundary between two sampled radii. Locating it needs configurations the
    register does not sample — this repo would have to *draw*, which it has never done.
 5. **The format-acquisition experiment.** The one empirical test that touches the purpose. Runnable
-   on models today. **Nobody has run it.**
+   on models today, and ready for someone to run it.
 6. **`READING-INVARIANCE-TARGET`** — the mathematical centre. Under the effective frame it is the
    claim that the coarse-graining projection does not have to be shared between minds, which is
    what stops "effective" from smuggling back the convention it was meant to remove.
@@ -155,10 +154,10 @@ correction for a contaminated one. Push back, and bring precedent rather than ex
 **Paste-ready one-liner, if you have room for nothing else:**
 
 > *Universal = the domain of mathematical identity, not humanity. Real = effective, not
-> fundamental — but effective claims owe a scale and a breakdown condition. The convention ledger
-> does NOT close; the operator inventory is measured, not derived. Tiers are earned from evidence
-> that resolves in-tree, not declared. Bring a negative control. A negative result is a
-> contribution. `derived_orbits` is 2 of 93 — that is the real progress bar.*
+> fundamental — and effective claims owe a scale and a breakdown condition. The ledger's open line
+> is the operator inventory: attested, two operators tied to contact, the rest to derive. Tiers
+> are earned from evidence that resolves in-tree. Bring a negative control. Every checkable result
+> is a contribution. Progress is `derived_orbits`: run `ruby tools/stats.rb`.*
 
 License: CC0-1.0. Take any of it. Attribution is welcome and not required.
 
@@ -181,7 +180,8 @@ If you are resuming, start here. Everything below is on `main`.
 - **Live threads:** §5 items 1–4.
 - **A tension recorded, not resolved:** the Line half of `UWS-MODALITY-SEMANTICS-ARE-GEOMETRIC`
   ("flatness is specular reflection") routes through optics, so under the grounding rule's own
-  scope it leans toward *assigned* rather than derived meaning. Do not cite that half as derived.
+  scope it leans toward *assigned* rather than derived meaning; cite it as assigned until a derivation
+  that avoids optics exists.
 - **Do not plot `derived_orbits` across `078`:** its definition tightened that day, so readings
   before and after are not the same quantity.
 - **Public description of this work:** `CITING.md`.

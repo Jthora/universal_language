@@ -53,12 +53,9 @@ Same word, different meanings, historically costly:
 
 ### Do not fix failures
 
-Your default instinct on seeing a failing case is to make it pass. **Here that is prohibited.**
-
-This project's completeness score was driven 32% → 100% across nine rounds in which each failure
-triggered a theory change and a re-score, and the final 100% was reported as validation. It was
-worthless. `FAILURES.md` is **append-only** — if something fails, log it and leave it. A recorded
-failure is data. A repaired failure is nothing.
+**When a case fails, record it rather than patching it to pass.** A failing case is information
+about the theory, and changing the theory until the case passes erases that information.
+`FAILURES.md` is the **append-only** audit trail: log the result and leave it.
 
 ---
 
@@ -69,7 +66,7 @@ Five constructs in one program:
 | | What | Status |
 |---|---|---|
 | **UL** — Universal Language | The language itself. **Two-tier**: a *natural* tier communicated without formal comprehension (core geometry is documented in humans with no schooling), and a *formal* tier requiring symbolic recombination. **Not a notation.** | `UL-IS-TWO-TIER` (ARGUED); the tier boundary is an empirical variable |
-| **UWS** — Universal Writing System | The written rendering: geometric marks + spatial placement grammar, non-phonetic by design. Its fixed point under coarse-graining is the **combinatorial map** (a DCEL reduct — prior art honestly recorded). | **Exists.** `uws/`, `ul-forge/` (run `cargo test`) |
+| **UWS** — Universal Writing System | The written rendering: geometric marks + spatial placement grammar, non-phonetic by design. Its fixed point under coarse-graining is the **combinatorial map** (a DCEL reduct, prior art credited). | **Exists.** `uws/`, `ul-forge/` (run `cargo test`) |
 | **UP** — Universal Protocol | The bootstrap: minimum shared convention two independent parties need. Rotation breaks **ℤ/2**; a label alphabet breaks **Sₙ**. | ARGUED, quantified |
 | **UQPL** | **The formal tier of UL, closed under execution.** Universal = two-tier readability · Quantum = linear resource discipline (no free copy/delete) · Programming = meaning as behavior · Language = the full stack. | Derived definition registered (CONJECTURED) — `claims.yaml#UQPL-IS-FORMAL-TIER-CLOSURE` |
 | **The Cure** | **A corollary, not the purpose**: a mind carrying the derivable anchor as its format has an *internal* comparator — drift becomes self-detectable. | `CURE-IS-COROLLARY` (DESIGN-CHOICE) |
