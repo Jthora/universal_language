@@ -3,27 +3,24 @@
 **What becomes possible if Universal Language is real, what it could be used for, and exactly
 which of those is already available.**
 
-This document had no home in the repo before 2026-10-14. `README.md` states the contract,
-`research/notes/052` states the purpose, `053` states the deployment architecture — none of them
-answers the question a reader actually asks first: *what would I be able to do with this, and why
-should I spend effort on it?* That is this file.
+This file answers the question a reader asks first: *what would I be able to do with this, and why
+should I spend effort on it?* (`README.md` states the contract, `research/notes/052` the purpose,
+`053` the deployment architecture.)
 
 ---
 
 ## How to read it
 
-Every capability below is stated as a **conditional**: *if* this holds, you get that. The
-conditional is not a hedge — it is the only honest form, because most of the antecedents are open.
-Each entry names:
+Every capability below is stated as *if this holds, you get that*, and each entry names:
 
 - **Needs** — the claim it rests on, with its tier from `claims.yaml`. Trust the tier, not the prose.
-- **Limit** — what the capability does not give you, stated at the same volume as what it does.
+- **Limit** — where the capability ends.
 
 Tiers: `VERIFIED` machine-checked · `ARGUED` written proof · `CONJECTURED` believed with a stated
 falsifier · `DESIGN-CHOICE` a decision, not a discovery.
 
-**Nothing here is a promise, and three of these are available today.** A capability whose
-antecedent is CONJECTURED is a research target; saying so is what makes the rest credible.
+**Three of these are available today.** The rest are research targets, each tied to the claim that
+would unlock it.
 
 ---
 

@@ -1,10 +1,8 @@
 # STATE-OF-PLAY
 
-**Written fresh 2026-10-14 (fifth full restatement).** The fourth was written hours earlier, between
-the scope ruling (`064`) and the audit it licensed (`065`). The audit returned a *measured answer* at
-a layer that had only ever held an open question, which changes the program's state more than the
-ruling did on its own. **Rewritten, not patched** — §9. Two restatements in a day is what the rule
-costs when the day contains two results.
+**The program's state as of 2026-10-14,** after the scope ruling (`064`) and the audit it licensed
+(`065`). For everything since — earned tiers, the corpus's second channel, notes `066`–`079` — see
+`BRIEFING.md` §8 and the notes index.
 
 ---
 

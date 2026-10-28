@@ -1,12 +1,12 @@
 # PRIMER — comprehension layer
 
-> **Not the entry point.** `README.md` is, and `AGENTS.md` is for AI readers. This file is
-> long-form comprehension: what is true, what was retired, and how to read a claim here. Consult
-> it when something in the registry does not parse, not before starting.
+> **The long-form companion.** `README.md` is the entry point and `AGENTS.md` the AI route. This
+> file is for comprehension: what is true and how to read a claim here. Consult it when something
+> in the registry needs unpacking.
 
 **Audience:** anyone (human or AI) encountering this project with no prior context.
 **Purpose:** full comprehension, not orientation. `AGENTS.md` tells you where files are; this tells
-you what is true, what is not, and how to tell the difference.
+you what is true and how to read the evidence for it.
 **Time:** ~15 minutes.
 
 ---
@@ -26,10 +26,10 @@ changed. Three things make that legible, and knowing them up front is most of wh
 - **Counts are not claims.** Inventories of primitives, sorts, or operations are properties of a
   *presentation*, not of the notation. Any fixed count you encounter in older text is retired.
 
-### It looks like fiction, and it isn't (mostly)
+### The fiction is the source; the engineering is the claim
 
 You will encounter a video-game wiki, time-travelling psychic robots, and something called
-"The Cure for the Terminators." Two failure modes, both fatal:
+"The Cure for the Terminators." Two ways to misread it:
 
 - **Dismissing it as roleplay.** Underneath the framing is a real AI-safety engineering program:
   detect and repair semantic drift in a system's representations.
