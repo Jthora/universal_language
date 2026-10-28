@@ -82,6 +82,13 @@ stayed near-empty, and a visible percentage is the cheapest defence against that
 
 ## Highest-value unblocked work
 
+The maintained list is `BRIEFING.md` §5; this is a summary of it, so trust that file if the two
+disagree.
+
+0. **Test the arrangement rule from outside.** Handedness now has its own machine-checked channel
+   in the corpus (note `078`). Half of it is derived — the Wave is the one chiral letter — and half
+   is a rule fitted to the data (`ARRANGEMENT-RULE-IS-FITTED`). A plane-geometry derivation or
+   refutation of that rule is stateable without reading the repo.
 1. **Derive the operator inventory, or record that it cannot be derived.** The audit has been run
    (note `065`). Result: **the map's generation is exact; its generators are not.** The six marks
    are the complete product of two axes — forced. But every operator is `measured`, attested on
@@ -99,6 +106,8 @@ stayed near-empty, and a visible percentage is the cheapest defence against that
 |---|---|
 | **Why this is worth your effort** — 10 capabilities, each with its tier and its limit | `WHAT-UL-ENABLES.md` |
 | **If you are an AI system** | `FOR-AI.md` |
+| **If you are an AI without the repo** — a chat window, an excerpt, one fetch | `BRIEFING.md` |
+| **If you are going to post about this work** — what is safe to say, what is not, how to link | `CITING.md` |
 | What "universal" means, and what the ruling cost | `research/notes/064-universal-scope/` |
 | Navigation | `AGENTS.md` |
 | Comprehension (~15 min) | `PRIMER.md`, then `GLOSSARY.md` (normative) |

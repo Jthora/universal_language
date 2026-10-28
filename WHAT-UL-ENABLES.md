@@ -153,7 +153,7 @@ derivation wrong, which is available to everyone including those who would rathe
   Pinning is redundancy and redundancy costs capacity (`CAPACITY-RADIUS-TRADEOFF`), so this is a
   **code rate** — a higher number is not automatically better.
 - **Globally** — `ruby tools/blast-radius.rb CLAIM-ID`, or `--census`. If this falls, what falls
-  with it? Applied to this registry: **<!--s:claims_load_bearing-->77<!--/s--> of <!--s:claims_total-->197<!--/s--> claims are load-bearing, and <!--s:claims_under_conjecture-->68<!--/s--> sit downstream of a CONJECTURED premise.** Three of the five most load-bearing claims are themselves conjectures. **This program is partly anchored on things it has not
+  with it? Applied to this registry: **<!--s:claims_load_bearing-->79<!--/s--> of <!--s:claims_total-->197<!--/s--> claims are load-bearing, and <!--s:claims_under_conjecture-->69<!--/s--> sit downstream of a CONJECTURED premise.** Three of the five most load-bearing claims are themselves conjectures. **This program is partly anchored on things it has not
   established, and now says so with a number.**
 
 **Why it must pre-exist the collapse.** A void is never filled by nothing — it is filled by

@@ -86,6 +86,7 @@ read first. That was the single worst thing about it. The route is now:
 | 4 | `claims.yaml` | the registry itself; priority-0 entries are the live front |
 | 5 | `AGENTS.md` | **if you are an AI with the repo cloned**: navigation, and read it instead of 3–4 |
 | — | `BRIEFING.md` | **if you are an AI without the repo** — working from a chat window, an excerpt, or one fetch. Short, paste-able, and it is the *delta*: the rulings, the closed doors, and the live edges. Written because an outside model gave four recommendations that had all already been tried and recorded as failures |
+| — | `CITING.md` | **if you are going to post about this work** — what can be said and how to check it, what must not be said and why, and link hygiene. No counts and no tiers in it, on purpose: both go stale |
 
 Everything else is **reference, not a door**: `GLOSSARY.md` (normative terms, consult when a word
 bites), `RESEARCH-PROTOCOL.md` (method — read it *before* searching the literature, not before

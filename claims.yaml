@@ -2065,7 +2065,12 @@ claims:
       which is not what it was built for.
 
   - id: TABLES-ARE-PROJECTIONS
-    scope_reviewed: [FIXED-POINT-IS-COMBINATORIAL-MAP]   # no effect — projections of the axis product are independent of connectivity, and this claim never asserted UL relevance
+    reviewed_2026_10_28: >
+      REVIEWED against UWS-MARK-PAIRS-TRACK-ROTATION-CLASS's scope (generated, not forced). This
+      claim inherits that limit and does not overstep it: it explains why symbols RECUR across
+      tables GIVEN the axis product, and makes no claim that the axes or the mapping were forced.
+      Accounted for.
+    scope_reviewed: [FIXED-POINT-IS-COMBINATORIAL-MAP, UWS-MARK-PAIRS-TRACK-ROTATION-CLASS]   # no effect — projections of the axis product are independent of connectivity, and this claim never asserted UL relevance
     statement: >
       A symbol table is a projection of the axis product onto a subset of axes. Symbols recur across
       tables because a cell projects into every table; n axes yield C(n,2) two-dimensional tables;
@@ -3952,6 +3957,12 @@ claims:
       thing posited before anything can be located. That reasoning is kept. What is withdrawn is
       collapsing the association into an identity and then treating the identity as derived. An
       association is not an identity, and a taxonomy is not a proof.
+    reviewed_2026_10_28: >
+      REVIEWED against GROUNDING-BY-SELF-DENOTATION's scope, which is the reason this claim is
+      retired rather than a threat to it: 'Point = Existence, Line = Relation' is non-structural
+      content, and the hub's scope says such content requires assignment (tier 2). Consistent;
+      nothing to change.
+    scope_reviewed: [GROUNDING-BY-SELF-DENOTATION]
 
   - id: GROUNDING-TIER-REQUIRED
     statement: >
@@ -4072,6 +4083,17 @@ claims:
       permutation matrix four times when it is a 12x3 table of labels. The 12 = 4 x 3 result
       survives both; they are presentation faults, and they are the first thing a hostile reader
       finds.
+    reviewed_2026_10_28: >
+      REVIEWED against GROUNDING-BY-SELF-DENOTATION's scope, and the review finds a TENSION rather
+      than a pass. The hub licenses tier 1 only where the geometric relation IS the relation denoted
+      (containment is inclusion). The LINE half ('flatness IS specular reflection, so it reflects')
+      does not meet that: a drawn line reflects nothing; the reading routes through optics, treating
+      the mark as a physical mirror surface, which is a model the hub does not supply. Under the
+      hub's own scope that half leans tier 2. The CURVE half is closer to tier 1 but rests on
+      PARTIAL enclosure by an open arc, and the hub's own example of the tier, containment as
+      inclusion, needs a closed curve (Jordan). Tier left at ARGUED, which is already weak enough;
+      the Line half should not be cited as derived.
+    scope_reviewed: [GROUNDING-BY-SELF-DENOTATION]
 
   # ─── What "universal" ranges over, and the Cure's budget (2026-10-14, note 064) ──
 
@@ -4371,7 +4393,18 @@ claims:
       reduction, tying two of the five operators to a geometric predicate with zero exceptions
       over 2413 cells. One apparent reduction shrank and one real one was added; the claim stays
       open and stays priority 0.
-    scope_reviewed: [LEDGER-CLOSURE-IS-UNIVERSE-SCOPE, UNIVERSAL-IS-MATHEMATICAL-SCOPE, OPERATORS-ARE-CLOSED-UNDER-REORIENTATION, CONTACT-CONFINES-TWO-OPERATORS]
+    reviewed_2026_10_28: >
+      REVIEWED against MARKS-ARE-A-COMPLETE-PRODUCT's scope: the mark inventory is forced only GIVEN
+      axes that are themselves measured. The mark result does not reduce this claim, which concerns
+      operators. But notes 076-078 created the first link between them: the operators' behaviour
+      under reflection tracks the operand's mirror-axis count
+      (OPERATOR-SURVIVAL-UNDER-REFLECTION-TRACKS-SYMMETRY). That link inherits the hub's caveat,
+      since mirror-axis counts come from a measured group column. Claim stays open.
+    reviewed_2026_10_28_b: >
+      REVIEWED against OPERATOR-SURVIVAL-UNDER-REFLECTION-TRACKS-SYMMETRY's scope (its surviving
+      side is thinly sampled). This claim's status does not depend on that claim at all: it is
+      open either way. The link cited above rests on the well-sampled destroying side only.
+    scope_reviewed: [LEDGER-CLOSURE-IS-UNIVERSE-SCOPE, UNIVERSAL-IS-MATHEMATICAL-SCOPE, OPERATORS-ARE-CLOSED-UNDER-REORIENTATION, CONTACT-CONFINES-TWO-OPERATORS, MARKS-ARE-A-COMPLETE-PRODUCT, OPERATOR-SURVIVAL-UNDER-REFLECTION-TRACKS-SYMMETRY]
 
   - id: ORBIT-PARTITION-IS-TOLERANCE-BOUNDED
     statement: >
@@ -4949,6 +4982,14 @@ claims:
       semiconductor is not a fundamental particle and carries a definite effective mass and charge,
       and every quasiparticle argument has this shape. Effective field theory is the same move at
       scale.
+    reviewed_2026_10_28: >
+      REVIEWED against UL-IS-EMERGENT-UNIVERSAL's scope, whose RG analogy has an unmet precondition
+      (criticality). This design choice must stand WITHOUT that conjecture: note 070 cited the
+      conjecture as precedent, but the choice is justified by the local-neighbourhood argument
+      (where strands cross, the neighbourhood IS a degree-4 star), which needs no fixed point. So
+      this choice takes no support from the conjecture, and it must not be cited as evidence FOR it
+      either.
+    scope_reviewed: [UL-IS-EMERGENT-UNIVERSAL]
 
   - id: CROSSING-IS-AN-EMERGENT-VERTEX
     statement: >
@@ -5005,7 +5046,12 @@ claims:
       CHIRALITY-NEEDS-EIGHT-DARTS. The two sources are different phenomena sharing a name, which is
       worth stating because conflating them would make the Codex's chirality claim look refuted by
       a test that does not address it.
-    scope_reviewed: [EMBODIMENT-SUPPLIES-THE-FRAME, MAP-SYMMETRY-BOUNDS-DRAWN-SYMMETRY]
+    reviewed_2026_10_28: >
+      REVIEWED against CHIRALITY-NEEDS-EIGHT-DARTS's scope, which itself separates map chirality (no
+      orientation-reversing automorphism) from placement handedness. The two claims reinforce each
+      other. Note 078 makes it concrete: orbits 91 and 92 have identical maps yet opposite drawn
+      handedness. The 8-dart count not being re-run does not touch this claim, which uses no count.
+    scope_reviewed: [EMBODIMENT-SUPPLIES-THE-FRAME, MAP-SYMMETRY-BOUNDS-DRAWN-SYMMETRY, CHIRALITY-NEEDS-EIGHT-DARTS]
 
   - id: CHIRALITY-NEEDS-EIGHT-DARTS
     statement: >
@@ -5736,4 +5782,11 @@ claims:
       the move is harder rather than easier. Adjusting a normalisation until a number comes out
       right is what 075 REQ-3 forbids; moving it the other way first is the test of whether that
       rule is real here.
-    scope_reviewed: [PLACEMENT-HANDEDNESS-IS-INVISIBLE-TO-THE-MAP, ARRANGEMENT-RULE-IS-FITTED, ATLAS-COMPLETENESS-IS-THE-PROGRESS-BAR]
+    reviewed_2026_10_28: >
+      REVIEWED against ALPHABET-HAS-ONE-CHIRAL-LETTER's scope, an omission from note 078, where the
+      hub was listed as a premise but not reviewed. The channel's const table IS the hub's content,
+      so the channel inherits its caveat (the groups are the Codex's measurements), and
+      tests/placement_tests.rs is what would catch a change. The hub 'says nothing about composite
+      figures', which is exactly why the channel needs the arrangement branch, fitted and capped at
+      ARGUED. Accounted for.
+    scope_reviewed: [PLACEMENT-HANDEDNESS-IS-INVISIBLE-TO-THE-MAP, ARRANGEMENT-RULE-IS-FITTED, ATLAS-COMPLETENESS-IS-THE-PROGRESS-BAR, ALPHABET-HAS-ONE-CHIRAL-LETTER]

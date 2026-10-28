@@ -86,14 +86,28 @@ Read the `scope:` line before citing anything. Generated counts, so they cannot 
 
 ## 5. Where help is actually wanted
 
-1. **The placement plane.** Two of four attempted orbit derivations are blocked on chirality, which
-   is *provably invisible* to the combinatorial map. The only item that moves `derived_orbits`.
+1. **Test the arrangement rule from outside.** The corpus now carries handedness on a second,
+   machine-checked channel (`078`), and half of that channel is derived: the Wave is the alphabet's
+   one chiral letter, read off the symmetry groups. The other half — when *arrangement* creates
+   handedness — is a rule **fitted** to the attested data (`ARRANGEMENT-RULE-IS-FITTED`). A
+   plane-geometry derivation of why `cross` needs *both* operands to have exactly one mirror axis,
+   while `concatenate` and `superpose_displaced` need only *one*, would settle it; so would a
+   refutation. Until then the harness caps every entry on that branch at ARGUED. **Stateable
+   without reading this repo.**
 2. **Derive the operator inventory, or record that it cannot be derived.** Either direction is a
-   result. Under §1's effective standard, a stated **scale and breakdown condition** would also
-   discharge it.
-3. **The format-acquisition experiment.** The one empirical test that touches the purpose. Runnable
+   result. `078` tied two of the five operators to a geometric predicate (contact) — the first
+   reduction of this question; the rest is open. Under §1's effective standard, a stated **scale
+   and breakdown condition** would also discharge it.
+3. **Pair the unnamed orbits.** Most orbits have no named neighbour to derive against; the
+   register's distance matrix supports pairing them with each other (`071`, recommendation 2).
+   Each pair is a candidate derivation, and the second channel now makes chirality-separated pairs
+   expressible.
+4. **Locate the tangency threshold.** The register brackets the `concatenate` /
+   `superpose_displaced` boundary between two sampled radii. Locating it needs configurations the
+   register does not sample — this repo would have to *draw*, which it has never done.
+5. **The format-acquisition experiment.** The one empirical test that touches the purpose. Runnable
    on models today. **Nobody has run it.**
-4. **`READING-INVARIANCE-TARGET`** — the mathematical centre. Under the effective frame it is the
+6. **`READING-INVARIANCE-TARGET`** — the mathematical centre. Under the effective frame it is the
    claim that the coarse-graining projection does not have to be shared between minds, which is
    what stops "effective" from smuggling back the convention it was meant to remove.
 
@@ -147,3 +161,28 @@ correction for a contaminated one. Push back, and bring precedent rather than ex
 > contribution. `derived_orbits` is 2 of 93 — that is the real progress bar.*
 
 License: CC0-1.0. Take any of it. Attribution is welcome and not required.
+
+## 8. Where the last session stopped (2026-10-28)
+
+If you are resuming, start here. Everything below is on `main`.
+
+- **First command:** `ruby tools/check.rb --strict`. As of this date it passes with **no pending
+  scope reviews** — it had failed on that check through every session that produced notes
+  `073`–`079`. If it fails now, something has changed since; read the failure before anything
+  else.
+- **Counts:** `ruby tools/stats.rb`, and quote from it at the moment you need a number. Do not copy
+  numbers into prose — `079` is what happens when you do.
+- **Newest results, in order:** `076` (the handedness column is derivable, and `071`'s blocker was a
+  hole in the imported data); `077` (an independent body-percussion notation already carries
+  handedness on a separate, mandatory channel — and the gumboot story was refused); `078` (the
+  placement plane was already in the register, the corpus gained a second channel, and
+  `derived_orbits` moved under a *stricter* definition); `079` (the counts checker had never
+  scanned `claims.yaml`).
+- **Live threads:** §5 items 1–4.
+- **A tension recorded, not resolved:** the Line half of `UWS-MODALITY-SEMANTICS-ARE-GEOMETRIC`
+  ("flatness is specular reflection") routes through optics, so under the grounding rule's own
+  scope it leans toward *assigned* rather than derived meaning. Do not cite that half as derived.
+- **Do not plot `derived_orbits` across `078`:** its definition tightened that day, so readings
+  before and after are not the same quantity.
+- **Public description of this work:** `CITING.md`.
+
