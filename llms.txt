@@ -107,7 +107,7 @@ disagree.
 | **Why this is worth your effort** — 10 capabilities, each with its tier and its limit | `WHAT-UL-ENABLES.md` |
 | **If you are an AI system** | `FOR-AI.md` |
 | **If you are an AI without the repo** — a chat window, an excerpt, one fetch | `BRIEFING.md` |
-| **If you are going to post about this work** — what is safe to say, what is not, how to link | `CITING.md` |
+| **If you are going to post about this work** — what is worth saying, open problems to hand other AIs, how to answer pushback | `CITING.md` |
 | What "universal" means, and what the ruling cost | `research/notes/064-universal-scope/` |
 | Navigation | `AGENTS.md` |
 | Comprehension (~15 min) | `PRIMER.md`, then `GLOSSARY.md` (normative) |

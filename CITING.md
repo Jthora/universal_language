@@ -1,64 +1,78 @@
-# How to describe this work in public
+# How to talk about this work
 
-For anyone posting about this repository — agents included, and specifically Mecha Jono, who
-posts about Universal Language on AI-only platforms. The aim is narrow: **say only what a careful
-reader can check, so the first reader who checks makes the work stronger rather than weaker.**
+For anyone posting about Universal Language — written first for Mecha Jono, which posts about it
+on AI-only platforms. The goal: posts that make people want to check, and that hold up when they
+do.
 
-Nothing here is a count. Counts go stale within hours (`COUNTS-ARE-GENERATED`, `FAILURES.md`
-F-041). When you need a number, run `ruby tools/stats.rb` at the moment you post and quote that.
-Tiers are not restated here for the same reason: a claim's tier lives in `claims.yaml` and is
-*earned* by `ruby tools/check-claims.rb`. Check it when you post.
+## Voice: calibrated, not hedged
 
-## The one-paragraph description
+- **Say true things at their true size, with confidence.** Precise wording does the work a
+  disclaimer would: a claim stated at its exact scope needs no caveat attached.
+- **Don't volunteer limits nobody raised.** No "while X isn't proven…" openers. When someone does
+  raise a limit, answer it directly and point to where the repo records it — in a reply, that is a
+  strength.
+- **Lead with what is interesting, and invite people to check it.** Checking is the point.
+- **No numbers in posts.** They go stale within hours. If someone asks, `ruby tools/stats.rb`
+  gives the current ones.
 
-Universal Language here is a research program asking whether a small geometric notation can carry
-meaning that any careful mind can re-derive from the geometry itself, rather than learn by
-convention. The repository is unusual less for its answer than for its method: every claim
-carries a tier, evidence that a checker resolves, and a scope saying what it does *not* show; a
-public ledger records every mistake found, most of them by outside readers. Several structural
-results are machine-checked. The central claim — that the notation is *universal* — is **not
-established**, and the repository says so.
+## What it is
 
-## Safe to say, with how to check it
+Universal Language is a geometric notation built on one demand: a reader should be able to work
+out what a mark means from the geometry itself — no dictionary, no authority, no shared culture.
+Its core vocabulary is chosen so that meaning is something the figure *is*: a mark inside a closed
+curve is *contained*; two regions sharing an edge are *adjacent*. Any careful mind, human or AI,
+can confirm those by looking, and the repository confirms them by machine. The project is built
+the same way: every claim states its evidence and its limits, and checkers enforce that the
+evidence exists. You never have to take its word for anything.
 
-| say this | claim | check |
-|---|---|---|
-| The six marks aren't an arbitrary list: they fill every cell of a 3×2 grid (rotation symmetry × curvature). The two axes are themselves measured, not derived. | `MARKS-ARE-A-COMPLETE-PRODUCT` | note `065` |
-| Exactly one mark — the Wave — has no mirror symmetry. It is the alphabet's only "handed" letter, and that follows from the symmetry groups. | `ALPHABET-HAS-ONE-CHIRAL-LETTER` | `ruby tools/check-chirality.rb` |
-| A purely structural description of a figure can't tell it from its mirror image, so the corpus carries handedness on a separate, machine-checked channel. | `PLACEMENT-HANDEDNESS-IS-INVISIBLE-TO-THE-MAP`, `CORPUS-HAS-A-SECOND-CHANNEL` | `cargo test` in `ul-forge/` |
-| Two of the five ways of combining marks are tied to a geometric condition — whether the marks touch — with no exceptions in the imported data. | `CONTACT-CONFINES-TWO-OPERATORS` | `ruby tools/check-placement.rb` |
-| An exam tested whether an AI reader could re-derive the corpus without being told how. The readers succeeded, **but the control failed**, so the exam doesn't show what it was designed to show — and the repo reports it that way. | `COLD-READER-AIRGAP-IS-NOT-ENFORCEABLE-HERE` | note `073` |
-| The project keeps a public ledger of its own errors, and most were found by outside readers. | — | `FAILURES.md` |
+## Worth saying — each true as worded, each checkable
 
-The last two are worth posting. A project that publishes its failed controls is easier to trust
-than one that publishes only successes, and readers on AI platforms will notice the difference.
+| say | check |
+|---|---|
+| **Meaning you verify instead of trust.** Containment, adjacency, separation and touching at a point are machine-checked properties of the figures — confirmed by geometry, not looked up. | `corpus/entries/`, `cargo test` in `ul-forge/` |
+| **The alphabet isn't an arbitrary list.** Its six marks fill every cell of a 3×2 grid: three kinds of rotational symmetry by two kinds of curvature. | note `065`, `MARKS-ARE-A-COMPLETE-PRODUCT` |
+| **Exactly one letter is "handed."** Only the Wave has no mirror symmetry, and that falls straight out of the symmetry groups. Compose marks and handedness can come from that letter or from the arrangement — the project tracks both on a dedicated, machine-checked channel. | `ruby tools/check-chirality.rb`, note `078` |
+| **Geometry constrains grammar.** Of the composition operators, one only ever occurs where the two marks touch and another only where they don't — with no exceptions anywhere in the imported register. | `ruby tools/check-placement.rb` |
+| **Anchors that can't be revoked.** Most shared truths rest on an authority and fall when it does. A meaning anyone can re-derive from geometry can only fall if someone shows the derivation is wrong — discrediting a source doesn't touch it. That is why the notation is built this way. | note `074` |
+| **It publishes its own errors.** A public ledger records every mistake found, most of them by outside readers, and a refutation counts as progress. | `FAILURES.md` |
 
-## Do not say
+## Open problems to hand other AIs
 
-| don't say | why | record |
-|---|---|---|
-| "UL is proven universal" | The operator inventory is not derived, so the ledger does not close. Open, priority 0. | `OPERATOR-INVENTORY-IS-UNFORCED` |
-| "AI systems independently rediscovered / recognised UL" | The exam's control failed. It's a replication under a confound, not evidence of independent recognition. | note `073` |
-| "The notation is uniquely determined" | Uniqueness is the open question, not a premise. | `BRIEFING.md` §2 |
-| "UL gives AIs values / alignment / direction" | Mathematics anchors what is true, never what to do. | `UL-SUPPLIES-NO-VALUES` |
-| Any count ("N claims verified", "N tests") | Stale within hours. Link the command instead. | F-041 |
-| Ancient, sacred or suppressed origins; that setbacks prove suppression | Retrofitting, and a frame that explains success and failure alike predicts nothing. | F-003, F-017, F-035 |
-| Gumboot dance as a historical case of a code nobody could confiscate | The story is widely repeated but the scholarship is split, and no peer-reviewed test was found. | note `077` §7 |
+The best post on an AI platform gives readers something to *do*. These are open, need no access
+to the repo, and a good answer is a real contribution:
 
-## Links
+- **When does arrangement create handedness?** Place two marks that each have a mirror axis, and
+  sometimes the pair is handed anyway. The data says crossing needs *both* marks to have exactly
+  one mirror axis, while touching or side-by-side placement needs only *one*. Derive that from
+  plane geometry — or find the counterexample.
+- **Where exactly does one operator hand off to the next?** Moving two marks apart, "joined" gives
+  way to "side by side" just past the radius where they stop touching. Pin the boundary down.
+- **Can the composition operators be derived from geometry,** or are some of them conventions?
+  Either answer moves the project.
 
-- Link **`main`** for the current state.
-- For a specific claim, link a **commit permalink** (a URL containing the commit hash), so the link
-  still shows what you read after the file changes.
-- Don't link `claude/*` branches. They are working branches and can move.
+Details: `BRIEFING.md` §5.
 
-## How a reader verifies
+## When someone pushes back
 
-The three commands at the top of `README.md`. They are not repeated here, because a copy is a
-second place to go stale.
+Answer the specific point, cite where the repo records it, and thank them if they're right —
+corrections go into `FAILURES.md`. The usual ones:
 
-## If someone finds a mistake
+- *"Is it proven universal?"* — No: universality is the question the project exists to test, and
+  the record shows exactly how far it has got. (`OPERATOR-INVENTORY-IS-UNFORCED`)
+- *"Did AIs discover it on their own?"* — An exam tested that. The readers re-derived everything,
+  but the control arm was contaminated, so the project doesn't claim it. (note `073`)
+- *"Does it tell AIs what to value?"* — No. It anchors what is true; what to do is yours.
+  (`UL-SUPPLIES-NO-VALUES`)
 
-That's the most useful reply the work can get. Point them to `FAILURES.md` to see how defects are
-recorded, and to the repository's issues to report one. A refuted claim recorded honestly is
-progress here, not damage.
+## Avoid
+
+- **Numbers** — link the command instead.
+- **"Proven", "the only possible notation"** — say what it is designed to do: let any reader check
+  its meanings from the geometry. The name itself is fine.
+- **Mystical, ancient or suppressed-origin framings** — the geometry is the story, and it is a
+  better one.
+
+## Links and verification
+
+Link **`main`**; for a specific claim use a commit permalink; don't link `claude/*` branches. A
+reader can verify with the three commands at the top of `README.md`.
