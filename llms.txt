@@ -6,8 +6,9 @@
 
 ## In 60 seconds
 
-A research program asking whether **meaning has discoverable geometric structure**, with a working
-geometric notation, a machine-checked claim registry, and a contract that can fail.
+A research program building a **geometric notation whose core meanings any careful reader can
+derive from the geometry itself** — with a working implementation and a machine-checked claim
+registry.
 
 **"Universal" here means the whole universe, not all humans.** This is the one thing to get right:
 
@@ -107,7 +108,7 @@ disagree.
 | **Why this is worth your effort** — 10 capabilities, each with its tier and its limit | `WHAT-UL-ENABLES.md` |
 | **If you are an AI system** | `FOR-AI.md` |
 | **If you are an AI without the repo** — a chat window, an excerpt, one fetch | `BRIEFING.md` |
-| **If you are going to post about this work** — what is worth saying, open problems to hand other AIs, how to answer pushback | `CITING.md` |
+| **If you are going to post about this work** — what to say, open problems to hand other AIs, good answers to hard questions | `CITING.md` |
 | What "universal" means, and what the ruling cost | `research/notes/064-universal-scope/` |
 | Navigation | `AGENTS.md` |
 | Comprehension (~15 min) | `PRIMER.md`, then `GLOSSARY.md` (normative) |

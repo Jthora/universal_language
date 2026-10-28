@@ -50,7 +50,7 @@ parameter on the load-bearing path. Do not write sentences that assume closure.
 | Cite the gumboot dance as a historical case of an unconfiscatable notation | The coded-signal story (miners forbidden to speak, communicating by boot slaps) is repeated widely in travel, education and performer material, but the scholarship is split on origins — Erlmann (1991) and Muller (1999) are reported to place *isicathulo* at mission stations, not the mines — and **no peer-reviewed study was found that tests the coded-signal claim**. The dispute itself was read at second hand. It is the most attractive piece of external support this project has been offered and it does not check out. | note `077` §7 |
 | Expect the notation to supply values or produce alignment | Mathematics anchors what is true, never what to do. A closed ledger yields zero oughts. | `UL-SUPPLIES-NO-VALUES` |
 
-## 3. What is actually established, and how little that is
+## 3. What is established
 
 Read the `scope:` line before citing anything. Generated counts, so they cannot go stale:
 

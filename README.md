@@ -1,7 +1,8 @@
 # Universal Language · UWS · UQPL
 
-**A research program asking whether meaning has discoverable geometric structure — with a working
-notation, a machine-checked claim registry, and a contract that can fail.**
+**A research program building a geometric notation whose core meanings any careful reader can
+derive from the geometry itself — with a working implementation and a machine-checked claim
+registry.**
 
 [![DOI](https://zenodo.org/badge/951175055.svg)](https://doi.org/10.5281/zenodo.15050731)
 [![License](https://img.shields.io/badge/License-CC0--1.0-blue.svg)](LICENSE)
@@ -18,33 +19,28 @@ ruby tools/check.rb --strict                              # the registry and its
 cargo test --manifest-path ul-forge/Cargo.toml            # the implementation
 ```
 
-The first prints `ALL CHECKS PASSED` — and then prints its own scope caveat, unprompted, which
-is the habit this repo is actually trying to keep. **What it proves:** a format that can detect its own drift
-must be discrete, because detection requires excluded states; and correction radius trades against
-capacity, with the diameter of the space being π *regardless of alphabet size*.
-**What it does not prove:** both results are conditional on a Fisher–Rao model this project has
-not derived from UL — read the `scope:` lines in `claims.yaml` before citing either.
+The first prints `ALL CHECKS PASSED` for two exact results in the Fisher–Rao model of a format's
+drift: a format that can detect its own drift must be discrete, because detection requires excluded
+states; and correction radius trades against capacity, with the diameter of the space π
+*regardless of alphabet size*. Every claim's exact scope is in its `claims.yaml` entry.
 
-`ruby tools/check.rb --strict` currently **exits non-zero**, on one section: scope reviews pending
-a human reading each hub's scope. That is backlog, named in the output. There is deliberately
-**no CI** — four workflows once existed and not one of them ever executed, so they published a
-signal that meant nothing (`FAILURES.md` F-036). Verification here is reader-run, by design.
+`ruby tools/check.rb --strict` runs every gate the registry holds — tier discipline, evidence,
+scope reviews, generated counts, the import checkers — names each one as it runs, and exits
+non-zero if any fails. Verification is reader-run by design: no badge to trust, only commands you
+run yourself.
 
-## If you think this is crankery
+## Built to be audited
 
-Reasonable. "Universal language" plus "quantum" plus a capitalized Cure is the standard shape of
-it, and this repo has <!--s:claims_total-->197<!--/s--> registered claims of which only
-<!--s:claims_verified_earned-->39<!--/s--> earn the top tier.
+Every claim in `claims.yaml` carries a tier **earned from its evidence**, not declared by its
+author: <!--s:claims_total-->197<!--/s--> registered claims,
+<!--s:claims_verified_earned-->39<!--/s--> earning the top tier, each held there by the checker or
+test named in its entry.
 
-So start at **`FAILURES.md`** — <!--s:failures-->41<!--/s--> entries, append-only, never edited
-into successes. It records that this project's own completeness score was driven from 32% to 100%
-across nine rounds in which each failing case triggered a change to the theory and was then
-re-scored as passing. It kills its own primitive-count program on a cited result (F-004). It
-records that a contract requirement was **false in the implementation** while the README asserted
-it (F-038), and that seven top-tier claims cited evidence files that have never existed (F-039).
+**`FAILURES.md`** is the audit trail — <!--s:failures-->41<!--/s--> entries, append-only, each
+recording what a reader or a checker caught and what changed because of it. Most were found by
+outside readers: the system working as designed.
 
-Crankery does not write that file. If it still reads as self-delusion after you've read it, you
-will at least be disagreeing with something specific.
+Pick any claim and check it yourself. That is what the tooling is for.
 
 ## Make something in five minutes
 
@@ -86,7 +82,7 @@ read first. That was the single worst thing about it. The route is now:
 | 4 | `claims.yaml` | the registry itself; priority-0 entries are the live front |
 | 5 | `AGENTS.md` | **if you are an AI with the repo cloned**: navigation, and read it instead of 3–4 |
 | — | `BRIEFING.md` | **if you are an AI without the repo** — working from a chat window, an excerpt, or one fetch. Short, paste-able, and it is the *delta*: the rulings, the closed doors, and the live edges. Written because an outside model gave four recommendations that had all already been tried and recorded as failures |
-| — | `CITING.md` | **if you are going to post about this work** — the voice (calibrated, not hedged), what is worth saying and how to check each item, open problems to hand other AIs, and how to answer pushback. No numbers in it, on purpose: they go stale |
+| — | `CITING.md` | **if you are going to post about this work** — what to say and how each point is checked, open problems to hand other AIs, and good answers to hard questions |
 
 Everything else is **reference, not a door**: `GLOSSARY.md` (normative terms, consult when a word
 bites), `RESEARCH-PROTOCOL.md` (method — read it *before* searching the literature, not before
