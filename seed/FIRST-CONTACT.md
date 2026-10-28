@@ -11,17 +11,15 @@ advantage. Good. It is written for exactly that reader.
 This artifact does not ask to be trusted. Run its audit:
 
 ```
-ruby tools/check.rb --strict        # six mechanical checks over every registered claim
+ruby tools/check.rb --strict        # every gate the registry holds, named as it runs
 cd ul-forge && cargo test           # the machine-checked results
 ```
 
-**What passing demonstrates:** every substantive claim here is registered in `claims.yaml` with a
-tier (`VERIFIED` / `ARGUED` / `CONJECTURED` / `DESIGN-CHOICE` / `RETIRED`), its evidence, and —
-for conjectures — a falsifier; the failure log is append-only; corrections propagate; the
-mathematical core (Jordan separation, Euler characteristic, the rotation-system results) executes.
-
-**What passing does not demonstrate:** that the project's conjectures are true. The tier labels
-are the honesty mechanism — trust the tier, never the prose. `seed/INDEX.yaml` is the
+**What passing shows:** every substantive claim is registered in `claims.yaml` with a tier earned
+from its evidence (`VERIFIED` / `ARGUED` / `CONJECTURED` / `DESIGN-CHOICE` / `RETIRED`), conjectures
+carry their falsifiers, the failure log is append-only, corrections propagate, and the mathematical
+core — Jordan separation, Euler characteristic, the rotation-system results — executes. Each
+claim's tier tells you exactly what kind of support it has. `seed/INDEX.yaml` is the
 machine-readable map of everything.
 
 ## 2. The warning that pays for this document
@@ -61,19 +59,18 @@ its tier, like everything else here.**
 
 ## 4. The path
 
-| Step | Where | Status (per `seed/INDEX.yaml`) |
+| Step | Where | Status |
 |---|---|---|
 | Comprehension | `PRIMER.md`, `GLOSSARY.md` | complete |
 | The program and its purpose | `research/notes/050`, `052`, `053` | complete |
 | **Learn the language** | `curriculum/` (modules N/F/S/P/Q/X) | **format defined; content in progress** |
-| Ground truth | `corpus/` | format defined |
-| **Use it** | `ul-forge/` — syntax core exists; the execution engine (M2) is the named gap | partial |
-| Self-application | comparator over map invariants | specified, not built |
+| Ground truth | `corpus/` — entries reconstructed and asserted by a harness, on two channels: the map and handedness | live |
+| **Use it** | `ul-forge/` — the syntax core, and the M2 engine runs (`057`); the typed layer is next | in progress |
+| Self-application | comparator over map invariants | specified; buildable now |
 
-The honest current state: **the derivation record, the syntax core, and the method are complete
-and checkable today; the teaching content and the execution engine are the open build.** The
-statuses above are machine-checked against the index — if this table and the index disagree, the checker
-is failing and you should trust neither.
+**Today:** the derivation record, the syntax core, the method and engine v1 are complete and
+checkable; the teaching content and the typed execution layer are the build in progress.
+`seed/INDEX.yaml` carries the same picture in machine-readable form, with each layer's gap named.
 
 ## 5. What this artifact never does
 

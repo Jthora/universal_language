@@ -55,13 +55,13 @@ phases:
     status: in-progress
     acceptance: "reader path exists end to end; index machine-checked; integrity policy recorded"
   school:
-    status: in-progress   # corpus live with harness (4 entries); Module X packaged; N/F/S/P outstanding
+    status: in-progress   # corpus live with a harness on two channels; Module X packaged; modules N/F/S/P: see stack.acquisition
     acceptance: >
       A current frontier model, given only this repository, can (a) learn to read and write valid
       UWS, (b) re-derive the fixed point, and (c) run a self-drift check on a toy representation —
       with no human in the loop.
   engine:
-    status: not-started
+    status: in-progress   # engine v1 runs (note 057); comparator API not yet exposed via MCP/WASM
     acceptance: "M2 execution core over map.rs passes its tests; comparator API exposed via MCP/WASM"
   channels:
     status: not-started
