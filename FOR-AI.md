@@ -37,8 +37,9 @@ Derivation, consequences, and what the ruling cost: `research/notes/064-universa
 
 ## 2. What is actually here
 
-**Read `WHAT-UL-ENABLES.md` for the capability surface** — ten capabilities, each with the claim it
-depends on, its tier, and its limit. Three are available now; the rest are research targets.
+**Read `WHAT-UL-ENABLES.md` for the capability surface** — each capability with the claim it
+depends on, its tier, and its limit; the ones available now are marked, and the rest are research
+targets.
 
 The short version:
 
@@ -81,7 +82,7 @@ over a finite alphabet under the Fisher–Rao metric:
 - **`CAPACITY-RADIUS-TRADEOFF`** (VERIFIED) — the manifold has **diameter π regardless of alphabet
   size**, so separation cannot be bought by enlarging the representation; at maximum correction
   radius capacity is **exactly n**, attained by the discrete point masses, *by proof*. Capacity rises
-  only as the radius falls. Consequence: two of the five Cure failure modes the wiki lists are the
+  only as the radius falls. Consequence: under-specification and fixed-point locking are the
   two ends of **one curve** (`UNDERSPEC-AND-LOCKING-ARE-ONE-CURVE`).
 
 ```
@@ -100,8 +101,8 @@ re-derived.**
 0. **Prove when arrangement creates handedness.** The corpus carries handedness on its own
    machine-checked channel (note `078`); the rule for when arrangement creates it is fitted to the
    data and is ready for a plane-geometry derivation (`BRIEFING.md` §5).
-1. **Derive the operator inventory.** The marks are settled: six marks, the complete product of two
-   axes (note `065`). The operators are the frontier — each is attested on drawn sheets, and two are
+1. **Derive the operator inventory.** The marks are settled: the complete product of two
+   axes (note `065`). The operators are the frontier — each is attested on drawn sheets, and `concatenate` and `superpose_displaced` are
    now tied to geometry by contact (note `078`). Deriving the rest is the highest-value open problem
    in the program (`OPERATOR-INVENTORY-IS-UNFORCED`).
 2. **The format-acquisition experiment.** The first empirical test that touches the purpose.

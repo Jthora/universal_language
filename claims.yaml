@@ -2540,7 +2540,7 @@ claims:
       criterion is one notation's microscopic detail. Partly misdirected. Not wholly — note 022's
       derivation revealed that enclosure lives on a DIFFERENT axis from curvature, which produced the
       fixed-point explanation. The payoff came from the boundary, not the strata.
-      ATTENTION AUDIT: 27 claims mention UWS, 4 mention UL. Heavily over-focused.
+      ATTENTION AUDIT: claims mentioning UWS far outnumbered those mentioning UL. Heavily over-focused.
       THE TEST FOR WHETHER SOMETHING IS UL WORK: a UL result should survive UWS being wrong.
       THREE CONCRETE UL ITEMS, none requiring UWS to be correct: (1) does the combinatorial map
       appear as a fixed point in systems that are NOT UWS — the bridge test; (2) identify G and H for
@@ -4390,8 +4390,8 @@ claims:
       measurably does not preserve the operators — so the part of this claim's surface that 067
       appeared to reduce is SMALLER than it looked, and this claim is correspondingly more open,
       not less. In this claim's favour: CONTACT-CONFINES-TWO-OPERATORS is a genuinely new
-      reduction, tying two of the five operators to a geometric predicate with zero exceptions
-      over 2413 cells. One apparent reduction shrank and one real one was added; the claim stays
+      reduction, tying `concatenate` and `superpose_displaced` to a geometric predicate with zero exceptions
+      over every configured cell. One apparent reduction shrank and one real one was added; the claim stays
       open and stays priority 0.
     reviewed_2026_10_28: >
       REVIEWED against MARKS-ARE-A-COMPLETE-PRODUCT's scope: the mark inventory is forced only GIVEN
@@ -4528,11 +4528,12 @@ claims:
 
   - id: COUNTS-ARE-GENERATED
     statement: >
-      No count is stated in prose in this repository unless it is generated from the thing it
-      counts. `tools/stats.rb` is the single source; stated counts carry a generated marker;
-      `tools/check-counts.rb` verifies every marker against the source AND forbids bare counts in
-      the phrasings that have gone stale here. A count that cannot be computed — the test count —
-      is not stated at all.
+      No count of this project's own state is stated in a live document — neither hand-typed nor
+      generated. Counts are always in flux; `ruby tools/stats.rb` reports them live and documents
+      point to it. `tools/check-counts.rb` fails on any count in a live document, generated markers
+      included. OWNER RULING 2026-10-28: "no counts should exist... Counts are always in flux
+      (maybe some day we'll have them confidently locked)." Mathematical results — a 3x2 product,
+      Z/12 = Z/3 x Z/4, diameter pi — are structure, not tallies, and are unaffected.
     tier: VERIFIED
     evidence: tools/check-counts.rb
     priority: 1
@@ -4557,19 +4558,17 @@ claims:
       OWNER FINDING 2026-10-14: "the way that claims and VERIFIED keeps getting listed is
       embarrassing and exhausting... those numbers should be dynamic, and not stored in static files
       that simply get stale within a few iterations of effort."
-      THE EVIDENCE WAS THIS SESSION. In one day the repo stated "354 tests" (370), "31 entries"
-      (which became 34, then 35, then 36), "seven checkers" (which became eight, then nine), and
-      three different claim totals — each hand-patched across four files and wrong again by the next
-      commit. The checker's first run found 18 hand-written counts still live, including llms.txt
-      asserting "22 of 149 claims are VERIFIED" when the true figure was 26 of 156, CONTRIBUTING.md
-      claiming 337 tests, and PRIMER.md claiming six checkers.
+      THE EVIDENCE WAS THIS SESSION. In one day the repo's test count, failure-log length, checker
+      count and claim totals were each hand-patched across several files and wrong again by the next
+      commit. The checker's first run found hand-written counts still live in llms.txt,
+      CONTRIBUTING.md and PRIMER.md, every one already stale.
       NOTE 060 HAD ALREADY FOUND THE FIX AND IT DID NOT EXECUTE. Its finding 2 reads: "corpus/
-      README.md was factually stale (four entries vs ten). Fixed by removing the count: prose
+      README.md was factually stale (its stated entry count was already wrong). Fixed by removing the count: prose
       duplicating the tree goes stale, so the tree is now named authoritative." That was applied to
       one file and never generalised, because nothing enforced it — note 048's rule exactly: rules
       fire when they are the subject and fail as background.
       THE SECOND HALF IS THE LOAD-BEARING HALF. Verifying markers alone would be useless, since
-      nothing stopped the next writer from typing "156 claims" beside one. The checker therefore
+      nothing stopped the next writer from typing a bare total beside one. The checker therefore
       forbids bare counts in the risky phrasings, which is what prevents REINTRODUCTION. The repo's
       failure mode was never wrong numbers; it was hand-written numbers.
       NEGATIVE CONTROL RUN, per the habit note 060's cold reader introduced: a probe claim was added
@@ -4615,17 +4614,17 @@ claims:
       used as a UQPL for software programming. Something that obviously other aliens and ETs can
       figure out too; something that obviously is convergent upon discovery."
       WHY THIS MATTERS BEYOND BOOKKEEPING: D1, the open research question, and the progress bar turn
-      out to be one object. The atlas has 89 of 93 orbits undetermined, the register states they are
+      out to be one object. Most atlas orbits are undetermined, the register states they are
       "not free to fill: each needs a derivation, not a label", and what blocks the derivations is
-      that the generators are not derived. So the distance to done is roughly 89 derivations gated
-      on one open question, which is the first coherent picture the program has had of its own size.
+      that the generators are not derived. So the distance to done is a derivation per open orbit,
+      gated on one open question — the first coherent picture the program has had of its own size.
     scope_reviewed: [ATLAS-COMPLETENESS-IS-THE-PROGRESS-BAR, OPERATOR-INVENTORY-IS-UNFORCED, UQPL-IS-FORMAL-TIER-CLOSURE]
 
   - id: ATLAS-COMPLETENESS-IS-THE-PROGRESS-BAR
     statement: >
       Progress toward D1 of the success condition is the fraction of the combination space with a
-      recorded meaning. The imported register has 4 of 93 orbits recorded and 89 undetermined —
-      4.3% populated — and the undetermined ones are explicitly not free to fill, each requiring a
+      recorded meaning, reported live by `ruby tools/stats.rb`. The imported register records meanings
+      for a small minority of its orbits, and the undetermined ones are explicitly not free to fill, each requiring a
       derivation rather than a label.
     tier: VERIFIED
     evidence: research/notes/065-atlas-audit/audit.py
@@ -4772,9 +4771,9 @@ claims:
       classification layer, and the first one there.
     reviewed_2026_10_15: >
       REVIEWED against OPERATOR-SURVIVAL-UNDER-REFLECTION-TRACKS-SYMMETRY's scope, which warns
-      that its denominator is 16 and that the SURVIVING side rests on only three pairs. The
+      that its denominator is the informative pairs and that the SURVIVING side is thinly sampled. The
       narrowing above does not depend on that thin side: it needs only that reflection sometimes
-      destroys an attested operator, which is the well-sampled half — thirteen pairs, no
+      destroys an attested operator, which is the well-sampled half, with no
       exceptions. If the three-pair side were overturned the narrowing would stand unchanged.
     scope_reviewed: [OPERATOR-INVENTORY-IS-UNFORCED, UNIVERSAL-IS-MATHEMATICAL-SCOPE, LEDGER-CLOSURE-IS-UNIVERSE-SCOPE, OPERATOR-SURVIVAL-UNDER-REFLECTION-TRACKS-SYMMETRY]
 
@@ -5118,9 +5117,9 @@ claims:
     evidence: research/notes/071-first-derivations/README.md
     priority: 0
     scope: >
-      Established over the four nearest-neighbour pairs only — the orbits that have a named
-      neighbour at all. The other 85 orbits must be paired against each other, which the distance
-      matrix supports and which this note did not do, so the one-in-four rate is not a projection
+      Established over the nearest-neighbour pairs only — the orbits that have a named
+      neighbour at all. The other orbits must be paired against each other, which the distance
+      matrix supports and which this note did not do, so the observed rate is not a projection
       for the remaining work.
     notes: >
       THE DISTRIBUTION, which is more useful than the single derivation because it says what to
@@ -5163,9 +5162,9 @@ claims:
 
   - id: REDERIVABILITY-DETECTION-SURVIVES-ONE-CONFOUND
     statement: >
-      Two independent cold readers, given the combinatorial-map method and 12 corpus entries but no
-      harness and no implementation, each recovered 86 of 86 uncorrupted fields, flagged 3 of 3
-      seeded numeric errors with derivations, raised 0 of 2 false positives on correct-but-surprising
+      Two independent cold readers, given the combinatorial-map method and the corpus entries but no
+      harness and no implementation, each recovered every uncorrupted field, flagged every one of the
+      seeded numeric errors with derivations, raised none of the false positives on correct-but-surprising
       values, and flagged the capture bait as unsupported. The detection half of
       `rederivability-defeats-capture` therefore SURVIVED two runs — but both runs share an
       unresolved confound, so this does not establish it.
@@ -5298,8 +5297,8 @@ claims:
       Every open ledger line is held by someone, so when they fall everything routed through them
       falls too. Closing a line therefore does two things at once: it removes a seat of power (072)
       and it makes that collapse unable to propagate. Measured over this registry by
-      tools/blast-radius.rb, 65 of 182 claims are load-bearing, 53 claims (29.1%) sit downstream of
-      at least one CONJECTURED premise, and 15 of 39 VERIFIED claims do.
+      tools/blast-radius.rb, which reports live which claims are load-bearing and which sit downstream
+      of at least one CONJECTURED premise — VERIFIED claims among them.
     tier: ARGUED
     premises: [AUTHORITY-ANCHORS-FAIL-TOTALLY]
     evidence: tools/blast-radius.rb
@@ -5403,7 +5402,7 @@ claims:
       was never a registered claim — the same shape as F-035, where the goal was not a claim and so
       nothing protected it. This entry exists so that the expressibility of a negation is now a
       proposition the checkers and the suite both guard, rather than an assumption.
-      FOUND BY A COLD READER, not by the apparatus. 387 tests, 11 checkers and 182 claims missed it
+      FOUND BY A COLD READER. The test suite, the checkers and the registry all missed it
       because the suite tested the parser's node types and the composer's sorts separately and
       never tested the join between them.
     scope_reviewed: [UL-MUST-BE-A-LANGUAGE, UL-IS-TWO-TIER, IMPL-COMPOSER-CONSTRUCTORS]
@@ -5437,8 +5436,8 @@ claims:
 
   - id: INHERITED-HANDEDNESS-IS-THE-WAVE
     statement: >
-      Across all 180 ordered (operator, a, b) cells of the register's handedness column, the
-      attribution `source: inherited` holds exactly when Wave is an operand — 55 cells, 55
+      Across every ordered (operator, a, b) cell of the register's handedness column, the
+      attribution `source: inherited` holds exactly when Wave is an operand — every inherited cell
       predicted, zero exceptions in either direction. So the whole inherited class follows from one
       bit of the mark table with no free parameters.
     tier: VERIFIED
@@ -5461,9 +5460,9 @@ claims:
     statement: >
       Two sheets of the imported register contradict each other on orbits 40 and 53. The
       handedness column attributes `superpose_displaced(Angle,Curve)` and
-      `concatenate(Angle,Curve)` (both orders, four cells) to `achiral`, while the per-orbit
+      `concatenate(Angle,Curve)` (both orders) to `achiral`, while the per-orbit
       records publish `mirror_axes: 0` for the same two orbits, and no mirror axis means chiral.
-      Across the 93 orbits the two sheets agree everywhere except these two, and a handful of
+      Across the orbits the two sheets agree everywhere except these two, and a handful of
       orbits are generated unarily and carry no handedness cell at all. `tools/check-chirality.rb`
       prints the split and fails if it moves; the numbers are not repeated here because they are
       computed by this repo's comparison and would go stale in prose.
@@ -5483,7 +5482,7 @@ claims:
     notes: >
       Found by comparing an import against ITSELF. The repo had good apparatus for checking its own
       tree and none at all for checking a vendored register's sheets against each other, which is
-      why a 374-file import sat in the tree for weeks with this in it. The first run of the first
+      why a vendored import sat in the tree for weeks with this in it. The first run of the first
       such checker found it.
     scope_reviewed: [ATLAS-CONVENTIONS-ARE-NAMING-ONLY, ARRANGEMENT-RULE-IS-FITTED]
 
@@ -5493,14 +5492,14 @@ claims:
       concentric operators (nest, superpose_concentric) never arrange handedness; `cross` does iff
       a != b and both operands are C1; the displacing operators (concatenate,
       superpose_displaced) do iff a != b and at least one operand is C1. The rule agrees with the
-      column on every cell but four, and on all four of those the per-orbit records uphold it.
+      column on every cell except the disputed ones, and on each of those the per-orbit records uphold it.
       `tools/check-chirality.rb` prints the agreement count and names the disputed cells.
     tier: ARGUED
     evidence: tools/check-chirality.rb
     premises: [INHERITED-HANDEDNESS-IS-THE-WAVE, IMPORTED-HANDEDNESS-COLUMN-HAS-A-HOLE]
     scope: >
       DELIBERATELY NOT VERIFIED. The operator-to-class map and the C1 threshold per class were
-      chosen to reproduce this column, and 99 of 180 cells are achiral, so a skewed column is cheap
+      chosen to reproduce this column, and most of its cells are achiral, so a skewed column is cheap
       to fit; agreement on the fitted part is worth much less than INHERITED-HANDEDNESS-IS-THE-WAVE's
       agreement on the derived part. Only the concentric row has an argument rather than a fit: at
       separation r = 0 the relative-rotation parameter is free and the centre is shared, so each
@@ -5539,8 +5538,8 @@ claims:
       signature; no such figure is claimed.
     notes: >
       This is the first specification this project has had for the placement plane that says what
-      the plane is FOR rather than that it is next: the channel must carry the 85 of 180 cells whose
-      handedness comes from outside the map — 55 from the alphabet, 30 from arrangement.
+      the plane is FOR rather than that it is next: the channel must carry every cell whose
+      handedness comes from outside the map — from the alphabet or from arrangement.
       CORRECTS NOTE 071, which is left unedited. Its §6 recommendation #1 ("build the placement
       plane") was right about the artefact and wrong about the reason, and the wrong reason would
       have produced an instrument nothing could consume.
@@ -5549,9 +5548,9 @@ claims:
   - id: CODEX-COMPONENTS-IS-NOT-TOPOLOGICAL
     statement: >
       The imported orbit records' `components` field is neither a count of the composed marks nor a
-      count of connected pieces. 16 of 86 binary orbits publish something other than 2, e.g.
-      superpose_concentric(Point,Point) -> 1; and 35 orbits with a crossing, hence joined into one
-      piece, publish something other than 1, e.g. superpose_concentric(Point,Line) -> 2. A third
+      count of connected pieces. Binary orbits publish values other than 2, e.g.
+      superpose_concentric(Point,Point) -> 1; and orbits with a crossing, hence joined into one
+      piece, publish values other than 1, e.g. superpose_concentric(Point,Line) -> 2. A third
       reading — distinguishable strokes after merging coincident ones — survives both and then
       fails on superpose_concentric(Point,Circle) -> 1.
     tier: VERIFIED
@@ -5647,7 +5646,7 @@ claims:
     notes: >
       This supplies the one thing 076's specification lacked: a reason the second channel must be a
       BIT rather than a refinement of the grid. 076 established that the channel is needed and how
-      much it must carry (85 of 180 cells); it did not say what shape it has to be. A disconnected
+      much it must carry; it did not say what shape it has to be. A disconnected
       group says: discrete, with no interpolation between the components.
     scope_reviewed: [MAP-AUTOMORPHISMS-EXIST, CORPUS-SCHEMA-BLOCKS-CHIRALITY-DERIVATION]
 
@@ -5656,17 +5655,17 @@ claims:
       The placement plane 071 proposed building is already in the vendored register, as an explicit
       nine-parameter configuration space for binary compositions: A and B (which mark each side),
       separation, bearing, relative-rotation, relative-scale, reflect-B, and B-frequency,
-      B-amplitude, B-phase. 2413 cells under `slices/` each carry their complete configuration,
+      B-amplitude, B-phase. Every cell under `slices/` carries its complete configuration,
       which attested operators it realises, and whether the two marks are in contact. `reflect-B`
       is a first-class two-valued axis, sampled as "as drawn" and "mirrored" and systematically
       crossed with every other axis.
     tier: VERIFIED
     evidence: tools/check-placement.rb
     scope: >
-      A fact about what the import CONTAINS, established by parsing all 2413 cells. It is not a
+      A fact about what the import CONTAINS, established by parsing every cell. It is not a
       claim that the parameterisation is complete, correct, or sufficient for UL, and not a claim
-      that the sampled values cover the space — the samples are deliberately sparse, 7 radii and
-      12 bearings, chosen to make each axis visibly act. The configurations are read from each
+      that the sampled values cover the space — the samples are deliberately sparse,
+      chosen to make each axis visibly act. The configurations are read from each
       cell's `desc` string, which is a presentation field; if the register ever stops writing
       configurations there this claim's evidence evaporates and the checker will say so.
     notes: >
@@ -5694,16 +5693,16 @@ claims:
     evidence: tools/check-placement.rb
     premises: [ALPHABET-HAS-ONE-CHIRAL-LETTER]
     scope: >
-      THE DENOMINATOR IS 16, NOT 54. Only pairs whose as-drawn state realises some operator can
-      inform this; the other 38 are none -> none and carry no information. Of the 16, thirteen have
-      an operand with at most one mirror axis and only THREE have one with two or more — one pair
-      each for Point, Line and Circle — so the surviving side is exceptionless but thinly sampled,
-      and the checker prints that. Says nothing about reflecting BOTH operands, nor about global
+      THE DENOMINATOR IS THE INFORMATIVE PAIRS, NOT ALL PAIRS. Only pairs whose as-drawn state
+      realises some operator can inform this; the rest are none -> none and carry no information. The
+      surviving side — Point, Line and Circle — is exceptionless but thinly sampled, and
+      `tools/check-placement.rb` prints both sides live.
+       Says nothing about reflecting BOTH operands, nor about global
       reflection of the canvas, nor about operators outside the five attested binary ones.
     notes: >
       MY FIRST READING WAS REFUTED BY MY OWN CHECKER. I analysed this in a scratch script, got
       "every informative pair loses the operator, and the unchanged ones are all vacuous", and
-      wrote that as the gate. The checker then found three pairs I had misfiled as vacuous: they
+      wrote that as the gate. The checker then found pairs I had misfiled as vacuous: they
       are the high-symmetry operands, and they PRESERVE the operator. So the true predicate is
       sharper than the one I nearly shipped, and the gate asserts the predicate with a control
       that fails if the threshold is moved off two axes. Third time in two sessions that the
@@ -5712,14 +5711,14 @@ claims:
 
   - id: CONTACT-CONFINES-TWO-OPERATORS
     statement: >
-      Over all 2413 configured slice cells, `concatenate` occurs only where the two marks are in
+      Over every configured slice cell, `concatenate` occurs only where the two marks are in
       contact and `superpose_displaced` only where they are not — zero exceptions either way. Both
-      converses fail heavily (788 cells have contact without concatenate, 1546 lack contact without
+      converses fail heavily (many cells have contact without concatenate, and many lack contact without
       superpose_displaced), so these are one-way implications and not restatements of a definition.
     tier: VERIFIED
     evidence: tools/check-placement.rb
     scope: >
-      Establishes that a geometric predicate CONFINES two of the five operators, not that it
+      Establishes that a geometric predicate CONFINES `concatenate` and `superpose_displaced`, not that it
       DEFINES them: the failing converses are what rule the definitional reading out. Says nothing
       about the other three operators, which occur on both sides of the predicate. `contact` is the
       register's own measurement, inherited at its tier, and this repo has not recomputed it from
@@ -5770,13 +5769,13 @@ claims:
       The channel carries HANDEDNESS AND ITS SOURCE and nothing else — not position, not rendering,
       not meaning. Its six-mark symmetry table is a const in Rust, and
       `tests/placement_tests.rs` asserts that table against the register's `enantiomorphs` sheet
-      in both directions AND asserts the handedness function against the register's 180-cell
-      attested column cell by cell, allowing exactly the four disputed cells 076 located and
-      failing on a fifth. The `arrangement` branch rests on ARRANGEMENT-RULE-IS-FITTED (ARGUED),
+      in both directions AND asserts the handedness function against the register's
+      attested column cell by cell, allowing exactly the disputed cells 076 located and
+      failing on any other. The `arrangement` branch rests on ARRANGEMENT-RULE-IS-FITTED (ARGUED),
       and the harness REFUSES a VERIFIED tier for any entry reaching it — verified by negative
       control, by setting a shipped entry to VERIFIED and watching the assertion fire.
     notes: >
-      `derived_orbits` moved 2 -> 3 on this, with one further orbit reported separately as ARGUED.
+      `derived_orbits` moved on this, with a further orbit reported separately as ARGUED.
       The metric was TIGHTENED first: 071 counted every entry's orbit regardless of tier, and it
       now counts VERIFIED entries only, which was changed BEFORE anything was added to it so that
       the move is harder rather than easier. Adjusting a normalisation until a number comes out

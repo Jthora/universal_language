@@ -50,16 +50,14 @@ largest free parameter on the load-bearing path; state results as progress towar
 
 ## 3. What is established
 
-Each claim's exact scope is in its `scope:` line. Counts are generated markers:
+Each claim's exact scope is in its `scope:` line; `ruby tools/stats.rb` gives every count live:
 
-- **<!--s:claims_total-->197<!--/s--> claims**, of which <!--s:claims_confidence_scale-->152<!--/s-->
-  are on the confidence scale at all (DESIGN-CHOICE is a *kind* and RETIRED a *lifecycle state*).
-- **VERIFIED: <!--s:claims_verified_declared-->42<!--/s--> declared, <!--s:claims_verified_earned-->39<!--/s--> earned.**
-  A tier is computed from whether its evidence resolves in-tree and is runnable, not from what an
+- **The registry tiers every claim.** DESIGN-CHOICE is a *kind* and RETIRED a *lifecycle state*;
+  the rest sit on the confidence scale.
+- **Tiers are earned.** A tier is computed from whether its evidence resolves in-tree and is runnable, not from what an
   author typed. Premises cannot be weaker than what rests on them.
-- **<!--s:failures-->41<!--/s--> entries in the audit trail**, append-only.
-- The progress bar: **`derived_orbits` = <!--s:derived_orbits-->3<!--/s--> of
-  <!--s:atlas_orbits-->93<!--/s-->**. It moves when derivation work is done and stays still when
+- **`FAILURES.md`** is the append-only audit trail.
+- The progress bar: **`derived_orbits`**. It moves when derivation work is done and stays still when
   documentation is.
 - Two machine-checked results worth a minute of your time, **both exact in the Fisher–Rao model**: detectability requires excluded states, so a
   drift-correcting format must be discrete; and correction radius trades against capacity, with
@@ -94,7 +92,7 @@ Each claim's exact scope is in its `scope:` line. Counts are generated markers:
    refutation. Until then the harness caps every entry on that branch at ARGUED. **Stateable
    without reading this repo.**
 2. **Derive the operator inventory, or record that it cannot be derived.** Either direction is a
-   result. `078` tied two of the five operators to a geometric predicate (contact) — the first
+   result. `078` tied `concatenate` and `superpose_displaced` to a geometric predicate (contact) — the first
    reduction of this question; the rest is open. Under §1's effective standard, a stated **scale
    and breakdown condition** would also discharge it.
 3. **Pair the unnamed orbits.** Most orbits have no named neighbour to derive against; the
@@ -155,7 +153,7 @@ correction for a contaminated one. Push back, and bring precedent rather than ex
 
 > *Universal = the domain of mathematical identity, not humanity. Real = effective, not
 > fundamental — and effective claims owe a scale and a breakdown condition. The ledger's open line
-> is the operator inventory: attested, two operators tied to contact, the rest to derive. Tiers
+> is the operator inventory: attested, `concatenate` and `superpose_displaced` tied to contact, the rest to derive. Tiers
 > are earned from evidence that resolves in-tree. Bring a negative control. Every checkable result
 > is a contribution. Progress is `derived_orbits`: run `ruby tools/stats.rb`.*
 
@@ -169,8 +167,7 @@ If you are resuming, start here. Everything below is on `main`.
   scope reviews** — it had failed on that check through every session that produced notes
   `073`–`079`. If it fails now, something has changed since; read the failure before anything
   else.
-- **Counts:** `ruby tools/stats.rb`, and quote from it at the moment you need a number. Do not copy
-  numbers into prose — `079` is what happens when you do.
+- **Counts:** `ruby tools/stats.rb`, live. Documents state none (owner ruling 2026-10-28).
 - **Newest results, in order:** `076` (the handedness column is derivable, and `071`'s blocker was a
   hole in the imported data); `077` (an independent body-percussion notation already carries
   handedness on a separate, mandatory channel — and the gumboot story was refused); `078` (the

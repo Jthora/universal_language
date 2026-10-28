@@ -32,11 +32,9 @@ run yourself.
 ## Built to be audited
 
 Every claim in `claims.yaml` carries a tier **earned from its evidence**, not declared by its
-author: <!--s:claims_total-->197<!--/s--> registered claims,
-<!--s:claims_verified_earned-->39<!--/s--> earning the top tier, each held there by the checker or
-test named in its entry.
+author, and each top-tier claim is held there by the checker or test named in its entry.
 
-**`FAILURES.md`** is the audit trail — <!--s:failures-->41<!--/s--> entries, append-only, each
+**`FAILURES.md`** is the audit trail — append-only, each
 recording what a reader or a checker caught and what changed because of it. Most were found by
 outside readers: the system working as designed.
 
@@ -78,7 +76,7 @@ read first. That was the single worst thing about it. The route is now:
 |---|---|---|
 | 1 | this file | you are here |
 | 2 | `FAILURES.md` | the only cheap test of whether this is serious |
-| 3 | `WHAT-UL-ENABLES.md` | ten capabilities, each with its claim, tier and limit |
+| 3 | `WHAT-UL-ENABLES.md` | the capability surface: each capability with its claim, tier and limit |
 | 4 | `claims.yaml` | the registry itself; priority-0 entries are the live front |
 | 5 | `AGENTS.md` | **if you are an AI with the repo cloned**: navigation, and read it instead of 3–4 |
 | — | `BRIEFING.md` | **if you are an AI without the repo** — working from a chat window, an excerpt, or one fetch. Short, paste-able, and it is the *delta*: the rulings, the closed doors, and the live edges. Written because an outside model gave four recommendations that had all already been tried and recorded as failures |
@@ -126,8 +124,7 @@ survive *every* reasonable reading, so meaning does not presuppose that the rece
 
 ## Where the work is
 
-The progress bar is **`derived_orbits`: <!--s:derived_orbits-->3<!--/s--> of
-<!--s:atlas_orbits-->93<!--/s-->** — orbits given machine-checked structural content here, as
+The progress bar is **`derived_orbits`** (`ruby tools/stats.rb`) — orbits given machine-checked structural content here, as
 opposed to an attested label borrowed from elsewhere. It is the number that moves when derivation
 work is done and stays still when documentation is.
 
@@ -145,16 +142,14 @@ Three open fronts, ordered by decisiveness:
 
 ## Practice
 
-Conventions here are **enforced by mechanism**, not by memory — <!--s:checkers-->12<!--/s--> of them, run by whoever verifies:
+Conventions here are **enforced by mechanism**, not by memory — checkers run by whoever verifies:
 
 - Every substantive claim is registered with a tier, evidence, and a scope that states what it
   does *not* license.
 - **A tier is earned, not declared.** Reachability of evidence is *computed* — in-tree, external,
   or absent — and a top-tier claim on evidence a reader cannot reach is an error. The checker
-  prints declared and earned side by side, with every gap named. `VERIFIED` currently reads
-  <!--s:claims_verified_declared-->42<!--/s--> declared against
-  <!--s:claims_verified_earned-->39<!--/s--> earned. **Nothing yet executes a claim's evidence
-  script**, so "a test that passes" remains a stated intent rather than an enforced one.
+  prints declared and earned side by side, with every gap named. Running each claim's evidence
+  script is the next enforcement step.
 - `CONJECTURED` requires a stated falsifier; `DESIGN-CHOICE` requires stated alternatives.
 - `FAILURES.md` is append-only. A recorded failure is data; a repaired one is nothing.
 - Counts in prose are **generated** from `tools/stats.rb`, because a hand-written number goes

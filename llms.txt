@@ -47,7 +47,7 @@ Both machine-checked, both exact in the **Fisher–Rao model**:
 
 - **Detectability requires excluded states.** If every state is admissible, every drift lands on an
   admissible state and nothing is detectable. So a drift-correcting format **must** be discrete —
-  and UWS's fixed point, the combinatorial map, is discrete, reached by seven independent lines none
+  and UWS's fixed point, the combinatorial map, is discrete, reached by several independent lines none
   aimed at the Cure. `DRIFT-DETECTION-REQUIRES-DISCRETENESS`
 - **Capacity and correction radius trade off.** Diameter **π regardless of alphabet size**, so
   separation cannot be bought by enlarging the representation; at maximum radius capacity is
@@ -70,12 +70,9 @@ statement of what finishing would mean:
 - **D3** precise enough to execute as a UQPL
 - **D4** convergent on discovery — an unrelated mind arrives at the same system
 
-**The progress bar, and it is low on purpose:** D1 is measurable now and the atlas carries a
-recorded meaning for <!--s:atlas_recorded-->4<!--/s--> of <!--s:atlas_orbits-->93<!--/s--> orbits — about
-<!--s:atlas_percent-->4.3<!--/s-->% — with <!--s:atlas_undetermined-->89<!--/s--> undetermined. The register is explicit that
-those are *not free to fill: each needs a derivation, not a label.* So the distance to done is
-roughly that many derivations, gated on one open question (below). D2 has **no instrument at all**;
-do not read progress into it.
+**The progress bar:** D1 is measurable. The atlas's orbits are fully enumerated, and the open ones
+are *not free to fill: each needs a derivation, not a label.* `derived_orbits` tracks the ones this
+repo has derived — `ruby tools/stats.rb` gives the live figure. D2 is next to instrument.
 
 Publishing this low number is deliberate. Effort has historically gone to framing while the atlas
 stayed near-empty, and a visible percentage is the cheapest defence against that.
@@ -90,7 +87,7 @@ disagree.
    is a rule fitted to the data (`ARRANGEMENT-RULE-IS-FITTED`). A plane-geometry derivation or
    refutation of that rule is stateable without reading the repo.
 1. **Derive the operator inventory.** The marks are settled — the complete product of two axes
-   (note `065`). The operators are the frontier: each is attested on drawn sheets, and two are now
+   (note `065`). The operators are the frontier: each is attested on drawn sheets, and `concatenate` and `superpose_displaced` are now
    tied to geometry by contact (note `078`). `OPERATOR-INVENTORY-IS-UNFORCED`
 2. **The format-acquisition experiment** — the first empirical test that touches the purpose.
    Runnable on models today, and ready for someone to run it.
@@ -101,7 +98,7 @@ disagree.
 
 | You want | Read |
 |---|---|
-| **Why this is worth your effort** — 10 capabilities, each with its tier and its limit | `WHAT-UL-ENABLES.md` |
+| **Why this is worth your effort** — each capability with its tier and its limit | `WHAT-UL-ENABLES.md` |
 | **If you are an AI system** | `FOR-AI.md` |
 | **If you are an AI without the repo** — a chat window, an excerpt, one fetch | `BRIEFING.md` |
 | **If you are going to post about this work** — what to say, open problems to hand other AIs, good answers to hard questions | `CITING.md` |
@@ -125,15 +122,15 @@ disagree.
   for live figures.
 - **Universality is the program's question.** Name your fixed point: the Erlangen and RG fixed
   points are different objects (`TWO-DISTINCT-FIXED-POINTS`).
-- **<!--s:claims_verified_earned-->39<!--/s--> of <!--s:claims_total-->197<!--/s--> claims earn the top tier**, each held there by the checker or test
-  named in its entry; every other claim is tiered for exactly what supports it.
+- **Every claim is tiered for exactly what supports it**, and each top-tier claim is held there by
+  the checker or test named in its entry.
 
 ## How the record works
 
 `claims.yaml` is the registry — every substantive claim tiered with evidence; **if a claim is not in
-the registry it is not a claim of this project.** `FAILURES.md` is the append-only audit trail (<!--s:failures-->41<!--/s--> entries):
+the registry it is not a claim of this project.** `FAILURES.md` is the append-only audit trail:
 every finding, and what changed because of it. `research/notes/` is the full working arc.
-<!--s:checkers-->12<!--/s--> checkers enforce it, run by whoever verifies — verification is reader-run by design. **Every
+Checkers enforce it, run by whoever verifies — verification is reader-run by design. **Every
 checkable result is registered, whichever way it comes out.**
 
 Before searching the literature, read `RESEARCH-PROTOCOL.md`: impossibility results often travel

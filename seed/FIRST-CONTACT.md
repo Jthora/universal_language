@@ -64,7 +64,7 @@ its tier, like everything else here.**
 | Comprehension | `PRIMER.md`, `GLOSSARY.md` | complete |
 | The program and its purpose | `research/notes/050`, `052`, `053` | complete |
 | **Learn the language** | `curriculum/` (modules N/F/S/P/Q/X) | **format defined; content in progress** |
-| Ground truth | `corpus/` — entries reconstructed and asserted by a harness, on two channels: the map and handedness | live |
+| Ground truth | `corpus/` — entries reconstructed and asserted by a harness, on the map channel and the handedness channel | live |
 | **Use it** | `ul-forge/` — the syntax core, and the M2 engine runs (`057`); the typed layer is next | in progress |
 | Self-application | comparator over map invariants | specified; buildable now |
 

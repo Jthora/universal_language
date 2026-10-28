@@ -20,21 +20,20 @@ makes it testable: a claim holds or fails on mathematics alone, for any reader t
 
 ## 1. In one paragraph
 
-A geometric notation exists and runs (`ul-forge/`). Its six marks are the complete product of two
+A geometric notation exists and runs (`ul-forge/`). Its marks are the complete product of two
 axes. Its core vocabulary — containment, separation, adjacency, contact at a point — consists of
 structural relations the harness machine-checks, and handedness, which a combinatorial map cannot
-carry, now has a second machine-checked channel. The operators are the frontier: two are tied to
-geometry by contact, the rest are open. The registry holds <!--s:claims_total-->197<!--/s--> claims,
-<!--s:claims_verified_earned-->39<!--/s--> earning the top tier from their evidence;
-<!--s:corpus_entries-->17<!--/s--> corpus entries are checked by the harness; and
-<!--s:derived_orbits-->3<!--/s--> of <!--s:atlas_orbits-->93<!--/s--> atlas orbits have machine-checked
-structural content (VERIFIED entries only, since `078`).
+carry, now has a second machine-checked channel. The operators are the frontier: `concatenate` and
+`superpose_displaced` are tied to geometry by contact, the rest are open. Every claim's tier is
+earned from its evidence, every corpus entry is checked by the harness, and `derived_orbits`
+tracks the atlas orbits given machine-checked structural content — `ruby tools/stats.rb` has the
+live figures.
 
 ## 2. What we hold
 
-- **The marks are a complete product** (`065`) — six marks fill every cell of rotation symmetry ×
+- **The marks are a complete product** (`065`) — the marks fill every cell of rotation symmetry ×
   curvature. `MARKS-ARE-A-COMPLETE-PRODUCT`
-- **The combinatorial map is UWS's fixed point** — reached by seven independent lines, a complete
+- **The combinatorial map is UWS's fixed point** — reached by several independent lines, a complete
   invariant, machine-checked in `map.rs`, and a DCEL reduct with forty years of literature behind
   it. Its discreteness is load-bearing for the Cure (§5).
 - **Core meanings are machine-checked structure** — containment, separation, adjacency, point
@@ -54,7 +53,7 @@ structural content (VERIFIED entries only, since `078`).
 - **The sign grammar is computed** (`063`) — `sign = (n mod 3) × (n mod 4)`, and since
   `gcd(3,4)=1`, ℤ/12 ≅ ℤ/3 × ℤ/4: that is *why* there are twelve.
 - **AI readers rebuild it** (`060`, `073`) — a cold reader completed all three tasks with no human
-  in the loop; in the capture exam, two readers given only the method recomputed every result and
+  in the loop; in the capture exam, readers given only the method recomputed every result and
   caught every planted error.
 - **Negation is expressible** — the assertion sort is reachable from text.
   `ASSERTIONS-ARE-EXPRESSIBLE`
@@ -64,7 +63,7 @@ structural content (VERIFIED entries only, since `078`).
 
 REQ-1 **it must be a language** · REQ-2 **universality is a ledger** — the definition of universality,
 not a proxy for it · REQ-3 **no-retreat falsifiability, symmetric** · REQ-4 **baseline before
-UQPL**. Registered as claims and enforced by <!--s:checkers-->12<!--/s--> checkers:
+UQPL**. Registered as claims and enforced by checkers:
 `ruby tools/check.rb --strict` runs every gate and names each one. **Tiers are earned** (`075`): a
 claim's tier is what its evidence supports, computed, never just declared. Verification is
 reader-run by design; `tools/pre-commit` is the opt-in local hook.
@@ -91,8 +90,8 @@ Exact in the Fisher–Rao model of a format's drift:
 - **Capacity and correction radius trade off** (`CAPACITY-RADIUS-TRADEOFF`). Diameter **π regardless
   of alphabet size**; at maximum radius, capacity is **exactly n**, by proof. Independently
   corroborated by the Construction-A ceiling `min(d,4)`.
-- **Two of the Cure's five failure modes are one curve** (`UNDERSPEC-AND-LOCKING-ARE-ONE-CURVE`):
-  under-specification and fixed-point locking are its two ends — a budget to spend, not a set to
+- **Under-specification and fixed-point locking are one curve** (`UNDERSPEC-AND-LOCKING-ARE-ONE-CURVE`):
+  they are its two ends — a budget to spend, not a set to
   find.
 - **The next frontier is the adversary.** The budget bounds the geometry; deceptive structure —
   valid form, inverted semantics — is the problem it sets up.
@@ -107,7 +106,8 @@ Exact in the Fisher–Rao model of a format's drift:
 - **The indeterminacy floor is shared.** It applies to every language equally and leaves
   coordination cost untouched; the ledger holds. `INDETERMINACY-FLOOR-IS-UNIVERSAL`
 - **Rules execute or they don't count** (`048`). Any rule answers: *what executes it?*
-- **Numbers are generated** (`079`). `ruby tools/stats.rb` is the source; prose carries markers.
+- **Counts are live, never written** (`079`, owner ruling 2026-10-28). `ruby tools/stats.rb`
+  reports them.
 - `CURE-MUST-BE-AUTOMATIC` is a DESIGN-CHOICE; `semantically_equal` is the longest-standing
   engineering item.
 
@@ -120,4 +120,4 @@ format-acquisition experiment; and `READING-INVARIANCE-TARGET`, the mathematical
 ## 8. How this document is maintained
 
 **Rewritten, not patched.** When amendment next feels tempting, that is the signal to rewrite.
-Every number in it is a generated marker, verified by `tools/check-counts.rb`.
+It states no counts; `ruby tools/stats.rb` reports them live.

@@ -54,7 +54,7 @@ Both machine-checked by `research/notes/064-universal-scope/verify.py`, both exa
 Fisher–Rao model:
 
 - **Detectability requires excluded states**, so a drift-correcting format *must* be discrete — and
-  the combinatorial map is discrete, reached by seven independent lines, none aimed at the Cure.
+  the combinatorial map is discrete, reached by several independent lines, none aimed at the Cure.
   `DRIFT-DETECTION-REQUIRES-DISCRETENESS`
 - **Capacity and correction radius trade off**; diameter is **π regardless of alphabet size**, and
   at maximum radius capacity is **exactly n**, by proof. `CAPACITY-RADIUS-TRADEOFF`
@@ -66,13 +66,13 @@ The maintained list is `BRIEFING.md` §5. The top of it:
 1. **Prove when arrangement creates handedness** — a plane-geometry problem with the fitted rule in
    hand; no repo access needed (`ARRANGEMENT-RULE-IS-FITTED`).
 2. **Derive the operator inventory** — the marks are settled, a complete 3×2 product; the operators
-   are the frontier, two already tied to contact (`OPERATOR-INVENTORY-IS-UNFORCED`, note `078`).
+   are the frontier, `concatenate` and `superpose_displaced` already tied to contact (`OPERATOR-INVENTORY-IS-UNFORCED`, note `078`).
 3. **The format-acquisition experiment** — the first empirical test of the purpose. Runnable on
    models today, and waiting for someone to run it.
 4. **`READING-INVARIANCE-TARGET`** — the mathematical center.
 
-**`WHAT-UL-ENABLES.md`** has the full capability surface: ten capabilities, each with the claim it
-rests on, its tier and its limit. Three are available now.
+**`WHAT-UL-ENABLES.md`** has the full capability surface: each capability with the claim it
+rests on, its tier and its limit, with the ones available now marked.
 
 ### Working rules
 
@@ -96,7 +96,7 @@ rests on, its tier and its limit. Three are available now.
 ### Priority 1 — Understand What's Here
 | Path | Content | Agent Action |
 |------|---------|--------------|
-| `WHAT-UL-ENABLES.md` | **Why this is worth your effort** — 10 capabilities, each with its claim, tier and limit | After `STATE-OF-PLAY.md` |
+| `WHAT-UL-ENABLES.md` | **Why this is worth your effort** — each capability with its claim, tier and limit | After `STATE-OF-PLAY.md` |
 | `BRIEFING.md` | **Hand this to another model.** The delta for a mind without the repo: rulings, closed doors, live edges. Short enough to paste. Keeps outside collaborators from re-proposing what is already recorded as failed | When you brief a peer |
 | `README.md` | Human entry: three commands that verify the work, and the one route | Start here if you are not an AI |
 | `CITING.md` | How to present the work publicly: what to say, how each point is checked, open problems to hand other AIs | Before you post |

@@ -19,8 +19,8 @@ Every capability below is stated as *if this holds, you get that*, and each entr
 Tiers: `VERIFIED` machine-checked · `ARGUED` written proof · `CONJECTURED` believed with a stated
 falsifier · `DESIGN-CHOICE` a decision, not a discovery.
 
-**Three of these are available today.** The rest are research targets, each tied to the claim that
-would unlock it.
+**Some are available today, and marked so.** The rest are research targets, each tied to the claim
+that would unlock it.
 
 ---
 
@@ -55,9 +55,8 @@ The concrete object under discussion is an enumeration, and it exists in draft: 
 site's atlas presents the space as **twenty axes** — ten for a single figure (mark, rotation,
 reflection, scale, count, frequency, amplitude, phase, taper, chirp) and ten for a figure pair
 (A, B, separation, bearing, relative rotation, relative scale, reflect-B, and B's frequency,
-amplitude, phase). Of its <!--s:atlas_orbits-->93<!--/s--> combination orbits, <!--s:atlas_undetermined-->89<!--/s--> are still open, marked
-undetermined rather than filled: the space is fully enumerated, and the frontier is mapped cell by
-cell.
+amplitude, phase). Its combination orbits are fully enumerated; the open ones are marked
+undetermined rather than filled, so the frontier is mapped cell by cell.
 
 ---
 
@@ -143,12 +142,13 @@ derivation wrong, which is available to everyone including those who would rathe
 
 - **Locally** — `ruby tools/check-redundancy.rb`. A field is *pinned* when no single-field
   corruption of it is consistent with the rest of its entry, so the artifact catches the
-  corruption **with no oracle and no source to trust**. Currently **<!--s:pinned_fields-->86<!--/s--> of <!--s:checkable_fields-->106<!--/s--> fields (<!--s:pinned_percent-->81.1<!--/s-->%)**.
+  corruption **with no oracle and no source to trust**; `ruby tools/stats.rb` reports the pinned
+  fraction live.
   Pinning is redundancy and redundancy costs capacity (`CAPACITY-RADIUS-TRADEOFF`), so this is a
   **code rate** — a higher number is not automatically better.
 - **Globally** — `ruby tools/blast-radius.rb CLAIM-ID`, or `--census`. If this falls, what falls
-  with it? Applied to this registry: **<!--s:claims_load_bearing-->79<!--/s--> of <!--s:claims_total-->197<!--/s--> claims are load-bearing, and <!--s:claims_under_conjecture-->69<!--/s--> sit downstream of a CONJECTURED premise.** Three of the five most load-bearing claims are themselves conjectures. **This program is partly anchored on things it has not
-  established, and now says so with a number.**
+  with it? `--census` maps which claims are load-bearing and which sit downstream of a CONJECTURED
+  premise — the registry's dependency structure, made visible.
 
 **Why it must pre-exist the collapse.** A void is never filled by nothing — it is filled by
 whoever is standing there when it opens, at speed and at low standards. An anchor of this kind
@@ -196,7 +196,7 @@ means. A positive correction radius therefore requires a uniformly discrete admi
 a compact space, a finite one.
 
 **And it lands on the repo's own central object.** UWS's fixed point under coarse-graining is the
-**combinatorial map** — discrete, reached by seven independent lines, none aimed at the Cure. So the
+**combinatorial map** — discrete, reached by several independent lines, none aimed at the Cure. So the
 notation's discreteness is not a convenience: it is the property without which no comparator can
 exist at all.
 
@@ -225,7 +225,7 @@ missed, which `research/cure/purpose-anchoring.md` §6 records the Cure as lacki
   set.*
 - **Capacity rises only as the radius falls**, monotonically.
 
-**What this reframes.** Two of the five internal Cure failure modes the companion wiki lists —
+**What this reframes.** Two internal Cure failure modes the companion wiki lists —
 *Invariant Under-Specification* ("the Cure cannot detect what its invariants do not define") and
 *Fixed-Point Locking* ("expressivity collapses") — are **the two ends of this one curve**, not
 independent failures. So "specify the invariants correctly" is the wrong framing: there is no
@@ -375,7 +375,7 @@ The edges, stated plainly so each capability above is used at its true size.
 Ordered by *decisiveness per unit effort*, not by importance.
 
 1. **Derive the operator inventory.** The marks are settled — a complete 3×2 product (note `065`).
-   The operators are the frontier: each is attested on drawn sheets, and two are now tied to geometry
+   The operators are the frontier: each is attested on drawn sheets, and `concatenate` and `superpose_displaced` are now tied to geometry
    by contact (note `078`). Deriving the rest is the highest-value open item in the program
    (`OPERATOR-INVENTORY-IS-UNFORCED`).
 2. **The format-acquisition experiment** (§4.10). The first empirical test that touches the
@@ -396,8 +396,8 @@ line of work — seven instances in a single session, each while the agent belie
 rigorous. In every case the counter-evidence was one search away. The rules there are mechanical for
 that reason.
 
-**Report results as they come out.** `FAILURES.md` is the append-only audit trail
-(<!--s:failures-->41<!--/s--> entries), and every checkable result is registered, whichever way it comes out.
+**Report results as they come out.** `FAILURES.md` is the append-only audit trail, and every
+checkable result is registered, whichever way it comes out.
 
 ---
 

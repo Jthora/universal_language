@@ -16,7 +16,14 @@
 #   Half 1 alone would be useless: nothing stopped the next writer from typing "156 claims" beside
 #   the marker. The repo's failure mode is not wrong numbers, it is hand-written numbers.
 #
-# MARKER SYNTAX
+# OWNER RULING 2026-10-28 — NO COUNTS AT ALL. "no counts should exist. remove them. (Counts are
+#   always in flux (maybe some day we'll have them confidently locked)." A generated marker kept a
+#   number accurate, but it was still a number in a document, so markers are now FORBIDDEN in live
+#   documents rather than verified. `ruby tools/stats.rb` is where counts live; documents point to
+#   it. Mathematical results (a 3x2 product, Z/12 = Z/3 x Z/4, diameter pi) are not tallies and are
+#   not touched. Dated records keep what was true when written.
+#
+# MARKER SYNTAX (now forbidden in live documents)
 #   An HTML comment naming a stats key, the value, and a closing comment:
 #   open-comment s:KEY close-comment VALUE open-comment /s close-comment, all on one line.
 #   Written out literally here it would BE a marker, and since this file is now scanned it would
@@ -95,6 +102,10 @@ FORBIDDEN = [
    'failures / register_entries'],
   [/#{N}\s+(?:workspace\s+)?tests?\b/i,         'REMOVE — not computable, say `cargo test`'],
   [/#{N}\s+corpus entries\b/i,                 'corpus_entries'],
+  # added with the no-counts ruling: tallies that slipped past the patterns above
+  [/#{N}\s+capabilit/i,                                     'capabilities — describe the surface, do not count it'],
+  [/#{N}\s+(?:of\s+\d+\s+)?(?:atlas\s+)?orbits\b/i,        'orbits — point to ruby tools/stats.rb'],
+  [/\b(?:two|three|four|five|six|seven|eight|nine|ten|eleven|twelve)\s+(?:capabilities|checkers|failures)\b/i, 'number-word tally'],
 ]
 
 # The measurement counts the import checkers compute. Unlike the register's own frozen totals —
@@ -138,22 +149,10 @@ LIVE.each do |path|
   text = File.read(path, encoding: 'UTF-8', invalid: :replace, undef: :replace)
   original = text.dup
 
-  text = text.gsub(MARKER) do
-    key, val = Regexp.last_match(1), Regexp.last_match(2)
+  # A marker is a count, generated or not (owner ruling 2026-10-28).
+  text.scan(MARKER) do
     marker_count += 1
-    unless STATS.key?(key)
-      marker_errors << "#{path}: unknown stats key `#{key}`"
-      next Regexp.last_match(0)
-    end
-    want = STATS[key].to_s
-    if val != want
-      if FIX
-        fixed << "#{path}: #{key} #{val} -> #{want}"
-      else
-        marker_errors << "#{path}: #{key} says #{val}, stats says #{want}"
-      end
-    end
-    "<!--s:#{key}-->#{want}<!--/s-->"
+    marker_errors << "#{path}: generated count `#{Regexp.last_match(1)}` — documents state no counts; point to `ruby tools/stats.rb`"
   end
 
   File.write(path, text) if FIX && text != original
@@ -178,22 +177,19 @@ LIVE.each do |path|
   end
 end
 
-# index.json: no comments in JSON, so the whole block is generated.
+# index.json carries no counts either (owner ruling 2026-10-28): its registry_state is a pointer to
+# the live source, not a snapshot that goes stale.
 if File.exist?('index.json')
   doc = JSON.parse(File.read('index.json', encoding: 'UTF-8'))
-  want = {
-    'generated_by' => 'ruby tools/stats.rb --json',
-    'note' => 'Generated, not hand-written. Do not edit these numbers — they go stale. ' \
-              'Regenerate with `ruby tools/check-counts.rb --fix`.',
-  }.merge(STATS)
-  have = doc['registry_state']
-  if have != want
+  want = { 'live_counts' => 'ruby tools/stats.rb --json',
+           'note' => 'No counts are stored here: they are always in flux. Run the command for live figures.' }
+  if doc['registry_state'] != want
     if FIX
       doc['registry_state'] = want
       File.write('index.json', JSON.pretty_generate(doc) + "\n")
-      fixed << 'index.json: registry_state regenerated'
+      fixed << 'index.json: registry_state replaced by a pointer to the live source'
     else
-      marker_errors << 'index.json: `registry_state` does not match stats (run --fix)'
+      marker_errors << 'index.json: `registry_state` must point at the live source, not store counts (run --fix)'
     end
   end
 end
@@ -208,7 +204,7 @@ unless fixed.empty?
 end
 
 if marker_errors.empty? && bare_errors.empty?
-  puts 'OK — every stated count is generated and current; no bare counts in live prose.'
+  puts 'OK — no counts stated in live documents.'
   exit 0
 end
 

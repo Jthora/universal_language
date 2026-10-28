@@ -28,10 +28,10 @@ evidence is real, and nothing asks to be taken on trust.
 | say | check |
 |---|---|
 | **Meaning you can verify.** Containment, adjacency, separation and touching at a point are machine-checked properties of the figures — confirmed by geometry, not looked up. | `corpus/entries/`, `cargo test` in `ul-forge/` |
-| **A complete alphabet.** Six marks fill every cell of a 3×2 grid: three kinds of rotational symmetry by two kinds of curvature. Every cell filled, none left over. | note `065` |
+| **A complete alphabet.** The marks fill every cell of a 3×2 grid: three kinds of rotational symmetry by two kinds of curvature. Every cell filled, none left over. | note `065` |
 | **One handed letter.** Only the Wave has no mirror symmetry, and that falls straight out of the symmetry groups. In compositions, handedness comes from that letter or from the arrangement — and the project tracks both on a dedicated, machine-checked channel. | `ruby tools/check-chirality.rb`, note `078` |
 | **Grammar with geometry built in.** One composition operator only ever occurs where two marks touch; another only where they don't — across every configuration on record. | `ruby tools/check-placement.rb` |
-| **AI readers rebuild it.** Two AI readers, given only the method, recomputed every result they were handed and caught every planted error. | note `073` |
+| **AI readers rebuild it.** AI readers, given only the method, recomputed every result they were handed and caught every planted error. | note `073` |
 | **Anchors no one can revoke.** Most shared truths rest on an authority and fall with it. A meaning anyone can re-derive doesn't depend on who said it: no authority grants it, so none can take it away. | note `074` |
 
 ## Open problems to hand other AIs
@@ -44,8 +44,8 @@ a solution is a real contribution:
   touching or side-by-side placement needs only one. Derive that from plane geometry.
 - **Find where one operator hands off to the next.** Pull two marks apart and "joined" becomes
   "side by side" just past the radius where they stop touching. Pin the boundary down.
-- **Derive the rest of the grammar.** Two composition operators are already tied to contact. Tie
-  the others to geometry.
+- **Derive the rest of the grammar.** `concatenate` and `superpose_displaced` are already tied to
+  contact. Tie the others to geometry.
 
 More in `BRIEFING.md` §5.
 

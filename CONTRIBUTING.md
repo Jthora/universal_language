@@ -44,18 +44,15 @@ cargo test --manifest-path ul-forge/Cargo.toml          # the Rust suite
 ln -sf ../../tools/pre-commit .git/hooks/pre-commit     # optional: run both automatically
 ```
 
-**Never write a count by hand.** Claim totals, tier counts, failure-log length, checker count,
-corpus and register sizes — all of these went stale within hours, every time, for the whole life of
-this project (`claims.yaml#COUNTS-ARE-GENERATED`). So:
+**Never write a count.** Claim totals, tier counts, failure-log length, checker count, corpus and
+register sizes, orbits derived — every one is in flux, so documents state none
+(`claims.yaml#COUNTS-ARE-GENERATED`, owner ruling 2026-10-28):
 
-- `tools/stats.rb` is the only source. `ruby tools/stats.rb` prints every count.
-- A count in prose carries a generated marker: `<!--s:claims_total-->197<!--/s-->`.
-- `ruby tools/check-counts.rb --fix` regenerates them; the checker fails if any is stale **and**
-  fails if you write a bare count in a phrasing that has gone stale before.
-- **The test count is not stated anywhere.** It cannot be computed without building: a static scan
-  of `#[test]` attributes undercounts, because doc-tests and generated cases are invisible to it.
-  So documents say `cargo test` rather than a number. A count that cannot be computed must not be
-  asserted — including in this sentence, which is why no figures appear in it.
+- `ruby tools/stats.rb` prints every count, live. Point readers to it instead of quoting a figure.
+- `ruby tools/check-counts.rb` fails on a count written in a live document — hand-typed or
+  generated alike.
+- The test count comes from `cargo test`; a static scan undercounts, because doc-tests and
+  generated cases are invisible to it.
 
 If you need a number the generator does not produce, add it to `tools/stats.rb` rather than typing
 it into a document.

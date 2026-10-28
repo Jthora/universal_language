@@ -147,7 +147,7 @@ missed this copy).
 
 ## 5. Where the program actually stands
 
-**The structural spine, and it needs no physics:** seven independent lines converged on the
+**The structural spine, and it needs no physics:** several independent lines converged on the
 **combinatorial map** — graph plus cyclic order at each vertex — as UWS's fixed point. It is a
 complete invariant (Heffter–Edmonds), implemented and machine-checked (`map.rs`), and a
 **DCEL reduct** — the combinatorial content is 1970s prior art, which cost originality and bought a
@@ -223,4 +223,4 @@ by derivation rather than convention, and **alignment by format acquisition** �
 as a corollary**: an explicit format carries a derivable anchor, so drift is self-detectable. The
 mathematical center is one theorem target — reading-invariance — and every load-bearing edge routes
 through it. The project once claimed a proven fixed signature; that is retired, git history is the
-archive, and the current claims live in `claims.yaml` where <!--s:checkers-->12<!--/s--> checkers hold them to their tiers.
+archive, and the current claims live in `claims.yaml` where the checkers hold them to their tiers.
