@@ -115,6 +115,17 @@ VOLATILE = [
   [/#{N}\s+disputed\s+cells?\b/i,                          'chirality_disputed'],
 ].freeze
 
+# Counts WRAPPED across a line break. The scan below is line-by-line, so a number ending one line
+# and its noun starting the next was invisible to it for this checker's whole life: AGENTS.md said
+# "354\n tests" against an actual 399 until it was found by reading, not by this tool. Applied to
+# md/txt only — checker headers quote stale counts on purpose, as everywhere else in this file.
+WRAPPED = [
+  [/#{N}[ \t]*\n[ \t>]*(?:workspace\s+)?tests?\b/i, 'REMOVE — not computable, say `cargo test`'],
+  [/#{N}[ \t]*\n[ \t>]*claims?\b/i,                'claims_total'],
+  [/#{N}[ \t]*\n[ \t>]*checkers?\b/i,              'checkers'],
+  [/#{N}[ \t]*\n[ \t>]*corpus entries\b/i,         'corpus_entries'],
+].freeze
+
 MARKER = /<!--s:([a-z0-9_]+)-->(.*?)<!--\/s-->/m
 
 marker_errors = []
@@ -149,6 +160,15 @@ LIVE.each do |path|
 
   # Half 2: bare counts outside markers.
   stripped = text.gsub(MARKER, '')
+  unless NARROW_ONLY.call(path)
+    WRAPPED.each do |re, key|
+      stripped.scan(re) do
+        m = Regexp.last_match
+        ln = stripped[0, m.begin(0)].count("\n") + 1
+        bare_errors << "#{path}:#{ln}: #{m[0].gsub(/\s+/, ' ')} (wrapped across a line break)\n      -> use <!--s:#{key}--> or remove the count"
+      end
+    end
+  end
   patterns = NARROW_ONLY.call(path) ? VOLATILE : (FORBIDDEN + VOLATILE)
   patterns.each do |re, key|
     stripped.each_line.with_index do |line, i|

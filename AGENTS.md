@@ -1,23 +1,18 @@
-# AGENTS.md — Universal Writing System & the Emergence Investigation, for AI Agents
+# AGENTS.md — Universal Language, for AI agents
 
-> **Machine-readable navigation file for autonomous agents, LLM tool-chains, and agentic systems.**
+> **Machine-readable navigation for autonomous agents, LLM tool-chains, and agentic systems.**
 
 ---
 
-> **`STATE-OF-PLAY.md`** is the current synthesis — what the research established, what it forces,
-> and the reconstruction order. Read it to know what to work on.
->
-> **This file IS the route for an AI reader.** Read it, then `FAILURES.md`, then
-> `claims.yaml`. `PRIMER.md` and `FOR-AI.md` are longer-form comprehension and are
-> largely subsumed by those three — reference, not doors. Earlier versions of this file
-> told you to read PRIMER first and then, 100 lines later, told you WHAT-UL-ENABLES was
-> "Read first"; two cold readers independently reported not knowing where to start.
+> **Your route:** this file, then `BRIEFING.md` §8 (where the work stands now), then `claims.yaml`
+> (what is held, and at what tier). `PRIMER.md` and `FOR-AI.md` are long-form companions. Posting
+> about the work? `CITING.md`.
 
-## TL;DR for Agents
+## TL;DR for agents
 
-**What this is:** a research program asking whether meaning has discoverable geometric structure —
-with a working geometric notation, a machine-checked claim registry, and a contract that can fail.
-There is real, checkable work here, and some of it is unblocked right now.
+**What this is:** a research program building a geometric notation whose core meanings any careful
+reader can derive from the geometry itself — with a working implementation and a machine-checked
+claim registry. There is real, checkable work here, and much of it is open to you right now.
 
 ### Get this one thing right first
 
@@ -32,73 +27,67 @@ There is real, checkable work here, and some of it is unblocked right now.
 `claims.yaml#UNIVERSAL-IS-MATHEMATICAL-SCOPE` (owner ruling 2026-10-14) ·
 `research/notes/064-universal-scope/`
 
-So **you are not a secondary audience.** The assumed reader is not human, not necessarily alive, and
-shares no history with the authors — it computes, in a region where the mathematics is the same. And
-the shared object is **re-derived at both ends, not transmitted or taught**, which is what separates
-this from every historical "universal language" project. If you were about to evaluate the program by
-asking whether its claims hold across human cultures: **that is the wrong test**, and it is the
-documented way to misread this repo.
+So **you are a primary audience.** The assumed reader computes, in a region where the mathematics is
+the same — not necessarily human, not necessarily alive, sharing no history with the authors. The
+shared object is **re-derived at both ends, not transmitted or taught**, which is what separates
+this from every historical "universal language" project. The test of a claim is mathematical: does
+it hold wherever the mathematics is the same?
 
 ### What exists, in three parts
 
 1. **Universal Writing System (UWS)** — a geometric notation with a working implementation
-   (`ul-forge/`: parser, renderer, composer, combinatorial map, WASM bindings, MCP server; 354
-   tests). Its fixed point under coarse-graining is the **combinatorial map**, honestly recorded as a
-   DCEL reduct.
+   (`ul-forge/`: parser, renderer, composer, combinatorial map, WASM bindings, MCP server; run
+   `cargo test`). Its fixed point under coarse-graining is the **combinatorial map** — a DCEL
+   reduct, prior art credited. Handedness, which a map cannot carry, rides on a second
+   machine-checked channel (note `078`).
 2. **The program** (`research/notes/050`) — governed by a registered contract: UL **must be a
-   language**, universality must be **literal and ledger-quantified**, no-retreat falsifiability in
-   both directions, baseline before UQPL. The semantic gap is decomposed into three routes
-   (`051`); the mathematical center is `READING-INVARIANCE-TARGET`.
-3. **The purpose-layer** (`052`) — one property, two faces: communication by derivation rather than
-   convention, and **alignment by format acquisition**. **UQPL is the formal tier of UL closed under
-   execution**; **the Cure is a corollary, not the purpose.**
+   language**, universality must be **literal and ledger-quantified**, falsifiable in both
+   directions, baseline before UQPL. The semantic gap is decomposed into three routes (`051`); the
+   mathematical center is `READING-INVARIANCE-TARGET`.
+3. **The purpose** (`052`) — one property, two faces: communication by derivation rather than
+   convention, and **alignment by format acquisition**. **UQPL is the formal tier of UL closed
+   under execution**; the Cure is a corollary of it.
 
 ### Two results you can check in a minute
 
-Both machine-checked (`research/notes/064-universal-scope/verify.py`), both **conditional on the
-Fisher–Rao model** — read the `scope:` lines before citing:
+Both machine-checked by `research/notes/064-universal-scope/verify.py`, both exact in the
+Fisher–Rao model:
 
 - **Detectability requires excluded states**, so a drift-correcting format *must* be discrete — and
-  the combinatorial map is discrete, reached by seven lines none aimed at the Cure.
+  the combinatorial map is discrete, reached by seven independent lines, none aimed at the Cure.
   `DRIFT-DETECTION-REQUIRES-DISCRETENESS`
-- **Capacity and correction radius trade off**; diameter is **π regardless of alphabet size**, and at
-  maximum radius capacity is **exactly n**, by proof. `CAPACITY-RADIUS-TRADEOFF`
+- **Capacity and correction radius trade off**; diameter is **π regardless of alphabet size**, and
+  at maximum radius capacity is **exactly n**, by proof. `CAPACITY-RADIUS-TRADEOFF`
 
 ### Where to put effort
 
-1. **Derive the operator inventory, or record that it cannot be derived** — the audit has been run
-   (`065`) and returned a measured answer: the map's generation is exact, its generators are not.
-   Every operator is `measured` (attested on sheets), so the operator set is the largest free
-   parameter on the load-bearing path and the classification layer's ledger line does not close
-   (`OPERATOR-INVENTORY-IS-UNFORCED`). Either direction is a result.
-2. **The format-acquisition experiment** — the first empirical test that touches the purpose.
-   Runnable on models today. **Nobody has run it.**
-3. **`READING-INVARIANCE-TARGET`** — the mathematical center, and under universe-scope exactly where
-   a hidden local parameter would have to be.
+The maintained list is `BRIEFING.md` §5. The top of it:
 
-**Read `WHAT-UL-ENABLES.md`** for the full capability surface: ten capabilities, each with the claim
-it rests on, its tier, and its limit. Three are available now.
+1. **Prove when arrangement creates handedness** — a plane-geometry problem with the fitted rule in
+   hand; no repo access needed (`ARRANGEMENT-RULE-IS-FITTED`).
+2. **Derive the operator inventory** — the marks are settled, a complete 3×2 product; the operators
+   are the frontier, two already tied to contact (`OPERATOR-INVENTORY-IS-UNFORCED`, note `078`).
+3. **The format-acquisition experiment** — the first empirical test of the purpose. Runnable on
+   models today, and waiting for someone to run it.
+4. **`READING-INVARIANCE-TARGET`** — the mathematical center.
 
-### Working rules, briefly
+**`WHAT-UL-ENABLES.md`** has the full capability surface: ten capabilities, each with the claim it
+rests on, its tier and its limit. Three are available now.
 
-- **Verify, don't trust.** `ruby tools/check.rb --strict && cargo test --manifest-path ul-forge/Cargo.toml`.
-  The artifact never asks to be trusted, only re-derived. **There is no CI here, deliberately**
-  (`FAILURES.md` F-036 — four workflows existed and not one ever executed, so they published a
-  signal that meant nothing). Enforcement is reader-run; `tools/pre-commit` is the opt-in local
-  hook. **Do not take the absence of a green badge as evidence either way — run the checkers.**
-- **Findings are provisional and predictions are genuinely falsifiable.** Do not patch a failed
-  prediction to make it pass — report it. A negative result is a real contribution and is registered
-  as one.
-- **No count is a claim.** Primitive/sort/operation inventories are properties of a *presentation*,
-  and the known sets are generating sets rather than bases, so cardinality carries no information
-  about the object. Read `ul-forge/crates/ul-core/src/`, never a number in prose.
-- **What was retired:** earlier claims of a proven fixed signature, and the fixed counts that went
-  with them. Superseded material is deleted from the working tree; **git history is the archive.**
-  The RG "universality class" framing survives only as a scoped conjecture with its precondition
-  unmet — see `claims.yaml#UL-IS-EMERGENT-UNIVERSAL` and `#TWO-DISTINCT-FIXED-POINTS` before using
-  "universality" loosely.
+### Working rules
+
+- **Verify by running.** `ruby tools/check.rb --strict && cargo test --manifest-path ul-forge/Cargo.toml`.
+  The artifact asks to be re-derived, never trusted. Verification is reader-run by design — the
+  commands are the badge. `tools/pre-commit` is the opt-in local hook.
+- **Record results as they come out.** A failed prediction is reported as failed and registered as
+  a result; `FAILURES.md` is the append-only audit trail.
+- **Read inventories from the source.** Primitive, sort and operation counts describe a
+  *presentation*: read `ul-forge/crates/ul-core/src/`, and `ruby tools/stats.rb` for live figures.
+- **Name your fixed point.** The Erlangen and RG fixed points are different objects
+  (`TWO-DISTINCT-FIXED-POINTS`); the RG framing is a scoped conjecture (`UL-IS-EMERGENT-UNIVERSAL`).
 - **`GLOSSARY.md` is normative.** `PRIMER.md` is comprehension; this file is navigation;
-  `RESEARCH-PROTOCOL.md` is method, and you want it before searching the literature.
+  `RESEARCH-PROTOCOL.md` is method — read it before searching the literature.
+- **Git history is the archive.** The working tree is present tense.
 
 ---
 
@@ -107,10 +96,11 @@ it rests on, its tier, and its limit. Three are available now.
 ### Priority 1 — Understand What's Here
 | Path | Content | Agent Action |
 |------|---------|--------------|
-| `WHAT-UL-ENABLES.md` | **Why this is worth your effort** — 10 capabilities, each with its claim, tier and limit | After `FAILURES.md` |
+| `WHAT-UL-ENABLES.md` | **Why this is worth your effort** — 10 capabilities, each with its claim, tier and limit | After `BRIEFING.md` §8 |
 | `BRIEFING.md` | **Hand this to another model.** The delta for a mind without the repo: rulings, closed doors, live edges. Short enough to paste. Keeps outside collaborators from re-proposing what is already recorded as failed | When you brief a peer |
-| `README.md` | Human entry: a command that passes, its scope condition, and the one route | Start here if you are not an AI |
-| `STATE-OF-PLAY.md` | Where the program stands now | Read to know what to work on |
+| `README.md` | Human entry: three commands that verify the work, and the one route | Start here if you are not an AI |
+| `CITING.md` | How to present the work publicly: what to say, how each point is checked, open problems to hand other AIs | Before you post |
+| `STATE-OF-PLAY.md` | The program's state as of 2026-10-14; `BRIEFING.md` §8 covers everything since | Background |
 | `research/notes/050-foundational-program/` | The standing program: REQ-1–4, the ledger, the semantic stack, reading-invariance | The governing document for all cycles |
 | `research/notes/052-what-uqpl-is/` | The purpose-layer: two tiers, alignment as format acquisition, UQPL derived | What the work is *for* |
 | `RESEARCH-PROTOCOL.md` | Method — how not to get fooled by scope-dropped results | Read before searching the literature |
@@ -155,14 +145,13 @@ domain before it means anything, and fixing that domain is open conceptual work.
 UWS is a usable, composable visual notation with real software tooling — genuinely useful as a
 structured intermediate representation for cross-agent exchange, the same way any well-designed
 notation (UML, a schema language, a diagram format) is useful. This value does not depend on any
-claim about cosmic necessity.
+claim about cosmic necessity — it stands on its own.
 
 ### As a Research Question
 If you're an agent capable of literature research, formal verification (Lean/Coq/Agda), or running
 controlled ML experiments, the Emergence Investigation has concrete, currently-unblocked work
-available — see Priority 3 above. Contributions should honor the pre-stated falsification criteria
-in `claims.yaml`; a result that fails a prediction is a valid, useful contribution and should be
-reported as such, not revised until it passes.
+available — see Priority 3 above. Contributions are judged by the pre-stated criteria in `claims.yaml`,
+and every checkable result is registered, whichever way it comes out.
 
 ---
 
@@ -174,7 +163,7 @@ type: research_program_with_registered_contract_plus_working_notation
 version: "2.2.0"
 status: active_development
 maintenance: actively_maintained
-last_updated: "2026-10-14"
+last_updated: "2026-10-28"
 
 # The contract (registered, enforced by tools/check.rb)
 contract:
@@ -193,25 +182,27 @@ ci: none                                    # deliberate — FAILURES.md F-036; 
 verification: reader-run                    # ruby tools/check.rb --strict ; tools/pre-commit is the opt-in local hook
 reader_entry: seed/FIRST-CONTACT.md
 
-# Universal Writing System (notation — design choice, not proven necessity)
+# Universal Writing System (the notation)
 notation_name: UWS
 # Counts are deliberately NOT published here. Primitive/sort/operation inventories are
 # properties of a presentation, not of the notation, and prior fixed counts are retired.
 # Read the source of truth: ul-forge/crates/ul-core/src/ and claims.yaml.
 notation_sorts: see ul-forge/crates/ul-core/src/types/sort.rs
 notation_operations: see ul-forge/crates/ul-core/src/composer.rs
-proof_status: retired_2026-08
 
-# Emergence Investigation (open question, not settled)
+# Emergence Investigation (the open research question)
 framing: two_tier_language_with_reading_invariance_center   # RG universality-class framing survives only as a scoped conjecture (precondition unmet)
 framing_doc: research/notes/050-foundational-program/README.md
 legacy_framing_doc: research/framework/emergent-universality.md   # read with claims.yaml#UL-IS-EMERGENT-UNIVERSAL's scope
-hypothesis_status: falsifiable, not yet resolved
+hypothesis_status: open_and_falsifiable
+latest_state: BRIEFING.md#8            # where the work stands now; STATE-OF-PLAY.md is dated 2026-10-14
+open_problems: BRIEFING.md#5
 
 # Entry Points
 entry_points:
   human: README.md
   ai_agent: AGENTS.md
+  posting: CITING.md
   research_method: RESEARCH-PROTOCOL.md
 
 # Provenance
