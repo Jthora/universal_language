@@ -162,7 +162,7 @@ is cited under the same tiering discipline as any source.
 | **What "universal" means** | `research/notes/064-universal-scope/` |
 | To evaluate cold, verify-don't-trust | `seed/FIRST-CONTACT.md` |
 | Full comprehension (~15 min) | `PRIMER.md`, then `GLOSSARY.md` (normative) |
-| Where the program stands | `BRIEFING.md` §8, then `STATE-OF-PLAY.md` |
+| Where the program stands | `STATE-OF-PLAY.md` |
 | What is actually held, and at what tier | `claims.yaml` |
 | The standing program · the purpose · deployment | `research/notes/050` · `052` · `053` |
 | To use the notation | `uws/NAVIGATION.md` → `ul-forge/` |

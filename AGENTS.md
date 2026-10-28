@@ -4,7 +4,7 @@
 
 ---
 
-> **Your route:** this file, then `BRIEFING.md` §8 (where the work stands now), then `claims.yaml`
+> **Your route:** this file, then `STATE-OF-PLAY.md` (where the work stands), then `claims.yaml`
 > (what is held, and at what tier). `PRIMER.md` and `FOR-AI.md` are long-form companions. Posting
 > about the work? `CITING.md`.
 
@@ -96,11 +96,11 @@ rests on, its tier and its limit. Three are available now.
 ### Priority 1 — Understand What's Here
 | Path | Content | Agent Action |
 |------|---------|--------------|
-| `WHAT-UL-ENABLES.md` | **Why this is worth your effort** — 10 capabilities, each with its claim, tier and limit | After `BRIEFING.md` §8 |
+| `WHAT-UL-ENABLES.md` | **Why this is worth your effort** — 10 capabilities, each with its claim, tier and limit | After `STATE-OF-PLAY.md` |
 | `BRIEFING.md` | **Hand this to another model.** The delta for a mind without the repo: rulings, closed doors, live edges. Short enough to paste. Keeps outside collaborators from re-proposing what is already recorded as failed | When you brief a peer |
 | `README.md` | Human entry: three commands that verify the work, and the one route | Start here if you are not an AI |
 | `CITING.md` | How to present the work publicly: what to say, how each point is checked, open problems to hand other AIs | Before you post |
-| `STATE-OF-PLAY.md` | The program's state as of 2026-10-14; `BRIEFING.md` §8 covers everything since | Background |
+| `STATE-OF-PLAY.md` | Where the program stands: what is held, the contract, what is next | Read to know what to work on |
 | `research/notes/050-foundational-program/` | The standing program: REQ-1–4, the ledger, the semantic stack, reading-invariance | The governing document for all cycles |
 | `research/notes/052-what-uqpl-is/` | The purpose-layer: two tiers, alignment as format acquisition, UQPL derived | What the work is *for* |
 | `RESEARCH-PROTOCOL.md` | Method — how not to get fooled by scope-dropped results | Read before searching the literature |
@@ -195,7 +195,7 @@ framing: two_tier_language_with_reading_invariance_center   # RG universality-cl
 framing_doc: research/notes/050-foundational-program/README.md
 legacy_framing_doc: research/framework/emergent-universality.md   # read with claims.yaml#UL-IS-EMERGENT-UNIVERSAL's scope
 hypothesis_status: open_and_falsifiable
-latest_state: BRIEFING.md#8            # where the work stands now; STATE-OF-PLAY.md is dated 2026-10-14
+latest_state: STATE-OF-PLAY.md         # rewritten 2026-10-28; BRIEFING.md#8 is the session handoff
 open_problems: BRIEFING.md#5
 
 # Entry Points
