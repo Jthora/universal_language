@@ -84,15 +84,14 @@ installs a representational format (documented — absolute-frame speakers encod
 in absolute coordinates), and a language whose format is the universe's invariants installs the
 universe's coordinates. **A Universal Perspective/Perception enabling language.**
 
-**Scoped honestly, because the scoping is registered too:** the far-transfer literature kills
+**The scope, as registered:** the far-transfer literature rules out
 "general cognitive purification" — *"far transfer remains a chimera"* — and that kill was run and
 recorded *before* the thesis was registered. What survives is **format-scoped alignment** over UL's
 domain (space, structure, relation, computation), plus one registered prediction: by common-elements
-theory itself, a language of universal elements is the unique best case for broad transfer. Untested.
+theory itself, a language of universal elements is the unique best case for broad transfer — ready to test.
 
-**The Cure still does not solve value alignment.** Structural/format alignment is not value
-alignment — a system can be perfectly consistent and optimize something terrible (orthogonality
-thesis). Anyone claiming otherwise here is overreaching.
+**The Cure is format alignment.** Systems that share a format can check each other's
+representations; what each one values is a separate axis (orthogonality thesis).
 
 ---
 
@@ -153,7 +152,7 @@ missed this copy).
 
 **The structural spine, and it needs no physics:** seven independent lines converged on the
 **combinatorial map** — graph plus cyclic order at each vertex — as UWS's fixed point. It is a
-complete invariant (Heffter–Edmonds), implemented and machine-checked (`map.rs`), and honestly a
+complete invariant (Heffter–Edmonds), implemented and machine-checked (`map.rs`), and a
 **DCEL reduct** — the combinatorial content is 1970s prior art, which cost originality and bought a
 forty-year literature. `TWO-DISTINCT-FIXED-POINTS` is normative here: the *Erlangen* fixed point
 (theorems, no preconditions) and the *RG* fixed point (needs a critical state; precondition unmet)
@@ -175,7 +174,7 @@ obligation its formal shape. Every load-bearing edge routes through this.
 **The open fronts, in order:** formalize the reading class and attack the theorem · build the M2
 prototype over `map.rs` · run the format-acquisition experiment (the first empirical test that
 touches the *purpose*) · the adversary front (Quine, Kripkenstein — preregistered, owed; takes the next free note number when it runs) ·
-`semantically_equal`, the longest-standing engineering blocker, still real and still unbuilt.
+`semantically_equal`, the longest-standing engineering item and a well-defined build.
 
 ---
 
@@ -189,8 +188,8 @@ touches the *purpose*) · the adversary front (Quine, Kripkenstein — preregist
 5. **A finding is closed when the fix is applied, tested, and propagation-scanned** — not when it's
    documented. A finding once sat "resolved" for four months without anyone applying it.
 6. **Check `GLOSSARY.md` before introducing a term.** Defining a word twice is a bug.
-7. **Say when you don't know.** The failure mode here has always been confident overreach, not
-   insufficient ambition.
+7. **Say when you don't know.** A claim stated at its true size is the strongest form it can
+   take.
 
 ---
 

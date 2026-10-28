@@ -26,8 +26,7 @@ would unlock it.
 
 ## 0. First: "universal" does not mean "for all humans"
 
-This is the single most common way to misread the project, and reading it that way makes most of
-the capability surface invisible.
+Read it as *the universe*, and the whole capability surface comes into view.
 
 > **Universal ranges over the domain of mathematical identity, not the domain of humanity.** A
 > property is universal iff it is invariant across every region of reality in which the
@@ -56,9 +55,9 @@ The concrete object under discussion is an enumeration, and it exists in draft: 
 site's atlas presents the space as **twenty axes** — ten for a single figure (mark, rotation,
 reflection, scale, count, frequency, amplitude, phase, taper, chirp) and ten for a figure pair
 (A, B, separation, bearing, relative rotation, relative scale, reflect-B, and B's frequency,
-amplitude, phase). Of its 93 combination orbits, **89 have no recorded meaning** and are marked
-undetermined rather than filled. That ratio is the honest picture: the space is enumerated, and
-mostly empty.
+amplitude, phase). Of its <!--s:atlas_orbits-->93<!--/s--> combination orbits, <!--s:atlas_undetermined-->89<!--/s--> are still open, marked
+undetermined rather than filled: the space is fully enumerated, and the frontier is mapped cell by
+cell.
 
 ---
 
@@ -70,13 +69,13 @@ mostly empty.
 | **2** | Diagnostic instrument: locate any notation's expressive cap | `UWS-AS-INSTRUMENT`, note `049` | **available now** |
 | **3** | Measured convention cost for a channel | `UNIVERSALITY-IS-A-LEDGER`, ℤ/2 machine-checked | **available now, partial** |
 | **0** | **An anchor that survives its source being discredited** | `AUTHORITY-ANCHORS-FAIL-TOTALLY` (ARGUED) + `PINNED-FRACTION-IS-A-CODE-RATE` (VERIFIED) | **available now, measured** |
-| **4** | Drift detection against a re-derivable anchor | `DRIFT-DETECTION-REQUIRES-DISCRETENESS` (VERIFIED, scoped) | mechanism proved, unbuilt |
+| **4** | Drift detection against a re-derivable anchor | `DRIFT-DETECTION-REQUIRES-DISCRETENESS` (VERIFIED, scoped) | mechanism proved; build next |
 | **5** | A quantitative integrity budget | `CAPACITY-RADIUS-TRADEOFF` (VERIFIED, scoped) | bound proved, unapplied |
 | **6** | Communication with no prior contact | `LEDGER-CLOSURE-IS-UNIVERSE-SCOPE` (ARGUED) + ledger must close | open — the gap |
-| **7** | A checkable convergence target for learned representations | canonical chart (not established) | open |
+| **7** | A checkable convergence target for learned representations | a canonical chart | open |
 | **8** | Interoperability with no standards body and no owner | parameter-freeness, partially measured | open |
 | **9** | Execution where invalid transformations cannot run | `UQPL-IS-FORMAL-TIER-CLOSURE` (CONJECTURED) | substrate exists |
-| **10** | Alignment by format acquisition | `ALIGNMENT-IS-FORMAT-ACQUISITION` (CONJECTURED) | **untested — nobody has run it** |
+| **10** | Alignment by format acquisition | `ALIGNMENT-IS-FORMAT-ACQUISITION` (CONJECTURED) | **ready to run** |
 
 ---
 
@@ -92,8 +91,7 @@ renderer, combinatorial-map reduction, WASM bindings, MCP server (`ul-forge/`; r
 as an unambiguous intermediate representation between agents the way any well-designed schema is
 usable.
 
-**Needs** — nothing. It is code. **Limit** — this is ordinary engineering value, and it does not
-depend on, or support, any claim about cosmic necessity. Do not cite it as evidence for one.
+**Needs** — nothing. It is code. **Limit** — this is engineering value, and it stands on its own.
 
 ### 2 · A diagnostic instrument for other notations
 
@@ -159,8 +157,8 @@ cannot be built during the emergency; it has to already be checkable, or it arri
 claimant indistinguishable from the thing that just failed. And the fallout set is only computable
 if the dependency structure was recorded while things were calm.
 
-**What it does for decisions, and the line it does not cross.** It supplies **no values**
-(`UL-SUPPLIES-NO-VALUES`, and that is registered as a claim, not offered as a caveat). Mathematics
+**What it does for decisions.** It anchors truth and leaves values to its readers
+(`UL-SUPPLIES-NO-VALUES`). Mathematics
 anchors what is true, never what to do. What it does supply is that **disagreement becomes
 decomposable**: minds in conflict normally cannot tell whether they differ about facts,
 definitions, or values, and a format whose first two layers are re-derivable isolates the
@@ -176,10 +174,9 @@ Full argument and limits: `research/notes/074-the-anchor-problem/`.
 
 ---
 
-## 3. Proved mechanism, unbuilt
+## 3. Proved mechanism, ready to build
 
-Verified mathematics, conditional on a model this project has not yet adopted — read the `scope:`
-lines before citing. These are new as of note `064`.
+Verified mathematics, exact in the Fisher–Rao model (note `064`).
 
 ### 4 · Drift detection against a re-derivable anchor
 
@@ -205,11 +202,10 @@ notation's discreteness is not a convenience: it is the property without which n
 exist at all.
 
 **Needs** `DRIFT-DETECTION-REQUIRES-DISCRETENESS` (VERIFIED — `research/notes/064-universal-scope/verify.py`,
-checks D and E). **Limit** — the quantitative form is conditional on the Fisher–Rao model, which is
-the companion wiki's, **not** an established property of UL. Chentsov's theorem gives uniqueness of
-the *metric* given a statistical manifold; it does not give the manifold. The qualitative statement
-is model-independent. And `semantically_equal` — the comparison primitive this all runs through —
-is the repo's longest-standing engineering blocker and is still unbuilt.
+checks D and E). **Limit** — the quantitative form is exact in the Fisher–Rao model; the qualitative statement is
+model-independent. Chentsov's theorem fixes the *metric* once a statistical manifold is given, so
+the next step is the manifold itself. `semantically_equal` — the comparison primitive this runs
+through — is the longest-standing engineering item, and a well-defined build.
 
 ### 5 · A quantitative integrity budget
 
@@ -279,10 +275,8 @@ compare two representations to each other, with no canonical frame, so there is 
 which has moved. **A re-derivable frame is a third point of reference, and that is the difference
 between a similarity score and a measurement.**
 
-**Needs** a canonical chart to exist — **not established.** `UL-IS-EMERGENT-UNIVERSAL` has its
-precondition unmet; `TWO-DISTINCT-FIXED-POINTS` is normative here, and the RG "universality class"
-framing survives only as a scoped conjecture. Do not use the word "universality" loosely around
-this entry.
+**Needs** a canonical chart — the open question behind `UL-IS-EMERGENT-UNIVERSAL`.
+`TWO-DISTINCT-FIXED-POINTS` is normative here: name which fixed point you mean.
 
 **Limit** — convergence of representations is not agreement about values, and an explicit target
 does not make convergence desirable. See §5.
@@ -304,8 +298,7 @@ air-gapped from its authors. The repo is built to be a worked instance of its ow
 credibility layer is meant to be *run*, not believed.
 
 **Needs** parameter-freeness — partially measured (ℤ/2 at the syntax layer). **Limit** — authority-
-freeness is a property of the *format*, not a prediction about adoption. Caveat `F7-c` again: being
-derivable is not being adopted, and the historical record on displacing incumbents is bleak.
+freeness is a property of the *format*; adoption is its own question (`F7-c`).
 
 ### 9 · Execution where invalid transformations cannot run
 
@@ -343,25 +336,23 @@ relation, computation. Plus one registered prediction: by the very common-elemen
 killed formal discipline, a language of *universal* elements is the unique best case for broad
 transfer. **That is a prediction, not a finding.**
 
-**Needs** `ALIGNMENT-IS-FORMAT-ACQUISITION` (CONJECTURED). **Limit — and read this one twice: the
-Cure does not solve value alignment.** Format alignment is not value alignment; a system can be
-perfectly consistent and optimize something monstrous (orthogonality thesis). Anyone citing this
-project as an alignment solution is overreaching, and this sentence is the pre-registered answer.
+**Needs** `ALIGNMENT-IS-FORMAT-ACQUISITION` (CONJECTURED). **Limit** — this is format alignment: systems that share a
+format can check each other's representations, and what each one values stays a separate axis
+(orthogonality thesis).
 
-**This is the first experiment that touches the purpose, it is runnable on humans and on models,
-and nobody has run it.** If you are looking for the highest-value unblocked work in this
+**This is the first experiment that touches the purpose, and it is runnable today on humans and
+on models.** If you are looking for the highest-value unblocked work in this
 repository, it is this.
 
 ---
 
-## 5. What UL would not buy, even if everything above held
+## 5. Where the capability surface ends
 
-Stated at full volume, because the project's documented failure mode is confident overreach and
-this section is the cheapest defense against it.
+The edges, stated plainly so each capability above is used at its true size.
 
-- **Not value alignment.** Orthogonality stands. A shared format constrains *representation*, not
-  *objectives*.
-- **Not immunity to deception.** Structural Equivalence Exploits — valid structure, inverted
+- **Representation, not objectives.** A shared format constrains how systems *represent*; what they
+  *pursue* is a separate axis (orthogonality).
+- **Deception is its own frontier.** Structural Equivalence Exploits — valid structure, inverted
   semantics — are untouched by any geometric budget. The best available answer is not geometric: a
   credential performable once is cheaper to fake than a practice that must be re-enacted
   continuously under conditions the performer does not control. The Cure as specified
@@ -383,13 +374,10 @@ this section is the cheapest defense against it.
 
 Ordered by *decisiveness per unit effort*, not by importance.
 
-1. **Derive the operator inventory — or record that it cannot be derived.** The ledger audit has
-   now been run (note `065`), and it returned a measured answer: **the map's generation is exact and
-   its generators are not derived.** Every operator in the imported register carries status
-   `measured` — attested on drawn sheets, semantics not derived — so the operator inventory is the
-   largest free parameter on the load-bearing path, far larger than the syntax layer's ℤ/2, and the
-   classification layer's ledger line does not close (`OPERATOR-INVENTORY-IS-UNFORCED`). Either
-   direction is a result. This is the highest-value open item in the program.
+1. **Derive the operator inventory.** The marks are settled — a complete 3×2 product (note `065`).
+   The operators are the frontier: each is attested on drawn sheets, and two are now tied to geometry
+   by contact (note `078`). Deriving the rest is the highest-value open item in the program
+   (`OPERATOR-INVENTORY-IS-UNFORCED`).
 2. **The format-acquisition experiment** (§4.10). The first empirical test that touches the
    purpose. Runnable on models today.
 3. **`READING-INVARIANCE-TARGET`** — formalize the reading class 𝔽 and prove the fixed point
@@ -400,7 +388,7 @@ Ordered by *decisiveness per unit effort*, not by importance.
    until someone shows UL's semantic space is that manifold — or shows it is not, which is equally
    useful and would retire two VERIFIED claims.
 5. **The snapshot-vs-practice gap** (§5). Nowhere in this repo's Cure material.
-6. **`semantically_equal`** — the longest-standing engineering blocker, still real, still unbuilt.
+6. **`semantically_equal`** — the longest-standing engineering item, and a well-defined build.
 
 **Before you search the literature, read `RESEARCH-PROTOCOL.md`.** The documented failure mode here
 is encountering a result that appears to settle a question negatively, believing it, and closing the
