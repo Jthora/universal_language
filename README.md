@@ -91,9 +91,8 @@ comprehension, largely subsumed by 2–5), `research/notes/` (the working histor
 program, 052 = the purpose-layer), `seed/` (machine-readable root map).
 
 **The one thing to get right:** "universal" here ranges over the domain of **mathematical
-identity**, not the domain of humanity — anywhere the mathematics is the same. Evaluating this
-program by asking whether its claims hold across human cultures is the documented way to misread
-it. `claims.yaml#UNIVERSAL-IS-MATHEMATICAL-SCOPE`.
+identity**, not the domain of humanity — anywhere the mathematics is the same. The test of a
+claim is mathematical: does it hold wherever the mathematics is the same? `claims.yaml#UNIVERSAL-IS-MATHEMATICAL-SCOPE`.
 
 ## The contract
 
@@ -117,7 +116,7 @@ the goal, held to a standard that can fail.**
 | | What it is | Status |
 |---|---|---|
 | **UL** | The language. **Two-tier**: a *natural* tier communicated without formal comprehension, and a *formal* tier requiring symbolic recombination. | `UL-IS-TWO-TIER` (ARGUED) |
-| **UWS** | The written rendering: geometric marks whose fixed point under coarse-graining is the **combinatorial map** — a complete invariant, honestly recorded as a DCEL reduct (prior art, 1970s). | **Exists** — `uws/`, `ul-forge/` |
+| **UWS** | The written rendering: geometric marks whose fixed point under coarse-graining is the **combinatorial map** — a complete invariant, and a DCEL reduct with its 1970s prior art credited. | **Exists** — `uws/`, `ul-forge/` |
 | **UP** | The bootstrapping protocol: the minimum shared convention two independent parties need. Rotation breaks ℤ/2 where a label alphabet breaks Sₙ. | `ROTATION-MINIMIZES-CONVENTION` (ARGUED) |
 | **UQPL** | The formal tier of UL **closed under execution**. *Quantum* = linear resource discipline, no free copy, no free delete. | `UQPL-IS-FORMAL-TIER-CLOSURE` (CONJECTURED) |
 | **The Cure** | **A corollary, not the purpose.** A mind carrying a derivable anchor as its format has an internal comparator, so drift becomes self-detectable. | `CURE-IS-COROLLARY` (DESIGN-CHOICE) |
@@ -127,7 +126,7 @@ survive *every* reasonable reading, so meaning does not presuppose that the rece
 
 ## Where the work is
 
-The honest progress bar is **`derived_orbits`: <!--s:derived_orbits-->3<!--/s--> of
+The progress bar is **`derived_orbits`: <!--s:derived_orbits-->3<!--/s--> of
 <!--s:atlas_orbits-->93<!--/s-->** — orbits given machine-checked structural content here, as
 opposed to an attested label borrowed from elsewhere. It is the number that moves when derivation
 work is done and stays still when documentation is.
@@ -142,12 +141,11 @@ Three open fronts, ordered by decisiveness:
    operator is `measured`, so the operator set is the largest free parameter on the load-bearing
    path. Either direction is a result.
 3. **The format-acquisition experiment.** The first empirical test that touches the purpose.
-   Runnable on models today. **Nobody has run it.**
+   Runnable on models today, and ready for someone to run it.
 
 ## Practice
 
-The documented failure mode here is **conventions without enforcement**, so conventions are
-replaced by mechanisms — <!--s:checkers-->12<!--/s--> of them, run by whoever verifies:
+Conventions here are **enforced by mechanism**, not by memory — <!--s:checkers-->12<!--/s--> of them, run by whoever verifies:
 
 - Every substantive claim is registered with a tier, evidence, and a scope that states what it
   does *not* license.

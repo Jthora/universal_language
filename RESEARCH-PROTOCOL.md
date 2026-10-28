@@ -267,7 +267,7 @@ Eighteen boxes. If you can't tick them, you haven't finished the finding.
 
 ## 8. What this does not fix
 
-**Honest limits, so you don't over-trust the protocol:**
+**The protocol's own scope:**
 
 - **R1 and R6 are not machine-checkable.** They are process, and the compromised faculty is the one
   that would audit them. **The human collaborator must spot-check**: pick any negative in the repo,
